@@ -1,0 +1,23 @@
+{
+  "name": "vk-app-mine",
+  "options": {
+    "deploymentTarget": {
+      "macOS": "10.15"
+    }
+  },
+  "settings": {
+    "DEVELOPMENT_TEAM": "${DEVELOPMENT_TEAM}",
+    "CODE_SIGN_STYLE": "Automatic"
+  },
+  "targets": {
+    "vk-app-mine": {
+      "type": "application",
+      "platform": "macOS",
+      "sources": [
+        "./src",
+        "../Sources/",
+        "./assets"
+      ]
+    }
+  }
+}

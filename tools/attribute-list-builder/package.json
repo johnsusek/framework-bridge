@@ -1,0 +1,13 @@
+{
+  "name": "attribute-list-builder",
+  "version": "0.0.1",
+  "description": "",
+  "author": "John Susek",
+  "license": "MIT",
+  "dependencies": {
+    "gauge": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "jsonata": "^1.8.4",
+    "object-assign": "^4.1.1"
+  }
+}

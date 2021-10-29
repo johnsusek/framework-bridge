@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+.temp
+.cache
+.vscode
+.swiftpm
+.build
+build/
+tmp/
+.xcodeproj
+test/testapp/src

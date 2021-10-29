@@ -1,0 +1,13 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "gauge": "^3.0.0",
+    "object-assign": "^4.1.1",
+    "p-queue": "^7.1.0"
+  }
+}

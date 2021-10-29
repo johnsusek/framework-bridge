@@ -1,0 +1,10 @@
+{
+  "name": "vuekit-prune-jse",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "John Susek",
+  "license": "MIT",
+  "dependencies": {
+    "concurrent-queue": "^7.0.2"
+  }
+}

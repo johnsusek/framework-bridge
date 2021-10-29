@@ -1,0 +1,16 @@
+{
+  "AppKit": [],
+  "AVFoundation": [],
+  "AVKit": [],
+  "CloudKit": [],
+  "CoreAnimation": [],
+  "CoreFoundation": [],
+  "CoreData": [],
+  "CoreGraphics": [],
+  "CoreImage": [],
+  "CoreMedia": [],
+  "Foundation": [],
+  "ObjectiveC": [],
+  "Quartz": [],
+  "QuartzCore": []
+}

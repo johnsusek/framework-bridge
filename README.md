@@ -1,10 +1,28 @@
 # framework-bridge
 
-Swift [JSExport](https://developer.apple.com/documentation/javascriptcore/jsexport) [extensions](https://docs.swift.org/swift-book/LanguageGuide/Extensions.html) for system frameworks.
+Swift [JSExport](https://developer.apple.com/documentation/javascriptcore/jsexport) [extensions](https://docs.swift.org/swift-book/LanguageGuide/Extensions.html) for macOS system frameworks.
 
-Currently supported frameworks:
-[x] Foundation
-[x] AppKit
+## Progress
+[Foundation](https://github.com/johnsusek/framework-bridge/tree/master/modules/Foundation)<br>
+![155/259 classes](https://progress-bar.dev/155?&suffix=/259%20classes&scale=259&width=320)
+<br>
+[AppKit](https://github.com/johnsusek/framework-bridge/tree/master/modules/AppKit)<br>
+![232/269 classes](https://progress-bar.dev/232?&suffix=/259%20classes&scale=269&width=320)
+
+## Usage
+
+Swift
+```swift
+import JavaScriptCore
+import FrameworkBridge
+let context = JSContext()!
+context.bridgeClass("NSSound")
+```
+
+Javascript
+```javascript
+NSSound({ named: "Chirp" }).play();
+```
 
 ## Tests
 

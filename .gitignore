@@ -8,4 +8,4 @@ node_modules
 build/
 tmp/
 .xcodeproj
-test/testapp/src
+test/registration/src

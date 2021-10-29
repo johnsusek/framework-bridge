@@ -1,0 +1,9 @@
+{
+  "name": "framework-bridge",
+  "version": "0.0.1",
+  "author": "John Susek",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrent-queue": "^7.0.2"
+  }
+}

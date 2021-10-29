@@ -1,7 +1,7 @@
 let classesToTest = require('./classesToTest.json');
 
 const swiftPath = `${__dirname}/../modules`;
-const destPath = `${__dirname}/../testapp/src`;
+const destPath = `${__dirname}/../registration/src`;
 
 for (const [framework, classNames] of Object.entries(classesToTest)) {
   if (!fs.existsSync(`${destPath}/${framework}`)) {

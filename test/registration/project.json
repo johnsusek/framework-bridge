@@ -1,5 +1,5 @@
 {
-  "name": "vk-app-mine",
+  "name": "vk-app-test",
   "options": {
     "deploymentTarget": {
       "macOS": "10.15"
@@ -10,12 +10,12 @@
     "CODE_SIGN_STYLE": "Automatic"
   },
   "targets": {
-    "vk-app-mine": {
+    "vk-app-test": {
       "type": "application",
       "platform": "macOS",
       "sources": [
         "./src",
-        "../Sources/",
+        "../../Sources/",
         "./assets"
       ]
     }

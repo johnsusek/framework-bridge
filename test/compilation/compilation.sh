@@ -6,12 +6,12 @@ let fsPromise = require('fs').promises;
 let path = require('path');
 let cq = require('concurrent-queue');
 let cores = require('os').cpus().length;
-let inheritence = require('../metadata/inheritence.json');
+let inheritence = require('../../metadata/inheritence.json');
 let classesToTest = require('./classesToTest.js');
 
-let bridgePath = path.join(__dirname, '../Sources/FrameworkBridge');
-let sourcePath = path.join(__dirname, '../tmp/swift');
-let successPath = path.join(__dirname, '../modules');
+let bridgePath = path.join(__dirname, '../../Sources/FrameworkBridge');
+let sourcePath = path.join(__dirname, '../../tmp/swift');
+let successPath = path.join(__dirname, '../../modules');
 
 let args = process.argv.slice(2);
 let fileName = args[0];
@@ -95,8 +95,11 @@ function run(framework, file, cb) {
       failed.push(className);
       cb(errs);
     } else {
-      console.log('Copy', filePath, 'to', path.join(successPath, framework));
-      // fs.copyFileSync(filePath, successPath);
+      // console.log('Copy', filePath, 'to', path.join(successPath, framework));
+      if (!fs.existsSync(path.join(successPath, framework))) {
+        fs.mkdirSync(path.join(successPath, framework))
+      }
+      fs.copyFileSync(filePath, path.join(successPath, framework, file));
       console.log(`☑️  ${className}`);
       cb(null);
     }

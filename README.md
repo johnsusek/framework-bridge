@@ -2,9 +2,19 @@
 
 Swift [JSExport](https://developer.apple.com/documentation/javascriptcore/jsexport) [extensions](https://docs.swift.org/swift-book/LanguageGuide/Extensions.html) for system frameworks.
 
-## Testing
+Currently supported frameworks:
+[x] Foundation
+[x] AppKit
 
-`./test/bridge.js`
+## Tests
+
+Test compilation of JSExport classes:
+
+`./test/compilation/compilation.sh`
+
+Test runtime registration of classes:
+
+`./test/registration/registration.sh`
 
 ## Tools
 
@@ -37,20 +47,9 @@ Generates swift jsexport classes; uses data generated from the above tools.
 
 See README in [macos-metadata-generator](https://github.com/johnsusek/macos-metadata-generator) repo for more details.
 
-### prune-jse
-
-Tries to automatically fill types in bridge files using swift compiler messages
-
-`node fillTypes.js`
-
-Attempts to compile swift jsexport classes and copies those that do build successfully to a destination directory.
-
-`node prune.js`
-
 # Dev
 
 * Edit metadata/frameworks.json if you are adding a new framework
 * Run gen-header, ast-builder and attribute-list-builder to populate tmp/ folders
 * Run macos-metadata-generator to populate swift/ folder
-* (Optional) Run fillTypes or prune
-* Add classes to test/classesToTest.js and testapp
+* Add classes to classesToTest.js and registration test app

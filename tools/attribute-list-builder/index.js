@@ -29,8 +29,41 @@ let typeAliases = {};
 let values;
 let moduleName;
 let className;
+let prefixName;
 let enumName;
 let enumType;
+
+function doNextStruct() {
+  if (className && enumName) {
+    let containerName = "_container";
+
+    if (prefixName) {
+      let parts = prefixName.split('.');
+      if (parts.length == 2) {
+        containerName = parts[0]
+      }
+    }
+
+    // New struct, set the one we've been building...
+    if (!moduleName) moduleName = "_global";
+    if (!goodStructs[moduleName]) goodStructs[moduleName] = {};
+    if (!goodStructs[moduleName][containerName]) goodStructs[moduleName][containerName] = {};
+    if (!goodStructs[moduleName][containerName][className]) goodStructs[moduleName][containerName][className] = {};
+
+    goodStructs[moduleName][containerName][className][enumName] = { values, type: enumType };
+
+    // console.log('Resetting after ', className, enumName);
+
+    // ...and then reset for the next one
+    if (prefixName) {
+      values = null;
+      enumType = {};
+      moduleName = '';
+      className = '';
+      enumName = '';
+    }
+  }
+}
 
 function doAddStruct(type, framework) {
   let kIdx = type.children.findIndex(c => c.text === 'struct');
@@ -46,25 +79,6 @@ function doAddStruct(type, framework) {
   let memberDeclBlock = type.children.find(c => c.text === 'MemberDeclBlock')
   let memberDeclList = memberDeclBlock.children.find(c => c.text === 'MemberDeclList')
   let memberDeclListItems = memberDeclList.children.map(c => c.children[0])
-
-  function doNextStruct() {
-    if (className && enumName) {
-      // New struct, set the one we've been building...
-      if (!moduleName) moduleName = "_global";
-      if (!goodStructs[moduleName]) goodStructs[moduleName] = {};
-      if (!goodStructs[moduleName][className]) goodStructs[moduleName][className] = {};
-      goodStructs[moduleName][className][enumName] = { values, type: enumType };
-
-      // console.log('Resetting after ', className, enumName);
-
-      // ...and then reset for the next one
-      values = null;
-      moduleName = '';
-      className = '';
-      enumName = '';
-      enumType = {};
-    }
-  }
 
   for (const decl of memberDeclListItems) {
     switch (decl.text) {
@@ -153,6 +167,7 @@ function doAddStruct(type, framework) {
         break;
     }
   }
+
   if (lastNamespace) {
     if (!structs[lastNamespace]) structs[lastNamespace] = {};
     structs[lastNamespace][containerName] = type;
@@ -355,6 +370,7 @@ function nameFromType(type, isFunc) {
 }
 
 function decideAdd(type, prefix, framework) {
+  prefixName = prefix;
   switch (type.text) {
     case "ClassDecl":
       doAddContainer('class', type, framework);

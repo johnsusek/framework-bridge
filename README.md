@@ -34,7 +34,7 @@ Test runtime registration of classes:
 
 `./test/registration/registration.sh`
 
-## Tools
+## Dev Tools
 
 ### gen-headers
 

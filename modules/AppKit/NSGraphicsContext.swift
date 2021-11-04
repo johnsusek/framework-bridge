@@ -9,202 +9,123 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSGraphicsContext
-    - name: NSGraphicsContext
-    - argLabels: 
+    - Selector: NSGraphicsContext
   */
 
 @objc(NSGraphicsContext) protocol NSGraphicsContextExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: currentContextDrawingToScreen
-    - name: currentContextDrawingToScreen
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: currentContextDrawingToScreen
   */
   @objc static func currentContextDrawingToScreen() -> Bool
 
   /**
-    - jsName: create
-    - name: graphicsContextWithAttributes:
-    - argLabels: attributes
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(attributes:)
-    - message: Not available in Swift
+    - Selector: graphicsContextWithAttributes:
   */
   @objc static func create(attributes: [NSGraphicsContext.AttributeKey: Any]) -> NSGraphicsContext?
 
   /**
-    - jsName: create
-    - name: graphicsContextWithBitmapImageRep:
-    - argLabels: bitmapImageRep
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(bitmapImageRep:)
-    - message: Not available in Swift
+    - Selector: graphicsContextWithBitmapImageRep:
   */
   @objc static func create(bitmapImageRep: NSBitmapImageRep) -> NSGraphicsContext?
 
   /**
-    - jsName: create
-    - name: graphicsContextWithCGContext:flipped:
-    - argLabels: cgContext, flipped
-    - constructorTokens: 
-    - available: 10.10
-    - unavailable: true
-    - renamed: init(cgContext:flipped:)
-    - message: Not available in Swift
+    - Selector: graphicsContextWithCGContext:flipped:
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) static func create(cgContext: CGContext, flipped: Bool) -> NSGraphicsContext
 
   /**
-    - jsName: create
-    - name: graphicsContextWithWindow:
-    - argLabels: window
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(window:)
-    - message: Not available in Swift
+    - Selector: graphicsContextWithWindow:
   */
   @objc static func create(window: NSWindow) -> NSGraphicsContext
 
   /**
-    - jsName: restoreGraphicsState
-    - name: restoreGraphicsState
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: restoreGraphicsState
   */
   @objc static func restoreGraphicsState()
 
   /**
-    - jsName: saveGraphicsState
-    - name: saveGraphicsState
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: saveGraphicsState
   */
   @objc static func saveGraphicsState()
 
   // Own Static Properties
 
   /**
-    - jsName: current
-    - name: currentContext
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: current
+    - Selector: currentContext
   */
   @objc static var current: NSGraphicsContext? { @objc (currentContext) get @objc (setCurrentContext:) set }
 
   // Instance Methods
 
   /**
-    - jsName: flushGraphics
-    - name: flushGraphics
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: flushGraphics
   */
   @objc func flushGraphics()
 
   /**
-    - jsName: restoreGraphicsState
-    - name: restoreGraphicsState
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: restoreGraphicsState
   */
   @objc func restoreGraphicsState()
 
   /**
-    - jsName: saveGraphicsState
-    - name: saveGraphicsState
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: saveGraphicsState
   */
   @objc func saveGraphicsState()
 
   // Own Instance Properties
 
   /**
-    - jsName: cgContext
-    - name: CGContext
-    - argLabels: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: cgContext
+    - Selector: CGContext
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var cgContext: CGContext { @objc (CGContext) get }
 
   /**
-    - jsName: ciContext
-    - name: CIContext
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: ciContext
+    - Selector: CIContext
   */
   @objc var ciContext: CIContext? { @objc (CIContext) get }
 
   /**
-    - jsName: attributes
-    - name: attributes
-    - argLabels: 
+    - Selector: attributes
   */
   @objc var attributes: [NSGraphicsContext.AttributeKey: Any]? { @objc get }
 
   /**
-    - jsName: colorRenderingIntent
-    - name: colorRenderingIntent
-    - argLabels: 
-    - available: 10.5
+    - Selector: colorRenderingIntent
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var colorRenderingIntent: NSColorRenderingIntent { @objc get @objc (setColorRenderingIntent:) set }
 
   /**
-    - jsName: compositingOperation
-    - name: compositingOperation
-    - argLabels: 
+    - Selector: compositingOperation
   */
   @objc var compositingOperation: NSCompositingOperation { @objc get @objc (setCompositingOperation:) set }
 
   /**
-    - jsName: isDrawingToScreen
-    - name: drawingToScreen
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isDrawingToScreen
+    - Selector: drawingToScreen
   */
   @objc var isDrawingToScreen: Bool { @objc get }
 
   /**
-    - jsName: isFlipped
-    - name: flipped
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFlipped
+    - Selector: flipped
   */
   @objc var isFlipped: Bool { @objc get }
 
   /**
-    - jsName: imageInterpolation
-    - name: imageInterpolation
-    - argLabels: 
+    - Selector: imageInterpolation
   */
   @objc var imageInterpolation: NSImageInterpolation { @objc get @objc (setImageInterpolation:) set }
 
   /**
-    - jsName: patternPhase
-    - name: patternPhase
-    - argLabels: 
+    - Selector: patternPhase
   */
   @objc var patternPhase: CGPoint { @objc get @objc (setPatternPhase:) set }
 
   /**
-    - jsName: shouldAntialias
-    - name: shouldAntialias
-    - argLabels: 
+    - Selector: shouldAntialias
   */
   @objc var shouldAntialias: Bool { @objc get @objc (setShouldAntialias:) set }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSFileAccessIntent
-    - name: NSFileAccessIntent
-    - argLabels: 
+    - Selector: NSFileAccessIntent
     - Introduced: 10.10
   */
 
@@ -19,33 +17,19 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: readingIntent
-    - name: readingIntentWithURL:options:
-    - argLabels: with, options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: readingIntent(with:options:)
+    - Selector: readingIntentWithURL:options:
   */
   @objc static func readingIntent(with: URL, options: NSFileCoordinator.ReadingOptions) -> Self
 
   /**
-    - jsName: writingIntent
-    - name: writingIntentWithURL:options:
-    - argLabels: with, options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: writingIntent(with:options:)
+    - Selector: writingIntentWithURL:options:
   */
   @objc static func writingIntent(with: URL, options: NSFileCoordinator.WritingOptions) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: url
-    - name: URL
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: url
+    - Selector: URL
   */
   @objc var url: URL { @objc (URL) get }
 }

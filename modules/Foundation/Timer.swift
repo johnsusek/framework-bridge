@@ -9,133 +9,82 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: Timer
-    - name: NSTimer
-    - argLabels: 
+    - Selector: NSTimer
   */
 
 @objc(Timer) protocol TimerExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: scheduledTimer
-    - name: scheduledTimerWithTimeInterval:repeats:block:
-    - argLabels: withTimeInterval, repeats, block
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: scheduledTimer(withTimeInterval:repeats:block:)
+    - Selector: scheduledTimerWithTimeInterval:repeats:block:
     - Introduced: 10.12
   */
-  // jsvalue - @objc (scheduledTimerWithTimeInterval:repeats:block:) @available(OSX 10.12, *) static func scheduledTimer(withTimeInterval: TimeInterval, repeats: Bool, block: JSValue) -> Timer
+// jsvalue   @objc @available(OSX 10.12, *) static func scheduledTimer(withTimeInterval: TimeInterval, repeats: Bool, block: JSValue) -> Timer
 
   /**
-    - jsName: scheduledTimer
-    - name: scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:
-    - argLabels: timeInterval, target, selector, userInfo, repeats
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: scheduledTimer(timeInterval:target:selector:userInfo:repeats:)
+    - Selector: scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:
   */
   @objc (scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) static func scheduledTimer(timeInterval: TimeInterval, target: Any, selector: Selector, userInfo: Any?, repeats: Bool) -> Timer
 
   /**
-    - jsName: create
-    - name: timerWithTimeInterval:repeats:block:
-    - argLabels: timeInterval, repeats, block
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(timeInterval:repeats:block:)
-    - message: Not available in Swift
+    - Selector: timerWithTimeInterval:repeats:block:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func create(timeInterval: TimeInterval, repeats: Bool, block: JSValue) -> Timer
+// jsvalue   @objc @available(OSX 10.12, *) static func create(timeInterval: TimeInterval, repeats: Bool, block: JSValue) -> Timer
 
   /**
-    - jsName: create
-    - name: timerWithTimeInterval:target:selector:userInfo:repeats:
-    - argLabels: timeInterval, target, selector, userInfo, repeats
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(timeInterval:target:selector:userInfo:repeats:)
-    - message: Not available in Swift
+    - Selector: timerWithTimeInterval:target:selector:userInfo:repeats:
   */
   @objc static func create(timeInterval: TimeInterval, target: Any, selector: Selector, userInfo: Any?, repeats: Bool) -> Timer
 
   // Instance Methods
 
   /**
-    - jsName: fire
-    - name: fire
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: fire
   */
   @objc func fire()
 
   /**
-    - jsName: createWithFireDate
-    - name: initWithFireDate:interval:repeats:block:
-    - argLabels: interval, repeats, block
-    - constructorTokens: fireDate, interval, repeats, block
+    - Selector: initWithFireDate:interval:repeats:block:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithFireDate(_: Date, interval: TimeInterval, repeats: Bool, block: JSValue) -> Self
+  // jsvalue @objc @available(OSX 10.12, *) static func createWithFireDate(_: Date, interval: TimeInterval, repeats: Bool, block: JSValue) -> Self
 
   /**
-    - jsName: createWithFireDate
-    - name: initWithFireDate:interval:target:selector:userInfo:repeats:
-    - argLabels: interval, target, selector, userInfo, repeats
-    - constructorTokens: fireDate, interval, target, selector, userInfo, repeats
+    - Selector: initWithFireDate:interval:target:selector:userInfo:repeats:
   */
   @objc static func createWithFireDate(_: Date, interval: TimeInterval, target: Any, selector: Selector, userInfo: Any?, repeats: Bool) -> Self
 
   /**
-    - jsName: invalidate
-    - name: invalidate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidate
   */
   @objc func invalidate()
 
   // Own Instance Properties
 
   /**
-    - jsName: fireDate
-    - name: fireDate
-    - argLabels: 
+    - Selector: fireDate
   */
   @objc var fireDate: Date { @objc get @objc (setFireDate:) set }
 
   /**
-    - jsName: timeInterval
-    - name: timeInterval
-    - argLabels: 
+    - Selector: timeInterval
   */
   @objc var timeInterval: TimeInterval { @objc get }
 
   /**
-    - jsName: tolerance
-    - name: tolerance
-    - argLabels: 
-    - available: 10.9
+    - Selector: tolerance
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var tolerance: TimeInterval { @objc get @objc (setTolerance:) set }
 
   /**
-    - jsName: userInfo
-    - name: userInfo
-    - argLabels: 
+    - Selector: userInfo
   */
   @objc var userInfo: Any? { @objc get }
 
   /**
-    - jsName: isValid
-    - name: valid
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isValid
+    - Selector: valid
   */
   @objc var isValid: Bool { @objc get }
 }

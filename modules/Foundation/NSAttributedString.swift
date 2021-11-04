@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSAttributedString
-    - name: NSAttributedString
-    - argLabels: 
+    - Selector: NSAttributedString
     - Introduced: 10.0
   */
 
@@ -19,14 +17,7 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: create
-    - name: attributedStringWithAttachment:
-    - argLabels: attachment
-    - constructorTokens: 
-    - available: 10.0
-    - unavailable: true
-    - renamed: init(attachment:)
-    - message: Not available in Swift
+    - Selector: attributedStringWithAttachment:
     - Introduced: 10.0
   */
   @objc @available(OSX 10.0, *) static func create(attachment: NSTextAttachment) -> NSAttributedString
@@ -34,19 +25,13 @@ import Foundation
   // Own Static Properties
 
   /**
-    - jsName: textTypes
-    - name: textTypes
-    - argLabels: 
-    - available: 10.5
+    - Selector: textTypes
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) static var textTypes: [String] { @objc get }
 
   /**
-    - jsName: textUnfilteredTypes
-    - name: textUnfilteredTypes
-    - argLabels: 
-    - available: 10.5
+    - Selector: textUnfilteredTypes
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) static var textUnfilteredTypes: [String] { @objc get }
@@ -54,398 +39,212 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: rtfdFileWrapper
-    - name: RTFDFileWrapperFromRange:documentAttributes:
-    - argLabels: from, documentAttributes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rtfdFileWrapper(from:documentAttributes:)
+    - Selector: RTFDFileWrapperFromRange:documentAttributes:
   */
   @objc (RTFDFileWrapperFromRange:documentAttributes:) func rtfdFileWrapper(from: NSRange, documentAttributes: [NSAttributedString.DocumentAttributeKey: Any]) -> FileWrapper?
 
   /**
-    - jsName: rtfd
-    - name: RTFDFromRange:documentAttributes:
-    - argLabels: from, documentAttributes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rtfd(from:documentAttributes:)
+    - Selector: RTFDFromRange:documentAttributes:
   */
   @objc (RTFDFromRange:documentAttributes:) func rtfd(from: NSRange, documentAttributes: [NSAttributedString.DocumentAttributeKey: Any]) -> Data?
 
   /**
-    - jsName: rtf
-    - name: RTFFromRange:documentAttributes:
-    - argLabels: from, documentAttributes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rtf(from:documentAttributes:)
+    - Selector: RTFFromRange:documentAttributes:
   */
   @objc (RTFFromRange:documentAttributes:) func rtf(from: NSRange, documentAttributes: [NSAttributedString.DocumentAttributeKey: Any]) -> Data?
 
   /**
-    - jsName: attribute
-    - name: attribute:atIndex:effectiveRange:
-    - argLabels: _, at, effectiveRange
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: attribute(_:at:effectiveRange:)
+    - Selector: attribute:atIndex:effectiveRange:
   */
   @objc (attribute:atIndex:effectiveRange:) func attribute(_: NSAttributedString.Key, at: Int, effectiveRange: NSRangePointer?) -> Any?
 
   /**
-    - jsName: attribute
-    - name: attribute:atIndex:longestEffectiveRange:inRange:
-    - argLabels: _, at, longestEffectiveRange, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: attribute(_:at:longestEffectiveRange:in:)
+    - Selector: attribute:atIndex:longestEffectiveRange:inRange:
   */
   @objc (attribute:atIndex:longestEffectiveRange:inRange:) func attribute(_: NSAttributedString.Key, at: Int, longestEffectiveRange: NSRangePointer?, in: NSRange) -> Any?
 
   /**
-    - jsName: attributedSubstring
-    - name: attributedSubstringFromRange:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: attributedSubstring(from:)
+    - Selector: attributedSubstringFromRange:
   */
   @objc (attributedSubstringFromRange:) func attributedSubstring(from: NSRange) -> NSAttributedString
 
   /**
-    - jsName: attributes
-    - name: attributesAtIndex:effectiveRange:
-    - argLabels: at, effectiveRange
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: attributes(at:effectiveRange:)
+    - Selector: attributesAtIndex:effectiveRange:
   */
   @objc (attributesAtIndex:effectiveRange:) func attributes(at: Int, effectiveRange: NSRangePointer?) -> [NSAttributedString.Key: Any]
 
   /**
-    - jsName: attributes
-    - name: attributesAtIndex:longestEffectiveRange:inRange:
-    - argLabels: at, longestEffectiveRange, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: attributes(at:longestEffectiveRange:in:)
+    - Selector: attributesAtIndex:longestEffectiveRange:inRange:
   */
   @objc (attributesAtIndex:longestEffectiveRange:inRange:) func attributes(at: Int, longestEffectiveRange: NSRangePointer?, in: NSRange) -> [NSAttributedString.Key: Any]
 
   /**
-    - jsName: boundingRect
-    - name: boundingRectWithSize:options:
-    - argLabels: with, options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: boundingRect(with:options:)
+    - Selector: boundingRectWithSize:options:
   */
   @objc (boundingRectWithSize:options:) func boundingRect(with: CGSize, options: NSString.DrawingOptions) -> CGRect
 
   /**
-    - jsName: boundingRect
-    - name: boundingRectWithSize:options:context:
-    - argLabels: with, options, context
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: boundingRect(with:options:context:)
+    - Selector: boundingRectWithSize:options:context:
     - Introduced: 10.11
   */
   @objc (boundingRectWithSize:options:context:) @available(OSX 10.11, *) func boundingRect(with: CGSize, options: NSString.DrawingOptions, context: NSStringDrawingContext?) -> CGRect
 
   /**
-    - jsName: containsAttachments
-    - name: containsAttachmentsInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: containsAttachments(in:)
+    - Selector: containsAttachmentsInRange:
     - Introduced: 10.11
   */
   @objc (containsAttachmentsInRange:) @available(OSX 10.11, *) func containsAttachments(in: NSRange) -> Bool
 
   /**
-    - jsName: dataFromRange
-    - name: dataFromRange:documentAttributes:error:
-    - argLabels: documentAttributes, error
-    - constructorTokens: 
+    - Selector: dataFromRange:documentAttributes:error:
     - Introduced: 10.0
   */
   // throws - @objc @available(OSX 10.0, *) func dataFromRange(documentAttributes: NSRange, error: [NSAttributedString.DocumentAttributeKey: Any]) -> Data?
 
   /**
-    - jsName: docFormat
-    - name: docFormatFromRange:documentAttributes:
-    - argLabels: from, documentAttributes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: docFormat(from:documentAttributes:)
+    - Selector: docFormatFromRange:documentAttributes:
   */
   @objc (docFormatFromRange:documentAttributes:) func docFormat(from: NSRange, documentAttributes: [NSAttributedString.DocumentAttributeKey: Any]) -> Data?
 
   /**
-    - jsName: doubleClick
-    - name: doubleClickAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: doubleClick(at:)
+    - Selector: doubleClickAtIndex:
   */
   @objc (doubleClickAtIndex:) func doubleClick(at: Int) -> NSRange
 
   /**
-    - jsName: draw
-    - name: drawAtPoint:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.0
-    - obsoleted: 3
-    - renamed: draw(at:)
+    - Selector: drawAtPoint:
     - Introduced: 10.0
   */
   @objc (drawAtPoint:) @available(OSX 10.0, *) func draw(at: CGPoint)
 
   /**
-    - jsName: draw
-    - name: drawInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - available: 10.0
-    - obsoleted: 3
-    - renamed: draw(in:)
+    - Selector: drawInRect:
     - Introduced: 10.0
   */
   @objc (drawInRect:) @available(OSX 10.0, *) func draw(in: CGRect)
 
   /**
-    - jsName: draw
-    - name: drawWithRect:options:
-    - argLabels: with, options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: draw(with:options:)
+    - Selector: drawWithRect:options:
   */
   @objc (drawWithRect:options:) func draw(with: CGRect, options: NSString.DrawingOptions)
 
   /**
-    - jsName: draw
-    - name: drawWithRect:options:context:
-    - argLabels: with, options, context
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: draw(with:options:context:)
+    - Selector: drawWithRect:options:context:
     - Introduced: 10.11
   */
   @objc (drawWithRect:options:context:) @available(OSX 10.11, *) func draw(with: CGRect, options: NSString.DrawingOptions, context: NSStringDrawingContext?)
 
   /**
-    - jsName: enumerateAttribute
-    - name: enumerateAttribute:inRange:options:usingBlock:
-    - argLabels: _, in, options, using
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: enumerateAttribute(_:in:options:using:)
+    - Selector: enumerateAttribute:inRange:options:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue - @objc (enumerateAttribute:inRange:options:usingBlock:) @available(OSX 10.6, *) func enumerateAttribute(_: NSAttributedString.Key, in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttribute(_: NSAttributedString.Key, in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
 
   /**
-    - jsName: enumerateAttributes
-    - name: enumerateAttributesInRange:options:usingBlock:
-    - argLabels: in, options, using
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: enumerateAttributes(in:options:using:)
+    - Selector: enumerateAttributesInRange:options:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue - @objc (enumerateAttributesInRange:options:usingBlock:) @available(OSX 10.6, *) func enumerateAttributes(in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributes(in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
 
   /**
-    - jsName: fileWrapperFromRange
-    - name: fileWrapperFromRange:documentAttributes:error:
-    - argLabels: documentAttributes, error
-    - constructorTokens: 
+    - Selector: fileWrapperFromRange:documentAttributes:error:
     - Introduced: 10.0
   */
   // throws - @objc @available(OSX 10.0, *) func fileWrapperFromRange(documentAttributes: NSRange, error: [NSAttributedString.DocumentAttributeKey: Any]) -> FileWrapper?
 
   /**
-    - jsName: fontAttributes
-    - name: fontAttributesInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: fontAttributes(in:)
+    - Selector: fontAttributesInRange:
   */
   @objc (fontAttributesInRange:) func fontAttributes(in: NSRange) -> [NSAttributedString.Key: Any]
 
   /**
-    - jsName: createWithDocFormat
-    - name: initWithDocFormat:documentAttributes:
-    - argLabels: documentAttributes
-    - constructorTokens: docFormat, documentAttributes
+    - Selector: initWithDocFormat:documentAttributes:
   */
   @objc static func createWithDocFormat(_: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: createWithHTML
-    - name: initWithHTML:baseURL:documentAttributes:
-    - argLabels: baseURL, documentAttributes
-    - constructorTokens: html, baseURL, documentAttributes
+    - Selector: initWithHTML:baseURL:documentAttributes:
   */
   @objc static func createWithHTML(_: Data, baseURL: URL, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: createWithHTML
-    - name: initWithHTML:documentAttributes:
-    - argLabels: documentAttributes
-    - constructorTokens: html, documentAttributes
+    - Selector: initWithHTML:documentAttributes:
   */
   @objc static func createWithHTML(_: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: createWithHTML
-    - name: initWithHTML:options:documentAttributes:
-    - argLabels: options, documentAttributes
-    - constructorTokens: html, options, documentAttributes
+    - Selector: initWithHTML:options:documentAttributes:
   */
   @objc static func createWithHTML(_: Data, options: [NSAttributedString.DocumentReadingOptionKey: Any], documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: createWithRTF
-    - name: initWithRTF:documentAttributes:
-    - argLabels: documentAttributes
-    - constructorTokens: rtf, documentAttributes
+    - Selector: initWithRTF:documentAttributes:
   */
   @objc static func createWithRTF(_: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: createWithRTFD
-    - name: initWithRTFD:documentAttributes:
-    - argLabels: documentAttributes
-    - constructorTokens: rtfd, documentAttributes
+    - Selector: initWithRTFD:documentAttributes:
   */
   @objc static func createWithRTFD(_: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: createWithRTFDFileWrapper
-    - name: initWithRTFDFileWrapper:documentAttributes:
-    - argLabels: documentAttributes
-    - constructorTokens: rtfdFileWrapper, documentAttributes
+    - Selector: initWithRTFDFileWrapper:documentAttributes:
   */
   @objc static func createWithRTFDFileWrapper(_: FileWrapper, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: createWithURL
-    - name: initWithURL:options:documentAttributes:error:
-    - argLabels: options, documentAttributes, error
-    - constructorTokens: url, options, documentAttributes
+    - Selector: initWithURL:options:documentAttributes:error:
     - Introduced: 10.4
   */
   @objc @available(OSX 10.4, *) static func createWithURL(url: URL, options: [NSAttributedString.DocumentReadingOptionKey: Any], documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: isEqual
-    - name: isEqualToAttributedString:
-    - argLabels: to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: isEqual(to:)
+    - Selector: isEqualToAttributedString:
   */
   @objc (isEqualToAttributedString:) func isEqual(to: NSAttributedString) -> Bool
 
   /**
-    - jsName: itemNumber
-    - name: itemNumberInTextList:atIndex:
-    - argLabels: in, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: itemNumber(in:at:)
+    - Selector: itemNumberInTextList:atIndex:
   */
   @objc (itemNumberInTextList:atIndex:) func itemNumber(in: NSTextList, at: Int) -> Int
 
   /**
-    - jsName: lineBreak
-    - name: lineBreakBeforeIndex:withinRange:
-    - argLabels: before, within
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: lineBreak(before:within:)
+    - Selector: lineBreakBeforeIndex:withinRange:
   */
   @objc (lineBreakBeforeIndex:withinRange:) func lineBreak(before: Int, within: NSRange) -> Int
 
   /**
-    - jsName: lineBreakByHyphenating
-    - name: lineBreakByHyphenatingBeforeIndex:withinRange:
-    - argLabels: before, within
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: lineBreakByHyphenating(before:within:)
+    - Selector: lineBreakByHyphenatingBeforeIndex:withinRange:
   */
   @objc (lineBreakByHyphenatingBeforeIndex:withinRange:) func lineBreakByHyphenating(before: Int, within: NSRange) -> Int
 
   /**
-    - jsName: nextWord
-    - name: nextWordFromIndex:forward:
-    - argLabels: from, forward
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: nextWord(from:forward:)
+    - Selector: nextWordFromIndex:forward:
   */
   @objc (nextWordFromIndex:forward:) func nextWord(from: Int, forward: Bool) -> Int
 
   /**
-    - jsName: range
-    - name: rangeOfTextBlock:atIndex:
-    - argLabels: of, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: range(of:at:)
+    - Selector: rangeOfTextBlock:atIndex:
   */
   @objc (rangeOfTextBlock:atIndex:) func range(of: NSTextBlock, at: Int) -> NSRange
 
   /**
-    - jsName: range
-    - name: rangeOfTextList:atIndex:
-    - argLabels: of, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: range(of:at:)
+    - Selector: rangeOfTextList:atIndex:
   */
   @objc (rangeOfTextList:atIndex:) func range(of: NSTextList, at: Int) -> NSRange
 
   /**
-    - jsName: range
-    - name: rangeOfTextTable:atIndex:
-    - argLabels: of, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: range(of:at:)
+    - Selector: rangeOfTextTable:atIndex:
   */
   @objc (rangeOfTextTable:atIndex:) func range(of: NSTextTable, at: Int) -> NSRange
 
   /**
-    - jsName: rulerAttributes
-    - name: rulerAttributesInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rulerAttributes(in:)
+    - Selector: rulerAttributesInRange:
   */
   @objc (rulerAttributesInRange:) func rulerAttributes(in: NSRange) -> [NSAttributedString.Key: Any]
 
   /**
-    - jsName: size
-    - name: size
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.0
+    - Selector: size
     - Introduced: 10.0
   */
   @objc @available(OSX 10.0, *) func size() -> CGSize
@@ -453,23 +252,17 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: containsAttachments
-    - name: containsAttachments
-    - argLabels: 
+    - Selector: containsAttachments
   */
   @objc var containsAttachments: Bool { @objc get }
 
   /**
-    - jsName: length
-    - name: length
-    - argLabels: 
+    - Selector: length
   */
   @objc var length: Int { @objc get }
 
   /**
-    - jsName: string
-    - name: string
-    - argLabels: 
+    - Selector: string
   */
   @objc var string: String { @objc get }
 }

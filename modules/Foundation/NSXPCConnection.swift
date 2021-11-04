@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSXPCConnection
-    - name: NSXPCConnection
-    - argLabels: 
+    - Selector: NSXPCConnection
     - Introduced: 10.8
   */
 
@@ -19,13 +17,7 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: current
-    - name: currentConnection
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.8
-    - obsoleted: 3
-    - renamed: current()
+    - Selector: currentConnection
     - Introduced: 10.8
   */
   @objc (currentConnection) @available(OSX 10.8, *) static func current() -> NSXPCConnection?
@@ -33,147 +25,100 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithListenerEndpoint
-    - name: initWithListenerEndpoint:
-    - argLabels: 
-    - constructorTokens: listenerEndpoint
+    - Selector: initWithListenerEndpoint:
   */
   @objc static func createWithListenerEndpoint(_: NSXPCListenerEndpoint) -> Self
 
   /**
-    - jsName: createWithMachServiceName
-    - name: initWithMachServiceName:options:
-    - argLabels: options
-    - constructorTokens: machServiceName, options
+    - Selector: initWithMachServiceName:options:
   */
   @objc static func createWithMachServiceName(_: String, options: NSXPCConnection.Options) -> Self
 
   /**
-    - jsName: createWithServiceName
-    - name: initWithServiceName:
-    - argLabels: 
-    - constructorTokens: serviceName
+    - Selector: initWithServiceName:
   */
   @objc static func createWithServiceName(_: String) -> Self
 
   /**
-    - jsName: invalidate
-    - name: invalidate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidate
   */
   @objc func invalidate()
 
   /**
-    - jsName: resume
-    - name: resume
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: resume
   */
   @objc func resume()
 
   /**
-    - jsName: scheduleSendBarrierBlock
-    - name: scheduleSendBarrierBlock:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.15
+    - Selector: scheduleSendBarrierBlock:
     - Introduced: 10.15
   */
-  // jsvalue - @objc @available(OSX 10.15, *) func scheduleSendBarrierBlock(_: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func scheduleSendBarrierBlock(_: JSValue)
 
   /**
-    - jsName: suspend
-    - name: suspend
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: suspend
   */
   @objc func suspend()
 
   // Own Instance Properties
 
   /**
-    - jsName: auditSessionIdentifier
-    - name: auditSessionIdentifier
-    - argLabels: 
+    - Selector: auditSessionIdentifier
   */
   @objc var auditSessionIdentifier: Int32 { @objc get }
 
   /**
-    - jsName: effectiveGroupIdentifier
-    - name: effectiveGroupIdentifier
-    - argLabels: 
+    - Selector: effectiveGroupIdentifier
   */
   @objc var effectiveGroupIdentifier: gid_t { @objc get }
 
   /**
-    - jsName: effectiveUserIdentifier
-    - name: effectiveUserIdentifier
-    - argLabels: 
+    - Selector: effectiveUserIdentifier
   */
   @objc var effectiveUserIdentifier: uid_t { @objc get }
 
   /**
-    - jsName: endpoint
-    - name: endpoint
-    - argLabels: 
+    - Selector: endpoint
   */
   @objc var endpoint: NSXPCListenerEndpoint { @objc get }
 
   /**
-    - jsName: exportedInterface
-    - name: exportedInterface
-    - argLabels: 
+    - Selector: exportedInterface
   */
   @objc var exportedInterface: NSXPCInterface? { @objc get @objc (setExportedInterface:) set }
 
   /**
-    - jsName: exportedObject
-    - name: exportedObject
-    - argLabels: 
+    - Selector: exportedObject
   */
   @objc var exportedObject: Any? { @objc get @objc (setExportedObject:) set }
 
   /**
-    - jsName: interruptionHandler
-    - name: interruptionHandler
-    - argLabels: 
+    - Selector: interruptionHandler
   */
 // jsvalue   @objc var interruptionHandler: JSValue? { @objc get @objc (setInterruptionHandler:) set }
 
   /**
-    - jsName: invalidationHandler
-    - name: invalidationHandler
-    - argLabels: 
+    - Selector: invalidationHandler
   */
 // jsvalue   @objc var invalidationHandler: JSValue? { @objc get @objc (setInvalidationHandler:) set }
 
   /**
-    - jsName: processIdentifier
-    - name: processIdentifier
-    - argLabels: 
+    - Selector: processIdentifier
   */
   @objc var processIdentifier: Int32 { @objc get }
 
   /**
-    - jsName: remoteObjectInterface
-    - name: remoteObjectInterface
-    - argLabels: 
+    - Selector: remoteObjectInterface
   */
   @objc var remoteObjectInterface: NSXPCInterface? { @objc get @objc (setRemoteObjectInterface:) set }
 
   /**
-    - jsName: remoteObjectProxy
-    - name: remoteObjectProxy
-    - argLabels: 
-    - available: 10.8
+    - Selector: remoteObjectProxy
   */
   @objc var remoteObjectProxy: Any { @objc get }
 
   /**
-    - jsName: serviceName
-    - name: serviceName
-    - argLabels: 
+    - Selector: serviceName
   */
   @objc var serviceName: String? { @objc get }
 }

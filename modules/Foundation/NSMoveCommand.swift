@@ -9,30 +9,28 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSMoveCommand
-    - name: NSMoveCommand
-    - argLabels: 
+    - Selector: NSMoveCommand
   */
 
 @objc(NSMoveCommand) protocol NSMoveCommandExports: JSExport, NSScriptCommandExports {
   // Static Methods
 
+  /**
+    - Selector: currentCommand
+  */
+  @objc (currentCommand) static func current() -> NSScriptCommand?
+
   // Instance Methods
 
   /**
-    - jsName: setReceiversSpecifier
-    - name: setReceiversSpecifier:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setReceiversSpecifier:
   */
   @objc func setReceiversSpecifier(_: NSScriptObjectSpecifier?)
 
   // Own Instance Properties
 
   /**
-    - jsName: keySpecifier
-    - name: keySpecifier
-    - argLabels: 
+    - Selector: keySpecifier
   */
   @objc var keySpecifier: NSScriptObjectSpecifier { @objc get }
 }

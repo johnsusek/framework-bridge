@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSegmentedCell
-    - name: NSSegmentedCell
-    - argLabels: 
+    - Selector: NSSegmentedCell
   */
 
 @objc(NSSegmentedCell) protocol NSSegmentedCellExports: JSExport, NSActionCellExports {
@@ -20,248 +18,143 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: drawSegment
-    - name: drawSegment:inFrame:withView:
-    - argLabels: _, inFrame, with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawSegment(_:inFrame:with:)
+    - Selector: drawSegment:inFrame:withView:
   */
   @objc (drawSegment:inFrame:withView:) func drawSegment(_: Int, inFrame: CGRect, with: NSView)
 
   /**
-    - jsName: image
-    - name: imageForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: image(forSegment:)
+    - Selector: imageForSegment:
   */
   @objc (imageForSegment:) func image(forSegment: Int) -> NSImage?
 
   /**
-    - jsName: imageScaling
-    - name: imageScalingForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: imageScaling(forSegment:)
+    - Selector: imageScalingForSegment:
     - Introduced: 10.5
   */
   @objc (imageScalingForSegment:) @available(OSX 10.5, *) func imageScaling(forSegment: Int) -> NSImageScaling
 
   /**
-    - jsName: interiorBackgroundStyle
-    - name: interiorBackgroundStyleForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: interiorBackgroundStyle(forSegment:)
+    - Selector: interiorBackgroundStyleForSegment:
     - Introduced: 10.5
   */
   @objc (interiorBackgroundStyleForSegment:) @available(OSX 10.5, *) func interiorBackgroundStyle(forSegment: Int) -> NSView.BackgroundStyle
 
   /**
-    - jsName: isEnabled
-    - name: isEnabledForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: isEnabled(forSegment:)
+    - Selector: isEnabledForSegment:
   */
   @objc (isEnabledForSegment:) func isEnabled(forSegment: Int) -> Bool
 
   /**
-    - jsName: isSelected
-    - name: isSelectedForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: isSelected(forSegment:)
+    - Selector: isSelectedForSegment:
   */
   @objc (isSelectedForSegment:) func isSelected(forSegment: Int) -> Bool
 
   /**
-    - jsName: label
-    - name: labelForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: label(forSegment:)
+    - Selector: labelForSegment:
   */
   @objc (labelForSegment:) func label(forSegment: Int) -> String?
 
   /**
-    - jsName: makeNextSegmentKey
-    - name: makeNextSegmentKey
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: makeNextSegmentKey
   */
   @objc func makeNextSegmentKey()
 
   /**
-    - jsName: makePreviousSegmentKey
-    - name: makePreviousSegmentKey
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: makePreviousSegmentKey
   */
   @objc func makePreviousSegmentKey()
 
   /**
-    - jsName: menu
-    - name: menuForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: menu(forSegment:)
+    - Selector: menuForSegment:
   */
   @objc (menuForSegment:) func menu(forSegment: Int) -> NSMenu?
 
   /**
-    - jsName: selectSegment
-    - name: selectSegmentWithTag:
-    - argLabels: withTag
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectSegment(withTag:)
+    - Selector: selectSegmentWithTag:
   */
   @objc (selectSegmentWithTag:) func selectSegment(withTag: Int) -> Bool
 
   /**
-    - jsName: setEnabled
-    - name: setEnabled:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
+    - Selector: setEnabled:forSegment:
   */
   @objc func setEnabled(_: Bool, forSegment: Int)
 
   /**
-    - jsName: setImage
-    - name: setImage:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
+    - Selector: setImage:forSegment:
   */
   @objc func setImage(_: NSImage?, forSegment: Int)
 
   /**
-    - jsName: setImageScaling
-    - name: setImageScaling:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: setImageScaling:forSegment:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func setImageScaling(_: NSImageScaling, forSegment: Int)
 
   /**
-    - jsName: setLabel
-    - name: setLabel:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
+    - Selector: setLabel:forSegment:
   */
   @objc func setLabel(_: String, forSegment: Int)
 
   /**
-    - jsName: setMenu
-    - name: setMenu:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
+    - Selector: setMenu:forSegment:
   */
   @objc func setMenu(_: NSMenu?, forSegment: Int)
 
   /**
-    - jsName: setSelected
-    - name: setSelected:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
+    - Selector: setSelected:forSegment:
   */
   @objc func setSelected(_: Bool, forSegment: Int)
 
   /**
-    - jsName: setTag
-    - name: setTag:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
+    - Selector: setTag:forSegment:
   */
   @objc func setTag(_: Int, forSegment: Int)
 
   /**
-    - jsName: setToolTip
-    - name: setToolTip:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
+    - Selector: setToolTip:forSegment:
   */
   @objc func setToolTip(_: String?, forSegment: Int)
 
   /**
-    - jsName: setWidth
-    - name: setWidth:forSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
+    - Selector: setWidth:forSegment:
   */
   @objc func setWidth(_: CGFloat, forSegment: Int)
 
   /**
-    - jsName: tag
-    - name: tagForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: tag(forSegment:)
+    - Selector: tagForSegment:
   */
   @objc (tagForSegment:) func tag(forSegment: Int) -> Int
 
   /**
-    - jsName: toolTip
-    - name: toolTipForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: toolTip(forSegment:)
+    - Selector: toolTipForSegment:
   */
   @objc (toolTipForSegment:) func toolTip(forSegment: Int) -> String?
 
   /**
-    - jsName: width
-    - name: widthForSegment:
-    - argLabels: forSegment
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: width(forSegment:)
+    - Selector: widthForSegment:
   */
   @objc (widthForSegment:) func width(forSegment: Int) -> CGFloat
 
   // Own Instance Properties
 
   /**
-    - jsName: segmentCount
-    - name: segmentCount
-    - argLabels: 
+    - Selector: segmentCount
   */
   @objc var segmentCount: Int { @objc get @objc (setSegmentCount:) set }
 
   /**
-    - jsName: segmentStyle
-    - name: segmentStyle
-    - argLabels: 
-    - available: 10.5
+    - Selector: segmentStyle
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var segmentStyle: NSSegmentedControl.Style { @objc get @objc (setSegmentStyle:) set }
 
   /**
-    - jsName: selectedSegment
-    - name: selectedSegment
-    - argLabels: 
+    - Selector: selectedSegment
   */
   @objc var selectedSegment: Int { @objc get @objc (setSelectedSegment:) set }
 
   /**
-    - jsName: trackingMode
-    - name: trackingMode
-    - argLabels: 
+    - Selector: trackingMode
   */
   @objc var trackingMode: NSSegmentedControl.SwitchTracking { @objc get @objc (setTrackingMode:) set }
 }

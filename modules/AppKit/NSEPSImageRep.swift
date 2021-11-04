@@ -9,29 +9,41 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSEPSImageRep
-    - name: NSEPSImageRep
-    - argLabels: 
+    - Selector: NSEPSImageRep
   */
 
 @objc(NSEPSImageRep) protocol NSEPSImageRepExports: JSExport, NSImageRepExports {
   // Static Methods
 
+  /**
+    - Selector: canInitWithData:
+  */
+  @objc (canInitWithData:) static func canInit(with: Data) -> Bool
+
+  /**
+    - Selector: imageRepsWithContentsOfFile:
+  */
+  @objc (imageRepsWithContentsOfFile:) static func imageReps(withContentsOfFile: String) -> [NSImageRep]?
+
+  /**
+    - Selector: registerImageRepClass:
+  */
+  @objc (registerImageRepClass:) static func registerClass(_: AnyClass)
+
+  /**
+    - Selector: unregisterImageRepClass:
+  */
+  @objc (unregisterImageRepClass:) static func unregisterClass(_: AnyClass)
+
   // Own Instance Properties
 
   /**
-    - jsName: epsRepresentation
-    - name: EPSRepresentation
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: epsRepresentation
+    - Selector: EPSRepresentation
   */
   @objc var epsRepresentation: Data { @objc (EPSRepresentation) get }
 
   /**
-    - jsName: boundingBox
-    - name: boundingBox
-    - argLabels: 
+    - Selector: boundingBox
   */
   @objc var boundingBox: CGRect { @objc get }
 }

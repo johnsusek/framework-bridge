@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPickerTouchBarItem
-    - name: NSPickerTouchBarItem
-    - argLabels: 
+    - Selector: NSPickerTouchBarItem
     - Introduced: 10.15
   */
 
@@ -19,157 +17,96 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: pickerTouchBarItemWithIdentifier:images:selectionMode:target:action:
-    - argLabels: identifier, images, selectionMode, target, action
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:images:selectionMode:target:action:)
-    - message: Not available in Swift
+    - Selector: pickerTouchBarItemWithIdentifier:images:selectionMode:target:action:
   */
   @objc static func create(identifier: NSTouchBarItem.Identifier, images: [NSImage], selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self
 
   /**
-    - jsName: create
-    - name: pickerTouchBarItemWithIdentifier:labels:selectionMode:target:action:
-    - argLabels: identifier, labels, selectionMode, target, action
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:labels:selectionMode:target:action:)
-    - message: Not available in Swift
+    - Selector: pickerTouchBarItemWithIdentifier:labels:selectionMode:target:action:
   */
   @objc static func create(identifier: NSTouchBarItem.Identifier, labels: [String], selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self
 
   // Instance Methods
 
   /**
-    - jsName: image
-    - name: imageAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: image(at:)
+    - Selector: imageAtIndex:
   */
   @objc (imageAtIndex:) func image(at: Int) -> NSImage?
 
   /**
-    - jsName: isEnabled
-    - name: isEnabledAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: isEnabled(at:)
+    - Selector: isEnabledAtIndex:
   */
   @objc (isEnabledAtIndex:) func isEnabled(at: Int) -> Bool
 
   /**
-    - jsName: label
-    - name: labelAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: label(at:)
+    - Selector: labelAtIndex:
   */
   @objc (labelAtIndex:) func label(at: Int) -> String?
 
   /**
-    - jsName: setImage
-    - name: setImage:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setImage(_:at:)
+    - Selector: setImage:atIndex:
   */
   @objc (setImage:atIndex:) func setImage(_: NSImage?, at: Int)
 
   /**
-    - jsName: setLabel
-    - name: setLabel:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setLabel(_:at:)
+    - Selector: setLabel:atIndex:
   */
   @objc (setLabel:atIndex:) func setLabel(_: String, at: Int)
 
   // Own Instance Properties
 
   /**
-    - jsName: action
-    - name: action
-    - argLabels: 
+    - Selector: action
   */
   @objc var action: Selector? { @objc get @objc (setAction:) set }
 
   /**
-    - jsName: collapsedRepresentationImage
-    - name: collapsedRepresentationImage
-    - argLabels: 
+    - Selector: collapsedRepresentationImage
   */
   @objc var collapsedRepresentationImage: NSImage? { @objc get @objc (setCollapsedRepresentationImage:) set }
 
   /**
-    - jsName: collapsedRepresentationLabel
-    - name: collapsedRepresentationLabel
-    - argLabels: 
+    - Selector: collapsedRepresentationLabel
   */
   @objc var collapsedRepresentationLabel: String { @objc get @objc (setCollapsedRepresentationLabel:) set }
 
   /**
-    - jsName: controlRepresentation
-    - name: controlRepresentation
-    - argLabels: 
+    - Selector: controlRepresentation
   */
   @objc var controlRepresentation: NSPickerTouchBarItem.ControlRepresentation { @objc get @objc (setControlRepresentation:) set }
 
   /**
-    - jsName: customizationLabel
-    - name: customizationLabel
-    - argLabels: 
+    - Selector: customizationLabel
   */
   @objc var customizationLabel: String! { @objc get @objc (setCustomizationLabel:) set }
 
   /**
-    - jsName: isEnabled
-    - name: enabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEnabled
+    - Selector: enabled
   */
   @objc var isEnabled: Bool { @objc get @objc (setEnabled:) set }
 
   /**
-    - jsName: numberOfOptions
-    - name: numberOfOptions
-    - argLabels: 
+    - Selector: numberOfOptions
   */
   @objc var numberOfOptions: Int { @objc get @objc (setNumberOfOptions:) set }
 
   /**
-    - jsName: selectedIndex
-    - name: selectedIndex
-    - argLabels: 
+    - Selector: selectedIndex
   */
   @objc var selectedIndex: Int { @objc get @objc (setSelectedIndex:) set }
 
   /**
-    - jsName: selectionColor
-    - name: selectionColor
-    - argLabels: 
+    - Selector: selectionColor
   */
   @objc var selectionColor: NSColor? { @objc get @objc (setSelectionColor:) set }
 
   /**
-    - jsName: selectionMode
-    - name: selectionMode
-    - argLabels: 
+    - Selector: selectionMode
   */
   @objc var selectionMode: NSPickerTouchBarItem.SelectionMode { @objc get @objc (setSelectionMode:) set }
 
   /**
-    - jsName: target
-    - name: target
-    - argLabels: 
+    - Selector: target
   */
   @objc var target: AnyObject? { @objc get @objc (setTarget:) set }
 }

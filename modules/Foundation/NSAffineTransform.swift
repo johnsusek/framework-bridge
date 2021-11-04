@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: AffineTransform
-    - name: NSAffineTransform
-    - argLabels: 
+    - Selector: NSAffineTransform
   */
 
 @objc(NSAffineTransform) protocol NSAffineTransformExports: JSExport, NSObjectExports {
@@ -20,123 +18,79 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: append
-    - name: appendTransform:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: appendTransform:
   */
   @objc (appendTransform:) func append(_: AffineTransform)
 
   /**
-    - jsName: concat
-    - name: concat
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: concat
   */
   @objc func concat()
 
   /**
-    - jsName: createWithTransform
-    - name: initWithTransform:
-    - argLabels: 
-    - constructorTokens: transform
+    - Selector: initWithTransform:
   */
   @objc static func createWithTransform(_: AffineTransform) -> Self
 
   /**
-    - jsName: invert
-    - name: invert
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invert
   */
   @objc func invert()
 
   /**
-    - jsName: prepend
-    - name: prependTransform:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: prependTransform:
   */
   @objc (prependTransform:) func prepend(_: AffineTransform)
 
   /**
-    - jsName: rotate
-    - name: rotateByDegrees:
-    - argLabels: byDegrees
-    - constructorTokens: 
+    - Selector: rotateByDegrees:
   */
   @objc (rotateByDegrees:) func rotate(byDegrees: CGFloat)
 
   /**
-    - jsName: rotate
-    - name: rotateByRadians:
-    - argLabels: byRadians
-    - constructorTokens: 
+    - Selector: rotateByRadians:
   */
   @objc (rotateByRadians:) func rotate(byRadians: CGFloat)
 
   /**
-    - jsName: scale
-    - name: scaleBy:
-    - argLabels: by
-    - constructorTokens: 
+    - Selector: scaleBy:
   */
   @objc (scaleBy:) func scale(by: CGFloat)
 
   /**
-    - jsName: scaleX
-    - name: scaleXBy:yBy:
-    - argLabels: by, yBy
-    - constructorTokens: 
+    - Selector: scaleXBy:yBy:
   */
   @objc (scaleXBy:yBy:) func scaleX(by: CGFloat, yBy: CGFloat)
 
   /**
-    - jsName: set
-    - name: set
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: set
   */
   @objc func set()
 
   /**
-    - jsName: transform
-    - name: transformBezierPath:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: transformBezierPath:
   */
   @objc (transformBezierPath:) func transform(_: NSBezierPath) -> NSBezierPath
 
   /**
-    - jsName: transform
-    - name: transformPoint:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: transformPoint:
   */
   @objc (transformPoint:) func transform(_: CGPoint) -> CGPoint
 
   /**
-    - jsName: transform
-    - name: transformSize:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: transformSize:
   */
   @objc (transformSize:) func transform(_: CGSize) -> CGSize
 
   /**
-    - jsName: translateX
-    - name: translateXBy:yBy:
-    - argLabels: by, yBy
-    - constructorTokens: 
+    - Selector: translateXBy:yBy:
   */
   @objc (translateXBy:yBy:) func translateX(by: CGFloat, yBy: CGFloat)
 
   // Own Instance Properties
 
   /**
-    - jsName: transformStruct
-    - name: transformStruct
-    - argLabels: 
+    - Selector: transformStruct
   */
   @objc var transformStruct: NSAffineTransformStruct { @objc get @objc (setTransformStruct:) set }
 }

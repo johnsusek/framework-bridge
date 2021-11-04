@@ -9,48 +9,42 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSStepper
-    - name: NSStepper
-    - argLabels: 
+    - Selector: NSStepper
   */
 
 @objc(NSStepper) protocol NSStepperExports: JSExport, NSControlExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Own Instance Properties
 
   /**
-    - jsName: autorepeat
-    - name: autorepeat
-    - argLabels: 
+    - Selector: autorepeat
   */
   @objc var autorepeat: Bool { @objc get @objc (setAutorepeat:) set }
 
   /**
-    - jsName: increment
-    - name: increment
-    - argLabels: 
+    - Selector: increment
   */
   @objc var increment: Double { @objc get @objc (setIncrement:) set }
 
   /**
-    - jsName: maxValue
-    - name: maxValue
-    - argLabels: 
+    - Selector: maxValue
   */
   @objc var maxValue: Double { @objc get @objc (setMaxValue:) set }
 
   /**
-    - jsName: minValue
-    - name: minValue
-    - argLabels: 
+    - Selector: minValue
   */
   @objc var minValue: Double { @objc get @objc (setMinValue:) set }
 
   /**
-    - jsName: valueWraps
-    - name: valueWraps
-    - argLabels: 
+    - Selector: valueWraps
   */
   @objc var valueWraps: Bool { @objc get @objc (setValueWraps:) set }
 }

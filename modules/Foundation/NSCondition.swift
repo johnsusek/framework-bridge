@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSCondition
-    - name: NSCondition
-    - argLabels: 
+    - Selector: NSCondition
     - Introduced: 10.5
   */
 
@@ -21,46 +19,29 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: broadcast
-    - name: broadcast
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: broadcast
   */
   @objc func broadcast()
 
   /**
-    - jsName: signal
-    - name: signal
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: signal
   */
   @objc func signal()
 
   /**
-    - jsName: wait
-    - name: wait
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: wait
   */
   @objc func wait()
 
   /**
-    - jsName: wait
-    - name: waitUntilDate:
-    - argLabels: until
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: wait(until:)
+    - Selector: waitUntilDate:
   */
   @objc (waitUntilDate:) func wait(until: Date) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
-    - available: 10.5
+    - Selector: name
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var name: String? { @objc get @objc (setName:) set }

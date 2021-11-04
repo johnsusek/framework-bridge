@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSLayoutAnchor
-    - name: NSLayoutAnchor
-    - argLabels: 
+    - Selector: NSLayoutAnchor
     - Introduced: 10.11
   */
 
@@ -21,103 +19,85 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: constraint
-    - name: constraintEqualToAnchor:
-    - argLabels: equalTo
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: constraint(equalTo:)
+    - Selector: constraintEqualToAnchor:
   */
-  // jsvalue - @objc func constraint(equalTo: JSValue) -> NSLayoutConstraint
+  @objc func constraint(equalTo: JSValue) -> NSLayoutConstraint
 
   /**
-    - jsName: constraint
-    - name: constraintEqualToAnchor:constant:
-    - argLabels: equalTo, constant
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: constraint(equalTo:constant:)
+    - Selector: constraintEqualToAnchor:constant:
   */
-  // jsvalue - @objc func constraint(equalTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
+  @objc func constraint(equalTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
 
   /**
-    - jsName: constraint
-    - name: constraintGreaterThanOrEqualToAnchor:
-    - argLabels: greaterThanOrEqualTo
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: constraint(greaterThanOrEqualTo:)
+    - Selector: constraintGreaterThanOrEqualToAnchor:
   */
-  // jsvalue - @objc func constraint(greaterThanOrEqualTo: JSValue) -> NSLayoutConstraint
+  @objc func constraint(greaterThanOrEqualTo: JSValue) -> NSLayoutConstraint
 
   /**
-    - jsName: constraint
-    - name: constraintGreaterThanOrEqualToAnchor:constant:
-    - argLabels: greaterThanOrEqualTo, constant
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: constraint(greaterThanOrEqualTo:constant:)
+    - Selector: constraintGreaterThanOrEqualToAnchor:constant:
   */
-  // jsvalue - @objc func constraint(greaterThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
+  @objc func constraint(greaterThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
 
   /**
-    - jsName: constraint
-    - name: constraintLessThanOrEqualToAnchor:
-    - argLabels: lessThanOrEqualTo
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: constraint(lessThanOrEqualTo:)
+    - Selector: constraintLessThanOrEqualToAnchor:
   */
-  // jsvalue - @objc func constraint(lessThanOrEqualTo: JSValue) -> NSLayoutConstraint
+  @objc func constraint(lessThanOrEqualTo: JSValue) -> NSLayoutConstraint
 
   /**
-    - jsName: constraint
-    - name: constraintLessThanOrEqualToAnchor:constant:
-    - argLabels: lessThanOrEqualTo, constant
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: constraint(lessThanOrEqualTo:constant:)
+    - Selector: constraintLessThanOrEqualToAnchor:constant:
   */
-  // jsvalue - @objc func constraint(lessThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
+  @objc func constraint(lessThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
 
   // Own Instance Properties
 
   /**
-    - jsName: constraintsAffectingLayout
-    - name: constraintsAffectingLayout
-    - argLabels: 
-    - available: 10.12
+    - Selector: constraintsAffectingLayout
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var constraintsAffectingLayout: [NSLayoutConstraint] { @objc get }
 
   /**
-    - jsName: hasAmbiguousLayout
-    - name: hasAmbiguousLayout
-    - argLabels: 
-    - available: 10.12
+    - Selector: hasAmbiguousLayout
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var hasAmbiguousLayout: Bool { @objc get }
 
   /**
-    - jsName: item
-    - name: item
-    - argLabels: 
-    - available: 10.12
+    - Selector: item
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var item: AnyObject? { @objc get }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
-    - available: 10.12
+    - Selector: name
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var name: String { @objc get }
 }
 
 extension NSLayoutAnchor: NSLayoutAnchorExports {
+  @objc public func constraint(equalTo: JSValue) -> NSLayoutConstraint {
+    return self.constraint(equalTo: equalTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>)
+  }
+
+  @objc public func constraint(equalTo: JSValue, constant: CGFloat) -> NSLayoutConstraint {
+    return self.constraint(equalTo: equalTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>, constant: constant)
+  }
+
+  @objc public func constraint(greaterThanOrEqualTo: JSValue) -> NSLayoutConstraint {
+    return self.constraint(greaterThanOrEqualTo: greaterThanOrEqualTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>)
+  }
+
+  @objc public func constraint(greaterThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint {
+    return self.constraint(greaterThanOrEqualTo: greaterThanOrEqualTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>, constant: constant)
+  }
+
+  @objc public func constraint(lessThanOrEqualTo: JSValue) -> NSLayoutConstraint {
+    return self.constraint(lessThanOrEqualTo: lessThanOrEqualTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>)
+  }
+
+  @objc public func constraint(lessThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint {
+    return self.constraint(lessThanOrEqualTo: lessThanOrEqualTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>, constant: constant)
+  }
+
 }

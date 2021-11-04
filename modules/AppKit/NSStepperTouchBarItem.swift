@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSStepperTouchBarItem
-    - name: NSStepperTouchBarItem
-    - argLabels: 
+    - Selector: NSStepperTouchBarItem
     - Introduced: 10.15
   */
 
@@ -19,75 +17,49 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: stepperTouchBarItemWithIdentifier:drawingHandler:
-    - argLabels: identifier, drawingHandler
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:drawingHandler:)
-    - message: Not available in Swift
+    - Selector: stepperTouchBarItemWithIdentifier:drawingHandler:
   */
-  @objc static func create(identifier: NSTouchBarItem.Identifier, drawingHandler: JSValue) -> Self
+// jsvalue   @objc static func create(identifier: NSTouchBarItem.Identifier, drawingHandler: JSValue) -> Self
 
   /**
-    - jsName: create
-    - name: stepperTouchBarItemWithIdentifier:formatter:
-    - argLabels: identifier, formatter
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:formatter:)
-    - message: Not available in Swift
+    - Selector: stepperTouchBarItemWithIdentifier:formatter:
   */
   @objc static func create(identifier: NSTouchBarItem.Identifier, formatter: Formatter) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: action
-    - name: action
-    - argLabels: 
+    - Selector: action
   */
   @objc var action: Selector? { @objc get @objc (setAction:) set }
 
   /**
-    - jsName: customizationLabel
-    - name: customizationLabel
-    - argLabels: 
+    - Selector: customizationLabel
   */
   @objc var customizationLabel: String! { @objc get @objc (setCustomizationLabel:) set }
 
   /**
-    - jsName: increment
-    - name: increment
-    - argLabels: 
+    - Selector: increment
   */
   @objc var increment: Double { @objc get @objc (setIncrement:) set }
 
   /**
-    - jsName: maxValue
-    - name: maxValue
-    - argLabels: 
+    - Selector: maxValue
   */
   @objc var maxValue: Double { @objc get @objc (setMaxValue:) set }
 
   /**
-    - jsName: minValue
-    - name: minValue
-    - argLabels: 
+    - Selector: minValue
   */
   @objc var minValue: Double { @objc get @objc (setMinValue:) set }
 
   /**
-    - jsName: target
-    - name: target
-    - argLabels: 
+    - Selector: target
   */
   @objc var target: AnyObject? { @objc get @objc (setTarget:) set }
 
   /**
-    - jsName: value
-    - name: value
-    - argLabels: 
+    - Selector: value
   */
   @objc var value: Double { @objc get @objc (setValue:) set }
 }

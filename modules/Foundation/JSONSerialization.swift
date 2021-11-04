@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: JSONSerialization
-    - name: NSJSONSerialization
-    - argLabels: 
+    - Selector: NSJSONSerialization
     - Introduced: 10.7
   */
 
@@ -19,44 +17,27 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: JSONObjectWithData
-    - name: JSONObjectWithData:options:error:
-    - argLabels: options, error
-    - constructorTokens: 
+    - Selector: JSONObjectWithData:options:error:
   */
   // throws - @objc static func JSONObjectWithData(options: Data, error: JSONSerialization.ReadingOptions) -> Any?
 
   /**
-    - jsName: JSONObjectWithStream
-    - name: JSONObjectWithStream:options:error:
-    - argLabels: options, error
-    - constructorTokens: 
+    - Selector: JSONObjectWithStream:options:error:
   */
   // throws - @objc static func JSONObjectWithStream(options: InputStream, error: JSONSerialization.ReadingOptions) -> Any?
 
   /**
-    - jsName: dataWithJSONObject
-    - name: dataWithJSONObject:options:error:
-    - argLabels: options, error
-    - constructorTokens: 
+    - Selector: dataWithJSONObject:options:error:
   */
   // throws - @objc static func dataWithJSONObject(options: Any, error: JSONSerialization.WritingOptions) -> Data?
 
   /**
-    - jsName: isValidJSONObject
-    - name: isValidJSONObject:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: isValidJSONObject:
   */
   @objc static func isValidJSONObject(_: Any) -> Bool
 
   /**
-    - jsName: writeJSONObject
-    - name: writeJSONObject:toStream:options:error:
-    - argLabels: _, to, options, error
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: writeJSONObject(_:to:options:error:)
+    - Selector: writeJSONObject:toStream:options:error:
   */
   // throws - @objc (writeJSONObject:toStream:options:error:) static func writeJSONObject(_: Any, _: OutputStream, _: JSONSerialization.WritingOptions) -> Int
 }

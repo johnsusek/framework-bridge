@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSToolbarItem
-    - name: NSToolbarItem
-    - argLabels: 
+    - Selector: NSToolbarItem
   */
 
 @objc(NSToolbarItem) protocol NSToolbarItemExports: JSExport, NSObjectExports {
@@ -20,167 +18,111 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithItemIdentifier
-    - name: initWithItemIdentifier:
-    - argLabels: 
-    - constructorTokens: itemIdentifier
+    - Selector: initWithItemIdentifier:
   */
   @objc static func createWithItemIdentifier(_: NSToolbarItem.Identifier) -> Self
 
   /**
-    - jsName: validate
-    - name: validate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: validate
   */
   @objc func validate()
 
   // Own Instance Properties
 
   /**
-    - jsName: action
-    - name: action
-    - argLabels: 
+    - Selector: action
   */
   @objc var action: Selector? { @objc get @objc (setAction:) set }
 
   /**
-    - jsName: allowsDuplicatesInToolbar
-    - name: allowsDuplicatesInToolbar
-    - argLabels: 
+    - Selector: allowsDuplicatesInToolbar
   */
   @objc var allowsDuplicatesInToolbar: Bool { @objc get }
 
   /**
-    - jsName: autovalidates
-    - name: autovalidates
-    - argLabels: 
+    - Selector: autovalidates
   */
   @objc var autovalidates: Bool { @objc get @objc (setAutovalidates:) set }
 
   /**
-    - jsName: isBordered
-    - name: bordered
-    - argLabels: 
-    - available: 10.15
-    - obsoleted: 3
-    - renamed: isBordered
+    - Selector: bordered
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) var isBordered: Bool { @objc get @objc (setBordered:) set }
 
   /**
-    - jsName: isEnabled
-    - name: enabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEnabled
+    - Selector: enabled
   */
   @objc var isEnabled: Bool { @objc get @objc (setEnabled:) set }
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
+    - Selector: image
   */
   @objc var image: NSImage? { @objc get @objc (setImage:) set }
 
   /**
-    - jsName: itemIdentifier
-    - name: itemIdentifier
-    - argLabels: 
+    - Selector: itemIdentifier
   */
   @objc var itemIdentifier: NSToolbarItem.Identifier { @objc get }
 
   /**
-    - jsName: label
-    - name: label
-    - argLabels: 
+    - Selector: label
   */
   @objc var label: String { @objc get @objc (setLabel:) set }
 
   /**
-    - jsName: maxSize
-    - name: maxSize
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 100000
-    - message: This property is no longer recommended. Instead, let the system automatically measure the size of the view using constraints.
+    - Selector: maxSize
   */
   @objc var maxSize: CGSize { @objc get @objc (setMaxSize:) set }
 
   /**
-    - jsName: menuFormRepresentation
-    - name: menuFormRepresentation
-    - argLabels: 
+    - Selector: menuFormRepresentation
   */
   @objc var menuFormRepresentation: NSMenuItem? { @objc get @objc (setMenuFormRepresentation:) set }
 
   /**
-    - jsName: minSize
-    - name: minSize
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 100000
-    - message: This property is no longer recommended. Instead, let the system automatically measure the size of the view using constraints.
+    - Selector: minSize
   */
   @objc var minSize: CGSize { @objc get @objc (setMinSize:) set }
 
   /**
-    - jsName: paletteLabel
-    - name: paletteLabel
-    - argLabels: 
+    - Selector: paletteLabel
   */
   @objc var paletteLabel: String { @objc get @objc (setPaletteLabel:) set }
 
   /**
-    - jsName: tag
-    - name: tag
-    - argLabels: 
+    - Selector: tag
   */
   @objc var tag: Int { @objc get @objc (setTag:) set }
 
   /**
-    - jsName: target
-    - name: target
-    - argLabels: 
+    - Selector: target
   */
   @objc var target: AnyObject? { @objc get @objc (setTarget:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
-    - available: 10.15
+    - Selector: title
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) var title: String { @objc get @objc (setTitle:) set }
 
   /**
-    - jsName: toolTip
-    - name: toolTip
-    - argLabels: 
+    - Selector: toolTip
   */
   @objc var toolTip: String? { @objc get @objc (setToolTip:) set }
 
   /**
-    - jsName: toolbar
-    - name: toolbar
-    - argLabels: 
+    - Selector: toolbar
   */
   @objc var toolbar: NSToolbar? { @objc get }
 
   /**
-    - jsName: view
-    - name: view
-    - argLabels: 
+    - Selector: view
   */
   @objc var view: NSView? { @objc get @objc (setView:) set }
 
   /**
-    - jsName: visibilityPriority
-    - name: visibilityPriority
-    - argLabels: 
+    - Selector: visibilityPriority
   */
   @objc var visibilityPriority: NSToolbarItem.VisibilityPriority { @objc get @objc (setVisibilityPriority:) set }
 }

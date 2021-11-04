@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSPropertySpecifier
-    - name: NSPropertySpecifier
-    - argLabels: 
+    - Selector: NSPropertySpecifier
   */
 
 @objc(NSPropertySpecifier) protocol NSPropertySpecifierExports: JSExport, NSScriptObjectSpecifierExports {

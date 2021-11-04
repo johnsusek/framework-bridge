@@ -9,23 +9,20 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSImageView
-    - name: NSImageView
-    - argLabels: 
+    - Selector: NSImageView
   */
 
 @objc(NSImageView) protocol NSImageViewExports: JSExport, NSControlExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: imageViewWithImage:
-    - argLabels: image
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(image:)
-    - message: Not available in Swift
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: imageViewWithImage:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(image: NSImage) -> Self
@@ -33,62 +30,43 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: allowsCutCopyPaste
-    - name: allowsCutCopyPaste
-    - argLabels: 
+    - Selector: allowsCutCopyPaste
   */
   @objc var allowsCutCopyPaste: Bool { @objc get @objc (setAllowsCutCopyPaste:) set }
 
   /**
-    - jsName: animates
-    - name: animates
-    - argLabels: 
+    - Selector: animates
   */
   @objc var animates: Bool { @objc get @objc (setAnimates:) set }
 
   /**
-    - jsName: contentTintColor
-    - name: contentTintColor
-    - argLabels: 
-    - available: 10.14
+    - Selector: contentTintColor
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) var contentTintColor: NSColor? { @objc get @objc (setContentTintColor:) set }
 
   /**
-    - jsName: isEditable
-    - name: editable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEditable
+    - Selector: editable
   */
   @objc var isEditable: Bool { @objc get @objc (setEditable:) set }
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
+    - Selector: image
   */
   @objc var image: NSImage? { @objc get @objc (setImage:) set }
 
   /**
-    - jsName: imageAlignment
-    - name: imageAlignment
-    - argLabels: 
+    - Selector: imageAlignment
   */
   @objc var imageAlignment: NSImageAlignment { @objc get @objc (setImageAlignment:) set }
 
   /**
-    - jsName: imageFrameStyle
-    - name: imageFrameStyle
-    - argLabels: 
+    - Selector: imageFrameStyle
   */
   @objc var imageFrameStyle: NSImageView.FrameStyle { @objc get @objc (setImageFrameStyle:) set }
 
   /**
-    - jsName: imageScaling
-    - name: imageScaling
-    - argLabels: 
+    - Selector: imageScaling
   */
   @objc var imageScaling: NSImageScaling { @objc get @objc (setImageScaling:) set }
 }
@@ -97,14 +75,7 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: imageViewWithImage:
-    - argLabels: image
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(image:)
-    - message: Not available in Swift
+    - Selector: imageViewWithImage:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(image: NSImage) -> Self

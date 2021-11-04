@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: MessagePort
-    - name: NSMessagePort
-    - argLabels: 
+    - Selector: NSMessagePort
   */
 
 @objc(MessagePort) protocol MessagePortExports: JSExport, PortExports {

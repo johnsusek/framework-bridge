@@ -9,21 +9,37 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSSecureUnarchiveFromDataTransformer
-    - name: NSSecureUnarchiveFromDataTransformer
-    - argLabels: 
+    - Selector: NSSecureUnarchiveFromDataTransformer
     - Introduced: 10.14
   */
 
 @objc(NSSecureUnarchiveFromDataTransformer) protocol NSSecureUnarchiveFromDataTransformerExports: JSExport, ValueTransformerExports {
   // Static Methods
 
+  /**
+    - Selector: allowsReverseTransformation
+  */
+  @objc static func allowsReverseTransformation() -> Bool
+
+  /**
+    - Selector: setValueTransformer:forName:
+  */
+  @objc static func setValueTransformer(_: ValueTransformer?, forName: NSValueTransformerName)
+
+  /**
+    - Selector: transformedValueClass
+  */
+  @objc static func transformedValueClass() -> AnyClass
+
+  /**
+    - Selector: valueTransformerNames
+  */
+  @objc static func valueTransformerNames() -> [NSValueTransformerName]
+
   // Own Static Properties
 
   /**
-    - jsName: allowedTopLevelClasses
-    - name: allowedTopLevelClasses
-    - argLabels: 
+    - Selector: allowedTopLevelClasses
   */
   @objc static var allowedTopLevelClasses: [AnyClass] { @objc get }
 }

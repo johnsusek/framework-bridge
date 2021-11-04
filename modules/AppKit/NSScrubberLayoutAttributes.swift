@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubberLayoutAttributes
-    - name: NSScrubberLayoutAttributes
-    - argLabels: 
+    - Selector: NSScrubberLayoutAttributes
     - Introduced: 10.12.2
   */
 
@@ -19,36 +17,24 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: layoutAttributesForItemAtIndex:
-    - argLabels: forItemAt
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forItemAt:)
-    - message: Not available in Swift
+    - Selector: layoutAttributesForItemAtIndex:
   */
   @objc static func create(forItemAt: Int) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: alpha
-    - name: alpha
-    - argLabels: 
+    - Selector: alpha
   */
   @objc var alpha: CGFloat { @objc get @objc (setAlpha:) set }
 
   /**
-    - jsName: frame
-    - name: frame
-    - argLabels: 
+    - Selector: frame
   */
   @objc var frame: CGRect { @objc get @objc (setFrame:) set }
 
   /**
-    - jsName: itemIndex
-    - name: itemIndex
-    - argLabels: 
+    - Selector: itemIndex
   */
   @objc var itemIndex: Int { @objc get @objc (setItemIndex:) set }
 }

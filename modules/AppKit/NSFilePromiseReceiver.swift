@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSFilePromiseReceiver
-    - name: NSFilePromiseReceiver
-    - argLabels: 
+    - Selector: NSFilePromiseReceiver
     - Introduced: 10.12
   */
 
@@ -21,37 +19,26 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: readableDraggedTypes
-    - name: readableDraggedTypes
-    - argLabels: 
+    - Selector: readableDraggedTypes
   */
   @objc static var readableDraggedTypes: [String] { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: receivePromisedFiles
-    - name: receivePromisedFilesAtDestination:options:operationQueue:reader:
-    - argLabels: atDestination, options, operationQueue, reader
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: receivePromisedFiles(atDestination:options:operationQueue:reader:)
+    - Selector: receivePromisedFilesAtDestination:options:operationQueue:reader:
   */
-  // jsvalue - @objc (receivePromisedFilesAtDestination:options:operationQueue:reader:) func receivePromisedFiles(atDestination: URL, options: [AnyHashable: Any], operationQueue: OperationQueue, reader: JSValue)
+  // jsvalue @objc func receivePromisedFiles(atDestination: URL, options: [AnyHashable: Any], operationQueue: OperationQueue, reader: JSValue)
 
   // Own Instance Properties
 
   /**
-    - jsName: fileNames
-    - name: fileNames
-    - argLabels: 
+    - Selector: fileNames
   */
   @objc var fileNames: [String] { @objc get }
 
   /**
-    - jsName: fileTypes
-    - name: fileTypes
-    - argLabels: 
+    - Selector: fileTypes
   */
   @objc var fileTypes: [String] { @objc get }
 }

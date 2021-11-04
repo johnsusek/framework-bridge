@@ -9,21 +9,23 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPredicateEditor
-    - name: NSPredicateEditor
-    - argLabels: 
+    - Selector: NSPredicateEditor
     - Introduced: 10.5
   */
 
 @objc(NSPredicateEditor) protocol NSPredicateEditorExports: JSExport, NSRuleEditorExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Own Instance Properties
 
   /**
-    - jsName: rowTemplates
-    - name: rowTemplates
-    - argLabels: 
+    - Selector: rowTemplates
   */
   @objc var rowTemplates: [NSPredicateEditorRowTemplate] { @objc get @objc (setRowTemplates:) set }
 }

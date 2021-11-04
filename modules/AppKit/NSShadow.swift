@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSShadow
-    - name: NSShadow
-    - argLabels: 
+    - Selector: NSShadow
     - Introduced: 10.0
   */
 
@@ -21,33 +19,24 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: set
-    - name: set
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: set
   */
   @objc func set()
 
   // Own Instance Properties
 
   /**
-    - jsName: shadowBlurRadius
-    - name: shadowBlurRadius
-    - argLabels: 
+    - Selector: shadowBlurRadius
   */
   @objc var shadowBlurRadius: CGFloat { @objc get @objc (setShadowBlurRadius:) set }
 
   /**
-    - jsName: shadowColor
-    - name: shadowColor
-    - argLabels: 
+    - Selector: shadowColor
   */
   @objc var shadowColor: NSColor? { @objc get @objc (setShadowColor:) set }
 
   /**
-    - jsName: shadowOffset
-    - name: shadowOffset
-    - argLabels: 
+    - Selector: shadowOffset
   */
   @objc var shadowOffset: CGSize { @objc get @objc (setShadowOffset:) set }
 }

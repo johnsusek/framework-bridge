@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitElectricPotentialDifference
-    - name: NSUnitElectricPotentialDifference
-    - argLabels: 
+    - Selector: NSUnitElectricPotentialDifference
     - Introduced: 10.12
   */
 
@@ -19,47 +17,34 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: kilovolts
-    - name: kilovolts
-    - argLabels: 
+    - Selector: kilovolts
   */
   @objc static var kilovolts: UnitElectricPotentialDifference { @objc get }
 
   /**
-    - jsName: megavolts
-    - name: megavolts
-    - argLabels: 
+    - Selector: megavolts
   */
   @objc static var megavolts: UnitElectricPotentialDifference { @objc get }
 
   /**
-    - jsName: microvolts
-    - name: microvolts
-    - argLabels: 
+    - Selector: microvolts
   */
   @objc static var microvolts: UnitElectricPotentialDifference { @objc get }
 
   /**
-    - jsName: millivolts
-    - name: millivolts
-    - argLabels: 
+    - Selector: millivolts
   */
   @objc static var millivolts: UnitElectricPotentialDifference { @objc get }
 
   /**
-    - jsName: volts
-    - name: volts
-    - argLabels: 
+    - Selector: volts
   */
   @objc static var volts: UnitElectricPotentialDifference { @objc get }
 }

@@ -9,546 +9,304 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTableView
-    - name: NSTableView
-    - argLabels: 
+    - Selector: NSTableView
   */
 
 @objc(NSTableView) protocol NSTableViewExports: JSExport, NSControlExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: addTableColumn
-    - name: addTableColumn:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addTableColumn:
   */
   @objc func addTableColumn(_: NSTableColumn)
 
   /**
-    - jsName: beginUpdates
-    - name: beginUpdates
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: beginUpdates
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func beginUpdates()
 
   /**
-    - jsName: canDragRows
-    - name: canDragRowsWithIndexes:atPoint:
-    - argLabels: with, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: canDragRows(with:at:)
+    - Selector: canDragRowsWithIndexes:atPoint:
   */
   @objc (canDragRowsWithIndexes:atPoint:) func canDragRows(with: IndexSet, at: CGPoint) -> Bool
 
   /**
-    - jsName: column
-    - name: columnAtPoint:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: column(at:)
+    - Selector: columnAtPoint:
   */
   @objc (columnAtPoint:) func column(at: CGPoint) -> Int
 
   /**
-    - jsName: column
-    - name: columnForView:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: column(for:)
+    - Selector: columnForView:
     - Introduced: 10.7
   */
   @objc (columnForView:) @available(OSX 10.7, *) func column(`for`: NSView) -> Int
 
   /**
-    - jsName: columnIndexes
-    - name: columnIndexesInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: columnIndexes(in:)
+    - Selector: columnIndexesInRect:
     - Introduced: 10.5
   */
   @objc (columnIndexesInRect:) @available(OSX 10.5, *) func columnIndexes(in: CGRect) -> IndexSet
 
   /**
-    - jsName: column
-    - name: columnWithIdentifier:
-    - argLabels: withIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: column(withIdentifier:)
+    - Selector: columnWithIdentifier:
   */
   @objc (columnWithIdentifier:) func column(withIdentifier: NSUserInterfaceItemIdentifier) -> Int
 
   /**
-    - jsName: deselectAll
-    - name: deselectAll:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: deselectAll:
   */
   @objc func deselectAll(_: Any?)
 
   /**
-    - jsName: deselectColumn
-    - name: deselectColumn:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: deselectColumn:
   */
   @objc func deselectColumn(_: Int)
 
   /**
-    - jsName: deselectRow
-    - name: deselectRow:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: deselectRow:
   */
   @objc func deselectRow(_: Int)
 
   /**
-    - jsName: didAdd
-    - name: didAddRowView:forRow:
-    - argLabels: _, forRow
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: didAdd(_:forRow:)
+    - Selector: didAddRowView:forRow:
     - Introduced: 10.7
   */
   @objc (didAddRowView:forRow:) @available(OSX 10.7, *) func didAdd(_: NSTableRowView, forRow: Int)
 
   /**
-    - jsName: didRemove
-    - name: didRemoveRowView:forRow:
-    - argLabels: _, forRow
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: didRemove(_:forRow:)
+    - Selector: didRemoveRowView:forRow:
     - Introduced: 10.7
   */
   @objc (didRemoveRowView:forRow:) @available(OSX 10.7, *) func didRemove(_: NSTableRowView, forRow: Int)
 
   /**
-    - jsName: dragImageForRows
-    - name: dragImageForRowsWithIndexes:tableColumns:event:offset:
-    - argLabels: with, tableColumns, event, offset
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dragImageForRows(with:tableColumns:event:offset:)
+    - Selector: dragImageForRowsWithIndexes:tableColumns:event:offset:
   */
   @objc (dragImageForRowsWithIndexes:tableColumns:event:offset:) func dragImageForRows(with: IndexSet, tableColumns: [NSTableColumn], event: NSEvent, offset: NSPointPointer) -> NSImage
 
   /**
-    - jsName: drawBackground
-    - name: drawBackgroundInClipRect:
-    - argLabels: inClipRect
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawBackground(inClipRect:)
+    - Selector: drawBackgroundInClipRect:
   */
   @objc (drawBackgroundInClipRect:) func drawBackground(inClipRect: CGRect)
 
   /**
-    - jsName: drawGrid
-    - name: drawGridInClipRect:
-    - argLabels: inClipRect
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawGrid(inClipRect:)
+    - Selector: drawGridInClipRect:
   */
   @objc (drawGridInClipRect:) func drawGrid(inClipRect: CGRect)
 
   /**
-    - jsName: drawRow
-    - name: drawRow:clipRect:
-    - argLabels: clipRect
-    - constructorTokens: 
+    - Selector: drawRow:clipRect:
   */
   @objc func drawRow(_: Int, clipRect: CGRect)
 
   /**
-    - jsName: editColumn
-    - name: editColumn:row:withEvent:select:
-    - argLabels: _, row, with, select
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: editColumn(_:row:with:select:)
+    - Selector: editColumn:row:withEvent:select:
   */
   @objc (editColumn:row:withEvent:select:) func editColumn(_: Int, row: Int, with: NSEvent?, select: Bool)
 
   /**
-    - jsName: endUpdates
-    - name: endUpdates
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: endUpdates
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func endUpdates()
 
   /**
-    - jsName: enumerateAvailableRowViews
-    - name: enumerateAvailableRowViewsUsingBlock:
-    - argLabels: _
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: enumerateAvailableRowViews(_:)
+    - Selector: enumerateAvailableRowViewsUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue - @objc (enumerateAvailableRowViewsUsingBlock:) @available(OSX 10.7, *) func enumerateAvailableRowViews(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func enumerateAvailableRowViews(_: JSValue)
 
   /**
-    - jsName: frameOfCell
-    - name: frameOfCellAtColumn:row:
-    - argLabels: atColumn, row
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: frameOfCell(atColumn:row:)
+    - Selector: frameOfCellAtColumn:row:
   */
   @objc (frameOfCellAtColumn:row:) func frameOfCell(atColumn: Int, row: Int) -> CGRect
 
   /**
-    - jsName: hideRows
-    - name: hideRowsAtIndexes:withAnimation:
-    - argLabels: at, withAnimation
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: hideRows(at:withAnimation:)
+    - Selector: hideRowsAtIndexes:withAnimation:
     - Introduced: 10.11
   */
   @objc (hideRowsAtIndexes:withAnimation:) @available(OSX 10.11, *) func hideRows(at: IndexSet, withAnimation: NSTableView.AnimationOptions)
 
   /**
-    - jsName: highlightSelection
-    - name: highlightSelectionInClipRect:
-    - argLabels: inClipRect
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: highlightSelection(inClipRect:)
+    - Selector: highlightSelectionInClipRect:
   */
   @objc (highlightSelectionInClipRect:) func highlightSelection(inClipRect: CGRect)
 
   /**
-    - jsName: indicatorImage
-    - name: indicatorImageInTableColumn:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indicatorImage(in:)
+    - Selector: indicatorImageInTableColumn:
   */
   @objc (indicatorImageInTableColumn:) func indicatorImage(in: NSTableColumn) -> NSImage?
 
   /**
-    - jsName: insertRows
-    - name: insertRowsAtIndexes:withAnimation:
-    - argLabels: at, withAnimation
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: insertRows(at:withAnimation:)
+    - Selector: insertRowsAtIndexes:withAnimation:
     - Introduced: 10.7
   */
   @objc (insertRowsAtIndexes:withAnimation:) @available(OSX 10.7, *) func insertRows(at: IndexSet, withAnimation: NSTableView.AnimationOptions)
 
   /**
-    - jsName: isColumnSelected
-    - name: isColumnSelected:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: isColumnSelected:
   */
   @objc func isColumnSelected(_: Int) -> Bool
 
   /**
-    - jsName: isRowSelected
-    - name: isRowSelected:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: isRowSelected:
   */
   @objc func isRowSelected(_: Int) -> Bool
 
   /**
-    - jsName: makeView
-    - name: makeViewWithIdentifier:owner:
-    - argLabels: withIdentifier, owner
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: makeView(withIdentifier:owner:)
+    - Selector: makeViewWithIdentifier:owner:
     - Introduced: 10.7
   */
   @objc (makeViewWithIdentifier:owner:) @available(OSX 10.7, *) func makeView(withIdentifier: NSUserInterfaceItemIdentifier, owner: Any?) -> NSView?
 
   /**
-    - jsName: moveColumn
-    - name: moveColumn:toColumn:
-    - argLabels: toColumn
-    - constructorTokens: 
+    - Selector: moveColumn:toColumn:
   */
   @objc func moveColumn(_: Int, toColumn: Int)
 
   /**
-    - jsName: moveRow
-    - name: moveRowAtIndex:toIndex:
-    - argLabels: at, to
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: moveRow(at:to:)
+    - Selector: moveRowAtIndex:toIndex:
     - Introduced: 10.7
   */
   @objc (moveRowAtIndex:toIndex:) @available(OSX 10.7, *) func moveRow(at: Int, to: Int)
 
   /**
-    - jsName: noteHeightOfRows
-    - name: noteHeightOfRowsWithIndexesChanged:
-    - argLabels: withIndexesChanged
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: noteHeightOfRows(withIndexesChanged:)
+    - Selector: noteHeightOfRowsWithIndexesChanged:
   */
   @objc (noteHeightOfRowsWithIndexesChanged:) func noteHeightOfRows(withIndexesChanged: IndexSet)
 
   /**
-    - jsName: noteNumberOfRowsChanged
-    - name: noteNumberOfRowsChanged
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: noteNumberOfRowsChanged
   */
   @objc func noteNumberOfRowsChanged()
 
   /**
-    - jsName: rect
-    - name: rectOfColumn:
-    - argLabels: ofColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rect(ofColumn:)
+    - Selector: rectOfColumn:
   */
   @objc (rectOfColumn:) func rect(ofColumn: Int) -> CGRect
 
   /**
-    - jsName: rect
-    - name: rectOfRow:
-    - argLabels: ofRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rect(ofRow:)
+    - Selector: rectOfRow:
   */
   @objc (rectOfRow:) func rect(ofRow: Int) -> CGRect
 
   /**
-    - jsName: register
-    - name: registerNib:forIdentifier:
-    - argLabels: _, forIdentifier
-    - constructorTokens: 
-    - available: 10.8
-    - obsoleted: 3
-    - renamed: register(_:forIdentifier:)
+    - Selector: registerNib:forIdentifier:
     - Introduced: 10.8
   */
   @objc (registerNib:forIdentifier:) @available(OSX 10.8, *) func register(_: NSNib?, forIdentifier: NSUserInterfaceItemIdentifier)
 
   /**
-    - jsName: reloadData
-    - name: reloadData
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reloadData
   */
   @objc func reloadData()
 
   /**
-    - jsName: reloadData
-    - name: reloadDataForRowIndexes:columnIndexes:
-    - argLabels: forRowIndexes, columnIndexes
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: reloadData(forRowIndexes:columnIndexes:)
+    - Selector: reloadDataForRowIndexes:columnIndexes:
     - Introduced: 10.6
   */
   @objc (reloadDataForRowIndexes:columnIndexes:) @available(OSX 10.6, *) func reloadData(forRowIndexes: IndexSet, columnIndexes: IndexSet)
 
   /**
-    - jsName: removeRows
-    - name: removeRowsAtIndexes:withAnimation:
-    - argLabels: at, withAnimation
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: removeRows(at:withAnimation:)
+    - Selector: removeRowsAtIndexes:withAnimation:
     - Introduced: 10.7
   */
   @objc (removeRowsAtIndexes:withAnimation:) @available(OSX 10.7, *) func removeRows(at: IndexSet, withAnimation: NSTableView.AnimationOptions)
 
   /**
-    - jsName: removeTableColumn
-    - name: removeTableColumn:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeTableColumn:
   */
   @objc func removeTableColumn(_: NSTableColumn)
 
   /**
-    - jsName: row
-    - name: rowAtPoint:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: row(at:)
+    - Selector: rowAtPoint:
   */
   @objc (rowAtPoint:) func row(at: CGPoint) -> Int
 
   /**
-    - jsName: row
-    - name: rowForView:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: row(for:)
+    - Selector: rowForView:
     - Introduced: 10.7
   */
   @objc (rowForView:) @available(OSX 10.7, *) func row(`for`: NSView) -> Int
 
   /**
-    - jsName: rowView
-    - name: rowViewAtRow:makeIfNecessary:
-    - argLabels: atRow, makeIfNecessary
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: rowView(atRow:makeIfNecessary:)
+    - Selector: rowViewAtRow:makeIfNecessary:
     - Introduced: 10.7
   */
   @objc (rowViewAtRow:makeIfNecessary:) @available(OSX 10.7, *) func rowView(atRow: Int, makeIfNecessary: Bool) -> NSTableRowView?
 
   /**
-    - jsName: rows
-    - name: rowsInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rows(in:)
+    - Selector: rowsInRect:
   */
   @objc (rowsInRect:) func rows(in: CGRect) -> NSRange
 
   /**
-    - jsName: scrollColumnToVisible
-    - name: scrollColumnToVisible:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: scrollColumnToVisible:
   */
   @objc func scrollColumnToVisible(_: Int)
 
   /**
-    - jsName: scrollRowToVisible
-    - name: scrollRowToVisible:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: scrollRowToVisible:
   */
   @objc func scrollRowToVisible(_: Int)
 
   /**
-    - jsName: selectColumnIndexes
-    - name: selectColumnIndexes:byExtendingSelection:
-    - argLabels: byExtendingSelection
-    - constructorTokens: 
+    - Selector: selectColumnIndexes:byExtendingSelection:
   */
   @objc func selectColumnIndexes(_: IndexSet, byExtendingSelection: Bool)
 
   /**
-    - jsName: selectRowIndexes
-    - name: selectRowIndexes:byExtendingSelection:
-    - argLabels: byExtendingSelection
-    - constructorTokens: 
+    - Selector: selectRowIndexes:byExtendingSelection:
   */
   @objc func selectRowIndexes(_: IndexSet, byExtendingSelection: Bool)
 
   /**
-    - jsName: setDraggingSourceOperationMask
-    - name: setDraggingSourceOperationMask:forLocal:
-    - argLabels: forLocal
-    - constructorTokens: 
+    - Selector: setDraggingSourceOperationMask:forLocal:
   */
   @objc func setDraggingSourceOperationMask(_: NSDragOperation, forLocal: Bool)
 
   /**
-    - jsName: setDropRow
-    - name: setDropRow:dropOperation:
-    - argLabels: dropOperation
-    - constructorTokens: 
+    - Selector: setDropRow:dropOperation:
   */
   @objc func setDropRow(_: Int, dropOperation: NSTableView.DropOperation)
 
   /**
-    - jsName: setIndicatorImage
-    - name: setIndicatorImage:inTableColumn:
-    - argLabels: _, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setIndicatorImage(_:in:)
+    - Selector: setIndicatorImage:inTableColumn:
   */
   @objc (setIndicatorImage:inTableColumn:) func setIndicatorImage(_: NSImage?, in: NSTableColumn)
 
   /**
-    - jsName: sizeLastColumnToFit
-    - name: sizeLastColumnToFit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: sizeLastColumnToFit
   */
   @objc func sizeLastColumnToFit()
 
   /**
-    - jsName: tableColumn
-    - name: tableColumnWithIdentifier:
-    - argLabels: withIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: tableColumn(withIdentifier:)
+    - Selector: tableColumnWithIdentifier:
   */
   @objc (tableColumnWithIdentifier:) func tableColumn(withIdentifier: NSUserInterfaceItemIdentifier) -> NSTableColumn?
 
   /**
-    - jsName: tile
-    - name: tile
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: tile
   */
   @objc func tile()
 
   /**
-    - jsName: unhideRows
-    - name: unhideRowsAtIndexes:withAnimation:
-    - argLabels: at, withAnimation
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: unhideRows(at:withAnimation:)
+    - Selector: unhideRowsAtIndexes:withAnimation:
     - Introduced: 10.11
   */
   @objc (unhideRowsAtIndexes:withAnimation:) @available(OSX 10.11, *) func unhideRows(at: IndexSet, withAnimation: NSTableView.AnimationOptions)
 
   /**
-    - jsName: view
-    - name: viewAtColumn:row:makeIfNecessary:
-    - argLabels: atColumn, row, makeIfNecessary
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: view(atColumn:row:makeIfNecessary:)
+    - Selector: viewAtColumn:row:makeIfNecessary:
     - Introduced: 10.7
   */
   @objc (viewAtColumn:row:makeIfNecessary:) @available(OSX 10.7, *) func view(atColumn: Int, row: Int, makeIfNecessary: Bool) -> NSView?
@@ -556,346 +314,243 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: allowsColumnReordering
-    - name: allowsColumnReordering
-    - argLabels: 
+    - Selector: allowsColumnReordering
   */
   @objc var allowsColumnReordering: Bool { @objc get @objc (setAllowsColumnReordering:) set }
 
   /**
-    - jsName: allowsColumnResizing
-    - name: allowsColumnResizing
-    - argLabels: 
+    - Selector: allowsColumnResizing
   */
   @objc var allowsColumnResizing: Bool { @objc get @objc (setAllowsColumnResizing:) set }
 
   /**
-    - jsName: allowsColumnSelection
-    - name: allowsColumnSelection
-    - argLabels: 
+    - Selector: allowsColumnSelection
   */
   @objc var allowsColumnSelection: Bool { @objc get @objc (setAllowsColumnSelection:) set }
 
   /**
-    - jsName: allowsEmptySelection
-    - name: allowsEmptySelection
-    - argLabels: 
+    - Selector: allowsEmptySelection
   */
   @objc var allowsEmptySelection: Bool { @objc get @objc (setAllowsEmptySelection:) set }
 
   /**
-    - jsName: allowsMultipleSelection
-    - name: allowsMultipleSelection
-    - argLabels: 
+    - Selector: allowsMultipleSelection
   */
   @objc var allowsMultipleSelection: Bool { @objc get @objc (setAllowsMultipleSelection:) set }
 
   /**
-    - jsName: allowsTypeSelect
-    - name: allowsTypeSelect
-    - argLabels: 
-    - available: 10.5
+    - Selector: allowsTypeSelect
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var allowsTypeSelect: Bool { @objc get @objc (setAllowsTypeSelect:) set }
 
   /**
-    - jsName: autosaveName
-    - name: autosaveName
-    - argLabels: 
+    - Selector: autosaveName
   */
   @objc var autosaveName: NSTableView.AutosaveName? { @objc get @objc (setAutosaveName:) set }
 
   /**
-    - jsName: autosaveTableColumns
-    - name: autosaveTableColumns
-    - argLabels: 
+    - Selector: autosaveTableColumns
   */
   @objc var autosaveTableColumns: Bool { @objc get @objc (setAutosaveTableColumns:) set }
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: clickedColumn
-    - name: clickedColumn
-    - argLabels: 
+    - Selector: clickedColumn
   */
   @objc var clickedColumn: Int { @objc get }
 
   /**
-    - jsName: clickedRow
-    - name: clickedRow
-    - argLabels: 
+    - Selector: clickedRow
   */
   @objc var clickedRow: Int { @objc get }
 
   /**
-    - jsName: columnAutoresizingStyle
-    - name: columnAutoresizingStyle
-    - argLabels: 
+    - Selector: columnAutoresizingStyle
   */
   @objc var columnAutoresizingStyle: NSTableView.ColumnAutoresizingStyle { @objc get @objc (setColumnAutoresizingStyle:) set }
 
   /**
-    - jsName: cornerView
-    - name: cornerView
-    - argLabels: 
+    - Selector: cornerView
   */
   @objc var cornerView: NSView? { @objc get @objc (setCornerView:) set }
 
   /**
-    - jsName: dataSource
-    - name: dataSource
-    - argLabels: 
+    - Selector: dataSource
   */
   @objc var dataSource: NSTableViewDataSource? { @objc get @objc (setDataSource:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSTableViewDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: doubleAction
-    - name: doubleAction
-    - argLabels: 
+    - Selector: doubleAction
   */
   @objc var doubleAction: Selector? { @objc get @objc (setDoubleAction:) set }
 
   /**
-    - jsName: draggingDestinationFeedbackStyle
-    - name: draggingDestinationFeedbackStyle
-    - argLabels: 
-    - available: 10.6
+    - Selector: draggingDestinationFeedbackStyle
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var draggingDestinationFeedbackStyle: NSTableView.DraggingDestinationFeedbackStyle { @objc get @objc (setDraggingDestinationFeedbackStyle:) set }
 
   /**
-    - jsName: editedColumn
-    - name: editedColumn
-    - argLabels: 
+    - Selector: editedColumn
   */
   @objc var editedColumn: Int { @objc get }
 
   /**
-    - jsName: editedRow
-    - name: editedRow
-    - argLabels: 
+    - Selector: editedRow
   */
   @objc var editedRow: Int { @objc get }
 
   /**
-    - jsName: effectiveRowSizeStyle
-    - name: effectiveRowSizeStyle
-    - argLabels: 
-    - available: 10.7
+    - Selector: effectiveRowSizeStyle
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var effectiveRowSizeStyle: NSTableView.RowSizeStyle { @objc get }
 
   /**
-    - jsName: floatsGroupRows
-    - name: floatsGroupRows
-    - argLabels: 
-    - available: 10.7
+    - Selector: floatsGroupRows
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var floatsGroupRows: Bool { @objc get @objc (setFloatsGroupRows:) set }
 
   /**
-    - jsName: gridColor
-    - name: gridColor
-    - argLabels: 
+    - Selector: gridColor
   */
   @objc var gridColor: NSColor { @objc get @objc (setGridColor:) set }
 
   /**
-    - jsName: gridStyleMask
-    - name: gridStyleMask
-    - argLabels: 
+    - Selector: gridStyleMask
   */
   @objc var gridStyleMask: NSTableView.GridLineStyle { @objc get @objc (setGridStyleMask:) set }
 
   /**
-    - jsName: headerView
-    - name: headerView
-    - argLabels: 
+    - Selector: headerView
   */
   @objc var headerView: NSTableHeaderView? { @objc get @objc (setHeaderView:) set }
 
   /**
-    - jsName: hiddenRowIndexes
-    - name: hiddenRowIndexes
-    - argLabels: 
-    - available: 10.11
+    - Selector: hiddenRowIndexes
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var hiddenRowIndexes: IndexSet { @objc get }
 
   /**
-    - jsName: highlightedTableColumn
-    - name: highlightedTableColumn
-    - argLabels: 
+    - Selector: highlightedTableColumn
   */
   @objc var highlightedTableColumn: NSTableColumn? { @objc get @objc (setHighlightedTableColumn:) set }
 
   /**
-    - jsName: intercellSpacing
-    - name: intercellSpacing
-    - argLabels: 
+    - Selector: intercellSpacing
   */
   @objc var intercellSpacing: CGSize { @objc get @objc (setIntercellSpacing:) set }
 
   /**
-    - jsName: numberOfColumns
-    - name: numberOfColumns
-    - argLabels: 
+    - Selector: numberOfColumns
   */
   @objc var numberOfColumns: Int { @objc get }
 
   /**
-    - jsName: numberOfRows
-    - name: numberOfRows
-    - argLabels: 
+    - Selector: numberOfRows
   */
   @objc var numberOfRows: Int { @objc get }
 
   /**
-    - jsName: numberOfSelectedColumns
-    - name: numberOfSelectedColumns
-    - argLabels: 
+    - Selector: numberOfSelectedColumns
   */
   @objc var numberOfSelectedColumns: Int { @objc get }
 
   /**
-    - jsName: numberOfSelectedRows
-    - name: numberOfSelectedRows
-    - argLabels: 
+    - Selector: numberOfSelectedRows
   */
   @objc var numberOfSelectedRows: Int { @objc get }
 
   /**
-    - jsName: registeredNibsByIdentifier
-    - name: registeredNibsByIdentifier
-    - argLabels: 
-    - available: 10.8
+    - Selector: registeredNibsByIdentifier
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) var registeredNibsByIdentifier: [NSUserInterfaceItemIdentifier: NSNib]? { @objc get }
 
   /**
-    - jsName: rowActionsVisible
-    - name: rowActionsVisible
-    - argLabels: 
-    - available: 10.11
+    - Selector: rowActionsVisible
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var rowActionsVisible: Bool { @objc get @objc (setRowActionsVisible:) set }
 
   /**
-    - jsName: rowHeight
-    - name: rowHeight
-    - argLabels: 
+    - Selector: rowHeight
   */
   @objc var rowHeight: CGFloat { @objc get @objc (setRowHeight:) set }
 
   /**
-    - jsName: rowSizeStyle
-    - name: rowSizeStyle
-    - argLabels: 
-    - available: 10.7
+    - Selector: rowSizeStyle
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var rowSizeStyle: NSTableView.RowSizeStyle { @objc get @objc (setRowSizeStyle:) set }
 
   /**
-    - jsName: selectedColumn
-    - name: selectedColumn
-    - argLabels: 
+    - Selector: selectedColumn
   */
   @objc var selectedColumn: Int { @objc get }
 
   /**
-    - jsName: selectedColumnIndexes
-    - name: selectedColumnIndexes
-    - argLabels: 
+    - Selector: selectedColumnIndexes
   */
   @objc var selectedColumnIndexes: IndexSet { @objc get }
 
   /**
-    - jsName: selectedRow
-    - name: selectedRow
-    - argLabels: 
+    - Selector: selectedRow
   */
   @objc var selectedRow: Int { @objc get }
 
   /**
-    - jsName: selectedRowIndexes
-    - name: selectedRowIndexes
-    - argLabels: 
+    - Selector: selectedRowIndexes
   */
   @objc var selectedRowIndexes: IndexSet { @objc get }
 
   /**
-    - jsName: selectionHighlightStyle
-    - name: selectionHighlightStyle
-    - argLabels: 
-    - available: 10.5
+    - Selector: selectionHighlightStyle
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var selectionHighlightStyle: NSTableView.SelectionHighlightStyle { @objc get @objc (setSelectionHighlightStyle:) set }
 
   /**
-    - jsName: sortDescriptors
-    - name: sortDescriptors
-    - argLabels: 
+    - Selector: sortDescriptors
   */
   @objc var sortDescriptors: [NSSortDescriptor] { @objc get @objc (setSortDescriptors:) set }
 
   /**
-    - jsName: tableColumns
-    - name: tableColumns
-    - argLabels: 
+    - Selector: tableColumns
   */
   @objc var tableColumns: [NSTableColumn] { @objc get }
 
   /**
-    - jsName: usesAlternatingRowBackgroundColors
-    - name: usesAlternatingRowBackgroundColors
-    - argLabels: 
+    - Selector: usesAlternatingRowBackgroundColors
   */
   @objc var usesAlternatingRowBackgroundColors: Bool { @objc get @objc (setUsesAlternatingRowBackgroundColors:) set }
 
   /**
-    - jsName: usesAutomaticRowHeights
-    - name: usesAutomaticRowHeights
-    - argLabels: 
-    - available: 10.13
+    - Selector: usesAutomaticRowHeights
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var usesAutomaticRowHeights: Bool { @objc get @objc (setUsesAutomaticRowHeights:) set }
 
   /**
-    - jsName: usesStaticContents
-    - name: usesStaticContents
-    - argLabels: 
-    - available: 10.10
+    - Selector: usesStaticContents
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var usesStaticContents: Bool { @objc get @objc (setUsesStaticContents:) set }
 
   /**
-    - jsName: verticalMotionCanBeginDrag
-    - name: verticalMotionCanBeginDrag
-    - argLabels: 
+    - Selector: verticalMotionCanBeginDrag
   */
   @objc var verticalMotionCanBeginDrag: Bool { @objc get @objc (setVerticalMotionCanBeginDrag:) set }
 }

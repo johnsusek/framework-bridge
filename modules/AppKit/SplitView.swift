@@ -9,130 +9,79 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSplitView
-    - name: NSSplitView
-    - argLabels: 
+    - Selector: NSSplitView
   */
 
 @objc(NSSplitView) protocol NSSplitViewExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: addArrangedSubview
-    - name: addArrangedSubview:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.11
+    - Selector: addArrangedSubview:
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) func addArrangedSubview(_: NSView)
 
   /**
-    - jsName: adjustSubviews
-    - name: adjustSubviews
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: adjustSubviews
   */
   @objc func adjustSubviews()
 
   /**
-    - jsName: drawDivider
-    - name: drawDividerInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawDivider(in:)
+    - Selector: drawDividerInRect:
   */
   @objc (drawDividerInRect:) func drawDivider(in: CGRect)
 
   /**
-    - jsName: holdingPriorityForSubview
-    - name: holdingPriorityForSubviewAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.8
-    - obsoleted: 3
-    - renamed: holdingPriorityForSubview(at:)
+    - Selector: holdingPriorityForSubviewAtIndex:
     - Introduced: 10.8
   */
   @objc (holdingPriorityForSubviewAtIndex:) @available(OSX 10.8, *) func holdingPriorityForSubview(at: Int) -> NSLayoutConstraint.Priority
 
   /**
-    - jsName: insertArrangedSubview
-    - name: insertArrangedSubview:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: insertArrangedSubview(_:at:)
+    - Selector: insertArrangedSubview:atIndex:
     - Introduced: 10.11
   */
   @objc (insertArrangedSubview:atIndex:) @available(OSX 10.11, *) func insertArrangedSubview(_: NSView, at: Int)
 
   /**
-    - jsName: isSubviewCollapsed
-    - name: isSubviewCollapsed:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: isSubviewCollapsed:
   */
   @objc func isSubviewCollapsed(_: NSView) -> Bool
 
   /**
-    - jsName: maxPossiblePositionOfDivider
-    - name: maxPossiblePositionOfDividerAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: maxPossiblePositionOfDivider(at:)
+    - Selector: maxPossiblePositionOfDividerAtIndex:
     - Introduced: 10.5
   */
   @objc (maxPossiblePositionOfDividerAtIndex:) @available(OSX 10.5, *) func maxPossiblePositionOfDivider(at: Int) -> CGFloat
 
   /**
-    - jsName: minPossiblePositionOfDivider
-    - name: minPossiblePositionOfDividerAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: minPossiblePositionOfDivider(at:)
+    - Selector: minPossiblePositionOfDividerAtIndex:
     - Introduced: 10.5
   */
   @objc (minPossiblePositionOfDividerAtIndex:) @available(OSX 10.5, *) func minPossiblePositionOfDivider(at: Int) -> CGFloat
 
   /**
-    - jsName: removeArrangedSubview
-    - name: removeArrangedSubview:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.11
+    - Selector: removeArrangedSubview:
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) func removeArrangedSubview(_: NSView)
 
   /**
-    - jsName: setHoldingPriority
-    - name: setHoldingPriority:forSubviewAtIndex:
-    - argLabels: _, forSubviewAt
-    - constructorTokens: 
-    - available: 10.8
-    - obsoleted: 3
-    - renamed: setHoldingPriority(_:forSubviewAt:)
+    - Selector: setHoldingPriority:forSubviewAtIndex:
     - Introduced: 10.8
   */
   @objc (setHoldingPriority:forSubviewAtIndex:) @available(OSX 10.8, *) func setHoldingPriority(_: NSLayoutConstraint.Priority, forSubviewAt: Int)
 
   /**
-    - jsName: setPosition
-    - name: setPosition:ofDividerAtIndex:
-    - argLabels: _, ofDividerAt
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: setPosition(_:ofDividerAt:)
+    - Selector: setPosition:ofDividerAtIndex:
     - Introduced: 10.5
   */
   @objc (setPosition:ofDividerAtIndex:) @available(OSX 10.5, *) func setPosition(_: CGFloat, ofDividerAt: Int)
@@ -140,70 +89,47 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: arrangedSubviews
-    - name: arrangedSubviews
-    - argLabels: 
-    - available: 10.11
+    - Selector: arrangedSubviews
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var arrangedSubviews: [NSView] { @objc get }
 
   /**
-    - jsName: arrangesAllSubviews
-    - name: arrangesAllSubviews
-    - argLabels: 
-    - available: 10.11
+    - Selector: arrangesAllSubviews
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var arrangesAllSubviews: Bool { @objc get @objc (setArrangesAllSubviews:) set }
 
   /**
-    - jsName: autosaveName
-    - name: autosaveName
-    - argLabels: 
-    - available: 10.5
+    - Selector: autosaveName
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var autosaveName: NSSplitView.AutosaveName? { @objc get @objc (setAutosaveName:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSplitViewDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: dividerColor
-    - name: dividerColor
-    - argLabels: 
-    - available: 10.5
+    - Selector: dividerColor
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var dividerColor: NSColor { @objc get }
 
   /**
-    - jsName: dividerStyle
-    - name: dividerStyle
-    - argLabels: 
-    - available: 10.5
+    - Selector: dividerStyle
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var dividerStyle: NSSplitView.DividerStyle { @objc get @objc (setDividerStyle:) set }
 
   /**
-    - jsName: dividerThickness
-    - name: dividerThickness
-    - argLabels: 
+    - Selector: dividerThickness
   */
   @objc var dividerThickness: CGFloat { @objc get }
 
   /**
-    - jsName: isVertical
-    - name: vertical
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isVertical
+    - Selector: vertical
   */
   @objc var isVertical: Bool { @objc get @objc (setVertical:) set }
 }

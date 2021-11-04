@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSRelativeSpecifier
-    - name: NSRelativeSpecifier
-    - argLabels: 
+    - Selector: NSRelativeSpecifier
   */
 
 @objc(NSRelativeSpecifier) protocol NSRelativeSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
@@ -20,26 +18,19 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithContainerClassDescription
-    - name: initWithContainerClassDescription:containerSpecifier:key:relativePosition:baseSpecifier:
-    - argLabels: containerSpecifier, key, relativePosition, baseSpecifier
-    - constructorTokens: containerClassDescription, containerSpecifier, key, relativePosition, baseSpecifier
+    - Selector: initWithContainerClassDescription:containerSpecifier:key:relativePosition:baseSpecifier:
   */
   @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, relativePosition: NSRelativeSpecifier.RelativePosition, baseSpecifier: NSScriptObjectSpecifier?) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: baseSpecifier
-    - name: baseSpecifier
-    - argLabels: 
+    - Selector: baseSpecifier
   */
   @objc var baseSpecifier: NSScriptObjectSpecifier? { @objc get @objc (setBaseSpecifier:) set }
 
   /**
-    - jsName: relativePosition
-    - name: relativePosition
-    - argLabels: 
+    - Selector: relativePosition
   */
   @objc var relativePosition: NSRelativeSpecifier.RelativePosition { @objc get @objc (setRelativePosition:) set }
 }

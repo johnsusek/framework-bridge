@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLCache
-    - name: NSURLCache
-    - argLabels: 
+    - Selector: NSURLCache
   */
 
 @objc(URLCache) protocol URLCacheExports: JSExport, NSObjectExports {
@@ -20,52 +18,31 @@ import Foundation
   // Own Static Properties
 
   /**
-    - jsName: shared
-    - name: sharedURLCache
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: shared
+    - Selector: sharedURLCache
   */
   @objc static var shared: URLCache { @objc (sharedURLCache) get @objc (setSharedURLCache:) set }
 
   // Instance Methods
 
   /**
-    - jsName: cachedResponse
-    - name: cachedResponseForRequest:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cachedResponse(for:)
+    - Selector: cachedResponseForRequest:
   */
   @objc (cachedResponseForRequest:) func cachedResponse(`for`: URLRequest) -> CachedURLResponse?
 
   /**
-    - jsName: getCachedResponse
-    - name: getCachedResponseForDataTask:completionHandler:
-    - argLabels: for, completionHandler
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: getCachedResponse(for:completionHandler:)
+    - Selector: getCachedResponseForDataTask:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue - @objc (getCachedResponseForDataTask:completionHandler:) @available(OSX 10.10, *) func getCachedResponse(`for`: URLSessionDataTask, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getCachedResponse(`for`: URLSessionDataTask, completionHandler: JSValue)
 
   /**
-    - jsName: createWithMemoryCapacity
-    - name: initWithMemoryCapacity:diskCapacity:directoryURL:
-    - argLabels: diskCapacity, directoryURL
-    - constructorTokens: memoryCapacity, diskCapacity, directoryURL
+    - Selector: initWithMemoryCapacity:diskCapacity:directoryURL:
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static func createWithMemoryCapacity(_: Int, diskCapacity: Int, directoryURL: URL?) -> Self
 
   /**
-    - jsName: createWithMemoryCapacity
-    - name: initWithMemoryCapacity:diskCapacity:diskPath:
-    - argLabels: diskCapacity, diskPath
-    - constructorTokens: memoryCapacity, diskCapacity, diskPath
+    - Selector: initWithMemoryCapacity:diskCapacity:diskPath:
     - Introduced: 10.2
     - Deprecated: 100000
     - Replacement: initWithMemoryCapacity:diskCapacity:directoryURL:
@@ -73,96 +50,57 @@ import Foundation
   @objc @available(OSX 10.2, *) static func createWithMemoryCapacity(_: Int, diskCapacity: Int, diskPath: String?) -> Self
 
   /**
-    - jsName: removeAllCachedResponses
-    - name: removeAllCachedResponses
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeAllCachedResponses
   */
   @objc func removeAllCachedResponses()
 
   /**
-    - jsName: removeCachedResponse
-    - name: removeCachedResponseForDataTask:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: removeCachedResponse(for:)
+    - Selector: removeCachedResponseForDataTask:
     - Introduced: 10.10
   */
   @objc (removeCachedResponseForDataTask:) @available(OSX 10.10, *) func removeCachedResponse(`for`: URLSessionDataTask)
 
   /**
-    - jsName: removeCachedResponse
-    - name: removeCachedResponseForRequest:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeCachedResponse(for:)
+    - Selector: removeCachedResponseForRequest:
   */
   @objc (removeCachedResponseForRequest:) func removeCachedResponse(`for`: URLRequest)
 
   /**
-    - jsName: removeCachedResponses
-    - name: removeCachedResponsesSinceDate:
-    - argLabels: since
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: removeCachedResponses(since:)
+    - Selector: removeCachedResponsesSinceDate:
     - Introduced: 10.10
   */
   @objc (removeCachedResponsesSinceDate:) @available(OSX 10.10, *) func removeCachedResponses(since: Date)
 
   /**
-    - jsName: storeCachedResponse
-    - name: storeCachedResponse:forDataTask:
-    - argLabels: _, for
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: storeCachedResponse(_:for:)
+    - Selector: storeCachedResponse:forDataTask:
     - Introduced: 10.10
   */
   @objc (storeCachedResponse:forDataTask:) @available(OSX 10.10, *) func storeCachedResponse(_: CachedURLResponse, `for`: URLSessionDataTask)
 
   /**
-    - jsName: storeCachedResponse
-    - name: storeCachedResponse:forRequest:
-    - argLabels: _, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: storeCachedResponse(_:for:)
+    - Selector: storeCachedResponse:forRequest:
   */
   @objc (storeCachedResponse:forRequest:) func storeCachedResponse(_: CachedURLResponse, `for`: URLRequest)
 
   // Own Instance Properties
 
   /**
-    - jsName: currentDiskUsage
-    - name: currentDiskUsage
-    - argLabels: 
+    - Selector: currentDiskUsage
   */
   @objc var currentDiskUsage: Int { @objc get }
 
   /**
-    - jsName: currentMemoryUsage
-    - name: currentMemoryUsage
-    - argLabels: 
+    - Selector: currentMemoryUsage
   */
   @objc var currentMemoryUsage: Int { @objc get }
 
   /**
-    - jsName: diskCapacity
-    - name: diskCapacity
-    - argLabels: 
+    - Selector: diskCapacity
   */
   @objc var diskCapacity: Int { @objc get @objc (setDiskCapacity:) set }
 
   /**
-    - jsName: memoryCapacity
-    - name: memoryCapacity
-    - argLabels: 
+    - Selector: memoryCapacity
   */
   @objc var memoryCapacity: Int { @objc get @objc (setMemoryCapacity:) set }
 }

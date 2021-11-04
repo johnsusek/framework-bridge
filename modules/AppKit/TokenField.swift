@@ -9,57 +9,49 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTokenField
-    - name: NSTokenField
-    - argLabels: 
+    - Selector: NSTokenField
   */
 
 @objc(NSTokenField) protocol NSTokenFieldExports: JSExport, NSTextFieldExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Own Static Properties
 
   /**
-    - jsName: defaultCompletionDelay
-    - name: defaultCompletionDelay
-    - argLabels: 
+    - Selector: defaultCompletionDelay
   */
   @objc static var defaultCompletionDelay: TimeInterval { @objc get }
 
   /**
-    - jsName: defaultTokenizingCharacterSet
-    - name: defaultTokenizingCharacterSet
-    - argLabels: 
+    - Selector: defaultTokenizingCharacterSet
   */
   @objc static var defaultTokenizingCharacterSet: CharacterSet { @objc get }
 
   // Own Instance Properties
 
   /**
-    - jsName: completionDelay
-    - name: completionDelay
-    - argLabels: 
+    - Selector: completionDelay
   */
   @objc var completionDelay: TimeInterval { @objc get @objc (setCompletionDelay:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSTokenFieldDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: tokenStyle
-    - name: tokenStyle
-    - argLabels: 
+    - Selector: tokenStyle
   */
   @objc var tokenStyle: NSTokenField.TokenStyle { @objc get @objc (setTokenStyle:) set }
 
   /**
-    - jsName: tokenizingCharacterSet
-    - name: tokenizingCharacterSet
-    - argLabels: 
+    - Selector: tokenizingCharacterSet
   */
   @objc var tokenizingCharacterSet: CharacterSet! { @objc get @objc (setTokenizingCharacterSet:) set }
 }

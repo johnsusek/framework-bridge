@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSUniqueIDSpecifier
-    - name: NSUniqueIDSpecifier
-    - argLabels: 
+    - Selector: NSUniqueIDSpecifier
   */
 
 @objc(NSUniqueIDSpecifier) protocol NSUniqueIDSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
@@ -20,19 +18,14 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithContainerClassDescription
-    - name: initWithContainerClassDescription:containerSpecifier:key:uniqueID:
-    - argLabels: containerSpecifier, key, uniqueID
-    - constructorTokens: containerClassDescription, containerSpecifier, key, uniqueID
+    - Selector: initWithContainerClassDescription:containerSpecifier:key:uniqueID:
   */
   @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, uniqueID: Any) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: uniqueID
-    - name: uniqueID
-    - argLabels: 
+    - Selector: uniqueID
   */
   @objc var uniqueID: Any { @objc get @objc (setUniqueID:) set }
 }

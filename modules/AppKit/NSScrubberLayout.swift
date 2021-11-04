@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubberLayout
-    - name: NSScrubberLayout
-    - argLabels: 
+    - Selector: NSScrubberLayout
     - Introduced: 10.12.2
   */
 
@@ -21,103 +19,66 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: layoutAttributesClass
-    - name: layoutAttributesClass
-    - argLabels: 
+    - Selector: layoutAttributesClass
   */
   @objc static var layoutAttributesClass: AnyClass { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: invalidateLayout
-    - name: invalidateLayout
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidateLayout
   */
   @objc func invalidateLayout()
 
   /**
-    - jsName: layoutAttributesForItem
-    - name: layoutAttributesForItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: layoutAttributesForItem(at:)
+    - Selector: layoutAttributesForItemAtIndex:
   */
   @objc (layoutAttributesForItemAtIndex:) func layoutAttributesForItem(at: Int) -> NSScrubberLayoutAttributes?
 
   /**
-    - jsName: layoutAttributesForItems
-    - name: layoutAttributesForItemsInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: layoutAttributesForItems(in:)
+    - Selector: layoutAttributesForItemsInRect:
   */
   @objc (layoutAttributesForItemsInRect:) func layoutAttributesForItems(in: CGRect) -> Set<NSScrubberLayoutAttributes>
 
   /**
-    - jsName: prepare
-    - name: prepareLayout
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: prepare()
+    - Selector: prepareLayout
   */
   @objc (prepareLayout) func prepare()
 
   /**
-    - jsName: shouldInvalidateLayoutForChange
-    - name: shouldInvalidateLayoutForChangeFromVisibleRect:toVisibleRect:
-    - argLabels: fromVisibleRect, toVisibleRect
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: shouldInvalidateLayoutForChange(fromVisibleRect:toVisibleRect:)
+    - Selector: shouldInvalidateLayoutForChangeFromVisibleRect:toVisibleRect:
   */
   @objc (shouldInvalidateLayoutForChangeFromVisibleRect:toVisibleRect:) func shouldInvalidateLayoutForChange(fromVisibleRect: CGRect, toVisibleRect: CGRect) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: automaticallyMirrorsInRightToLeftLayout
-    - name: automaticallyMirrorsInRightToLeftLayout
-    - argLabels: 
+    - Selector: automaticallyMirrorsInRightToLeftLayout
   */
   @objc var automaticallyMirrorsInRightToLeftLayout: Bool { @objc get }
 
   /**
-    - jsName: scrubber
-    - name: scrubber
-    - argLabels: 
+    - Selector: scrubber
   */
   @objc var scrubber: NSScrubber? { @objc get }
 
   /**
-    - jsName: scrubberContentSize
-    - name: scrubberContentSize
-    - argLabels: 
+    - Selector: scrubberContentSize
   */
   @objc var scrubberContentSize: CGSize { @objc get }
 
   /**
-    - jsName: shouldInvalidateLayoutForHighlightChange
-    - name: shouldInvalidateLayoutForHighlightChange
-    - argLabels: 
+    - Selector: shouldInvalidateLayoutForHighlightChange
   */
   @objc var shouldInvalidateLayoutForHighlightChange: Bool { @objc get }
 
   /**
-    - jsName: shouldInvalidateLayoutForSelectionChange
-    - name: shouldInvalidateLayoutForSelectionChange
-    - argLabels: 
+    - Selector: shouldInvalidateLayoutForSelectionChange
   */
   @objc var shouldInvalidateLayoutForSelectionChange: Bool { @objc get }
 
   /**
-    - jsName: visibleRect
-    - name: visibleRect
-    - argLabels: 
+    - Selector: visibleRect
   */
   @objc var visibleRect: CGRect { @objc get }
 }

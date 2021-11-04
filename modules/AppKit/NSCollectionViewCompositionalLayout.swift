@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewCompositionalLayout
-    - name: NSCollectionViewCompositionalLayout
-    - argLabels: 
+    - Selector: NSCollectionViewCompositionalLayout
     - Introduced: 10.15
   */
 
@@ -21,43 +19,29 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithSection
-    - name: initWithSection:
-    - argLabels: 
-    - constructorTokens: section
+    - Selector: initWithSection:
   */
   @objc static func createWithSection(_: NSCollectionLayoutSection) -> Self
 
   /**
-    - jsName: createWithSection
-    - name: initWithSection:configuration:
-    - argLabels: configuration
-    - constructorTokens: section, configuration
+    - Selector: initWithSection:configuration:
   */
   @objc static func createWithSection(_: NSCollectionLayoutSection, configuration: NSCollectionViewCompositionalLayoutConfiguration) -> Self
 
   /**
-    - jsName: createWithSectionProvider
-    - name: initWithSectionProvider:
-    - argLabels: 
-    - constructorTokens: sectionProvider
+    - Selector: initWithSectionProvider:
   */
-  @objc static func createWithSectionProvider(_: JSValue) -> Self
+  // jsvalue @objc static func createWithSectionProvider(_: JSValue) -> Self
 
   /**
-    - jsName: createWithSectionProvider
-    - name: initWithSectionProvider:configuration:
-    - argLabels: configuration
-    - constructorTokens: sectionProvider, configuration
+    - Selector: initWithSectionProvider:configuration:
   */
-  @objc static func createWithSectionProvider(_: JSValue, configuration: NSCollectionViewCompositionalLayoutConfiguration) -> Self
+  // jsvalue @objc static func createWithSectionProvider(_: JSValue, configuration: NSCollectionViewCompositionalLayoutConfiguration) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: configuration
-    - name: configuration
-    - argLabels: 
+    - Selector: configuration
   */
   @objc var configuration: NSCollectionViewCompositionalLayoutConfiguration { @objc get @objc (setConfiguration:) set }
 }

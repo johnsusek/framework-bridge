@@ -9,13 +9,16 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSGetCommand
-    - name: NSGetCommand
-    - argLabels: 
+    - Selector: NSGetCommand
   */
 
 @objc(NSGetCommand) protocol NSGetCommandExports: JSExport, NSScriptCommandExports {
   // Static Methods
+
+  /**
+    - Selector: currentCommand
+  */
+  @objc (currentCommand) static func current() -> NSScriptCommand?
 }
 
 extension NSGetCommand: NSGetCommandExports {

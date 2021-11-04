@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSExtensionContext
-    - name: NSExtensionContext
-    - argLabels: 
+    - Selector: NSExtensionContext
     - Introduced: 10.10
   */
 
@@ -21,41 +19,24 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: cancelRequest
-    - name: cancelRequestWithError:
-    - argLabels: withError
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cancelRequest(withError:)
+    - Selector: cancelRequestWithError:
   */
   @objc (cancelRequestWithError:) func cancelRequest(withError: Error)
 
   /**
-    - jsName: completeRequest
-    - name: completeRequestReturningItems:completionHandler:
-    - argLabels: returningItems, completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: completeRequest(returningItems:completionHandler:)
+    - Selector: completeRequestReturningItems:completionHandler:
   */
-  // jsvalue - @objc (completeRequestReturningItems:completionHandler:) func completeRequest(returningItems: [Any]?, completionHandler: JSValue)
+  // jsvalue @objc func completeRequest(returningItems: [Any]?, completionHandler: JSValue)
 
   /**
-    - jsName: open
-    - name: openURL:completionHandler:
-    - argLabels: _, completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: open(_:completionHandler:)
+    - Selector: openURL:completionHandler:
   */
-  // jsvalue - @objc (openURL:completionHandler:) func open(_: URL, completionHandler: JSValue)
+  // jsvalue @objc func open(_: URL, completionHandler: JSValue)
 
   // Own Instance Properties
 
   /**
-    - jsName: inputItems
-    - name: inputItems
-    - argLabels: 
+    - Selector: inputItems
   */
   @objc var inputItems: [Any] { @objc get }
 }

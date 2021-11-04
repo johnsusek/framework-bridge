@@ -9,74 +9,54 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSColorWell
-    - name: NSColorWell
-    - argLabels: 
+    - Selector: NSColorWell
   */
 
 @objc(NSColorWell) protocol NSColorWellExports: JSExport, NSControlExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: activate
-    - name: activate:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: activate:
   */
   @objc func activate(_: Bool)
 
   /**
-    - jsName: deactivate
-    - name: deactivate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: deactivate
   */
   @objc func deactivate()
 
   /**
-    - jsName: drawWell
-    - name: drawWellInside:
-    - argLabels: inside
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawWell(inside:)
+    - Selector: drawWellInside:
   */
   @objc (drawWellInside:) func drawWell(inside: CGRect)
 
   /**
-    - jsName: takeColorFrom
-    - name: takeColorFrom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: takeColorFrom:
   */
   @objc func takeColorFrom(_: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: isActive
-    - name: active
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isActive
+    - Selector: active
   */
   @objc var isActive: Bool { @objc get }
 
   /**
-    - jsName: isBordered
-    - name: bordered
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isBordered
+    - Selector: bordered
   */
   @objc var isBordered: Bool { @objc get @objc (setBordered:) set }
 
   /**
-    - jsName: color
-    - name: color
-    - argLabels: 
+    - Selector: color
   */
   @objc var color: NSColor { @objc get @objc (setColor:) set }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewTransitionLayout
-    - name: NSCollectionViewTransitionLayout
-    - argLabels: 
+    - Selector: NSCollectionViewTransitionLayout
     - Introduced: 10.11
   */
 
@@ -21,51 +19,34 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithCurrentLayout
-    - name: initWithCurrentLayout:nextLayout:
-    - argLabels: nextLayout
-    - constructorTokens: currentLayout, nextLayout
+    - Selector: initWithCurrentLayout:nextLayout:
   */
   @objc static func createWithCurrentLayout(_: NSCollectionViewLayout, nextLayout: NSCollectionViewLayout) -> Self
 
   /**
-    - jsName: updateValue
-    - name: updateValue:forAnimatedKey:
-    - argLabels: forAnimatedKey
-    - constructorTokens: 
+    - Selector: updateValue:forAnimatedKey:
   */
   @objc func updateValue(_: CGFloat, forAnimatedKey: NSCollectionViewTransitionLayout.AnimatedKey)
 
   /**
-    - jsName: value
-    - name: valueForAnimatedKey:
-    - argLabels: forAnimatedKey
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: value(forAnimatedKey:)
+    - Selector: valueForAnimatedKey:
   */
   @objc (valueForAnimatedKey:) func value(forAnimatedKey: NSCollectionViewTransitionLayout.AnimatedKey) -> CGFloat
 
   // Own Instance Properties
 
   /**
-    - jsName: currentLayout
-    - name: currentLayout
-    - argLabels: 
+    - Selector: currentLayout
   */
   @objc var currentLayout: NSCollectionViewLayout { @objc get }
 
   /**
-    - jsName: nextLayout
-    - name: nextLayout
-    - argLabels: 
+    - Selector: nextLayout
   */
   @objc var nextLayout: NSCollectionViewLayout { @objc get }
 
   /**
-    - jsName: transitionProgress
-    - name: transitionProgress
-    - argLabels: 
+    - Selector: transitionProgress
   */
   @objc var transitionProgress: CGFloat { @objc get @objc (setTransitionProgress:) set }
 }

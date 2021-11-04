@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSAnimationContext
-    - name: NSAnimationContext
-    - argLabels: 
+    - Selector: NSAnimationContext
     - Introduced: 10.5
   */
 
@@ -19,84 +17,55 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: beginGrouping
-    - name: beginGrouping
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: beginGrouping
   */
   @objc static func beginGrouping()
 
   /**
-    - jsName: endGrouping
-    - name: endGrouping
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: endGrouping
   */
   @objc static func endGrouping()
 
   /**
-    - jsName: runAnimationGroup
-    - name: runAnimationGroup:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12
+    - Selector: runAnimationGroup:
     - Introduced: 10.12
   */
-  // jsvalue - @objc @available(OSX 10.12, *) static func runAnimationGroup(_: JSValue)
+// jsvalue   @objc @available(OSX 10.12, *) static func runAnimationGroup(_: JSValue)
 
   /**
-    - jsName: runAnimationGroup
-    - name: runAnimationGroup:completionHandler:
-    - argLabels: completionHandler
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: runAnimationGroup:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue - @objc @available(OSX 10.7, *) static func runAnimationGroup(_: JSValue, completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.7, *) static func runAnimationGroup(_: JSValue, completionHandler: JSValue)
 
   // Own Static Properties
 
   /**
-    - jsName: current
-    - name: currentContext
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: current
+    - Selector: currentContext
   */
   @objc static var current: NSAnimationContext { @objc (currentContext) get }
 
   // Own Instance Properties
 
   /**
-    - jsName: allowsImplicitAnimation
-    - name: allowsImplicitAnimation
-    - argLabels: 
-    - available: 10.8
+    - Selector: allowsImplicitAnimation
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) var allowsImplicitAnimation: Bool { @objc get @objc (setAllowsImplicitAnimation:) set }
 
   /**
-    - jsName: completionHandler
-    - name: completionHandler
-    - argLabels: 
-    - available: 10.7
+    - Selector: completionHandler
     - Introduced: 10.7
   */
 // jsvalue   @objc @available(OSX 10.7, *) var completionHandler: JSValue? { @objc get @objc (setCompletionHandler:) set }
 
   /**
-    - jsName: duration
-    - name: duration
-    - argLabels: 
+    - Selector: duration
   */
   @objc var duration: TimeInterval { @objc get @objc (setDuration:) set }
 
   /**
-    - jsName: timingFunction
-    - name: timingFunction
-    - argLabels: 
-    - available: 10.7
+    - Selector: timingFunction
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var timingFunction: CAMediaTimingFunction? { @objc get @objc (setTimingFunction:) set }

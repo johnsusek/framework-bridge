@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLCredentialStorage
-    - name: NSURLCredentialStorage
-    - argLabels: 
+    - Selector: NSURLCredentialStorage
   */
 
 @objc(URLCredentialStorage) protocol URLCredentialStorageExports: JSExport, NSObjectExports {
@@ -20,134 +18,69 @@ import Foundation
   // Own Static Properties
 
   /**
-    - jsName: shared
-    - name: sharedCredentialStorage
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: shared
+    - Selector: sharedCredentialStorage
   */
   @objc static var shared: URLCredentialStorage { @objc (sharedCredentialStorage) get }
 
   // Instance Methods
 
   /**
-    - jsName: credentials
-    - name: credentialsForProtectionSpace:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: credentials(for:)
+    - Selector: credentialsForProtectionSpace:
   */
   @objc (credentialsForProtectionSpace:) func credentials(`for`: URLProtectionSpace) -> [String: URLCredential]?
 
   /**
-    - jsName: defaultCredential
-    - name: defaultCredentialForProtectionSpace:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: defaultCredential(for:)
+    - Selector: defaultCredentialForProtectionSpace:
   */
   @objc (defaultCredentialForProtectionSpace:) func defaultCredential(`for`: URLProtectionSpace) -> URLCredential?
 
   /**
-    - jsName: getCredentials
-    - name: getCredentialsForProtectionSpace:task:completionHandler:
-    - argLabels: for, task, completionHandler
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: getCredentials(for:task:completionHandler:)
+    - Selector: getCredentialsForProtectionSpace:task:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue - @objc (getCredentialsForProtectionSpace:task:completionHandler:) @available(OSX 10.10, *) func getCredentials(`for`: URLProtectionSpace, task: URLSessionTask, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getCredentials(`for`: URLProtectionSpace, task: URLSessionTask, completionHandler: JSValue)
 
   /**
-    - jsName: getDefaultCredential
-    - name: getDefaultCredentialForProtectionSpace:task:completionHandler:
-    - argLabels: for, task, completionHandler
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: getDefaultCredential(for:task:completionHandler:)
+    - Selector: getDefaultCredentialForProtectionSpace:task:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue - @objc (getDefaultCredentialForProtectionSpace:task:completionHandler:) @available(OSX 10.10, *) func getDefaultCredential(`for`: URLProtectionSpace, task: URLSessionTask, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getDefaultCredential(`for`: URLProtectionSpace, task: URLSessionTask, completionHandler: JSValue)
 
   /**
-    - jsName: remove
-    - name: removeCredential:forProtectionSpace:
-    - argLabels: _, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: remove(_:for:)
+    - Selector: removeCredential:forProtectionSpace:
   */
   @objc (removeCredential:forProtectionSpace:) func remove(_: URLCredential, `for`: URLProtectionSpace)
 
   /**
-    - jsName: remove
-    - name: removeCredential:forProtectionSpace:options:
-    - argLabels: _, for, options
-    - constructorTokens: 
-    - available: 10.9
-    - obsoleted: 3
-    - renamed: remove(_:for:options:)
+    - Selector: removeCredential:forProtectionSpace:options:
     - Introduced: 10.9
   */
   @objc (removeCredential:forProtectionSpace:options:) @available(OSX 10.9, *) func remove(_: URLCredential, `for`: URLProtectionSpace, options: [String: Any]?)
 
   /**
-    - jsName: remove
-    - name: removeCredential:forProtectionSpace:options:task:
-    - argLabels: _, for, options, task
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: remove(_:for:options:task:)
+    - Selector: removeCredential:forProtectionSpace:options:task:
     - Introduced: 10.10
   */
   @objc (removeCredential:forProtectionSpace:options:task:) @available(OSX 10.10, *) func remove(_: URLCredential, `for`: URLProtectionSpace, options: [String: Any]?, task: URLSessionTask)
 
   /**
-    - jsName: set
-    - name: setCredential:forProtectionSpace:
-    - argLabels: _, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: set(_:for:)
+    - Selector: setCredential:forProtectionSpace:
   */
   @objc (setCredential:forProtectionSpace:) func set(_: URLCredential, `for`: URLProtectionSpace)
 
   /**
-    - jsName: set
-    - name: setCredential:forProtectionSpace:task:
-    - argLabels: _, for, task
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: set(_:for:task:)
+    - Selector: setCredential:forProtectionSpace:task:
     - Introduced: 10.10
   */
   @objc (setCredential:forProtectionSpace:task:) @available(OSX 10.10, *) func set(_: URLCredential, `for`: URLProtectionSpace, task: URLSessionTask)
 
   /**
-    - jsName: setDefaultCredential
-    - name: setDefaultCredential:forProtectionSpace:
-    - argLabels: _, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setDefaultCredential(_:for:)
+    - Selector: setDefaultCredential:forProtectionSpace:
   */
   @objc (setDefaultCredential:forProtectionSpace:) func setDefaultCredential(_: URLCredential, `for`: URLProtectionSpace)
 
   /**
-    - jsName: setDefaultCredential
-    - name: setDefaultCredential:forProtectionSpace:task:
-    - argLabels: _, for, task
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: setDefaultCredential(_:for:task:)
+    - Selector: setDefaultCredential:forProtectionSpace:task:
     - Introduced: 10.10
   */
   @objc (setDefaultCredential:forProtectionSpace:task:) @available(OSX 10.10, *) func setDefaultCredential(_: URLCredential, `for`: URLProtectionSpace, task: URLSessionTask)
@@ -155,9 +88,7 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: allCredentials
-    - name: allCredentials
-    - argLabels: 
+    - Selector: allCredentials
   */
   @objc var allCredentials: [URLProtectionSpace: [String: URLCredential]] { @objc get }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubberSelectionStyle
-    - name: NSScrubberSelectionStyle
-    - argLabels: 
+    - Selector: NSScrubberSelectionStyle
     - Introduced: 10.12.2
   */
 
@@ -21,30 +19,19 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: outlineOverlay
-    - name: outlineOverlayStyle
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: outlineOverlay
+    - Selector: outlineOverlayStyle
   */
   @objc static var outlineOverlay: NSScrubberSelectionStyle { @objc (outlineOverlayStyle) get }
 
   /**
-    - jsName: roundedBackground
-    - name: roundedBackgroundStyle
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: roundedBackground
+    - Selector: roundedBackgroundStyle
   */
   @objc static var roundedBackground: NSScrubberSelectionStyle { @objc (roundedBackgroundStyle) get }
 
   // Instance Methods
 
   /**
-    - jsName: makeSelectionView
-    - name: makeSelectionView
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: makeSelectionView
   */
   @objc func makeSelectionView() -> NSScrubberSelectionView?
 }

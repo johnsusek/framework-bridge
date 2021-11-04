@@ -9,13 +9,17 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSecureTextField
-    - name: NSSecureTextField
-    - argLabels: 
+    - Selector: NSSecureTextField
   */
 
 @objc(NSSecureTextField) protocol NSSecureTextFieldExports: JSExport, NSTextFieldExports {
   // Static Methods
+
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
 }
 
 @objc protocol SecureTextFieldExports: JSExport, NSTextFieldExports {

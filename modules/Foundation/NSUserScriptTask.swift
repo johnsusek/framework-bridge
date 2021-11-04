@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSUserScriptTask
-    - name: NSUserScriptTask
-    - argLabels: 
+    - Selector: NSUserScriptTask
     - Introduced: 10.8
   */
 
@@ -21,29 +19,19 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: execute
-    - name: executeWithCompletionHandler:
-    - argLabels: completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: execute(completionHandler:)
+    - Selector: executeWithCompletionHandler:
   */
-  // jsvalue - @objc (executeWithCompletionHandler:) func execute(completionHandler: JSValue?)
+  // jsvalue @objc func execute(completionHandler: JSValue?)
 
   /**
-    - jsName: createWithURL
-    - name: initWithURL:error:
-    - argLabels: error
-    - constructorTokens: url
+    - Selector: initWithURL:error:
   */
   @objc static func createWithURL(url: URL) -> Self?
 
   // Own Instance Properties
 
   /**
-    - jsName: scriptURL
-    - name: scriptURL
-    - argLabels: 
+    - Selector: scriptURL
   */
   @objc var scriptURL: URL { @objc get }
 }

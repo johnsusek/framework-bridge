@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPageController
-    - name: NSPageController
-    - argLabels: 
+    - Selector: NSPageController
     - Introduced: 10.8
   */
 
@@ -21,81 +19,54 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: completeTransition
-    - name: completeTransition
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: completeTransition
   */
   @objc func completeTransition()
 
   /**
-    - jsName: navigateBack
-    - name: navigateBack:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: navigateBack:
   */
   @objc func navigateBack(_: Any?)
 
   /**
-    - jsName: navigateForward
-    - name: navigateForward:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: navigateForward:
   */
   @objc func navigateForward(_: Any?)
 
   /**
-    - jsName: navigateForward
-    - name: navigateForwardToObject:
-    - argLabels: to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: navigateForward(to:)
+    - Selector: navigateForwardToObject:
   */
   @objc (navigateForwardToObject:) func navigateForward(to: Any)
 
   /**
-    - jsName: takeSelectedIndexFrom
-    - name: takeSelectedIndexFrom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: takeSelectedIndexFrom:
   */
   @objc func takeSelectedIndexFrom(_: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: arrangedObjects
-    - name: arrangedObjects
-    - argLabels: 
+    - Selector: arrangedObjects
   */
   @objc var arrangedObjects: [Any] { @objc get @objc (setArrangedObjects:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSPageControllerDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: selectedIndex
-    - name: selectedIndex
-    - argLabels: 
+    - Selector: selectedIndex
   */
   @objc var selectedIndex: Int { @objc get @objc (setSelectedIndex:) set }
 
   /**
-    - jsName: selectedViewController
-    - name: selectedViewController
-    - argLabels: 
+    - Selector: selectedViewController
   */
   @objc var selectedViewController: NSViewController? { @objc get }
 
   /**
-    - jsName: transitionStyle
-    - name: transitionStyle
-    - argLabels: 
+    - Selector: transitionStyle
   */
   @objc var transitionStyle: NSPageController.TransitionStyle { @objc get @objc (setTransitionStyle:) set }
 }

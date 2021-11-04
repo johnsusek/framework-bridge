@@ -9,150 +9,97 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: HTTPCookie
-    - name: NSHTTPCookie
-    - argLabels: 
+    - Selector: NSHTTPCookie
   */
 
 @objc(HTTPCookie) protocol HTTPCookieExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: cookieWithProperties:
-    - argLabels: properties
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(properties:)
-    - message: Not available in Swift
+    - Selector: cookieWithProperties:
   */
   @objc static func create(properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie?
 
   /**
-    - jsName: cookies
-    - name: cookiesWithResponseHeaderFields:forURL:
-    - argLabels: withResponseHeaderFields, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cookies(withResponseHeaderFields:for:)
+    - Selector: cookiesWithResponseHeaderFields:forURL:
   */
   @objc (cookiesWithResponseHeaderFields:forURL:) static func cookies(withResponseHeaderFields: [String: String], `for`: URL) -> [HTTPCookie]
 
   /**
-    - jsName: requestHeaderFields
-    - name: requestHeaderFieldsWithCookies:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: requestHeaderFields(with:)
+    - Selector: requestHeaderFieldsWithCookies:
   */
   @objc (requestHeaderFieldsWithCookies:) static func requestHeaderFields(with: [HTTPCookie]) -> [String: String]
 
   // Own Instance Properties
 
   /**
-    - jsName: isHTTPOnly
-    - name: HTTPOnly
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isHTTPOnly
+    - Selector: HTTPOnly
   */
   @objc var isHTTPOnly: Bool { @objc get }
 
   /**
-    - jsName: comment
-    - name: comment
-    - argLabels: 
+    - Selector: comment
   */
   @objc var comment: String? { @objc get }
 
   /**
-    - jsName: commentURL
-    - name: commentURL
-    - argLabels: 
+    - Selector: commentURL
   */
   @objc var commentURL: URL? { @objc get }
 
   /**
-    - jsName: domain
-    - name: domain
-    - argLabels: 
+    - Selector: domain
   */
   @objc var domain: String { @objc get }
 
   /**
-    - jsName: expiresDate
-    - name: expiresDate
-    - argLabels: 
+    - Selector: expiresDate
   */
   @objc var expiresDate: Date? { @objc get }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: String { @objc get }
 
   /**
-    - jsName: path
-    - name: path
-    - argLabels: 
+    - Selector: path
   */
   @objc var path: String { @objc get }
 
   /**
-    - jsName: portList
-    - name: portList
-    - argLabels: 
+    - Selector: portList
   */
   @objc var portList: [NSNumber]? { @objc get }
 
   /**
-    - jsName: properties
-    - name: properties
-    - argLabels: 
+    - Selector: properties
   */
   @objc var properties: [HTTPCookiePropertyKey: Any]? { @objc get }
 
   /**
-    - jsName: sameSitePolicy
-    - name: sameSitePolicy
-    - argLabels: 
-    - available: 10.15
+    - Selector: sameSitePolicy
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) var sameSitePolicy: HTTPCookieStringPolicy? { @objc get }
 
   /**
-    - jsName: isSecure
-    - name: secure
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSecure
+    - Selector: secure
   */
   @objc var isSecure: Bool { @objc get }
 
   /**
-    - jsName: isSessionOnly
-    - name: sessionOnly
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSessionOnly
+    - Selector: sessionOnly
   */
   @objc var isSessionOnly: Bool { @objc get }
 
   /**
-    - jsName: value
-    - name: value
-    - argLabels: 
+    - Selector: value
   */
   @objc var value: String { @objc get }
 
   /**
-    - jsName: version
-    - name: version
-    - argLabels: 
+    - Selector: version
   */
   @objc var version: Int { @objc get }
 }

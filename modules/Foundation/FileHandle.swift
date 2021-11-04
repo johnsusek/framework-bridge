@@ -9,70 +9,41 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: FileHandle
-    - name: NSFileHandle
-    - argLabels: 
+    - Selector: NSFileHandle
   */
 
 @objc(FileHandle) protocol FileHandleExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: fileHandleForReadingAtPath:
-    - argLabels: forReadingAtPath
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forReadingAtPath:)
-    - message: Not available in Swift
+    - Selector: fileHandleForReadingAtPath:
   */
   @objc static func create(forReadingAtPath: String) -> Self?
 
   /**
-    - jsName: fileHandleForReadingFromURL
-    - name: fileHandleForReadingFromURL:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: fileHandleForReadingFromURL:error:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) static func fileHandleForReadingFromURL(error: URL) -> Self?
 
   /**
-    - jsName: create
-    - name: fileHandleForUpdatingAtPath:
-    - argLabels: forUpdatingAtPath
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forUpdatingAtPath:)
-    - message: Not available in Swift
+    - Selector: fileHandleForUpdatingAtPath:
   */
   @objc static func create(forUpdatingAtPath: String) -> Self?
 
   /**
-    - jsName: fileHandleForUpdatingURL
-    - name: fileHandleForUpdatingURL:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: fileHandleForUpdatingURL:error:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) static func fileHandleForUpdatingURL(error: URL) -> Self?
 
   /**
-    - jsName: create
-    - name: fileHandleForWritingAtPath:
-    - argLabels: forWritingAtPath
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forWritingAtPath:)
-    - message: Not available in Swift
+    - Selector: fileHandleForWritingAtPath:
   */
   @objc static func create(forWritingAtPath: String) -> Self?
 
   /**
-    - jsName: fileHandleForWritingToURL
-    - name: fileHandleForWritingToURL:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: fileHandleForWritingToURL:error:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) static func fileHandleForWritingToURL(error: URL) -> Self?
@@ -80,77 +51,45 @@ import Foundation
   // Own Static Properties
 
   /**
-    - jsName: nullDevice
-    - name: fileHandleWithNullDevice
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: nullDevice
+    - Selector: fileHandleWithNullDevice
   */
   @objc static var nullDevice: FileHandle { @objc (fileHandleWithNullDevice) get }
 
   /**
-    - jsName: standardError
-    - name: fileHandleWithStandardError
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: standardError
+    - Selector: fileHandleWithStandardError
   */
   @objc static var standardError: FileHandle { @objc (fileHandleWithStandardError) get }
 
   /**
-    - jsName: standardInput
-    - name: fileHandleWithStandardInput
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: standardInput
+    - Selector: fileHandleWithStandardInput
   */
   @objc static var standardInput: FileHandle { @objc (fileHandleWithStandardInput) get }
 
   /**
-    - jsName: standardOutput
-    - name: fileHandleWithStandardOutput
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: standardOutput
+    - Selector: fileHandleWithStandardOutput
   */
   @objc static var standardOutput: FileHandle { @objc (fileHandleWithStandardOutput) get }
 
   // Instance Methods
 
   /**
-    - jsName: acceptConnectionInBackgroundAndNotify
-    - name: acceptConnectionInBackgroundAndNotify
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: acceptConnectionInBackgroundAndNotify
   */
   @objc func acceptConnectionInBackgroundAndNotify()
 
   /**
-    - jsName: acceptConnectionInBackgroundAndNotify
-    - name: acceptConnectionInBackgroundAndNotifyForModes:
-    - argLabels: forModes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: acceptConnectionInBackgroundAndNotify(forModes:)
+    - Selector: acceptConnectionInBackgroundAndNotifyForModes:
   */
   @objc (acceptConnectionInBackgroundAndNotifyForModes:) func acceptConnectionInBackgroundAndNotify(forModes: [RunLoop.Mode]?)
 
   /**
-    - jsName: closeAndReturnError
-    - name: closeAndReturnError:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: closeAndReturnError:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func closeAndReturnError() -> Bool
 
   /**
-    - jsName: closeFile
-    - name: closeFile
-    - argLabels: 
-    - constructorTokens: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: closeFile
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: closeAndReturnError:
@@ -158,39 +97,23 @@ import Foundation
   @objc @available(OSX 10.0, *) func closeFile()
 
   /**
-    - jsName: getOffset
-    - name: getOffset:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: getOffset:error:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func getOffset(error: UnsafeMutablePointer<unsigned long long>) -> Bool
 
   /**
-    - jsName: createWithFileDescriptor
-    - name: initWithFileDescriptor:
-    - argLabels: 
-    - constructorTokens: fileDescriptor
+    - Selector: initWithFileDescriptor:
   */
   @objc static func createWithFileDescriptor(_: Int32) -> Self
 
   /**
-    - jsName: createWithFileDescriptor
-    - name: initWithFileDescriptor:closeOnDealloc:
-    - argLabels: closeOnDealloc
-    - constructorTokens: fileDescriptor, closeOnDealloc
+    - Selector: initWithFileDescriptor:closeOnDealloc:
   */
   @objc static func createWithFileDescriptor(_: Int32, closeOnDealloc: Bool) -> Self
 
   /**
-    - jsName: readData
-    - name: readDataOfLength:
-    - argLabels: ofLength
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: readData(ofLength:)
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: readDataOfLength:
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: readDataUpToLength:error:
@@ -198,12 +121,7 @@ import Foundation
   @objc (readDataOfLength:) @available(OSX 10.0, *) func readData(ofLength: Int) -> Data
 
   /**
-    - jsName: readDataToEndOfFile
-    - name: readDataToEndOfFile
-    - argLabels: 
-    - constructorTokens: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: readDataToEndOfFile
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: readDataToEndOfFileAndReturnError:
@@ -211,66 +129,39 @@ import Foundation
   @objc @available(OSX 10.0, *) func readDataToEndOfFile() -> Data
 
   /**
-    - jsName: readDataToEndOfFileAndReturnError
-    - name: readDataToEndOfFileAndReturnError:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: readDataToEndOfFileAndReturnError:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func readDataToEndOfFileAndReturnError() -> Data?
 
   /**
-    - jsName: readDataUpToLength
-    - name: readDataUpToLength:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: readDataUpToLength:error:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func readDataUpToLength(error: Int) -> Data?
 
   /**
-    - jsName: readInBackgroundAndNotify
-    - name: readInBackgroundAndNotify
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: readInBackgroundAndNotify
   */
   @objc func readInBackgroundAndNotify()
 
   /**
-    - jsName: readInBackgroundAndNotify
-    - name: readInBackgroundAndNotifyForModes:
-    - argLabels: forModes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: readInBackgroundAndNotify(forModes:)
+    - Selector: readInBackgroundAndNotifyForModes:
   */
   @objc (readInBackgroundAndNotifyForModes:) func readInBackgroundAndNotify(forModes: [RunLoop.Mode]?)
 
   /**
-    - jsName: readToEndOfFileInBackgroundAndNotify
-    - name: readToEndOfFileInBackgroundAndNotify
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: readToEndOfFileInBackgroundAndNotify
   */
   @objc func readToEndOfFileInBackgroundAndNotify()
 
   /**
-    - jsName: readToEndOfFileInBackgroundAndNotify
-    - name: readToEndOfFileInBackgroundAndNotifyForModes:
-    - argLabels: forModes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: readToEndOfFileInBackgroundAndNotify(forModes:)
+    - Selector: readToEndOfFileInBackgroundAndNotifyForModes:
   */
   @objc (readToEndOfFileInBackgroundAndNotifyForModes:) func readToEndOfFileInBackgroundAndNotify(forModes: [RunLoop.Mode]?)
 
   /**
-    - jsName: seekToEndOfFile
-    - name: seekToEndOfFile
-    - argLabels: 
-    - constructorTokens: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: seekToEndOfFile
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: seekToEndReturningOffset:error:
@@ -278,23 +169,13 @@ import Foundation
   @objc @available(OSX 10.0, *) func seekToEndOfFile() -> UInt64
 
   /**
-    - jsName: seekToEndReturningOffset
-    - name: seekToEndReturningOffset:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: seekToEndReturningOffset:error:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func seekToEndReturningOffset(error: UnsafeMutablePointer<unsigned long long>?) -> Bool
 
   /**
-    - jsName: seek
-    - name: seekToFileOffset:
-    - argLabels: toFileOffset
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: seek(toFileOffset:)
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: seekToFileOffset:
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: seekToOffset:error:
@@ -302,30 +183,19 @@ import Foundation
   @objc (seekToFileOffset:) @available(OSX 10.0, *) func seek(toFileOffset: UInt64)
 
   /**
-    - jsName: seekToOffset
-    - name: seekToOffset:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: seekToOffset:error:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func seekToOffset(error: UInt64) -> Bool
 
   /**
-    - jsName: synchronizeAndReturnError
-    - name: synchronizeAndReturnError:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: synchronizeAndReturnError:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func synchronizeAndReturnError() -> Bool
 
   /**
-    - jsName: synchronizeFile
-    - name: synchronizeFile
-    - argLabels: 
-    - constructorTokens: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: synchronizeFile
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: synchronizeAndReturnError:
@@ -333,23 +203,13 @@ import Foundation
   @objc @available(OSX 10.0, *) func synchronizeFile()
 
   /**
-    - jsName: truncateAtOffset
-    - name: truncateAtOffset:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: truncateAtOffset:error:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func truncateAtOffset(error: UInt64) -> Bool
 
   /**
-    - jsName: truncateFile
-    - name: truncateFileAtOffset:
-    - argLabels: atOffset
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: truncateFile(atOffset:)
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: truncateFileAtOffset:
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: truncateAtOffset:error:
@@ -357,32 +217,17 @@ import Foundation
   @objc (truncateFileAtOffset:) @available(OSX 10.0, *) func truncateFile(atOffset: UInt64)
 
   /**
-    - jsName: waitForDataInBackgroundAndNotify
-    - name: waitForDataInBackgroundAndNotify
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: waitForDataInBackgroundAndNotify
   */
   @objc func waitForDataInBackgroundAndNotify()
 
   /**
-    - jsName: waitForDataInBackgroundAndNotify
-    - name: waitForDataInBackgroundAndNotifyForModes:
-    - argLabels: forModes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: waitForDataInBackgroundAndNotify(forModes:)
+    - Selector: waitForDataInBackgroundAndNotifyForModes:
   */
   @objc (waitForDataInBackgroundAndNotifyForModes:) func waitForDataInBackgroundAndNotify(forModes: [RunLoop.Mode]?)
 
   /**
-    - jsName: write
-    - name: writeData:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: write(_:)
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: writeData:
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: writeData:error:
@@ -390,10 +235,7 @@ import Foundation
   @objc (writeData:) @available(OSX 10.0, *) func write(_: Data)
 
   /**
-    - jsName: writeData
-    - name: writeData:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: writeData:error:
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func writeData(error: Data) -> Bool
@@ -401,25 +243,17 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: availableData
-    - name: availableData
-    - argLabels: 
+    - Selector: availableData
   */
   @objc var availableData: Data { @objc get }
 
   /**
-    - jsName: fileDescriptor
-    - name: fileDescriptor
-    - argLabels: 
+    - Selector: fileDescriptor
   */
   @objc var fileDescriptor: Int32 { @objc get }
 
   /**
-    - jsName: offsetInFile
-    - name: offsetInFile
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: offsetInFile
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: getOffset:error:
@@ -427,19 +261,13 @@ import Foundation
   @objc @available(OSX 10.0, *) var offsetInFile: UInt64 { @objc get }
 
   /**
-    - jsName: readabilityHandler
-    - name: readabilityHandler
-    - argLabels: 
-    - available: 10.7
+    - Selector: readabilityHandler
     - Introduced: 10.7
   */
 // jsvalue   @objc @available(OSX 10.7, *) var readabilityHandler: JSValue? { @objc get @objc (setReadabilityHandler:) set }
 
   /**
-    - jsName: writeabilityHandler
-    - name: writeabilityHandler
-    - argLabels: 
-    - available: 10.7
+    - Selector: writeabilityHandler
     - Introduced: 10.7
   */
 // jsvalue   @objc @available(OSX 10.7, *) var writeabilityHandler: JSValue? { @objc get @objc (setWriteabilityHandler:) set }

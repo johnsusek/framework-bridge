@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTabViewController
-    - name: NSTabViewController
-    - argLabels: 
+    - Selector: NSTabViewController
     - Introduced: 10.10
   */
 
@@ -21,82 +19,54 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: addTabViewItem
-    - name: addTabViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addTabViewItem:
   */
   @objc func addTabViewItem(_: NSTabViewItem)
 
   /**
-    - jsName: insertTabViewItem
-    - name: insertTabViewItem:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertTabViewItem(_:at:)
+    - Selector: insertTabViewItem:atIndex:
   */
   @objc (insertTabViewItem:atIndex:) func insertTabViewItem(_: NSTabViewItem, at: Int)
 
   /**
-    - jsName: removeTabViewItem
-    - name: removeTabViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeTabViewItem:
   */
   @objc func removeTabViewItem(_: NSTabViewItem)
 
   /**
-    - jsName: tabViewItem
-    - name: tabViewItemForViewController:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: tabViewItem(for:)
+    - Selector: tabViewItemForViewController:
   */
   @objc (tabViewItemForViewController:) func tabViewItem(`for`: NSViewController) -> NSTabViewItem?
 
   // Own Instance Properties
 
   /**
-    - jsName: canPropagateSelectedChildViewControllerTitle
-    - name: canPropagateSelectedChildViewControllerTitle
-    - argLabels: 
+    - Selector: canPropagateSelectedChildViewControllerTitle
   */
   @objc var canPropagateSelectedChildViewControllerTitle: Bool { @objc get @objc (setCanPropagateSelectedChildViewControllerTitle:) set }
 
   /**
-    - jsName: selectedTabViewItemIndex
-    - name: selectedTabViewItemIndex
-    - argLabels: 
+    - Selector: selectedTabViewItemIndex
   */
   @objc var selectedTabViewItemIndex: Int { @objc get @objc (setSelectedTabViewItemIndex:) set }
 
   /**
-    - jsName: tabStyle
-    - name: tabStyle
-    - argLabels: 
+    - Selector: tabStyle
   */
   @objc var tabStyle: NSTabViewController.TabStyle { @objc get @objc (setTabStyle:) set }
 
   /**
-    - jsName: tabView
-    - name: tabView
-    - argLabels: 
+    - Selector: tabView
   */
   @objc var tabView: NSTabView { @objc get @objc (setTabView:) set }
 
   /**
-    - jsName: tabViewItems
-    - name: tabViewItems
-    - argLabels: 
+    - Selector: tabViewItems
   */
   @objc var tabViewItems: [NSTabViewItem] { @objc get @objc (setTabViewItems:) set }
 
   /**
-    - jsName: transitionOptions
-    - name: transitionOptions
-    - argLabels: 
+    - Selector: transitionOptions
   */
   @objc var transitionOptions: NSViewController.TransitionOptions { @objc get @objc (setTransitionOptions:) set }
 }

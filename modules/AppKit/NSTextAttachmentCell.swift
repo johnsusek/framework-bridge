@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextAttachmentCell
-    - name: NSTextAttachmentCell
-    - argLabels: 
+    - Selector: NSTextAttachmentCell
   */
 
 @objc(NSTextAttachmentCell) protocol NSTextAttachmentCellExports: JSExport, NSCellExports {

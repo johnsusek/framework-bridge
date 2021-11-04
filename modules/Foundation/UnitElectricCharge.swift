@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitElectricCharge
-    - name: NSUnitElectricCharge
-    - argLabels: 
+    - Selector: NSUnitElectricCharge
     - Introduced: 10.12
   */
 
@@ -19,54 +17,39 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: ampereHours
-    - name: ampereHours
-    - argLabels: 
+    - Selector: ampereHours
   */
   @objc static var ampereHours: UnitElectricCharge { @objc get }
 
   /**
-    - jsName: coulombs
-    - name: coulombs
-    - argLabels: 
+    - Selector: coulombs
   */
   @objc static var coulombs: UnitElectricCharge { @objc get }
 
   /**
-    - jsName: kiloampereHours
-    - name: kiloampereHours
-    - argLabels: 
+    - Selector: kiloampereHours
   */
   @objc static var kiloampereHours: UnitElectricCharge { @objc get }
 
   /**
-    - jsName: megaampereHours
-    - name: megaampereHours
-    - argLabels: 
+    - Selector: megaampereHours
   */
   @objc static var megaampereHours: UnitElectricCharge { @objc get }
 
   /**
-    - jsName: microampereHours
-    - name: microampereHours
-    - argLabels: 
+    - Selector: microampereHours
   */
   @objc static var microampereHours: UnitElectricCharge { @objc get }
 
   /**
-    - jsName: milliampereHours
-    - name: milliampereHours
-    - argLabels: 
+    - Selector: milliampereHours
   */
   @objc static var milliampereHours: UnitElectricCharge { @objc get }
 }

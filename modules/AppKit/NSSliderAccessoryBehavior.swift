@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSliderAccessoryBehavior
-    - name: NSSliderAccessoryBehavior
-    - argLabels: 
+    - Selector: NSSliderAccessoryBehavior
     - Introduced: 10.12
   */
 
@@ -19,52 +17,31 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: behaviorWithHandler:
-    - argLabels: handler
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(handler:)
-    - message: Not available in Swift
+    - Selector: behaviorWithHandler:
   */
-  @objc static func create(handler: JSValue) -> NSSliderAccessoryBehavior
+// jsvalue   @objc static func create(handler: JSValue) -> NSSliderAccessoryBehavior
 
   // Own Static Properties
 
   /**
-    - jsName: automatic
-    - name: automaticBehavior
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: automatic
+    - Selector: automaticBehavior
   */
   @objc static var automatic: NSSliderAccessoryBehavior { @objc (automaticBehavior) get }
 
   /**
-    - jsName: valueReset
-    - name: valueResetBehavior
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: valueReset
+    - Selector: valueResetBehavior
   */
   @objc static var valueReset: NSSliderAccessoryBehavior { @objc (valueResetBehavior) get }
 
   /**
-    - jsName: valueStep
-    - name: valueStepBehavior
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: valueStep
+    - Selector: valueStepBehavior
   */
   @objc static var valueStep: NSSliderAccessoryBehavior { @objc (valueStepBehavior) get }
 
   // Instance Methods
 
   /**
-    - jsName: handleAction
-    - name: handleAction:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: handleAction:
   */
   @objc func handleAction(_: NSSliderAccessory)
 }

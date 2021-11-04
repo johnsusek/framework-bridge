@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitDuration
-    - name: NSUnitDuration
-    - argLabels: 
+    - Selector: NSUnitDuration
     - Introduced: 10.12
   */
 
@@ -19,69 +17,48 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: hours
-    - name: hours
-    - argLabels: 
+    - Selector: hours
   */
   @objc static var hours: UnitDuration { @objc get }
 
   /**
-    - jsName: microseconds
-    - name: microseconds
-    - argLabels: 
-    - available: 10.15
+    - Selector: microseconds
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static var microseconds: UnitDuration { @objc get }
 
   /**
-    - jsName: milliseconds
-    - name: milliseconds
-    - argLabels: 
-    - available: 10.15
+    - Selector: milliseconds
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static var milliseconds: UnitDuration { @objc get }
 
   /**
-    - jsName: minutes
-    - name: minutes
-    - argLabels: 
+    - Selector: minutes
   */
   @objc static var minutes: UnitDuration { @objc get }
 
   /**
-    - jsName: nanoseconds
-    - name: nanoseconds
-    - argLabels: 
-    - available: 10.15
+    - Selector: nanoseconds
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static var nanoseconds: UnitDuration { @objc get }
 
   /**
-    - jsName: picoseconds
-    - name: picoseconds
-    - argLabels: 
-    - available: 10.15
+    - Selector: picoseconds
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static var picoseconds: UnitDuration { @objc get }
 
   /**
-    - jsName: seconds
-    - name: seconds
-    - argLabels: 
+    - Selector: seconds
   */
   @objc static var seconds: UnitDuration { @objc get }
 }

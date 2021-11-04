@@ -9,61 +9,56 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSMutableFontCollection
-    - name: NSMutableFontCollection
-    - argLabels: 
+    - Selector: NSMutableFontCollection
     - Introduced: 10.7
   */
 
 @objc(NSMutableFontCollection) protocol NSMutableFontCollectionExports: JSExport, NSFontCollectionExports {
   // Static Methods
 
+  /**
+    - Selector: hideFontCollectionWithName:visibility:error:
+  */
+  // throws - @objc static func hideFontCollectionWithName(visibility: NSFontCollection.Name, error: NSFontCollection.Visibility) -> Bool
+
+  /**
+    - Selector: renameFontCollectionWithName:visibility:toName:error:
+  */
+  // throws - @objc (renameFontCollectionWithName:visibility:toName:error:) static func rename(fromName: NSFontCollection.Name, visibility: NSFontCollection.Visibility, toName: NSFontCollection.Name) -> Bool
+
+  /**
+    - Selector: showFontCollection:withName:visibility:error:
+  */
+  // throws - @objc static func showFontCollection(withName: NSFontCollection, visibility: NSFontCollection.Name, error: NSFontCollection.Visibility) -> Bool
+
   // Own Static Properties
 
   /**
-    - jsName: withAllAvailableDescriptors
-    - name: fontCollectionWithAllAvailableDescriptors
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: withAllAvailableDescriptors
+    - Selector: fontCollectionWithAllAvailableDescriptors
   */
   @objc static var withAllAvailableDescriptors: NSMutableFontCollection { @objc (fontCollectionWithAllAvailableDescriptors) get }
 
   // Instance Methods
 
   /**
-    - jsName: addQuery
-    - name: addQueryForDescriptors:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addQuery(for:)
+    - Selector: addQueryForDescriptors:
   */
   @objc (addQueryForDescriptors:) func addQuery(`for`: [NSFontDescriptor])
 
   /**
-    - jsName: removeQuery
-    - name: removeQueryForDescriptors:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeQuery(for:)
+    - Selector: removeQueryForDescriptors:
   */
   @objc (removeQueryForDescriptors:) func removeQuery(`for`: [NSFontDescriptor])
 
   // Own Instance Properties
 
   /**
-    - jsName: exclusionDescriptors
-    - name: exclusionDescriptors
-    - argLabels: 
+    - Selector: exclusionDescriptors
   */
   @objc var exclusionDescriptors: [NSFontDescriptor]? { @objc get @objc (setExclusionDescriptors:) set }
 
   /**
-    - jsName: queryDescriptors
-    - name: queryDescriptors
-    - argLabels: 
+    - Selector: queryDescriptors
   */
   @objc var queryDescriptors: [NSFontDescriptor]? { @objc get @objc (setQueryDescriptors:) set }
 }

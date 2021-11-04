@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSDraggingSession
-    - name: NSDraggingSession
-    - argLabels: 
+    - Selector: NSDraggingSession
     - Introduced: 10.7
   */
 
@@ -21,56 +19,39 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: enumerateDraggingItems
-    - name: enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:
-    - argLabels: options, for, classes, searchOptions, using
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: enumerateDraggingItems(options:for:classes:searchOptions:using:)
+    - Selector: enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:
   */
-  // jsvalue - @objc (enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:) func enumerateDraggingItems(options: NSDraggingItemEnumerationOptions, `for`: NSView?, classes: [AnyClass], searchOptions: [NSPasteboard.ReadingOptionKey: Any], using: JSValue)
+  // jsvalue @objc func enumerateDraggingItems(options: NSDraggingItemEnumerationOptions, `for`: NSView?, classes: [AnyClass], searchOptions: [NSPasteboard.ReadingOptionKey: Any], using: JSValue)
 
   // Own Instance Properties
 
   /**
-    - jsName: animatesToStartingPositionsOnCancelOrFail
-    - name: animatesToStartingPositionsOnCancelOrFail
-    - argLabels: 
+    - Selector: animatesToStartingPositionsOnCancelOrFail
   */
   @objc var animatesToStartingPositionsOnCancelOrFail: Bool { @objc get @objc (setAnimatesToStartingPositionsOnCancelOrFail:) set }
 
   /**
-    - jsName: draggingFormation
-    - name: draggingFormation
-    - argLabels: 
+    - Selector: draggingFormation
   */
   @objc var draggingFormation: NSDraggingFormation { @objc get @objc (setDraggingFormation:) set }
 
   /**
-    - jsName: draggingLeaderIndex
-    - name: draggingLeaderIndex
-    - argLabels: 
+    - Selector: draggingLeaderIndex
   */
   @objc var draggingLeaderIndex: Int { @objc get @objc (setDraggingLeaderIndex:) set }
 
   /**
-    - jsName: draggingLocation
-    - name: draggingLocation
-    - argLabels: 
+    - Selector: draggingLocation
   */
   @objc var draggingLocation: CGPoint { @objc get }
 
   /**
-    - jsName: draggingPasteboard
-    - name: draggingPasteboard
-    - argLabels: 
+    - Selector: draggingPasteboard
   */
   @objc var draggingPasteboard: NSPasteboard { @objc get }
 
   /**
-    - jsName: draggingSequenceNumber
-    - name: draggingSequenceNumber
-    - argLabels: 
+    - Selector: draggingSequenceNumber
   */
   @objc var draggingSequenceNumber: Int { @objc get }
 }

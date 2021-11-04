@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSFilePromiseProvider
-    - name: NSFilePromiseProvider
-    - argLabels: 
+    - Selector: NSFilePromiseProvider
     - Introduced: 10.12
   */
 
@@ -21,33 +19,24 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithFileType
-    - name: initWithFileType:delegate:
-    - argLabels: delegate
-    - constructorTokens: fileType, delegate
+    - Selector: initWithFileType:delegate:
   */
   @objc static func createWithFileType(_: String, delegate: NSFilePromiseProviderDelegate) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSFilePromiseProviderDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: fileType
-    - name: fileType
-    - argLabels: 
+    - Selector: fileType
   */
   @objc var fileType: String { @objc get @objc (setFileType:) set }
 
   /**
-    - jsName: userInfo
-    - name: userInfo
-    - argLabels: 
+    - Selector: userInfo
   */
   @objc var userInfo: Any? { @objc get @objc (setUserInfo:) set }
 }

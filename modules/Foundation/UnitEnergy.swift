@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitEnergy
-    - name: NSUnitEnergy
-    - argLabels: 
+    - Selector: NSUnitEnergy
     - Introduced: 10.12
   */
 
@@ -19,47 +17,34 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: calories
-    - name: calories
-    - argLabels: 
+    - Selector: calories
   */
   @objc static var calories: UnitEnergy { @objc get }
 
   /**
-    - jsName: joules
-    - name: joules
-    - argLabels: 
+    - Selector: joules
   */
   @objc static var joules: UnitEnergy { @objc get }
 
   /**
-    - jsName: kilocalories
-    - name: kilocalories
-    - argLabels: 
+    - Selector: kilocalories
   */
   @objc static var kilocalories: UnitEnergy { @objc get }
 
   /**
-    - jsName: kilojoules
-    - name: kilojoules
-    - argLabels: 
+    - Selector: kilojoules
   */
   @objc static var kilojoules: UnitEnergy { @objc get }
 
   /**
-    - jsName: kilowattHours
-    - name: kilowattHours
-    - argLabels: 
+    - Selector: kilowattHours
   */
   @objc static var kilowattHours: UnitEnergy { @objc get }
 }

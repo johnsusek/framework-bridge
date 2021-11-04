@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSFontAssetRequest
-    - name: NSFontAssetRequest
-    - argLabels: 
+    - Selector: NSFontAssetRequest
     - Introduced: 10.13
   */
 
@@ -21,29 +19,19 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: download
-    - name: downloadFontAssetsWithCompletionHandler:
-    - argLabels: withCompletionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: download(withCompletionHandler:)
+    - Selector: downloadFontAssetsWithCompletionHandler:
   */
-  // jsvalue - @objc (downloadFontAssetsWithCompletionHandler:) func download(withCompletionHandler: JSValue)
+  // jsvalue @objc func download(withCompletionHandler: JSValue)
 
   /**
-    - jsName: createWithFontDescriptors
-    - name: initWithFontDescriptors:options:
-    - argLabels: options
-    - constructorTokens: fontDescriptors, options
+    - Selector: initWithFontDescriptors:options:
   */
   @objc static func createWithFontDescriptors(_: [NSFontDescriptor], options: NSFontAssetRequest.Options) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: downloadedFontDescriptors
-    - name: downloadedFontDescriptors
-    - argLabels: 
+    - Selector: downloadedFontDescriptors
   */
   @objc var downloadedFontDescriptors: [NSFontDescriptor] { @objc get }
 }

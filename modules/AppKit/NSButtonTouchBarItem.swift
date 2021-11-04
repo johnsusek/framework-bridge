@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSButtonTouchBarItem
-    - name: NSButtonTouchBarItem
-    - argLabels: 
+    - Selector: NSButtonTouchBarItem
     - Introduced: 10.15
   */
 
@@ -19,88 +17,54 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: buttonTouchBarItemWithIdentifier:image:target:action:
-    - argLabels: identifier, image, target, action
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:image:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonTouchBarItemWithIdentifier:image:target:action:
   */
   @objc static func create(identifier: NSTouchBarItem.Identifier, image: NSImage) -> Self
 
   /**
-    - jsName: create
-    - name: buttonTouchBarItemWithIdentifier:title:image:target:action:
-    - argLabels: identifier, title, image, target, action
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:title:image:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonTouchBarItemWithIdentifier:title:image:target:action:
   */
   @objc static func create(identifier: NSTouchBarItem.Identifier, title: String, image: NSImage) -> Self
 
   /**
-    - jsName: create
-    - name: buttonTouchBarItemWithIdentifier:title:target:action:
-    - argLabels: identifier, title, target, action
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:title:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonTouchBarItemWithIdentifier:title:target:action:
   */
   @objc static func create(identifier: NSTouchBarItem.Identifier, title: String) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: action
-    - name: action
-    - argLabels: 
+    - Selector: action
   */
   @objc var action: Selector? { @objc get @objc (setAction:) set }
 
   /**
-    - jsName: bezelColor
-    - name: bezelColor
-    - argLabels: 
+    - Selector: bezelColor
   */
   @objc var bezelColor: NSColor? { @objc get @objc (setBezelColor:) set }
 
   /**
-    - jsName: customizationLabel
-    - name: customizationLabel
-    - argLabels: 
+    - Selector: customizationLabel
   */
   @objc var customizationLabel: String! { @objc get @objc (setCustomizationLabel:) set }
 
   /**
-    - jsName: isEnabled
-    - name: enabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEnabled
+    - Selector: enabled
   */
   @objc var isEnabled: Bool { @objc get @objc (setEnabled:) set }
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
+    - Selector: image
   */
   @objc var image: NSImage? { @objc get @objc (setImage:) set }
 
   /**
-    - jsName: target
-    - name: target
-    - argLabels: 
+    - Selector: target
   */
   @objc var target: AnyObject? { @objc get @objc (setTarget:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get @objc (setTitle:) set }
 }

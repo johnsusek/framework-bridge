@@ -9,43 +9,27 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: HTTPURLResponse
-    - name: NSHTTPURLResponse
-    - argLabels: 
+    - Selector: NSHTTPURLResponse
   */
 
 @objc(HTTPURLResponse) protocol HTTPURLResponseExports: JSExport, URLResponseExports {
   // Static Methods
 
   /**
-    - jsName: localizedString
-    - name: localizedStringForStatusCode:
-    - argLabels: forStatusCode
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: localizedString(forStatusCode:)
+    - Selector: localizedStringForStatusCode:
   */
   @objc (localizedStringForStatusCode:) static func localizedString(forStatusCode: Int) -> String
 
   // Instance Methods
 
   /**
-    - jsName: createWithURL
-    - name: initWithURL:statusCode:HTTPVersion:headerFields:
-    - argLabels: statusCode, HTTPVersion, headerFields
-    - constructorTokens: url, statusCode, httpVersion, headerFields
+    - Selector: initWithURL:statusCode:HTTPVersion:headerFields:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) static func createWithURL(_: URL, statusCode: Int, httpVersion: String?, headerFields: [String: String]?) -> Self?
 
   /**
-    - jsName: value
-    - name: valueForHTTPHeaderField:
-    - argLabels: forHTTPHeaderField
-    - constructorTokens: 
-    - available: 10.15
-    - obsoleted: 3
-    - renamed: value(forHTTPHeaderField:)
+    - Selector: valueForHTTPHeaderField:
     - Introduced: 10.15
   */
   @objc (valueForHTTPHeaderField:) @available(OSX 10.15, *) func value(forHTTPHeaderField: String) -> String?
@@ -53,16 +37,12 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: allHeaderFields
-    - name: allHeaderFields
-    - argLabels: 
+    - Selector: allHeaderFields
   */
   @objc var allHeaderFields: [AnyHashable: Any] { @objc get }
 
   /**
-    - jsName: statusCode
-    - name: statusCode
-    - argLabels: 
+    - Selector: statusCode
   */
   @objc var statusCode: Int { @objc get }
 }

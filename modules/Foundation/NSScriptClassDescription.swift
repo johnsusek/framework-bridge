@@ -9,184 +9,117 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSScriptClassDescription
-    - name: NSScriptClassDescription
-    - argLabels: 
+    - Selector: NSScriptClassDescription
   */
 
 @objc(NSScriptClassDescription) protocol NSScriptClassDescriptionExports: JSExport, NSClassDescriptionExports {
   // Static Methods
 
+  /**
+    - Selector: invalidateClassDescriptionCache
+  */
+  @objc static func invalidateClassDescriptionCache()
+
+  /**
+    - Selector: registerClassDescription:forClass:
+  */
+  @objc (registerClassDescription:forClass:) static func register(_: NSClassDescription, `for`: AnyClass)
+
   // Instance Methods
 
   /**
-    - jsName: appleEventCode
-    - name: appleEventCodeForKey:
-    - argLabels: forKey
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: appleEventCode(forKey:)
+    - Selector: appleEventCodeForKey:
   */
   @objc (appleEventCodeForKey:) func appleEventCode(forKey: String) -> FourCharCode
 
   /**
-    - jsName: forKey
-    - name: classDescriptionForKey:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: forKey(_:)
+    - Selector: classDescriptionForKey:
   */
   @objc (classDescriptionForKey:) func forKey(_: String) -> NSScriptClassDescription?
 
   /**
-    - jsName: hasOrderedToManyRelationship
-    - name: hasOrderedToManyRelationshipForKey:
-    - argLabels: forKey
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: hasOrderedToManyRelationship(forKey:)
+    - Selector: hasOrderedToManyRelationshipForKey:
     - Introduced: 10.5
   */
   @objc (hasOrderedToManyRelationshipForKey:) @available(OSX 10.5, *) func hasOrderedToManyRelationship(forKey: String) -> Bool
 
   /**
-    - jsName: hasProperty
-    - name: hasPropertyForKey:
-    - argLabels: forKey
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: hasProperty(forKey:)
+    - Selector: hasPropertyForKey:
     - Introduced: 10.5
   */
   @objc (hasPropertyForKey:) @available(OSX 10.5, *) func hasProperty(forKey: String) -> Bool
 
   /**
-    - jsName: hasReadableProperty
-    - name: hasReadablePropertyForKey:
-    - argLabels: forKey
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: hasReadableProperty(forKey:)
+    - Selector: hasReadablePropertyForKey:
     - Introduced: 10.5
   */
   @objc (hasReadablePropertyForKey:) @available(OSX 10.5, *) func hasReadableProperty(forKey: String) -> Bool
 
   /**
-    - jsName: hasWritableProperty
-    - name: hasWritablePropertyForKey:
-    - argLabels: forKey
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: hasWritableProperty(forKey:)
+    - Selector: hasWritablePropertyForKey:
     - Introduced: 10.5
   */
   @objc (hasWritablePropertyForKey:) @available(OSX 10.5, *) func hasWritableProperty(forKey: String) -> Bool
 
   /**
-    - jsName: createWithSuiteName
-    - name: initWithSuiteName:className:dictionary:
-    - argLabels: className, dictionary
-    - constructorTokens: suiteName, className, dictionary
+    - Selector: initWithSuiteName:className:dictionary:
   */
   @objc static func createWithSuiteName(_: String, className: String, dictionary: [AnyHashable: Any]?) -> Self?
 
   /**
-    - jsName: isLocationRequiredToCreate
-    - name: isLocationRequiredToCreateForKey:
-    - argLabels: forKey
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: isLocationRequiredToCreate(forKey:)
+    - Selector: isLocationRequiredToCreateForKey:
   */
   @objc (isLocationRequiredToCreateForKey:) func isLocationRequiredToCreate(forKey: String) -> Bool
 
   /**
-    - jsName: key
-    - name: keyWithAppleEventCode:
-    - argLabels: withAppleEventCode
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: key(withAppleEventCode:)
+    - Selector: keyWithAppleEventCode:
   */
   @objc (keyWithAppleEventCode:) func key(withAppleEventCode: FourCharCode) -> String?
 
   /**
-    - jsName: matchesAppleEventCode
-    - name: matchesAppleEventCode:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: matchesAppleEventCode:
   */
   @objc func matchesAppleEventCode(_: FourCharCode) -> Bool
 
   /**
-    - jsName: selector
-    - name: selectorForCommand:
-    - argLabels: forCommand
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selector(forCommand:)
+    - Selector: selectorForCommand:
   */
   @objc (selectorForCommand:) func selector(forCommand: NSScriptCommandDescription) -> Selector?
 
   /**
-    - jsName: supportsCommand
-    - name: supportsCommand:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: supportsCommand:
   */
   @objc func supportsCommand(_: NSScriptCommandDescription) -> Bool
 
   /**
-    - jsName: type
-    - name: typeForKey:
-    - argLabels: forKey
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: type(forKey:)
+    - Selector: typeForKey:
   */
   @objc (typeForKey:) func type(forKey: String) -> String?
 
   // Own Instance Properties
 
   /**
-    - jsName: appleEventCode
-    - name: appleEventCode
-    - argLabels: 
+    - Selector: appleEventCode
   */
   @objc var appleEventCode: FourCharCode { @objc get }
 
   /**
-    - jsName: defaultSubcontainerAttributeKey
-    - name: defaultSubcontainerAttributeKey
-    - argLabels: 
+    - Selector: defaultSubcontainerAttributeKey
   */
   @objc var defaultSubcontainerAttributeKey: String? { @objc get }
 
   /**
-    - jsName: implementationClassName
-    - name: implementationClassName
-    - argLabels: 
+    - Selector: implementationClassName
   */
   @objc var implementationClassName: String? { @objc get }
 
   /**
-    - jsName: suiteName
-    - name: suiteName
-    - argLabels: 
+    - Selector: suiteName
   */
   @objc var suiteName: String? { @objc get }
 
   /**
-    - jsName: superclass
-    - name: superclassDescription
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: superclass
+    - Selector: superclassDescription
   */
   @objc var superclass: NSScriptClassDescription? { @objc (superclassDescription) get }
 }

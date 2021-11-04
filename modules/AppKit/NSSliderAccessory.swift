@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSliderAccessory
-    - name: NSSliderAccessory
-    - argLabels: 
+    - Selector: NSSliderAccessory
     - Introduced: 10.12
   */
 
@@ -21,18 +19,12 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: behavior
-    - name: behavior
-    - argLabels: 
+    - Selector: behavior
   */
   @objc var behavior: NSSliderAccessoryBehavior { @objc get @objc (setBehavior:) set }
 
   /**
-    - jsName: isEnabled
-    - name: enabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEnabled
+    - Selector: enabled
   */
   @objc var isEnabled: Bool { @objc get @objc (setEnabled:) set }
 }

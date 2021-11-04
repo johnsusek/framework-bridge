@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubberFlowLayout
-    - name: NSScrubberFlowLayout
-    - argLabels: 
+    - Selector: NSScrubberFlowLayout
     - Introduced: 10.12.2
   */
 
@@ -21,28 +19,19 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: invalidateLayoutForItems
-    - name: invalidateLayoutForItemsAtIndexes:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: invalidateLayoutForItems(at:)
+    - Selector: invalidateLayoutForItemsAtIndexes:
   */
   @objc (invalidateLayoutForItemsAtIndexes:) func invalidateLayoutForItems(at: IndexSet)
 
   // Own Instance Properties
 
   /**
-    - jsName: itemSize
-    - name: itemSize
-    - argLabels: 
+    - Selector: itemSize
   */
   @objc var itemSize: CGSize { @objc get @objc (setItemSize:) set }
 
   /**
-    - jsName: itemSpacing
-    - name: itemSpacing
-    - argLabels: 
+    - Selector: itemSpacing
   */
   @objc var itemSpacing: CGFloat { @objc get @objc (setItemSpacing:) set }
 }

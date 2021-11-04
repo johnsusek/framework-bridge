@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutSupplementaryItem
-    - name: NSCollectionLayoutSupplementaryItem
-    - argLabels: 
+    - Selector: NSCollectionLayoutSupplementaryItem
     - Introduced: 10.15
   */
 
@@ -19,54 +17,34 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: supplementaryItemWithLayoutSize:elementKind:containerAnchor:
-    - argLabels: layoutSize, elementKind, containerAnchor
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(layoutSize:elementKind:containerAnchor:)
-    - message: Not available in Swift
+    - Selector: supplementaryItemWithLayoutSize:elementKind:containerAnchor:
   */
   @objc static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, containerAnchor: NSCollectionLayoutAnchor) -> Self
 
   /**
-    - jsName: create
-    - name: supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor:
-    - argLabels: layoutSize, elementKind, containerAnchor, itemAnchor
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(layoutSize:elementKind:containerAnchor:itemAnchor:)
-    - message: Not available in Swift
+    - Selector: supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor:
   */
   @objc static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, containerAnchor: NSCollectionLayoutAnchor, itemAnchor: NSCollectionLayoutAnchor) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: containerAnchor
-    - name: containerAnchor
-    - argLabels: 
+    - Selector: containerAnchor
   */
   @objc var containerAnchor: NSCollectionLayoutAnchor { @objc get }
 
   /**
-    - jsName: elementKind
-    - name: elementKind
-    - argLabels: 
+    - Selector: elementKind
   */
   @objc var elementKind: String { @objc get }
 
   /**
-    - jsName: itemAnchor
-    - name: itemAnchor
-    - argLabels: 
+    - Selector: itemAnchor
   */
   @objc var itemAnchor: NSCollectionLayoutAnchor? { @objc get }
 
   /**
-    - jsName: zIndex
-    - name: zIndex
-    - argLabels: 
+    - Selector: zIndex
   */
   @objc var zIndex: Int { @objc get @objc (setZIndex:) set }
 }

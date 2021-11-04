@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSUserNotificationAction
-    - name: NSUserNotificationAction
-    - argLabels: 
+    - Selector: NSUserNotificationAction
     - Introduced: 10.10
     - Deprecated: 100000
     - Message: All NSUserNotifications API should be replaced with UserNotifications.frameworks API
@@ -21,29 +19,19 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: create
-    - name: actionWithIdentifier:title:
-    - argLabels: identifier, title
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:title:)
-    - message: Not available in Swift
+    - Selector: actionWithIdentifier:title:
   */
   @objc static func create(identifier: String?, title: String?) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: String? { @objc get }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String? { @objc get }
 }

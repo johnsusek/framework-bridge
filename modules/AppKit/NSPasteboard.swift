@@ -9,278 +9,154 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPasteboard
-    - name: NSPasteboard
-    - argLabels: 
+    - Selector: NSPasteboard
   */
 
 @objc(NSPasteboard) protocol NSPasteboardExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: pasteboardByFilteringData:ofType:
-    - argLabels: byFilteringData, ofType
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(byFilteringData:ofType:)
-    - message: Not available in Swift
+    - Selector: pasteboardByFilteringData:ofType:
   */
   @objc static func create(byFilteringData: Data, ofType: NSPasteboard.PasteboardType) -> NSPasteboard
 
   /**
-    - jsName: create
-    - name: pasteboardByFilteringFile:
-    - argLabels: byFilteringFile
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(byFilteringFile:)
-    - message: Not available in Swift
+    - Selector: pasteboardByFilteringFile:
   */
   @objc static func create(byFilteringFile: String) -> NSPasteboard
 
   /**
-    - jsName: create
-    - name: pasteboardByFilteringTypesInPasteboard:
-    - argLabels: byFilteringTypesIn
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(byFilteringTypesIn:)
-    - message: Not available in Swift
+    - Selector: pasteboardByFilteringTypesInPasteboard:
   */
   @objc static func create(byFilteringTypesIn: NSPasteboard) -> NSPasteboard
 
   /**
-    - jsName: withUniqueName
-    - name: pasteboardWithUniqueName
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: withUniqueName()
+    - Selector: pasteboardWithUniqueName
   */
   @objc (pasteboardWithUniqueName) static func withUniqueName() -> NSPasteboard
 
   /**
-    - jsName: types
-    - name: typesFilterableTo:
-    - argLabels: filterableTo
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: types(filterableTo:)
+    - Selector: typesFilterableTo:
   */
   @objc (typesFilterableTo:) static func types(filterableTo: NSPasteboard.PasteboardType) -> [NSPasteboard.PasteboardType]
 
   // Own Static Properties
 
   /**
-    - jsName: general
-    - name: generalPasteboard
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: general
+    - Selector: generalPasteboard
   */
   @objc static var general: NSPasteboard { @objc (generalPasteboard) get }
 
   // Instance Methods
 
   /**
-    - jsName: addTypes
-    - name: addTypes:owner:
-    - argLabels: owner
-    - constructorTokens: 
+    - Selector: addTypes:owner:
   */
   @objc func addTypes(_: [NSPasteboard.PasteboardType], owner: Any?) -> Int
 
   /**
-    - jsName: availableType
-    - name: availableTypeFromArray:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: availableType(from:)
+    - Selector: availableTypeFromArray:
   */
   @objc (availableTypeFromArray:) func availableType(from: [NSPasteboard.PasteboardType]) -> NSPasteboard.PasteboardType?
 
   /**
-    - jsName: canReadItem
-    - name: canReadItemWithDataConformingToTypes:
-    - argLabels: withDataConformingToTypes
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: canReadItem(withDataConformingToTypes:)
+    - Selector: canReadItemWithDataConformingToTypes:
     - Introduced: 10.6
   */
   @objc (canReadItemWithDataConformingToTypes:) @available(OSX 10.6, *) func canReadItem(withDataConformingToTypes: [String]) -> Bool
 
   /**
-    - jsName: canReadObject
-    - name: canReadObjectForClasses:options:
-    - argLabels: forClasses, options
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: canReadObject(forClasses:options:)
+    - Selector: canReadObjectForClasses:options:
     - Introduced: 10.6
   */
   @objc (canReadObjectForClasses:options:) @available(OSX 10.6, *) func canReadObject(forClasses: [AnyClass], options: [NSPasteboard.ReadingOptionKey: Any]?) -> Bool
 
   /**
-    - jsName: clearContents
-    - name: clearContents
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: clearContents
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func clearContents() -> Int
 
   /**
-    - jsName: data
-    - name: dataForType:
-    - argLabels: forType
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: data(forType:)
+    - Selector: dataForType:
   */
   @objc (dataForType:) func data(forType: NSPasteboard.PasteboardType) -> Data?
 
   /**
-    - jsName: declareTypes
-    - name: declareTypes:owner:
-    - argLabels: owner
-    - constructorTokens: 
+    - Selector: declareTypes:owner:
   */
   @objc func declareTypes(_: [NSPasteboard.PasteboardType], owner: Any?) -> Int
 
   /**
-    - jsName: index
-    - name: indexOfPasteboardItem:
-    - argLabels: of
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: index(of:)
+    - Selector: indexOfPasteboardItem:
     - Introduced: 10.6
   */
   @objc (indexOfPasteboardItem:) @available(OSX 10.6, *) func index(of: NSPasteboardItem) -> Int
 
   /**
-    - jsName: prepareForNewContents
-    - name: prepareForNewContentsWithOptions:
-    - argLabels: with
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: prepareForNewContents(with:)
+    - Selector: prepareForNewContentsWithOptions:
     - Introduced: 10.12
   */
   @objc (prepareForNewContentsWithOptions:) @available(OSX 10.12, *) func prepareForNewContents(with: NSPasteboard.ContentsOptions) -> Int
 
   /**
-    - jsName: propertyList
-    - name: propertyListForType:
-    - argLabels: forType
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: propertyList(forType:)
+    - Selector: propertyListForType:
   */
   @objc (propertyListForType:) func propertyList(forType: NSPasteboard.PasteboardType) -> Any?
 
   /**
-    - jsName: readFileContentsType
-    - name: readFileContentsType:toFile:
-    - argLabels: toFile
-    - constructorTokens: 
+    - Selector: readFileContentsType:toFile:
   */
   @objc func readFileContentsType(_: NSPasteboard.PasteboardType?, toFile: String) -> String?
 
   /**
-    - jsName: readFileWrapper
-    - name: readFileWrapper
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: readFileWrapper
   */
   @objc func readFileWrapper() -> FileWrapper?
 
   /**
-    - jsName: readObjects
-    - name: readObjectsForClasses:options:
-    - argLabels: forClasses, options
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: readObjects(forClasses:options:)
+    - Selector: readObjectsForClasses:options:
     - Introduced: 10.6
   */
   @objc (readObjectsForClasses:options:) @available(OSX 10.6, *) func readObjects(forClasses: [AnyClass], options: [NSPasteboard.ReadingOptionKey: Any]?) -> [Any]?
 
   /**
-    - jsName: releaseGlobally
-    - name: releaseGlobally
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: releaseGlobally
   */
   @objc func releaseGlobally()
 
   /**
-    - jsName: setData
-    - name: setData:forType:
-    - argLabels: forType
-    - constructorTokens: 
+    - Selector: setData:forType:
   */
   @objc func setData(_: Data?, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
-    - jsName: setPropertyList
-    - name: setPropertyList:forType:
-    - argLabels: forType
-    - constructorTokens: 
+    - Selector: setPropertyList:forType:
   */
   @objc func setPropertyList(_: Any, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
-    - jsName: setString
-    - name: setString:forType:
-    - argLabels: forType
-    - constructorTokens: 
+    - Selector: setString:forType:
   */
   @objc func setString(_: String, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
-    - jsName: string
-    - name: stringForType:
-    - argLabels: forType
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: string(forType:)
+    - Selector: stringForType:
   */
   @objc (stringForType:) func string(forType: NSPasteboard.PasteboardType) -> String?
 
   /**
-    - jsName: writeFileContents
-    - name: writeFileContents:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: writeFileContents:
   */
   @objc func writeFileContents(_: String) -> Bool
 
   /**
-    - jsName: write
-    - name: writeFileWrapper:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: write(_:)
+    - Selector: writeFileWrapper:
   */
   @objc (writeFileWrapper:) func write(_: FileWrapper) -> Bool
 
   /**
-    - jsName: writeObjects
-    - name: writeObjects:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: writeObjects:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func writeObjects(_: [NSPasteboardWriting]) -> Bool
@@ -288,32 +164,23 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: changeCount
-    - name: changeCount
-    - argLabels: 
+    - Selector: changeCount
   */
   @objc var changeCount: Int { @objc get }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: NSPasteboard.Name { @objc get }
 
   /**
-    - jsName: pasteboardItems
-    - name: pasteboardItems
-    - argLabels: 
-    - available: 10.6
+    - Selector: pasteboardItems
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var pasteboardItems: [NSPasteboardItem]? { @objc get }
 
   /**
-    - jsName: types
-    - name: types
-    - argLabels: 
+    - Selector: types
   */
   @objc var types: [NSPasteboard.PasteboardType]? { @objc get }
 }

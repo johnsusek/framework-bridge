@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutSize
-    - name: NSCollectionLayoutSize
-    - argLabels: 
+    - Selector: NSCollectionLayoutSize
     - Introduced: 10.15
   */
 
@@ -19,29 +17,19 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: sizeWithWidthDimension:heightDimension:
-    - argLabels: widthDimension, heightDimension
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(widthDimension:heightDimension:)
-    - message: Not available in Swift
+    - Selector: sizeWithWidthDimension:heightDimension:
   */
   @objc static func create(widthDimension: NSCollectionLayoutDimension, heightDimension: NSCollectionLayoutDimension) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: heightDimension
-    - name: heightDimension
-    - argLabels: 
+    - Selector: heightDimension
   */
   @objc var heightDimension: NSCollectionLayoutDimension { @objc get }
 
   /**
-    - jsName: widthDimension
-    - name: widthDimension
-    - argLabels: 
+    - Selector: widthDimension
   */
   @objc var widthDimension: NSCollectionLayoutDimension { @objc get }
 }

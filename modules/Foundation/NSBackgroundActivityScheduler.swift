@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSBackgroundActivityScheduler
-    - name: NSBackgroundActivityScheduler
-    - argLabels: 
+    - Selector: NSBackgroundActivityScheduler
     - Introduced: 10.10
   */
 
@@ -21,64 +19,44 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: invalidate
-    - name: invalidate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidate
   */
   @objc func invalidate()
 
   /**
-    - jsName: schedule
-    - name: scheduleWithBlock:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: schedule(_:)
+    - Selector: scheduleWithBlock:
   */
-  // jsvalue - @objc (scheduleWithBlock:) func schedule(_: JSValue)
+  // jsvalue @objc func schedule(_: JSValue)
 
   // Own Instance Properties
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: String { @objc get }
 
   /**
-    - jsName: interval
-    - name: interval
-    - argLabels: 
+    - Selector: interval
   */
   @objc var interval: TimeInterval { @objc get @objc (setInterval:) set }
 
   /**
-    - jsName: qualityOfService
-    - name: qualityOfService
-    - argLabels: 
+    - Selector: qualityOfService
   */
   @objc var qualityOfService: QualityOfService { @objc get @objc (setQualityOfService:) set }
 
   /**
-    - jsName: repeats
-    - name: repeats
-    - argLabels: 
+    - Selector: repeats
   */
   @objc var repeats: Bool { @objc get @objc (setRepeats:) set }
 
   /**
-    - jsName: shouldDefer
-    - name: shouldDefer
-    - argLabels: 
+    - Selector: shouldDefer
   */
   @objc var shouldDefer: Bool { @objc get }
 
   /**
-    - jsName: tolerance
-    - name: tolerance
-    - argLabels: 
+    - Selector: tolerance
   */
   @objc var tolerance: TimeInterval { @objc get @objc (setTolerance:) set }
 }

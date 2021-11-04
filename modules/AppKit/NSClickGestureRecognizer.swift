@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSClickGestureRecognizer
-    - name: NSClickGestureRecognizer
-    - argLabels: 
+    - Selector: NSClickGestureRecognizer
     - Introduced: 10.10
   */
 
@@ -21,24 +19,17 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: buttonMask
-    - name: buttonMask
-    - argLabels: 
+    - Selector: buttonMask
   */
   @objc var buttonMask: Int { @objc get @objc (setButtonMask:) set }
 
   /**
-    - jsName: numberOfClicksRequired
-    - name: numberOfClicksRequired
-    - argLabels: 
+    - Selector: numberOfClicksRequired
   */
   @objc var numberOfClicksRequired: Int { @objc get @objc (setNumberOfClicksRequired:) set }
 
   /**
-    - jsName: numberOfTouchesRequired
-    - name: numberOfTouchesRequired
-    - argLabels: 
-    - available: 10.12.2
+    - Selector: numberOfTouchesRequired
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) var numberOfTouchesRequired: Int { @objc get @objc (setNumberOfTouchesRequired:) set }

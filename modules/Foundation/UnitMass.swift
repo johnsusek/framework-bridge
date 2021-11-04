@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitMass
-    - name: NSUnitMass
-    - argLabels: 
+    - Selector: NSUnitMass
     - Introduced: 10.12
   */
 
@@ -19,126 +17,89 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: carats
-    - name: carats
-    - argLabels: 
+    - Selector: carats
   */
   @objc static var carats: UnitMass { @objc get }
 
   /**
-    - jsName: centigrams
-    - name: centigrams
-    - argLabels: 
+    - Selector: centigrams
   */
   @objc static var centigrams: UnitMass { @objc get }
 
   /**
-    - jsName: decigrams
-    - name: decigrams
-    - argLabels: 
+    - Selector: decigrams
   */
   @objc static var decigrams: UnitMass { @objc get }
 
   /**
-    - jsName: grams
-    - name: grams
-    - argLabels: 
+    - Selector: grams
   */
   @objc static var grams: UnitMass { @objc get }
 
   /**
-    - jsName: kilograms
-    - name: kilograms
-    - argLabels: 
+    - Selector: kilograms
   */
   @objc static var kilograms: UnitMass { @objc get }
 
   /**
-    - jsName: metricTons
-    - name: metricTons
-    - argLabels: 
+    - Selector: metricTons
   */
   @objc static var metricTons: UnitMass { @objc get }
 
   /**
-    - jsName: micrograms
-    - name: micrograms
-    - argLabels: 
+    - Selector: micrograms
   */
   @objc static var micrograms: UnitMass { @objc get }
 
   /**
-    - jsName: milligrams
-    - name: milligrams
-    - argLabels: 
+    - Selector: milligrams
   */
   @objc static var milligrams: UnitMass { @objc get }
 
   /**
-    - jsName: nanograms
-    - name: nanograms
-    - argLabels: 
+    - Selector: nanograms
   */
   @objc static var nanograms: UnitMass { @objc get }
 
   /**
-    - jsName: ounces
-    - name: ounces
-    - argLabels: 
+    - Selector: ounces
   */
   @objc static var ounces: UnitMass { @objc get }
 
   /**
-    - jsName: ouncesTroy
-    - name: ouncesTroy
-    - argLabels: 
+    - Selector: ouncesTroy
   */
   @objc static var ouncesTroy: UnitMass { @objc get }
 
   /**
-    - jsName: picograms
-    - name: picograms
-    - argLabels: 
+    - Selector: picograms
   */
   @objc static var picograms: UnitMass { @objc get }
 
   /**
-    - jsName: pounds
-    - name: poundsMass
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: pounds
+    - Selector: poundsMass
   */
   @objc static var pounds: UnitMass { @objc (poundsMass) get }
 
   /**
-    - jsName: shortTons
-    - name: shortTons
-    - argLabels: 
+    - Selector: shortTons
   */
   @objc static var shortTons: UnitMass { @objc get }
 
   /**
-    - jsName: slugs
-    - name: slugs
-    - argLabels: 
+    - Selector: slugs
   */
   @objc static var slugs: UnitMass { @objc get }
 
   /**
-    - jsName: stones
-    - name: stones
-    - argLabels: 
+    - Selector: stones
   */
   @objc static var stones: UnitMass { @objc get }
 }

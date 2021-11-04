@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSMetadataQueryAttributeValueTuple
-    - name: NSMetadataQueryAttributeValueTuple
-    - argLabels: 
+    - Selector: NSMetadataQueryAttributeValueTuple
     - Introduced: 10.4
   */
 
@@ -21,23 +19,17 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: attribute
-    - name: attribute
-    - argLabels: 
+    - Selector: attribute
   */
   @objc var attribute: String { @objc get }
 
   /**
-    - jsName: count
-    - name: count
-    - argLabels: 
+    - Selector: count
   */
   @objc var count: Int { @objc get }
 
   /**
-    - jsName: value
-    - name: value
-    - argLabels: 
+    - Selector: value
   */
   @objc var value: Any? { @objc get }
 }

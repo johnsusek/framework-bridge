@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: Pipe
-    - name: NSPipe
-    - argLabels: 
+    - Selector: NSPipe
   */
 
 @objc(Pipe) protocol PipeExports: JSExport, NSObjectExports {
@@ -20,16 +18,12 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: fileHandleForReading
-    - name: fileHandleForReading
-    - argLabels: 
+    - Selector: fileHandleForReading
   */
   @objc var fileHandleForReading: FileHandle { @objc get }
 
   /**
-    - jsName: fileHandleForWriting
-    - name: fileHandleForWriting
-    - argLabels: 
+    - Selector: fileHandleForWriting
   */
   @objc var fileHandleForWriting: FileHandle { @objc get }
 }

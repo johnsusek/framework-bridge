@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPDFPanel
-    - name: NSPDFPanel
-    - argLabels: 
+    - Selector: NSPDFPanel
     - Introduced: 10.9
   */
 
@@ -21,35 +19,24 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: beginSheet
-    - name: beginSheetWithPDFInfo:modalForWindow:completionHandler:
-    - argLabels: with, modalFor, completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: beginSheet(with:modalFor:completionHandler:)
+    - Selector: beginSheetWithPDFInfo:modalForWindow:completionHandler:
   */
-  // jsvalue - @objc (beginSheetWithPDFInfo:modalForWindow:completionHandler:) func beginSheet(with: NSPDFInfo, modalFor: NSWindow?, completionHandler: JSValue)
+  // jsvalue @objc func beginSheet(with: NSPDFInfo, modalFor: NSWindow?, completionHandler: JSValue)
 
   // Own Instance Properties
 
   /**
-    - jsName: accessoryController
-    - name: accessoryController
-    - argLabels: 
+    - Selector: accessoryController
   */
   @objc var accessoryController: NSViewController? { @objc get @objc (setAccessoryController:) set }
 
   /**
-    - jsName: defaultFileName
-    - name: defaultFileName
-    - argLabels: 
+    - Selector: defaultFileName
   */
   @objc var defaultFileName: String { @objc get @objc (setDefaultFileName:) set }
 
   /**
-    - jsName: options
-    - name: options
-    - argLabels: 
+    - Selector: options
   */
   @objc var options: NSPDFPanel.Options { @objc get @objc (setOptions:) set }
 }

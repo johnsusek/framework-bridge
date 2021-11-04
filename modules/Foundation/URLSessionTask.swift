@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLSessionTask
-    - name: NSURLSessionTask
-    - argLabels: 
+    - Selector: NSURLSessionTask
     - Introduced: 10.9
   */
 
@@ -21,141 +19,98 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: cancel
-    - name: cancel
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: cancel
   */
   @objc func cancel()
 
   /**
-    - jsName: resume
-    - name: resume
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: resume
   */
   @objc func resume()
 
   /**
-    - jsName: suspend
-    - name: suspend
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: suspend
   */
   @objc func suspend()
 
   // Own Instance Properties
 
   /**
-    - jsName: countOfBytesClientExpectsToReceive
-    - name: countOfBytesClientExpectsToReceive
-    - argLabels: 
-    - available: 10.13
+    - Selector: countOfBytesClientExpectsToReceive
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var countOfBytesClientExpectsToReceive: Int64 { @objc get @objc (setCountOfBytesClientExpectsToReceive:) set }
 
   /**
-    - jsName: countOfBytesClientExpectsToSend
-    - name: countOfBytesClientExpectsToSend
-    - argLabels: 
-    - available: 10.13
+    - Selector: countOfBytesClientExpectsToSend
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var countOfBytesClientExpectsToSend: Int64 { @objc get @objc (setCountOfBytesClientExpectsToSend:) set }
 
   /**
-    - jsName: countOfBytesExpectedToReceive
-    - name: countOfBytesExpectedToReceive
-    - argLabels: 
+    - Selector: countOfBytesExpectedToReceive
   */
   @objc var countOfBytesExpectedToReceive: Int64 { @objc get }
 
   /**
-    - jsName: countOfBytesExpectedToSend
-    - name: countOfBytesExpectedToSend
-    - argLabels: 
+    - Selector: countOfBytesExpectedToSend
   */
   @objc var countOfBytesExpectedToSend: Int64 { @objc get }
 
   /**
-    - jsName: countOfBytesReceived
-    - name: countOfBytesReceived
-    - argLabels: 
+    - Selector: countOfBytesReceived
   */
   @objc var countOfBytesReceived: Int64 { @objc get }
 
   /**
-    - jsName: countOfBytesSent
-    - name: countOfBytesSent
-    - argLabels: 
+    - Selector: countOfBytesSent
   */
   @objc var countOfBytesSent: Int64 { @objc get }
 
   /**
-    - jsName: currentRequest
-    - name: currentRequest
-    - argLabels: 
+    - Selector: currentRequest
   */
   @objc var currentRequest: URLRequest? { @objc get }
 
   /**
-    - jsName: earliestBeginDate
-    - name: earliestBeginDate
-    - argLabels: 
-    - available: 10.13
+    - Selector: earliestBeginDate
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var earliestBeginDate: Date? { @objc get @objc (setEarliestBeginDate:) set }
 
   /**
-    - jsName: error
-    - name: error
-    - argLabels: 
+    - Selector: error
   */
   @objc var error: Error? { @objc get }
 
   /**
-    - jsName: originalRequest
-    - name: originalRequest
-    - argLabels: 
+    - Selector: originalRequest
   */
   @objc var originalRequest: URLRequest? { @objc get }
 
   /**
-    - jsName: priority
-    - name: priority
-    - argLabels: 
-    - available: 10.10
+    - Selector: priority
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var priority: Float { @objc get @objc (setPriority:) set }
 
   /**
-    - jsName: response
-    - name: response
-    - argLabels: 
+    - Selector: response
   */
   @objc var response: URLResponse? { @objc get }
 
   /**
-    - jsName: state
-    - name: state
-    - argLabels: 
+    - Selector: state
   */
   @objc var state: URLSessionTask.State { @objc get }
 
   /**
-    - jsName: taskDescription
-    - name: taskDescription
-    - argLabels: 
+    - Selector: taskDescription
   */
   @objc var taskDescription: String? { @objc get @objc (setTaskDescription:) set }
 
   /**
-    - jsName: taskIdentifier
-    - name: taskIdentifier
-    - argLabels: 
+    - Selector: taskIdentifier
   */
   @objc var taskIdentifier: Int { @objc get }
 }

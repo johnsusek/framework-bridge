@@ -9,56 +9,48 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTableCellView
-    - name: NSTableCellView
-    - argLabels: 
+    - Selector: NSTableCellView
     - Introduced: 10.7
   */
 
 @objc(NSTableCellView) protocol NSTableCellViewExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Own Instance Properties
 
   /**
-    - jsName: backgroundStyle
-    - name: backgroundStyle
-    - argLabels: 
+    - Selector: backgroundStyle
   */
   @objc var backgroundStyle: NSView.BackgroundStyle { @objc get @objc (setBackgroundStyle:) set }
 
   /**
-    - jsName: draggingImageComponents
-    - name: draggingImageComponents
-    - argLabels: 
+    - Selector: draggingImageComponents
   */
   @objc var draggingImageComponents: [NSDraggingImageComponent] { @objc get }
 
   /**
-    - jsName: imageView
-    - name: imageView
-    - argLabels: 
+    - Selector: imageView
   */
   @objc var imageView: NSImageView? { @objc get @objc (setImageView:) set }
 
   /**
-    - jsName: objectValue
-    - name: objectValue
-    - argLabels: 
+    - Selector: objectValue
   */
   @objc var objectValue: Any? { @objc get @objc (setObjectValue:) set }
 
   /**
-    - jsName: rowSizeStyle
-    - name: rowSizeStyle
-    - argLabels: 
+    - Selector: rowSizeStyle
   */
   @objc var rowSizeStyle: NSTableView.RowSizeStyle { @objc get @objc (setRowSizeStyle:) set }
 
   /**
-    - jsName: textField
-    - name: textField
-    - argLabels: 
+    - Selector: textField
   */
   @objc var textField: NSTextField? { @objc get @objc (setTextField:) set }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSDraggingImageComponent
-    - name: NSDraggingImageComponent
-    - argLabels: 
+    - Selector: NSDraggingImageComponent
     - Introduced: 10.7
   */
 
@@ -19,36 +17,24 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: draggingImageComponentWithKey:
-    - argLabels: key
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(key:)
-    - message: Not available in Swift
+    - Selector: draggingImageComponentWithKey:
   */
   @objc static func create(key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent
 
   // Own Instance Properties
 
   /**
-    - jsName: contents
-    - name: contents
-    - argLabels: 
+    - Selector: contents
   */
   @objc var contents: Any? { @objc get @objc (setContents:) set }
 
   /**
-    - jsName: frame
-    - name: frame
-    - argLabels: 
+    - Selector: frame
   */
   @objc var frame: CGRect { @objc get @objc (setFrame:) set }
 
   /**
-    - jsName: key
-    - name: key
-    - argLabels: 
+    - Selector: key
   */
   @objc var key: NSDraggingItem.ImageComponentKey { @objc get @objc (setKey:) set }
 }

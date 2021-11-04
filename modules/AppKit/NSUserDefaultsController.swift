@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSUserDefaultsController
-    - name: NSUserDefaultsController
-    - argLabels: 
+    - Selector: NSUserDefaultsController
   */
 
 @objc(NSUserDefaultsController) protocol NSUserDefaultsControllerExports: JSExport, NSControllerExports {
@@ -20,82 +18,56 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: shared
-    - name: sharedUserDefaultsController
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: shared
+    - Selector: sharedUserDefaultsController
   */
   @objc static var shared: NSUserDefaultsController { @objc (sharedUserDefaultsController) get }
 
   // Instance Methods
 
   /**
-    - jsName: createWithDefaults
-    - name: initWithDefaults:initialValues:
-    - argLabels: initialValues
-    - constructorTokens: defaults, initialValues
+    - Selector: initWithDefaults:initialValues:
   */
   @objc static func createWithDefaults(_: UserDefaults?, initialValues: [String: Any]?) -> Self
 
   /**
-    - jsName: revert
-    - name: revert:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: revert:
   */
   @objc func revert(_: Any?)
 
   /**
-    - jsName: revertToInitialValues
-    - name: revertToInitialValues:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: revertToInitialValues:
   */
   @objc func revertToInitialValues(_: Any?)
 
   /**
-    - jsName: save
-    - name: save:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: save:
   */
   @objc func save(_: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: appliesImmediately
-    - name: appliesImmediately
-    - argLabels: 
+    - Selector: appliesImmediately
   */
   @objc var appliesImmediately: Bool { @objc get @objc (setAppliesImmediately:) set }
 
   /**
-    - jsName: defaults
-    - name: defaults
-    - argLabels: 
+    - Selector: defaults
   */
   @objc var defaults: UserDefaults { @objc get }
 
   /**
-    - jsName: hasUnappliedChanges
-    - name: hasUnappliedChanges
-    - argLabels: 
+    - Selector: hasUnappliedChanges
   */
   @objc var hasUnappliedChanges: Bool { @objc get }
 
   /**
-    - jsName: initialValues
-    - name: initialValues
-    - argLabels: 
+    - Selector: initialValues
   */
   @objc var initialValues: [String: Any]? { @objc get @objc (setInitialValues:) set }
 
   /**
-    - jsName: values
-    - name: values
-    - argLabels: 
+    - Selector: values
   */
   @objc var values: Any { @objc get }
 }

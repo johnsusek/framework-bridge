@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextTableBlock
-    - name: NSTextTableBlock
-    - argLabels: 
+    - Selector: NSTextTableBlock
   */
 
 @objc(NSTextTableBlock) protocol NSTextTableBlockExports: JSExport, NSTextBlockExports {
@@ -20,47 +18,34 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithTable
-    - name: initWithTable:startingRow:rowSpan:startingColumn:columnSpan:
-    - argLabels: startingRow, rowSpan, startingColumn, columnSpan
-    - constructorTokens: table, startingRow, rowSpan, startingColumn, columnSpan
+    - Selector: initWithTable:startingRow:rowSpan:startingColumn:columnSpan:
   */
   @objc static func createWithTable(_: NSTextTable, startingRow: Int, rowSpan: Int, startingColumn: Int, columnSpan: Int) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: columnSpan
-    - name: columnSpan
-    - argLabels: 
+    - Selector: columnSpan
   */
   @objc var columnSpan: Int { @objc get }
 
   /**
-    - jsName: rowSpan
-    - name: rowSpan
-    - argLabels: 
+    - Selector: rowSpan
   */
   @objc var rowSpan: Int { @objc get }
 
   /**
-    - jsName: startingColumn
-    - name: startingColumn
-    - argLabels: 
+    - Selector: startingColumn
   */
   @objc var startingColumn: Int { @objc get }
 
   /**
-    - jsName: startingRow
-    - name: startingRow
-    - argLabels: 
+    - Selector: startingRow
   */
   @objc var startingRow: Int { @objc get }
 
   /**
-    - jsName: table
-    - name: table
-    - argLabels: 
+    - Selector: table
   */
   @objc var table: NSTextTable { @objc get }
 }

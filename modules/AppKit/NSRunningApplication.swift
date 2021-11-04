@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSRunningApplication
-    - name: NSRunningApplication
-    - argLabels: 
+    - Selector: NSRunningApplication
     - Introduced: 10.6
   */
 
@@ -19,196 +17,124 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: runningApplicationWithProcessIdentifier:
-    - argLabels: processIdentifier
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(processIdentifier:)
-    - message: Not available in Swift
+    - Selector: runningApplicationWithProcessIdentifier:
   */
   @objc static func create(processIdentifier: Int32) -> Self?
 
   /**
-    - jsName: runningApplications
-    - name: runningApplicationsWithBundleIdentifier:
-    - argLabels: withBundleIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: runningApplications(withBundleIdentifier:)
+    - Selector: runningApplicationsWithBundleIdentifier:
   */
   @objc (runningApplicationsWithBundleIdentifier:) static func runningApplications(withBundleIdentifier: String) -> [NSRunningApplication]
 
   /**
-    - jsName: terminateAutomaticallyTerminableApplications
-    - name: terminateAutomaticallyTerminableApplications
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: terminateAutomaticallyTerminableApplications
   */
   @objc static func terminateAutomaticallyTerminableApplications()
 
   // Own Static Properties
 
   /**
-    - jsName: current
-    - name: currentApplication
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: current
+    - Selector: currentApplication
   */
   @objc static var current: NSRunningApplication { @objc (currentApplication) get }
 
   // Instance Methods
 
   /**
-    - jsName: activate
-    - name: activateWithOptions:
-    - argLabels: options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: activate(options:)
+    - Selector: activateWithOptions:
   */
   @objc (activateWithOptions:) func activate(options: NSApplication.ActivationOptions) -> Bool
 
   /**
-    - jsName: forceTerminate
-    - name: forceTerminate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: forceTerminate
   */
   @objc func forceTerminate() -> Bool
 
   /**
-    - jsName: hide
-    - name: hide
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: hide
   */
   @objc func hide() -> Bool
 
   /**
-    - jsName: terminate
-    - name: terminate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: terminate
   */
   @objc func terminate() -> Bool
 
   /**
-    - jsName: unhide
-    - name: unhide
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: unhide
   */
   @objc func unhide() -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: activationPolicy
-    - name: activationPolicy
-    - argLabels: 
+    - Selector: activationPolicy
   */
   @objc var activationPolicy: NSApplication.ActivationPolicy { @objc get }
 
   /**
-    - jsName: isActive
-    - name: active
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isActive
+    - Selector: active
   */
   @objc var isActive: Bool { @objc get }
 
   /**
-    - jsName: bundleIdentifier
-    - name: bundleIdentifier
-    - argLabels: 
+    - Selector: bundleIdentifier
   */
   @objc var bundleIdentifier: String? { @objc get }
 
   /**
-    - jsName: bundleURL
-    - name: bundleURL
-    - argLabels: 
+    - Selector: bundleURL
   */
   @objc var bundleURL: URL? { @objc get }
 
   /**
-    - jsName: executableArchitecture
-    - name: executableArchitecture
-    - argLabels: 
+    - Selector: executableArchitecture
   */
   @objc var executableArchitecture: Int { @objc get }
 
   /**
-    - jsName: executableURL
-    - name: executableURL
-    - argLabels: 
+    - Selector: executableURL
   */
   @objc var executableURL: URL? { @objc get }
 
   /**
-    - jsName: isFinishedLaunching
-    - name: finishedLaunching
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFinishedLaunching
+    - Selector: finishedLaunching
   */
   @objc var isFinishedLaunching: Bool { @objc get }
 
   /**
-    - jsName: isHidden
-    - name: hidden
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isHidden
+    - Selector: hidden
   */
   @objc var isHidden: Bool { @objc get }
 
   /**
-    - jsName: icon
-    - name: icon
-    - argLabels: 
+    - Selector: icon
   */
   @objc var icon: NSImage? { @objc get }
 
   /**
-    - jsName: launchDate
-    - name: launchDate
-    - argLabels: 
+    - Selector: launchDate
   */
   @objc var launchDate: Date? { @objc get }
 
   /**
-    - jsName: localizedName
-    - name: localizedName
-    - argLabels: 
+    - Selector: localizedName
   */
   @objc var localizedName: String? { @objc get }
 
   /**
-    - jsName: ownsMenuBar
-    - name: ownsMenuBar
-    - argLabels: 
-    - available: 10.7
+    - Selector: ownsMenuBar
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var ownsMenuBar: Bool { @objc get }
 
   /**
-    - jsName: processIdentifier
-    - name: processIdentifier
-    - argLabels: 
+    - Selector: processIdentifier
   */
   @objc var processIdentifier: Int32 { @objc get }
 
   /**
-    - jsName: isTerminated
-    - name: terminated
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isTerminated
+    - Selector: terminated
   */
   @objc var isTerminated: Bool { @objc get }
 }

@@ -9,214 +9,182 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSavePanel
-    - name: NSSavePanel
-    - argLabels: 
+    - Selector: NSSavePanel
   */
 
 @objc(NSSavePanel) protocol NSSavePanelExports: JSExport, NSPanelExports {
   // Static Methods
 
+  /**
+    - Selector: contentRectForFrameRect:styleMask:
+  */
+  @objc (contentRectForFrameRect:styleMask:) static func contentRect(forFrameRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
+
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: frameRectForContentRect:styleMask:
+  */
+  @objc (frameRectForContentRect:styleMask:) static func frameRect(forContentRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
+
+  /**
+    - Selector: minFrameWidthWithTitle:styleMask:
+  */
+  @objc (minFrameWidthWithTitle:styleMask:) static func minFrameWidth(withTitle: String, styleMask: NSWindow.StyleMask) -> CGFloat
+
+  /**
+    - Selector: removeFrameUsingName:
+  */
+  @objc (removeFrameUsingName:) static func removeFrame(usingName: NSWindow.FrameAutosaveName)
+
+  /**
+    - Selector: standardWindowButton:forStyleMask:
+  */
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+
+  /**
+    - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
+    - Introduced: 10.6
+  */
+  @objc (windowNumberAtPoint:belowWindowWithWindowNumber:) @available(OSX 10.6, *) static func windowNumber(at: CGPoint, belowWindowWithWindowNumber: Int) -> Int
+
+  /**
+    - Selector: windowNumbersWithOptions:
+    - Introduced: 10.6
+  */
+  @objc (windowNumbersWithOptions:) @available(OSX 10.6, *) static func windowNumbers(options: NSWindow.NumberListOptions) -> [NSNumber]?
+
   // Instance Methods
 
   /**
-    - jsName: beginSheetModal
-    - name: beginSheetModalForWindow:completionHandler:
-    - argLabels: for, completionHandler
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: beginSheetModal(for:completionHandler:)
+    - Selector: beginSheetModalForWindow:completionHandler:
     - Introduced: 10.6
   */
-  // jsvalue - @objc (beginSheetModalForWindow:completionHandler:) @available(OSX 10.6, *) func beginSheetModal(`for`: NSWindow, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func beginSheetModal(`for`: NSWindow, completionHandler: JSValue)
 
   /**
-    - jsName: begin
-    - name: beginWithCompletionHandler:
-    - argLabels: completionHandler
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: begin(completionHandler:)
+    - Selector: beginWithCompletionHandler:
     - Introduced: 10.6
   */
-  // jsvalue - @objc (beginWithCompletionHandler:) @available(OSX 10.6, *) func begin(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func begin(completionHandler: JSValue)
 
   /**
-    - jsName: cancel
-    - name: cancel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: cancel:
   */
   @objc func cancel(_: Any?)
 
   /**
-    - jsName: ok
-    - name: ok:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: ok:
   */
   @objc func ok(_: Any?)
 
   /**
-    - jsName: runModal
-    - name: runModal
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: runModal
   */
   @objc func runModal() -> NSApplication.ModalResponse
 
   /**
-    - jsName: validateVisibleColumns
-    - name: validateVisibleColumns
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: validateVisibleColumns
   */
   @objc func validateVisibleColumns()
 
   // Own Instance Properties
 
   /**
-    - jsName: url
-    - name: URL
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: url
+    - Selector: URL
   */
   @objc var url: URL? { @objc (URL) get }
 
   /**
-    - jsName: accessoryView
-    - name: accessoryView
-    - argLabels: 
+    - Selector: accessoryView
   */
   @objc var accessoryView: NSView? { @objc get @objc (setAccessoryView:) set }
 
   /**
-    - jsName: allowedFileTypes
-    - name: allowedFileTypes
-    - argLabels: 
-    - introduced: 10.3
-    - deprecated: 100000
-    - message: Use -allowedContentTypes instead
+    - Selector: allowedFileTypes
   */
   @objc var allowedFileTypes: [String]? { @objc get @objc (setAllowedFileTypes:) set }
 
   /**
-    - jsName: allowsOtherFileTypes
-    - name: allowsOtherFileTypes
-    - argLabels: 
+    - Selector: allowsOtherFileTypes
   */
   @objc var allowsOtherFileTypes: Bool { @objc get @objc (setAllowsOtherFileTypes:) set }
 
   /**
-    - jsName: canCreateDirectories
-    - name: canCreateDirectories
-    - argLabels: 
+    - Selector: canCreateDirectories
   */
   @objc var canCreateDirectories: Bool { @objc get @objc (setCanCreateDirectories:) set }
 
   /**
-    - jsName: canSelectHiddenExtension
-    - name: canSelectHiddenExtension
-    - argLabels: 
+    - Selector: canSelectHiddenExtension
   */
   @objc var canSelectHiddenExtension: Bool { @objc get @objc (setCanSelectHiddenExtension:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSOpenSavePanelDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: directoryURL
-    - name: directoryURL
-    - argLabels: 
-    - available: 10.6
+    - Selector: directoryURL
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var directoryURL: URL? { @objc get @objc (setDirectoryURL:) set }
 
   /**
-    - jsName: isExpanded
-    - name: expanded
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isExpanded
+    - Selector: expanded
   */
   @objc var isExpanded: Bool { @objc get }
 
   /**
-    - jsName: isExtensionHidden
-    - name: extensionHidden
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isExtensionHidden
+    - Selector: extensionHidden
   */
   @objc var isExtensionHidden: Bool { @objc get @objc (setExtensionHidden:) set }
 
   /**
-    - jsName: message
-    - name: message
-    - argLabels: 
+    - Selector: message
   */
   @objc var message: String! { @objc get @objc (setMessage:) set }
 
   /**
-    - jsName: nameFieldLabel
-    - name: nameFieldLabel
-    - argLabels: 
+    - Selector: nameFieldLabel
   */
   @objc var nameFieldLabel: String! { @objc get @objc (setNameFieldLabel:) set }
 
   /**
-    - jsName: nameFieldStringValue
-    - name: nameFieldStringValue
-    - argLabels: 
-    - available: 10.6
+    - Selector: nameFieldStringValue
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var nameFieldStringValue: String { @objc get @objc (setNameFieldStringValue:) set }
 
   /**
-    - jsName: prompt
-    - name: prompt
-    - argLabels: 
+    - Selector: prompt
   */
   @objc var prompt: String! { @objc get @objc (setPrompt:) set }
 
   /**
-    - jsName: showsHiddenFiles
-    - name: showsHiddenFiles
-    - argLabels: 
+    - Selector: showsHiddenFiles
   */
   @objc var showsHiddenFiles: Bool { @objc get @objc (setShowsHiddenFiles:) set }
 
   /**
-    - jsName: showsTagField
-    - name: showsTagField
-    - argLabels: 
-    - available: 10.9
+    - Selector: showsTagField
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var showsTagField: Bool { @objc get @objc (setShowsTagField:) set }
 
   /**
-    - jsName: tagNames
-    - name: tagNames
-    - argLabels: 
-    - available: 10.9
+    - Selector: tagNames
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var tagNames: [String]? { @objc get @objc (setTagNames:) set }
 
   /**
-    - jsName: treatsFilePackagesAsDirectories
-    - name: treatsFilePackagesAsDirectories
-    - argLabels: 
+    - Selector: treatsFilePackagesAsDirectories
   */
   @objc var treatsFilePackagesAsDirectories: Bool { @objc get @objc (setTreatsFilePackagesAsDirectories:) set }
 }

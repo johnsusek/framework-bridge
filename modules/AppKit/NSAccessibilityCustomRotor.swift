@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSAccessibilityCustomRotor
-    - name: NSAccessibilityCustomRotor
-    - argLabels: 
+    - Selector: NSAccessibilityCustomRotor
     - Introduced: 10.13
   */
 
@@ -21,48 +19,34 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithLabel
-    - name: initWithLabel:itemSearchDelegate:
-    - argLabels: itemSearchDelegate
-    - constructorTokens: label, itemSearchDelegate
+    - Selector: initWithLabel:itemSearchDelegate:
   */
   @objc static func createWithLabel(_: String, itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegate) -> Self
 
   /**
-    - jsName: createWithRotorType
-    - name: initWithRotorType:itemSearchDelegate:
-    - argLabels: itemSearchDelegate
-    - constructorTokens: rotorType, itemSearchDelegate
+    - Selector: initWithRotorType:itemSearchDelegate:
   */
   @objc static func createWithRotorType(_: NSAccessibilityCustomRotor.RotorType, itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegate) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: itemLoadingDelegate
-    - name: itemLoadingDelegate
-    - argLabels: 
+    - Selector: itemLoadingDelegate
   */
   @objc var itemLoadingDelegate: NSAccessibilityElementLoading? { @objc get @objc (setItemLoadingDelegate:) set }
 
   /**
-    - jsName: itemSearchDelegate
-    - name: itemSearchDelegate
-    - argLabels: 
+    - Selector: itemSearchDelegate
   */
   @objc var itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegate? { @objc get @objc (setItemSearchDelegate:) set }
 
   /**
-    - jsName: label
-    - name: label
-    - argLabels: 
+    - Selector: label
   */
   @objc var label: String { @objc get @objc (setLabel:) set }
 
   /**
-    - jsName: type
-    - name: type
-    - argLabels: 
+    - Selector: type
   */
   @objc var type: NSAccessibilityCustomRotor.RotorType { @objc get @objc (setType:) set }
 }

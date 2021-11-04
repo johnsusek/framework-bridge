@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: CachedURLResponse
-    - name: NSCachedURLResponse
-    - argLabels: 
+    - Selector: NSCachedURLResponse
   */
 
 @objc(CachedURLResponse) protocol CachedURLResponseExports: JSExport, NSObjectExports {
@@ -20,48 +18,34 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithResponse
-    - name: initWithResponse:data:
-    - argLabels: data
-    - constructorTokens: response, data
+    - Selector: initWithResponse:data:
   */
   @objc static func createWithResponse(_: URLResponse, data: Data) -> Self
 
   /**
-    - jsName: createWithResponse
-    - name: initWithResponse:data:userInfo:storagePolicy:
-    - argLabels: data, userInfo, storagePolicy
-    - constructorTokens: response, data, userInfo, storagePolicy
+    - Selector: initWithResponse:data:userInfo:storagePolicy:
   */
   @objc static func createWithResponse(_: URLResponse, data: Data, userInfo: [AnyHashable: Any]?, storagePolicy: URLCache.StoragePolicy) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: data
-    - name: data
-    - argLabels: 
+    - Selector: data
   */
   @objc var data: Data { @objc get }
 
   /**
-    - jsName: response
-    - name: response
-    - argLabels: 
+    - Selector: response
   */
   @objc var response: URLResponse { @objc get }
 
   /**
-    - jsName: storagePolicy
-    - name: storagePolicy
-    - argLabels: 
+    - Selector: storagePolicy
   */
   @objc var storagePolicy: URLCache.StoragePolicy { @objc get }
 
   /**
-    - jsName: userInfo
-    - name: userInfo
-    - argLabels: 
+    - Selector: userInfo
   */
   @objc var userInfo: [AnyHashable: Any]? { @objc get }
 }

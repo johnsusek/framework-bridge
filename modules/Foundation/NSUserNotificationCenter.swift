@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSUserNotificationCenter
-    - name: NSUserNotificationCenter
-    - argLabels: 
+    - Selector: NSUserNotificationCenter
     - Introduced: 10.8
     - Deprecated: 100000
     - Message: All NSUserNotifications API should be replaced with UserNotifications.frameworks API
@@ -23,78 +21,51 @@ import Foundation
   // Own Static Properties
 
   /**
-    - jsName: default
-    - name: defaultUserNotificationCenter
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: default
+    - Selector: defaultUserNotificationCenter
   */
   @objc static var `default`: NSUserNotificationCenter { @objc (defaultUserNotificationCenter) get }
 
   // Instance Methods
 
   /**
-    - jsName: deliver
-    - name: deliverNotification:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: deliver(_:)
+    - Selector: deliverNotification:
   */
   @objc (deliverNotification:) func deliver(_: NSUserNotification)
 
   /**
-    - jsName: removeAllDeliveredNotifications
-    - name: removeAllDeliveredNotifications
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeAllDeliveredNotifications
   */
   @objc func removeAllDeliveredNotifications()
 
   /**
-    - jsName: removeDeliveredNotification
-    - name: removeDeliveredNotification:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeDeliveredNotification:
   */
   @objc func removeDeliveredNotification(_: NSUserNotification)
 
   /**
-    - jsName: removeScheduledNotification
-    - name: removeScheduledNotification:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeScheduledNotification:
   */
   @objc func removeScheduledNotification(_: NSUserNotification)
 
   /**
-    - jsName: scheduleNotification
-    - name: scheduleNotification:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: scheduleNotification:
   */
   @objc func scheduleNotification(_: NSUserNotification)
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSUserNotificationCenterDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: deliveredNotifications
-    - name: deliveredNotifications
-    - argLabels: 
+    - Selector: deliveredNotifications
   */
   @objc var deliveredNotifications: [NSUserNotification] { @objc get }
 
   /**
-    - jsName: scheduledNotifications
-    - name: scheduledNotifications
-    - argLabels: 
+    - Selector: scheduledNotifications
   */
   @objc var scheduledNotifications: [NSUserNotification] { @objc get @objc (setScheduledNotifications:) set }
 }

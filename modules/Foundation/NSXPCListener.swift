@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSXPCListener
-    - name: NSXPCListener
-    - argLabels: 
+    - Selector: NSXPCListener
     - Introduced: 10.8
   */
 
@@ -19,72 +17,46 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: anonymous
-    - name: anonymousListener
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: anonymous()
+    - Selector: anonymousListener
   */
   @objc (anonymousListener) static func anonymous() -> NSXPCListener
 
   /**
-    - jsName: service
-    - name: serviceListener
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: service()
+    - Selector: serviceListener
   */
   @objc (serviceListener) static func service() -> NSXPCListener
 
   // Instance Methods
 
   /**
-    - jsName: createWithMachServiceName
-    - name: initWithMachServiceName:
-    - argLabels: 
-    - constructorTokens: machServiceName
+    - Selector: initWithMachServiceName:
   */
   @objc static func createWithMachServiceName(_: String) -> Self
 
   /**
-    - jsName: invalidate
-    - name: invalidate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidate
   */
   @objc func invalidate()
 
   /**
-    - jsName: resume
-    - name: resume
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: resume
   */
   @objc func resume()
 
   /**
-    - jsName: suspend
-    - name: suspend
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: suspend
   */
   @objc func suspend()
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSXPCListenerDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: endpoint
-    - name: endpoint
-    - argLabels: 
+    - Selector: endpoint
   */
   @objc var endpoint: NSXPCListenerEndpoint { @objc get }
 }

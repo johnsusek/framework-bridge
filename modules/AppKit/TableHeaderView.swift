@@ -9,63 +9,49 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTableHeaderView
-    - name: NSTableHeaderView
-    - argLabels: 
+    - Selector: NSTableHeaderView
   */
 
 @objc(NSTableHeaderView) protocol NSTableHeaderViewExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: column
-    - name: columnAtPoint:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: column(at:)
+    - Selector: columnAtPoint:
   */
   @objc (columnAtPoint:) func column(at: CGPoint) -> Int
 
   /**
-    - jsName: headerRect
-    - name: headerRectOfColumn:
-    - argLabels: ofColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: headerRect(ofColumn:)
+    - Selector: headerRectOfColumn:
   */
   @objc (headerRectOfColumn:) func headerRect(ofColumn: Int) -> CGRect
 
   // Own Instance Properties
 
   /**
-    - jsName: draggedColumn
-    - name: draggedColumn
-    - argLabels: 
+    - Selector: draggedColumn
   */
   @objc var draggedColumn: Int { @objc get }
 
   /**
-    - jsName: draggedDistance
-    - name: draggedDistance
-    - argLabels: 
+    - Selector: draggedDistance
   */
   @objc var draggedDistance: CGFloat { @objc get }
 
   /**
-    - jsName: resizedColumn
-    - name: resizedColumn
-    - argLabels: 
+    - Selector: resizedColumn
   */
   @objc var resizedColumn: Int { @objc get }
 
   /**
-    - jsName: tableView
-    - name: tableView
-    - argLabels: 
+    - Selector: tableView
   */
   @objc var tableView: NSTableView? { @objc get @objc (setTableView:) set }
 }

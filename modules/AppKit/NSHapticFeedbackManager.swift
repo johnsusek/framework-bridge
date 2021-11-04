@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSHapticFeedbackManager
-    - name: NSHapticFeedbackManager
-    - argLabels: 
+    - Selector: NSHapticFeedbackManager
     - Introduced: 10.11
   */
 
@@ -21,9 +19,7 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: defaultPerformer
-    - name: defaultPerformer
-    - argLabels: 
+    - Selector: defaultPerformer
   */
   @objc static var defaultPerformer: NSHapticFeedbackPerformer { @objc get }
 }

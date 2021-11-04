@@ -9,31 +9,21 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSound
-    - name: NSSound
-    - argLabels: 
+    - Selector: NSSound
   */
 
 @objc(NSSound) protocol NSSoundExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: canInit
-    - name: canInitWithPasteboard:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: canInit(with:)
+    - Selector: canInitWithPasteboard:
   */
   @objc (canInitWithPasteboard:) static func canInit(with: NSPasteboard) -> Bool
 
   // Own Static Properties
 
   /**
-    - jsName: soundUnfilteredTypes
-    - name: soundUnfilteredTypes
-    - argLabels: 
-    - available: 10.5
+    - Selector: soundUnfilteredTypes
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) static var soundUnfilteredTypes: [String] { @objc get }
@@ -41,129 +31,83 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithContentsOfURL
-    - name: initWithContentsOfURL:byReference:
-    - argLabels: byReference
-    - constructorTokens: contentsOf, byReference
+    - Selector: initWithContentsOfURL:byReference:
   */
   @objc static func createWithContentsOfURL(_: URL, byReference: Bool) -> Self?
 
   /**
-    - jsName: pause
-    - name: pause
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: pause
   */
   @objc func pause() -> Bool
 
   /**
-    - jsName: play
-    - name: play
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: play
   */
   @objc func play() -> Bool
 
   /**
-    - jsName: resume
-    - name: resume
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: resume
   */
   @objc func resume() -> Bool
 
   /**
-    - jsName: setName
-    - name: setName:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setName:
   */
   @objc func setName(_: NSSound.Name?) -> Bool
 
   /**
-    - jsName: stop
-    - name: stop
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: stop
   */
   @objc func stop() -> Bool
 
   /**
-    - jsName: write
-    - name: writeToPasteboard:
-    - argLabels: to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: write(to:)
+    - Selector: writeToPasteboard:
   */
   @objc (writeToPasteboard:) func write(to: NSPasteboard)
 
   // Own Instance Properties
 
   /**
-    - jsName: currentTime
-    - name: currentTime
-    - argLabels: 
-    - available: 10.5
+    - Selector: currentTime
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var currentTime: TimeInterval { @objc get @objc (setCurrentTime:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSoundDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: duration
-    - name: duration
-    - argLabels: 
-    - available: 10.5
+    - Selector: duration
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var duration: TimeInterval { @objc get }
 
   /**
-    - jsName: loops
-    - name: loops
-    - argLabels: 
-    - available: 10.5
+    - Selector: loops
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var loops: Bool { @objc get @objc (setLoops:) set }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: NSSound.Name? { @objc get }
 
   /**
-    - jsName: playbackDeviceIdentifier
-    - name: playbackDeviceIdentifier
-    - argLabels: 
-    - available: 10.5
+    - Selector: playbackDeviceIdentifier
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var playbackDeviceIdentifier: NSSound.PlaybackDeviceIdentifier? { @objc get @objc (setPlaybackDeviceIdentifier:) set }
 
   /**
-    - jsName: isPlaying
-    - name: playing
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isPlaying
+    - Selector: playing
   */
   @objc var isPlaying: Bool { @objc get }
 
   /**
-    - jsName: volume
-    - name: volume
-    - argLabels: 
-    - available: 10.5
+    - Selector: volume
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var volume: Float { @objc get @objc (setVolume:) set }

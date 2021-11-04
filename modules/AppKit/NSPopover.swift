@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPopover
-    - name: NSPopover
-    - argLabels: 
+    - Selector: NSPopover
     - Introduced: 10.7
   */
 
@@ -21,92 +19,60 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: close
-    - name: close
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: close
   */
   @objc func close()
 
   /**
-    - jsName: performClose
-    - name: performClose:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: performClose:
   */
   @objc func performClose(_: Any?)
 
   /**
-    - jsName: show
-    - name: showRelativeToRect:ofView:preferredEdge:
-    - argLabels: relativeTo, of, preferredEdge
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: show(relativeTo:of:preferredEdge:)
+    - Selector: showRelativeToRect:ofView:preferredEdge:
   */
   @objc (showRelativeToRect:ofView:preferredEdge:) func show(relativeTo: CGRect, of: NSView, preferredEdge: NSRectEdge)
 
   // Own Instance Properties
 
   /**
-    - jsName: animates
-    - name: animates
-    - argLabels: 
+    - Selector: animates
   */
   @objc var animates: Bool { @objc get @objc (setAnimates:) set }
 
   /**
-    - jsName: behavior
-    - name: behavior
-    - argLabels: 
+    - Selector: behavior
   */
   @objc var behavior: NSPopover.Behavior { @objc get @objc (setBehavior:) set }
 
   /**
-    - jsName: contentSize
-    - name: contentSize
-    - argLabels: 
+    - Selector: contentSize
   */
   @objc var contentSize: CGSize { @objc get @objc (setContentSize:) set }
 
   /**
-    - jsName: contentViewController
-    - name: contentViewController
-    - argLabels: 
+    - Selector: contentViewController
   */
   @objc var contentViewController: NSViewController? { @objc get @objc (setContentViewController:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSPopoverDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: isDetached
-    - name: detached
-    - argLabels: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: isDetached
+    - Selector: detached
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var isDetached: Bool { @objc get }
 
   /**
-    - jsName: positioningRect
-    - name: positioningRect
-    - argLabels: 
+    - Selector: positioningRect
   */
   @objc var positioningRect: CGRect { @objc get @objc (setPositioningRect:) set }
 
   /**
-    - jsName: isShown
-    - name: shown
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isShown
+    - Selector: shown
   */
   @objc var isShown: Bool { @objc get }
 }

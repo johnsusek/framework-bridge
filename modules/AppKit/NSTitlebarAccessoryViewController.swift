@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTitlebarAccessoryViewController
-    - name: NSTitlebarAccessoryViewController
-    - argLabels: 
+    - Selector: NSTitlebarAccessoryViewController
     - Introduced: 10.10
   */
 
@@ -21,27 +19,18 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: fullScreenMinHeight
-    - name: fullScreenMinHeight
-    - argLabels: 
+    - Selector: fullScreenMinHeight
   */
   @objc var fullScreenMinHeight: CGFloat { @objc get @objc (setFullScreenMinHeight:) set }
 
   /**
-    - jsName: isHidden
-    - name: hidden
-    - argLabels: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: isHidden
+    - Selector: hidden
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var isHidden: Bool { @objc get @objc (setHidden:) set }
 
   /**
-    - jsName: layoutAttribute
-    - name: layoutAttribute
-    - argLabels: 
+    - Selector: layoutAttribute
   */
   @objc var layoutAttribute: NSLayoutConstraint.Attribute { @objc get @objc (setLayoutAttribute:) set }
 }

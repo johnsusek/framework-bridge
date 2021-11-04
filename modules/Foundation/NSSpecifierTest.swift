@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSSpecifierTest
-    - name: NSSpecifierTest
-    - argLabels: 
+    - Selector: NSSpecifierTest
   */
 
 @objc(NSSpecifierTest) protocol NSSpecifierTestExports: JSExport, NSScriptWhoseTestExports {
@@ -20,10 +18,7 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithObjectSpecifier
-    - name: initWithObjectSpecifier:comparisonOperator:testObject:
-    - argLabels: comparisonOperator, testObject
-    - constructorTokens: objectSpecifier, comparisonOperator, testObject
+    - Selector: initWithObjectSpecifier:comparisonOperator:testObject:
   */
   @objc static func createWithObjectSpecifier(_: NSScriptObjectSpecifier?, comparisonOperator: NSSpecifierTest.TestComparisonOperation, test: Any?) -> Self
 }

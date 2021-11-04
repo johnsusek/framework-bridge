@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextFinder
-    - name: NSTextFinder
-    - argLabels: 
+    - Selector: NSTextFinder
     - Introduced: 10.7
   */
 
@@ -19,92 +17,61 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: drawIncrementalMatchHighlight
-    - name: drawIncrementalMatchHighlightInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawIncrementalMatchHighlight(in:)
+    - Selector: drawIncrementalMatchHighlightInRect:
   */
   @objc (drawIncrementalMatchHighlightInRect:) static func drawIncrementalMatchHighlight(in: CGRect)
 
   // Instance Methods
 
   /**
-    - jsName: cancelFindIndicator
-    - name: cancelFindIndicator
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: cancelFindIndicator
   */
   @objc func cancelFindIndicator()
 
   /**
-    - jsName: noteClientStringWillChange
-    - name: noteClientStringWillChange
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: noteClientStringWillChange
   */
   @objc func noteClientStringWillChange()
 
   /**
-    - jsName: performAction
-    - name: performAction:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: performAction:
   */
   @objc (performAction:) func performAction(_: NSTextFinder.Action)
 
   /**
-    - jsName: validateAction
-    - name: validateAction:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: validateAction:
   */
   @objc (validateAction:) func validateAction(_: NSTextFinder.Action) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: client
-    - name: client
-    - argLabels: 
+    - Selector: client
   */
   @objc var client: NSTextFinderClient? { @objc get @objc (setClient:) set }
 
   /**
-    - jsName: findBarContainer
-    - name: findBarContainer
-    - argLabels: 
+    - Selector: findBarContainer
   */
   @objc var findBarContainer: NSTextFinderBarContainer? { @objc get @objc (setFindBarContainer:) set }
 
   /**
-    - jsName: findIndicatorNeedsUpdate
-    - name: findIndicatorNeedsUpdate
-    - argLabels: 
+    - Selector: findIndicatorNeedsUpdate
   */
   @objc var findIndicatorNeedsUpdate: Bool { @objc get @objc (setFindIndicatorNeedsUpdate:) set }
 
   /**
-    - jsName: incrementalMatchRanges
-    - name: incrementalMatchRanges
-    - argLabels: 
+    - Selector: incrementalMatchRanges
   */
   @objc var incrementalMatchRanges: [NSValue] { @objc get }
 
   /**
-    - jsName: isIncrementalSearchingEnabled
-    - name: incrementalSearchingEnabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isIncrementalSearchingEnabled
+    - Selector: incrementalSearchingEnabled
   */
   @objc var isIncrementalSearchingEnabled: Bool { @objc get @objc (setIncrementalSearchingEnabled:) set }
 
   /**
-    - jsName: incrementalSearchingShouldDimContentView
-    - name: incrementalSearchingShouldDimContentView
-    - argLabels: 
+    - Selector: incrementalSearchingShouldDimContentView
   */
   @objc var incrementalSearchingShouldDimContentView: Bool { @objc get @objc (setIncrementalSearchingShouldDimContentView:) set }
 }

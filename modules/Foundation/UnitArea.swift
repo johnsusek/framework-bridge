@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitArea
-    - name: NSUnitArea
-    - argLabels: 
+    - Selector: NSUnitArea
     - Introduced: 10.12
   */
 
@@ -19,110 +17,79 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: acres
-    - name: acres
-    - argLabels: 
+    - Selector: acres
   */
   @objc static var acres: UnitArea { @objc get }
 
   /**
-    - jsName: ares
-    - name: ares
-    - argLabels: 
+    - Selector: ares
   */
   @objc static var ares: UnitArea { @objc get }
 
   /**
-    - jsName: hectares
-    - name: hectares
-    - argLabels: 
+    - Selector: hectares
   */
   @objc static var hectares: UnitArea { @objc get }
 
   /**
-    - jsName: squareCentimeters
-    - name: squareCentimeters
-    - argLabels: 
+    - Selector: squareCentimeters
   */
   @objc static var squareCentimeters: UnitArea { @objc get }
 
   /**
-    - jsName: squareFeet
-    - name: squareFeet
-    - argLabels: 
+    - Selector: squareFeet
   */
   @objc static var squareFeet: UnitArea { @objc get }
 
   /**
-    - jsName: squareInches
-    - name: squareInches
-    - argLabels: 
+    - Selector: squareInches
   */
   @objc static var squareInches: UnitArea { @objc get }
 
   /**
-    - jsName: squareKilometers
-    - name: squareKilometers
-    - argLabels: 
+    - Selector: squareKilometers
   */
   @objc static var squareKilometers: UnitArea { @objc get }
 
   /**
-    - jsName: squareMegameters
-    - name: squareMegameters
-    - argLabels: 
+    - Selector: squareMegameters
   */
   @objc static var squareMegameters: UnitArea { @objc get }
 
   /**
-    - jsName: squareMeters
-    - name: squareMeters
-    - argLabels: 
+    - Selector: squareMeters
   */
   @objc static var squareMeters: UnitArea { @objc get }
 
   /**
-    - jsName: squareMicrometers
-    - name: squareMicrometers
-    - argLabels: 
+    - Selector: squareMicrometers
   */
   @objc static var squareMicrometers: UnitArea { @objc get }
 
   /**
-    - jsName: squareMiles
-    - name: squareMiles
-    - argLabels: 
+    - Selector: squareMiles
   */
   @objc static var squareMiles: UnitArea { @objc get }
 
   /**
-    - jsName: squareMillimeters
-    - name: squareMillimeters
-    - argLabels: 
+    - Selector: squareMillimeters
   */
   @objc static var squareMillimeters: UnitArea { @objc get }
 
   /**
-    - jsName: squareNanometers
-    - name: squareNanometers
-    - argLabels: 
+    - Selector: squareNanometers
   */
   @objc static var squareNanometers: UnitArea { @objc get }
 
   /**
-    - jsName: squareYards
-    - name: squareYards
-    - argLabels: 
+    - Selector: squareYards
   */
   @objc static var squareYards: UnitArea { @objc get }
 }

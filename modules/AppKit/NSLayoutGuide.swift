@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSLayoutGuide
-    - name: NSLayoutGuide
-    - argLabels: 
+    - Selector: NSLayoutGuide
     - Introduced: 10.11
   */
 
@@ -21,13 +19,7 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: constraintsAffectingLayout
-    - name: constraintsAffectingLayoutForOrientation:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: constraintsAffectingLayout(for:)
+    - Selector: constraintsAffectingLayoutForOrientation:
     - Introduced: 10.12
   */
   @objc (constraintsAffectingLayoutForOrientation:) @available(OSX 10.12, *) func constraintsAffectingLayout(`for`: NSLayoutConstraint.Orientation) -> [NSLayoutConstraint]
@@ -35,104 +27,75 @@ import AppKit
   // Protocol Inherited Instance Properties
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: NSUserInterfaceItemIdentifier { @objc get @objc (setIdentifier:) set }
 
   // Own Instance Properties
 
   /**
-    - jsName: bottomAnchor
-    - name: bottomAnchor
-    - argLabels: 
+    - Selector: bottomAnchor
   */
   @objc var bottomAnchor: NSLayoutYAxisAnchor { @objc get }
 
   /**
-    - jsName: centerXAnchor
-    - name: centerXAnchor
-    - argLabels: 
+    - Selector: centerXAnchor
   */
   @objc var centerXAnchor: NSLayoutXAxisAnchor { @objc get }
 
   /**
-    - jsName: centerYAnchor
-    - name: centerYAnchor
-    - argLabels: 
+    - Selector: centerYAnchor
   */
   @objc var centerYAnchor: NSLayoutYAxisAnchor { @objc get }
 
   /**
-    - jsName: frame
-    - name: frame
-    - argLabels: 
+    - Selector: frame
   */
   @objc var frame: CGRect { @objc get }
 
   /**
-    - jsName: hasAmbiguousLayout
-    - name: hasAmbiguousLayout
-    - argLabels: 
-    - available: 10.12
+    - Selector: hasAmbiguousLayout
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var hasAmbiguousLayout: Bool { @objc get }
 
   /**
-    - jsName: heightAnchor
-    - name: heightAnchor
-    - argLabels: 
+    - Selector: heightAnchor
   */
   @objc var heightAnchor: NSLayoutDimension { @objc get }
 
   /**
-    - jsName: leadingAnchor
-    - name: leadingAnchor
-    - argLabels: 
+    - Selector: leadingAnchor
   */
   @objc var leadingAnchor: NSLayoutXAxisAnchor { @objc get }
 
   /**
-    - jsName: leftAnchor
-    - name: leftAnchor
-    - argLabels: 
+    - Selector: leftAnchor
   */
   @objc var leftAnchor: NSLayoutXAxisAnchor { @objc get }
 
   /**
-    - jsName: owningView
-    - name: owningView
-    - argLabels: 
+    - Selector: owningView
   */
   @objc var owningView: NSView? { @objc get @objc (setOwningView:) set }
 
   /**
-    - jsName: rightAnchor
-    - name: rightAnchor
-    - argLabels: 
+    - Selector: rightAnchor
   */
   @objc var rightAnchor: NSLayoutXAxisAnchor { @objc get }
 
   /**
-    - jsName: topAnchor
-    - name: topAnchor
-    - argLabels: 
+    - Selector: topAnchor
   */
   @objc var topAnchor: NSLayoutYAxisAnchor { @objc get }
 
   /**
-    - jsName: trailingAnchor
-    - name: trailingAnchor
-    - argLabels: 
+    - Selector: trailingAnchor
   */
   @objc var trailingAnchor: NSLayoutXAxisAnchor { @objc get }
 
   /**
-    - jsName: widthAnchor
-    - name: widthAnchor
-    - argLabels: 
+    - Selector: widthAnchor
   */
   @objc var widthAnchor: NSLayoutDimension { @objc get }
 }

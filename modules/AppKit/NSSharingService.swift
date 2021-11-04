@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSharingService
-    - name: NSSharingService
-    - argLabels: 
+    - Selector: NSSharingService
     - Introduced: 10.8
   */
 
@@ -19,135 +17,88 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: sharingServices
-    - name: sharingServicesForItems:
-    - argLabels: forItems
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: sharingServices(forItems:)
+    - Selector: sharingServicesForItems:
   */
   @objc (sharingServicesForItems:) static func sharingServices(forItems: [Any]) -> [NSSharingService]
 
   // Instance Methods
 
   /**
-    - jsName: canPerform
-    - name: canPerformWithItems:
-    - argLabels: withItems
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: canPerform(withItems:)
+    - Selector: canPerformWithItems:
   */
   @objc (canPerformWithItems:) func canPerform(withItems: [Any]?) -> Bool
 
   /**
-    - jsName: createWithTitle
-    - name: initWithTitle:image:alternateImage:handler:
-    - argLabels: image, alternateImage, handler
-    - constructorTokens: title, image, alternateImage, handler
+    - Selector: initWithTitle:image:alternateImage:handler:
   */
-  @objc static func createWithTitle(_: String, image: NSImage, alternateImage: NSImage?, handler: JSValue) -> Self
+  // jsvalue @objc static func createWithTitle(_: String, image: NSImage, alternateImage: NSImage?, handler: JSValue) -> Self
 
   /**
-    - jsName: perform
-    - name: performWithItems:
-    - argLabels: withItems
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: perform(withItems:)
+    - Selector: performWithItems:
   */
   @objc (performWithItems:) func perform(withItems: [Any])
 
   // Own Instance Properties
 
   /**
-    - jsName: accountName
-    - name: accountName
-    - argLabels: 
-    - available: 10.9
+    - Selector: accountName
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var accountName: String? { @objc get }
 
   /**
-    - jsName: alternateImage
-    - name: alternateImage
-    - argLabels: 
+    - Selector: alternateImage
   */
   @objc var alternateImage: NSImage? { @objc get }
 
   /**
-    - jsName: attachmentFileURLs
-    - name: attachmentFileURLs
-    - argLabels: 
-    - available: 10.9
+    - Selector: attachmentFileURLs
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var attachmentFileURLs: [URL]? { @objc get }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSharingServiceDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
+    - Selector: image
   */
   @objc var image: NSImage { @objc get }
 
   /**
-    - jsName: menuItemTitle
-    - name: menuItemTitle
-    - argLabels: 
-    - available: 10.9
+    - Selector: menuItemTitle
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var menuItemTitle: String { @objc get @objc (setMenuItemTitle:) set }
 
   /**
-    - jsName: messageBody
-    - name: messageBody
-    - argLabels: 
-    - available: 10.9
+    - Selector: messageBody
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var messageBody: String? { @objc get }
 
   /**
-    - jsName: permanentLink
-    - name: permanentLink
-    - argLabels: 
-    - available: 10.9
+    - Selector: permanentLink
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var permanentLink: URL? { @objc get }
 
   /**
-    - jsName: recipients
-    - name: recipients
-    - argLabels: 
-    - available: 10.9
+    - Selector: recipients
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var recipients: [String]? { @objc get @objc (setRecipients:) set }
 
   /**
-    - jsName: subject
-    - name: subject
-    - argLabels: 
-    - available: 10.9
+    - Selector: subject
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var subject: String? { @objc get @objc (setSubject:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get }
 }

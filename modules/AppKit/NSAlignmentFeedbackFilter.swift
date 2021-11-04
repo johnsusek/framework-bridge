@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSAlignmentFeedbackFilter
-    - name: NSAlignmentFeedbackFilter
-    - argLabels: 
+    - Selector: NSAlignmentFeedbackFilter
     - Introduced: 10.11
   */
 
@@ -21,69 +19,39 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: inputEventMask
-    - name: inputEventMask
-    - argLabels: 
+    - Selector: inputEventMask
   */
   @objc static var inputEventMask: NSEvent.EventTypeMask { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: alignmentFeedbackTokenForHorizontalMovement
-    - name: alignmentFeedbackTokenForHorizontalMovementInView:previousX:alignedX:defaultX:
-    - argLabels: in, previousX, alignedX, defaultX
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: alignmentFeedbackTokenForHorizontalMovement(in:previousX:alignedX:defaultX:)
+    - Selector: alignmentFeedbackTokenForHorizontalMovementInView:previousX:alignedX:defaultX:
   */
   @objc (alignmentFeedbackTokenForHorizontalMovementInView:previousX:alignedX:defaultX:) func alignmentFeedbackTokenForHorizontalMovement(in: NSView?, previousX: CGFloat, alignedX: CGFloat, defaultX: CGFloat) -> NSAlignmentFeedbackToken?
 
   /**
-    - jsName: alignmentFeedbackTokenForMovement
-    - name: alignmentFeedbackTokenForMovementInView:previousPoint:alignedPoint:defaultPoint:
-    - argLabels: in, previousPoint, alignedPoint, defaultPoint
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: alignmentFeedbackTokenForMovement(in:previousPoint:alignedPoint:defaultPoint:)
+    - Selector: alignmentFeedbackTokenForMovementInView:previousPoint:alignedPoint:defaultPoint:
   */
   @objc (alignmentFeedbackTokenForMovementInView:previousPoint:alignedPoint:defaultPoint:) func alignmentFeedbackTokenForMovement(in: NSView?, previousPoint: CGPoint, alignedPoint: CGPoint, defaultPoint: CGPoint) -> NSAlignmentFeedbackToken?
 
   /**
-    - jsName: alignmentFeedbackTokenForVerticalMovement
-    - name: alignmentFeedbackTokenForVerticalMovementInView:previousY:alignedY:defaultY:
-    - argLabels: in, previousY, alignedY, defaultY
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: alignmentFeedbackTokenForVerticalMovement(in:previousY:alignedY:defaultY:)
+    - Selector: alignmentFeedbackTokenForVerticalMovementInView:previousY:alignedY:defaultY:
   */
   @objc (alignmentFeedbackTokenForVerticalMovementInView:previousY:alignedY:defaultY:) func alignmentFeedbackTokenForVerticalMovement(in: NSView?, previousY: CGFloat, alignedY: CGFloat, defaultY: CGFloat) -> NSAlignmentFeedbackToken?
 
   /**
-    - jsName: performFeedback
-    - name: performFeedback:performanceTime:
-    - argLabels: performanceTime
-    - constructorTokens: 
+    - Selector: performFeedback:performanceTime:
   */
   @objc func performFeedback(_: [NSAlignmentFeedbackToken], performanceTime: NSHapticFeedbackManager.PerformanceTime)
 
   /**
-    - jsName: update
-    - name: updateWithEvent:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: update(with:)
+    - Selector: updateWithEvent:
   */
   @objc (updateWithEvent:) func update(with: NSEvent)
 
   /**
-    - jsName: update
-    - name: updateWithPanRecognizer:
-    - argLabels: withPanRecognizer
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: update(withPanRecognizer:)
+    - Selector: updateWithPanRecognizer:
   */
   @objc (updateWithPanRecognizer:) func update(withPanRecognizer: NSPanGestureRecognizer)
 }

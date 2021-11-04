@@ -9,44 +9,35 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubberArrangedView
-    - name: NSScrubberArrangedView
-    - argLabels: 
+    - Selector: NSScrubberArrangedView
     - Introduced: 10.12.2
   */
 
 @objc(NSScrubberArrangedView) protocol NSScrubberArrangedViewExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: apply
-    - name: applyLayoutAttributes:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: apply(_:)
+    - Selector: applyLayoutAttributes:
   */
   @objc (applyLayoutAttributes:) func apply(_: NSScrubberLayoutAttributes)
 
   // Own Instance Properties
 
   /**
-    - jsName: isHighlighted
-    - name: highlighted
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isHighlighted
+    - Selector: highlighted
   */
   @objc var isHighlighted: Bool { @objc get @objc (setHighlighted:) set }
 
   /**
-    - jsName: isSelected
-    - name: selected
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSelected
+    - Selector: selected
   */
   @objc var isSelected: Bool { @objc get @objc (setSelected:) set }
 }

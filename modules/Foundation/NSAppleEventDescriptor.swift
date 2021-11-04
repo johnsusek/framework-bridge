@@ -9,494 +9,279 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSAppleEventDescriptor
-    - name: NSAppleEventDescriptor
-    - argLabels: 
+    - Selector: NSAppleEventDescriptor
   */
 
 @objc(NSAppleEventDescriptor) protocol NSAppleEventDescriptorExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: appleEvent
-    - name: appleEventWithEventClass:eventID:targetDescriptor:returnID:transactionID:
-    - argLabels: withEventClass, eventID, targetDescriptor, returnID, transactionID
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: appleEvent(withEventClass:eventID:targetDescriptor:returnID:transactionID:)
+    - Selector: appleEventWithEventClass:eventID:targetDescriptor:returnID:transactionID:
   */
   @objc (appleEventWithEventClass:eventID:targetDescriptor:returnID:transactionID:) static func appleEvent(withEventClass: AEEventClass, eventID: AEEventID, targetDescriptor: NSAppleEventDescriptor?, returnID: Int16, transactionID: Int32) -> NSAppleEventDescriptor
 
   /**
-    - jsName: currentProcess
-    - name: currentProcessDescriptor
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: currentProcess()
+    - Selector: currentProcessDescriptor
     - Introduced: 10.11
   */
   @objc (currentProcessDescriptor) @available(OSX 10.11, *) static func currentProcess() -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithApplicationURL:
-    - argLabels: applicationURL
-    - constructorTokens: 
-    - available: 10.11
-    - unavailable: true
-    - renamed: init(applicationURL:)
-    - message: Not available in Swift
+    - Selector: descriptorWithApplicationURL:
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) static func create(applicationURL: URL) -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithBoolean:
-    - argLabels: boolean
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(boolean:)
-    - message: Not available in Swift
+    - Selector: descriptorWithBoolean:
   */
   @objc static func create(boolean: Bool) -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithBundleIdentifier:
-    - argLabels: bundleIdentifier
-    - constructorTokens: 
-    - available: 10.11
-    - unavailable: true
-    - renamed: init(bundleIdentifier:)
-    - message: Not available in Swift
+    - Selector: descriptorWithBundleIdentifier:
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) static func create(bundleIdentifier: String) -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithDate:
-    - argLabels: date
-    - constructorTokens: 
-    - available: 10.11
-    - unavailable: true
-    - renamed: init(date:)
-    - message: Not available in Swift
+    - Selector: descriptorWithDate:
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) static func create(date: Date) -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithDescriptorType:bytes:length:
-    - argLabels: descriptorType, bytes, length
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(descriptorType:bytes:length:)
-    - message: Not available in Swift
+    - Selector: descriptorWithDescriptorType:bytes:length:
   */
   @objc static func create(descriptorType: DescType, bytes: UnsafeRawPointer?, length: Int) -> NSAppleEventDescriptor?
 
   /**
-    - jsName: create
-    - name: descriptorWithDescriptorType:data:
-    - argLabels: descriptorType, data
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(descriptorType:data:)
-    - message: Not available in Swift
+    - Selector: descriptorWithDescriptorType:data:
   */
   @objc static func create(descriptorType: DescType, data: Data?) -> NSAppleEventDescriptor?
 
   /**
-    - jsName: create
-    - name: descriptorWithDouble:
-    - argLabels: double
-    - constructorTokens: 
-    - available: 10.11
-    - unavailable: true
-    - renamed: init(double:)
-    - message: Not available in Swift
+    - Selector: descriptorWithDouble:
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) static func create(double: Double) -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithEnumCode:
-    - argLabels: enumCode
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(enumCode:)
-    - message: Not available in Swift
+    - Selector: descriptorWithEnumCode:
   */
   @objc static func create(enumCode: OSType) -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithFileURL:
-    - argLabels: fileURL
-    - constructorTokens: 
-    - available: 10.11
-    - unavailable: true
-    - renamed: init(fileURL:)
-    - message: Not available in Swift
+    - Selector: descriptorWithFileURL:
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) static func create(fileURL: URL) -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithInt32:
-    - argLabels: int32
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(int32:)
-    - message: Not available in Swift
+    - Selector: descriptorWithInt32:
   */
   @objc static func create(int32: Int32) -> NSAppleEventDescriptor
 
   /**
-    - jsName: create
-    - name: descriptorWithTypeCode:
-    - argLabels: typeCode
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(typeCode:)
-    - message: Not available in Swift
+    - Selector: descriptorWithTypeCode:
   */
   @objc static func create(typeCode: OSType) -> NSAppleEventDescriptor
 
   /**
-    - jsName: list
-    - name: listDescriptor
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: list()
+    - Selector: listDescriptor
   */
   @objc (listDescriptor) static func list() -> NSAppleEventDescriptor
 
   /**
-    - jsName: null
-    - name: nullDescriptor
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: null()
+    - Selector: nullDescriptor
   */
   @objc (nullDescriptor) static func null() -> NSAppleEventDescriptor
 
   /**
-    - jsName: record
-    - name: recordDescriptor
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: record()
+    - Selector: recordDescriptor
   */
   @objc (recordDescriptor) static func record() -> NSAppleEventDescriptor
 
   // Instance Methods
 
   /**
-    - jsName: attributeDescriptor
-    - name: attributeDescriptorForKeyword:
-    - argLabels: forKeyword
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: attributeDescriptor(forKeyword:)
+    - Selector: attributeDescriptorForKeyword:
   */
   @objc (attributeDescriptorForKeyword:) func attributeDescriptor(forKeyword: AEKeyword) -> NSAppleEventDescriptor?
 
   /**
-    - jsName: coerce
-    - name: coerceToDescriptorType:
-    - argLabels: toDescriptorType
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: coerce(toDescriptorType:)
+    - Selector: coerceToDescriptorType:
   */
   @objc (coerceToDescriptorType:) func coerce(toDescriptorType: DescType) -> NSAppleEventDescriptor?
 
   /**
-    - jsName: atIndex
-    - name: descriptorAtIndex:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: atIndex(_:)
+    - Selector: descriptorAtIndex:
   */
   @objc (descriptorAtIndex:) func atIndex(_: Int) -> NSAppleEventDescriptor?
 
   /**
-    - jsName: forKeyword
-    - name: descriptorForKeyword:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: forKeyword(_:)
+    - Selector: descriptorForKeyword:
   */
   @objc (descriptorForKeyword:) func forKeyword(_: AEKeyword) -> NSAppleEventDescriptor?
 
   /**
-    - jsName: createListDescriptor
-    - name: initListDescriptor
-    - argLabels: 
-    - constructorTokens: listDescriptor
+    - Selector: initListDescriptor
   */
   @objc static func createListDescriptor() -> Self
 
   /**
-    - jsName: createRecordDescriptor
-    - name: initRecordDescriptor
-    - argLabels: 
-    - constructorTokens: recordDescriptor
+    - Selector: initRecordDescriptor
   */
   @objc static func createRecordDescriptor() -> Self
 
   /**
-    - jsName: createWithAEDescNoCopy
-    - name: initWithAEDescNoCopy:
-    - argLabels: 
-    - constructorTokens: aeDescNoCopy
+    - Selector: initWithAEDescNoCopy:
   */
   @objc static func createWithAEDescNoCopy(_: UnsafePointer<AEDesc>) -> Self
 
   /**
-    - jsName: createWithEventClass
-    - name: initWithEventClass:eventID:targetDescriptor:returnID:transactionID:
-    - argLabels: eventID, targetDescriptor, returnID, transactionID
-    - constructorTokens: eventClass, eventID, targetDescriptor, returnID, transactionID
+    - Selector: initWithEventClass:eventID:targetDescriptor:returnID:transactionID:
   */
   @objc static func createWithEventClass(_: AEEventClass, eventID: AEEventID, targetDescriptor: NSAppleEventDescriptor?, returnID: Int16, transactionID: Int32) -> Self
 
   /**
-    - jsName: insert
-    - name: insertDescriptor:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insert(_:at:)
+    - Selector: insertDescriptor:atIndex:
   */
   @objc (insertDescriptor:atIndex:) func insert(_: NSAppleEventDescriptor, at: Int)
 
   /**
-    - jsName: keywordForDescriptor
-    - name: keywordForDescriptorAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: keywordForDescriptor(at:)
+    - Selector: keywordForDescriptorAtIndex:
   */
   @objc (keywordForDescriptorAtIndex:) func keywordForDescriptor(at: Int) -> AEKeyword
 
   /**
-    - jsName: paramDescriptor
-    - name: paramDescriptorForKeyword:
-    - argLabels: forKeyword
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: paramDescriptor(forKeyword:)
+    - Selector: paramDescriptorForKeyword:
   */
   @objc (paramDescriptorForKeyword:) func paramDescriptor(forKeyword: AEKeyword) -> NSAppleEventDescriptor?
 
   /**
-    - jsName: remove
-    - name: removeDescriptorAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: remove(at:)
+    - Selector: removeDescriptorAtIndex:
   */
   @objc (removeDescriptorAtIndex:) func remove(at: Int)
 
   /**
-    - jsName: remove
-    - name: removeDescriptorWithKeyword:
-    - argLabels: withKeyword
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: remove(withKeyword:)
+    - Selector: removeDescriptorWithKeyword:
   */
   @objc (removeDescriptorWithKeyword:) func remove(withKeyword: AEKeyword)
 
   /**
-    - jsName: removeParamDescriptor
-    - name: removeParamDescriptorWithKeyword:
-    - argLabels: withKeyword
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeParamDescriptor(withKeyword:)
+    - Selector: removeParamDescriptorWithKeyword:
   */
   @objc (removeParamDescriptorWithKeyword:) func removeParamDescriptor(withKeyword: AEKeyword)
 
   /**
-    - jsName: sendEventWithOptions
-    - name: sendEventWithOptions:timeout:error:
-    - argLabels: timeout, error
-    - constructorTokens: 
+    - Selector: sendEventWithOptions:timeout:error:
     - Introduced: 10.11
   */
   // throws - @objc @available(OSX 10.11, *) func sendEventWithOptions(timeout: NSAppleEventDescriptor.SendOptions, error: TimeInterval) -> NSAppleEventDescriptor?
 
   /**
-    - jsName: setAttribute
-    - name: setAttributeDescriptor:forKeyword:
-    - argLabels: _, forKeyword
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setAttribute(_:forKeyword:)
+    - Selector: setAttributeDescriptor:forKeyword:
   */
   @objc (setAttributeDescriptor:forKeyword:) func setAttribute(_: NSAppleEventDescriptor, forKeyword: AEKeyword)
 
   /**
-    - jsName: setDescriptor
-    - name: setDescriptor:forKeyword:
-    - argLabels: forKeyword
-    - constructorTokens: 
+    - Selector: setDescriptor:forKeyword:
   */
   @objc func setDescriptor(_: NSAppleEventDescriptor, forKeyword: AEKeyword)
 
   /**
-    - jsName: setParam
-    - name: setParamDescriptor:forKeyword:
-    - argLabels: _, forKeyword
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setParam(_:forKeyword:)
+    - Selector: setParamDescriptor:forKeyword:
   */
   @objc (setParamDescriptor:forKeyword:) func setParam(_: NSAppleEventDescriptor, forKeyword: AEKeyword)
 
   // Own Instance Properties
 
   /**
-    - jsName: aeDesc
-    - name: aeDesc
-    - argLabels: 
+    - Selector: aeDesc
   */
   @objc var aeDesc: UnsafePointer<AEDesc>? { @objc get }
 
   /**
-    - jsName: booleanValue
-    - name: booleanValue
-    - argLabels: 
+    - Selector: booleanValue
   */
   @objc var booleanValue: Bool { @objc get }
 
   /**
-    - jsName: data
-    - name: data
-    - argLabels: 
+    - Selector: data
   */
   @objc var data: Data { @objc get }
 
   /**
-    - jsName: dateValue
-    - name: dateValue
-    - argLabels: 
-    - available: 10.11
+    - Selector: dateValue
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var dateValue: Date? { @objc get }
 
   /**
-    - jsName: descriptorType
-    - name: descriptorType
-    - argLabels: 
+    - Selector: descriptorType
   */
   @objc var descriptorType: DescType { @objc get }
 
   /**
-    - jsName: doubleValue
-    - name: doubleValue
-    - argLabels: 
-    - available: 10.11
+    - Selector: doubleValue
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var doubleValue: Double { @objc get }
 
   /**
-    - jsName: enumCodeValue
-    - name: enumCodeValue
-    - argLabels: 
+    - Selector: enumCodeValue
   */
   @objc var enumCodeValue: OSType { @objc get }
 
   /**
-    - jsName: eventClass
-    - name: eventClass
-    - argLabels: 
+    - Selector: eventClass
   */
   @objc var eventClass: AEEventClass { @objc get }
 
   /**
-    - jsName: eventID
-    - name: eventID
-    - argLabels: 
+    - Selector: eventID
   */
   @objc var eventID: AEEventID { @objc get }
 
   /**
-    - jsName: fileURLValue
-    - name: fileURLValue
-    - argLabels: 
-    - available: 10.11
+    - Selector: fileURLValue
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var fileURLValue: URL? { @objc get }
 
   /**
-    - jsName: int32Value
-    - name: int32Value
-    - argLabels: 
+    - Selector: int32Value
   */
   @objc var int32Value: Int32 { @objc get }
 
   /**
-    - jsName: isRecordDescriptor
-    - name: isRecordDescriptor
-    - argLabels: 
-    - available: 10.11
+    - Selector: isRecordDescriptor
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var isRecordDescriptor: Bool { @objc get }
 
   /**
-    - jsName: numberOfItems
-    - name: numberOfItems
-    - argLabels: 
+    - Selector: numberOfItems
   */
   @objc var numberOfItems: Int { @objc get }
 
   /**
-    - jsName: returnID
-    - name: returnID
-    - argLabels: 
+    - Selector: returnID
   */
   @objc var returnID: Int16 { @objc get }
 
   /**
-    - jsName: stringValue
-    - name: stringValue
-    - argLabels: 
+    - Selector: stringValue
   */
   @objc var stringValue: String? { @objc get }
 
   /**
-    - jsName: transactionID
-    - name: transactionID
-    - argLabels: 
+    - Selector: transactionID
   */
   @objc var transactionID: Int32 { @objc get }
 
   /**
-    - jsName: typeCodeValue
-    - name: typeCodeValue
-    - argLabels: 
+    - Selector: typeCodeValue
   */
   @objc var typeCodeValue: OSType { @objc get }
 }

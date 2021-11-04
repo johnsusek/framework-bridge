@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSXPCListenerEndpoint
-    - name: NSXPCListenerEndpoint
-    - argLabels: 
+    - Selector: NSXPCListenerEndpoint
     - Introduced: 10.8
   */
 

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitFuelEfficiency
-    - name: NSUnitFuelEfficiency
-    - argLabels: 
+    - Selector: NSUnitFuelEfficiency
     - Introduced: 10.12
   */
 
@@ -19,33 +17,24 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: litersPer100Kilometers
-    - name: litersPer100Kilometers
-    - argLabels: 
+    - Selector: litersPer100Kilometers
   */
   @objc static var litersPer100Kilometers: UnitFuelEfficiency { @objc get }
 
   /**
-    - jsName: milesPerGallon
-    - name: milesPerGallon
-    - argLabels: 
+    - Selector: milesPerGallon
   */
   @objc static var milesPerGallon: UnitFuelEfficiency { @objc get }
 
   /**
-    - jsName: milesPerImperialGallon
-    - name: milesPerImperialGallon
-    - argLabels: 
+    - Selector: milesPerImperialGallon
   */
   @objc static var milesPerImperialGallon: UnitFuelEfficiency { @objc get }
 }

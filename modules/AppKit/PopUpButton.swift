@@ -9,279 +9,169 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPopUpButton
-    - name: NSPopUpButton
-    - argLabels: 
+    - Selector: NSPopUpButton
   */
 
 @objc(NSPopUpButton) protocol NSPopUpButtonExports: JSExport, NSButtonExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: addItem
-    - name: addItemWithTitle:
-    - argLabels: withTitle
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addItem(withTitle:)
+    - Selector: addItemWithTitle:
   */
   @objc (addItemWithTitle:) func addItem(withTitle: String)
 
   /**
-    - jsName: addItems
-    - name: addItemsWithTitles:
-    - argLabels: withTitles
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addItems(withTitles:)
+    - Selector: addItemsWithTitles:
   */
   @objc (addItemsWithTitles:) func addItems(withTitles: [String])
 
   /**
-    - jsName: index
-    - name: indexOfItem:
-    - argLabels: of
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: index(of:)
+    - Selector: indexOfItem:
   */
   @objc (indexOfItem:) func index(of: NSMenuItem) -> Int
 
   /**
-    - jsName: indexOfItem
-    - name: indexOfItemWithRepresentedObject:
-    - argLabels: withRepresentedObject
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexOfItem(withRepresentedObject:)
+    - Selector: indexOfItemWithRepresentedObject:
   */
   @objc (indexOfItemWithRepresentedObject:) func indexOfItem(withRepresentedObject: Any?) -> Int
 
   /**
-    - jsName: indexOfItem
-    - name: indexOfItemWithTag:
-    - argLabels: withTag
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexOfItem(withTag:)
+    - Selector: indexOfItemWithTag:
   */
   @objc (indexOfItemWithTag:) func indexOfItem(withTag: Int) -> Int
 
   /**
-    - jsName: indexOfItem
-    - name: indexOfItemWithTarget:andAction:
-    - argLabels: withTarget, andAction
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexOfItem(withTarget:andAction:)
+    - Selector: indexOfItemWithTarget:andAction:
   */
   @objc (indexOfItemWithTarget:andAction:) func indexOfItem(withTarget: Any?, andAction: Selector?) -> Int
 
   /**
-    - jsName: indexOfItem
-    - name: indexOfItemWithTitle:
-    - argLabels: withTitle
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexOfItem(withTitle:)
+    - Selector: indexOfItemWithTitle:
   */
   @objc (indexOfItemWithTitle:) func indexOfItem(withTitle: String) -> Int
 
   /**
-    - jsName: insertItem
-    - name: insertItemWithTitle:atIndex:
-    - argLabels: withTitle, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertItem(withTitle:at:)
+    - Selector: insertItemWithTitle:atIndex:
   */
   @objc (insertItemWithTitle:atIndex:) func insertItem(withTitle: String, at: Int)
 
   /**
-    - jsName: item
-    - name: itemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: item(at:)
+    - Selector: itemAtIndex:
   */
   @objc (itemAtIndex:) func item(at: Int) -> NSMenuItem?
 
   /**
-    - jsName: itemTitle
-    - name: itemTitleAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: itemTitle(at:)
+    - Selector: itemTitleAtIndex:
   */
   @objc (itemTitleAtIndex:) func itemTitle(at: Int) -> String
 
   /**
-    - jsName: item
-    - name: itemWithTitle:
-    - argLabels: withTitle
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: item(withTitle:)
+    - Selector: itemWithTitle:
   */
   @objc (itemWithTitle:) func item(withTitle: String) -> NSMenuItem?
 
   /**
-    - jsName: removeAllItems
-    - name: removeAllItems
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeAllItems
   */
   @objc func removeAllItems()
 
   /**
-    - jsName: removeItem
-    - name: removeItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeItem(at:)
+    - Selector: removeItemAtIndex:
   */
   @objc (removeItemAtIndex:) func removeItem(at: Int)
 
   /**
-    - jsName: removeItem
-    - name: removeItemWithTitle:
-    - argLabels: withTitle
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeItem(withTitle:)
+    - Selector: removeItemWithTitle:
   */
   @objc (removeItemWithTitle:) func removeItem(withTitle: String)
 
   /**
-    - jsName: select
-    - name: selectItem:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: select(_:)
+    - Selector: selectItem:
   */
   @objc (selectItem:) func select(_: NSMenuItem?)
 
   /**
-    - jsName: selectItem
-    - name: selectItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectItem(at:)
+    - Selector: selectItemAtIndex:
   */
   @objc (selectItemAtIndex:) func selectItem(at: Int)
 
   /**
-    - jsName: selectItem
-    - name: selectItemWithTag:
-    - argLabels: withTag
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectItem(withTag:)
+    - Selector: selectItemWithTag:
   */
   @objc (selectItemWithTag:) func selectItem(withTag: Int) -> Bool
 
   /**
-    - jsName: selectItem
-    - name: selectItemWithTitle:
-    - argLabels: withTitle
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectItem(withTitle:)
+    - Selector: selectItemWithTitle:
   */
   @objc (selectItemWithTitle:) func selectItem(withTitle: String)
 
   /**
-    - jsName: setTitle
-    - name: setTitle:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setTitle:
   */
   @objc func setTitle(_: String)
 
   /**
-    - jsName: synchronizeTitleAndSelectedItem
-    - name: synchronizeTitleAndSelectedItem
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: synchronizeTitleAndSelectedItem
   */
   @objc func synchronizeTitleAndSelectedItem()
 
   // Own Instance Properties
 
   /**
-    - jsName: autoenablesItems
-    - name: autoenablesItems
-    - argLabels: 
+    - Selector: autoenablesItems
   */
   @objc var autoenablesItems: Bool { @objc get @objc (setAutoenablesItems:) set }
 
   /**
-    - jsName: indexOfSelectedItem
-    - name: indexOfSelectedItem
-    - argLabels: 
+    - Selector: indexOfSelectedItem
   */
   @objc var indexOfSelectedItem: Int { @objc get }
 
   /**
-    - jsName: itemArray
-    - name: itemArray
-    - argLabels: 
+    - Selector: itemArray
   */
   @objc var itemArray: [NSMenuItem] { @objc get }
 
   /**
-    - jsName: itemTitles
-    - name: itemTitles
-    - argLabels: 
+    - Selector: itemTitles
   */
   @objc var itemTitles: [String] { @objc get }
 
   /**
-    - jsName: lastItem
-    - name: lastItem
-    - argLabels: 
+    - Selector: lastItem
   */
   @objc var lastItem: NSMenuItem? { @objc get }
 
   /**
-    - jsName: numberOfItems
-    - name: numberOfItems
-    - argLabels: 
+    - Selector: numberOfItems
   */
   @objc var numberOfItems: Int { @objc get }
 
   /**
-    - jsName: preferredEdge
-    - name: preferredEdge
-    - argLabels: 
+    - Selector: preferredEdge
   */
   @objc var preferredEdge: NSRectEdge { @objc get @objc (setPreferredEdge:) set }
 
   /**
-    - jsName: pullsDown
-    - name: pullsDown
-    - argLabels: 
+    - Selector: pullsDown
   */
   @objc var pullsDown: Bool { @objc get @objc (setPullsDown:) set }
 
   /**
-    - jsName: selectedItem
-    - name: selectedItem
-    - argLabels: 
+    - Selector: selectedItem
   */
   @objc var selectedItem: NSMenuItem? { @objc get }
 
   /**
-    - jsName: titleOfSelectedItem
-    - name: titleOfSelectedItem
-    - argLabels: 
+    - Selector: titleOfSelectedItem
   */
   @objc var titleOfSelectedItem: String? { @objc get }
 }

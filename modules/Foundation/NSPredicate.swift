@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSPredicate
-    - name: NSPredicate
-    - argLabels: 
+    - Selector: NSPredicate
     - Introduced: 10.4
   */
 
@@ -19,79 +17,44 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: create
-    - name: predicateFromMetadataQueryString:
-    - argLabels: fromMetadataQueryString
-    - constructorTokens: 
-    - available: 10.9
-    - unavailable: true
-    - renamed: init(fromMetadataQueryString:)
-    - message: Not available in Swift
+    - Selector: predicateFromMetadataQueryString:
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) static func create(fromMetadataQueryString: String) -> NSPredicate?
 
   /**
-    - jsName: create
-    - name: predicateWithValue:
-    - argLabels: value
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(value:)
-    - message: Not available in Swift
+    - Selector: predicateWithValue:
   */
   @objc static func create(value: Bool) -> NSPredicate
 
   // Instance Methods
 
   /**
-    - jsName: allowEvaluation
-    - name: allowEvaluation
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.9
+    - Selector: allowEvaluation
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) func allowEvaluation()
 
   /**
-    - jsName: evaluate
-    - name: evaluateWithObject:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: evaluate(with:)
+    - Selector: evaluateWithObject:
   */
   @objc (evaluateWithObject:) func evaluate(with: Any?) -> Bool
 
   /**
-    - jsName: evaluate
-    - name: evaluateWithObject:substitutionVariables:
-    - argLabels: with, substitutionVariables
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: evaluate(with:substitutionVariables:)
+    - Selector: evaluateWithObject:substitutionVariables:
     - Introduced: 10.5
   */
   @objc (evaluateWithObject:substitutionVariables:) @available(OSX 10.5, *) func evaluate(with: Any?, substitutionVariables: [String: Any]?) -> Bool
 
   /**
-    - jsName: withSubstitutionVariables
-    - name: predicateWithSubstitutionVariables:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: withSubstitutionVariables(_:)
+    - Selector: predicateWithSubstitutionVariables:
   */
   @objc static func withSubstitutionVariables(_: [String: Any]) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: predicateFormat
-    - name: predicateFormat
-    - argLabels: 
+    - Selector: predicateFormat
   */
   @objc var predicateFormat: String { @objc get }
 }

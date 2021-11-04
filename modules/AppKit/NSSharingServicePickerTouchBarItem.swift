@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSharingServicePickerTouchBarItem
-    - name: NSSharingServicePickerTouchBarItem
-    - argLabels: 
+    - Selector: NSSharingServicePickerTouchBarItem
     - Introduced: 10.12.2
   */
 
@@ -21,32 +19,22 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: buttonImage
-    - name: buttonImage
-    - argLabels: 
+    - Selector: buttonImage
   */
   @objc var buttonImage: NSImage? { @objc get @objc (setButtonImage:) set }
 
   /**
-    - jsName: buttonTitle
-    - name: buttonTitle
-    - argLabels: 
+    - Selector: buttonTitle
   */
   @objc var buttonTitle: String { @objc get @objc (setButtonTitle:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSharingServicePickerTouchBarItemDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: isEnabled
-    - name: enabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEnabled
+    - Selector: enabled
   */
   @objc var isEnabled: Bool { @objc get @objc (setEnabled:) set }
 }

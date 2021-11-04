@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSColorPickerTouchBarItem
-    - name: NSColorPickerTouchBarItem
-    - argLabels: 
+    - Selector: NSColorPickerTouchBarItem
     - Introduced: 10.12.2
   */
 
@@ -19,104 +17,65 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: colorPicker
-    - name: colorPickerWithIdentifier:
-    - argLabels: withIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: colorPicker(withIdentifier:)
+    - Selector: colorPickerWithIdentifier:
   */
   @objc static func colorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self
 
   /**
-    - jsName: colorPicker
-    - name: colorPickerWithIdentifier:buttonImage:
-    - argLabels: withIdentifier, buttonImage
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: colorPicker(withIdentifier:buttonImage:)
+    - Selector: colorPickerWithIdentifier:buttonImage:
   */
   @objc static func colorPicker(withIdentifier: NSTouchBarItem.Identifier, buttonImage: NSImage) -> Self
 
   /**
-    - jsName: strokeColorPicker
-    - name: strokeColorPickerWithIdentifier:
-    - argLabels: withIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: strokeColorPicker(withIdentifier:)
+    - Selector: strokeColorPickerWithIdentifier:
   */
   @objc static func strokeColorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self
 
   /**
-    - jsName: textColorPicker
-    - name: textColorPickerWithIdentifier:
-    - argLabels: withIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: textColorPicker(withIdentifier:)
+    - Selector: textColorPickerWithIdentifier:
   */
   @objc static func textColorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: action
-    - name: action
-    - argLabels: 
+    - Selector: action
   */
   @objc var action: Selector? { @objc get @objc (setAction:) set }
 
   /**
-    - jsName: allowedColorSpaces
-    - name: allowedColorSpaces
-    - argLabels: 
-    - available: 10.13
+    - Selector: allowedColorSpaces
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var allowedColorSpaces: [NSColorSpace]? { @objc get @objc (setAllowedColorSpaces:) set }
 
   /**
-    - jsName: color
-    - name: color
-    - argLabels: 
+    - Selector: color
   */
   @objc var color: NSColor { @objc get @objc (setColor:) set }
 
   /**
-    - jsName: colorList
-    - name: colorList
-    - argLabels: 
+    - Selector: colorList
   */
   @objc var colorList: NSColorList! { @objc get @objc (setColorList:) set }
 
   /**
-    - jsName: customizationLabel
-    - name: customizationLabel
-    - argLabels: 
+    - Selector: customizationLabel
   */
   @objc var customizationLabel: String! { @objc get @objc (setCustomizationLabel:) set }
 
   /**
-    - jsName: isEnabled
-    - name: enabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEnabled
+    - Selector: enabled
   */
   @objc var isEnabled: Bool { @objc get @objc (setEnabled:) set }
 
   /**
-    - jsName: showsAlpha
-    - name: showsAlpha
-    - argLabels: 
+    - Selector: showsAlpha
   */
   @objc var showsAlpha: Bool { @objc get @objc (setShowsAlpha:) set }
 
   /**
-    - jsName: target
-    - name: target
-    - argLabels: 
+    - Selector: target
   */
   @objc var target: AnyObject? { @objc get @objc (setTarget:) set }
 }

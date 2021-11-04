@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSMetadataQuery
-    - name: NSMetadataQuery
-    - argLabels: 
+    - Selector: NSMetadataQuery
     - Introduced: 10.4
   */
 
@@ -21,216 +19,133 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: disableUpdates
-    - name: disableUpdates
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: disableUpdates
   */
   @objc func disableUpdates()
 
   /**
-    - jsName: enableUpdates
-    - name: enableUpdates
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: enableUpdates
   */
   @objc func enableUpdates()
 
   /**
-    - jsName: enumerateResults
-    - name: enumerateResultsUsingBlock:
-    - argLabels: _
-    - constructorTokens: 
-    - available: 10.9
-    - obsoleted: 3
-    - renamed: enumerateResults(_:)
+    - Selector: enumerateResultsUsingBlock:
     - Introduced: 10.9
   */
-  // jsvalue - @objc (enumerateResultsUsingBlock:) @available(OSX 10.9, *) func enumerateResults(_: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func enumerateResults(_: JSValue)
 
   /**
-    - jsName: enumerateResults
-    - name: enumerateResultsWithOptions:usingBlock:
-    - argLabels: options, using
-    - constructorTokens: 
-    - available: 10.9
-    - obsoleted: 3
-    - renamed: enumerateResults(options:using:)
+    - Selector: enumerateResultsWithOptions:usingBlock:
     - Introduced: 10.9
   */
-  // jsvalue - @objc (enumerateResultsWithOptions:usingBlock:) @available(OSX 10.9, *) func enumerateResults(options: NSEnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func enumerateResults(options: NSEnumerationOptions, using: JSValue)
 
   /**
-    - jsName: index
-    - name: indexOfResult:
-    - argLabels: ofResult
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: index(ofResult:)
+    - Selector: indexOfResult:
   */
   @objc (indexOfResult:) func index(ofResult: Any) -> Int
 
   /**
-    - jsName: result
-    - name: resultAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: result(at:)
+    - Selector: resultAtIndex:
   */
   @objc (resultAtIndex:) func result(at: Int) -> Any
 
   /**
-    - jsName: start
-    - name: startQuery
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: start()
+    - Selector: startQuery
   */
   @objc (startQuery) func start() -> Bool
 
   /**
-    - jsName: stop
-    - name: stopQuery
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: stop()
+    - Selector: stopQuery
   */
   @objc (stopQuery) func stop()
 
   /**
-    - jsName: value
-    - name: valueOfAttribute:forResultAtIndex:
-    - argLabels: ofAttribute, forResultAt
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: value(ofAttribute:forResultAt:)
+    - Selector: valueOfAttribute:forResultAtIndex:
   */
   @objc (valueOfAttribute:forResultAtIndex:) func value(ofAttribute: String, forResultAt: Int) -> Any?
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSMetadataQueryDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: isGathering
-    - name: gathering
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isGathering
+    - Selector: gathering
   */
   @objc var isGathering: Bool { @objc get }
 
   /**
-    - jsName: groupedResults
-    - name: groupedResults
-    - argLabels: 
+    - Selector: groupedResults
   */
   @objc var groupedResults: [NSMetadataQueryResultGroup] { @objc get }
 
   /**
-    - jsName: groupingAttributes
-    - name: groupingAttributes
-    - argLabels: 
+    - Selector: groupingAttributes
   */
   @objc var groupingAttributes: [String]? { @objc get @objc (setGroupingAttributes:) set }
 
   /**
-    - jsName: notificationBatchingInterval
-    - name: notificationBatchingInterval
-    - argLabels: 
+    - Selector: notificationBatchingInterval
   */
   @objc var notificationBatchingInterval: TimeInterval { @objc get @objc (setNotificationBatchingInterval:) set }
 
   /**
-    - jsName: operationQueue
-    - name: operationQueue
-    - argLabels: 
-    - available: 10.9
+    - Selector: operationQueue
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var operationQueue: OperationQueue? { @objc get @objc (setOperationQueue:) set }
 
   /**
-    - jsName: predicate
-    - name: predicate
-    - argLabels: 
+    - Selector: predicate
   */
   @objc var predicate: NSPredicate? { @objc get @objc (setPredicate:) set }
 
   /**
-    - jsName: resultCount
-    - name: resultCount
-    - argLabels: 
+    - Selector: resultCount
   */
   @objc var resultCount: Int { @objc get }
 
   /**
-    - jsName: results
-    - name: results
-    - argLabels: 
+    - Selector: results
   */
   @objc var results: [Any] { @objc get }
 
   /**
-    - jsName: searchItems
-    - name: searchItems
-    - argLabels: 
-    - available: 10.9
+    - Selector: searchItems
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var searchItems: [Any]? { @objc get @objc (setSearchItems:) set }
 
   /**
-    - jsName: searchScopes
-    - name: searchScopes
-    - argLabels: 
+    - Selector: searchScopes
   */
   @objc var searchScopes: [Any] { @objc get @objc (setSearchScopes:) set }
 
   /**
-    - jsName: sortDescriptors
-    - name: sortDescriptors
-    - argLabels: 
+    - Selector: sortDescriptors
   */
   @objc var sortDescriptors: [NSSortDescriptor] { @objc get @objc (setSortDescriptors:) set }
 
   /**
-    - jsName: isStarted
-    - name: started
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isStarted
+    - Selector: started
   */
   @objc var isStarted: Bool { @objc get }
 
   /**
-    - jsName: isStopped
-    - name: stopped
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isStopped
+    - Selector: stopped
   */
   @objc var isStopped: Bool { @objc get }
 
   /**
-    - jsName: valueListAttributes
-    - name: valueListAttributes
-    - argLabels: 
+    - Selector: valueListAttributes
   */
   @objc var valueListAttributes: [String] { @objc get @objc (setValueListAttributes:) set }
 
   /**
-    - jsName: valueLists
-    - name: valueLists
-    - argLabels: 
+    - Selector: valueLists
   */
   @objc var valueLists: [String: [NSMetadataQueryAttributeValueTuple]] { @objc get }
 }

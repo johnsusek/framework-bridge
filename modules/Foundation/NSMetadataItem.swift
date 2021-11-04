@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSMetadataItem
-    - name: NSMetadataItem
-    - argLabels: 
+    - Selector: NSMetadataItem
     - Introduced: 10.4
   */
 
@@ -21,40 +19,25 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithURL
-    - name: initWithURL:
-    - argLabels: 
-    - constructorTokens: url
+    - Selector: initWithURL:
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) static func createWithURL(_: URL) -> Self?
 
   /**
-    - jsName: value
-    - name: valueForAttribute:
-    - argLabels: forAttribute
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: value(forAttribute:)
+    - Selector: valueForAttribute:
   */
   @objc (valueForAttribute:) func value(forAttribute: String) -> Any?
 
   /**
-    - jsName: values
-    - name: valuesForAttributes:
-    - argLabels: forAttributes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: values(forAttributes:)
+    - Selector: valuesForAttributes:
   */
   @objc (valuesForAttributes:) func values(forAttributes: [String]) -> [String: Any]?
 
   // Own Instance Properties
 
   /**
-    - jsName: attributes
-    - name: attributes
-    - argLabels: 
+    - Selector: attributes
   */
   @objc var attributes: [String] { @objc get }
 }

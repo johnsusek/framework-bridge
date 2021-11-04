@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitConcentrationMass
-    - name: NSUnitConcentrationMass
-    - argLabels: 
+    - Selector: NSUnitConcentrationMass
     - Introduced: 10.12
   */
 
@@ -19,36 +17,24 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   /**
-    - jsName: millimolesPerLiter
-    - name: millimolesPerLiterWithGramsPerMole:
-    - argLabels: withGramsPerMole
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: millimolesPerLiter(withGramsPerMole:)
+    - Selector: millimolesPerLiterWithGramsPerMole:
   */
   @objc (millimolesPerLiterWithGramsPerMole:) static func millimolesPerLiter(withGramsPerMole: Double) -> UnitConcentrationMass
 
   // Own Static Properties
 
   /**
-    - jsName: gramsPerLiter
-    - name: gramsPerLiter
-    - argLabels: 
+    - Selector: gramsPerLiter
   */
   @objc static var gramsPerLiter: UnitConcentrationMass { @objc get }
 
   /**
-    - jsName: milligramsPerDeciliter
-    - name: milligramsPerDeciliter
-    - argLabels: 
+    - Selector: milligramsPerDeciliter
   */
   @objc static var milligramsPerDeciliter: UnitConcentrationMass { @objc get }
 }

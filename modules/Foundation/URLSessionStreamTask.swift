@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLSessionStreamTask
-    - name: NSURLSessionStreamTask
-    - argLabels: 
+    - Selector: NSURLSessionStreamTask
     - Introduced: 10.11
   */
 
@@ -21,56 +19,34 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: captureStreams
-    - name: captureStreams
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: captureStreams
   */
   @objc func captureStreams()
 
   /**
-    - jsName: closeRead
-    - name: closeRead
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: closeRead
   */
   @objc func closeRead()
 
   /**
-    - jsName: closeWrite
-    - name: closeWrite
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: closeWrite
   */
   @objc func closeWrite()
 
   /**
-    - jsName: readData
-    - name: readDataOfMinLength:maxLength:timeout:completionHandler:
-    - argLabels: ofMinLength, maxLength, timeout, completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: readData(ofMinLength:maxLength:timeout:completionHandler:)
+    - Selector: readDataOfMinLength:maxLength:timeout:completionHandler:
   */
-  // jsvalue - @objc (readDataOfMinLength:maxLength:timeout:completionHandler:) func readData(ofMinLength: Int, maxLength: Int, timeout: TimeInterval, completionHandler: JSValue)
+  // jsvalue @objc func readData(ofMinLength: Int, maxLength: Int, timeout: TimeInterval, completionHandler: JSValue)
 
   /**
-    - jsName: startSecureConnection
-    - name: startSecureConnection
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: startSecureConnection
   */
   @objc func startSecureConnection()
 
   /**
-    - jsName: write
-    - name: writeData:timeout:completionHandler:
-    - argLabels: _, timeout, completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: write(_:timeout:completionHandler:)
+    - Selector: writeData:timeout:completionHandler:
   */
-  // jsvalue - @objc (writeData:timeout:completionHandler:) func write(_: Data, timeout: TimeInterval, completionHandler: JSValue)
+  // jsvalue @objc func write(_: Data, timeout: TimeInterval, completionHandler: JSValue)
 }
 
 extension URLSessionStreamTask: URLSessionStreamTaskExports {

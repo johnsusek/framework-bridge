@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSGridColumn
-    - name: NSGridColumn
-    - argLabels: 
+    - Selector: NSGridColumn
     - Introduced: 10.12
   */
 
@@ -21,75 +19,49 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: cell
-    - name: cellAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cell(at:)
+    - Selector: cellAtIndex:
   */
   @objc (cellAtIndex:) func cell(at: Int) -> NSGridCell
 
   /**
-    - jsName: mergeCells
-    - name: mergeCellsInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: mergeCells(in:)
+    - Selector: mergeCellsInRange:
   */
   @objc (mergeCellsInRange:) func mergeCells(in: NSRange)
 
   // Own Instance Properties
 
   /**
-    - jsName: gridView
-    - name: gridView
-    - argLabels: 
+    - Selector: gridView
   */
   @objc var gridView: NSGridView? { @objc get }
 
   /**
-    - jsName: isHidden
-    - name: hidden
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isHidden
+    - Selector: hidden
   */
   @objc var isHidden: Bool { @objc get @objc (setHidden:) set }
 
   /**
-    - jsName: leadingPadding
-    - name: leadingPadding
-    - argLabels: 
+    - Selector: leadingPadding
   */
   @objc var leadingPadding: CGFloat { @objc get @objc (setLeadingPadding:) set }
 
   /**
-    - jsName: numberOfCells
-    - name: numberOfCells
-    - argLabels: 
+    - Selector: numberOfCells
   */
   @objc var numberOfCells: Int { @objc get }
 
   /**
-    - jsName: trailingPadding
-    - name: trailingPadding
-    - argLabels: 
+    - Selector: trailingPadding
   */
   @objc var trailingPadding: CGFloat { @objc get @objc (setTrailingPadding:) set }
 
   /**
-    - jsName: width
-    - name: width
-    - argLabels: 
+    - Selector: width
   */
   @objc var width: CGFloat { @objc get @objc (setWidth:) set }
 
   /**
-    - jsName: xPlacement
-    - name: xPlacement
-    - argLabels: 
+    - Selector: xPlacement
   */
   @objc var xPlacement: NSGridCell.Placement { @objc get @objc (setXPlacement:) set }
 }

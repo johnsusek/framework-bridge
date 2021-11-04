@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSRangeSpecifier
-    - name: NSRangeSpecifier
-    - argLabels: 
+    - Selector: NSRangeSpecifier
   */
 
 @objc(NSRangeSpecifier) protocol NSRangeSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
@@ -20,26 +18,19 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithContainerClassDescription
-    - name: initWithContainerClassDescription:containerSpecifier:key:startSpecifier:endSpecifier:
-    - argLabels: containerSpecifier, key, startSpecifier, endSpecifier
-    - constructorTokens: containerClassDescription, containerSpecifier, key, startSpecifier, endSpecifier
+    - Selector: initWithContainerClassDescription:containerSpecifier:key:startSpecifier:endSpecifier:
   */
   @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, start: NSScriptObjectSpecifier?, end: NSScriptObjectSpecifier?) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: endSpecifier
-    - name: endSpecifier
-    - argLabels: 
+    - Selector: endSpecifier
   */
   @objc var endSpecifier: NSScriptObjectSpecifier? { @objc get @objc (setEndSpecifier:) set }
 
   /**
-    - jsName: startSpecifier
-    - name: startSpecifier
-    - argLabels: 
+    - Selector: startSpecifier
   */
   @objc var startSpecifier: NSScriptObjectSpecifier? { @objc get @objc (setStartSpecifier:) set }
 }

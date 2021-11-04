@@ -9,49 +9,26 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSSortDescriptor
-    - name: NSSortDescriptor
-    - argLabels: 
+    - Selector: NSSortDescriptor
   */
 
 @objc(NSSortDescriptor) protocol NSSortDescriptorExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: sortDescriptorWithKey:ascending:
-    - argLabels: key, ascending
-    - constructorTokens: 
-    - available: 10.6
-    - unavailable: true
-    - renamed: init(key:ascending:)
-    - message: Not available in Swift
+    - Selector: sortDescriptorWithKey:ascending:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) static func create(key: String?, ascending: Bool) -> Self
 
   /**
-    - jsName: create
-    - name: sortDescriptorWithKey:ascending:comparator:
-    - argLabels: key, ascending, comparator
-    - constructorTokens: 
-    - available: 10.6
-    - unavailable: true
-    - renamed: init(key:ascending:comparator:)
-    - message: Not available in Swift
+    - Selector: sortDescriptorWithKey:ascending:comparator:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) static func create(key: String?, ascending: Bool, comparator: JSValue) -> Self
+// jsvalue   @objc @available(OSX 10.6, *) static func create(key: String?, ascending: Bool, comparator: JSValue) -> Self
 
   /**
-    - jsName: create
-    - name: sortDescriptorWithKey:ascending:selector:
-    - argLabels: key, ascending, selector
-    - constructorTokens: 
-    - available: 10.6
-    - unavailable: true
-    - renamed: init(key:ascending:selector:)
-    - message: Not available in Swift
+    - Selector: sortDescriptorWithKey:ascending:selector:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) static func create(key: String?, ascending: Bool, selector: Selector?) -> Self
@@ -59,61 +36,41 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: allowEvaluation
-    - name: allowEvaluation
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.9
+    - Selector: allowEvaluation
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) func allowEvaluation()
 
   /**
-    - jsName: compare
-    - name: compareObject:toObject:
-    - argLabels: _, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: compare(_:to:)
+    - Selector: compareObject:toObject:
   */
   @objc (compareObject:toObject:) func compare(_: Any, to: Any) -> ComparisonResult
 
   // Own Instance Properties
 
   /**
-    - jsName: ascending
-    - name: ascending
-    - argLabels: 
+    - Selector: ascending
   */
   @objc var ascending: Bool { @objc get }
 
   /**
-    - jsName: comparator
-    - name: comparator
-    - argLabels: 
-    - available: 10.6
+    - Selector: comparator
     - Introduced: 10.6
   */
 // jsvalue   @objc @available(OSX 10.6, *) var comparator: JSValue { @objc get }
 
   /**
-    - jsName: key
-    - name: key
-    - argLabels: 
+    - Selector: key
   */
   @objc var key: String? { @objc get }
 
   /**
-    - jsName: reversedSortDescriptor
-    - name: reversedSortDescriptor
-    - argLabels: 
+    - Selector: reversedSortDescriptor
   */
   @objc var reversedSortDescriptor: Any { @objc get }
 
   /**
-    - jsName: selector
-    - name: selector
-    - argLabels: 
+    - Selector: selector
   */
   @objc var selector: Selector? { @objc get }
 }

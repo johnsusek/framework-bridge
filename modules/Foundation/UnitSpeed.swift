@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitSpeed
-    - name: NSUnitSpeed
-    - argLabels: 
+    - Selector: NSUnitSpeed
     - Introduced: 10.12
   */
 
@@ -19,40 +17,29 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: kilometersPerHour
-    - name: kilometersPerHour
-    - argLabels: 
+    - Selector: kilometersPerHour
   */
   @objc static var kilometersPerHour: UnitSpeed { @objc get }
 
   /**
-    - jsName: knots
-    - name: knots
-    - argLabels: 
+    - Selector: knots
   */
   @objc static var knots: UnitSpeed { @objc get }
 
   /**
-    - jsName: metersPerSecond
-    - name: metersPerSecond
-    - argLabels: 
+    - Selector: metersPerSecond
   */
   @objc static var metersPerSecond: UnitSpeed { @objc get }
 
   /**
-    - jsName: milesPerHour
-    - name: milesPerHour
-    - argLabels: 
+    - Selector: milesPerHour
   */
   @objc static var milesPerHour: UnitSpeed { @objc get }
 }

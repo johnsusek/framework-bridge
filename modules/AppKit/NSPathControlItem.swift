@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPathControlItem
-    - name: NSPathControlItem
-    - argLabels: 
+    - Selector: NSPathControlItem
     - Introduced: 10.10
   */
 
@@ -21,32 +19,22 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: url
-    - name: URL
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: url
+    - Selector: URL
   */
   @objc var url: URL? { @objc (URL) get }
 
   /**
-    - jsName: attributedTitle
-    - name: attributedTitle
-    - argLabels: 
+    - Selector: attributedTitle
   */
   @objc var attributedTitle: NSAttributedString { @objc get @objc (setAttributedTitle:) set }
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
+    - Selector: image
   */
   @objc var image: NSImage? { @objc get @objc (setImage:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get @objc (setTitle:) set }
 }

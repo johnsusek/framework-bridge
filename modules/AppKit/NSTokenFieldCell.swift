@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTokenFieldCell
-    - name: NSTokenFieldCell
-    - argLabels: 
+    - Selector: NSTokenFieldCell
   */
 
 @objc(NSTokenFieldCell) protocol NSTokenFieldCellExports: JSExport, NSTextFieldCellExports {
@@ -20,46 +18,34 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: defaultCompletionDelay
-    - name: defaultCompletionDelay
-    - argLabels: 
+    - Selector: defaultCompletionDelay
   */
   @objc static var defaultCompletionDelay: TimeInterval { @objc get }
 
   /**
-    - jsName: defaultTokenizingCharacterSet
-    - name: defaultTokenizingCharacterSet
-    - argLabels: 
+    - Selector: defaultTokenizingCharacterSet
   */
   @objc static var defaultTokenizingCharacterSet: CharacterSet { @objc get }
 
   // Own Instance Properties
 
   /**
-    - jsName: completionDelay
-    - name: completionDelay
-    - argLabels: 
+    - Selector: completionDelay
   */
   @objc var completionDelay: TimeInterval { @objc get @objc (setCompletionDelay:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSTokenFieldCellDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: tokenStyle
-    - name: tokenStyle
-    - argLabels: 
+    - Selector: tokenStyle
   */
   @objc var tokenStyle: NSTokenField.TokenStyle { @objc get @objc (setTokenStyle:) set }
 
   /**
-    - jsName: tokenizingCharacterSet
-    - name: tokenizingCharacterSet
-    - argLabels: 
+    - Selector: tokenizingCharacterSet
   */
   @objc var tokenizingCharacterSet: CharacterSet! { @objc get @objc (setTokenizingCharacterSet:) set }
 }

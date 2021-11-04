@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutGroupCustomItem
-    - name: NSCollectionLayoutGroupCustomItem
-    - argLabels: 
+    - Selector: NSCollectionLayoutGroupCustomItem
     - Introduced: 10.15
   */
 
@@ -19,40 +17,24 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: customItemWithFrame:
-    - argLabels: frame
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(frame:)
-    - message: Not available in Swift
+    - Selector: customItemWithFrame:
   */
   @objc static func create(frame: CGRect) -> Self
 
   /**
-    - jsName: create
-    - name: customItemWithFrame:zIndex:
-    - argLabels: frame, zIndex
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(frame:zIndex:)
-    - message: Not available in Swift
+    - Selector: customItemWithFrame:zIndex:
   */
   @objc static func create(frame: CGRect, zIndex: Int) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: frame
-    - name: frame
-    - argLabels: 
+    - Selector: frame
   */
   @objc var frame: CGRect { @objc get }
 
   /**
-    - jsName: zIndex
-    - name: zIndex
-    - argLabels: 
+    - Selector: zIndex
   */
   @objc var zIndex: Int { @objc get }
 }

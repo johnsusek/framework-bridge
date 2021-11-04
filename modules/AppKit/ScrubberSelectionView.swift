@@ -9,14 +9,18 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubberSelectionView
-    - name: NSScrubberSelectionView
-    - argLabels: 
+    - Selector: NSScrubberSelectionView
     - Introduced: 10.12.2
   */
 
 @objc(NSScrubberSelectionView) protocol NSScrubberSelectionViewExports: JSExport, NSScrubberArrangedViewExports {
   // Static Methods
+
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
 }
 
 @objc protocol ScrubberSelectionViewExports: JSExport, NSScrubberArrangedViewExports {

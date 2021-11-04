@@ -9,98 +9,59 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSGlyphInfo
-    - name: NSGlyphInfo
-    - argLabels: 
+    - Selector: NSGlyphInfo
   */
 
 @objc(NSGlyphInfo) protocol NSGlyphInfoExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: glyphInfoWithCGGlyph:forFont:baseString:
-    - argLabels: cgGlyph, for, baseString
-    - constructorTokens: 
-    - available: 10.13
-    - unavailable: true
-    - renamed: init(cgGlyph:for:baseString:)
-    - message: Not available in Swift
+    - Selector: glyphInfoWithCGGlyph:forFont:baseString:
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) static func create(cgGlyph: CGGlyph, `for`: NSFont, baseString: String) -> NSGlyphInfo?
 
   /**
-    - jsName: create
-    - name: glyphInfoWithCharacterIdentifier:collection:baseString:
-    - argLabels: characterIdentifier, collection, baseString
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(characterIdentifier:collection:baseString:)
-    - message: Not available in Swift
+    - Selector: glyphInfoWithCharacterIdentifier:collection:baseString:
   */
   @objc static func create(characterIdentifier: Int, collection: NSCharacterCollection, baseString: String) -> NSGlyphInfo?
 
   /**
-    - jsName: create
-    - name: glyphInfoWithGlyph:forFont:baseString:
-    - argLabels: glyph, for, baseString
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(glyph:for:baseString:)
-    - message: Not available in Swift
+    - Selector: glyphInfoWithGlyph:forFont:baseString:
   */
   @objc static func create(glyph: NSGlyph, `for`: NSFont, baseString: String) -> NSGlyphInfo?
 
   /**
-    - jsName: create
-    - name: glyphInfoWithGlyphName:forFont:baseString:
-    - argLabels: glyphName, for, baseString
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(glyphName:for:baseString:)
-    - message: Not available in Swift
+    - Selector: glyphInfoWithGlyphName:forFont:baseString:
   */
   @objc static func create(glyphName: String, `for`: NSFont, baseString: String) -> NSGlyphInfo?
 
   // Own Instance Properties
 
   /**
-    - jsName: baseString
-    - name: baseString
-    - argLabels: 
-    - available: 10.13
+    - Selector: baseString
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var baseString: String { @objc get }
 
   /**
-    - jsName: characterCollection
-    - name: characterCollection
-    - argLabels: 
+    - Selector: characterCollection
   */
   @objc var characterCollection: NSCharacterCollection { @objc get }
 
   /**
-    - jsName: characterIdentifier
-    - name: characterIdentifier
-    - argLabels: 
+    - Selector: characterIdentifier
   */
   @objc var characterIdentifier: Int { @objc get }
 
   /**
-    - jsName: glyphID
-    - name: glyphID
-    - argLabels: 
-    - available: 10.13
+    - Selector: glyphID
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var glyphID: CGGlyph { @objc get }
 
   /**
-    - jsName: glyphName
-    - name: glyphName
-    - argLabels: 
+    - Selector: glyphName
   */
   @objc var glyphName: String? { @objc get }
 }

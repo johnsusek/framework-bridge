@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSMenuItemCell
-    - name: NSMenuItemCell
-    - argLabels: 
+    - Selector: NSMenuItemCell
   */
 
 @objc(NSMenuItemCell) protocol NSMenuItemCellExports: JSExport, NSButtonCellExports {
@@ -20,141 +18,84 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: calcSize
-    - name: calcSize
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: calcSize
   */
   @objc func calcSize()
 
   /**
-    - jsName: drawBorderAndBackground
-    - name: drawBorderAndBackgroundWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawBorderAndBackground(withFrame:in:)
+    - Selector: drawBorderAndBackgroundWithFrame:inView:
   */
   @objc (drawBorderAndBackgroundWithFrame:inView:) func drawBorderAndBackground(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawImage
-    - name: drawImageWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawImage(withFrame:in:)
+    - Selector: drawImageWithFrame:inView:
   */
   @objc (drawImageWithFrame:inView:) func drawImage(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawKeyEquivalent
-    - name: drawKeyEquivalentWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawKeyEquivalent(withFrame:in:)
+    - Selector: drawKeyEquivalentWithFrame:inView:
   */
   @objc (drawKeyEquivalentWithFrame:inView:) func drawKeyEquivalent(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawSeparatorItem
-    - name: drawSeparatorItemWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawSeparatorItem(withFrame:in:)
+    - Selector: drawSeparatorItemWithFrame:inView:
   */
   @objc (drawSeparatorItemWithFrame:inView:) func drawSeparatorItem(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawStateImage
-    - name: drawStateImageWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawStateImage(withFrame:in:)
+    - Selector: drawStateImageWithFrame:inView:
   */
   @objc (drawStateImageWithFrame:inView:) func drawStateImage(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawTitle
-    - name: drawTitleWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawTitle(withFrame:in:)
+    - Selector: drawTitleWithFrame:inView:
   */
   @objc (drawTitleWithFrame:inView:) func drawTitle(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: keyEquivalentRect
-    - name: keyEquivalentRectForBounds:
-    - argLabels: forBounds
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: keyEquivalentRect(forBounds:)
+    - Selector: keyEquivalentRectForBounds:
   */
   @objc (keyEquivalentRectForBounds:) func keyEquivalentRect(forBounds: CGRect) -> CGRect
 
   /**
-    - jsName: stateImageRect
-    - name: stateImageRectForBounds:
-    - argLabels: forBounds
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: stateImageRect(forBounds:)
+    - Selector: stateImageRectForBounds:
   */
   @objc (stateImageRectForBounds:) func stateImageRect(forBounds: CGRect) -> CGRect
 
   // Own Instance Properties
 
   /**
-    - jsName: imageWidth
-    - name: imageWidth
-    - argLabels: 
+    - Selector: imageWidth
   */
   @objc var imageWidth: CGFloat { @objc get }
 
   /**
-    - jsName: keyEquivalentWidth
-    - name: keyEquivalentWidth
-    - argLabels: 
+    - Selector: keyEquivalentWidth
   */
   @objc var keyEquivalentWidth: CGFloat { @objc get }
 
   /**
-    - jsName: menuItem
-    - name: menuItem
-    - argLabels: 
+    - Selector: menuItem
   */
   @objc var menuItem: NSMenuItem? { @objc get @objc (setMenuItem:) set }
 
   /**
-    - jsName: needsDisplay
-    - name: needsDisplay
-    - argLabels: 
+    - Selector: needsDisplay
   */
   @objc var needsDisplay: Bool { @objc get @objc (setNeedsDisplay:) set }
 
   /**
-    - jsName: needsSizing
-    - name: needsSizing
-    - argLabels: 
+    - Selector: needsSizing
   */
   @objc var needsSizing: Bool { @objc get @objc (setNeedsSizing:) set }
 
   /**
-    - jsName: stateImageWidth
-    - name: stateImageWidth
-    - argLabels: 
+    - Selector: stateImageWidth
   */
   @objc var stateImageWidth: CGFloat { @objc get }
 
   /**
-    - jsName: titleWidth
-    - name: titleWidth
-    - argLabels: 
+    - Selector: titleWidth
   */
   @objc var titleWidth: CGFloat { @objc get }
 }

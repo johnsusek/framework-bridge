@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLSessionDownloadTask
-    - name: NSURLSessionDownloadTask
-    - argLabels: 
+    - Selector: NSURLSessionDownloadTask
   */
 
 @objc(URLSessionDownloadTask) protocol URLSessionDownloadTaskExports: JSExport, URLSessionTaskExports {
@@ -20,14 +18,9 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: cancel
-    - name: cancelByProducingResumeData:
-    - argLabels: byProducingResumeData
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cancel(byProducingResumeData:)
+    - Selector: cancelByProducingResumeData:
   */
-  // jsvalue - @objc (cancelByProducingResumeData:) func cancel(byProducingResumeData: JSValue)
+  // jsvalue @objc func cancel(byProducingResumeData: JSValue)
 }
 
 extension URLSessionDownloadTask: URLSessionDownloadTaskExports {

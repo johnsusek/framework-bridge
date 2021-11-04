@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSStepperCell
-    - name: NSStepperCell
-    - argLabels: 
+    - Selector: NSStepperCell
   */
 
 @objc(NSStepperCell) protocol NSStepperCellExports: JSExport, NSActionCellExports {
@@ -20,37 +18,27 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: autorepeat
-    - name: autorepeat
-    - argLabels: 
+    - Selector: autorepeat
   */
   @objc var autorepeat: Bool { @objc get @objc (setAutorepeat:) set }
 
   /**
-    - jsName: increment
-    - name: increment
-    - argLabels: 
+    - Selector: increment
   */
   @objc var increment: Double { @objc get @objc (setIncrement:) set }
 
   /**
-    - jsName: maxValue
-    - name: maxValue
-    - argLabels: 
+    - Selector: maxValue
   */
   @objc var maxValue: Double { @objc get @objc (setMaxValue:) set }
 
   /**
-    - jsName: minValue
-    - name: minValue
-    - argLabels: 
+    - Selector: minValue
   */
   @objc var minValue: Double { @objc get @objc (setMinValue:) set }
 
   /**
-    - jsName: valueWraps
-    - name: valueWraps
-    - argLabels: 
+    - Selector: valueWraps
   */
   @objc var valueWraps: Bool { @objc get @objc (setValueWraps:) set }
 }

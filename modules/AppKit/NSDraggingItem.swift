@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSDraggingItem
-    - name: NSDraggingItem
-    - argLabels: 
+    - Selector: NSDraggingItem
     - Introduced: 10.7
   */
 
@@ -21,40 +19,29 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithPasteboardWriter
-    - name: initWithPasteboardWriter:
-    - argLabels: 
-    - constructorTokens: pasteboardWriter
+    - Selector: initWithPasteboardWriter:
   */
   @objc static func createWithPasteboardWriter(_: NSPasteboardWriting) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: draggingFrame
-    - name: draggingFrame
-    - argLabels: 
+    - Selector: draggingFrame
   */
   @objc var draggingFrame: CGRect { @objc get @objc (setDraggingFrame:) set }
 
   /**
-    - jsName: imageComponents
-    - name: imageComponents
-    - argLabels: 
+    - Selector: imageComponents
   */
   @objc var imageComponents: [NSDraggingImageComponent]? { @objc get }
 
   /**
-    - jsName: imageComponentsProvider
-    - name: imageComponentsProvider
-    - argLabels: 
+    - Selector: imageComponentsProvider
   */
 // jsvalue   @objc var imageComponentsProvider: JSValue? { @objc get @objc (setImageComponentsProvider:) set }
 
   /**
-    - jsName: item
-    - name: item
-    - argLabels: 
+    - Selector: item
   */
   @objc var item: Any { @objc get }
 }

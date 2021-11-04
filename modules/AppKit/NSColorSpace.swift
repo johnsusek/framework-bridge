@@ -9,22 +9,14 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSColorSpace
-    - name: NSColorSpace
-    - argLabels: 
+    - Selector: NSColorSpace
   */
 
 @objc(NSColorSpace) protocol NSColorSpaceExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: availableColorSpaces
-    - name: availableColorSpacesWithModel:
-    - argLabels: with
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: availableColorSpaces(with:)
+    - Selector: availableColorSpacesWithModel:
     - Introduced: 10.6
   */
   @objc (availableColorSpacesWithModel:) @available(OSX 10.6, *) static func availableColorSpaces(with: NSColorSpace.Model) -> [NSColorSpace]
@@ -32,121 +24,67 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: adobeRGB1998
-    - name: adobeRGB1998ColorSpace
-    - argLabels: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: adobeRGB1998
+    - Selector: adobeRGB1998ColorSpace
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) static var adobeRGB1998: NSColorSpace { @objc (adobeRGB1998ColorSpace) get }
 
   /**
-    - jsName: deviceCMYK
-    - name: deviceCMYKColorSpace
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: deviceCMYK
+    - Selector: deviceCMYKColorSpace
   */
   @objc static var deviceCMYK: NSColorSpace { @objc (deviceCMYKColorSpace) get }
 
   /**
-    - jsName: deviceGray
-    - name: deviceGrayColorSpace
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: deviceGray
+    - Selector: deviceGrayColorSpace
   */
   @objc static var deviceGray: NSColorSpace { @objc (deviceGrayColorSpace) get }
 
   /**
-    - jsName: deviceRGB
-    - name: deviceRGBColorSpace
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: deviceRGB
+    - Selector: deviceRGBColorSpace
   */
   @objc static var deviceRGB: NSColorSpace { @objc (deviceRGBColorSpace) get }
 
   /**
-    - jsName: displayP3
-    - name: displayP3ColorSpace
-    - argLabels: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: displayP3
+    - Selector: displayP3ColorSpace
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static var displayP3: NSColorSpace { @objc (displayP3ColorSpace) get }
 
   /**
-    - jsName: extendedGenericGamma22Gray
-    - name: extendedGenericGamma22GrayColorSpace
-    - argLabels: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: extendedGenericGamma22Gray
+    - Selector: extendedGenericGamma22GrayColorSpace
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static var extendedGenericGamma22Gray: NSColorSpace { @objc (extendedGenericGamma22GrayColorSpace) get }
 
   /**
-    - jsName: extendedSRGB
-    - name: extendedSRGBColorSpace
-    - argLabels: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: extendedSRGB
+    - Selector: extendedSRGBColorSpace
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static var extendedSRGB: NSColorSpace { @objc (extendedSRGBColorSpace) get }
 
   /**
-    - jsName: genericCMYK
-    - name: genericCMYKColorSpace
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: genericCMYK
+    - Selector: genericCMYKColorSpace
   */
   @objc static var genericCMYK: NSColorSpace { @objc (genericCMYKColorSpace) get }
 
   /**
-    - jsName: genericGamma22Gray
-    - name: genericGamma22GrayColorSpace
-    - argLabels: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: genericGamma22Gray
+    - Selector: genericGamma22GrayColorSpace
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) static var genericGamma22Gray: NSColorSpace { @objc (genericGamma22GrayColorSpace) get }
 
   /**
-    - jsName: genericGray
-    - name: genericGrayColorSpace
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: genericGray
+    - Selector: genericGrayColorSpace
   */
   @objc static var genericGray: NSColorSpace { @objc (genericGrayColorSpace) get }
 
   /**
-    - jsName: genericRGB
-    - name: genericRGBColorSpace
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: genericRGB
+    - Selector: genericRGBColorSpace
   */
   @objc static var genericRGB: NSColorSpace { @objc (genericRGBColorSpace) get }
 
   /**
-    - jsName: sRGB
-    - name: sRGBColorSpace
-    - argLabels: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: sRGB
+    - Selector: sRGBColorSpace
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) static var sRGB: NSColorSpace { @objc (sRGBColorSpace) get }
@@ -154,77 +92,51 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithCGColorSpace
-    - name: initWithCGColorSpace:
-    - argLabels: 
-    - constructorTokens: cgColorSpace
+    - Selector: initWithCGColorSpace:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) static func createWithCGColorSpace(_: CGColorSpace) -> Self?
 
   /**
-    - jsName: createWithColorSyncProfile
-    - name: initWithColorSyncProfile:
-    - argLabels: 
-    - constructorTokens: colorSyncProfile
+    - Selector: initWithColorSyncProfile:
   */
   @objc static func createWithColorSyncProfile(_: UnsafeMutableRawPointer) -> Self?
 
   /**
-    - jsName: createWithICCProfileData
-    - name: initWithICCProfileData:
-    - argLabels: 
-    - constructorTokens: iccProfileData
+    - Selector: initWithICCProfileData:
   */
   @objc static func createWithICCProfileData(_: Data) -> Self?
 
   // Own Instance Properties
 
   /**
-    - jsName: cgColorSpace
-    - name: CGColorSpace
-    - argLabels: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: cgColorSpace
+    - Selector: CGColorSpace
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var cgColorSpace: CGColorSpace? { @objc (CGColorSpace) get }
 
   /**
-    - jsName: iccProfileData
-    - name: ICCProfileData
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: iccProfileData
+    - Selector: ICCProfileData
   */
   @objc var iccProfileData: Data? { @objc (ICCProfileData) get }
 
   /**
-    - jsName: colorSpaceModel
-    - name: colorSpaceModel
-    - argLabels: 
+    - Selector: colorSpaceModel
   */
   @objc var colorSpaceModel: NSColorSpace.Model { @objc get }
 
   /**
-    - jsName: colorSyncProfile
-    - name: colorSyncProfile
-    - argLabels: 
+    - Selector: colorSyncProfile
   */
   @objc var colorSyncProfile: UnsafeMutableRawPointer? { @objc get }
 
   /**
-    - jsName: localizedName
-    - name: localizedName
-    - argLabels: 
+    - Selector: localizedName
   */
   @objc var localizedName: String? { @objc get }
 
   /**
-    - jsName: numberOfColorComponents
-    - name: numberOfColorComponents
-    - argLabels: 
+    - Selector: numberOfColorComponents
   */
   @objc var numberOfColorComponents: Int { @objc get }
 }

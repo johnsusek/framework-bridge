@@ -9,80 +9,55 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPrinter
-    - name: NSPrinter
-    - argLabels: 
+    - Selector: NSPrinter
   */
 
 @objc(NSPrinter) protocol NSPrinterExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: printerWithType:
-    - argLabels: type
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(type:)
-    - message: Not available in Swift
+    - Selector: printerWithType:
   */
   @objc static func create(type: NSPrinter.TypeName) -> NSPrinter?
 
   // Own Static Properties
 
   /**
-    - jsName: printerNames
-    - name: printerNames
-    - argLabels: 
+    - Selector: printerNames
   */
   @objc static var printerNames: [String] { @objc get }
 
   /**
-    - jsName: printerTypes
-    - name: printerTypes
-    - argLabels: 
+    - Selector: printerTypes
   */
   @objc static var printerTypes: [NSPrinter.TypeName] { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: pageSize
-    - name: pageSizeForPaper:
-    - argLabels: forPaper
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: pageSize(forPaper:)
+    - Selector: pageSizeForPaper:
   */
   @objc (pageSizeForPaper:) func pageSize(forPaper: NSPrinter.PaperName) -> CGSize
 
   // Own Instance Properties
 
   /**
-    - jsName: deviceDescription
-    - name: deviceDescription
-    - argLabels: 
+    - Selector: deviceDescription
   */
   @objc var deviceDescription: [NSDeviceDescriptionKey: Any] { @objc get }
 
   /**
-    - jsName: languageLevel
-    - name: languageLevel
-    - argLabels: 
+    - Selector: languageLevel
   */
   @objc var languageLevel: Int { @objc get }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: String { @objc get }
 
   /**
-    - jsName: type
-    - name: type
-    - argLabels: 
+    - Selector: type
   */
   @objc var type: NSPrinter.TypeName { @objc get }
 }

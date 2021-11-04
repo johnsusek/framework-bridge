@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSStringDrawingContext
-    - name: NSStringDrawingContext
-    - argLabels: 
+    - Selector: NSStringDrawingContext
     - Introduced: 10.11
   */
 
@@ -21,23 +19,17 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: actualScaleFactor
-    - name: actualScaleFactor
-    - argLabels: 
+    - Selector: actualScaleFactor
   */
   @objc var actualScaleFactor: CGFloat { @objc get }
 
   /**
-    - jsName: minimumScaleFactor
-    - name: minimumScaleFactor
-    - argLabels: 
+    - Selector: minimumScaleFactor
   */
   @objc var minimumScaleFactor: CGFloat { @objc get @objc (setMinimumScaleFactor:) set }
 
   /**
-    - jsName: totalBounds
-    - name: totalBounds
-    - argLabels: 
+    - Selector: totalBounds
   */
   @objc var totalBounds: CGRect { @objc get }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSSpellServer
-    - name: NSSpellServer
-    - argLabels: 
+    - Selector: NSSpellServer
   */
 
 @objc(NSSpellServer) protocol NSSpellServerExports: JSExport, NSObjectExports {
@@ -20,37 +18,24 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: isWord
-    - name: isWordInUserDictionaries:caseSensitive:
-    - argLabels: inUserDictionaries, caseSensitive
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: isWord(inUserDictionaries:caseSensitive:)
+    - Selector: isWordInUserDictionaries:caseSensitive:
   */
   @objc (isWordInUserDictionaries:caseSensitive:) func isWord(inUserDictionaries: String, caseSensitive: Bool) -> Bool
 
   /**
-    - jsName: registerLanguage
-    - name: registerLanguage:byVendor:
-    - argLabels: byVendor
-    - constructorTokens: 
+    - Selector: registerLanguage:byVendor:
   */
   @objc func registerLanguage(_: String?, byVendor: String?) -> Bool
 
   /**
-    - jsName: run
-    - name: run
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: run
   */
   @objc func run()
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSpellServerDelegate? { @objc get @objc (setDelegate:) set }
 }

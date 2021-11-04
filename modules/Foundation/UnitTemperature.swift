@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitTemperature
-    - name: NSUnitTemperature
-    - argLabels: 
+    - Selector: NSUnitTemperature
     - Introduced: 10.12
   */
 
@@ -19,33 +17,24 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: celsius
-    - name: celsius
-    - argLabels: 
+    - Selector: celsius
   */
   @objc static var celsius: UnitTemperature { @objc get }
 
   /**
-    - jsName: fahrenheit
-    - name: fahrenheit
-    - argLabels: 
+    - Selector: fahrenheit
   */
   @objc static var fahrenheit: UnitTemperature { @objc get }
 
   /**
-    - jsName: kelvin
-    - name: kelvin
-    - argLabels: 
+    - Selector: kelvin
   */
   @objc static var kelvin: UnitTemperature { @objc get }
 }

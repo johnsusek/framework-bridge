@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitElectricResistance
-    - name: NSUnitElectricResistance
-    - argLabels: 
+    - Selector: NSUnitElectricResistance
     - Introduced: 10.12
   */
 
@@ -19,47 +17,34 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: kiloohms
-    - name: kiloohms
-    - argLabels: 
+    - Selector: kiloohms
   */
   @objc static var kiloohms: UnitElectricResistance { @objc get }
 
   /**
-    - jsName: megaohms
-    - name: megaohms
-    - argLabels: 
+    - Selector: megaohms
   */
   @objc static var megaohms: UnitElectricResistance { @objc get }
 
   /**
-    - jsName: microohms
-    - name: microohms
-    - argLabels: 
+    - Selector: microohms
   */
   @objc static var microohms: UnitElectricResistance { @objc get }
 
   /**
-    - jsName: milliohms
-    - name: milliohms
-    - argLabels: 
+    - Selector: milliohms
   */
   @objc static var milliohms: UnitElectricResistance { @objc get }
 
   /**
-    - jsName: ohms
-    - name: ohms
-    - argLabels: 
+    - Selector: ohms
   */
   @objc static var ohms: UnitElectricResistance { @objc get }
 }

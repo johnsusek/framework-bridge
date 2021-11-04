@@ -9,23 +9,14 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSScriptObjectSpecifier
-    - name: NSScriptObjectSpecifier
-    - argLabels: 
+    - Selector: NSScriptObjectSpecifier
   */
 
 @objc(NSScriptObjectSpecifier) protocol NSScriptObjectSpecifierExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: objectSpecifierWithDescriptor:
-    - argLabels: descriptor
-    - constructorTokens: 
-    - available: 10.5
-    - unavailable: true
-    - renamed: init(descriptor:)
-    - message: Not available in Swift
+    - Selector: objectSpecifierWithDescriptor:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) static func create(descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier?
@@ -33,125 +24,80 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: indicesOfObjectsByEvaluating
-    - name: indicesOfObjectsByEvaluatingWithContainer:count:
-    - argLabels: withContainer, count
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indicesOfObjectsByEvaluating(withContainer:count:)
+    - Selector: indicesOfObjectsByEvaluatingWithContainer:count:
   */
   @objc (indicesOfObjectsByEvaluatingWithContainer:count:) func indicesOfObjectsByEvaluating(withContainer: Any, count: UnsafeMutablePointer<NSInteger>) -> UnsafeMutablePointer<NSInteger>?
 
   /**
-    - jsName: createWithContainerClassDescription
-    - name: initWithContainerClassDescription:containerSpecifier:key:
-    - argLabels: containerSpecifier, key
-    - constructorTokens: containerClassDescription, containerSpecifier, key
+    - Selector: initWithContainerClassDescription:containerSpecifier:key:
   */
   @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String) -> Self
 
   /**
-    - jsName: createWithContainerSpecifier
-    - name: initWithContainerSpecifier:key:
-    - argLabels: key
-    - constructorTokens: containerSpecifier, key
+    - Selector: initWithContainerSpecifier:key:
   */
   @objc static func createWithContainerSpecifier(_: NSScriptObjectSpecifier, key: String) -> Self
 
   /**
-    - jsName: objectsByEvaluating
-    - name: objectsByEvaluatingWithContainers:
-    - argLabels: withContainers
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: objectsByEvaluating(withContainers:)
+    - Selector: objectsByEvaluatingWithContainers:
   */
   @objc (objectsByEvaluatingWithContainers:) func objectsByEvaluating(withContainers: Any) -> Any?
 
   // Own Instance Properties
 
   /**
-    - jsName: child
-    - name: childSpecifier
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: child
+    - Selector: childSpecifier
   */
   @objc var child: NSScriptObjectSpecifier? { @objc (childSpecifier) get @objc (setChildSpecifier:) set }
 
   /**
-    - jsName: containerClassDescription
-    - name: containerClassDescription
-    - argLabels: 
+    - Selector: containerClassDescription
   */
   @objc var containerClassDescription: NSScriptClassDescription? { @objc get @objc (setContainerClassDescription:) set }
 
   /**
-    - jsName: containerIsObjectBeingTested
-    - name: containerIsObjectBeingTested
-    - argLabels: 
+    - Selector: containerIsObjectBeingTested
   */
   @objc var containerIsObjectBeingTested: Bool { @objc get @objc (setContainerIsObjectBeingTested:) set }
 
   /**
-    - jsName: containerIsRangeContainerObject
-    - name: containerIsRangeContainerObject
-    - argLabels: 
+    - Selector: containerIsRangeContainerObject
   */
   @objc var containerIsRangeContainerObject: Bool { @objc get @objc (setContainerIsRangeContainerObject:) set }
 
   /**
-    - jsName: container
-    - name: containerSpecifier
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: container
+    - Selector: containerSpecifier
   */
   @objc var container: NSScriptObjectSpecifier? { @objc (containerSpecifier) get @objc (setContainerSpecifier:) set }
 
   /**
-    - jsName: descriptor
-    - name: descriptor
-    - argLabels: 
-    - available: 10.5
+    - Selector: descriptor
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var descriptor: NSAppleEventDescriptor? { @objc get }
 
   /**
-    - jsName: evaluationErrorNumber
-    - name: evaluationErrorNumber
-    - argLabels: 
+    - Selector: evaluationErrorNumber
   */
   @objc var evaluationErrorNumber: Int { @objc get @objc (setEvaluationErrorNumber:) set }
 
   /**
-    - jsName: evaluationError
-    - name: evaluationErrorSpecifier
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: evaluationError
+    - Selector: evaluationErrorSpecifier
   */
   @objc var evaluationError: NSScriptObjectSpecifier? { @objc (evaluationErrorSpecifier) get }
 
   /**
-    - jsName: key
-    - name: key
-    - argLabels: 
+    - Selector: key
   */
   @objc var key: String { @objc get @objc (setKey:) set }
 
   /**
-    - jsName: keyClassDescription
-    - name: keyClassDescription
-    - argLabels: 
+    - Selector: keyClassDescription
   */
   @objc var keyClassDescription: NSScriptClassDescription? { @objc get }
 
   /**
-    - jsName: objectsByEvaluatingSpecifier
-    - name: objectsByEvaluatingSpecifier
-    - argLabels: 
+    - Selector: objectsByEvaluatingSpecifier
   */
   @objc var objectsByEvaluatingSpecifier: Any? { @objc get }
 }

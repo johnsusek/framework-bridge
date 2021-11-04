@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NotificationQueue
-    - name: NSNotificationQueue
-    - argLabels: 
+    - Selector: NSNotificationQueue
   */
 
 @objc(NotificationQueue) protocol NotificationQueueExports: JSExport, NSObjectExports {
@@ -20,51 +18,29 @@ import Foundation
   // Own Static Properties
 
   /**
-    - jsName: default
-    - name: defaultQueue
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: default
+    - Selector: defaultQueue
   */
   @objc static var `default`: NotificationQueue { @objc (defaultQueue) get }
 
   // Instance Methods
 
   /**
-    - jsName: dequeueNotifications
-    - name: dequeueNotificationsMatching:coalesceMask:
-    - argLabels: matching, coalesceMask
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dequeueNotifications(matching:coalesceMask:)
+    - Selector: dequeueNotificationsMatching:coalesceMask:
   */
   @objc (dequeueNotificationsMatching:coalesceMask:) func dequeueNotifications(matching: Notification, coalesceMask: Int)
 
   /**
-    - jsName: enqueue
-    - name: enqueueNotification:postingStyle:
-    - argLabels: _, postingStyle
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: enqueue(_:postingStyle:)
+    - Selector: enqueueNotification:postingStyle:
   */
   @objc (enqueueNotification:postingStyle:) func enqueue(_: Notification, postingStyle: NotificationQueue.PostingStyle)
 
   /**
-    - jsName: enqueue
-    - name: enqueueNotification:postingStyle:coalesceMask:forModes:
-    - argLabels: _, postingStyle, coalesceMask, forModes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: enqueue(_:postingStyle:coalesceMask:forModes:)
+    - Selector: enqueueNotification:postingStyle:coalesceMask:forModes:
   */
   @objc (enqueueNotification:postingStyle:coalesceMask:forModes:) func enqueue(_: Notification, postingStyle: NotificationQueue.PostingStyle, coalesceMask: NotificationQueue.NotificationCoalescing, forModes: [RunLoop.Mode]?)
 
   /**
-    - jsName: createWithNotificationCenter
-    - name: initWithNotificationCenter:
-    - argLabels: 
-    - constructorTokens: notificationCenter
+    - Selector: initWithNotificationCenter:
   */
   @objc static func createWithNotificationCenter(_: NotificationCenter) -> Self
 }

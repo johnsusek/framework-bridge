@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSUserUnixTask
-    - name: NSUserUnixTask
-    - argLabels: 
+    - Selector: NSUserUnixTask
     - Introduced: 10.8
   */
 
@@ -21,35 +19,24 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: execute
-    - name: executeWithArguments:completionHandler:
-    - argLabels: withArguments, completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: execute(withArguments:completionHandler:)
+    - Selector: executeWithArguments:completionHandler:
   */
-  // jsvalue - @objc (executeWithArguments:completionHandler:) func execute(withArguments: [String]?, completionHandler: JSValue?)
+  // jsvalue @objc func execute(withArguments: [String]?, completionHandler: JSValue?)
 
   // Own Instance Properties
 
   /**
-    - jsName: standardError
-    - name: standardError
-    - argLabels: 
+    - Selector: standardError
   */
   @objc var standardError: FileHandle? { @objc get @objc (setStandardError:) set }
 
   /**
-    - jsName: standardInput
-    - name: standardInput
-    - argLabels: 
+    - Selector: standardInput
   */
   @objc var standardInput: FileHandle? { @objc get @objc (setStandardInput:) set }
 
   /**
-    - jsName: standardOutput
-    - name: standardOutput
-    - argLabels: 
+    - Selector: standardOutput
   */
   @objc var standardOutput: FileHandle? { @objc get @objc (setStandardOutput:) set }
 }

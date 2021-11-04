@@ -9,754 +9,462 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSBrowser
-    - name: NSBrowser
-    - argLabels: 
+    - Selector: NSBrowser
   */
 
 @objc(NSBrowser) protocol NSBrowserExports: JSExport, NSControlExports {
   // Static Methods
 
   /**
-    - jsName: removeSavedColumns
-    - name: removeSavedColumnsWithAutosaveName:
-    - argLabels: withAutosaveName
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeSavedColumns(withAutosaveName:)
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: removeSavedColumnsWithAutosaveName:
   */
   @objc (removeSavedColumnsWithAutosaveName:) static func removeSavedColumns(withAutosaveName: NSBrowser.ColumnsAutosaveName)
 
   // Own Static Properties
 
   /**
-    - jsName: cellClass
-    - name: cellClass
-    - argLabels: 
+    - Selector: cellClass
   */
   @objc static var cellClass: AnyClass { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: addColumn
-    - name: addColumn
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addColumn
   */
   @objc func addColumn()
 
   /**
-    - jsName: canDragRows
-    - name: canDragRowsWithIndexes:inColumn:withEvent:
-    - argLabels: with, inColumn, with
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: canDragRows(with:inColumn:with:)
+    - Selector: canDragRowsWithIndexes:inColumn:withEvent:
     - Introduced: 10.5
   */
   @objc (canDragRowsWithIndexes:inColumn:withEvent:) @available(OSX 10.5, *) func canDragRows(with: IndexSet, inColumn: Int, with: NSEvent) -> Bool
 
   /**
-    - jsName: columnContentWidth
-    - name: columnContentWidthForColumnWidth:
-    - argLabels: forColumnWidth
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: columnContentWidth(forColumnWidth:)
+    - Selector: columnContentWidthForColumnWidth:
   */
   @objc (columnContentWidthForColumnWidth:) func columnContentWidth(forColumnWidth: CGFloat) -> CGFloat
 
   /**
-    - jsName: columnWidth
-    - name: columnWidthForColumnContentWidth:
-    - argLabels: forColumnContentWidth
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: columnWidth(forColumnContentWidth:)
+    - Selector: columnWidthForColumnContentWidth:
   */
   @objc (columnWidthForColumnContentWidth:) func columnWidth(forColumnContentWidth: CGFloat) -> CGFloat
 
   /**
-    - jsName: defaultColumnWidth
-    - name: defaultColumnWidth
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: defaultColumnWidth
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func defaultColumnWidth() -> CGFloat
 
   /**
-    - jsName: doClick
-    - name: doClick:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: doClick:
   */
   @objc func doClick(_: Any?)
 
   /**
-    - jsName: doDoubleClick
-    - name: doDoubleClick:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: doDoubleClick:
   */
   @objc func doDoubleClick(_: Any?)
 
   /**
-    - jsName: draggingImageForRows
-    - name: draggingImageForRowsWithIndexes:inColumn:withEvent:offset:
-    - argLabels: with, inColumn, with, offset
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: draggingImageForRows(with:inColumn:with:offset:)
+    - Selector: draggingImageForRowsWithIndexes:inColumn:withEvent:offset:
     - Introduced: 10.5
   */
   @objc (draggingImageForRowsWithIndexes:inColumn:withEvent:offset:) @available(OSX 10.5, *) func draggingImageForRows(with: IndexSet, inColumn: Int, with: NSEvent, offset: NSPointPointer?) -> NSImage?
 
   /**
-    - jsName: drawTitle
-    - name: drawTitleOfColumn:inRect:
-    - argLabels: ofColumn, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawTitle(ofColumn:in:)
+    - Selector: drawTitleOfColumn:inRect:
   */
   @objc (drawTitleOfColumn:inRect:) func drawTitle(ofColumn: Int, in: CGRect)
 
   /**
-    - jsName: editItem
-    - name: editItemAtIndexPath:withEvent:select:
-    - argLabels: at, with, select
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: editItem(at:with:select:)
+    - Selector: editItemAtIndexPath:withEvent:select:
     - Introduced: 10.6
   */
   @objc (editItemAtIndexPath:withEvent:select:) @available(OSX 10.6, *) func editItem(at: IndexPath, with: NSEvent?, select: Bool)
 
   /**
-    - jsName: frame
-    - name: frameOfColumn:
-    - argLabels: ofColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: frame(ofColumn:)
+    - Selector: frameOfColumn:
   */
   @objc (frameOfColumn:) func frame(ofColumn: Int) -> CGRect
 
   /**
-    - jsName: frame
-    - name: frameOfInsideOfColumn:
-    - argLabels: ofInsideOfColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: frame(ofInsideOfColumn:)
+    - Selector: frameOfInsideOfColumn:
   */
   @objc (frameOfInsideOfColumn:) func frame(ofInsideOfColumn: Int) -> CGRect
 
   /**
-    - jsName: frame
-    - name: frameOfRow:inColumn:
-    - argLabels: ofRow, inColumn
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: frame(ofRow:inColumn:)
+    - Selector: frameOfRow:inColumn:
     - Introduced: 10.6
   */
   @objc (frameOfRow:inColumn:) @available(OSX 10.6, *) func frame(ofRow: Int, inColumn: Int) -> CGRect
 
   /**
-    - jsName: getRow
-    - name: getRow:column:forPoint:
-    - argLabels: _, column, for
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: getRow(_:column:for:)
+    - Selector: getRow:column:forPoint:
     - Introduced: 10.6
   */
   @objc (getRow:column:forPoint:) @available(OSX 10.6, *) func getRow(_: UnsafeMutablePointer<NSInteger>?, column: UnsafeMutablePointer<NSInteger>?, `for`: CGPoint) -> Bool
 
   /**
-    - jsName: indexPath
-    - name: indexPathForColumn:
-    - argLabels: forColumn
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: indexPath(forColumn:)
+    - Selector: indexPathForColumn:
     - Introduced: 10.6
   */
   @objc (indexPathForColumn:) @available(OSX 10.6, *) func indexPath(forColumn: Int) -> IndexPath
 
   /**
-    - jsName: isLeafItem
-    - name: isLeafItem:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: isLeafItem:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func isLeafItem(_: Any?) -> Bool
 
   /**
-    - jsName: item
-    - name: itemAtIndexPath:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: item(at:)
+    - Selector: itemAtIndexPath:
     - Introduced: 10.6
   */
   @objc (itemAtIndexPath:) @available(OSX 10.6, *) func item(at: IndexPath) -> Any?
 
   /**
-    - jsName: item
-    - name: itemAtRow:inColumn:
-    - argLabels: atRow, inColumn
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: item(atRow:inColumn:)
+    - Selector: itemAtRow:inColumn:
     - Introduced: 10.6
   */
   @objc (itemAtRow:inColumn:) @available(OSX 10.6, *) func item(atRow: Int, inColumn: Int) -> Any?
 
   /**
-    - jsName: loadColumnZero
-    - name: loadColumnZero
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: loadColumnZero
   */
   @objc func loadColumnZero()
 
   /**
-    - jsName: loadedCell
-    - name: loadedCellAtRow:column:
-    - argLabels: atRow, column
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: loadedCell(atRow:column:)
+    - Selector: loadedCellAtRow:column:
   */
   @objc (loadedCellAtRow:column:) func loadedCell(atRow: Int, column: Int) -> Any?
 
   /**
-    - jsName: noteHeightOfRowsWithIndexesChanged
-    - name: noteHeightOfRowsWithIndexesChanged:inColumn:
-    - argLabels: _, inColumn
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: noteHeightOfRowsWithIndexesChanged:inColumn:
     - Introduced: 10.6
   */
   @objc (noteHeightOfRowsWithIndexesChanged:inColumn:) @available(OSX 10.6, *) func noteHeightOfRowsWithIndexesChanged(_: IndexSet, inColumn: Int)
 
   /**
-    - jsName: parentForItems
-    - name: parentForItemsInColumn:
-    - argLabels: inColumn
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: parentForItems(inColumn:)
+    - Selector: parentForItemsInColumn:
     - Introduced: 10.6
   */
   @objc (parentForItemsInColumn:) @available(OSX 10.6, *) func parentForItems(inColumn: Int) -> Any?
 
   /**
-    - jsName: path
-    - name: path
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: path
   */
   @objc func path() -> String
 
   /**
-    - jsName: path
-    - name: pathToColumn:
-    - argLabels: toColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: path(toColumn:)
+    - Selector: pathToColumn:
   */
   @objc (pathToColumn:) func path(toColumn: Int) -> String
 
   /**
-    - jsName: reloadColumn
-    - name: reloadColumn:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reloadColumn:
   */
   @objc func reloadColumn(_: Int)
 
   /**
-    - jsName: reloadData
-    - name: reloadDataForRowIndexes:inColumn:
-    - argLabels: forRowIndexes, inColumn
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: reloadData(forRowIndexes:inColumn:)
+    - Selector: reloadDataForRowIndexes:inColumn:
     - Introduced: 10.6
   */
   @objc (reloadDataForRowIndexes:inColumn:) @available(OSX 10.6, *) func reloadData(forRowIndexes: IndexSet, inColumn: Int)
 
   /**
-    - jsName: scrollColumnToVisible
-    - name: scrollColumnToVisible:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: scrollColumnToVisible:
   */
   @objc func scrollColumnToVisible(_: Int)
 
   /**
-    - jsName: scrollColumnsLeft
-    - name: scrollColumnsLeftBy:
-    - argLabels: by
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: scrollColumnsLeft(by:)
+    - Selector: scrollColumnsLeftBy:
   */
   @objc (scrollColumnsLeftBy:) func scrollColumnsLeft(by: Int)
 
   /**
-    - jsName: scrollColumnsRight
-    - name: scrollColumnsRightBy:
-    - argLabels: by
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: scrollColumnsRight(by:)
+    - Selector: scrollColumnsRightBy:
   */
   @objc (scrollColumnsRightBy:) func scrollColumnsRight(by: Int)
 
   /**
-    - jsName: scrollRowToVisible
-    - name: scrollRowToVisible:inColumn:
-    - argLabels: inColumn
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: scrollRowToVisible:inColumn:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func scrollRowToVisible(_: Int, inColumn: Int)
 
   /**
-    - jsName: selectRow
-    - name: selectRow:inColumn:
-    - argLabels: inColumn
-    - constructorTokens: 
+    - Selector: selectRow:inColumn:
   */
   @objc func selectRow(_: Int, inColumn: Int)
 
   /**
-    - jsName: selectRowIndexes
-    - name: selectRowIndexes:inColumn:
-    - argLabels: inColumn
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: selectRowIndexes:inColumn:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func selectRowIndexes(_: IndexSet, inColumn: Int)
 
   /**
-    - jsName: selectedCell
-    - name: selectedCellInColumn:
-    - argLabels: inColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectedCell(inColumn:)
+    - Selector: selectedCellInColumn:
   */
   @objc (selectedCellInColumn:) func selectedCell(inColumn: Int) -> Any?
 
   /**
-    - jsName: selectedRow
-    - name: selectedRowInColumn:
-    - argLabels: inColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectedRow(inColumn:)
+    - Selector: selectedRowInColumn:
   */
   @objc (selectedRowInColumn:) func selectedRow(inColumn: Int) -> Int
 
   /**
-    - jsName: selectedRowIndexes
-    - name: selectedRowIndexesInColumn:
-    - argLabels: inColumn
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: selectedRowIndexes(inColumn:)
+    - Selector: selectedRowIndexesInColumn:
     - Introduced: 10.5
   */
   @objc (selectedRowIndexesInColumn:) @available(OSX 10.5, *) func selectedRowIndexes(inColumn: Int) -> IndexSet?
 
   /**
-    - jsName: sendAction
-    - name: sendAction
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: sendAction
   */
   @objc func sendAction() -> Bool
 
   /**
-    - jsName: setCellClass
-    - name: setCellClass:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setCellClass:
   */
   @objc func setCellClass(_: AnyClass)
 
   /**
-    - jsName: setDefaultColumnWidth
-    - name: setDefaultColumnWidth:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: setDefaultColumnWidth:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func setDefaultColumnWidth(_: CGFloat)
 
   /**
-    - jsName: setDraggingSourceOperationMask
-    - name: setDraggingSourceOperationMask:forLocal:
-    - argLabels: forLocal
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: setDraggingSourceOperationMask:forLocal:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func setDraggingSourceOperationMask(_: NSDragOperation, forLocal: Bool)
 
   /**
-    - jsName: setPath
-    - name: setPath:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setPath:
   */
   @objc func setPath(_: String) -> Bool
 
   /**
-    - jsName: setTitle
-    - name: setTitle:ofColumn:
-    - argLabels: ofColumn
-    - constructorTokens: 
+    - Selector: setTitle:ofColumn:
   */
   @objc func setTitle(_: String, ofColumn: Int)
 
   /**
-    - jsName: setWidth
-    - name: setWidth:ofColumn:
-    - argLabels: ofColumn
-    - constructorTokens: 
+    - Selector: setWidth:ofColumn:
   */
   @objc func setWidth(_: CGFloat, ofColumn: Int)
 
   /**
-    - jsName: tile
-    - name: tile
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: tile
   */
   @objc func tile()
 
   /**
-    - jsName: titleFrame
-    - name: titleFrameOfColumn:
-    - argLabels: ofColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: titleFrame(ofColumn:)
+    - Selector: titleFrameOfColumn:
   */
   @objc (titleFrameOfColumn:) func titleFrame(ofColumn: Int) -> CGRect
 
   /**
-    - jsName: title
-    - name: titleOfColumn:
-    - argLabels: ofColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: title(ofColumn:)
+    - Selector: titleOfColumn:
   */
   @objc (titleOfColumn:) func title(ofColumn: Int) -> String?
 
   /**
-    - jsName: validateVisibleColumns
-    - name: validateVisibleColumns
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: validateVisibleColumns
   */
   @objc func validateVisibleColumns()
 
   /**
-    - jsName: width
-    - name: widthOfColumn:
-    - argLabels: ofColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: width(ofColumn:)
+    - Selector: widthOfColumn:
   */
   @objc (widthOfColumn:) func width(ofColumn: Int) -> CGFloat
 
   // Own Instance Properties
 
   /**
-    - jsName: allowsBranchSelection
-    - name: allowsBranchSelection
-    - argLabels: 
+    - Selector: allowsBranchSelection
   */
   @objc var allowsBranchSelection: Bool { @objc get @objc (setAllowsBranchSelection:) set }
 
   /**
-    - jsName: allowsEmptySelection
-    - name: allowsEmptySelection
-    - argLabels: 
+    - Selector: allowsEmptySelection
   */
   @objc var allowsEmptySelection: Bool { @objc get @objc (setAllowsEmptySelection:) set }
 
   /**
-    - jsName: allowsMultipleSelection
-    - name: allowsMultipleSelection
-    - argLabels: 
+    - Selector: allowsMultipleSelection
   */
   @objc var allowsMultipleSelection: Bool { @objc get @objc (setAllowsMultipleSelection:) set }
 
   /**
-    - jsName: allowsTypeSelect
-    - name: allowsTypeSelect
-    - argLabels: 
-    - available: 10.5
+    - Selector: allowsTypeSelect
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var allowsTypeSelect: Bool { @objc get @objc (setAllowsTypeSelect:) set }
 
   /**
-    - jsName: autohidesScroller
-    - name: autohidesScroller
-    - argLabels: 
-    - available: 10.6
+    - Selector: autohidesScroller
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var autohidesScroller: Bool { @objc get @objc (setAutohidesScroller:) set }
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
-    - available: 10.5
+    - Selector: backgroundColor
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var backgroundColor: NSColor { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: cellPrototype
-    - name: cellPrototype
-    - argLabels: 
+    - Selector: cellPrototype
   */
   @objc var cellPrototype: Any! { @objc get @objc (setCellPrototype:) set }
 
   /**
-    - jsName: clickedColumn
-    - name: clickedColumn
-    - argLabels: 
-    - available: 10.6
+    - Selector: clickedColumn
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var clickedColumn: Int { @objc get }
 
   /**
-    - jsName: clickedRow
-    - name: clickedRow
-    - argLabels: 
-    - available: 10.6
+    - Selector: clickedRow
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var clickedRow: Int { @objc get }
 
   /**
-    - jsName: columnResizingType
-    - name: columnResizingType
-    - argLabels: 
+    - Selector: columnResizingType
   */
   @objc var columnResizingType: NSBrowser.ColumnResizingType { @objc get @objc (setColumnResizingType:) set }
 
   /**
-    - jsName: columnsAutosaveName
-    - name: columnsAutosaveName
-    - argLabels: 
+    - Selector: columnsAutosaveName
   */
   @objc var columnsAutosaveName: NSBrowser.ColumnsAutosaveName { @objc get @objc (setColumnsAutosaveName:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSBrowserDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: doubleAction
-    - name: doubleAction
-    - argLabels: 
+    - Selector: doubleAction
   */
   @objc var doubleAction: Selector? { @objc get @objc (setDoubleAction:) set }
 
   /**
-    - jsName: firstVisibleColumn
-    - name: firstVisibleColumn
-    - argLabels: 
+    - Selector: firstVisibleColumn
   */
   @objc var firstVisibleColumn: Int { @objc get }
 
   /**
-    - jsName: hasHorizontalScroller
-    - name: hasHorizontalScroller
-    - argLabels: 
+    - Selector: hasHorizontalScroller
   */
   @objc var hasHorizontalScroller: Bool { @objc get @objc (setHasHorizontalScroller:) set }
 
   /**
-    - jsName: lastColumn
-    - name: lastColumn
-    - argLabels: 
+    - Selector: lastColumn
   */
   @objc var lastColumn: Int { @objc get @objc (setLastColumn:) set }
 
   /**
-    - jsName: lastVisibleColumn
-    - name: lastVisibleColumn
-    - argLabels: 
+    - Selector: lastVisibleColumn
   */
   @objc var lastVisibleColumn: Int { @objc get }
 
   /**
-    - jsName: isLoaded
-    - name: loaded
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isLoaded
+    - Selector: loaded
   */
   @objc var isLoaded: Bool { @objc get }
 
   /**
-    - jsName: maxVisibleColumns
-    - name: maxVisibleColumns
-    - argLabels: 
+    - Selector: maxVisibleColumns
   */
   @objc var maxVisibleColumns: Int { @objc get @objc (setMaxVisibleColumns:) set }
 
   /**
-    - jsName: minColumnWidth
-    - name: minColumnWidth
-    - argLabels: 
+    - Selector: minColumnWidth
   */
   @objc var minColumnWidth: CGFloat { @objc get @objc (setMinColumnWidth:) set }
 
   /**
-    - jsName: numberOfVisibleColumns
-    - name: numberOfVisibleColumns
-    - argLabels: 
+    - Selector: numberOfVisibleColumns
   */
   @objc var numberOfVisibleColumns: Int { @objc get }
 
   /**
-    - jsName: pathSeparator
-    - name: pathSeparator
-    - argLabels: 
+    - Selector: pathSeparator
   */
   @objc var pathSeparator: String { @objc get @objc (setPathSeparator:) set }
 
   /**
-    - jsName: prefersAllColumnUserResizing
-    - name: prefersAllColumnUserResizing
-    - argLabels: 
+    - Selector: prefersAllColumnUserResizing
   */
   @objc var prefersAllColumnUserResizing: Bool { @objc get @objc (setPrefersAllColumnUserResizing:) set }
 
   /**
-    - jsName: reusesColumns
-    - name: reusesColumns
-    - argLabels: 
+    - Selector: reusesColumns
   */
   @objc var reusesColumns: Bool { @objc get @objc (setReusesColumns:) set }
 
   /**
-    - jsName: rowHeight
-    - name: rowHeight
-    - argLabels: 
-    - available: 10.6
+    - Selector: rowHeight
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var rowHeight: CGFloat { @objc get @objc (setRowHeight:) set }
 
   /**
-    - jsName: selectedCells
-    - name: selectedCells
-    - argLabels: 
+    - Selector: selectedCells
   */
   @objc var selectedCells: [NSCell]? { @objc get }
 
   /**
-    - jsName: selectedColumn
-    - name: selectedColumn
-    - argLabels: 
+    - Selector: selectedColumn
   */
   @objc var selectedColumn: Int { @objc get }
 
   /**
-    - jsName: selectionIndexPath
-    - name: selectionIndexPath
-    - argLabels: 
-    - available: 10.6
+    - Selector: selectionIndexPath
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var selectionIndexPath: IndexPath? { @objc get @objc (setSelectionIndexPath:) set }
 
   /**
-    - jsName: selectionIndexPaths
-    - name: selectionIndexPaths
-    - argLabels: 
-    - available: 10.6
+    - Selector: selectionIndexPaths
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var selectionIndexPaths: [IndexPath] { @objc get @objc (setSelectionIndexPaths:) set }
 
   /**
-    - jsName: sendsActionOnArrowKeys
-    - name: sendsActionOnArrowKeys
-    - argLabels: 
+    - Selector: sendsActionOnArrowKeys
   */
   @objc var sendsActionOnArrowKeys: Bool { @objc get @objc (setSendsActionOnArrowKeys:) set }
 
   /**
-    - jsName: separatesColumns
-    - name: separatesColumns
-    - argLabels: 
+    - Selector: separatesColumns
   */
   @objc var separatesColumns: Bool { @objc get @objc (setSeparatesColumns:) set }
 
   /**
-    - jsName: takesTitleFromPreviousColumn
-    - name: takesTitleFromPreviousColumn
-    - argLabels: 
+    - Selector: takesTitleFromPreviousColumn
   */
   @objc var takesTitleFromPreviousColumn: Bool { @objc get @objc (setTakesTitleFromPreviousColumn:) set }
 
   /**
-    - jsName: titleHeight
-    - name: titleHeight
-    - argLabels: 
+    - Selector: titleHeight
   */
   @objc var titleHeight: CGFloat { @objc get }
 
   /**
-    - jsName: isTitled
-    - name: titled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isTitled
+    - Selector: titled
   */
   @objc var isTitled: Bool { @objc get @objc (setTitled:) set }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSGridCell
-    - name: NSGridCell
-    - argLabels: 
+    - Selector: NSGridCell
     - Introduced: 10.12
   */
 
@@ -21,60 +19,44 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: emptyContentView
-    - name: emptyContentView
-    - argLabels: 
+    - Selector: emptyContentView
   */
   @objc static var emptyContentView: NSView { @objc get }
 
   // Own Instance Properties
 
   /**
-    - jsName: column
-    - name: column
-    - argLabels: 
+    - Selector: column
   */
   @objc var column: NSGridColumn? { @objc get }
 
   /**
-    - jsName: contentView
-    - name: contentView
-    - argLabels: 
+    - Selector: contentView
   */
   @objc var contentView: NSView? { @objc get @objc (setContentView:) set }
 
   /**
-    - jsName: customPlacementConstraints
-    - name: customPlacementConstraints
-    - argLabels: 
+    - Selector: customPlacementConstraints
   */
   @objc var customPlacementConstraints: [NSLayoutConstraint] { @objc get @objc (setCustomPlacementConstraints:) set }
 
   /**
-    - jsName: row
-    - name: row
-    - argLabels: 
+    - Selector: row
   */
   @objc var row: NSGridRow? { @objc get }
 
   /**
-    - jsName: rowAlignment
-    - name: rowAlignment
-    - argLabels: 
+    - Selector: rowAlignment
   */
   @objc var rowAlignment: NSGridRow.Alignment { @objc get @objc (setRowAlignment:) set }
 
   /**
-    - jsName: xPlacement
-    - name: xPlacement
-    - argLabels: 
+    - Selector: xPlacement
   */
   @objc var xPlacement: NSGridCell.Placement { @objc get @objc (setXPlacement:) set }
 
   /**
-    - jsName: yPlacement
-    - name: yPlacement
-    - argLabels: 
+    - Selector: yPlacement
   */
   @objc var yPlacement: NSGridCell.Placement { @objc get @objc (setYPlacement:) set }
 }

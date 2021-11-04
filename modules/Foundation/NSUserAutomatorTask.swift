@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSUserAutomatorTask
-    - name: NSUserAutomatorTask
-    - argLabels: 
+    - Selector: NSUserAutomatorTask
     - Introduced: 10.8
   */
 
@@ -21,21 +19,14 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: execute
-    - name: executeWithInput:completionHandler:
-    - argLabels: withInput, completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: execute(withInput:completionHandler:)
+    - Selector: executeWithInput:completionHandler:
   */
-  // jsvalue - @objc (executeWithInput:completionHandler:) func execute(withInput: NSSecureCoding?, completionHandler: JSValue?)
+  // jsvalue @objc func execute(withInput: NSSecureCoding?, completionHandler: JSValue?)
 
   // Own Instance Properties
 
   /**
-    - jsName: variables
-    - name: variables
-    - argLabels: 
+    - Selector: variables
   */
   @objc var variables: [String: Any]? { @objc get @objc (setVariables:) set }
 }

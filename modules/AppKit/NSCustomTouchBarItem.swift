@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCustomTouchBarItem
-    - name: NSCustomTouchBarItem
-    - argLabels: 
+    - Selector: NSCustomTouchBarItem
     - Introduced: 10.12.2
   */
 
@@ -21,23 +19,17 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: customizationLabel
-    - name: customizationLabel
-    - argLabels: 
+    - Selector: customizationLabel
   */
   @objc var customizationLabel: String! { @objc get @objc (setCustomizationLabel:) set }
 
   /**
-    - jsName: view
-    - name: view
-    - argLabels: 
+    - Selector: view
   */
   @objc var view: NSView { @objc get @objc (setView:) set }
 
   /**
-    - jsName: viewController
-    - name: viewController
-    - argLabels: 
+    - Selector: viewController
   */
   @objc var viewController: NSViewController? { @objc get @objc (setViewController:) set }
 }

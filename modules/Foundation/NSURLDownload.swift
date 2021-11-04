@@ -9,62 +9,43 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSURLDownload
-    - name: NSURLDownload
-    - argLabels: 
+    - Selector: NSURLDownload
   */
 
 @objc(NSURLDownload) protocol NSURLDownloadExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: canResumeDownloadDecoded
-    - name: canResumeDownloadDecodedWithEncodingMIMEType:
-    - argLabels: withEncodingMIMEType
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: canResumeDownloadDecoded(withEncodingMIMEType:)
+    - Selector: canResumeDownloadDecodedWithEncodingMIMEType:
   */
   @objc (canResumeDownloadDecodedWithEncodingMIMEType:) static func canResumeDownloadDecoded(withEncodingMIMEType: String) -> Bool
 
   // Instance Methods
 
   /**
-    - jsName: cancel
-    - name: cancel
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: cancel
   */
   @objc func cancel()
 
   /**
-    - jsName: setDestination
-    - name: setDestination:allowOverwrite:
-    - argLabels: allowOverwrite
-    - constructorTokens: 
+    - Selector: setDestination:allowOverwrite:
   */
   @objc func setDestination(_: String, allowOverwrite: Bool)
 
   // Own Instance Properties
 
   /**
-    - jsName: deletesFileUponFailure
-    - name: deletesFileUponFailure
-    - argLabels: 
+    - Selector: deletesFileUponFailure
   */
   @objc var deletesFileUponFailure: Bool { @objc get @objc (setDeletesFileUponFailure:) set }
 
   /**
-    - jsName: request
-    - name: request
-    - argLabels: 
+    - Selector: request
   */
   @objc var request: URLRequest { @objc get }
 
   /**
-    - jsName: resumeData
-    - name: resumeData
-    - argLabels: 
+    - Selector: resumeData
   */
   @objc var resumeData: Data? { @objc get }
 }

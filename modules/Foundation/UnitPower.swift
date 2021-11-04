@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitPower
-    - name: NSUnitPower
-    - argLabels: 
+    - Selector: NSUnitPower
     - Introduced: 10.12
   */
 
@@ -19,89 +17,64 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: femtowatts
-    - name: femtowatts
-    - argLabels: 
+    - Selector: femtowatts
   */
   @objc static var femtowatts: UnitPower { @objc get }
 
   /**
-    - jsName: gigawatts
-    - name: gigawatts
-    - argLabels: 
+    - Selector: gigawatts
   */
   @objc static var gigawatts: UnitPower { @objc get }
 
   /**
-    - jsName: horsepower
-    - name: horsepower
-    - argLabels: 
+    - Selector: horsepower
   */
   @objc static var horsepower: UnitPower { @objc get }
 
   /**
-    - jsName: kilowatts
-    - name: kilowatts
-    - argLabels: 
+    - Selector: kilowatts
   */
   @objc static var kilowatts: UnitPower { @objc get }
 
   /**
-    - jsName: megawatts
-    - name: megawatts
-    - argLabels: 
+    - Selector: megawatts
   */
   @objc static var megawatts: UnitPower { @objc get }
 
   /**
-    - jsName: microwatts
-    - name: microwatts
-    - argLabels: 
+    - Selector: microwatts
   */
   @objc static var microwatts: UnitPower { @objc get }
 
   /**
-    - jsName: milliwatts
-    - name: milliwatts
-    - argLabels: 
+    - Selector: milliwatts
   */
   @objc static var milliwatts: UnitPower { @objc get }
 
   /**
-    - jsName: nanowatts
-    - name: nanowatts
-    - argLabels: 
+    - Selector: nanowatts
   */
   @objc static var nanowatts: UnitPower { @objc get }
 
   /**
-    - jsName: picowatts
-    - name: picowatts
-    - argLabels: 
+    - Selector: picowatts
   */
   @objc static var picowatts: UnitPower { @objc get }
 
   /**
-    - jsName: terawatts
-    - name: terawatts
-    - argLabels: 
+    - Selector: terawatts
   */
   @objc static var terawatts: UnitPower { @objc get }
 
   /**
-    - jsName: watts
-    - name: watts
-    - argLabels: 
+    - Selector: watts
   */
   @objc static var watts: UnitPower { @objc get }
 }

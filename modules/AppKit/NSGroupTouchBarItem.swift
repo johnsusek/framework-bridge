@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSGroupTouchBarItem
-    - name: NSGroupTouchBarItem
-    - argLabels: 
+    - Selector: NSGroupTouchBarItem
     - Introduced: 10.12.2
   */
 
@@ -19,35 +17,18 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: alertStyleGroupItemWithIdentifier:
-    - argLabels: alertStyleWithIdentifier
-    - constructorTokens: 
-    - available: 10.13
-    - obsoleted: 3
-    - renamed: init(alertStyleWithIdentifier:)
+    - Selector: alertStyleGroupItemWithIdentifier:
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) static func create(alertStyleWithIdentifier: NSTouchBarItem.Identifier) -> Self
 
   /**
-    - jsName: create
-    - name: groupItemWithIdentifier:items:
-    - argLabels: identifier, items
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: init(identifier:items:)
+    - Selector: groupItemWithIdentifier:items:
   */
   @objc static func create(identifier: NSTouchBarItem.Identifier, items: [NSTouchBarItem]) -> Self
 
   /**
-    - jsName: create
-    - name: groupItemWithIdentifier:items:allowedCompressionOptions:
-    - argLabels: identifier, items, allowedCompressionOptions
-    - constructorTokens: 
-    - available: 10.13
-    - obsoleted: 3
-    - renamed: init(identifier:items:allowedCompressionOptions:)
+    - Selector: groupItemWithIdentifier:items:allowedCompressionOptions:
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) static func create(identifier: NSTouchBarItem.Identifier, items: [NSTouchBarItem], allowedCompressionOptions: NSUserInterfaceCompressionOptions) -> Self
@@ -55,60 +36,41 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: customizationLabel
-    - name: customizationLabel
-    - argLabels: 
+    - Selector: customizationLabel
   */
   @objc var customizationLabel: String! { @objc get @objc (setCustomizationLabel:) set }
 
   /**
-    - jsName: effectiveCompressionOptions
-    - name: effectiveCompressionOptions
-    - argLabels: 
-    - available: 10.13
+    - Selector: effectiveCompressionOptions
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var effectiveCompressionOptions: NSUserInterfaceCompressionOptions { @objc get }
 
   /**
-    - jsName: groupTouchBar
-    - name: groupTouchBar
-    - argLabels: 
+    - Selector: groupTouchBar
   */
   @objc var groupTouchBar: NSTouchBar { @objc get @objc (setGroupTouchBar:) set }
 
   /**
-    - jsName: groupUserInterfaceLayoutDirection
-    - name: groupUserInterfaceLayoutDirection
-    - argLabels: 
-    - available: 10.13
+    - Selector: groupUserInterfaceLayoutDirection
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var groupUserInterfaceLayoutDirection: NSUserInterfaceLayoutDirection { @objc get @objc (setGroupUserInterfaceLayoutDirection:) set }
 
   /**
-    - jsName: preferredItemWidth
-    - name: preferredItemWidth
-    - argLabels: 
-    - available: 10.13
+    - Selector: preferredItemWidth
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var preferredItemWidth: CGFloat { @objc get @objc (setPreferredItemWidth:) set }
 
   /**
-    - jsName: prefersEqualWidths
-    - name: prefersEqualWidths
-    - argLabels: 
-    - available: 10.13
+    - Selector: prefersEqualWidths
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var prefersEqualWidths: Bool { @objc get @objc (setPrefersEqualWidths:) set }
 
   /**
-    - jsName: prioritizedCompressionOptions
-    - name: prioritizedCompressionOptions
-    - argLabels: 
-    - available: 10.13
+    - Selector: prioritizedCompressionOptions
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var prioritizedCompressionOptions: [NSUserInterfaceCompressionOptions] { @objc get @objc (setPrioritizedCompressionOptions:) set }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSGlyphGenerator
-    - name: NSGlyphGenerator
-    - argLabels: 
+    - Selector: NSGlyphGenerator
   */
 
 @objc(NSGlyphGenerator) protocol NSGlyphGeneratorExports: JSExport, NSObjectExports {
@@ -20,23 +18,14 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: shared
-    - name: sharedGlyphGenerator
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: shared
+    - Selector: sharedGlyphGenerator
   */
   @objc static var shared: NSGlyphGenerator { @objc (sharedGlyphGenerator) get }
 
   // Instance Methods
 
   /**
-    - jsName: generateGlyphs
-    - name: generateGlyphsForGlyphStorage:desiredNumberOfCharacters:glyphIndex:characterIndex:
-    - argLabels: for, desiredNumberOfCharacters, glyphIndex, characterIndex
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: generateGlyphs(for:desiredNumberOfCharacters:glyphIndex:characterIndex:)
+    - Selector: generateGlyphsForGlyphStorage:desiredNumberOfCharacters:glyphIndex:characterIndex:
   */
   @objc (generateGlyphsForGlyphStorage:desiredNumberOfCharacters:glyphIndex:characterIndex:) func generateGlyphs(`for`: NSGlyphStorage, desiredNumberOfCharacters: Int, glyphIndex: UnsafeMutablePointer<Int>?, characterIndex: UnsafeMutablePointer<Int>?)
 }

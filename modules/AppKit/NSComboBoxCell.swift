@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSComboBoxCell
-    - name: NSComboBoxCell
-    - argLabels: 
+    - Selector: NSComboBoxCell
   */
 
 @objc(NSComboBoxCell) protocol NSComboBoxCellExports: JSExport, NSTextFieldCellExports {
@@ -20,238 +18,144 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: addItem
-    - name: addItemWithObjectValue:
-    - argLabels: withObjectValue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addItem(withObjectValue:)
+    - Selector: addItemWithObjectValue:
   */
   @objc (addItemWithObjectValue:) func addItem(withObjectValue: Any)
 
   /**
-    - jsName: addItems
-    - name: addItemsWithObjectValues:
-    - argLabels: withObjectValues
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addItems(withObjectValues:)
+    - Selector: addItemsWithObjectValues:
   */
   @objc (addItemsWithObjectValues:) func addItems(withObjectValues: [Any])
 
   /**
-    - jsName: completedString
-    - name: completedString:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: completedString:
   */
   @objc func completedString(_: String) -> String?
 
   /**
-    - jsName: deselectItem
-    - name: deselectItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: deselectItem(at:)
+    - Selector: deselectItemAtIndex:
   */
   @objc (deselectItemAtIndex:) func deselectItem(at: Int)
 
   /**
-    - jsName: indexOfItem
-    - name: indexOfItemWithObjectValue:
-    - argLabels: withObjectValue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexOfItem(withObjectValue:)
+    - Selector: indexOfItemWithObjectValue:
   */
   @objc (indexOfItemWithObjectValue:) func indexOfItem(withObjectValue: Any) -> Int
 
   /**
-    - jsName: insertItem
-    - name: insertItemWithObjectValue:atIndex:
-    - argLabels: withObjectValue, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertItem(withObjectValue:at:)
+    - Selector: insertItemWithObjectValue:atIndex:
   */
   @objc (insertItemWithObjectValue:atIndex:) func insertItem(withObjectValue: Any, at: Int)
 
   /**
-    - jsName: itemObjectValue
-    - name: itemObjectValueAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: itemObjectValue(at:)
+    - Selector: itemObjectValueAtIndex:
   */
   @objc (itemObjectValueAtIndex:) func itemObjectValue(at: Int) -> Any
 
   /**
-    - jsName: noteNumberOfItemsChanged
-    - name: noteNumberOfItemsChanged
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: noteNumberOfItemsChanged
   */
   @objc func noteNumberOfItemsChanged()
 
   /**
-    - jsName: reloadData
-    - name: reloadData
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reloadData
   */
   @objc func reloadData()
 
   /**
-    - jsName: removeAllItems
-    - name: removeAllItems
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeAllItems
   */
   @objc func removeAllItems()
 
   /**
-    - jsName: removeItem
-    - name: removeItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeItem(at:)
+    - Selector: removeItemAtIndex:
   */
   @objc (removeItemAtIndex:) func removeItem(at: Int)
 
   /**
-    - jsName: removeItem
-    - name: removeItemWithObjectValue:
-    - argLabels: withObjectValue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeItem(withObjectValue:)
+    - Selector: removeItemWithObjectValue:
   */
   @objc (removeItemWithObjectValue:) func removeItem(withObjectValue: Any)
 
   /**
-    - jsName: scrollItemAtIndexToTop
-    - name: scrollItemAtIndexToTop:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: scrollItemAtIndexToTop:
   */
   @objc (scrollItemAtIndexToTop:) func scrollItemAtIndexToTop(_: Int)
 
   /**
-    - jsName: scrollItemAtIndexToVisible
-    - name: scrollItemAtIndexToVisible:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: scrollItemAtIndexToVisible:
   */
   @objc func scrollItemAtIndexToVisible(_: Int)
 
   /**
-    - jsName: selectItem
-    - name: selectItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectItem(at:)
+    - Selector: selectItemAtIndex:
   */
   @objc (selectItemAtIndex:) func selectItem(at: Int)
 
   /**
-    - jsName: selectItem
-    - name: selectItemWithObjectValue:
-    - argLabels: withObjectValue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectItem(withObjectValue:)
+    - Selector: selectItemWithObjectValue:
   */
   @objc (selectItemWithObjectValue:) func selectItem(withObjectValue: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: isButtonBordered
-    - name: buttonBordered
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isButtonBordered
+    - Selector: buttonBordered
   */
   @objc var isButtonBordered: Bool { @objc get @objc (setButtonBordered:) set }
 
   /**
-    - jsName: completes
-    - name: completes
-    - argLabels: 
+    - Selector: completes
   */
   @objc var completes: Bool { @objc get @objc (setCompletes:) set }
 
   /**
-    - jsName: dataSource
-    - name: dataSource
-    - argLabels: 
+    - Selector: dataSource
   */
   @objc var dataSource: NSComboBoxCellDataSource? { @objc get @objc (setDataSource:) set }
 
   /**
-    - jsName: hasVerticalScroller
-    - name: hasVerticalScroller
-    - argLabels: 
+    - Selector: hasVerticalScroller
   */
   @objc var hasVerticalScroller: Bool { @objc get @objc (setHasVerticalScroller:) set }
 
   /**
-    - jsName: indexOfSelectedItem
-    - name: indexOfSelectedItem
-    - argLabels: 
+    - Selector: indexOfSelectedItem
   */
   @objc var indexOfSelectedItem: Int { @objc get }
 
   /**
-    - jsName: intercellSpacing
-    - name: intercellSpacing
-    - argLabels: 
+    - Selector: intercellSpacing
   */
   @objc var intercellSpacing: CGSize { @objc get @objc (setIntercellSpacing:) set }
 
   /**
-    - jsName: itemHeight
-    - name: itemHeight
-    - argLabels: 
+    - Selector: itemHeight
   */
   @objc var itemHeight: CGFloat { @objc get @objc (setItemHeight:) set }
 
   /**
-    - jsName: numberOfItems
-    - name: numberOfItems
-    - argLabels: 
+    - Selector: numberOfItems
   */
   @objc var numberOfItems: Int { @objc get }
 
   /**
-    - jsName: numberOfVisibleItems
-    - name: numberOfVisibleItems
-    - argLabels: 
+    - Selector: numberOfVisibleItems
   */
   @objc var numberOfVisibleItems: Int { @objc get @objc (setNumberOfVisibleItems:) set }
 
   /**
-    - jsName: objectValueOfSelectedItem
-    - name: objectValueOfSelectedItem
-    - argLabels: 
+    - Selector: objectValueOfSelectedItem
   */
   @objc var objectValueOfSelectedItem: Any? { @objc get }
 
   /**
-    - jsName: objectValues
-    - name: objectValues
-    - argLabels: 
+    - Selector: objectValues
   */
   @objc var objectValues: [Any] { @objc get }
 
   /**
-    - jsName: usesDataSource
-    - name: usesDataSource
-    - argLabels: 
+    - Selector: usesDataSource
   */
   @objc var usesDataSource: Bool { @objc get @objc (setUsesDataSource:) set }
 }

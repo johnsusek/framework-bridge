@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSGridRow
-    - name: NSGridRow
-    - argLabels: 
+    - Selector: NSGridRow
     - Introduced: 10.12
   */
 
@@ -21,82 +19,54 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: cell
-    - name: cellAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cell(at:)
+    - Selector: cellAtIndex:
   */
   @objc (cellAtIndex:) func cell(at: Int) -> NSGridCell
 
   /**
-    - jsName: mergeCells
-    - name: mergeCellsInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: mergeCells(in:)
+    - Selector: mergeCellsInRange:
   */
   @objc (mergeCellsInRange:) func mergeCells(in: NSRange)
 
   // Own Instance Properties
 
   /**
-    - jsName: bottomPadding
-    - name: bottomPadding
-    - argLabels: 
+    - Selector: bottomPadding
   */
   @objc var bottomPadding: CGFloat { @objc get @objc (setBottomPadding:) set }
 
   /**
-    - jsName: gridView
-    - name: gridView
-    - argLabels: 
+    - Selector: gridView
   */
   @objc var gridView: NSGridView? { @objc get }
 
   /**
-    - jsName: height
-    - name: height
-    - argLabels: 
+    - Selector: height
   */
   @objc var height: CGFloat { @objc get @objc (setHeight:) set }
 
   /**
-    - jsName: isHidden
-    - name: hidden
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isHidden
+    - Selector: hidden
   */
   @objc var isHidden: Bool { @objc get @objc (setHidden:) set }
 
   /**
-    - jsName: numberOfCells
-    - name: numberOfCells
-    - argLabels: 
+    - Selector: numberOfCells
   */
   @objc var numberOfCells: Int { @objc get }
 
   /**
-    - jsName: rowAlignment
-    - name: rowAlignment
-    - argLabels: 
+    - Selector: rowAlignment
   */
   @objc var rowAlignment: NSGridRow.Alignment { @objc get @objc (setRowAlignment:) set }
 
   /**
-    - jsName: topPadding
-    - name: topPadding
-    - argLabels: 
+    - Selector: topPadding
   */
   @objc var topPadding: CGFloat { @objc get @objc (setTopPadding:) set }
 
   /**
-    - jsName: yPlacement
-    - name: yPlacement
-    - argLabels: 
+    - Selector: yPlacement
   */
   @objc var yPlacement: NSGridCell.Placement { @objc get @objc (setYPlacement:) set }
 }

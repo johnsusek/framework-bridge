@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: Operation
-    - name: NSOperation
-    - argLabels: 
+    - Selector: NSOperation
     - Introduced: 10.5
   */
 
@@ -21,51 +19,32 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: addDependency
-    - name: addDependency:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addDependency:
   */
   @objc func addDependency(_: Operation)
 
   /**
-    - jsName: cancel
-    - name: cancel
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: cancel
   */
   @objc func cancel()
 
   /**
-    - jsName: main
-    - name: main
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: main
   */
   @objc func main()
 
   /**
-    - jsName: removeDependency
-    - name: removeDependency:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeDependency:
   */
   @objc func removeDependency(_: Operation)
 
   /**
-    - jsName: start
-    - name: start
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: start
   */
   @objc func start()
 
   /**
-    - jsName: waitUntilFinished
-    - name: waitUntilFinished
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: waitUntilFinished
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func waitUntilFinished()
@@ -73,99 +52,61 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: isAsynchronous
-    - name: asynchronous
-    - argLabels: 
-    - available: 10.8
-    - obsoleted: 3
-    - renamed: isAsynchronous
+    - Selector: asynchronous
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) var isAsynchronous: Bool { @objc get }
 
   /**
-    - jsName: isCancelled
-    - name: cancelled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isCancelled
+    - Selector: cancelled
   */
   @objc var isCancelled: Bool { @objc get }
 
   /**
-    - jsName: completionBlock
-    - name: completionBlock
-    - argLabels: 
-    - available: 10.6
+    - Selector: completionBlock
     - Introduced: 10.6
   */
 // jsvalue   @objc @available(OSX 10.6, *) var completionBlock: JSValue? { @objc get @objc (setCompletionBlock:) set }
 
   /**
-    - jsName: isConcurrent
-    - name: concurrent
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isConcurrent
+    - Selector: concurrent
   */
   @objc var isConcurrent: Bool { @objc get }
 
   /**
-    - jsName: dependencies
-    - name: dependencies
-    - argLabels: 
+    - Selector: dependencies
   */
   @objc var dependencies: [Operation] { @objc get }
 
   /**
-    - jsName: isExecuting
-    - name: executing
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isExecuting
+    - Selector: executing
   */
   @objc var isExecuting: Bool { @objc get }
 
   /**
-    - jsName: isFinished
-    - name: finished
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFinished
+    - Selector: finished
   */
   @objc var isFinished: Bool { @objc get }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
-    - available: 10.10
+    - Selector: name
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var name: String? { @objc get @objc (setName:) set }
 
   /**
-    - jsName: qualityOfService
-    - name: qualityOfService
-    - argLabels: 
-    - available: 10.10
+    - Selector: qualityOfService
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var qualityOfService: QualityOfService { @objc get @objc (setQualityOfService:) set }
 
   /**
-    - jsName: queuePriority
-    - name: queuePriority
-    - argLabels: 
+    - Selector: queuePriority
   */
   @objc var queuePriority: Operation.QueuePriority { @objc get @objc (setQueuePriority:) set }
 
   /**
-    - jsName: isReady
-    - name: ready
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isReady
+    - Selector: ready
   */
   @objc var isReady: Bool { @objc get }
 }

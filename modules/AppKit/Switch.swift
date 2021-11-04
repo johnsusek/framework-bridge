@@ -9,21 +9,23 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSwitch
-    - name: NSSwitch
-    - argLabels: 
+    - Selector: NSSwitch
     - Introduced: 10.15
   */
 
 @objc(NSSwitch) protocol NSSwitchExports: JSExport, NSControlExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Own Instance Properties
 
   /**
-    - jsName: state
-    - name: state
-    - argLabels: 
+    - Selector: state
   */
   @objc var state: NSControl.StateValue { @objc get @objc (setState:) set }
 }

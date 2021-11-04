@@ -9,97 +9,51 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSWindow
-    - name: NSWindow
-    - argLabels: 
+    - Selector: NSWindow
   */
 
 @objc(NSWindow) protocol NSWindowExports: JSExport, NSResponderExports {
   // Static Methods
 
   /**
-    - jsName: contentRect
-    - name: contentRectForFrameRect:styleMask:
-    - argLabels: forFrameRect, styleMask
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: contentRect(forFrameRect:styleMask:)
+    - Selector: contentRectForFrameRect:styleMask:
   */
   @objc (contentRectForFrameRect:styleMask:) static func contentRect(forFrameRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
 
   /**
-    - jsName: frameRect
-    - name: frameRectForContentRect:styleMask:
-    - argLabels: forContentRect, styleMask
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: frameRect(forContentRect:styleMask:)
+    - Selector: frameRectForContentRect:styleMask:
   */
   @objc (frameRectForContentRect:styleMask:) static func frameRect(forContentRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
 
   /**
-    - jsName: minFrameWidth
-    - name: minFrameWidthWithTitle:styleMask:
-    - argLabels: withTitle, styleMask
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: minFrameWidth(withTitle:styleMask:)
+    - Selector: minFrameWidthWithTitle:styleMask:
   */
   @objc (minFrameWidthWithTitle:styleMask:) static func minFrameWidth(withTitle: String, styleMask: NSWindow.StyleMask) -> CGFloat
 
   /**
-    - jsName: removeFrame
-    - name: removeFrameUsingName:
-    - argLabels: usingName
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeFrame(usingName:)
+    - Selector: removeFrameUsingName:
   */
   @objc (removeFrameUsingName:) static func removeFrame(usingName: NSWindow.FrameAutosaveName)
 
   /**
-    - jsName: standardWindowButton
-    - name: standardWindowButton:forStyleMask:
-    - argLabels: _, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: standardWindowButton(_:for:)
+    - Selector: standardWindowButton:forStyleMask:
   */
   @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
 
   /**
-    - jsName: windowNumber
-    - name: windowNumberAtPoint:belowWindowWithWindowNumber:
-    - argLabels: at, belowWindowWithWindowNumber
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: windowNumber(at:belowWindowWithWindowNumber:)
+    - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
     - Introduced: 10.6
   */
   @objc (windowNumberAtPoint:belowWindowWithWindowNumber:) @available(OSX 10.6, *) static func windowNumber(at: CGPoint, belowWindowWithWindowNumber: Int) -> Int
 
   /**
-    - jsName: windowNumbers
-    - name: windowNumbersWithOptions:
-    - argLabels: options
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: windowNumbers(options:)
+    - Selector: windowNumbersWithOptions:
     - Introduced: 10.6
   */
   @objc (windowNumbersWithOptions:) @available(OSX 10.6, *) static func windowNumbers(options: NSWindow.NumberListOptions) -> [NSNumber]?
 
   /**
-    - jsName: create
-    - name: windowWithContentViewController:
-    - argLabels: contentViewController
-    - constructorTokens: 
-    - available: 10.10
-    - unavailable: true
-    - renamed: init(contentViewController:)
-    - message: Not available in Swift
+    - Selector: windowWithContentViewController:
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) static func create(contentViewController: NSViewController) -> Self
@@ -107,26 +61,18 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: allowsAutomaticWindowTabbing
-    - name: allowsAutomaticWindowTabbing
-    - argLabels: 
-    - available: 10.12
+    - Selector: allowsAutomaticWindowTabbing
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static var allowsAutomaticWindowTabbing: Bool { @objc get @objc (setAllowsAutomaticWindowTabbing:) set }
 
   /**
-    - jsName: defaultDepthLimit
-    - name: defaultDepthLimit
-    - argLabels: 
+    - Selector: defaultDepthLimit
   */
   @objc static var defaultDepthLimit: NSWindow.Depth { @objc get }
 
   /**
-    - jsName: userTabbingPreference
-    - name: userTabbingPreference
-    - argLabels: 
-    - available: 10.12
+    - Selector: userTabbingPreference
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static var userTabbingPreference: NSWindow.UserTabbingPreference { @objc get }
@@ -134,2004 +80,1223 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: addChildWindow
-    - name: addChildWindow:ordered:
-    - argLabels: ordered
-    - constructorTokens: 
+    - Selector: addChildWindow:ordered:
   */
   @objc func addChildWindow(_: NSWindow, ordered: NSWindow.OrderingMode)
 
   /**
-    - jsName: addTabbedWindow
-    - name: addTabbedWindow:ordered:
-    - argLabels: ordered
-    - constructorTokens: 
-    - available: 10.12
+    - Selector: addTabbedWindow:ordered:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) func addTabbedWindow(_: NSWindow, ordered: NSWindow.OrderingMode)
 
   /**
-    - jsName: addTitlebarAccessoryViewController
-    - name: addTitlebarAccessoryViewController:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.10
+    - Selector: addTitlebarAccessoryViewController:
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) func addTitlebarAccessoryViewController(_: NSTitlebarAccessoryViewController)
 
   /**
-    - jsName: anchorAttribute
-    - name: anchorAttributeForOrientation:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: anchorAttribute(for:)
+    - Selector: anchorAttributeForOrientation:
   */
   @objc (anchorAttributeForOrientation:) func anchorAttribute(`for`: NSLayoutConstraint.Orientation) -> NSLayoutConstraint.Attribute
 
   /**
-    - jsName: animationResizeTime
-    - name: animationResizeTime:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: animationResizeTime:
   */
   @objc func animationResizeTime(_: CGRect) -> TimeInterval
 
   /**
-    - jsName: autorecalculatesContentBorderThickness
-    - name: autorecalculatesContentBorderThicknessForEdge:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: autorecalculatesContentBorderThickness(for:)
+    - Selector: autorecalculatesContentBorderThicknessForEdge:
     - Introduced: 10.5
   */
   @objc (autorecalculatesContentBorderThicknessForEdge:) @available(OSX 10.5, *) func autorecalculatesContentBorderThickness(`for`: NSRectEdge) -> Bool
 
   /**
-    - jsName: backingAlignedRect
-    - name: backingAlignedRect:options:
-    - argLabels: options
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: backingAlignedRect:options:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func backingAlignedRect(_: CGRect, options: AlignmentOptions) -> CGRect
 
   /**
-    - jsName: becomeKey
-    - name: becomeKeyWindow
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: becomeKey()
+    - Selector: becomeKeyWindow
   */
   @objc (becomeKeyWindow) func becomeKey()
 
   /**
-    - jsName: becomeMain
-    - name: becomeMainWindow
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: becomeMain()
+    - Selector: becomeMainWindow
   */
   @objc (becomeMainWindow) func becomeMain()
 
   /**
-    - jsName: beginCriticalSheet
-    - name: beginCriticalSheet:completionHandler:
-    - argLabels: completionHandler
-    - constructorTokens: 
-    - available: 10.9
+    - Selector: beginCriticalSheet:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue - @objc @available(OSX 10.9, *) func beginCriticalSheet(_: NSWindow, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginCriticalSheet(_: NSWindow, completionHandler: JSValue)
 
   /**
-    - jsName: beginSheet
-    - name: beginSheet:completionHandler:
-    - argLabels: completionHandler
-    - constructorTokens: 
-    - available: 10.9
+    - Selector: beginSheet:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue - @objc @available(OSX 10.9, *) func beginSheet(_: NSWindow, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginSheet(_: NSWindow, completionHandler: JSValue)
 
   /**
-    - jsName: canRepresent
-    - name: canRepresentDisplayGamut:
-    - argLabels: _
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: canRepresent(_:)
+    - Selector: canRepresentDisplayGamut:
     - Introduced: 10.12
   */
   @objc (canRepresentDisplayGamut:) @available(OSX 10.12, *) func canRepresent(_: NSDisplayGamut) -> Bool
 
   /**
-    - jsName: cascadeTopLeft
-    - name: cascadeTopLeftFromPoint:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cascadeTopLeft(from:)
+    - Selector: cascadeTopLeftFromPoint:
   */
   @objc (cascadeTopLeftFromPoint:) func cascadeTopLeft(from: CGPoint) -> CGPoint
 
   /**
-    - jsName: center
-    - name: center
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: center
   */
   @objc func center()
 
   /**
-    - jsName: close
-    - name: close
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: close
   */
   @objc func close()
 
   /**
-    - jsName: constrainFrameRect
-    - name: constrainFrameRect:toScreen:
-    - argLabels: _, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: constrainFrameRect(_:to:)
+    - Selector: constrainFrameRect:toScreen:
   */
   @objc (constrainFrameRect:toScreen:) func constrainFrameRect(_: CGRect, to: NSScreen?) -> CGRect
 
   /**
-    - jsName: contentBorderThickness
-    - name: contentBorderThicknessForEdge:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: contentBorderThickness(for:)
+    - Selector: contentBorderThicknessForEdge:
     - Introduced: 10.5
   */
   @objc (contentBorderThicknessForEdge:) @available(OSX 10.5, *) func contentBorderThickness(`for`: NSRectEdge) -> CGFloat
 
   /**
-    - jsName: contentRect
-    - name: contentRectForFrameRect:
-    - argLabels: forFrameRect
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: contentRect(forFrameRect:)
+    - Selector: contentRectForFrameRect:
   */
   @objc (contentRectForFrameRect:) func contentRect(forFrameRect: CGRect) -> CGRect
 
   /**
-    - jsName: convertPointFromBacking
-    - name: convertPointFromBacking:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.14
+    - Selector: convertPointFromBacking:
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) func convertPointFromBacking(_: CGPoint) -> CGPoint
 
   /**
-    - jsName: convertPoint
-    - name: convertPointFromScreen:
-    - argLabels: fromScreen
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: convertPoint(fromScreen:)
+    - Selector: convertPointFromScreen:
     - Introduced: 10.12
   */
   @objc (convertPointFromScreen:) @available(OSX 10.12, *) func convertPoint(fromScreen: CGPoint) -> CGPoint
 
   /**
-    - jsName: convertPointToBacking
-    - name: convertPointToBacking:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.14
+    - Selector: convertPointToBacking:
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) func convertPointToBacking(_: CGPoint) -> CGPoint
 
   /**
-    - jsName: convertPoint
-    - name: convertPointToScreen:
-    - argLabels: toScreen
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: convertPoint(toScreen:)
+    - Selector: convertPointToScreen:
     - Introduced: 10.12
   */
   @objc (convertPointToScreen:) @available(OSX 10.12, *) func convertPoint(toScreen: CGPoint) -> CGPoint
 
   /**
-    - jsName: convertFromBacking
-    - name: convertRectFromBacking:
-    - argLabels: _
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: convertFromBacking(_:)
+    - Selector: convertRectFromBacking:
     - Introduced: 10.7
   */
   @objc (convertRectFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_: CGRect) -> CGRect
 
   /**
-    - jsName: convertFromScreen
-    - name: convertRectFromScreen:
-    - argLabels: _
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: convertFromScreen(_:)
+    - Selector: convertRectFromScreen:
     - Introduced: 10.7
   */
   @objc (convertRectFromScreen:) @available(OSX 10.7, *) func convertFromScreen(_: CGRect) -> CGRect
 
   /**
-    - jsName: convertToBacking
-    - name: convertRectToBacking:
-    - argLabels: _
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: convertToBacking(_:)
+    - Selector: convertRectToBacking:
     - Introduced: 10.7
   */
   @objc (convertRectToBacking:) @available(OSX 10.7, *) func convertToBacking(_: CGRect) -> CGRect
 
   /**
-    - jsName: convertToScreen
-    - name: convertRectToScreen:
-    - argLabels: _
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: convertToScreen(_:)
+    - Selector: convertRectToScreen:
     - Introduced: 10.7
   */
   @objc (convertRectToScreen:) @available(OSX 10.7, *) func convertToScreen(_: CGRect) -> CGRect
 
   /**
-    - jsName: dataWithEPS
-    - name: dataWithEPSInsideRect:
-    - argLabels: inside
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dataWithEPS(inside:)
+    - Selector: dataWithEPSInsideRect:
   */
   @objc (dataWithEPSInsideRect:) func dataWithEPS(inside: CGRect) -> Data
 
   /**
-    - jsName: dataWithPDF
-    - name: dataWithPDFInsideRect:
-    - argLabels: inside
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dataWithPDF(inside:)
+    - Selector: dataWithPDFInsideRect:
   */
   @objc (dataWithPDFInsideRect:) func dataWithPDF(inside: CGRect) -> Data
 
   /**
-    - jsName: deminiaturize
-    - name: deminiaturize:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: deminiaturize:
   */
   @objc func deminiaturize(_: Any?)
 
   /**
-    - jsName: disableCursorRects
-    - name: disableCursorRects
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: disableCursorRects
   */
   @objc func disableCursorRects()
 
   /**
-    - jsName: disableKeyEquivalentForDefaultButtonCell
-    - name: disableKeyEquivalentForDefaultButtonCell
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: disableKeyEquivalentForDefaultButtonCell
   */
   @objc func disableKeyEquivalentForDefaultButtonCell()
 
   /**
-    - jsName: disableScreenUpdatesUntilFlush
-    - name: disableScreenUpdatesUntilFlush
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: disableScreenUpdatesUntilFlush
   */
   @objc func disableScreenUpdatesUntilFlush()
 
   /**
-    - jsName: disableSnapshotRestoration
-    - name: disableSnapshotRestoration
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: disableSnapshotRestoration
   */
   @objc func disableSnapshotRestoration()
 
   /**
-    - jsName: discardCursorRects
-    - name: discardCursorRects
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: discardCursorRects
   */
   @objc func discardCursorRects()
 
   /**
-    - jsName: discardEvents
-    - name: discardEventsMatchingMask:beforeEvent:
-    - argLabels: matching, before
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: discardEvents(matching:before:)
+    - Selector: discardEventsMatchingMask:beforeEvent:
   */
   @objc (discardEventsMatchingMask:beforeEvent:) func discardEvents(matching: NSEvent.EventTypeMask, before: NSEvent?)
 
   /**
-    - jsName: display
-    - name: display
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: display
   */
   @objc func display()
 
   /**
-    - jsName: displayIfNeeded
-    - name: displayIfNeeded
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: displayIfNeeded
   */
   @objc func displayIfNeeded()
 
   /**
-    - jsName: drag
-    - name: dragImage:at:offset:event:pasteboard:source:slideBack:
-    - argLabels: _, at, offset, event, pasteboard, source, slideBack
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drag(_:at:offset:event:pasteboard:source:slideBack:)
+    - Selector: dragImage:at:offset:event:pasteboard:source:slideBack:
   */
   @objc (dragImage:at:offset:event:pasteboard:source:slideBack:) func drag(_: NSImage, at: CGPoint, offset: CGSize, event: NSEvent, pasteboard: NSPasteboard, source: Any, slideBack: Bool)
 
   /**
-    - jsName: enableCursorRects
-    - name: enableCursorRects
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: enableCursorRects
   */
   @objc func enableCursorRects()
 
   /**
-    - jsName: enableKeyEquivalentForDefaultButtonCell
-    - name: enableKeyEquivalentForDefaultButtonCell
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: enableKeyEquivalentForDefaultButtonCell
   */
   @objc func enableKeyEquivalentForDefaultButtonCell()
 
   /**
-    - jsName: enableSnapshotRestoration
-    - name: enableSnapshotRestoration
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: enableSnapshotRestoration
   */
   @objc func enableSnapshotRestoration()
 
   /**
-    - jsName: endEditing
-    - name: endEditingFor:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: endEditing(for:)
+    - Selector: endEditingFor:
   */
   @objc (endEditingFor:) func endEditing(`for`: Any?)
 
   /**
-    - jsName: endSheet
-    - name: endSheet:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.9
+    - Selector: endSheet:
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) func endSheet(_: NSWindow)
 
   /**
-    - jsName: endSheet
-    - name: endSheet:returnCode:
-    - argLabels: returnCode
-    - constructorTokens: 
-    - available: 10.9
+    - Selector: endSheet:returnCode:
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) func endSheet(_: NSWindow, returnCode: NSApplication.ModalResponse)
 
   /**
-    - jsName: fieldEditor
-    - name: fieldEditor:forObject:
-    - argLabels: _, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: fieldEditor(_:for:)
+    - Selector: fieldEditor:forObject:
   */
   @objc (fieldEditor:forObject:) func fieldEditor(_: Bool, `for`: Any?) -> NSText?
 
   /**
-    - jsName: frameRect
-    - name: frameRectForContentRect:
-    - argLabels: forContentRect
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: frameRect(forContentRect:)
+    - Selector: frameRectForContentRect:
   */
   @objc (frameRectForContentRect:) func frameRect(forContentRect: CGRect) -> CGRect
 
   /**
-    - jsName: handleClose
-    - name: handleCloseScriptCommand:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: handleClose(_:)
+    - Selector: handleCloseScriptCommand:
   */
   @objc (handleCloseScriptCommand:) func handleClose(_: NSCloseCommand) -> Any?
 
   /**
-    - jsName: handlePrint
-    - name: handlePrintScriptCommand:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: handlePrint(_:)
+    - Selector: handlePrintScriptCommand:
   */
   @objc (handlePrintScriptCommand:) func handlePrint(_: NSScriptCommand) -> Any?
 
   /**
-    - jsName: handleSave
-    - name: handleSaveScriptCommand:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: handleSave(_:)
+    - Selector: handleSaveScriptCommand:
   */
   @objc (handleSaveScriptCommand:) func handleSave(_: NSScriptCommand) -> Any?
 
   /**
-    - jsName: createWithContentRect
-    - name: initWithContentRect:styleMask:backing:defer:
-    - argLabels: styleMask, backing, defer
-    - constructorTokens: contentRect, styleMask, backing, defer
+    - Selector: initWithContentRect:styleMask:backing:defer:
   */
   @objc static func createWithContentRect(_: CGRect, styleMask: NSWindow.StyleMask, backing: NSWindow.BackingStoreType, `defer`: Bool) -> Self
 
   /**
-    - jsName: createWithContentRect
-    - name: initWithContentRect:styleMask:backing:defer:screen:
-    - argLabels: styleMask, backing, defer, screen
-    - constructorTokens: contentRect, styleMask, backing, defer, screen
+    - Selector: initWithContentRect:styleMask:backing:defer:screen:
   */
   @objc static func createWithContentRect(_: CGRect, styleMask: NSWindow.StyleMask, backing: NSWindow.BackingStoreType, `defer`: Bool, screen: NSScreen?) -> Self
 
   /**
-    - jsName: createWithWindowRef
-    - name: initWithWindowRef:
-    - argLabels: 
-    - constructorTokens: windowRef
+    - Selector: initWithWindowRef:
   */
   @objc static func createWithWindowRef(_: UnsafeMutableRawPointer) -> Self?
 
   /**
-    - jsName: insertTitlebarAccessoryViewController
-    - name: insertTitlebarAccessoryViewController:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: insertTitlebarAccessoryViewController(_:at:)
+    - Selector: insertTitlebarAccessoryViewController:atIndex:
     - Introduced: 10.10
   */
   @objc (insertTitlebarAccessoryViewController:atIndex:) @available(OSX 10.10, *) func insertTitlebarAccessoryViewController(_: NSTitlebarAccessoryViewController, at: Int)
 
   /**
-    - jsName: invalidateCursorRects
-    - name: invalidateCursorRectsForView:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: invalidateCursorRects(for:)
+    - Selector: invalidateCursorRectsForView:
   */
   @objc (invalidateCursorRectsForView:) func invalidateCursorRects(`for`: NSView)
 
   /**
-    - jsName: invalidateShadow
-    - name: invalidateShadow
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidateShadow
   */
   @objc func invalidateShadow()
 
   /**
-    - jsName: layoutIfNeeded
-    - name: layoutIfNeeded
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: layoutIfNeeded
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func layoutIfNeeded()
 
   /**
-    - jsName: makeFirstResponder
-    - name: makeFirstResponder:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: makeFirstResponder:
   */
   @objc func makeFirstResponder(_: NSResponder?) -> Bool
 
   /**
-    - jsName: makeKeyAndOrderFront
-    - name: makeKeyAndOrderFront:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: makeKeyAndOrderFront:
   */
   @objc func makeKeyAndOrderFront(_: Any?)
 
   /**
-    - jsName: makeKey
-    - name: makeKeyWindow
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: makeKey()
+    - Selector: makeKeyWindow
   */
   @objc (makeKeyWindow) func makeKey()
 
   /**
-    - jsName: makeMain
-    - name: makeMainWindow
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: makeMain()
+    - Selector: makeMainWindow
   */
   @objc (makeMainWindow) func makeMain()
 
   /**
-    - jsName: mergeAllWindows
-    - name: mergeAllWindows:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12
+    - Selector: mergeAllWindows:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) func mergeAllWindows(_: Any?)
 
   /**
-    - jsName: miniaturize
-    - name: miniaturize:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: miniaturize:
   */
   @objc func miniaturize(_: Any?)
 
   /**
-    - jsName: moveTabToNewWindow
-    - name: moveTabToNewWindow:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12
+    - Selector: moveTabToNewWindow:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) func moveTabToNewWindow(_: Any?)
 
   /**
-    - jsName: nextEvent
-    - name: nextEventMatchingMask:
-    - argLabels: matching
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: nextEvent(matching:)
+    - Selector: nextEventMatchingMask:
   */
   @objc (nextEventMatchingMask:) func nextEvent(matching: NSEvent.EventTypeMask) -> NSEvent?
 
   /**
-    - jsName: nextEvent
-    - name: nextEventMatchingMask:untilDate:inMode:dequeue:
-    - argLabels: matching, until, inMode, dequeue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: nextEvent(matching:until:inMode:dequeue:)
+    - Selector: nextEventMatchingMask:untilDate:inMode:dequeue:
   */
   @objc (nextEventMatchingMask:untilDate:inMode:dequeue:) func nextEvent(matching: NSEvent.EventTypeMask, until: Date?, inMode: RunLoop.Mode, dequeue: Bool) -> NSEvent?
 
   /**
-    - jsName: orderBack
-    - name: orderBack:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderBack:
   */
   @objc func orderBack(_: Any?)
 
   /**
-    - jsName: orderFront
-    - name: orderFront:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderFront:
   */
   @objc func orderFront(_: Any?)
 
   /**
-    - jsName: orderFrontRegardless
-    - name: orderFrontRegardless
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderFrontRegardless
   */
   @objc func orderFrontRegardless()
 
   /**
-    - jsName: orderOut
-    - name: orderOut:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderOut:
   */
   @objc func orderOut(_: Any?)
 
   /**
-    - jsName: order
-    - name: orderWindow:relativeTo:
-    - argLabels: _, relativeTo
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: order(_:relativeTo:)
+    - Selector: orderWindow:relativeTo:
   */
   @objc (orderWindow:relativeTo:) func order(_: NSWindow.OrderingMode, relativeTo: Int)
 
   /**
-    - jsName: performClose
-    - name: performClose:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: performClose:
   */
   @objc func performClose(_: Any?)
 
   /**
-    - jsName: performMiniaturize
-    - name: performMiniaturize:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: performMiniaturize:
   */
   @objc func performMiniaturize(_: Any?)
 
   /**
-    - jsName: performDrag
-    - name: performWindowDragWithEvent:
-    - argLabels: with
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: performDrag(with:)
+    - Selector: performWindowDragWithEvent:
     - Introduced: 10.11
   */
   @objc (performWindowDragWithEvent:) @available(OSX 10.11, *) func performDrag(with: NSEvent)
 
   /**
-    - jsName: performZoom
-    - name: performZoom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: performZoom:
   */
   @objc func performZoom(_: Any?)
 
   /**
-    - jsName: postEvent
-    - name: postEvent:atStart:
-    - argLabels: _, atStart
-    - constructorTokens: 
+    - Selector: postEvent:atStart:
   */
   @objc (postEvent:atStart:) func postEvent(_: NSEvent, atStart: Bool)
 
   /**
-    - jsName: printWindow
-    - name: print:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: print:
   */
   @objc (print:) func printWindow(_: Any?)
 
   /**
-    - jsName: recalculateKeyViewLoop
-    - name: recalculateKeyViewLoop
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: recalculateKeyViewLoop
   */
   @objc func recalculateKeyViewLoop()
 
   /**
-    - jsName: registerForDraggedTypes
-    - name: registerForDraggedTypes:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: registerForDraggedTypes:
   */
   @objc (registerForDraggedTypes:) func registerForDraggedTypes(_: [NSPasteboard.PasteboardType])
 
   /**
-    - jsName: removeChildWindow
-    - name: removeChildWindow:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeChildWindow:
   */
   @objc func removeChildWindow(_: NSWindow)
 
   /**
-    - jsName: removeTitlebarAccessoryViewController
-    - name: removeTitlebarAccessoryViewControllerAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: removeTitlebarAccessoryViewController(at:)
+    - Selector: removeTitlebarAccessoryViewControllerAtIndex:
     - Introduced: 10.10
   */
   @objc (removeTitlebarAccessoryViewControllerAtIndex:) @available(OSX 10.10, *) func removeTitlebarAccessoryViewController(at: Int)
 
   /**
-    - jsName: resetCursorRects
-    - name: resetCursorRects
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: resetCursorRects
   */
   @objc func resetCursorRects()
 
   /**
-    - jsName: resignKey
-    - name: resignKeyWindow
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: resignKey()
+    - Selector: resignKeyWindow
   */
   @objc (resignKeyWindow) func resignKey()
 
   /**
-    - jsName: resignMain
-    - name: resignMainWindow
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: resignMain()
+    - Selector: resignMainWindow
   */
   @objc (resignMainWindow) func resignMain()
 
   /**
-    - jsName: runToolbarCustomizationPalette
-    - name: runToolbarCustomizationPalette:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: runToolbarCustomizationPalette:
   */
   @objc func runToolbarCustomizationPalette(_: Any?)
 
   /**
-    - jsName: saveFrame
-    - name: saveFrameUsingName:
-    - argLabels: usingName
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: saveFrame(usingName:)
+    - Selector: saveFrameUsingName:
   */
   @objc (saveFrameUsingName:) func saveFrame(usingName: NSWindow.FrameAutosaveName)
 
   /**
-    - jsName: selectKeyView
-    - name: selectKeyViewFollowingView:
-    - argLabels: following
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectKeyView(following:)
+    - Selector: selectKeyViewFollowingView:
   */
   @objc (selectKeyViewFollowingView:) func selectKeyView(following: NSView)
 
   /**
-    - jsName: selectKeyView
-    - name: selectKeyViewPrecedingView:
-    - argLabels: preceding
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectKeyView(preceding:)
+    - Selector: selectKeyViewPrecedingView:
   */
   @objc (selectKeyViewPrecedingView:) func selectKeyView(preceding: NSView)
 
   /**
-    - jsName: selectNextKeyView
-    - name: selectNextKeyView:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: selectNextKeyView:
   */
   @objc func selectNextKeyView(_: Any?)
 
   /**
-    - jsName: selectNextTab
-    - name: selectNextTab:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12
+    - Selector: selectNextTab:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) func selectNextTab(_: Any?)
 
   /**
-    - jsName: selectPreviousKeyView
-    - name: selectPreviousKeyView:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: selectPreviousKeyView:
   */
   @objc func selectPreviousKeyView(_: Any?)
 
   /**
-    - jsName: selectPreviousTab
-    - name: selectPreviousTab:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12
+    - Selector: selectPreviousTab:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) func selectPreviousTab(_: Any?)
 
   /**
-    - jsName: sendEvent
-    - name: sendEvent:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: sendEvent:
   */
   @objc (sendEvent:) func sendEvent(_: NSEvent)
 
   /**
-    - jsName: setAnchorAttribute
-    - name: setAnchorAttribute:forOrientation:
-    - argLabels: _, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setAnchorAttribute(_:for:)
+    - Selector: setAnchorAttribute:forOrientation:
   */
   @objc (setAnchorAttribute:forOrientation:) func setAnchorAttribute(_: NSLayoutConstraint.Attribute, `for`: NSLayoutConstraint.Orientation)
 
   /**
-    - jsName: setAutorecalculatesContentBorderThickness
-    - name: setAutorecalculatesContentBorderThickness:forEdge:
-    - argLabels: _, for
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: setAutorecalculatesContentBorderThickness(_:for:)
+    - Selector: setAutorecalculatesContentBorderThickness:forEdge:
     - Introduced: 10.5
   */
   @objc (setAutorecalculatesContentBorderThickness:forEdge:) @available(OSX 10.5, *) func setAutorecalculatesContentBorderThickness(_: Bool, `for`: NSRectEdge)
 
   /**
-    - jsName: setContentBorderThickness
-    - name: setContentBorderThickness:forEdge:
-    - argLabels: _, for
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: setContentBorderThickness(_:for:)
+    - Selector: setContentBorderThickness:forEdge:
     - Introduced: 10.5
   */
   @objc (setContentBorderThickness:forEdge:) @available(OSX 10.5, *) func setContentBorderThickness(_: CGFloat, `for`: NSRectEdge)
 
   /**
-    - jsName: setContentSize
-    - name: setContentSize:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setContentSize:
   */
   @objc func setContentSize(_: CGSize)
 
   /**
-    - jsName: setDynamicDepthLimit
-    - name: setDynamicDepthLimit:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setDynamicDepthLimit:
   */
   @objc func setDynamicDepthLimit(_: Bool)
 
   /**
-    - jsName: setFrame
-    - name: setFrame:display:
-    - argLabels: display
-    - constructorTokens: 
+    - Selector: setFrame:display:
   */
   @objc func setFrame(_: CGRect, display: Bool)
 
   /**
-    - jsName: setFrame
-    - name: setFrame:display:animate:
-    - argLabels: display, animate
-    - constructorTokens: 
+    - Selector: setFrame:display:animate:
   */
   @objc func setFrame(_: CGRect, display: Bool, animate: Bool)
 
   /**
-    - jsName: setFrameAutosaveName
-    - name: setFrameAutosaveName:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setFrameAutosaveName:
   */
   @objc func setFrameAutosaveName(_: NSWindow.FrameAutosaveName) -> Bool
 
   /**
-    - jsName: setFrame
-    - name: setFrameFromString:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setFrame(from:)
+    - Selector: setFrameFromString:
   */
   @objc (setFrameFromString:) func setFrame(from: NSWindow.PersistableFrameDescriptor)
 
   /**
-    - jsName: setFrameOrigin
-    - name: setFrameOrigin:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setFrameOrigin:
   */
   @objc func setFrameOrigin(_: CGPoint)
 
   /**
-    - jsName: setFrameTopLeftPoint
-    - name: setFrameTopLeftPoint:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setFrameTopLeftPoint:
   */
   @objc func setFrameTopLeftPoint(_: CGPoint)
 
   /**
-    - jsName: setFrameUsingName
-    - name: setFrameUsingName:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setFrameUsingName:
   */
   @objc func setFrameUsingName(_: NSWindow.FrameAutosaveName) -> Bool
 
   /**
-    - jsName: setFrameUsingName
-    - name: setFrameUsingName:force:
-    - argLabels: force
-    - constructorTokens: 
+    - Selector: setFrameUsingName:force:
   */
   @objc func setFrameUsingName(_: NSWindow.FrameAutosaveName, force: Bool) -> Bool
 
   /**
-    - jsName: setIsMiniaturized
-    - name: setIsMiniaturized:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setIsMiniaturized:
   */
   @objc func setIsMiniaturized(_: Bool)
 
   /**
-    - jsName: setIsVisible
-    - name: setIsVisible:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setIsVisible:
   */
   @objc func setIsVisible(_: Bool)
 
   /**
-    - jsName: setIsZoomed
-    - name: setIsZoomed:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setIsZoomed:
   */
   @objc func setIsZoomed(_: Bool)
 
   /**
-    - jsName: setTitleWithRepresentedFilename
-    - name: setTitleWithRepresentedFilename:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setTitleWithRepresentedFilename:
   */
   @objc func setTitleWithRepresentedFilename(_: String)
 
   /**
-    - jsName: standardWindowButton
-    - name: standardWindowButton:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: standardWindowButton:
   */
   @objc func standardWindowButton(_: NSWindow.ButtonType) -> NSButton?
 
   /**
-    - jsName: toggleFullScreen
-    - name: toggleFullScreen:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: toggleFullScreen:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func toggleFullScreen(_: Any?)
 
   /**
-    - jsName: toggleTabBar
-    - name: toggleTabBar:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12
+    - Selector: toggleTabBar:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) func toggleTabBar(_: Any?)
 
   /**
-    - jsName: toggleTabOverview
-    - name: toggleTabOverview:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.13
+    - Selector: toggleTabOverview:
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) func toggleTabOverview(_: Any?)
 
   /**
-    - jsName: toggleToolbarShown
-    - name: toggleToolbarShown:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: toggleToolbarShown:
   */
   @objc func toggleToolbarShown(_: Any?)
 
   /**
-    - jsName: trackEvents
-    - name: trackEventsMatchingMask:timeout:mode:handler:
-    - argLabels: matching, timeout, mode, handler
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: trackEvents(matching:timeout:mode:handler:)
+    - Selector: trackEventsMatchingMask:timeout:mode:handler:
     - Introduced: 10.10
   */
-  // jsvalue - @objc (trackEventsMatchingMask:timeout:mode:handler:) @available(OSX 10.10, *) func trackEvents(matching: NSEvent.EventTypeMask, timeout: TimeInterval, mode: RunLoop.Mode, handler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func trackEvents(matching: NSEvent.EventTypeMask, timeout: TimeInterval, mode: RunLoop.Mode, handler: JSValue)
 
   /**
-    - jsName: unregisterDraggedTypes
-    - name: unregisterDraggedTypes
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: unregisterDraggedTypes
   */
   @objc func unregisterDraggedTypes()
 
   /**
-    - jsName: update
-    - name: update
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: update
   */
   @objc func update()
 
   /**
-    - jsName: updateConstraintsIfNeeded
-    - name: updateConstraintsIfNeeded
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: updateConstraintsIfNeeded
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func updateConstraintsIfNeeded()
 
   /**
-    - jsName: visualizeConstraints
-    - name: visualizeConstraints:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: visualizeConstraints:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func visualizeConstraints(_: [NSLayoutConstraint]?)
 
   /**
-    - jsName: zoom
-    - name: zoom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: zoom:
   */
   @objc func zoom(_: Any?)
 
   // Protocol Inherited Instance Properties
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: NSUserInterfaceItemIdentifier? { @objc get @objc (setIdentifier:) set }
 
   // Own Instance Properties
 
   /**
-    - jsName: acceptsMouseMovedEvents
-    - name: acceptsMouseMovedEvents
-    - argLabels: 
+    - Selector: acceptsMouseMovedEvents
   */
   @objc var acceptsMouseMovedEvents: Bool { @objc get @objc (setAcceptsMouseMovedEvents:) set }
 
   /**
-    - jsName: allowsConcurrentViewDrawing
-    - name: allowsConcurrentViewDrawing
-    - argLabels: 
-    - available: 10.6
+    - Selector: allowsConcurrentViewDrawing
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var allowsConcurrentViewDrawing: Bool { @objc get @objc (setAllowsConcurrentViewDrawing:) set }
 
   /**
-    - jsName: allowsToolTipsWhenApplicationIsInactive
-    - name: allowsToolTipsWhenApplicationIsInactive
-    - argLabels: 
+    - Selector: allowsToolTipsWhenApplicationIsInactive
   */
   @objc var allowsToolTipsWhenApplicationIsInactive: Bool { @objc get @objc (setAllowsToolTipsWhenApplicationIsInactive:) set }
 
   /**
-    - jsName: alphaValue
-    - name: alphaValue
-    - argLabels: 
+    - Selector: alphaValue
   */
   @objc var alphaValue: CGFloat { @objc get @objc (setAlphaValue:) set }
 
   /**
-    - jsName: animationBehavior
-    - name: animationBehavior
-    - argLabels: 
-    - available: 10.7
+    - Selector: animationBehavior
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var animationBehavior: NSWindow.AnimationBehavior { @objc get @objc (setAnimationBehavior:) set }
 
   /**
-    - jsName: appearanceSource
-    - name: appearanceSource
-    - argLabels: 
-    - available: 10.14
+    - Selector: appearanceSource
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) var appearanceSource: NSAppearanceCustomization! { @objc get @objc (setAppearanceSource:) set }
 
   /**
-    - jsName: areCursorRectsEnabled
-    - name: areCursorRectsEnabled
-    - argLabels: 
+    - Selector: areCursorRectsEnabled
   */
   @objc var areCursorRectsEnabled: Bool { @objc get }
 
   /**
-    - jsName: aspectRatio
-    - name: aspectRatio
-    - argLabels: 
+    - Selector: aspectRatio
   */
   @objc var aspectRatio: CGSize { @objc get @objc (setAspectRatio:) set }
 
   /**
-    - jsName: attachedSheet
-    - name: attachedSheet
-    - argLabels: 
+    - Selector: attachedSheet
   */
   @objc var attachedSheet: NSWindow? { @objc get }
 
   /**
-    - jsName: autorecalculatesKeyViewLoop
-    - name: autorecalculatesKeyViewLoop
-    - argLabels: 
+    - Selector: autorecalculatesKeyViewLoop
   */
   @objc var autorecalculatesKeyViewLoop: Bool { @objc get @objc (setAutorecalculatesKeyViewLoop:) set }
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor! { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: backingScaleFactor
-    - name: backingScaleFactor
-    - argLabels: 
-    - available: 10.7
+    - Selector: backingScaleFactor
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var backingScaleFactor: CGFloat { @objc get }
 
   /**
-    - jsName: backingType
-    - name: backingType
-    - argLabels: 
+    - Selector: backingType
   */
   @objc var backingType: NSWindow.BackingStoreType { @objc get @objc (setBackingType:) set }
 
   /**
-    - jsName: canBecomeKey
-    - name: canBecomeKeyWindow
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: canBecomeKey
+    - Selector: canBecomeKeyWindow
   */
   @objc var canBecomeKey: Bool { @objc (canBecomeKeyWindow) get }
 
   /**
-    - jsName: canBecomeMain
-    - name: canBecomeMainWindow
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: canBecomeMain
+    - Selector: canBecomeMainWindow
   */
   @objc var canBecomeMain: Bool { @objc (canBecomeMainWindow) get }
 
   /**
-    - jsName: canBecomeVisibleWithoutLogin
-    - name: canBecomeVisibleWithoutLogin
-    - argLabels: 
-    - available: 10.5
+    - Selector: canBecomeVisibleWithoutLogin
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var canBecomeVisibleWithoutLogin: Bool { @objc get @objc (setCanBecomeVisibleWithoutLogin:) set }
 
   /**
-    - jsName: canHide
-    - name: canHide
-    - argLabels: 
+    - Selector: canHide
   */
   @objc var canHide: Bool { @objc get @objc (setCanHide:) set }
 
   /**
-    - jsName: childWindows
-    - name: childWindows
-    - argLabels: 
+    - Selector: childWindows
   */
   @objc var childWindows: [NSWindow]? { @objc get }
 
   /**
-    - jsName: collectionBehavior
-    - name: collectionBehavior
-    - argLabels: 
-    - available: 10.5
+    - Selector: collectionBehavior
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var collectionBehavior: NSWindow.CollectionBehavior { @objc get @objc (setCollectionBehavior:) set }
 
   /**
-    - jsName: colorSpace
-    - name: colorSpace
-    - argLabels: 
-    - available: 10.6
+    - Selector: colorSpace
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var colorSpace: NSColorSpace? { @objc get @objc (setColorSpace:) set }
 
   /**
-    - jsName: contentAspectRatio
-    - name: contentAspectRatio
-    - argLabels: 
+    - Selector: contentAspectRatio
   */
   @objc var contentAspectRatio: CGSize { @objc get @objc (setContentAspectRatio:) set }
 
   /**
-    - jsName: contentLayoutGuide
-    - name: contentLayoutGuide
-    - argLabels: 
-    - available: 10.10
+    - Selector: contentLayoutGuide
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var contentLayoutGuide: Any? { @objc get }
 
   /**
-    - jsName: contentLayoutRect
-    - name: contentLayoutRect
-    - argLabels: 
-    - available: 10.10
+    - Selector: contentLayoutRect
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var contentLayoutRect: CGRect { @objc get }
 
   /**
-    - jsName: contentMaxSize
-    - name: contentMaxSize
-    - argLabels: 
+    - Selector: contentMaxSize
   */
   @objc var contentMaxSize: CGSize { @objc get @objc (setContentMaxSize:) set }
 
   /**
-    - jsName: contentMinSize
-    - name: contentMinSize
-    - argLabels: 
+    - Selector: contentMinSize
   */
   @objc var contentMinSize: CGSize { @objc get @objc (setContentMinSize:) set }
 
   /**
-    - jsName: contentResizeIncrements
-    - name: contentResizeIncrements
-    - argLabels: 
+    - Selector: contentResizeIncrements
   */
   @objc var contentResizeIncrements: CGSize { @objc get @objc (setContentResizeIncrements:) set }
 
   /**
-    - jsName: contentView
-    - name: contentView
-    - argLabels: 
+    - Selector: contentView
   */
   @objc var contentView: NSView? { @objc get @objc (setContentView:) set }
 
   /**
-    - jsName: contentViewController
-    - name: contentViewController
-    - argLabels: 
-    - available: 10.10
+    - Selector: contentViewController
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var contentViewController: NSViewController? { @objc get @objc (setContentViewController:) set }
 
   /**
-    - jsName: currentEvent
-    - name: currentEvent
-    - argLabels: 
+    - Selector: currentEvent
   */
   @objc var currentEvent: NSEvent? { @objc get }
 
   /**
-    - jsName: deepestScreen
-    - name: deepestScreen
-    - argLabels: 
+    - Selector: deepestScreen
   */
   @objc var deepestScreen: NSScreen? { @objc get }
 
   /**
-    - jsName: defaultButtonCell
-    - name: defaultButtonCell
-    - argLabels: 
+    - Selector: defaultButtonCell
   */
   @objc var defaultButtonCell: NSButtonCell? { @objc get @objc (setDefaultButtonCell:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSWindowDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: depthLimit
-    - name: depthLimit
-    - argLabels: 
+    - Selector: depthLimit
   */
   @objc var depthLimit: NSWindow.Depth { @objc get @objc (setDepthLimit:) set }
 
   /**
-    - jsName: deviceDescription
-    - name: deviceDescription
-    - argLabels: 
+    - Selector: deviceDescription
   */
   @objc var deviceDescription: [NSDeviceDescriptionKey: Any] { @objc get }
 
   /**
-    - jsName: displaysWhenScreenProfileChanges
-    - name: displaysWhenScreenProfileChanges
-    - argLabels: 
+    - Selector: displaysWhenScreenProfileChanges
   */
   @objc var displaysWhenScreenProfileChanges: Bool { @objc get @objc (setDisplaysWhenScreenProfileChanges:) set }
 
   /**
-    - jsName: dockTile
-    - name: dockTile
-    - argLabels: 
-    - available: 10.5
+    - Selector: dockTile
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var dockTile: NSDockTile { @objc get }
 
   /**
-    - jsName: isDocumentEdited
-    - name: documentEdited
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isDocumentEdited
+    - Selector: documentEdited
   */
   @objc var isDocumentEdited: Bool { @objc get @objc (setDocumentEdited:) set }
 
   /**
-    - jsName: isExcludedFromWindowsMenu
-    - name: excludedFromWindowsMenu
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isExcludedFromWindowsMenu
+    - Selector: excludedFromWindowsMenu
   */
   @objc var isExcludedFromWindowsMenu: Bool { @objc get @objc (setExcludedFromWindowsMenu:) set }
 
   /**
-    - jsName: firstResponder
-    - name: firstResponder
-    - argLabels: 
+    - Selector: firstResponder
   */
   @objc var firstResponder: NSResponder? { @objc get }
 
   /**
-    - jsName: isFloatingPanel
-    - name: floatingPanel
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFloatingPanel
+    - Selector: floatingPanel
   */
   @objc var isFloatingPanel: Bool { @objc get }
 
   /**
-    - jsName: frame
-    - name: frame
-    - argLabels: 
+    - Selector: frame
   */
   @objc var frame: CGRect { @objc get }
 
   /**
-    - jsName: frameAutosaveName
-    - name: frameAutosaveName
-    - argLabels: 
+    - Selector: frameAutosaveName
   */
   @objc var frameAutosaveName: NSWindow.FrameAutosaveName { @objc get }
 
   /**
-    - jsName: hasCloseBox
-    - name: hasCloseBox
-    - argLabels: 
+    - Selector: hasCloseBox
   */
   @objc var hasCloseBox: Bool { @objc get }
 
   /**
-    - jsName: hasDynamicDepthLimit
-    - name: hasDynamicDepthLimit
-    - argLabels: 
+    - Selector: hasDynamicDepthLimit
   */
   @objc var hasDynamicDepthLimit: Bool { @objc get }
 
   /**
-    - jsName: hasShadow
-    - name: hasShadow
-    - argLabels: 
+    - Selector: hasShadow
   */
   @objc var hasShadow: Bool { @objc get @objc (setHasShadow:) set }
 
   /**
-    - jsName: hasTitleBar
-    - name: hasTitleBar
-    - argLabels: 
+    - Selector: hasTitleBar
   */
   @objc var hasTitleBar: Bool { @objc get }
 
   /**
-    - jsName: hidesOnDeactivate
-    - name: hidesOnDeactivate
-    - argLabels: 
+    - Selector: hidesOnDeactivate
   */
   @objc var hidesOnDeactivate: Bool { @objc get @objc (setHidesOnDeactivate:) set }
 
   /**
-    - jsName: ignoresMouseEvents
-    - name: ignoresMouseEvents
-    - argLabels: 
+    - Selector: ignoresMouseEvents
   */
   @objc var ignoresMouseEvents: Bool { @objc get @objc (setIgnoresMouseEvents:) set }
 
   /**
-    - jsName: inLiveResize
-    - name: inLiveResize
-    - argLabels: 
-    - available: 10.6
+    - Selector: inLiveResize
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var inLiveResize: Bool { @objc get }
 
   /**
-    - jsName: initialFirstResponder
-    - name: initialFirstResponder
-    - argLabels: 
+    - Selector: initialFirstResponder
   */
   @objc var initialFirstResponder: NSView? { @objc get @objc (setInitialFirstResponder:) set }
 
   /**
-    - jsName: keyViewSelectionDirection
-    - name: keyViewSelectionDirection
-    - argLabels: 
+    - Selector: keyViewSelectionDirection
   */
   @objc var keyViewSelectionDirection: NSWindow.SelectionDirection { @objc get }
 
   /**
-    - jsName: isKeyWindow
-    - name: keyWindow
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isKeyWindow
+    - Selector: keyWindow
   */
   @objc var isKeyWindow: Bool { @objc get }
 
   /**
-    - jsName: level
-    - name: level
-    - argLabels: 
+    - Selector: level
   */
   @objc var level: NSWindow.Level { @objc get @objc (setLevel:) set }
 
   /**
-    - jsName: isMainWindow
-    - name: mainWindow
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isMainWindow
+    - Selector: mainWindow
   */
   @objc var isMainWindow: Bool { @objc get }
 
   /**
-    - jsName: maxFullScreenContentSize
-    - name: maxFullScreenContentSize
-    - argLabels: 
-    - available: 10.11
+    - Selector: maxFullScreenContentSize
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var maxFullScreenContentSize: CGSize { @objc get @objc (setMaxFullScreenContentSize:) set }
 
   /**
-    - jsName: maxSize
-    - name: maxSize
-    - argLabels: 
+    - Selector: maxSize
   */
   @objc var maxSize: CGSize { @objc get @objc (setMaxSize:) set }
 
   /**
-    - jsName: minFullScreenContentSize
-    - name: minFullScreenContentSize
-    - argLabels: 
-    - available: 10.11
+    - Selector: minFullScreenContentSize
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var minFullScreenContentSize: CGSize { @objc get @objc (setMinFullScreenContentSize:) set }
 
   /**
-    - jsName: minSize
-    - name: minSize
-    - argLabels: 
+    - Selector: minSize
   */
   @objc var minSize: CGSize { @objc get @objc (setMinSize:) set }
 
   /**
-    - jsName: isMiniaturizable
-    - name: miniaturizable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isMiniaturizable
+    - Selector: miniaturizable
   */
   @objc var isMiniaturizable: Bool { @objc get }
 
   /**
-    - jsName: isMiniaturized
-    - name: miniaturized
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isMiniaturized
+    - Selector: miniaturized
   */
   @objc var isMiniaturized: Bool { @objc get }
 
   /**
-    - jsName: miniwindowImage
-    - name: miniwindowImage
-    - argLabels: 
+    - Selector: miniwindowImage
   */
   @objc var miniwindowImage: NSImage? { @objc get @objc (setMiniwindowImage:) set }
 
   /**
-    - jsName: miniwindowTitle
-    - name: miniwindowTitle
-    - argLabels: 
+    - Selector: miniwindowTitle
   */
   @objc var miniwindowTitle: String! { @objc get @objc (setMiniwindowTitle:) set }
 
   /**
-    - jsName: isModalPanel
-    - name: modalPanel
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isModalPanel
+    - Selector: modalPanel
   */
   @objc var isModalPanel: Bool { @objc get }
 
   /**
-    - jsName: mouseLocationOutsideOfEventStream
-    - name: mouseLocationOutsideOfEventStream
-    - argLabels: 
+    - Selector: mouseLocationOutsideOfEventStream
   */
   @objc var mouseLocationOutsideOfEventStream: CGPoint { @objc get }
 
   /**
-    - jsName: isMovable
-    - name: movable
-    - argLabels: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: isMovable
+    - Selector: movable
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var isMovable: Bool { @objc get @objc (setMovable:) set }
 
   /**
-    - jsName: isMovableByWindowBackground
-    - name: movableByWindowBackground
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isMovableByWindowBackground
+    - Selector: movableByWindowBackground
   */
   @objc var isMovableByWindowBackground: Bool { @objc get @objc (setMovableByWindowBackground:) set }
 
   /**
-    - jsName: occlusionState
-    - name: occlusionState
-    - argLabels: 
-    - available: 10.9
+    - Selector: occlusionState
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var occlusionState: NSWindow.OcclusionState { @objc get }
 
   /**
-    - jsName: isOnActiveSpace
-    - name: onActiveSpace
-    - argLabels: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: isOnActiveSpace
+    - Selector: onActiveSpace
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var isOnActiveSpace: Bool { @objc get }
 
   /**
-    - jsName: isOpaque
-    - name: opaque
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isOpaque
+    - Selector: opaque
   */
   @objc var isOpaque: Bool { @objc get @objc (setOpaque:) set }
 
   /**
-    - jsName: orderedIndex
-    - name: orderedIndex
-    - argLabels: 
+    - Selector: orderedIndex
   */
   @objc var orderedIndex: Int { @objc get @objc (setOrderedIndex:) set }
 
   /**
-    - jsName: parent
-    - name: parentWindow
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: parent
+    - Selector: parentWindow
   */
   @objc var parent: NSWindow? { @objc (parentWindow) get @objc (setParentWindow:) set }
 
   /**
-    - jsName: preservesContentDuringLiveResize
-    - name: preservesContentDuringLiveResize
-    - argLabels: 
+    - Selector: preservesContentDuringLiveResize
   */
   @objc var preservesContentDuringLiveResize: Bool { @objc get @objc (setPreservesContentDuringLiveResize:) set }
 
   /**
-    - jsName: preventsApplicationTerminationWhenModal
-    - name: preventsApplicationTerminationWhenModal
-    - argLabels: 
-    - available: 10.6
+    - Selector: preventsApplicationTerminationWhenModal
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var preventsApplicationTerminationWhenModal: Bool { @objc get @objc (setPreventsApplicationTerminationWhenModal:) set }
 
   /**
-    - jsName: isReleasedWhenClosed
-    - name: releasedWhenClosed
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isReleasedWhenClosed
+    - Selector: releasedWhenClosed
   */
   @objc var isReleasedWhenClosed: Bool { @objc get @objc (setReleasedWhenClosed:) set }
 
   /**
-    - jsName: representedFilename
-    - name: representedFilename
-    - argLabels: 
+    - Selector: representedFilename
   */
   @objc var representedFilename: String { @objc get @objc (setRepresentedFilename:) set }
 
   /**
-    - jsName: representedURL
-    - name: representedURL
-    - argLabels: 
-    - available: 10.5
+    - Selector: representedURL
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var representedURL: URL? { @objc get @objc (setRepresentedURL:) set }
 
   /**
-    - jsName: isResizable
-    - name: resizable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isResizable
+    - Selector: resizable
   */
   @objc var isResizable: Bool { @objc get }
 
   /**
-    - jsName: resizeFlags
-    - name: resizeFlags
-    - argLabels: 
+    - Selector: resizeFlags
   */
   @objc var resizeFlags: NSEvent.ModifierFlags { @objc get }
 
   /**
-    - jsName: resizeIncrements
-    - name: resizeIncrements
-    - argLabels: 
+    - Selector: resizeIncrements
   */
   @objc var resizeIncrements: CGSize { @objc get @objc (setResizeIncrements:) set }
 
   /**
-    - jsName: isRestorable
-    - name: restorable
-    - argLabels: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: isRestorable
+    - Selector: restorable
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var isRestorable: Bool { @objc get @objc (setRestorable:) set }
 
   /**
-    - jsName: restorationClass
-    - name: restorationClass
-    - argLabels: 
-    - available: 10.7
+    - Selector: restorationClass
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var restorationClass: NSWindowRestoration.Type? { @objc get @objc (setRestorationClass:) set }
 
   /**
-    - jsName: screen
-    - name: screen
-    - argLabels: 
+    - Selector: screen
   */
   @objc var screen: NSScreen? { @objc get }
 
   /**
-    - jsName: sharingType
-    - name: sharingType
-    - argLabels: 
-    - available: 10.5
+    - Selector: sharingType
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var sharingType: NSWindow.SharingType { @objc get @objc (setSharingType:) set }
 
   /**
-    - jsName: isSheet
-    - name: sheet
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSheet
+    - Selector: sheet
   */
   @objc var isSheet: Bool { @objc get }
 
   /**
-    - jsName: sheetParent
-    - name: sheetParent
-    - argLabels: 
-    - available: 10.9
+    - Selector: sheetParent
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var sheetParent: NSWindow? { @objc get }
 
   /**
-    - jsName: sheets
-    - name: sheets
-    - argLabels: 
-    - available: 10.9
+    - Selector: sheets
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var sheets: [NSWindow] { @objc get }
 
   /**
-    - jsName: showsResizeIndicator
-    - name: showsResizeIndicator
-    - argLabels: 
+    - Selector: showsResizeIndicator
   */
   @objc var showsResizeIndicator: Bool { @objc get @objc (setShowsResizeIndicator:) set }
 
   /**
-    - jsName: showsToolbarButton
-    - name: showsToolbarButton
-    - argLabels: 
+    - Selector: showsToolbarButton
   */
   @objc var showsToolbarButton: Bool { @objc get @objc (setShowsToolbarButton:) set }
 
   /**
-    - jsName: frameDescriptor
-    - name: stringWithSavedFrame
-    - argLabels: 
-    - obsoleted: 4.2
-    - renamed: frameDescriptor
+    - Selector: stringWithSavedFrame
   */
   @objc var frameDescriptor: NSWindow.PersistableFrameDescriptor { @objc (stringWithSavedFrame) get }
 
   /**
-    - jsName: styleMask
-    - name: styleMask
-    - argLabels: 
+    - Selector: styleMask
   */
   @objc var styleMask: NSWindow.StyleMask { @objc get @objc (setStyleMask:) set }
 
   /**
-    - jsName: tab
-    - name: tab
-    - argLabels: 
-    - available: 10.13
+    - Selector: tab
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var tab: NSWindowTab { @objc get }
 
   /**
-    - jsName: tabGroup
-    - name: tabGroup
-    - argLabels: 
-    - available: 10.13
+    - Selector: tabGroup
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var tabGroup: NSWindowTabGroup? { @objc get }
 
   /**
-    - jsName: tabbedWindows
-    - name: tabbedWindows
-    - argLabels: 
-    - available: 10.12
+    - Selector: tabbedWindows
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var tabbedWindows: [NSWindow]? { @objc get }
 
   /**
-    - jsName: tabbingIdentifier
-    - name: tabbingIdentifier
-    - argLabels: 
-    - available: 10.12
+    - Selector: tabbingIdentifier
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var tabbingIdentifier: NSWindow.TabbingIdentifier { @objc get @objc (setTabbingIdentifier:) set }
 
   /**
-    - jsName: tabbingMode
-    - name: tabbingMode
-    - argLabels: 
-    - available: 10.12
+    - Selector: tabbingMode
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var tabbingMode: NSWindow.TabbingMode { @objc get @objc (setTabbingMode:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get @objc (setTitle:) set }
 
   /**
-    - jsName: titleVisibility
-    - name: titleVisibility
-    - argLabels: 
-    - available: 10.10
+    - Selector: titleVisibility
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var titleVisibility: NSWindow.TitleVisibility { @objc get @objc (setTitleVisibility:) set }
 
   /**
-    - jsName: titlebarAccessoryViewControllers
-    - name: titlebarAccessoryViewControllers
-    - argLabels: 
-    - available: 10.10
+    - Selector: titlebarAccessoryViewControllers
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var titlebarAccessoryViewControllers: [NSTitlebarAccessoryViewController] { @objc get @objc (setTitlebarAccessoryViewControllers:) set }
 
   /**
-    - jsName: titlebarAppearsTransparent
-    - name: titlebarAppearsTransparent
-    - argLabels: 
-    - available: 10.10
+    - Selector: titlebarAppearsTransparent
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var titlebarAppearsTransparent: Bool { @objc get @objc (setTitlebarAppearsTransparent:) set }
 
   /**
-    - jsName: toolbar
-    - name: toolbar
-    - argLabels: 
+    - Selector: toolbar
   */
   @objc var toolbar: NSToolbar? { @objc get @objc (setToolbar:) set }
 
   /**
-    - jsName: viewsNeedDisplay
-    - name: viewsNeedDisplay
-    - argLabels: 
+    - Selector: viewsNeedDisplay
   */
   @objc var viewsNeedDisplay: Bool { @objc get @objc (setViewsNeedDisplay:) set }
 
   /**
-    - jsName: isVisible
-    - name: visible
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isVisible
+    - Selector: visible
   */
   @objc var isVisible: Bool { @objc get }
 
   /**
-    - jsName: windowController
-    - name: windowController
-    - argLabels: 
+    - Selector: windowController
   */
   @objc var windowController: NSWindowController? { @objc get @objc (setWindowController:) set }
 
   /**
-    - jsName: windowNumber
-    - name: windowNumber
-    - argLabels: 
+    - Selector: windowNumber
   */
   @objc var windowNumber: Int { @objc get }
 
   /**
-    - jsName: windowRef
-    - name: windowRef
-    - argLabels: 
+    - Selector: windowRef
   */
   @objc var windowRef: UnsafeMutableRawPointer { @objc get }
 
   /**
-    - jsName: windowTitlebarLayoutDirection
-    - name: windowTitlebarLayoutDirection
-    - argLabels: 
-    - available: 10.12
+    - Selector: windowTitlebarLayoutDirection
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var windowTitlebarLayoutDirection: NSUserInterfaceLayoutDirection { @objc get }
 
   /**
-    - jsName: worksWhenModal
-    - name: worksWhenModal
-    - argLabels: 
+    - Selector: worksWhenModal
   */
   @objc var worksWhenModal: Bool { @objc get }
 
   /**
-    - jsName: isZoomable
-    - name: zoomable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isZoomable
+    - Selector: zoomable
   */
   @objc var isZoomable: Bool { @objc get }
 
   /**
-    - jsName: isZoomed
-    - name: zoomed
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isZoomed
+    - Selector: zoomed
   */
   @objc var isZoomed: Bool { @objc get }
 }

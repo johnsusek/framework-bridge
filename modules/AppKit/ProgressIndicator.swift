@@ -9,125 +9,89 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSProgressIndicator
-    - name: NSProgressIndicator
-    - argLabels: 
+    - Selector: NSProgressIndicator
   */
 
 @objc(NSProgressIndicator) protocol NSProgressIndicatorExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: increment
-    - name: incrementBy:
-    - argLabels: by
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: increment(by:)
+    - Selector: incrementBy:
   */
   @objc (incrementBy:) func increment(by: Double)
 
   /**
-    - jsName: sizeToFit
-    - name: sizeToFit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: sizeToFit
   */
   @objc func sizeToFit()
 
   /**
-    - jsName: startAnimation
-    - name: startAnimation:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: startAnimation:
   */
   @objc func startAnimation(_: Any?)
 
   /**
-    - jsName: stopAnimation
-    - name: stopAnimation:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: stopAnimation:
   */
   @objc func stopAnimation(_: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: isBezeled
-    - name: bezeled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isBezeled
+    - Selector: bezeled
   */
   @objc var isBezeled: Bool { @objc get @objc (setBezeled:) set }
 
   /**
-    - jsName: controlSize
-    - name: controlSize
-    - argLabels: 
+    - Selector: controlSize
   */
   @objc var controlSize: NSControl.ControlSize { @objc get @objc (setControlSize:) set }
 
   /**
-    - jsName: controlTint
-    - name: controlTint
-    - argLabels: 
+    - Selector: controlTint
   */
   @objc var controlTint: NSControlTint { @objc get @objc (setControlTint:) set }
 
   /**
-    - jsName: isDisplayedWhenStopped
-    - name: displayedWhenStopped
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isDisplayedWhenStopped
+    - Selector: displayedWhenStopped
   */
   @objc var isDisplayedWhenStopped: Bool { @objc get @objc (setDisplayedWhenStopped:) set }
 
   /**
-    - jsName: doubleValue
-    - name: doubleValue
-    - argLabels: 
+    - Selector: doubleValue
   */
   @objc var doubleValue: Double { @objc get @objc (setDoubleValue:) set }
 
   /**
-    - jsName: isIndeterminate
-    - name: indeterminate
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isIndeterminate
+    - Selector: indeterminate
   */
   @objc var isIndeterminate: Bool { @objc get @objc (setIndeterminate:) set }
 
   /**
-    - jsName: maxValue
-    - name: maxValue
-    - argLabels: 
+    - Selector: maxValue
   */
   @objc var maxValue: Double { @objc get @objc (setMaxValue:) set }
 
   /**
-    - jsName: minValue
-    - name: minValue
-    - argLabels: 
+    - Selector: minValue
   */
   @objc var minValue: Double { @objc get @objc (setMinValue:) set }
 
   /**
-    - jsName: style
-    - name: style
-    - argLabels: 
+    - Selector: style
   */
   @objc var style: NSProgressIndicator.Style { @objc get @objc (setStyle:) set }
 
   /**
-    - jsName: usesThreadedAnimation
-    - name: usesThreadedAnimation
-    - argLabels: 
+    - Selector: usesThreadedAnimation
   */
   @objc var usesThreadedAnimation: Bool { @objc get @objc (setUsesThreadedAnimation:) set }
 }

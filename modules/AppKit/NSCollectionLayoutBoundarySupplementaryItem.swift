@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutBoundarySupplementaryItem
-    - name: NSCollectionLayoutBoundarySupplementaryItem
-    - argLabels: 
+    - Selector: NSCollectionLayoutBoundarySupplementaryItem
     - Introduced: 10.15
   */
 
@@ -19,54 +17,34 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: boundarySupplementaryItemWithLayoutSize:elementKind:alignment:
-    - argLabels: layoutSize, elementKind, alignment
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(layoutSize:elementKind:alignment:)
-    - message: Not available in Swift
+    - Selector: boundarySupplementaryItemWithLayoutSize:elementKind:alignment:
   */
   @objc static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, alignment: NSRectAlignment) -> Self
 
   /**
-    - jsName: create
-    - name: boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset:
-    - argLabels: layoutSize, elementKind, alignment, absoluteOffset
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(layoutSize:elementKind:alignment:absoluteOffset:)
-    - message: Not available in Swift
+    - Selector: boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset:
   */
   @objc static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, alignment: NSRectAlignment, absoluteOffset: CGPoint) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: alignment
-    - name: alignment
-    - argLabels: 
+    - Selector: alignment
   */
   @objc var alignment: NSRectAlignment { @objc get }
 
   /**
-    - jsName: extendsBoundary
-    - name: extendsBoundary
-    - argLabels: 
+    - Selector: extendsBoundary
   */
   @objc var extendsBoundary: Bool { @objc get @objc (setExtendsBoundary:) set }
 
   /**
-    - jsName: offset
-    - name: offset
-    - argLabels: 
+    - Selector: offset
   */
   @objc var offset: CGPoint { @objc get }
 
   /**
-    - jsName: pinToVisibleBounds
-    - name: pinToVisibleBounds
-    - argLabels: 
+    - Selector: pinToVisibleBounds
   */
   @objc var pinToVisibleBounds: Bool { @objc get @objc (setPinToVisibleBounds:) set }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitVolume
-    - name: NSUnitVolume
-    - argLabels: 
+    - Selector: NSUnitVolume
     - Introduced: 10.12
   */
 
@@ -19,229 +17,164 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: acreFeet
-    - name: acreFeet
-    - argLabels: 
+    - Selector: acreFeet
   */
   @objc static var acreFeet: UnitVolume { @objc get }
 
   /**
-    - jsName: bushels
-    - name: bushels
-    - argLabels: 
+    - Selector: bushels
   */
   @objc static var bushels: UnitVolume { @objc get }
 
   /**
-    - jsName: centiliters
-    - name: centiliters
-    - argLabels: 
+    - Selector: centiliters
   */
   @objc static var centiliters: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicCentimeters
-    - name: cubicCentimeters
-    - argLabels: 
+    - Selector: cubicCentimeters
   */
   @objc static var cubicCentimeters: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicDecimeters
-    - name: cubicDecimeters
-    - argLabels: 
+    - Selector: cubicDecimeters
   */
   @objc static var cubicDecimeters: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicFeet
-    - name: cubicFeet
-    - argLabels: 
+    - Selector: cubicFeet
   */
   @objc static var cubicFeet: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicInches
-    - name: cubicInches
-    - argLabels: 
+    - Selector: cubicInches
   */
   @objc static var cubicInches: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicKilometers
-    - name: cubicKilometers
-    - argLabels: 
+    - Selector: cubicKilometers
   */
   @objc static var cubicKilometers: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicMeters
-    - name: cubicMeters
-    - argLabels: 
+    - Selector: cubicMeters
   */
   @objc static var cubicMeters: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicMiles
-    - name: cubicMiles
-    - argLabels: 
+    - Selector: cubicMiles
   */
   @objc static var cubicMiles: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicMillimeters
-    - name: cubicMillimeters
-    - argLabels: 
+    - Selector: cubicMillimeters
   */
   @objc static var cubicMillimeters: UnitVolume { @objc get }
 
   /**
-    - jsName: cubicYards
-    - name: cubicYards
-    - argLabels: 
+    - Selector: cubicYards
   */
   @objc static var cubicYards: UnitVolume { @objc get }
 
   /**
-    - jsName: cups
-    - name: cups
-    - argLabels: 
+    - Selector: cups
   */
   @objc static var cups: UnitVolume { @objc get }
 
   /**
-    - jsName: deciliters
-    - name: deciliters
-    - argLabels: 
+    - Selector: deciliters
   */
   @objc static var deciliters: UnitVolume { @objc get }
 
   /**
-    - jsName: fluidOunces
-    - name: fluidOunces
-    - argLabels: 
+    - Selector: fluidOunces
   */
   @objc static var fluidOunces: UnitVolume { @objc get }
 
   /**
-    - jsName: gallons
-    - name: gallons
-    - argLabels: 
+    - Selector: gallons
   */
   @objc static var gallons: UnitVolume { @objc get }
 
   /**
-    - jsName: imperialFluidOunces
-    - name: imperialFluidOunces
-    - argLabels: 
+    - Selector: imperialFluidOunces
   */
   @objc static var imperialFluidOunces: UnitVolume { @objc get }
 
   /**
-    - jsName: imperialGallons
-    - name: imperialGallons
-    - argLabels: 
+    - Selector: imperialGallons
   */
   @objc static var imperialGallons: UnitVolume { @objc get }
 
   /**
-    - jsName: imperialPints
-    - name: imperialPints
-    - argLabels: 
+    - Selector: imperialPints
   */
   @objc static var imperialPints: UnitVolume { @objc get }
 
   /**
-    - jsName: imperialQuarts
-    - name: imperialQuarts
-    - argLabels: 
+    - Selector: imperialQuarts
   */
   @objc static var imperialQuarts: UnitVolume { @objc get }
 
   /**
-    - jsName: imperialTablespoons
-    - name: imperialTablespoons
-    - argLabels: 
+    - Selector: imperialTablespoons
   */
   @objc static var imperialTablespoons: UnitVolume { @objc get }
 
   /**
-    - jsName: imperialTeaspoons
-    - name: imperialTeaspoons
-    - argLabels: 
+    - Selector: imperialTeaspoons
   */
   @objc static var imperialTeaspoons: UnitVolume { @objc get }
 
   /**
-    - jsName: kiloliters
-    - name: kiloliters
-    - argLabels: 
+    - Selector: kiloliters
   */
   @objc static var kiloliters: UnitVolume { @objc get }
 
   /**
-    - jsName: liters
-    - name: liters
-    - argLabels: 
+    - Selector: liters
   */
   @objc static var liters: UnitVolume { @objc get }
 
   /**
-    - jsName: megaliters
-    - name: megaliters
-    - argLabels: 
+    - Selector: megaliters
   */
   @objc static var megaliters: UnitVolume { @objc get }
 
   /**
-    - jsName: metricCups
-    - name: metricCups
-    - argLabels: 
+    - Selector: metricCups
   */
   @objc static var metricCups: UnitVolume { @objc get }
 
   /**
-    - jsName: milliliters
-    - name: milliliters
-    - argLabels: 
+    - Selector: milliliters
   */
   @objc static var milliliters: UnitVolume { @objc get }
 
   /**
-    - jsName: pints
-    - name: pints
-    - argLabels: 
+    - Selector: pints
   */
   @objc static var pints: UnitVolume { @objc get }
 
   /**
-    - jsName: quarts
-    - name: quarts
-    - argLabels: 
+    - Selector: quarts
   */
   @objc static var quarts: UnitVolume { @objc get }
 
   /**
-    - jsName: tablespoons
-    - name: tablespoons
-    - argLabels: 
+    - Selector: tablespoons
   */
   @objc static var tablespoons: UnitVolume { @objc get }
 
   /**
-    - jsName: teaspoons
-    - name: teaspoons
-    - argLabels: 
+    - Selector: teaspoons
   */
   @objc static var teaspoons: UnitVolume { @objc get }
 }

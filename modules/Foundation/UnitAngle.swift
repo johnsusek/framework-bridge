@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitAngle
-    - name: NSUnitAngle
-    - argLabels: 
+    - Selector: NSUnitAngle
     - Introduced: 10.12
   */
 
@@ -19,54 +17,39 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: arcMinutes
-    - name: arcMinutes
-    - argLabels: 
+    - Selector: arcMinutes
   */
   @objc static var arcMinutes: UnitAngle { @objc get }
 
   /**
-    - jsName: arcSeconds
-    - name: arcSeconds
-    - argLabels: 
+    - Selector: arcSeconds
   */
   @objc static var arcSeconds: UnitAngle { @objc get }
 
   /**
-    - jsName: degrees
-    - name: degrees
-    - argLabels: 
+    - Selector: degrees
   */
   @objc static var degrees: UnitAngle { @objc get }
 
   /**
-    - jsName: gradians
-    - name: gradians
-    - argLabels: 
+    - Selector: gradians
   */
   @objc static var gradians: UnitAngle { @objc get }
 
   /**
-    - jsName: radians
-    - name: radians
-    - argLabels: 
+    - Selector: radians
   */
   @objc static var radians: UnitAngle { @objc get }
 
   /**
-    - jsName: revolutions
-    - name: revolutions
-    - argLabels: 
+    - Selector: revolutions
   */
   @objc static var revolutions: UnitAngle { @objc get }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCell
-    - name: NSCell
-    - argLabels: 
+    - Selector: NSCell
   */
 
 @objc(NSCell) protocol NSCellExports: JSExport, NSObjectExports {
@@ -20,544 +18,317 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: defaultFocusRingType
-    - name: defaultFocusRingType
-    - argLabels: 
+    - Selector: defaultFocusRingType
   */
   @objc static var defaultFocusRingType: NSFocusRingType { @objc get }
 
   /**
-    - jsName: defaultMenu
-    - name: defaultMenu
-    - argLabels: 
+    - Selector: defaultMenu
   */
   @objc static var defaultMenu: NSMenu? { @objc get }
 
   /**
-    - jsName: prefersTrackingUntilMouseUp
-    - name: prefersTrackingUntilMouseUp
-    - argLabels: 
+    - Selector: prefersTrackingUntilMouseUp
   */
   @objc static var prefersTrackingUntilMouseUp: Bool { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: calcDrawInfo
-    - name: calcDrawInfo:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: calcDrawInfo:
   */
   @objc func calcDrawInfo(_: CGRect)
 
   /**
-    - jsName: cellAttribute
-    - name: cellAttribute:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: cellAttribute:
   */
   @objc func cellAttribute(_: NSCell.Attribute) -> Int
 
   /**
-    - jsName: cellSize
-    - name: cellSizeForBounds:
-    - argLabels: forBounds
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cellSize(forBounds:)
+    - Selector: cellSizeForBounds:
   */
   @objc (cellSizeForBounds:) func cellSize(forBounds: CGRect) -> CGSize
 
   /**
-    - jsName: compare
-    - name: compare:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: compare:
   */
   @objc func compare(_: Any) -> ComparisonResult
 
   /**
-    - jsName: continueTracking
-    - name: continueTracking:at:inView:
-    - argLabels: last, current, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: continueTracking(last:current:in:)
+    - Selector: continueTracking:at:inView:
   */
   @objc (continueTracking:at:inView:) func continueTracking(last: CGPoint, current: CGPoint, in: NSView) -> Bool
 
   /**
-    - jsName: draggingImageComponents
-    - name: draggingImageComponentsWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: draggingImageComponents(withFrame:in:)
+    - Selector: draggingImageComponentsWithFrame:inView:
     - Introduced: 10.7
   */
   @objc (draggingImageComponentsWithFrame:inView:) @available(OSX 10.7, *) func draggingImageComponents(withFrame: CGRect, in: NSView) -> [NSDraggingImageComponent]
 
   /**
-    - jsName: drawFocusRingMask
-    - name: drawFocusRingMaskWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: drawFocusRingMask(withFrame:in:)
+    - Selector: drawFocusRingMaskWithFrame:inView:
     - Introduced: 10.7
   */
   @objc (drawFocusRingMaskWithFrame:inView:) @available(OSX 10.7, *) func drawFocusRingMask(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawInterior
-    - name: drawInteriorWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawInterior(withFrame:in:)
+    - Selector: drawInteriorWithFrame:inView:
   */
   @objc (drawInteriorWithFrame:inView:) func drawInterior(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: draw
-    - name: drawWithExpansionFrame:inView:
-    - argLabels: withExpansionFrame, in
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: draw(withExpansionFrame:in:)
+    - Selector: drawWithExpansionFrame:inView:
     - Introduced: 10.5
   */
   @objc (drawWithExpansionFrame:inView:) @available(OSX 10.5, *) func draw(withExpansionFrame: CGRect, in: NSView)
 
   /**
-    - jsName: draw
-    - name: drawWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: draw(withFrame:in:)
+    - Selector: drawWithFrame:inView:
   */
   @objc (drawWithFrame:inView:) func draw(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawingRect
-    - name: drawingRectForBounds:
-    - argLabels: forBounds
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawingRect(forBounds:)
+    - Selector: drawingRectForBounds:
   */
   @objc (drawingRectForBounds:) func drawingRect(forBounds: CGRect) -> CGRect
 
   /**
-    - jsName: edit
-    - name: editWithFrame:inView:editor:delegate:event:
-    - argLabels: withFrame, in, editor, delegate, event
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: edit(withFrame:in:editor:delegate:event:)
+    - Selector: editWithFrame:inView:editor:delegate:event:
   */
   @objc (editWithFrame:inView:editor:delegate:event:) func edit(withFrame: CGRect, in: NSView, editor: NSText, delegate: Any?, event: NSEvent?)
 
   /**
-    - jsName: endEditing
-    - name: endEditing:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: endEditing:
   */
   @objc func endEditing(_: NSText)
 
   /**
-    - jsName: expansionFrame
-    - name: expansionFrameWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: expansionFrame(withFrame:in:)
+    - Selector: expansionFrameWithFrame:inView:
     - Introduced: 10.5
   */
   @objc (expansionFrameWithFrame:inView:) @available(OSX 10.5, *) func expansionFrame(withFrame: CGRect, in: NSView) -> CGRect
 
   /**
-    - jsName: fieldEditor
-    - name: fieldEditorForView:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: fieldEditor(for:)
+    - Selector: fieldEditorForView:
     - Introduced: 10.6
   */
   @objc (fieldEditorForView:) @available(OSX 10.6, *) func fieldEditor(`for`: NSView) -> NSTextView?
 
   /**
-    - jsName: focusRingMaskBounds
-    - name: focusRingMaskBoundsForFrame:inView:
-    - argLabels: forFrame, in
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: focusRingMaskBounds(forFrame:in:)
+    - Selector: focusRingMaskBoundsForFrame:inView:
     - Introduced: 10.7
   */
   @objc (focusRingMaskBoundsForFrame:inView:) @available(OSX 10.7, *) func focusRingMaskBounds(forFrame: CGRect, in: NSView) -> CGRect
 
   /**
-    - jsName: getPeriodicDelay
-    - name: getPeriodicDelay:interval:
-    - argLabels: interval
-    - constructorTokens: 
+    - Selector: getPeriodicDelay:interval:
   */
   @objc func getPeriodicDelay(_: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>)
 
   /**
-    - jsName: highlight
-    - name: highlight:withFrame:inView:
-    - argLabels: _, withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: highlight(_:withFrame:in:)
+    - Selector: highlight:withFrame:inView:
   */
   @objc (highlight:withFrame:inView:) func highlight(_: Bool, withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: highlightColor
-    - name: highlightColorWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: highlightColor(withFrame:in:)
+    - Selector: highlightColorWithFrame:inView:
   */
   @objc (highlightColorWithFrame:inView:) func highlightColor(withFrame: CGRect, in: NSView) -> NSColor?
 
   /**
-    - jsName: hitTest
-    - name: hitTestForEvent:inRect:ofView:
-    - argLabels: for, in, of
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: hitTest(for:in:of:)
+    - Selector: hitTestForEvent:inRect:ofView:
     - Introduced: 10.5
   */
   @objc (hitTestForEvent:inRect:ofView:) @available(OSX 10.5, *) func hitTest(`for`: NSEvent, in: CGRect, of: NSView) -> NSCell.HitResult
 
   /**
-    - jsName: imageRect
-    - name: imageRectForBounds:
-    - argLabels: forBounds
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: imageRect(forBounds:)
+    - Selector: imageRectForBounds:
   */
   @objc (imageRectForBounds:) func imageRect(forBounds: CGRect) -> CGRect
 
   /**
-    - jsName: createImageCell
-    - name: initImageCell:
-    - argLabels: 
-    - constructorTokens: imageCell
+    - Selector: initImageCell:
   */
   @objc static func createImageCell(_: NSImage?) -> Self
 
   /**
-    - jsName: createTextCell
-    - name: initTextCell:
-    - argLabels: 
-    - constructorTokens: textCell
+    - Selector: initTextCell:
   */
   @objc static func createTextCell(_: String) -> Self
 
   /**
-    - jsName: menu
-    - name: menuForEvent:inRect:ofView:
-    - argLabels: for, in, of
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: menu(for:in:of:)
+    - Selector: menuForEvent:inRect:ofView:
   */
   @objc (menuForEvent:inRect:ofView:) func menu(`for`: NSEvent, in: CGRect, of: NSView) -> NSMenu?
 
   /**
-    - jsName: performClick
-    - name: performClick:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: performClick:
   */
   @objc func performClick(_: Any?)
 
   /**
-    - jsName: resetCursorRect
-    - name: resetCursorRect:inView:
-    - argLabels: _, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: resetCursorRect(_:in:)
+    - Selector: resetCursorRect:inView:
   */
   @objc (resetCursorRect:inView:) func resetCursorRect(_: CGRect, in: NSView)
 
   /**
-    - jsName: select
-    - name: selectWithFrame:inView:editor:delegate:start:length:
-    - argLabels: withFrame, in, editor, delegate, start, length
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: select(withFrame:in:editor:delegate:start:length:)
+    - Selector: selectWithFrame:inView:editor:delegate:start:length:
   */
   @objc (selectWithFrame:inView:editor:delegate:start:length:) func select(withFrame: CGRect, in: NSView, editor: NSText, delegate: Any?, start: Int, length: Int)
 
   /**
-    - jsName: sendAction
-    - name: sendActionOn:
-    - argLabels: on
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: sendAction(on:)
+    - Selector: sendActionOn:
   */
   @objc (sendActionOn:) func sendAction(on: NSEvent.EventTypeMask) -> Int
 
   /**
-    - jsName: setCellAttribute
-    - name: setCellAttribute:to:
-    - argLabels: to
-    - constructorTokens: 
+    - Selector: setCellAttribute:to:
   */
   @objc func setCellAttribute(_: NSCell.Attribute, to: Int)
 
   /**
-    - jsName: setNextState
-    - name: setNextState
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setNextState
   */
   @objc func setNextState()
 
   /**
-    - jsName: setUpFieldEditorAttributes
-    - name: setUpFieldEditorAttributes:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setUpFieldEditorAttributes:
   */
   @objc func setUpFieldEditorAttributes(_: NSText) -> NSText
 
   /**
-    - jsName: startTracking
-    - name: startTrackingAt:inView:
-    - argLabels: at, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: startTracking(at:in:)
+    - Selector: startTrackingAt:inView:
   */
   @objc (startTrackingAt:inView:) func startTracking(at: CGPoint, in: NSView) -> Bool
 
   /**
-    - jsName: stopTracking
-    - name: stopTracking:at:inView:mouseIsUp:
-    - argLabels: last, current, in, mouseIsUp
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: stopTracking(last:current:in:mouseIsUp:)
+    - Selector: stopTracking:at:inView:mouseIsUp:
   */
   @objc (stopTracking:at:inView:mouseIsUp:) func stopTracking(last: CGPoint, current: CGPoint, in: NSView, mouseIsUp: Bool)
 
   /**
-    - jsName: takeDoubleValueFrom
-    - name: takeDoubleValueFrom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: takeDoubleValueFrom:
   */
   @objc func takeDoubleValueFrom(_: Any?)
 
   /**
-    - jsName: takeFloatValueFrom
-    - name: takeFloatValueFrom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: takeFloatValueFrom:
   */
   @objc func takeFloatValueFrom(_: Any?)
 
   /**
-    - jsName: takeIntValueFrom
-    - name: takeIntValueFrom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: takeIntValueFrom:
   */
   @objc func takeIntValueFrom(_: Any?)
 
   /**
-    - jsName: takeIntegerValueFrom
-    - name: takeIntegerValueFrom:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: takeIntegerValueFrom:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func takeIntegerValueFrom(_: Any?)
 
   /**
-    - jsName: takeObjectValueFrom
-    - name: takeObjectValueFrom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: takeObjectValueFrom:
   */
   @objc func takeObjectValueFrom(_: Any?)
 
   /**
-    - jsName: takeStringValueFrom
-    - name: takeStringValueFrom:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: takeStringValueFrom:
   */
   @objc func takeStringValueFrom(_: Any?)
 
   /**
-    - jsName: titleRect
-    - name: titleRectForBounds:
-    - argLabels: forBounds
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: titleRect(forBounds:)
+    - Selector: titleRectForBounds:
   */
   @objc (titleRectForBounds:) func titleRect(forBounds: CGRect) -> CGRect
 
   /**
-    - jsName: trackMouse
-    - name: trackMouse:inRect:ofView:untilMouseUp:
-    - argLabels: with, in, of, untilMouseUp
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: trackMouse(with:in:of:untilMouseUp:)
+    - Selector: trackMouse:inRect:ofView:untilMouseUp:
   */
   @objc (trackMouse:inRect:ofView:untilMouseUp:) func trackMouse(with: NSEvent, in: CGRect, of: NSView, untilMouseUp: Bool) -> Bool
 
   // Protocol Inherited Instance Properties
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: NSUserInterfaceItemIdentifier? { @objc get @objc (setIdentifier:) set }
 
   // Own Instance Properties
 
   /**
-    - jsName: acceptsFirstResponder
-    - name: acceptsFirstResponder
-    - argLabels: 
+    - Selector: acceptsFirstResponder
   */
   @objc var acceptsFirstResponder: Bool { @objc get }
 
   /**
-    - jsName: action
-    - name: action
-    - argLabels: 
+    - Selector: action
   */
   @objc var action: Selector? { @objc get @objc (setAction:) set }
 
   /**
-    - jsName: alignment
-    - name: alignment
-    - argLabels: 
+    - Selector: alignment
   */
   @objc var alignment: NSTextAlignment { @objc get @objc (setAlignment:) set }
 
   /**
-    - jsName: allowsEditingTextAttributes
-    - name: allowsEditingTextAttributes
-    - argLabels: 
+    - Selector: allowsEditingTextAttributes
   */
   @objc var allowsEditingTextAttributes: Bool { @objc get @objc (setAllowsEditingTextAttributes:) set }
 
   /**
-    - jsName: allowsMixedState
-    - name: allowsMixedState
-    - argLabels: 
+    - Selector: allowsMixedState
   */
   @objc var allowsMixedState: Bool { @objc get @objc (setAllowsMixedState:) set }
 
   /**
-    - jsName: allowsUndo
-    - name: allowsUndo
-    - argLabels: 
+    - Selector: allowsUndo
   */
   @objc var allowsUndo: Bool { @objc get @objc (setAllowsUndo:) set }
 
   /**
-    - jsName: attributedStringValue
-    - name: attributedStringValue
-    - argLabels: 
+    - Selector: attributedStringValue
   */
   @objc var attributedStringValue: NSAttributedString { @objc get @objc (setAttributedStringValue:) set }
 
   /**
-    - jsName: backgroundStyle
-    - name: backgroundStyle
-    - argLabels: 
-    - available: 10.5
+    - Selector: backgroundStyle
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var backgroundStyle: NSView.BackgroundStyle { @objc get @objc (setBackgroundStyle:) set }
 
   /**
-    - jsName: baseWritingDirection
-    - name: baseWritingDirection
-    - argLabels: 
+    - Selector: baseWritingDirection
   */
   @objc var baseWritingDirection: NSWritingDirection { @objc get @objc (setBaseWritingDirection:) set }
 
   /**
-    - jsName: isBezeled
-    - name: bezeled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isBezeled
+    - Selector: bezeled
   */
   @objc var isBezeled: Bool { @objc get @objc (setBezeled:) set }
 
   /**
-    - jsName: isBordered
-    - name: bordered
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isBordered
+    - Selector: bordered
   */
   @objc var isBordered: Bool { @objc get @objc (setBordered:) set }
 
   /**
-    - jsName: cellSize
-    - name: cellSize
-    - argLabels: 
+    - Selector: cellSize
   */
   @objc var cellSize: CGSize { @objc get }
 
   /**
-    - jsName: isContinuous
-    - name: continuous
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isContinuous
+    - Selector: continuous
   */
   @objc var isContinuous: Bool { @objc get @objc (setContinuous:) set }
 
   /**
-    - jsName: controlSize
-    - name: controlSize
-    - argLabels: 
+    - Selector: controlSize
   */
   @objc var controlSize: NSControl.ControlSize { @objc get @objc (setControlSize:) set }
 
   /**
-    - jsName: controlTint
-    - name: controlTint
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 11.0
-    - message: The controlTint property is not respected on 10.14 and later. For custom cells, use +[NSColor controlAccentColor] to respect the user's preferred accent color when drawing.
+    - Selector: controlTint
     - Introduced: 10.0
     - Deprecated: 100000
     - Message: The controlTint property is not respected on 10.14 and later. For custom cells, use +[NSColor controlAccentColor] to respect the user's preferred accent color when drawing.
@@ -565,297 +336,202 @@ import AppKit
   @objc @available(OSX 10.0, *) var controlTint: NSControlTint { @objc get @objc (setControlTint:) set }
 
   /**
-    - jsName: controlView
-    - name: controlView
-    - argLabels: 
+    - Selector: controlView
   */
   @objc var controlView: NSView? { @objc get @objc (setControlView:) set }
 
   /**
-    - jsName: doubleValue
-    - name: doubleValue
-    - argLabels: 
+    - Selector: doubleValue
   */
   @objc var doubleValue: Double { @objc get @objc (setDoubleValue:) set }
 
   /**
-    - jsName: isEditable
-    - name: editable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEditable
+    - Selector: editable
   */
   @objc var isEditable: Bool { @objc get @objc (setEditable:) set }
 
   /**
-    - jsName: isEnabled
-    - name: enabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEnabled
+    - Selector: enabled
   */
   @objc var isEnabled: Bool { @objc get @objc (setEnabled:) set }
 
   /**
-    - jsName: floatValue
-    - name: floatValue
-    - argLabels: 
+    - Selector: floatValue
   */
   @objc var floatValue: Float { @objc get @objc (setFloatValue:) set }
 
   /**
-    - jsName: focusRingType
-    - name: focusRingType
-    - argLabels: 
+    - Selector: focusRingType
   */
   @objc var focusRingType: NSFocusRingType { @objc get @objc (setFocusRingType:) set }
 
   /**
-    - jsName: font
-    - name: font
-    - argLabels: 
+    - Selector: font
   */
   @objc var font: NSFont? { @objc get @objc (setFont:) set }
 
   /**
-    - jsName: formatter
-    - name: formatter
-    - argLabels: 
+    - Selector: formatter
   */
   @objc var formatter: Formatter? { @objc get @objc (setFormatter:) set }
 
   /**
-    - jsName: hasValidObjectValue
-    - name: hasValidObjectValue
-    - argLabels: 
+    - Selector: hasValidObjectValue
   */
   @objc var hasValidObjectValue: Bool { @objc get }
 
   /**
-    - jsName: isHighlighted
-    - name: highlighted
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isHighlighted
+    - Selector: highlighted
   */
   @objc var isHighlighted: Bool { @objc get @objc (setHighlighted:) set }
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
+    - Selector: image
   */
   @objc var image: NSImage? { @objc get @objc (setImage:) set }
 
   /**
-    - jsName: importsGraphics
-    - name: importsGraphics
-    - argLabels: 
+    - Selector: importsGraphics
   */
   @objc var importsGraphics: Bool { @objc get @objc (setImportsGraphics:) set }
 
   /**
-    - jsName: intValue
-    - name: intValue
-    - argLabels: 
+    - Selector: intValue
   */
   @objc var intValue: Int32 { @objc get @objc (setIntValue:) set }
 
   /**
-    - jsName: integerValue
-    - name: integerValue
-    - argLabels: 
-    - available: 10.5
+    - Selector: integerValue
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var integerValue: Int { @objc get @objc (setIntegerValue:) set }
 
   /**
-    - jsName: interiorBackgroundStyle
-    - name: interiorBackgroundStyle
-    - argLabels: 
-    - available: 10.5
+    - Selector: interiorBackgroundStyle
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var interiorBackgroundStyle: NSView.BackgroundStyle { @objc get }
 
   /**
-    - jsName: keyEquivalent
-    - name: keyEquivalent
-    - argLabels: 
+    - Selector: keyEquivalent
   */
   @objc var keyEquivalent: String { @objc get }
 
   /**
-    - jsName: lineBreakMode
-    - name: lineBreakMode
-    - argLabels: 
+    - Selector: lineBreakMode
   */
   @objc var lineBreakMode: NSLineBreakMode { @objc get @objc (setLineBreakMode:) set }
 
   /**
-    - jsName: menu
-    - name: menu
-    - argLabels: 
+    - Selector: menu
   */
   @objc var menu: NSMenu? { @objc get @objc (setMenu:) set }
 
   /**
-    - jsName: mouseDownFlags
-    - name: mouseDownFlags
-    - argLabels: 
+    - Selector: mouseDownFlags
   */
   @objc var mouseDownFlags: Int { @objc get }
 
   /**
-    - jsName: nextState
-    - name: nextState
-    - argLabels: 
+    - Selector: nextState
   */
   @objc var nextState: Int { @objc get }
 
   /**
-    - jsName: objectValue
-    - name: objectValue
-    - argLabels: 
+    - Selector: objectValue
   */
   @objc var objectValue: Any? { @objc get @objc (setObjectValue:) set }
 
   /**
-    - jsName: isOpaque
-    - name: opaque
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isOpaque
+    - Selector: opaque
   */
   @objc var isOpaque: Bool { @objc get }
 
   /**
-    - jsName: refusesFirstResponder
-    - name: refusesFirstResponder
-    - argLabels: 
+    - Selector: refusesFirstResponder
   */
   @objc var refusesFirstResponder: Bool { @objc get @objc (setRefusesFirstResponder:) set }
 
   /**
-    - jsName: representedObject
-    - name: representedObject
-    - argLabels: 
+    - Selector: representedObject
   */
   @objc var representedObject: Any? { @objc get @objc (setRepresentedObject:) set }
 
   /**
-    - jsName: isScrollable
-    - name: scrollable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isScrollable
+    - Selector: scrollable
   */
   @objc var isScrollable: Bool { @objc get @objc (setScrollable:) set }
 
   /**
-    - jsName: isSelectable
-    - name: selectable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSelectable
+    - Selector: selectable
   */
   @objc var isSelectable: Bool { @objc get @objc (setSelectable:) set }
 
   /**
-    - jsName: sendsActionOnEndEditing
-    - name: sendsActionOnEndEditing
-    - argLabels: 
+    - Selector: sendsActionOnEndEditing
   */
   @objc var sendsActionOnEndEditing: Bool { @objc get @objc (setSendsActionOnEndEditing:) set }
 
   /**
-    - jsName: showsFirstResponder
-    - name: showsFirstResponder
-    - argLabels: 
+    - Selector: showsFirstResponder
   */
   @objc var showsFirstResponder: Bool { @objc get @objc (setShowsFirstResponder:) set }
 
   /**
-    - jsName: state
-    - name: state
-    - argLabels: 
+    - Selector: state
   */
   @objc var state: NSControl.StateValue { @objc get @objc (setState:) set }
 
   /**
-    - jsName: stringValue
-    - name: stringValue
-    - argLabels: 
+    - Selector: stringValue
   */
   @objc var stringValue: String { @objc get @objc (setStringValue:) set }
 
   /**
-    - jsName: tag
-    - name: tag
-    - argLabels: 
+    - Selector: tag
   */
   @objc var tag: Int { @objc get @objc (setTag:) set }
 
   /**
-    - jsName: target
-    - name: target
-    - argLabels: 
+    - Selector: target
   */
   @objc var target: AnyObject? { @objc get @objc (setTarget:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get @objc (setTitle:) set }
 
   /**
-    - jsName: truncatesLastVisibleLine
-    - name: truncatesLastVisibleLine
-    - argLabels: 
-    - available: 10.5
+    - Selector: truncatesLastVisibleLine
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var truncatesLastVisibleLine: Bool { @objc get @objc (setTruncatesLastVisibleLine:) set }
 
   /**
-    - jsName: type
-    - name: type
-    - argLabels: 
+    - Selector: type
   */
   @objc var type: NSCell.CellType { @objc get @objc (setType:) set }
 
   /**
-    - jsName: userInterfaceLayoutDirection
-    - name: userInterfaceLayoutDirection
-    - argLabels: 
-    - available: 10.6
+    - Selector: userInterfaceLayoutDirection
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var userInterfaceLayoutDirection: NSUserInterfaceLayoutDirection { @objc get @objc (setUserInterfaceLayoutDirection:) set }
 
   /**
-    - jsName: usesSingleLineMode
-    - name: usesSingleLineMode
-    - argLabels: 
-    - available: 10.6
+    - Selector: usesSingleLineMode
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var usesSingleLineMode: Bool { @objc get @objc (setUsesSingleLineMode:) set }
 
   /**
-    - jsName: wantsNotificationForMarkedText
-    - name: wantsNotificationForMarkedText
-    - argLabels: 
+    - Selector: wantsNotificationForMarkedText
   */
   @objc var wantsNotificationForMarkedText: Bool { @objc get }
 
   /**
-    - jsName: wraps
-    - name: wraps
-    - argLabels: 
+    - Selector: wraps
   */
   @objc var wraps: Bool { @objc get @objc (setWraps:) set }
 }

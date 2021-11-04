@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSNib
-    - name: NSNib
-    - argLabels: 
+    - Selector: NSNib
   */
 
 @objc(NSNib) protocol NSNibExports: JSExport, NSObjectExports {
@@ -20,30 +18,18 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithNibData
-    - name: initWithNibData:bundle:
-    - argLabels: bundle
-    - constructorTokens: nibData, bundle
+    - Selector: initWithNibData:bundle:
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) static func createWithNibData(_: Data, bundle: Bundle?) -> Self
 
   /**
-    - jsName: createWithNibNamed
-    - name: initWithNibNamed:bundle:
-    - argLabels: bundle
-    - constructorTokens: nibNamed, bundle
+    - Selector: initWithNibNamed:bundle:
   */
   @objc static func createWithNibNamed(_: NSNib.Name, bundle: Bundle?) -> Self?
 
   /**
-    - jsName: instantiate
-    - name: instantiateWithOwner:topLevelObjects:
-    - argLabels: withOwner, topLevelObjects
-    - constructorTokens: 
-    - available: 10.8
-    - obsoleted: 3
-    - renamed: instantiate(withOwner:topLevelObjects:)
+    - Selector: instantiateWithOwner:topLevelObjects:
     - Introduced: 10.8
   */
   @objc (instantiateWithOwner:topLevelObjects:) @available(OSX 10.8, *) func instantiate(withOwner: Any?, topLevelObjects: AutoreleasingUnsafeMutablePointer<NSArray?>?) -> Bool

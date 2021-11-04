@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NetServiceBrowser
-    - name: NSNetServiceBrowser
-    - argLabels: 
+    - Selector: NSNetServiceBrowser
   */
 
 @objc(NetServiceBrowser) protocol NetServiceBrowserExports: JSExport, NSObjectExports {
@@ -20,73 +18,44 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: remove
-    - name: removeFromRunLoop:forMode:
-    - argLabels: from, forMode
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: remove(from:forMode:)
+    - Selector: removeFromRunLoop:forMode:
   */
   @objc (removeFromRunLoop:forMode:) func remove(from: RunLoop, forMode: RunLoop.Mode)
 
   /**
-    - jsName: schedule
-    - name: scheduleInRunLoop:forMode:
-    - argLabels: in, forMode
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: schedule(in:forMode:)
+    - Selector: scheduleInRunLoop:forMode:
   */
   @objc (scheduleInRunLoop:forMode:) func schedule(in: RunLoop, forMode: RunLoop.Mode)
 
   /**
-    - jsName: searchForBrowsableDomains
-    - name: searchForBrowsableDomains
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: searchForBrowsableDomains
   */
   @objc func searchForBrowsableDomains()
 
   /**
-    - jsName: searchForRegistrationDomains
-    - name: searchForRegistrationDomains
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: searchForRegistrationDomains
   */
   @objc func searchForRegistrationDomains()
 
   /**
-    - jsName: searchForServices
-    - name: searchForServicesOfType:inDomain:
-    - argLabels: ofType, inDomain
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: searchForServices(ofType:inDomain:)
+    - Selector: searchForServicesOfType:inDomain:
   */
   @objc (searchForServicesOfType:inDomain:) func searchForServices(ofType: String, inDomain: String)
 
   /**
-    - jsName: stop
-    - name: stop
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: stop
   */
   @objc func stop()
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NetServiceBrowserDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: includesPeerToPeer
-    - name: includesPeerToPeer
-    - argLabels: 
-    - available: 10.10
+    - Selector: includesPeerToPeer
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var includesPeerToPeer: Bool { @objc get @objc (setIncludesPeerToPeer:) set }

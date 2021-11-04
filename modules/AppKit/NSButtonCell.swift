@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSButtonCell
-    - name: NSButtonCell
-    - argLabels: 
+    - Selector: NSButtonCell
   */
 
 @objc(NSButtonCell) protocol NSButtonCellExports: JSExport, NSActionCellExports {
@@ -20,186 +18,120 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: drawBezel
-    - name: drawBezelWithFrame:inView:
-    - argLabels: withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawBezel(withFrame:in:)
+    - Selector: drawBezelWithFrame:inView:
   */
   @objc (drawBezelWithFrame:inView:) func drawBezel(withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawImage
-    - name: drawImage:withFrame:inView:
-    - argLabels: _, withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawImage(_:withFrame:in:)
+    - Selector: drawImage:withFrame:inView:
   */
   @objc (drawImage:withFrame:inView:) func drawImage(_: NSImage, withFrame: CGRect, in: NSView)
 
   /**
-    - jsName: drawTitle
-    - name: drawTitle:withFrame:inView:
-    - argLabels: _, withFrame, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawTitle(_:withFrame:in:)
+    - Selector: drawTitle:withFrame:inView:
   */
   @objc (drawTitle:withFrame:inView:) func drawTitle(_: NSAttributedString, withFrame: CGRect, in: NSView) -> CGRect
 
   /**
-    - jsName: mouseEntered
-    - name: mouseEntered:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: mouseEntered(with:)
+    - Selector: mouseEntered:
   */
   @objc (mouseEntered:) func mouseEntered(with: NSEvent)
 
   /**
-    - jsName: mouseExited
-    - name: mouseExited:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: mouseExited(with:)
+    - Selector: mouseExited:
   */
   @objc (mouseExited:) func mouseExited(with: NSEvent)
 
   /**
-    - jsName: setButtonType
-    - name: setButtonType:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setButtonType:
   */
   @objc func setButtonType(_: NSButton.ButtonType)
 
   /**
-    - jsName: setPeriodicDelay
-    - name: setPeriodicDelay:interval:
-    - argLabels: interval
-    - constructorTokens: 
+    - Selector: setPeriodicDelay:interval:
   */
   @objc func setPeriodicDelay(_: Float, interval: Float)
 
   // Own Instance Properties
 
   /**
-    - jsName: alternateImage
-    - name: alternateImage
-    - argLabels: 
+    - Selector: alternateImage
   */
   @objc var alternateImage: NSImage? { @objc get @objc (setAlternateImage:) set }
 
   /**
-    - jsName: alternateTitle
-    - name: alternateTitle
-    - argLabels: 
+    - Selector: alternateTitle
   */
   @objc var alternateTitle: String { @objc get @objc (setAlternateTitle:) set }
 
   /**
-    - jsName: attributedAlternateTitle
-    - name: attributedAlternateTitle
-    - argLabels: 
+    - Selector: attributedAlternateTitle
   */
   @objc var attributedAlternateTitle: NSAttributedString { @objc get @objc (setAttributedAlternateTitle:) set }
 
   /**
-    - jsName: attributedTitle
-    - name: attributedTitle
-    - argLabels: 
+    - Selector: attributedTitle
   */
   @objc var attributedTitle: NSAttributedString { @objc get @objc (setAttributedTitle:) set }
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor? { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: bezelStyle
-    - name: bezelStyle
-    - argLabels: 
+    - Selector: bezelStyle
   */
   @objc var bezelStyle: NSButton.BezelStyle { @objc get @objc (setBezelStyle:) set }
 
   /**
-    - jsName: highlightsBy
-    - name: highlightsBy
-    - argLabels: 
+    - Selector: highlightsBy
   */
   @objc var highlightsBy: NSCell.StyleMask { @objc get @objc (setHighlightsBy:) set }
 
   /**
-    - jsName: imageDimsWhenDisabled
-    - name: imageDimsWhenDisabled
-    - argLabels: 
+    - Selector: imageDimsWhenDisabled
   */
   @objc var imageDimsWhenDisabled: Bool { @objc get @objc (setImageDimsWhenDisabled:) set }
 
   /**
-    - jsName: imagePosition
-    - name: imagePosition
-    - argLabels: 
+    - Selector: imagePosition
   */
   @objc var imagePosition: NSControl.ImagePosition { @objc get @objc (setImagePosition:) set }
 
   /**
-    - jsName: imageScaling
-    - name: imageScaling
-    - argLabels: 
-    - available: 10.5
+    - Selector: imageScaling
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var imageScaling: NSImageScaling { @objc get @objc (setImageScaling:) set }
 
   /**
-    - jsName: keyEquivalent
-    - name: keyEquivalent
-    - argLabels: 
+    - Selector: keyEquivalent
   */
   @objc var keyEquivalent: String { @objc get @objc (setKeyEquivalent:) set }
 
   /**
-    - jsName: keyEquivalentModifierMask
-    - name: keyEquivalentModifierMask
-    - argLabels: 
+    - Selector: keyEquivalentModifierMask
   */
   @objc var keyEquivalentModifierMask: NSEvent.ModifierFlags { @objc get @objc (setKeyEquivalentModifierMask:) set }
 
   /**
-    - jsName: showsBorderOnlyWhileMouseInside
-    - name: showsBorderOnlyWhileMouseInside
-    - argLabels: 
+    - Selector: showsBorderOnlyWhileMouseInside
   */
   @objc var showsBorderOnlyWhileMouseInside: Bool { @objc get @objc (setShowsBorderOnlyWhileMouseInside:) set }
 
   /**
-    - jsName: showsStateBy
-    - name: showsStateBy
-    - argLabels: 
+    - Selector: showsStateBy
   */
   @objc var showsStateBy: NSCell.StyleMask { @objc get @objc (setShowsStateBy:) set }
 
   /**
-    - jsName: sound
-    - name: sound
-    - argLabels: 
+    - Selector: sound
   */
   @objc var sound: NSSound? { @objc get @objc (setSound:) set }
 
   /**
-    - jsName: isTransparent
-    - name: transparent
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isTransparent
+    - Selector: transparent
   */
   @objc var isTransparent: Bool { @objc get @objc (setTransparent:) set }
 }

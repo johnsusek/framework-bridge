@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSPointerFunctions
-    - name: NSPointerFunctions
-    - argLabels: 
+    - Selector: NSPointerFunctions
     - Introduced: 10.5
   */
 
@@ -21,44 +19,32 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: acquireFunction
-    - name: acquireFunction
-    - argLabels: 
+    - Selector: acquireFunction
   */
 // jsvalue   @objc var acquireFunction: JSValue? { @objc get @objc (setAcquireFunction:) set }
 
   /**
-    - jsName: descriptionFunction
-    - name: descriptionFunction
-    - argLabels: 
+    - Selector: descriptionFunction
   */
 // jsvalue   @objc var descriptionFunction: JSValue? { @objc get @objc (setDescriptionFunction:) set }
 
   /**
-    - jsName: hashFunction
-    - name: hashFunction
-    - argLabels: 
+    - Selector: hashFunction
   */
 // jsvalue   @objc var hashFunction: JSValue? { @objc get @objc (setHashFunction:) set }
 
   /**
-    - jsName: isEqualFunction
-    - name: isEqualFunction
-    - argLabels: 
+    - Selector: isEqualFunction
   */
 // jsvalue   @objc var isEqualFunction: JSValue? { @objc get @objc (setIsEqualFunction:) set }
 
   /**
-    - jsName: relinquishFunction
-    - name: relinquishFunction
-    - argLabels: 
+    - Selector: relinquishFunction
   */
 // jsvalue   @objc var relinquishFunction: JSValue? { @objc get @objc (setRelinquishFunction:) set }
 
   /**
-    - jsName: sizeFunction
-    - name: sizeFunction
-    - argLabels: 
+    - Selector: sizeFunction
   */
 // jsvalue   @objc var sizeFunction: JSValue? { @objc get @objc (setSizeFunction:) set }
 }

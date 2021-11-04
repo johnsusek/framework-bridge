@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSAssertionHandler
-    - name: NSAssertionHandler
-    - argLabels: 
+    - Selector: NSAssertionHandler
   */
 
 @objc(NSAssertionHandler) protocol NSAssertionHandlerExports: JSExport, NSObjectExports {
@@ -20,11 +18,7 @@ import Foundation
   // Own Static Properties
 
   /**
-    - jsName: current
-    - name: currentHandler
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: current
+    - Selector: currentHandler
   */
   @objc static var current: NSAssertionHandler { @objc (currentHandler) get }
 }

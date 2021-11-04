@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSWindowTab
-    - name: NSWindowTab
-    - argLabels: 
+    - Selector: NSWindowTab
     - Introduced: 10.13
   */
 
@@ -21,30 +19,22 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: accessoryView
-    - name: accessoryView
-    - argLabels: 
+    - Selector: accessoryView
   */
   @objc var accessoryView: NSView? { @objc get @objc (setAccessoryView:) set }
 
   /**
-    - jsName: attributedTitle
-    - name: attributedTitle
-    - argLabels: 
+    - Selector: attributedTitle
   */
   @objc var attributedTitle: NSAttributedString? { @objc get @objc (setAttributedTitle:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String! { @objc get @objc (setTitle:) set }
 
   /**
-    - jsName: toolTip
-    - name: toolTip
-    - argLabels: 
+    - Selector: toolTip
   */
   @objc var toolTip: String! { @objc get @objc (setToolTip:) set }
 }

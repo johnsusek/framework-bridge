@@ -9,383 +9,244 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSText
-    - name: NSText
-    - argLabels: 
+    - Selector: NSText
   */
 
 @objc(NSText) protocol NSTextExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: rtfd
-    - name: RTFDFromRange:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rtfd(from:)
+    - Selector: RTFDFromRange:
   */
   @objc (RTFDFromRange:) func rtfd(from: NSRange) -> Data?
 
   /**
-    - jsName: rtf
-    - name: RTFFromRange:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rtf(from:)
+    - Selector: RTFFromRange:
   */
   @objc (RTFFromRange:) func rtf(from: NSRange) -> Data?
 
   /**
-    - jsName: alignCenter
-    - name: alignCenter:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: alignCenter:
   */
   @objc func alignCenter(_: Any?)
 
   /**
-    - jsName: alignLeft
-    - name: alignLeft:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: alignLeft:
   */
   @objc func alignLeft(_: Any?)
 
   /**
-    - jsName: alignRight
-    - name: alignRight:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: alignRight:
   */
   @objc func alignRight(_: Any?)
 
   /**
-    - jsName: checkSpelling
-    - name: checkSpelling:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: checkSpelling:
   */
   @objc func checkSpelling(_: Any?)
 
   /**
-    - jsName: copyFont
-    - name: copyFont:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: copyFont:
   */
   @objc func copyFont(_: Any?)
 
   /**
-    - jsName: copyRuler
-    - name: copyRuler:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: copyRuler:
   */
   @objc func copyRuler(_: Any?)
 
   /**
-    - jsName: cut
-    - name: cut:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: cut:
   */
   @objc func cut(_: Any?)
 
   /**
-    - jsName: delete
-    - name: delete:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: delete:
   */
   @objc func delete(_: Any?)
 
   /**
-    - jsName: paste
-    - name: paste:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: paste:
   */
   @objc func paste(_: Any?)
 
   /**
-    - jsName: pasteFont
-    - name: pasteFont:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: pasteFont:
   */
   @objc func pasteFont(_: Any?)
 
   /**
-    - jsName: pasteRuler
-    - name: pasteRuler:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: pasteRuler:
   */
   @objc func pasteRuler(_: Any?)
 
   /**
-    - jsName: readRTFD
-    - name: readRTFDFromFile:
-    - argLabels: fromFile
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: readRTFD(fromFile:)
+    - Selector: readRTFDFromFile:
   */
   @objc (readRTFDFromFile:) func readRTFD(fromFile: String) -> Bool
 
   /**
-    - jsName: replaceCharacters
-    - name: replaceCharactersInRange:withRTF:
-    - argLabels: in, withRTF
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replaceCharacters(in:withRTF:)
+    - Selector: replaceCharactersInRange:withRTF:
   */
   @objc (replaceCharactersInRange:withRTF:) func replaceCharacters(in: NSRange, withRTF: Data)
 
   /**
-    - jsName: replaceCharacters
-    - name: replaceCharactersInRange:withRTFD:
-    - argLabels: in, withRTFD
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replaceCharacters(in:withRTFD:)
+    - Selector: replaceCharactersInRange:withRTFD:
   */
   @objc (replaceCharactersInRange:withRTFD:) func replaceCharacters(in: NSRange, withRTFD: Data)
 
   /**
-    - jsName: replaceCharacters
-    - name: replaceCharactersInRange:withString:
-    - argLabels: in, with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replaceCharacters(in:with:)
+    - Selector: replaceCharactersInRange:withString:
   */
   @objc (replaceCharactersInRange:withString:) func replaceCharacters(in: NSRange, with: String)
 
   /**
-    - jsName: scrollRangeToVisible
-    - name: scrollRangeToVisible:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: scrollRangeToVisible:
   */
   @objc func scrollRangeToVisible(_: NSRange)
 
   /**
-    - jsName: showGuessPanel
-    - name: showGuessPanel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: showGuessPanel:
   */
   @objc func showGuessPanel(_: Any?)
 
   /**
-    - jsName: sizeToFit
-    - name: sizeToFit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: sizeToFit
   */
   @objc func sizeToFit()
 
   /**
-    - jsName: superscript
-    - name: superscript:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: superscript:
   */
   @objc func superscript(_: Any?)
 
   /**
-    - jsName: toggleRuler
-    - name: toggleRuler:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: toggleRuler:
   */
   @objc func toggleRuler(_: Any?)
 
   /**
-    - jsName: underline
-    - name: underline:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: underline:
   */
   @objc func underline(_: Any?)
 
   /**
-    - jsName: unscript
-    - name: unscript:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: unscript:
   */
   @objc func unscript(_: Any?)
 
   /**
-    - jsName: writeRTFD
-    - name: writeRTFDToFile:atomically:
-    - argLabels: toFile, atomically
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: writeRTFD(toFile:atomically:)
+    - Selector: writeRTFDToFile:atomically:
   */
   @objc (writeRTFDToFile:atomically:) func writeRTFD(toFile: String, atomically: Bool) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: alignment
-    - name: alignment
-    - argLabels: 
+    - Selector: alignment
   */
   @objc var alignment: NSTextAlignment { @objc get @objc (setAlignment:) set }
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor? { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: baseWritingDirection
-    - name: baseWritingDirection
-    - argLabels: 
+    - Selector: baseWritingDirection
   */
   @objc var baseWritingDirection: NSWritingDirection { @objc get @objc (setBaseWritingDirection:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSTextDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: drawsBackground
-    - name: drawsBackground
-    - argLabels: 
+    - Selector: drawsBackground
   */
   @objc var drawsBackground: Bool { @objc get @objc (setDrawsBackground:) set }
 
   /**
-    - jsName: isEditable
-    - name: editable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEditable
+    - Selector: editable
   */
   @objc var isEditable: Bool { @objc get @objc (setEditable:) set }
 
   /**
-    - jsName: isFieldEditor
-    - name: fieldEditor
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFieldEditor
+    - Selector: fieldEditor
   */
   @objc var isFieldEditor: Bool { @objc get @objc (setFieldEditor:) set }
 
   /**
-    - jsName: font
-    - name: font
-    - argLabels: 
+    - Selector: font
   */
   @objc var font: NSFont? { @objc get @objc (setFont:) set }
 
   /**
-    - jsName: isHorizontallyResizable
-    - name: horizontallyResizable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isHorizontallyResizable
+    - Selector: horizontallyResizable
   */
   @objc var isHorizontallyResizable: Bool { @objc get @objc (setHorizontallyResizable:) set }
 
   /**
-    - jsName: importsGraphics
-    - name: importsGraphics
-    - argLabels: 
+    - Selector: importsGraphics
   */
   @objc var importsGraphics: Bool { @objc get @objc (setImportsGraphics:) set }
 
   /**
-    - jsName: maxSize
-    - name: maxSize
-    - argLabels: 
+    - Selector: maxSize
   */
   @objc var maxSize: CGSize { @objc get @objc (setMaxSize:) set }
 
   /**
-    - jsName: minSize
-    - name: minSize
-    - argLabels: 
+    - Selector: minSize
   */
   @objc var minSize: CGSize { @objc get @objc (setMinSize:) set }
 
   /**
-    - jsName: isRichText
-    - name: richText
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isRichText
+    - Selector: richText
   */
   @objc var isRichText: Bool { @objc get @objc (setRichText:) set }
 
   /**
-    - jsName: isRulerVisible
-    - name: rulerVisible
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isRulerVisible
+    - Selector: rulerVisible
   */
   @objc var isRulerVisible: Bool { @objc get }
 
   /**
-    - jsName: isSelectable
-    - name: selectable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSelectable
+    - Selector: selectable
   */
   @objc var isSelectable: Bool { @objc get @objc (setSelectable:) set }
 
   /**
-    - jsName: selectedRange
-    - name: selectedRange
-    - argLabels: 
+    - Selector: selectedRange
   */
   @objc var selectedRange: NSRange { @objc get @objc (setSelectedRange:) set }
 
   /**
-    - jsName: string
-    - name: string
-    - argLabels: 
+    - Selector: string
   */
   @objc var string: String { @objc get @objc (setString:) set }
 
   /**
-    - jsName: textColor
-    - name: textColor
-    - argLabels: 
+    - Selector: textColor
   */
   @objc var textColor: NSColor? { @objc get @objc (setTextColor:) set }
 
   /**
-    - jsName: usesFontPanel
-    - name: usesFontPanel
-    - argLabels: 
+    - Selector: usesFontPanel
   */
   @objc var usesFontPanel: Bool { @objc get @objc (setUsesFontPanel:) set }
 
   /**
-    - jsName: isVerticallyResizable
-    - name: verticallyResizable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isVerticallyResizable
+    - Selector: verticallyResizable
   */
   @objc var isVerticallyResizable: Bool { @objc get @objc (setVerticallyResizable:) set }
 }

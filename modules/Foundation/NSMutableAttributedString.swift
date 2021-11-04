@@ -9,253 +9,157 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSMutableAttributedString
-    - name: NSMutableAttributedString
-    - argLabels: 
+    - Selector: NSMutableAttributedString
     - Introduced: 10.0
   */
 
 @objc(NSMutableAttributedString) protocol NSMutableAttributedStringExports: JSExport, NSAttributedStringExports {
   // Static Methods
 
+  /**
+    - Selector: readableTypesForPasteboard:
+  */
+  @objc (readableTypesForPasteboard:) static func readableTypes(`for`: NSPasteboard) -> [NSPasteboard.PasteboardType]
+
+  /**
+    - Selector: readingOptionsForType:pasteboard:
+  */
+  @objc (readingOptionsForType:pasteboard:) static func readingOptions(forType: NSPasteboard.PasteboardType, pasteboard: NSPasteboard) -> NSPasteboard.ReadingOptions
+
   // Instance Methods
 
   /**
-    - jsName: addAttribute
-    - name: addAttribute:value:range:
-    - argLabels: value, range
-    - constructorTokens: 
+    - Selector: addAttribute:value:range:
   */
   @objc func addAttribute(_: NSAttributedString.Key, value: Any, range: NSRange)
 
   /**
-    - jsName: addAttributes
-    - name: addAttributes:range:
-    - argLabels: range
-    - constructorTokens: 
+    - Selector: addAttributes:range:
   */
   @objc func addAttributes(_: [NSAttributedString.Key: Any], range: NSRange)
 
   /**
-    - jsName: append
-    - name: appendAttributedString:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: append(_:)
+    - Selector: appendAttributedString:
   */
   @objc (appendAttributedString:) func append(_: NSAttributedString)
 
   /**
-    - jsName: applyFontTraits
-    - name: applyFontTraits:range:
-    - argLabels: range
-    - constructorTokens: 
+    - Selector: applyFontTraits:range:
   */
   @objc func applyFontTraits(_: NSFontTraitMask, range: NSRange)
 
   /**
-    - jsName: beginEditing
-    - name: beginEditing
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: beginEditing
   */
   @objc func beginEditing()
 
   /**
-    - jsName: deleteCharacters
-    - name: deleteCharactersInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: deleteCharacters(in:)
+    - Selector: deleteCharactersInRange:
   */
   @objc (deleteCharactersInRange:) func deleteCharacters(in: NSRange)
 
   /**
-    - jsName: endEditing
-    - name: endEditing
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: endEditing
   */
   @objc func endEditing()
 
   /**
-    - jsName: fixAttachmentAttribute
-    - name: fixAttachmentAttributeInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: fixAttachmentAttribute(in:)
+    - Selector: fixAttachmentAttributeInRange:
   */
   @objc (fixAttachmentAttributeInRange:) func fixAttachmentAttribute(in: NSRange)
 
   /**
-    - jsName: fixAttributes
-    - name: fixAttributesInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - available: 10.0
-    - obsoleted: 3
-    - renamed: fixAttributes(in:)
+    - Selector: fixAttributesInRange:
     - Introduced: 10.0
   */
   @objc (fixAttributesInRange:) @available(OSX 10.0, *) func fixAttributes(in: NSRange)
 
   /**
-    - jsName: fixFontAttribute
-    - name: fixFontAttributeInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: fixFontAttribute(in:)
+    - Selector: fixFontAttributeInRange:
   */
   @objc (fixFontAttributeInRange:) func fixFontAttribute(in: NSRange)
 
   /**
-    - jsName: fixParagraphStyleAttribute
-    - name: fixParagraphStyleAttributeInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: fixParagraphStyleAttribute(in:)
+    - Selector: fixParagraphStyleAttributeInRange:
   */
   @objc (fixParagraphStyleAttributeInRange:) func fixParagraphStyleAttribute(in: NSRange)
 
   /**
-    - jsName: insert
-    - name: insertAttributedString:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insert(_:at:)
+    - Selector: insertAttributedString:atIndex:
   */
   @objc (insertAttributedString:atIndex:) func insert(_: NSAttributedString, at: Int)
 
   /**
-    - jsName: read
-    - name: readFromData:options:documentAttributes:error:
-    - argLabels: from, options, documentAttributes, error
-    - constructorTokens: 
-    - available: 10.0
-    - obsoleted: 3
-    - renamed: read(from:options:documentAttributes:error:)
+    - Selector: readFromData:options:documentAttributes:error:
     - Introduced: 10.0
   */
   // throws - @objc (readFromData:options:documentAttributes:error:) @available(OSX 10.0, *) func read(_: Data, _: [NSAttributedString.DocumentReadingOptionKey: Any], _: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Bool
 
   /**
-    - jsName: read
-    - name: readFromURL:options:documentAttributes:error:
-    - argLabels: from, options, documentAttributes, error
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: read(from:options:documentAttributes:error:)
+    - Selector: readFromURL:options:documentAttributes:error:
     - Introduced: 10.5
   */
   // throws - @objc (readFromURL:options:documentAttributes:error:) @available(OSX 10.5, *) func read(_: URL, _: [NSAttributedString.DocumentReadingOptionKey: Any], _: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Bool
 
   /**
-    - jsName: removeAttribute
-    - name: removeAttribute:range:
-    - argLabels: range
-    - constructorTokens: 
+    - Selector: removeAttribute:range:
   */
   @objc func removeAttribute(_: NSAttributedString.Key, range: NSRange)
 
   /**
-    - jsName: replaceCharacters
-    - name: replaceCharactersInRange:withAttributedString:
-    - argLabels: in, with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replaceCharacters(in:with:)
+    - Selector: replaceCharactersInRange:withAttributedString:
   */
   @objc (replaceCharactersInRange:withAttributedString:) func replaceCharacters(in: NSRange, with: NSAttributedString)
 
   /**
-    - jsName: replaceCharacters
-    - name: replaceCharactersInRange:withString:
-    - argLabels: in, with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replaceCharacters(in:with:)
+    - Selector: replaceCharactersInRange:withString:
   */
   @objc (replaceCharactersInRange:withString:) func replaceCharacters(in: NSRange, with: String)
 
   /**
-    - jsName: setAlignment
-    - name: setAlignment:range:
-    - argLabels: range
-    - constructorTokens: 
+    - Selector: setAlignment:range:
   */
   @objc func setAlignment(_: NSTextAlignment, range: NSRange)
 
   /**
-    - jsName: setAttributedString
-    - name: setAttributedString:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setAttributedString:
   */
   @objc func setAttributedString(_: NSAttributedString)
 
   /**
-    - jsName: setAttributes
-    - name: setAttributes:range:
-    - argLabels: range
-    - constructorTokens: 
+    - Selector: setAttributes:range:
   */
   @objc func setAttributes(_: [NSAttributedString.Key: Any]?, range: NSRange)
 
   /**
-    - jsName: setBaseWritingDirection
-    - name: setBaseWritingDirection:range:
-    - argLabels: range
-    - constructorTokens: 
+    - Selector: setBaseWritingDirection:range:
   */
   @objc func setBaseWritingDirection(_: NSWritingDirection, range: NSRange)
 
   /**
-    - jsName: subscriptRange
-    - name: subscriptRange:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: subscriptRange:
   */
   @objc func subscriptRange(_: NSRange)
 
   /**
-    - jsName: superscriptRange
-    - name: superscriptRange:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: superscriptRange:
   */
   @objc func superscriptRange(_: NSRange)
 
   /**
-    - jsName: unscriptRange
-    - name: unscriptRange:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: unscriptRange:
   */
   @objc func unscriptRange(_: NSRange)
 
   /**
-    - jsName: updateAttachments
-    - name: updateAttachmentsFromPath:
-    - argLabels: fromPath
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: updateAttachments(fromPath:)
+    - Selector: updateAttachmentsFromPath:
   */
   @objc (updateAttachmentsFromPath:) func updateAttachments(fromPath: String)
 
   // Own Instance Properties
 
   /**
-    - jsName: mutableString
-    - name: mutableString
-    - argLabels: 
+    - Selector: mutableString
   */
   @objc var mutableString: NSMutableString { @objc get }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewUpdateItem
-    - name: NSCollectionViewUpdateItem
-    - argLabels: 
+    - Selector: NSCollectionViewUpdateItem
     - Introduced: 10.11
   */
 
@@ -21,23 +19,17 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: indexPathAfterUpdate
-    - name: indexPathAfterUpdate
-    - argLabels: 
+    - Selector: indexPathAfterUpdate
   */
   @objc var indexPathAfterUpdate: IndexPath? { @objc get }
 
   /**
-    - jsName: indexPathBeforeUpdate
-    - name: indexPathBeforeUpdate
-    - argLabels: 
+    - Selector: indexPathBeforeUpdate
   */
   @objc var indexPathBeforeUpdate: IndexPath? { @objc get }
 
   /**
-    - jsName: updateAction
-    - name: updateAction
-    - argLabels: 
+    - Selector: updateAction
   */
   @objc var updateAction: NSCollectionView.UpdateAction { @objc get }
 }

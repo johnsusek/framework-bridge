@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLAuthenticationChallenge
-    - name: NSURLAuthenticationChallenge
-    - argLabels: 
+    - Selector: NSURLAuthenticationChallenge
   */
 
 @objc(URLAuthenticationChallenge) protocol URLAuthenticationChallengeExports: JSExport, NSObjectExports {
@@ -20,62 +18,44 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithAuthenticationChallenge
-    - name: initWithAuthenticationChallenge:sender:
-    - argLabels: sender
-    - constructorTokens: authenticationChallenge, sender
+    - Selector: initWithAuthenticationChallenge:sender:
   */
   @objc static func createWithAuthenticationChallenge(_: URLAuthenticationChallenge, sender: URLAuthenticationChallengeSender) -> Self
 
   /**
-    - jsName: createWithProtectionSpace
-    - name: initWithProtectionSpace:proposedCredential:previousFailureCount:failureResponse:error:sender:
-    - argLabels: proposedCredential, previousFailureCount, failureResponse, error, sender
-    - constructorTokens: protectionSpace, proposedCredential, previousFailureCount, failureResponse, error, sender
+    - Selector: initWithProtectionSpace:proposedCredential:previousFailureCount:failureResponse:error:sender:
   */
   @objc static func createWithProtectionSpace(_: URLProtectionSpace, proposedCredential: URLCredential?, previousFailureCount: Int, failureResponse: URLResponse?, error: Error?, sender: URLAuthenticationChallengeSender) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: error
-    - name: error
-    - argLabels: 
+    - Selector: error
   */
   @objc var error: Error? { @objc get }
 
   /**
-    - jsName: failureResponse
-    - name: failureResponse
-    - argLabels: 
+    - Selector: failureResponse
   */
   @objc var failureResponse: URLResponse? { @objc get }
 
   /**
-    - jsName: previousFailureCount
-    - name: previousFailureCount
-    - argLabels: 
+    - Selector: previousFailureCount
   */
   @objc var previousFailureCount: Int { @objc get }
 
   /**
-    - jsName: proposedCredential
-    - name: proposedCredential
-    - argLabels: 
+    - Selector: proposedCredential
   */
   @objc var proposedCredential: URLCredential? { @objc get }
 
   /**
-    - jsName: protectionSpace
-    - name: protectionSpace
-    - argLabels: 
+    - Selector: protectionSpace
   */
   @objc var protectionSpace: URLProtectionSpace { @objc get }
 
   /**
-    - jsName: sender
-    - name: sender
-    - argLabels: 
+    - Selector: sender
   */
   @objc var sender: URLAuthenticationChallengeSender? { @objc get }
 }

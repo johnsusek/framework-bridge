@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutEdgeSpacing
-    - name: NSCollectionLayoutEdgeSpacing
-    - argLabels: 
+    - Selector: NSCollectionLayoutEdgeSpacing
     - Introduced: 10.15
   */
 
@@ -19,43 +17,29 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: spacingForLeading:top:trailing:bottom:
-    - argLabels: leading, top, trailing, bottom
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(leading:top:trailing:bottom:)
-    - message: Not available in Swift
+    - Selector: spacingForLeading:top:trailing:bottom:
   */
   @objc static func create(leading: NSCollectionLayoutSpacing?, top: NSCollectionLayoutSpacing?, trailing: NSCollectionLayoutSpacing?, bottom: NSCollectionLayoutSpacing?) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: bottom
-    - name: bottom
-    - argLabels: 
+    - Selector: bottom
   */
   @objc var bottom: NSCollectionLayoutSpacing? { @objc get }
 
   /**
-    - jsName: leading
-    - name: leading
-    - argLabels: 
+    - Selector: leading
   */
   @objc var leading: NSCollectionLayoutSpacing? { @objc get }
 
   /**
-    - jsName: top
-    - name: top
-    - argLabels: 
+    - Selector: top
   */
   @objc var top: NSCollectionLayoutSpacing? { @objc get }
 
   /**
-    - jsName: trailing
-    - name: trailing
-    - argLabels: 
+    - Selector: trailing
   */
   @objc var trailing: NSCollectionLayoutSpacing? { @objc get }
 }

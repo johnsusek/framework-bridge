@@ -9,23 +9,20 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSlider
-    - name: NSSlider
-    - argLabels: 
+    - Selector: NSSlider
   */
 
 @objc(NSSlider) protocol NSSliderExports: JSExport, NSControlExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: sliderWithValue:minValue:maxValue:target:action:
-    - argLabels: value, minValue, maxValue, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(value:minValue:maxValue:target:action:)
-    - message: Not available in Swift
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: sliderWithValue:minValue:maxValue:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(value: Double, minValue: Double, maxValue: Double) -> Self
@@ -33,121 +30,76 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: closestTickMarkValue
-    - name: closestTickMarkValueToValue:
-    - argLabels: toValue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: closestTickMarkValue(toValue:)
+    - Selector: closestTickMarkValueToValue:
   */
   @objc (closestTickMarkValueToValue:) func closestTickMarkValue(toValue: Double) -> Double
 
   /**
-    - jsName: indexOfTickMark
-    - name: indexOfTickMarkAtPoint:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexOfTickMark(at:)
+    - Selector: indexOfTickMarkAtPoint:
   */
   @objc (indexOfTickMarkAtPoint:) func indexOfTickMark(at: CGPoint) -> Int
 
   /**
-    - jsName: rectOfTickMark
-    - name: rectOfTickMarkAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rectOfTickMark(at:)
+    - Selector: rectOfTickMarkAtIndex:
   */
   @objc (rectOfTickMarkAtIndex:) func rectOfTickMark(at: Int) -> CGRect
 
   /**
-    - jsName: tickMarkValue
-    - name: tickMarkValueAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: tickMarkValue(at:)
+    - Selector: tickMarkValueAtIndex:
   */
   @objc (tickMarkValueAtIndex:) func tickMarkValue(at: Int) -> Double
 
   // Own Instance Properties
 
   /**
-    - jsName: allowsTickMarkValuesOnly
-    - name: allowsTickMarkValuesOnly
-    - argLabels: 
+    - Selector: allowsTickMarkValuesOnly
   */
   @objc var allowsTickMarkValuesOnly: Bool { @objc get @objc (setAllowsTickMarkValuesOnly:) set }
 
   /**
-    - jsName: altIncrementValue
-    - name: altIncrementValue
-    - argLabels: 
+    - Selector: altIncrementValue
   */
   @objc var altIncrementValue: Double { @objc get @objc (setAltIncrementValue:) set }
 
   /**
-    - jsName: knobThickness
-    - name: knobThickness
-    - argLabels: 
+    - Selector: knobThickness
   */
   @objc var knobThickness: CGFloat { @objc get }
 
   /**
-    - jsName: maxValue
-    - name: maxValue
-    - argLabels: 
+    - Selector: maxValue
   */
   @objc var maxValue: Double { @objc get @objc (setMaxValue:) set }
 
   /**
-    - jsName: minValue
-    - name: minValue
-    - argLabels: 
+    - Selector: minValue
   */
   @objc var minValue: Double { @objc get @objc (setMinValue:) set }
 
   /**
-    - jsName: numberOfTickMarks
-    - name: numberOfTickMarks
-    - argLabels: 
+    - Selector: numberOfTickMarks
   */
   @objc var numberOfTickMarks: Int { @objc get @objc (setNumberOfTickMarks:) set }
 
   /**
-    - jsName: sliderType
-    - name: sliderType
-    - argLabels: 
-    - available: 10.10
+    - Selector: sliderType
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var sliderType: NSSlider.SliderType { @objc get @objc (setSliderType:) set }
 
   /**
-    - jsName: tickMarkPosition
-    - name: tickMarkPosition
-    - argLabels: 
+    - Selector: tickMarkPosition
   */
   @objc var tickMarkPosition: NSSlider.TickMarkPosition { @objc get @objc (setTickMarkPosition:) set }
 
   /**
-    - jsName: trackFillColor
-    - name: trackFillColor
-    - argLabels: 
-    - available: 10.12.2
+    - Selector: trackFillColor
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) var trackFillColor: NSColor? { @objc get @objc (setTrackFillColor:) set }
 
   /**
-    - jsName: isVertical
-    - name: vertical
-    - argLabels: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: isVertical
+    - Selector: vertical
     - Introduced: 10.0
   */
   @objc @available(OSX 10.0, *) var isVertical: Bool { @objc get }
@@ -157,14 +109,7 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: sliderWithValue:minValue:maxValue:target:action:
-    - argLabels: value, minValue, maxValue, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(value:minValue:maxValue:target:action:)
-    - message: Not available in Swift
+    - Selector: sliderWithValue:minValue:maxValue:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(value: Double, minValue: Double, maxValue: Double) -> Self

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSFileSecurity
-    - name: NSFileSecurity
-    - argLabels: 
+    - Selector: NSFileSecurity
     - Introduced: 10.7
   */
 

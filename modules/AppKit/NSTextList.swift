@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextList
-    - name: NSTextList
-    - argLabels: 
+    - Selector: NSTextList
   */
 
 @objc(NSTextList) protocol NSTextListExports: JSExport, NSObjectExports {
@@ -20,44 +18,29 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithMarkerFormat
-    - name: initWithMarkerFormat:options:
-    - argLabels: options
-    - constructorTokens: markerFormat, options
+    - Selector: initWithMarkerFormat:options:
   */
   @objc static func createWithMarkerFormat(_: NSTextList.MarkerFormat, options: Int) -> Self
 
   /**
-    - jsName: marker
-    - name: markerForItemNumber:
-    - argLabels: forItemNumber
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: marker(forItemNumber:)
+    - Selector: markerForItemNumber:
   */
   @objc (markerForItemNumber:) func marker(forItemNumber: Int) -> String
 
   // Own Instance Properties
 
   /**
-    - jsName: listOptions
-    - name: listOptions
-    - argLabels: 
+    - Selector: listOptions
   */
   @objc var listOptions: NSTextList.Options { @objc get }
 
   /**
-    - jsName: markerFormat
-    - name: markerFormat
-    - argLabels: 
+    - Selector: markerFormat
   */
   @objc var markerFormat: NSTextList.MarkerFormat { @objc get }
 
   /**
-    - jsName: startingItemNumber
-    - name: startingItemNumber
-    - argLabels: 
-    - available: 10.6
+    - Selector: startingItemNumber
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var startingItemNumber: Int { @objc get @objc (setStartingItemNumber:) set }

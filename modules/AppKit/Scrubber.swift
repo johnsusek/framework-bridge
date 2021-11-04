@@ -9,236 +9,155 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubber
-    - name: NSScrubber
-    - argLabels: 
+    - Selector: NSScrubber
     - Introduced: 10.12.2
   */
 
 @objc(NSScrubber) protocol NSScrubberExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: insertItems
-    - name: insertItemsAtIndexes:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertItems(at:)
+    - Selector: insertItemsAtIndexes:
   */
   @objc (insertItemsAtIndexes:) func insertItems(at: IndexSet)
 
   /**
-    - jsName: itemViewForItem
-    - name: itemViewForItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: itemViewForItem(at:)
+    - Selector: itemViewForItemAtIndex:
   */
   @objc (itemViewForItemAtIndex:) func itemViewForItem(at: Int) -> NSScrubberItemView?
 
   /**
-    - jsName: makeItem
-    - name: makeItemWithIdentifier:owner:
-    - argLabels: withIdentifier, owner
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: makeItem(withIdentifier:owner:)
+    - Selector: makeItemWithIdentifier:owner:
   */
   @objc (makeItemWithIdentifier:owner:) func makeItem(withIdentifier: NSUserInterfaceItemIdentifier, owner: Any?) -> NSScrubberItemView?
 
   /**
-    - jsName: moveItem
-    - name: moveItemAtIndex:toIndex:
-    - argLabels: at, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: moveItem(at:to:)
+    - Selector: moveItemAtIndex:toIndex:
   */
   @objc (moveItemAtIndex:toIndex:) func moveItem(at: Int, to: Int)
 
   /**
-    - jsName: performSequentialBatchUpdates
-    - name: performSequentialBatchUpdates:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: performSequentialBatchUpdates:
   */
-  // jsvalue - @objc func performSequentialBatchUpdates(_: JSValue)
+  // jsvalue @objc func performSequentialBatchUpdates(_: JSValue)
 
   /**
-    - jsName: register
-    - name: registerClass:forItemIdentifier:
-    - argLabels: _, forItemIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: register(_:forItemIdentifier:)
+    - Selector: registerClass:forItemIdentifier:
   */
   @objc (registerClass:forItemIdentifier:) func register(_: AnyClass?, forItemIdentifier: NSUserInterfaceItemIdentifier)
 
   /**
-    - jsName: register
-    - name: registerNib:forItemIdentifier:
-    - argLabels: _, forItemIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: register(_:forItemIdentifier:)
+    - Selector: registerNib:forItemIdentifier:
   */
   @objc (registerNib:forItemIdentifier:) func register(_: NSNib?, forItemIdentifier: NSUserInterfaceItemIdentifier)
 
   /**
-    - jsName: reloadData
-    - name: reloadData
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reloadData
   */
   @objc func reloadData()
 
   /**
-    - jsName: reloadItems
-    - name: reloadItemsAtIndexes:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: reloadItems(at:)
+    - Selector: reloadItemsAtIndexes:
   */
   @objc (reloadItemsAtIndexes:) func reloadItems(at: IndexSet)
 
   /**
-    - jsName: removeItems
-    - name: removeItemsAtIndexes:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeItems(at:)
+    - Selector: removeItemsAtIndexes:
   */
   @objc (removeItemsAtIndexes:) func removeItems(at: IndexSet)
 
   /**
-    - jsName: scrollItem
-    - name: scrollItemAtIndex:toAlignment:
-    - argLabels: at, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: scrollItem(at:to:)
+    - Selector: scrollItemAtIndex:toAlignment:
   */
   @objc (scrollItemAtIndex:toAlignment:) func scrollItem(at: Int, to: NSScrubber.Alignment)
 
   // Own Instance Properties
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor? { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: backgroundView
-    - name: backgroundView
-    - argLabels: 
+    - Selector: backgroundView
   */
   @objc var backgroundView: NSView? { @objc get @objc (setBackgroundView:) set }
 
   /**
-    - jsName: isContinuous
-    - name: continuous
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isContinuous
+    - Selector: continuous
   */
   @objc var isContinuous: Bool { @objc get @objc (setContinuous:) set }
 
   /**
-    - jsName: dataSource
-    - name: dataSource
-    - argLabels: 
+    - Selector: dataSource
   */
   @objc var dataSource: NSScrubberDataSource? { @objc get @objc (setDataSource:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSScrubberDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: floatsSelectionViews
-    - name: floatsSelectionViews
-    - argLabels: 
+    - Selector: floatsSelectionViews
   */
   @objc var floatsSelectionViews: Bool { @objc get @objc (setFloatsSelectionViews:) set }
 
   /**
-    - jsName: highlightedIndex
-    - name: highlightedIndex
-    - argLabels: 
+    - Selector: highlightedIndex
   */
   @objc var highlightedIndex: Int { @objc get }
 
   /**
-    - jsName: itemAlignment
-    - name: itemAlignment
-    - argLabels: 
+    - Selector: itemAlignment
   */
   @objc var itemAlignment: NSScrubber.Alignment { @objc get @objc (setItemAlignment:) set }
 
   /**
-    - jsName: mode
-    - name: mode
-    - argLabels: 
+    - Selector: mode
   */
   @objc var mode: NSScrubber.Mode { @objc get @objc (setMode:) set }
 
   /**
-    - jsName: numberOfItems
-    - name: numberOfItems
-    - argLabels: 
+    - Selector: numberOfItems
   */
   @objc var numberOfItems: Int { @objc get }
 
   /**
-    - jsName: scrubberLayout
-    - name: scrubberLayout
-    - argLabels: 
+    - Selector: scrubberLayout
   */
   @objc var scrubberLayout: NSScrubberLayout { @objc get @objc (setScrubberLayout:) set }
 
   /**
-    - jsName: selectedIndex
-    - name: selectedIndex
-    - argLabels: 
+    - Selector: selectedIndex
   */
   @objc var selectedIndex: Int { @objc get @objc (setSelectedIndex:) set }
 
   /**
-    - jsName: selectionBackgroundStyle
-    - name: selectionBackgroundStyle
-    - argLabels: 
+    - Selector: selectionBackgroundStyle
   */
   @objc var selectionBackgroundStyle: NSScrubberSelectionStyle? { @objc get @objc (setSelectionBackgroundStyle:) set }
 
   /**
-    - jsName: selectionOverlayStyle
-    - name: selectionOverlayStyle
-    - argLabels: 
+    - Selector: selectionOverlayStyle
   */
   @objc var selectionOverlayStyle: NSScrubberSelectionStyle? { @objc get @objc (setSelectionOverlayStyle:) set }
 
   /**
-    - jsName: showsAdditionalContentIndicators
-    - name: showsAdditionalContentIndicators
-    - argLabels: 
+    - Selector: showsAdditionalContentIndicators
   */
   @objc var showsAdditionalContentIndicators: Bool { @objc get @objc (setShowsAdditionalContentIndicators:) set }
 
   /**
-    - jsName: showsArrowButtons
-    - name: showsArrowButtons
-    - argLabels: 
+    - Selector: showsArrowButtons
   */
   @objc var showsArrowButtons: Bool { @objc get @objc (setShowsArrowButtons:) set }
 }

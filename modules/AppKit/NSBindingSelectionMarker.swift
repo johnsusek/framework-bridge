@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSBindingSelectionMarker
-    - name: NSBindingSelectionMarker
-    - argLabels: 
+    - Selector: NSBindingSelectionMarker
     - Introduced: 10.14
   */
 
@@ -19,25 +17,13 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: defaultPlaceholder
-    - name: defaultPlaceholderForMarker:onClass:withBinding:
-    - argLabels: for, on, withBinding
-    - constructorTokens: 
-    - available: 10.15
-    - obsoleted: 3
-    - renamed: defaultPlaceholder(for:on:withBinding:)
+    - Selector: defaultPlaceholderForMarker:onClass:withBinding:
     - Introduced: 10.15
   */
   @objc (defaultPlaceholderForMarker:onClass:withBinding:) @available(OSX 10.15, *) static func defaultPlaceholder(`for`: NSBindingSelectionMarker?, on: AnyClass, withBinding: NSBindingName) -> Any?
 
   /**
-    - jsName: setDefaultPlaceholder
-    - name: setDefaultPlaceholder:forMarker:onClass:withBinding:
-    - argLabels: _, for, on, withBinding
-    - constructorTokens: 
-    - available: 10.15
-    - obsoleted: 3
-    - renamed: setDefaultPlaceholder(_:for:on:withBinding:)
+    - Selector: setDefaultPlaceholder:forMarker:onClass:withBinding:
     - Introduced: 10.15
   */
   @objc (setDefaultPlaceholder:forMarker:onClass:withBinding:) @available(OSX 10.15, *) static func setDefaultPlaceholder(_: Any?, `for`: NSBindingSelectionMarker?, on: AnyClass, withBinding: NSBindingName)
@@ -45,34 +31,19 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: multipleValues
-    - name: multipleValuesSelectionMarker
-    - argLabels: 
-    - available: 10.14
-    - obsoleted: 3
-    - renamed: multipleValues
+    - Selector: multipleValuesSelectionMarker
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) static var multipleValues: NSBindingSelectionMarker { @objc (multipleValuesSelectionMarker) get }
 
   /**
-    - jsName: noSelection
-    - name: noSelectionMarker
-    - argLabels: 
-    - available: 10.14
-    - obsoleted: 3
-    - renamed: noSelection
+    - Selector: noSelectionMarker
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) static var noSelection: NSBindingSelectionMarker { @objc (noSelectionMarker) get }
 
   /**
-    - jsName: notApplicable
-    - name: notApplicableSelectionMarker
-    - argLabels: 
-    - available: 10.14
-    - obsoleted: 3
-    - renamed: notApplicable
+    - Selector: notApplicableSelectionMarker
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) static var notApplicable: NSBindingSelectionMarker { @objc (notApplicableSelectionMarker) get }

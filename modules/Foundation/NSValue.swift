@@ -9,142 +9,74 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSValue
-    - name: NSValue
-    - argLabels: 
+    - Selector: NSValue
   */
 
 @objc(NSValue) protocol NSValueExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: value:withObjCType:
-    - argLabels: _, withObjCType
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(_:withObjCType:)
-    - message: Not available in Swift
+    - Selector: value:withObjCType:
   */
   @objc static func create(_: UnsafeRawPointer, withObjCType: UnsafePointer<Int8>) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithBytes:objCType:
-    - argLabels: bytes, objCType
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(bytes:objCType:)
-    - message: Not available in Swift
+    - Selector: valueWithBytes:objCType:
   */
   @objc static func create(bytes: UnsafeRawPointer, objCType: UnsafePointer<Int8>) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithCATransform3D:
-    - argLabels: caTransform3D
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(caTransform3D:)
-    - message: Not available in Swift
+    - Selector: valueWithCATransform3D:
   */
   @objc static func create(caTransform3D: CATransform3D) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithCMTime:
-    - argLabels: time
-    - constructorTokens: 
+    - Selector: valueWithCMTime:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) static func create(time: CMTime) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithCMTimeMapping:
-    - argLabels: timeMapping
-    - constructorTokens: 
+    - Selector: valueWithCMTimeMapping:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) static func create(timeMapping: CMTimeMapping) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithEdgeInsets:
-    - argLabels: edgeInsets
-    - constructorTokens: 
-    - available: 10.10
-    - unavailable: true
-    - renamed: init(edgeInsets:)
-    - message: Not available in Swift
+    - Selector: valueWithEdgeInsets:
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) static func create(edgeInsets: NSEdgeInsets) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithNonretainedObject:
-    - argLabels: nonretainedObject
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(nonretainedObject:)
-    - message: Not available in Swift
+    - Selector: valueWithNonretainedObject:
   */
   @objc static func create(nonretainedObject: Any?) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithPoint:
-    - argLabels: point
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(point:)
-    - message: Not available in Swift
+    - Selector: valueWithPoint:
   */
   @objc static func create(point: CGPoint) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithPointer:
-    - argLabels: pointer
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(pointer:)
-    - message: Not available in Swift
+    - Selector: valueWithPointer:
   */
   @objc static func create(pointer: UnsafeRawPointer?) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithRange:
-    - argLabels: range
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(range:)
-    - message: Not available in Swift
+    - Selector: valueWithRange:
   */
   @objc static func create(range: NSRange) -> NSValue
 
   /**
-    - jsName: create
-    - name: valueWithSize:
-    - argLabels: size
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(size:)
-    - message: Not available in Swift
+    - Selector: valueWithSize:
   */
   @objc static func create(size: CGSize) -> NSValue
 
   // Instance Methods
 
   /**
-    - jsName: getValue
-    - name: getValue:
-    - argLabels: 
-    - constructorTokens: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: getValue:
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: getValue:size:
@@ -152,115 +84,79 @@ import Foundation
   @objc @available(OSX 10.0, *) func getValue(_: UnsafeMutableRawPointer)
 
   /**
-    - jsName: getValue
-    - name: getValue:size:
-    - argLabels: size
-    - constructorTokens: 
-    - available: 10.13
+    - Selector: getValue:size:
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) func getValue(_: UnsafeMutableRawPointer, size: Int)
 
   /**
-    - jsName: isEqual
-    - name: isEqualToValue:
-    - argLabels: to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: isEqual(to:)
+    - Selector: isEqualToValue:
   */
   @objc (isEqualToValue:) func isEqual(to: NSValue) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: caTransform3DValue
-    - name: CATransform3DValue
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: caTransform3DValue
+    - Selector: CATransform3DValue
   */
   @objc var caTransform3DValue: CATransform3D { @objc (CATransform3DValue) get }
 
   /**
-    - jsName: timeMappingValue
-    - name: CMTimeMappingValue
-    - argLabels: 
+    - Selector: CMTimeMappingValue
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var timeMappingValue: CMTimeMapping { @objc (CMTimeMappingValue) get }
 
   /**
-    - jsName: timeRangeValue
-    - name: CMTimeRangeValue
-    - argLabels: 
+    - Selector: CMTimeRangeValue
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var timeRangeValue: CMTimeRange { @objc (CMTimeRangeValue) get }
 
   /**
-    - jsName: timeValue
-    - name: CMTimeValue
-    - argLabels: 
+    - Selector: CMTimeValue
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var timeValue: CMTime { @objc (CMTimeValue) get }
 
   /**
-    - jsName: edgeInsetsValue
-    - name: edgeInsetsValue
-    - argLabels: 
-    - available: 10.10
+    - Selector: edgeInsetsValue
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var edgeInsetsValue: NSEdgeInsets { @objc get }
 
   /**
-    - jsName: nonretainedObjectValue
-    - name: nonretainedObjectValue
-    - argLabels: 
+    - Selector: nonretainedObjectValue
   */
   @objc var nonretainedObjectValue: Any? { @objc get }
 
   /**
-    - jsName: objCType
-    - name: objCType
-    - argLabels: 
+    - Selector: objCType
   */
   @objc var objCType: UnsafePointer<Int8> { @objc get }
 
   /**
-    - jsName: pointValue
-    - name: pointValue
-    - argLabels: 
+    - Selector: pointValue
   */
   @objc var pointValue: CGPoint { @objc get }
 
   /**
-    - jsName: pointerValue
-    - name: pointerValue
-    - argLabels: 
+    - Selector: pointerValue
   */
   @objc var pointerValue: UnsafeMutableRawPointer? { @objc get }
 
   /**
-    - jsName: rangeValue
-    - name: rangeValue
-    - argLabels: 
+    - Selector: rangeValue
   */
   @objc var rangeValue: NSRange { @objc get }
 
   /**
-    - jsName: rectValue
-    - name: rectValue
-    - argLabels: 
+    - Selector: rectValue
   */
   @objc var rectValue: CGRect { @objc get }
 
   /**
-    - jsName: sizeValue
-    - name: sizeValue
-    - argLabels: 
+    - Selector: sizeValue
   */
   @objc var sizeValue: CGSize { @objc get }
 }

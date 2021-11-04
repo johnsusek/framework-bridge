@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextTab
-    - name: NSTextTab
-    - argLabels: 
+    - Selector: NSTextTab
     - Introduced: 10.0
   */
 
@@ -19,13 +17,7 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: columnTerminators
-    - name: columnTerminatorsForLocale:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: columnTerminators(for:)
+    - Selector: columnTerminatorsForLocale:
     - Introduced: 10.11
   */
   @objc (columnTerminatorsForLocale:) @available(OSX 10.11, *) static func columnTerminators(`for`: Locale?) -> CharacterSet
@@ -33,40 +25,29 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithTextAlignment
-    - name: initWithTextAlignment:location:options:
-    - argLabels: location, options
-    - constructorTokens: textAlignment, location, options
+    - Selector: initWithTextAlignment:location:options:
   */
   @objc static func createWithTextAlignment(_: NSTextAlignment, location: CGFloat, options: [NSTextTab.OptionKey: Any]) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: alignment
-    - name: alignment
-    - argLabels: 
+    - Selector: alignment
   */
   @objc var alignment: NSTextAlignment { @objc get }
 
   /**
-    - jsName: location
-    - name: location
-    - argLabels: 
+    - Selector: location
   */
   @objc var location: CGFloat { @objc get }
 
   /**
-    - jsName: options
-    - name: options
-    - argLabels: 
+    - Selector: options
   */
   @objc var options: [NSTextTab.OptionKey: Any] { @objc get }
 
   /**
-    - jsName: tabStopType
-    - name: tabStopType
-    - argLabels: 
+    - Selector: tabStopType
   */
   @objc var tabStopType: NSParagraphStyle.TextTabType { @objc get }
 }

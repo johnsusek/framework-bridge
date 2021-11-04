@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSLogicalTest
-    - name: NSLogicalTest
-    - argLabels: 
+    - Selector: NSLogicalTest
   */
 
 @objc(NSLogicalTest) protocol NSLogicalTestExports: JSExport, NSScriptWhoseTestExports {
@@ -20,26 +18,17 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createAndTestWithTests
-    - name: initAndTestWithTests:
-    - argLabels: 
-    - constructorTokens: andTestWith
+    - Selector: initAndTestWithTests:
   */
   @objc static func createAndTestWithTests(_: [NSSpecifierTest]) -> Self
 
   /**
-    - jsName: createNotTestWithTest
-    - name: initNotTestWithTest:
-    - argLabels: 
-    - constructorTokens: notTestWith
+    - Selector: initNotTestWithTest:
   */
   @objc static func createNotTestWithTest(_: NSScriptWhoseTest) -> Self
 
   /**
-    - jsName: createOrTestWithTests
-    - name: initOrTestWithTests:
-    - argLabels: 
-    - constructorTokens: orTestWith
+    - Selector: initOrTestWithTests:
   */
   @objc static func createOrTestWithTests(_: [NSSpecifierTest]) -> Self
 }

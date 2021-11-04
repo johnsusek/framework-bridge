@@ -9,83 +9,54 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: Host
-    - name: NSHost
-    - argLabels: 
+    - Selector: NSHost
   */
 
 @objc(Host) protocol HostExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: current
-    - name: currentHost
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: current()
+    - Selector: currentHost
   */
   @objc static func current() -> Self
 
   /**
-    - jsName: create
-    - name: hostWithAddress:
-    - argLabels: address
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(address:)
-    - message: Not available in Swift
+    - Selector: hostWithAddress:
   */
   @objc static func create(address: String) -> Self
 
   // Instance Methods
 
   /**
-    - jsName: isEqual
-    - name: isEqualToHost:
-    - argLabels: to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: isEqual(to:)
+    - Selector: isEqualToHost:
   */
   @objc (isEqualToHost:) func isEqual(to: Host) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: address
-    - name: address
-    - argLabels: 
+    - Selector: address
   */
   @objc var address: String? { @objc get }
 
   /**
-    - jsName: addresses
-    - name: addresses
-    - argLabels: 
+    - Selector: addresses
   */
   @objc var addresses: [String] { @objc get }
 
   /**
-    - jsName: localizedName
-    - name: localizedName
-    - argLabels: 
-    - available: 10.6
+    - Selector: localizedName
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var localizedName: String? { @objc get }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: String? { @objc get }
 
   /**
-    - jsName: names
-    - name: names
-    - argLabels: 
+    - Selector: names
   */
   @objc var names: [String] { @objc get }
 }

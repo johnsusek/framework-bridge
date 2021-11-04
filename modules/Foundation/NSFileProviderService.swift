@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSFileProviderService
-    - name: NSFileProviderService
-    - argLabels: 
+    - Selector: NSFileProviderService
     - Introduced: 10.13
   */
 
@@ -21,21 +19,14 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: getFileProviderConnection
-    - name: getFileProviderConnectionWithCompletionHandler:
-    - argLabels: completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: getFileProviderConnection(completionHandler:)
+    - Selector: getFileProviderConnectionWithCompletionHandler:
   */
-  // jsvalue - @objc (getFileProviderConnectionWithCompletionHandler:) func getFileProviderConnection(completionHandler: JSValue)
+  // jsvalue @objc func getFileProviderConnection(completionHandler: JSValue)
 
   // Own Instance Properties
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: NSFileProviderServiceName { @objc get }
 }

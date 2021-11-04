@@ -9,43 +9,51 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPDFImageRep
-    - name: NSPDFImageRep
-    - argLabels: 
+    - Selector: NSPDFImageRep
   */
 
 @objc(NSPDFImageRep) protocol NSPDFImageRepExports: JSExport, NSImageRepExports {
   // Static Methods
 
+  /**
+    - Selector: canInitWithData:
+  */
+  @objc (canInitWithData:) static func canInit(with: Data) -> Bool
+
+  /**
+    - Selector: imageRepsWithContentsOfFile:
+  */
+  @objc (imageRepsWithContentsOfFile:) static func imageReps(withContentsOfFile: String) -> [NSImageRep]?
+
+  /**
+    - Selector: registerImageRepClass:
+  */
+  @objc (registerImageRepClass:) static func registerClass(_: AnyClass)
+
+  /**
+    - Selector: unregisterImageRepClass:
+  */
+  @objc (unregisterImageRepClass:) static func unregisterClass(_: AnyClass)
+
   // Own Instance Properties
 
   /**
-    - jsName: pdfRepresentation
-    - name: PDFRepresentation
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: pdfRepresentation
+    - Selector: PDFRepresentation
   */
   @objc var pdfRepresentation: Data { @objc (PDFRepresentation) get }
 
   /**
-    - jsName: bounds
-    - name: bounds
-    - argLabels: 
+    - Selector: bounds
   */
   @objc var bounds: CGRect { @objc get }
 
   /**
-    - jsName: currentPage
-    - name: currentPage
-    - argLabels: 
+    - Selector: currentPage
   */
   @objc var currentPage: Int { @objc get @objc (setCurrentPage:) set }
 
   /**
-    - jsName: pageCount
-    - name: pageCount
-    - argLabels: 
+    - Selector: pageCount
   */
   @objc var pageCount: Int { @objc get }
 }

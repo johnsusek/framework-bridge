@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSColorSampler
-    - name: NSColorSampler
-    - argLabels: 
+    - Selector: NSColorSampler
     - Introduced: 10.15
   */
 
@@ -21,14 +19,9 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: show
-    - name: showSamplerWithSelectionHandler:
-    - argLabels: selectionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: show(selectionHandler:)
+    - Selector: showSamplerWithSelectionHandler:
   */
-  // jsvalue - @objc (showSamplerWithSelectionHandler:) func show(selectionHandler: JSValue)
+  // jsvalue @objc func show(selectionHandler: JSValue)
 }
 
 extension NSColorSampler: NSColorSamplerExports {

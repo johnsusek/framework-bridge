@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitElectricCurrent
-    - name: NSUnitElectricCurrent
-    - argLabels: 
+    - Selector: NSUnitElectricCurrent
     - Introduced: 10.12
   */
 
@@ -19,47 +17,34 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: amperes
-    - name: amperes
-    - argLabels: 
+    - Selector: amperes
   */
   @objc static var amperes: UnitElectricCurrent { @objc get }
 
   /**
-    - jsName: kiloamperes
-    - name: kiloamperes
-    - argLabels: 
+    - Selector: kiloamperes
   */
   @objc static var kiloamperes: UnitElectricCurrent { @objc get }
 
   /**
-    - jsName: megaamperes
-    - name: megaamperes
-    - argLabels: 
+    - Selector: megaamperes
   */
   @objc static var megaamperes: UnitElectricCurrent { @objc get }
 
   /**
-    - jsName: microamperes
-    - name: microamperes
-    - argLabels: 
+    - Selector: microamperes
   */
   @objc static var microamperes: UnitElectricCurrent { @objc get }
 
   /**
-    - jsName: milliamperes
-    - name: milliamperes
-    - argLabels: 
+    - Selector: milliamperes
   */
   @objc static var milliamperes: UnitElectricCurrent { @objc get }
 }

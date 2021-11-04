@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPressureConfiguration
-    - name: NSPressureConfiguration
-    - argLabels: 
+    - Selector: NSPressureConfiguration
     - Introduced: 10.10.3
   */
 
@@ -21,27 +19,19 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithPressureBehavior
-    - name: initWithPressureBehavior:
-    - argLabels: 
-    - constructorTokens: pressureBehavior
+    - Selector: initWithPressureBehavior:
   */
   @objc static func createWithPressureBehavior(_: NSEvent.PressureBehavior) -> Self
 
   /**
-    - jsName: set
-    - name: set
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: set
   */
   @objc func set()
 
   // Own Instance Properties
 
   /**
-    - jsName: pressureBehavior
-    - name: pressureBehavior
-    - argLabels: 
+    - Selector: pressureBehavior
   */
   @objc var pressureBehavior: NSEvent.PressureBehavior { @objc get }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: BlockOperation
-    - name: NSBlockOperation
-    - argLabels: 
+    - Selector: NSBlockOperation
     - Introduced: 10.6
   */
 
@@ -19,32 +17,21 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: create
-    - name: blockOperationWithBlock:
-    - argLabels: block
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(block:)
-    - message: Not available in Swift
+    - Selector: blockOperationWithBlock:
   */
-  @objc static func create(block: JSValue) -> Self
+// jsvalue   @objc static func create(block: JSValue) -> Self
 
   // Instance Methods
 
   /**
-    - jsName: addExecutionBlock
-    - name: addExecutionBlock:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addExecutionBlock:
   */
-  // jsvalue - @objc func addExecutionBlock(_: JSValue)
+  // jsvalue @objc func addExecutionBlock(_: JSValue)
 
   // Own Instance Properties
 
   /**
-    - jsName: executionBlocks
-    - name: executionBlocks
-    - argLabels: 
+    - Selector: executionBlocks
   */
 // jsvalue   @objc var executionBlocks: [JSValue] { @objc get }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutAnchor
-    - name: NSCollectionLayoutAnchor
-    - argLabels: 
+    - Selector: NSCollectionLayoutAnchor
     - Introduced: 10.15
   */
 
@@ -19,65 +17,39 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: layoutAnchorWithEdges:
-    - argLabels: edges
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(edges:)
-    - message: Not available in Swift
+    - Selector: layoutAnchorWithEdges:
   */
   @objc static func create(edges: NSDirectionalRectEdge) -> Self
 
   /**
-    - jsName: create
-    - name: layoutAnchorWithEdges:absoluteOffset:
-    - argLabels: edges, absoluteOffset
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(edges:absoluteOffset:)
-    - message: Not available in Swift
+    - Selector: layoutAnchorWithEdges:absoluteOffset:
   */
   @objc static func create(edges: NSDirectionalRectEdge, absoluteOffset: CGPoint) -> Self
 
   /**
-    - jsName: create
-    - name: layoutAnchorWithEdges:fractionalOffset:
-    - argLabels: edges, fractionalOffset
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(edges:fractionalOffset:)
-    - message: Not available in Swift
+    - Selector: layoutAnchorWithEdges:fractionalOffset:
   */
   @objc static func create(edges: NSDirectionalRectEdge, fractionalOffset: CGPoint) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: edges
-    - name: edges
-    - argLabels: 
+    - Selector: edges
   */
   @objc var edges: NSDirectionalRectEdge { @objc get }
 
   /**
-    - jsName: isAbsoluteOffset
-    - name: isAbsoluteOffset
-    - argLabels: 
+    - Selector: isAbsoluteOffset
   */
   @objc var isAbsoluteOffset: Bool { @objc get }
 
   /**
-    - jsName: isFractionalOffset
-    - name: isFractionalOffset
-    - argLabels: 
+    - Selector: isFractionalOffset
   */
   @objc var isFractionalOffset: Bool { @objc get }
 
   /**
-    - jsName: offset
-    - name: offset
-    - argLabels: 
+    - Selector: offset
   */
   @objc var offset: CGPoint { @objc get }
 }

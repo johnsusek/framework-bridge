@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSFileVersion
-    - name: NSFileVersion
-    - argLabels: 
+    - Selector: NSFileVersion
     - Introduced: 10.7
   */
 
@@ -19,197 +17,118 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: addVersionOfItemAtURL
-    - name: addVersionOfItemAtURL:withContentsOfURL:options:error:
-    - argLabels: withContentsOfURL, options, error
-    - constructorTokens: 
+    - Selector: addVersionOfItemAtURL:withContentsOfURL:options:error:
     - Introduced: 10.7
   */
   // throws - @objc @available(OSX 10.7, *) static func addVersionOfItemAtURL(withContentsOfURL: URL, options: URL, error: NSFileVersion.AddingOptions) -> NSFileVersion?
 
   /**
-    - jsName: currentVersionOfItem
-    - name: currentVersionOfItemAtURL:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: currentVersionOfItem(at:)
+    - Selector: currentVersionOfItemAtURL:
   */
   @objc (currentVersionOfItemAtURL:) static func currentVersionOfItem(at: URL) -> NSFileVersion?
 
   /**
-    - jsName: getNonlocalVersionsOfItem
-    - name: getNonlocalVersionsOfItemAtURL:completionHandler:
-    - argLabels: at, completionHandler
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: getNonlocalVersionsOfItem(at:completionHandler:)
+    - Selector: getNonlocalVersionsOfItemAtURL:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue - @objc (getNonlocalVersionsOfItemAtURL:completionHandler:) @available(OSX 10.10, *) static func getNonlocalVersionsOfItem(at: URL, completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.10, *) static func getNonlocalVersionsOfItem(at: URL, completionHandler: JSValue)
 
   /**
-    - jsName: otherVersionsOfItem
-    - name: otherVersionsOfItemAtURL:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: otherVersionsOfItem(at:)
+    - Selector: otherVersionsOfItemAtURL:
   */
   @objc (otherVersionsOfItemAtURL:) static func otherVersionsOfItem(at: URL) -> [NSFileVersion]?
 
   /**
-    - jsName: removeOtherVersionsOfItemAtURL
-    - name: removeOtherVersionsOfItemAtURL:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: removeOtherVersionsOfItemAtURL:error:
   */
   // throws - @objc static func removeOtherVersionsOfItemAtURL(error: URL) -> Bool
 
   /**
-    - jsName: temporaryDirectoryURLForNewVersionOfItem
-    - name: temporaryDirectoryURLForNewVersionOfItemAtURL:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: temporaryDirectoryURLForNewVersionOfItem(at:)
+    - Selector: temporaryDirectoryURLForNewVersionOfItemAtURL:
     - Introduced: 10.7
   */
   @objc (temporaryDirectoryURLForNewVersionOfItemAtURL:) @available(OSX 10.7, *) static func temporaryDirectoryURLForNewVersionOfItem(at: URL) -> URL
 
   /**
-    - jsName: unresolvedConflictVersionsOfItem
-    - name: unresolvedConflictVersionsOfItemAtURL:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: unresolvedConflictVersionsOfItem(at:)
+    - Selector: unresolvedConflictVersionsOfItemAtURL:
   */
   @objc (unresolvedConflictVersionsOfItemAtURL:) static func unresolvedConflictVersionsOfItem(at: URL) -> [NSFileVersion]?
 
   /**
-    - jsName: version
-    - name: versionOfItemAtURL:forPersistentIdentifier:
-    - argLabels: itemAt, forPersistentIdentifier
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: version(itemAt:forPersistentIdentifier:)
-    - message: Not available in Swift
+    - Selector: versionOfItemAtURL:forPersistentIdentifier:
   */
   @objc (versionOfItemAtURL:forPersistentIdentifier:) static func version(itemAt: URL, forPersistentIdentifier: Any) -> NSFileVersion?
 
   // Instance Methods
 
   /**
-    - jsName: removeAndReturnError
-    - name: removeAndReturnError:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeAndReturnError:
   */
   // throws - @objc func removeAndReturnError() -> Bool
 
   /**
-    - jsName: replaceItemAtURL
-    - name: replaceItemAtURL:options:error:
-    - argLabels: options, error
-    - constructorTokens: 
+    - Selector: replaceItemAtURL:options:error:
   */
   // throws - @objc func replaceItemAtURL(options: URL, error: NSFileVersion.ReplacingOptions) -> URL?
 
   // Own Instance Properties
 
   /**
-    - jsName: url
-    - name: URL
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: url
+    - Selector: URL
   */
   @objc var url: URL { @objc (URL) get }
 
   /**
-    - jsName: isConflict
-    - name: conflict
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isConflict
+    - Selector: conflict
   */
   @objc var isConflict: Bool { @objc get }
 
   /**
-    - jsName: isDiscardable
-    - name: discardable
-    - argLabels: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: isDiscardable
+    - Selector: discardable
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var isDiscardable: Bool { @objc get @objc (setDiscardable:) set }
 
   /**
-    - jsName: hasLocalContents
-    - name: hasLocalContents
-    - argLabels: 
-    - available: 10.10
+    - Selector: hasLocalContents
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var hasLocalContents: Bool { @objc get }
 
   /**
-    - jsName: hasThumbnail
-    - name: hasThumbnail
-    - argLabels: 
-    - available: 10.10
+    - Selector: hasThumbnail
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var hasThumbnail: Bool { @objc get }
 
   /**
-    - jsName: localizedName
-    - name: localizedName
-    - argLabels: 
+    - Selector: localizedName
   */
   @objc var localizedName: String? { @objc get }
 
   /**
-    - jsName: localizedNameOfSavingComputer
-    - name: localizedNameOfSavingComputer
-    - argLabels: 
+    - Selector: localizedNameOfSavingComputer
   */
   @objc var localizedNameOfSavingComputer: String? { @objc get }
 
   /**
-    - jsName: modificationDate
-    - name: modificationDate
-    - argLabels: 
+    - Selector: modificationDate
   */
   @objc var modificationDate: Date? { @objc get }
 
   /**
-    - jsName: originatorNameComponents
-    - name: originatorNameComponents
-    - argLabels: 
-    - available: 10.12
+    - Selector: originatorNameComponents
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var originatorNameComponents: PersonNameComponents? { @objc get }
 
   /**
-    - jsName: persistentIdentifier
-    - name: persistentIdentifier
-    - argLabels: 
+    - Selector: persistentIdentifier
   */
   @objc var persistentIdentifier: NSCoding { @objc get }
 
   /**
-    - jsName: isResolved
-    - name: resolved
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isResolved
+    - Selector: resolved
   */
   @objc var isResolved: Bool { @objc get @objc (setResolved:) set }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSOrthography
-    - name: NSOrthography
-    - argLabels: 
+    - Selector: NSOrthography
     - Introduced: 10.6
   */
 
@@ -19,26 +17,13 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: defaultOrthography
-    - name: defaultOrthographyForLanguage:
-    - argLabels: forLanguage
-    - constructorTokens: 
-    - available: 10.13
-    - obsoleted: 3
-    - renamed: defaultOrthography(forLanguage:)
+    - Selector: defaultOrthographyForLanguage:
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) static func defaultOrthography(forLanguage: String) -> Self
 
   /**
-    - jsName: create
-    - name: orthographyWithDominantScript:languageMap:
-    - argLabels: dominantScript, languageMap
-    - constructorTokens: 
-    - available: 10.6
-    - unavailable: true
-    - renamed: init(dominantScript:languageMap:)
-    - message: Not available in Swift
+    - Selector: orthographyWithDominantScript:languageMap:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) static func create(dominantScript: String, languageMap: [String: [String]]) -> Self
@@ -46,25 +31,13 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: dominantLanguage
-    - name: dominantLanguageForScript:
-    - argLabels: forScript
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: dominantLanguage(forScript:)
+    - Selector: dominantLanguageForScript:
     - Introduced: 10.6
   */
   @objc (dominantLanguageForScript:) @available(OSX 10.6, *) func dominantLanguage(forScript: String) -> String?
 
   /**
-    - jsName: languages
-    - name: languagesForScript:
-    - argLabels: forScript
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: languages(forScript:)
+    - Selector: languagesForScript:
     - Introduced: 10.6
   */
   @objc (languagesForScript:) @available(OSX 10.6, *) func languages(forScript: String) -> [String]?
@@ -72,43 +45,30 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: allLanguages
-    - name: allLanguages
-    - argLabels: 
-    - available: 10.6
+    - Selector: allLanguages
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var allLanguages: [String] { @objc get }
 
   /**
-    - jsName: allScripts
-    - name: allScripts
-    - argLabels: 
-    - available: 10.6
+    - Selector: allScripts
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var allScripts: [String] { @objc get }
 
   /**
-    - jsName: dominantLanguage
-    - name: dominantLanguage
-    - argLabels: 
-    - available: 10.6
+    - Selector: dominantLanguage
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var dominantLanguage: String { @objc get }
 
   /**
-    - jsName: dominantScript
-    - name: dominantScript
-    - argLabels: 
+    - Selector: dominantScript
   */
   @objc var dominantScript: String { @objc get }
 
   /**
-    - jsName: languageMap
-    - name: languageMap
-    - argLabels: 
+    - Selector: languageMap
   */
   @objc var languageMap: [String: [String]] { @objc get }
 }

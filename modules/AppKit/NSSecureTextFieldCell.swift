@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSecureTextFieldCell
-    - name: NSSecureTextFieldCell
-    - argLabels: 
+    - Selector: NSSecureTextFieldCell
   */
 
 @objc(NSSecureTextFieldCell) protocol NSSecureTextFieldCellExports: JSExport, NSTextFieldCellExports {
@@ -20,9 +18,7 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: echosBullets
-    - name: echosBullets
-    - argLabels: 
+    - Selector: echosBullets
   */
   @objc var echosBullets: Bool { @objc get @objc (setEchosBullets:) set }
 }

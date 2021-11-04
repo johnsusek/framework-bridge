@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSAppleScript
-    - name: NSAppleScript
-    - argLabels: 
+    - Selector: NSAppleScript
   */
 
 @objc(NSAppleScript) protocol NSAppleScriptExports: JSExport, NSObjectExports {
@@ -20,67 +18,44 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: compileAndReturnError
-    - name: compileAndReturnError:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: compileAndReturnError:
   */
   @objc func compileAndReturnError(_: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Bool
 
   /**
-    - jsName: executeAndReturnError
-    - name: executeAndReturnError:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: executeAndReturnError:
   */
   @objc func executeAndReturnError(_: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> NSAppleEventDescriptor
 
   /**
-    - jsName: executeAppleEvent
-    - name: executeAppleEvent:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: executeAppleEvent:error:
   */
   @objc func executeAppleEvent(_: NSAppleEventDescriptor, error: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> NSAppleEventDescriptor
 
   /**
-    - jsName: createWithContentsOfURL
-    - name: initWithContentsOfURL:error:
-    - argLabels: error
-    - constructorTokens: contentsOf, error
+    - Selector: initWithContentsOfURL:error:
   */
   @objc static func createWithContentsOfURL(_: URL, error: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
-    - jsName: createWithSource
-    - name: initWithSource:
-    - argLabels: 
-    - constructorTokens: source
+    - Selector: initWithSource:
   */
   @objc static func createWithSource(_: String) -> Self?
 
   // Own Instance Properties
 
   /**
-    - jsName: isCompiled
-    - name: compiled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isCompiled
+    - Selector: compiled
   */
   @objc var isCompiled: Bool { @objc get }
 
   /**
-    - jsName: richTextSource
-    - name: richTextSource
-    - argLabels: 
+    - Selector: richTextSource
   */
   @objc var richTextSource: NSAttributedString? { @objc get }
 
   /**
-    - jsName: source
-    - name: source
-    - argLabels: 
+    - Selector: source
   */
   @objc var source: String? { @objc get }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSStatusItem
-    - name: NSStatusItem
-    - argLabels: 
+    - Selector: NSStatusItem
   */
 
 @objc(NSStatusItem) protocol NSStatusItemExports: JSExport, NSObjectExports {
@@ -20,60 +18,40 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: autosaveName
-    - name: autosaveName
-    - argLabels: 
-    - available: 10.12
+    - Selector: autosaveName
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var autosaveName: NSStatusItem.AutosaveName! { @objc get @objc (setAutosaveName:) set }
 
   /**
-    - jsName: behavior
-    - name: behavior
-    - argLabels: 
-    - available: 10.12
+    - Selector: behavior
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var behavior: NSStatusItem.Behavior { @objc get @objc (setBehavior:) set }
 
   /**
-    - jsName: button
-    - name: button
-    - argLabels: 
-    - available: 10.10
+    - Selector: button
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var button: NSStatusBarButton? { @objc get }
 
   /**
-    - jsName: length
-    - name: length
-    - argLabels: 
+    - Selector: length
   */
   @objc var length: CGFloat { @objc get @objc (setLength:) set }
 
   /**
-    - jsName: menu
-    - name: menu
-    - argLabels: 
+    - Selector: menu
   */
   @objc var menu: NSMenu? { @objc get @objc (setMenu:) set }
 
   /**
-    - jsName: statusBar
-    - name: statusBar
-    - argLabels: 
+    - Selector: statusBar
   */
   @objc var statusBar: NSStatusBar? { @objc get }
 
   /**
-    - jsName: isVisible
-    - name: visible
-    - argLabels: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: isVisible
+    - Selector: visible
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var isVisible: Bool { @objc get @objc (setVisible:) set }

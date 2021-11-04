@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewLayout
-    - name: NSCollectionViewLayout
-    - argLabels: 
+    - Selector: NSCollectionViewLayout
     - Introduced: 10.11
   */
 
@@ -21,366 +19,196 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: invalidationContextClass
-    - name: invalidationContextClass
-    - argLabels: 
+    - Selector: invalidationContextClass
   */
   @objc static var invalidationContextClass: AnyClass { @objc get }
 
   /**
-    - jsName: layoutAttributesClass
-    - name: layoutAttributesClass
-    - argLabels: 
+    - Selector: layoutAttributesClass
   */
   @objc static var layoutAttributesClass: AnyClass { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: finalLayoutAttributesForDisappearingDecorationElement
-    - name: finalLayoutAttributesForDisappearingDecorationElementOfKind:atIndexPath:
-    - argLabels: ofKind, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: finalLayoutAttributesForDisappearingDecorationElement(ofKind:at:)
+    - Selector: finalLayoutAttributesForDisappearingDecorationElementOfKind:atIndexPath:
   */
   @objc (finalLayoutAttributesForDisappearingDecorationElementOfKind:atIndexPath:) func finalLayoutAttributesForDisappearingDecorationElement(ofKind: NSCollectionView.DecorationElementKind, at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: finalLayoutAttributesForDisappearingItem
-    - name: finalLayoutAttributesForDisappearingItemAtIndexPath:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: finalLayoutAttributesForDisappearingItem(at:)
+    - Selector: finalLayoutAttributesForDisappearingItemAtIndexPath:
   */
   @objc (finalLayoutAttributesForDisappearingItemAtIndexPath:) func finalLayoutAttributesForDisappearingItem(at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: finalLayoutAttributesForDisappearingSupplementaryElement
-    - name: finalLayoutAttributesForDisappearingSupplementaryElementOfKind:atIndexPath:
-    - argLabels: ofKind, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: finalLayoutAttributesForDisappearingSupplementaryElement(ofKind:at:)
+    - Selector: finalLayoutAttributesForDisappearingSupplementaryElementOfKind:atIndexPath:
   */
   @objc (finalLayoutAttributesForDisappearingSupplementaryElementOfKind:atIndexPath:) func finalLayoutAttributesForDisappearingSupplementaryElement(ofKind: NSCollectionView.SupplementaryElementKind, at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: finalizeAnimatedBoundsChange
-    - name: finalizeAnimatedBoundsChange
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: finalizeAnimatedBoundsChange
   */
   @objc func finalizeAnimatedBoundsChange()
 
   /**
-    - jsName: finalizeCollectionViewUpdates
-    - name: finalizeCollectionViewUpdates
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: finalizeCollectionViewUpdates
   */
   @objc func finalizeCollectionViewUpdates()
 
   /**
-    - jsName: finalizeLayoutTransition
-    - name: finalizeLayoutTransition
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: finalizeLayoutTransition
   */
   @objc func finalizeLayoutTransition()
 
   /**
-    - jsName: indexPathsToDeleteForDecorationView
-    - name: indexPathsToDeleteForDecorationViewOfKind:
-    - argLabels: ofKind
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexPathsToDeleteForDecorationView(ofKind:)
+    - Selector: indexPathsToDeleteForDecorationViewOfKind:
   */
   @objc (indexPathsToDeleteForDecorationViewOfKind:) func indexPathsToDeleteForDecorationView(ofKind: NSCollectionView.DecorationElementKind) -> Set<IndexPath>
 
   /**
-    - jsName: indexPathsToDeleteForSupplementaryView
-    - name: indexPathsToDeleteForSupplementaryViewOfKind:
-    - argLabels: ofKind
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexPathsToDeleteForSupplementaryView(ofKind:)
+    - Selector: indexPathsToDeleteForSupplementaryViewOfKind:
   */
   @objc (indexPathsToDeleteForSupplementaryViewOfKind:) func indexPathsToDeleteForSupplementaryView(ofKind: NSCollectionView.SupplementaryElementKind) -> Set<IndexPath>
 
   /**
-    - jsName: indexPathsToInsertForDecorationView
-    - name: indexPathsToInsertForDecorationViewOfKind:
-    - argLabels: ofKind
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexPathsToInsertForDecorationView(ofKind:)
+    - Selector: indexPathsToInsertForDecorationViewOfKind:
   */
   @objc (indexPathsToInsertForDecorationViewOfKind:) func indexPathsToInsertForDecorationView(ofKind: NSCollectionView.DecorationElementKind) -> Set<IndexPath>
 
   /**
-    - jsName: indexPathsToInsertForSupplementaryView
-    - name: indexPathsToInsertForSupplementaryViewOfKind:
-    - argLabels: ofKind
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexPathsToInsertForSupplementaryView(ofKind:)
+    - Selector: indexPathsToInsertForSupplementaryViewOfKind:
   */
   @objc (indexPathsToInsertForSupplementaryViewOfKind:) func indexPathsToInsertForSupplementaryView(ofKind: NSCollectionView.SupplementaryElementKind) -> Set<IndexPath>
 
   /**
-    - jsName: initialLayoutAttributesForAppearingDecorationElement
-    - name: initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath:
-    - argLabels: ofKind, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: initialLayoutAttributesForAppearingDecorationElement(ofKind:at:)
+    - Selector: initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath:
   */
   @objc (initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath:) func initialLayoutAttributesForAppearingDecorationElement(ofKind: NSCollectionView.DecorationElementKind, at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: initialLayoutAttributesForAppearingItem
-    - name: initialLayoutAttributesForAppearingItemAtIndexPath:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: initialLayoutAttributesForAppearingItem(at:)
+    - Selector: initialLayoutAttributesForAppearingItemAtIndexPath:
   */
   @objc (initialLayoutAttributesForAppearingItemAtIndexPath:) func initialLayoutAttributesForAppearingItem(at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: initialLayoutAttributesForAppearingSupplementaryElement
-    - name: initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath:
-    - argLabels: ofKind, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: initialLayoutAttributesForAppearingSupplementaryElement(ofKind:at:)
+    - Selector: initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath:
   */
   @objc (initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath:) func initialLayoutAttributesForAppearingSupplementaryElement(ofKind: NSCollectionView.SupplementaryElementKind, at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: invalidateLayout
-    - name: invalidateLayout
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidateLayout
   */
   @objc func invalidateLayout()
 
   /**
-    - jsName: invalidateLayout
-    - name: invalidateLayoutWithContext:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: invalidateLayout(with:)
+    - Selector: invalidateLayoutWithContext:
   */
   @objc (invalidateLayoutWithContext:) func invalidateLayout(with: NSCollectionViewLayoutInvalidationContext)
 
   /**
-    - jsName: invalidationContext
-    - name: invalidationContextForBoundsChange:
-    - argLabels: forBoundsChange
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: invalidationContext(forBoundsChange:)
+    - Selector: invalidationContextForBoundsChange:
   */
   @objc (invalidationContextForBoundsChange:) func invalidationContext(forBoundsChange: CGRect) -> NSCollectionViewLayoutInvalidationContext
 
   /**
-    - jsName: invalidationContext
-    - name: invalidationContextForPreferredLayoutAttributes:withOriginalAttributes:
-    - argLabels: forPreferredLayoutAttributes, withOriginalAttributes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: invalidationContext(forPreferredLayoutAttributes:withOriginalAttributes:)
+    - Selector: invalidationContextForPreferredLayoutAttributes:withOriginalAttributes:
   */
   @objc (invalidationContextForPreferredLayoutAttributes:withOriginalAttributes:) func invalidationContext(forPreferredLayoutAttributes: NSCollectionViewLayoutAttributes, withOriginalAttributes: NSCollectionViewLayoutAttributes) -> NSCollectionViewLayoutInvalidationContext
 
   /**
-    - jsName: layoutAttributesForDecorationView
-    - name: layoutAttributesForDecorationViewOfKind:atIndexPath:
-    - argLabels: ofKind, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: layoutAttributesForDecorationView(ofKind:at:)
+    - Selector: layoutAttributesForDecorationViewOfKind:atIndexPath:
   */
   @objc (layoutAttributesForDecorationViewOfKind:atIndexPath:) func layoutAttributesForDecorationView(ofKind: NSCollectionView.DecorationElementKind, at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: layoutAttributesForDropTarget
-    - name: layoutAttributesForDropTargetAtPoint:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: layoutAttributesForDropTarget(at:)
+    - Selector: layoutAttributesForDropTargetAtPoint:
   */
   @objc (layoutAttributesForDropTargetAtPoint:) func layoutAttributesForDropTarget(at: CGPoint) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: layoutAttributesForElements
-    - name: layoutAttributesForElementsInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: layoutAttributesForElements(in:)
+    - Selector: layoutAttributesForElementsInRect:
   */
   @objc (layoutAttributesForElementsInRect:) func layoutAttributesForElements(in: CGRect) -> [NSCollectionViewLayoutAttributes]
 
   /**
-    - jsName: layoutAttributesForInterItemGap
-    - name: layoutAttributesForInterItemGapBeforeIndexPath:
-    - argLabels: before
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: layoutAttributesForInterItemGap(before:)
+    - Selector: layoutAttributesForInterItemGapBeforeIndexPath:
   */
   @objc (layoutAttributesForInterItemGapBeforeIndexPath:) func layoutAttributesForInterItemGap(before: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: layoutAttributesForItem
-    - name: layoutAttributesForItemAtIndexPath:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: layoutAttributesForItem(at:)
+    - Selector: layoutAttributesForItemAtIndexPath:
   */
   @objc (layoutAttributesForItemAtIndexPath:) func layoutAttributesForItem(at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: layoutAttributesForSupplementaryView
-    - name: layoutAttributesForSupplementaryViewOfKind:atIndexPath:
-    - argLabels: ofKind, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: layoutAttributesForSupplementaryView(ofKind:at:)
+    - Selector: layoutAttributesForSupplementaryViewOfKind:atIndexPath:
   */
   @objc (layoutAttributesForSupplementaryViewOfKind:atIndexPath:) func layoutAttributesForSupplementaryView(ofKind: NSCollectionView.SupplementaryElementKind, at: IndexPath) -> NSCollectionViewLayoutAttributes?
 
   /**
-    - jsName: prepare
-    - name: prepareForAnimatedBoundsChange:
-    - argLabels: forAnimatedBoundsChange
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: prepare(forAnimatedBoundsChange:)
+    - Selector: prepareForAnimatedBoundsChange:
   */
   @objc (prepareForAnimatedBoundsChange:) func prepare(forAnimatedBoundsChange: CGRect)
 
   /**
-    - jsName: prepare
-    - name: prepareForCollectionViewUpdates:
-    - argLabels: forCollectionViewUpdates
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: prepare(forCollectionViewUpdates:)
+    - Selector: prepareForCollectionViewUpdates:
   */
   @objc (prepareForCollectionViewUpdates:) func prepare(forCollectionViewUpdates: [NSCollectionViewUpdateItem])
 
   /**
-    - jsName: prepareForTransition
-    - name: prepareForTransitionFromLayout:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: prepareForTransition(from:)
+    - Selector: prepareForTransitionFromLayout:
   */
   @objc (prepareForTransitionFromLayout:) func prepareForTransition(from: NSCollectionViewLayout)
 
   /**
-    - jsName: prepareForTransition
-    - name: prepareForTransitionToLayout:
-    - argLabels: to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: prepareForTransition(to:)
+    - Selector: prepareForTransitionToLayout:
   */
   @objc (prepareForTransitionToLayout:) func prepareForTransition(to: NSCollectionViewLayout)
 
   /**
-    - jsName: prepare
-    - name: prepareLayout
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: prepare()
+    - Selector: prepareLayout
   */
   @objc (prepareLayout) func prepare()
 
   /**
-    - jsName: register
-    - name: registerClass:forDecorationViewOfKind:
-    - argLabels: _, forDecorationViewOfKind
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: register(_:forDecorationViewOfKind:)
+    - Selector: registerClass:forDecorationViewOfKind:
   */
   @objc (registerClass:forDecorationViewOfKind:) func register(_: AnyClass?, forDecorationViewOfKind: NSCollectionView.DecorationElementKind)
 
   /**
-    - jsName: register
-    - name: registerNib:forDecorationViewOfKind:
-    - argLabels: _, forDecorationViewOfKind
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: register(_:forDecorationViewOfKind:)
+    - Selector: registerNib:forDecorationViewOfKind:
   */
   @objc (registerNib:forDecorationViewOfKind:) func register(_: NSNib?, forDecorationViewOfKind: NSCollectionView.DecorationElementKind)
 
   /**
-    - jsName: shouldInvalidateLayout
-    - name: shouldInvalidateLayoutForBoundsChange:
-    - argLabels: forBoundsChange
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: shouldInvalidateLayout(forBoundsChange:)
+    - Selector: shouldInvalidateLayoutForBoundsChange:
   */
   @objc (shouldInvalidateLayoutForBoundsChange:) func shouldInvalidateLayout(forBoundsChange: CGRect) -> Bool
 
   /**
-    - jsName: shouldInvalidateLayout
-    - name: shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes:
-    - argLabels: forPreferredLayoutAttributes, withOriginalAttributes
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: shouldInvalidateLayout(forPreferredLayoutAttributes:withOriginalAttributes:)
+    - Selector: shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes:
   */
   @objc (shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes:) func shouldInvalidateLayout(forPreferredLayoutAttributes: NSCollectionViewLayoutAttributes, withOriginalAttributes: NSCollectionViewLayoutAttributes) -> Bool
 
   /**
-    - jsName: targetContentOffset
-    - name: targetContentOffsetForProposedContentOffset:
-    - argLabels: forProposedContentOffset
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: targetContentOffset(forProposedContentOffset:)
+    - Selector: targetContentOffsetForProposedContentOffset:
   */
   @objc (targetContentOffsetForProposedContentOffset:) func targetContentOffset(forProposedContentOffset: CGPoint) -> CGPoint
 
   /**
-    - jsName: targetContentOffset
-    - name: targetContentOffsetForProposedContentOffset:withScrollingVelocity:
-    - argLabels: forProposedContentOffset, withScrollingVelocity
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: targetContentOffset(forProposedContentOffset:withScrollingVelocity:)
+    - Selector: targetContentOffsetForProposedContentOffset:withScrollingVelocity:
   */
   @objc (targetContentOffsetForProposedContentOffset:withScrollingVelocity:) func targetContentOffset(forProposedContentOffset: CGPoint, withScrollingVelocity: CGPoint) -> CGPoint
 
   // Own Instance Properties
 
   /**
-    - jsName: collectionView
-    - name: collectionView
-    - argLabels: 
+    - Selector: collectionView
   */
   @objc var collectionView: NSCollectionView? { @objc get }
 
   /**
-    - jsName: collectionViewContentSize
-    - name: collectionViewContentSize
-    - argLabels: 
+    - Selector: collectionViewContentSize
   */
   @objc var collectionViewContentSize: CGSize { @objc get }
 }

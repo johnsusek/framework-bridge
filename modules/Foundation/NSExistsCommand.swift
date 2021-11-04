@@ -9,13 +9,16 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSExistsCommand
-    - name: NSExistsCommand
-    - argLabels: 
+    - Selector: NSExistsCommand
   */
 
 @objc(NSExistsCommand) protocol NSExistsCommandExports: JSExport, NSScriptCommandExports {
   // Static Methods
+
+  /**
+    - Selector: currentCommand
+  */
+  @objc (currentCommand) static func current() -> NSScriptCommand?
 }
 
 extension NSExistsCommand: NSExistsCommandExports {

@@ -9,27 +9,26 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSCreateCommand
-    - name: NSCreateCommand
-    - argLabels: 
+    - Selector: NSCreateCommand
   */
 
 @objc(NSCreateCommand) protocol NSCreateCommandExports: JSExport, NSScriptCommandExports {
   // Static Methods
 
+  /**
+    - Selector: currentCommand
+  */
+  @objc (currentCommand) static func current() -> NSScriptCommand?
+
   // Own Instance Properties
 
   /**
-    - jsName: createClassDescription
-    - name: createClassDescription
-    - argLabels: 
+    - Selector: createClassDescription
   */
   @objc var createClassDescription: NSScriptClassDescription { @objc get }
 
   /**
-    - jsName: resolvedKeyDictionary
-    - name: resolvedKeyDictionary
-    - argLabels: 
+    - Selector: resolvedKeyDictionary
   */
   @objc var resolvedKeyDictionary: [String: Any] { @objc get }
 }

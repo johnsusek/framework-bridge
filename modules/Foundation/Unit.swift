@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: Unit
-    - name: NSUnit
-    - argLabels: 
+    - Selector: NSUnit
     - Introduced: 10.12
   */
 
@@ -21,19 +19,14 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithSymbol
-    - name: initWithSymbol:
-    - argLabels: 
-    - constructorTokens: symbol
+    - Selector: initWithSymbol:
   */
   @objc static func createWithSymbol(_: String) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: symbol
-    - name: symbol
-    - argLabels: 
+    - Selector: symbol
   */
   @objc var symbol: String { @objc get }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSDataDetector
-    - name: NSDataDetector
-    - argLabels: 
+    - Selector: NSDataDetector
     - Introduced: 10.7
   */
 
@@ -19,29 +17,36 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: dataDetectorWithTypes
-    - name: dataDetectorWithTypes:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: dataDetectorWithTypes:error:
   */
   // throws - @objc static func dataDetectorWithTypes(error: UInt64) -> NSDataDetector?
+
+  /**
+    - Selector: escapedPatternForString:
+  */
+  @objc (escapedPatternForString:) static func escapedPattern(`for`: String) -> String
+
+  /**
+    - Selector: escapedTemplateForString:
+  */
+  @objc (escapedTemplateForString:) static func escapedTemplate(`for`: String) -> String
+
+  /**
+    - Selector: regularExpressionWithPattern:options:error:
+  */
+  // throws - @objc static func regularExpressionWithPattern(options: String, error: NSRegularExpression.Options) -> NSRegularExpression?
 
   // Instance Methods
 
   /**
-    - jsName: createWithTypes
-    - name: initWithTypes:error:
-    - argLabels: error
-    - constructorTokens: types
+    - Selector: initWithTypes:error:
   */
   @objc static func createWithTypes(types: UInt64) -> Self?
 
   // Own Instance Properties
 
   /**
-    - jsName: checkingTypes
-    - name: checkingTypes
-    - argLabels: 
+    - Selector: checkingTypes
   */
   @objc var checkingTypes: UInt64 { @objc get }
 }

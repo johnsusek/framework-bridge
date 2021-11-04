@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSColorPicker
-    - name: NSColorPicker
-    - argLabels: 
+    - Selector: NSColorPicker
   */
 
 @objc(NSColorPicker) protocol NSColorPickerExports: JSExport, NSObjectExports {
@@ -20,32 +18,22 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: buttonToolTip
-    - name: buttonToolTip
-    - argLabels: 
-    - available: 10.5
+    - Selector: buttonToolTip
   */
   @objc var buttonToolTip: String { @objc get }
 
   /**
-    - jsName: colorPanel
-    - name: colorPanel
-    - argLabels: 
+    - Selector: colorPanel
   */
   @objc var colorPanel: NSColorPanel { @objc get }
 
   /**
-    - jsName: minContentSize
-    - name: minContentSize
-    - argLabels: 
-    - available: 10.5
+    - Selector: minContentSize
   */
   @objc var minContentSize: CGSize { @objc get }
 
   /**
-    - jsName: provideNewButtonImage
-    - name: provideNewButtonImage
-    - argLabels: 
+    - Selector: provideNewButtonImage
   */
   @objc var provideNewButtonImage: NSImage { @objc get }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSMagnificationGestureRecognizer
-    - name: NSMagnificationGestureRecognizer
-    - argLabels: 
+    - Selector: NSMagnificationGestureRecognizer
     - Introduced: 10.10
   */
 
@@ -21,9 +19,7 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: magnification
-    - name: magnification
-    - argLabels: 
+    - Selector: magnification
   */
   @objc var magnification: CGFloat { @objc get @objc (setMagnification:) set }
 }

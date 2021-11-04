@@ -9,86 +9,62 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSClipView
-    - name: NSClipView
-    - argLabels: 
+    - Selector: NSClipView
   */
 
 @objc(NSClipView) protocol NSClipViewExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: constrainBoundsRect
-    - name: constrainBoundsRect:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.9
+    - Selector: constrainBoundsRect:
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) func constrainBoundsRect(_: CGRect) -> CGRect
 
   /**
-    - jsName: scroll
-    - name: scrollToPoint:
-    - argLabels: to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: scroll(to:)
+    - Selector: scrollToPoint:
   */
   @objc (scrollToPoint:) func scroll(to: CGPoint)
 
   /**
-    - jsName: viewBoundsChanged
-    - name: viewBoundsChanged:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: viewBoundsChanged:
   */
   @objc func viewBoundsChanged(_: Notification)
 
   /**
-    - jsName: viewFrameChanged
-    - name: viewFrameChanged:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: viewFrameChanged:
   */
   @objc func viewFrameChanged(_: Notification)
 
   // Own Instance Properties
 
   /**
-    - jsName: automaticallyAdjustsContentInsets
-    - name: automaticallyAdjustsContentInsets
-    - argLabels: 
-    - available: 10.10
+    - Selector: automaticallyAdjustsContentInsets
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var automaticallyAdjustsContentInsets: Bool { @objc get @objc (setAutomaticallyAdjustsContentInsets:) set }
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: contentInsets
-    - name: contentInsets
-    - argLabels: 
-    - available: 10.10
+    - Selector: contentInsets
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var contentInsets: NSEdgeInsets { @objc get @objc (setContentInsets:) set }
 
   /**
-    - jsName: copiesOnScroll
-    - name: copiesOnScroll
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 11.0
-    - message: Setting this property has no effect.  NSClipView will always minimize the area of the document view that is invalidated.  To force invalidation of the document view, use -[NSView setNeedsDisplayInRect:].
+    - Selector: copiesOnScroll
     - Introduced: 10.0
     - Deprecated: 100000
     - Message: NSClipView will always minimize the area of the document view that is invalidated.  To force invalidation of the document view, use -[NSView setNeedsDisplayInRect:].
@@ -96,37 +72,27 @@ import AppKit
   @objc @available(OSX 10.0, *) var copiesOnScroll: Bool { @objc get @objc (setCopiesOnScroll:) set }
 
   /**
-    - jsName: documentCursor
-    - name: documentCursor
-    - argLabels: 
+    - Selector: documentCursor
   */
   @objc var documentCursor: NSCursor? { @objc get @objc (setDocumentCursor:) set }
 
   /**
-    - jsName: documentRect
-    - name: documentRect
-    - argLabels: 
+    - Selector: documentRect
   */
   @objc var documentRect: CGRect { @objc get }
 
   /**
-    - jsName: documentView
-    - name: documentView
-    - argLabels: 
+    - Selector: documentView
   */
   @objc var documentView: NSView? { @objc get @objc (setDocumentView:) set }
 
   /**
-    - jsName: documentVisibleRect
-    - name: documentVisibleRect
-    - argLabels: 
+    - Selector: documentVisibleRect
   */
   @objc var documentVisibleRect: CGRect { @objc get }
 
   /**
-    - jsName: drawsBackground
-    - name: drawsBackground
-    - argLabels: 
+    - Selector: drawsBackground
   */
   @objc var drawsBackground: Bool { @objc get @objc (setDrawsBackground:) set }
 }

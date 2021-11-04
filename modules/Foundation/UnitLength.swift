@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitLength
-    - name: NSUnitLength
-    - argLabels: 
+    - Selector: NSUnitLength
     - Introduced: 10.12
   */
 
@@ -19,166 +17,119 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: astronomicalUnits
-    - name: astronomicalUnits
-    - argLabels: 
+    - Selector: astronomicalUnits
   */
   @objc static var astronomicalUnits: UnitLength { @objc get }
 
   /**
-    - jsName: centimeters
-    - name: centimeters
-    - argLabels: 
+    - Selector: centimeters
   */
   @objc static var centimeters: UnitLength { @objc get }
 
   /**
-    - jsName: decameters
-    - name: decameters
-    - argLabels: 
+    - Selector: decameters
   */
   @objc static var decameters: UnitLength { @objc get }
 
   /**
-    - jsName: decimeters
-    - name: decimeters
-    - argLabels: 
+    - Selector: decimeters
   */
   @objc static var decimeters: UnitLength { @objc get }
 
   /**
-    - jsName: fathoms
-    - name: fathoms
-    - argLabels: 
+    - Selector: fathoms
   */
   @objc static var fathoms: UnitLength { @objc get }
 
   /**
-    - jsName: feet
-    - name: feet
-    - argLabels: 
+    - Selector: feet
   */
   @objc static var feet: UnitLength { @objc get }
 
   /**
-    - jsName: furlongs
-    - name: furlongs
-    - argLabels: 
+    - Selector: furlongs
   */
   @objc static var furlongs: UnitLength { @objc get }
 
   /**
-    - jsName: hectometers
-    - name: hectometers
-    - argLabels: 
+    - Selector: hectometers
   */
   @objc static var hectometers: UnitLength { @objc get }
 
   /**
-    - jsName: inches
-    - name: inches
-    - argLabels: 
+    - Selector: inches
   */
   @objc static var inches: UnitLength { @objc get }
 
   /**
-    - jsName: kilometers
-    - name: kilometers
-    - argLabels: 
+    - Selector: kilometers
   */
   @objc static var kilometers: UnitLength { @objc get }
 
   /**
-    - jsName: lightyears
-    - name: lightyears
-    - argLabels: 
+    - Selector: lightyears
   */
   @objc static var lightyears: UnitLength { @objc get }
 
   /**
-    - jsName: megameters
-    - name: megameters
-    - argLabels: 
+    - Selector: megameters
   */
   @objc static var megameters: UnitLength { @objc get }
 
   /**
-    - jsName: meters
-    - name: meters
-    - argLabels: 
+    - Selector: meters
   */
   @objc static var meters: UnitLength { @objc get }
 
   /**
-    - jsName: micrometers
-    - name: micrometers
-    - argLabels: 
+    - Selector: micrometers
   */
   @objc static var micrometers: UnitLength { @objc get }
 
   /**
-    - jsName: miles
-    - name: miles
-    - argLabels: 
+    - Selector: miles
   */
   @objc static var miles: UnitLength { @objc get }
 
   /**
-    - jsName: millimeters
-    - name: millimeters
-    - argLabels: 
+    - Selector: millimeters
   */
   @objc static var millimeters: UnitLength { @objc get }
 
   /**
-    - jsName: nanometers
-    - name: nanometers
-    - argLabels: 
+    - Selector: nanometers
   */
   @objc static var nanometers: UnitLength { @objc get }
 
   /**
-    - jsName: nauticalMiles
-    - name: nauticalMiles
-    - argLabels: 
+    - Selector: nauticalMiles
   */
   @objc static var nauticalMiles: UnitLength { @objc get }
 
   /**
-    - jsName: parsecs
-    - name: parsecs
-    - argLabels: 
+    - Selector: parsecs
   */
   @objc static var parsecs: UnitLength { @objc get }
 
   /**
-    - jsName: picometers
-    - name: picometers
-    - argLabels: 
+    - Selector: picometers
   */
   @objc static var picometers: UnitLength { @objc get }
 
   /**
-    - jsName: scandinavianMiles
-    - name: scandinavianMiles
-    - argLabels: 
+    - Selector: scandinavianMiles
   */
   @objc static var scandinavianMiles: UnitLength { @objc get }
 
   /**
-    - jsName: yards
-    - name: yards
-    - argLabels: 
+    - Selector: yards
   */
   @objc static var yards: UnitLength { @objc get }
 }

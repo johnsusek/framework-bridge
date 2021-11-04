@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSStatusBar
-    - name: NSStatusBar
-    - argLabels: 
+    - Selector: NSStatusBar
   */
 
 @objc(NSStatusBar) protocol NSStatusBarExports: JSExport, NSObjectExports {
@@ -20,49 +18,31 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: system
-    - name: systemStatusBar
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: system
+    - Selector: systemStatusBar
   */
   @objc static var system: NSStatusBar { @objc (systemStatusBar) get }
 
   // Instance Methods
 
   /**
-    - jsName: removeStatusItem
-    - name: removeStatusItem:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: removeStatusItem:
   */
   @objc (removeStatusItem:) func removeStatusItem(_: NSStatusItem)
 
   /**
-    - jsName: statusItem
-    - name: statusItemWithLength:
-    - argLabels: withLength
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: statusItem(withLength:)
+    - Selector: statusItemWithLength:
   */
   @objc (statusItemWithLength:) func statusItem(withLength: CGFloat) -> NSStatusItem
 
   // Own Instance Properties
 
   /**
-    - jsName: thickness
-    - name: thickness
-    - argLabels: 
+    - Selector: thickness
   */
   @objc var thickness: CGFloat { @objc get }
 
   /**
-    - jsName: isVertical
-    - name: vertical
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isVertical
+    - Selector: vertical
   */
   @objc var isVertical: Bool { @objc get }
 }

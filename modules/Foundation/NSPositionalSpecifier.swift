@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSPositionalSpecifier
-    - name: NSPositionalSpecifier
-    - argLabels: 
+    - Selector: NSPositionalSpecifier
   */
 
 @objc(NSPositionalSpecifier) protocol NSPositionalSpecifierExports: JSExport, NSObjectExports {
@@ -20,64 +18,44 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: evaluate
-    - name: evaluate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: evaluate
   */
   @objc func evaluate()
 
   /**
-    - jsName: createWithPosition
-    - name: initWithPosition:objectSpecifier:
-    - argLabels: objectSpecifier
-    - constructorTokens: position, objectSpecifier
+    - Selector: initWithPosition:objectSpecifier:
   */
   @objc static func createWithPosition(_: NSPositionalSpecifier.InsertionPosition, objectSpecifier: NSScriptObjectSpecifier) -> Self
 
   /**
-    - jsName: setInsertionClassDescription
-    - name: setInsertionClassDescription:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setInsertionClassDescription:
   */
   @objc func setInsertionClassDescription(_: NSScriptClassDescription)
 
   // Own Instance Properties
 
   /**
-    - jsName: insertionContainer
-    - name: insertionContainer
-    - argLabels: 
+    - Selector: insertionContainer
   */
   @objc var insertionContainer: Any? { @objc get }
 
   /**
-    - jsName: insertionIndex
-    - name: insertionIndex
-    - argLabels: 
+    - Selector: insertionIndex
   */
   @objc var insertionIndex: Int { @objc get }
 
   /**
-    - jsName: insertionKey
-    - name: insertionKey
-    - argLabels: 
+    - Selector: insertionKey
   */
   @objc var insertionKey: String? { @objc get }
 
   /**
-    - jsName: insertionReplaces
-    - name: insertionReplaces
-    - argLabels: 
+    - Selector: insertionReplaces
   */
   @objc var insertionReplaces: Bool { @objc get }
 
   /**
-    - jsName: position
-    - name: position
-    - argLabels: 
-    - available: 10.5
+    - Selector: position
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var position: NSPositionalSpecifier.InsertionPosition { @objc get }

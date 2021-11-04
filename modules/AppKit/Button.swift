@@ -9,73 +9,44 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSButton
-    - name: NSButton
-    - argLabels: 
+    - Selector: NSButton
   */
 
 @objc(NSButton) protocol NSButtonExports: JSExport, NSControlExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: buttonWithImage:target:action:
-    - argLabels: image, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(image:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonWithImage:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(image: NSImage) -> Self
 
   /**
-    - jsName: create
-    - name: buttonWithTitle:image:target:action:
-    - argLabels: title, image, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(title:image:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonWithTitle:image:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(title: String, image: NSImage) -> Self
 
   /**
-    - jsName: create
-    - name: buttonWithTitle:target:action:
-    - argLabels: title, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(title:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonWithTitle:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(title: String) -> Self
 
   /**
-    - jsName: create
-    - name: checkboxWithTitle:target:action:
-    - argLabels: checkboxWithTitle, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: init(checkboxWithTitle:target:action:)
+    - Selector: checkboxWithTitle:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(checkboxWithTitle: String) -> Self
 
   /**
-    - jsName: create
-    - name: radioButtonWithTitle:target:action:
-    - argLabels: radioButtonWithTitle, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: init(radioButtonWithTitle:target:action:)
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: radioButtonWithTitle:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(radioButtonWithTitle: String) -> Self
@@ -83,216 +54,145 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: getPeriodicDelay
-    - name: getPeriodicDelay:interval:
-    - argLabels: interval
-    - constructorTokens: 
+    - Selector: getPeriodicDelay:interval:
   */
   @objc func getPeriodicDelay(_: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>)
 
   /**
-    - jsName: highlight
-    - name: highlight:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: highlight:
   */
   @objc func highlight(_: Bool)
 
   /**
-    - jsName: setButtonType
-    - name: setButtonType:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setButtonType:
   */
   @objc func setButtonType(_: NSButton.ButtonType)
 
   /**
-    - jsName: setNextState
-    - name: setNextState
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setNextState
   */
   @objc func setNextState()
 
   /**
-    - jsName: setPeriodicDelay
-    - name: setPeriodicDelay:interval:
-    - argLabels: interval
-    - constructorTokens: 
+    - Selector: setPeriodicDelay:interval:
   */
   @objc func setPeriodicDelay(_: Float, interval: Float)
 
   // Own Instance Properties
 
   /**
-    - jsName: allowsMixedState
-    - name: allowsMixedState
-    - argLabels: 
+    - Selector: allowsMixedState
   */
   @objc var allowsMixedState: Bool { @objc get @objc (setAllowsMixedState:) set }
 
   /**
-    - jsName: alternateImage
-    - name: alternateImage
-    - argLabels: 
+    - Selector: alternateImage
   */
   @objc var alternateImage: NSImage? { @objc get @objc (setAlternateImage:) set }
 
   /**
-    - jsName: alternateTitle
-    - name: alternateTitle
-    - argLabels: 
+    - Selector: alternateTitle
   */
   @objc var alternateTitle: String { @objc get @objc (setAlternateTitle:) set }
 
   /**
-    - jsName: attributedAlternateTitle
-    - name: attributedAlternateTitle
-    - argLabels: 
+    - Selector: attributedAlternateTitle
   */
   @objc var attributedAlternateTitle: NSAttributedString { @objc get @objc (setAttributedAlternateTitle:) set }
 
   /**
-    - jsName: attributedTitle
-    - name: attributedTitle
-    - argLabels: 
+    - Selector: attributedTitle
   */
   @objc var attributedTitle: NSAttributedString { @objc get @objc (setAttributedTitle:) set }
 
   /**
-    - jsName: bezelColor
-    - name: bezelColor
-    - argLabels: 
-    - available: 10.12.2
+    - Selector: bezelColor
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) var bezelColor: NSColor? { @objc get @objc (setBezelColor:) set }
 
   /**
-    - jsName: bezelStyle
-    - name: bezelStyle
-    - argLabels: 
+    - Selector: bezelStyle
   */
   @objc var bezelStyle: NSButton.BezelStyle { @objc get @objc (setBezelStyle:) set }
 
   /**
-    - jsName: isBordered
-    - name: bordered
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isBordered
+    - Selector: bordered
   */
   @objc var isBordered: Bool { @objc get @objc (setBordered:) set }
 
   /**
-    - jsName: contentTintColor
-    - name: contentTintColor
-    - argLabels: 
-    - available: 10.14
+    - Selector: contentTintColor
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) var contentTintColor: NSColor? { @objc get @objc (setContentTintColor:) set }
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
+    - Selector: image
   */
   @objc var image: NSImage? { @objc get @objc (setImage:) set }
 
   /**
-    - jsName: imageHugsTitle
-    - name: imageHugsTitle
-    - argLabels: 
-    - available: 10.12
+    - Selector: imageHugsTitle
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var imageHugsTitle: Bool { @objc get @objc (setImageHugsTitle:) set }
 
   /**
-    - jsName: imagePosition
-    - name: imagePosition
-    - argLabels: 
+    - Selector: imagePosition
   */
   @objc var imagePosition: NSControl.ImagePosition { @objc get @objc (setImagePosition:) set }
 
   /**
-    - jsName: imageScaling
-    - name: imageScaling
-    - argLabels: 
-    - available: 10.5
+    - Selector: imageScaling
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var imageScaling: NSImageScaling { @objc get @objc (setImageScaling:) set }
 
   /**
-    - jsName: keyEquivalent
-    - name: keyEquivalent
-    - argLabels: 
+    - Selector: keyEquivalent
   */
   @objc var keyEquivalent: String { @objc get @objc (setKeyEquivalent:) set }
 
   /**
-    - jsName: keyEquivalentModifierMask
-    - name: keyEquivalentModifierMask
-    - argLabels: 
+    - Selector: keyEquivalentModifierMask
   */
   @objc var keyEquivalentModifierMask: NSEvent.ModifierFlags { @objc get @objc (setKeyEquivalentModifierMask:) set }
 
   /**
-    - jsName: maxAcceleratorLevel
-    - name: maxAcceleratorLevel
-    - argLabels: 
-    - available: 10.10.3
+    - Selector: maxAcceleratorLevel
     - Introduced: 10.10.3
   */
   @objc @available(OSX 10.10.3, *) var maxAcceleratorLevel: Int { @objc get @objc (setMaxAcceleratorLevel:) set }
 
   /**
-    - jsName: showsBorderOnlyWhileMouseInside
-    - name: showsBorderOnlyWhileMouseInside
-    - argLabels: 
+    - Selector: showsBorderOnlyWhileMouseInside
   */
   @objc var showsBorderOnlyWhileMouseInside: Bool { @objc get @objc (setShowsBorderOnlyWhileMouseInside:) set }
 
   /**
-    - jsName: sound
-    - name: sound
-    - argLabels: 
+    - Selector: sound
   */
   @objc var sound: NSSound? { @objc get @objc (setSound:) set }
 
   /**
-    - jsName: isSpringLoaded
-    - name: springLoaded
-    - argLabels: 
-    - available: 10.10.3
-    - obsoleted: 3
-    - renamed: isSpringLoaded
+    - Selector: springLoaded
     - Introduced: 10.10.3
   */
   @objc @available(OSX 10.10.3, *) var isSpringLoaded: Bool { @objc get @objc (setSpringLoaded:) set }
 
   /**
-    - jsName: state
-    - name: state
-    - argLabels: 
+    - Selector: state
   */
   @objc var state: NSControl.StateValue { @objc get @objc (setState:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get @objc (setTitle:) set }
 
   /**
-    - jsName: isTransparent
-    - name: transparent
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isTransparent
+    - Selector: transparent
   */
   @objc var isTransparent: Bool { @objc get @objc (setTransparent:) set }
 }
@@ -301,64 +201,31 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: buttonWithImage:target:action:
-    - argLabels: image, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(image:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonWithImage:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(image: NSImage) -> Self
 
   /**
-    - jsName: create
-    - name: buttonWithTitle:image:target:action:
-    - argLabels: title, image, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(title:image:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonWithTitle:image:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(title: String, image: NSImage) -> Self
 
   /**
-    - jsName: create
-    - name: buttonWithTitle:target:action:
-    - argLabels: title, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - unavailable: true
-    - renamed: init(title:target:action:)
-    - message: Not available in Swift
+    - Selector: buttonWithTitle:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(title: String) -> Self
 
   /**
-    - jsName: create
-    - name: checkboxWithTitle:target:action:
-    - argLabels: checkboxWithTitle, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: init(checkboxWithTitle:target:action:)
+    - Selector: checkboxWithTitle:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(checkboxWithTitle: String) -> Self
 
   /**
-    - jsName: create
-    - name: radioButtonWithTitle:target:action:
-    - argLabels: radioButtonWithTitle, target, action
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: init(radioButtonWithTitle:target:action:)
+    - Selector: radioButtonWithTitle:target:action:
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static func create(radioButtonWithTitle: String) -> Self

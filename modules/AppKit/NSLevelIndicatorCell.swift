@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSLevelIndicatorCell
-    - name: NSLevelIndicatorCell
-    - argLabels: 
+    - Selector: NSLevelIndicatorCell
   */
 
 @objc(NSLevelIndicatorCell) protocol NSLevelIndicatorCellExports: JSExport, NSActionCellExports {
@@ -20,88 +18,59 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithLevelIndicatorStyle
-    - name: initWithLevelIndicatorStyle:
-    - argLabels: 
-    - constructorTokens: levelIndicatorStyle
+    - Selector: initWithLevelIndicatorStyle:
   */
   @objc static func createWithLevelIndicatorStyle(_: NSLevelIndicator.Style) -> Self
 
   /**
-    - jsName: rectOfTickMark
-    - name: rectOfTickMarkAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rectOfTickMark(at:)
+    - Selector: rectOfTickMarkAtIndex:
   */
   @objc (rectOfTickMarkAtIndex:) func rectOfTickMark(at: Int) -> CGRect
 
   /**
-    - jsName: tickMarkValue
-    - name: tickMarkValueAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: tickMarkValue(at:)
+    - Selector: tickMarkValueAtIndex:
   */
   @objc (tickMarkValueAtIndex:) func tickMarkValue(at: Int) -> Double
 
   // Own Instance Properties
 
   /**
-    - jsName: criticalValue
-    - name: criticalValue
-    - argLabels: 
+    - Selector: criticalValue
   */
   @objc var criticalValue: Double { @objc get @objc (setCriticalValue:) set }
 
   /**
-    - jsName: levelIndicatorStyle
-    - name: levelIndicatorStyle
-    - argLabels: 
+    - Selector: levelIndicatorStyle
   */
   @objc var levelIndicatorStyle: NSLevelIndicator.Style { @objc get @objc (setLevelIndicatorStyle:) set }
 
   /**
-    - jsName: maxValue
-    - name: maxValue
-    - argLabels: 
+    - Selector: maxValue
   */
   @objc var maxValue: Double { @objc get @objc (setMaxValue:) set }
 
   /**
-    - jsName: minValue
-    - name: minValue
-    - argLabels: 
+    - Selector: minValue
   */
   @objc var minValue: Double { @objc get @objc (setMinValue:) set }
 
   /**
-    - jsName: numberOfMajorTickMarks
-    - name: numberOfMajorTickMarks
-    - argLabels: 
+    - Selector: numberOfMajorTickMarks
   */
   @objc var numberOfMajorTickMarks: Int { @objc get @objc (setNumberOfMajorTickMarks:) set }
 
   /**
-    - jsName: numberOfTickMarks
-    - name: numberOfTickMarks
-    - argLabels: 
+    - Selector: numberOfTickMarks
   */
   @objc var numberOfTickMarks: Int { @objc get @objc (setNumberOfTickMarks:) set }
 
   /**
-    - jsName: tickMarkPosition
-    - name: tickMarkPosition
-    - argLabels: 
+    - Selector: tickMarkPosition
   */
   @objc var tickMarkPosition: NSSlider.TickMarkPosition { @objc get @objc (setTickMarkPosition:) set }
 
   /**
-    - jsName: warningValue
-    - name: warningValue
-    - argLabels: 
+    - Selector: warningValue
   */
   @objc var warningValue: Double { @objc get @objc (setWarningValue:) set }
 }

@@ -9,34 +9,26 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrollView
-    - name: NSScrollView
-    - argLabels: 
+    - Selector: NSScrollView
   */
 
 @objc(NSScrollView) protocol NSScrollViewExports: JSExport, NSViewExports {
   // Static Methods
 
   /**
-    - jsName: contentSize
-    - name: contentSizeForFrameSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:
-    - argLabels: forFrameSize, horizontalScrollerClass, verticalScrollerClass, borderType, controlSize, scrollerStyle
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: contentSize(forFrameSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:)
+    - Selector: contentSizeForFrameSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:
     - Introduced: 10.7
   */
   @objc (contentSizeForFrameSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:) @available(OSX 10.7, *) static func contentSize(forFrameSize: CGSize, horizontalScrollerClass: AnyClass?, verticalScrollerClass: AnyClass?, borderType: NSBorderType, controlSize: NSControl.ControlSize, scrollerStyle: NSScroller.Style) -> CGSize
 
   /**
-    - jsName: frameSize
-    - name: frameSizeForContentSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:
-    - argLabels: forContentSize, horizontalScrollerClass, verticalScrollerClass, borderType, controlSize, scrollerStyle
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: frameSize(forContentSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:)
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: frameSizeForContentSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:
     - Introduced: 10.7
   */
   @objc (frameSizeForContentSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:) @available(OSX 10.7, *) static func frameSize(forContentSize: CGSize, horizontalScrollerClass: AnyClass?, verticalScrollerClass: AnyClass?, borderType: NSBorderType, controlSize: NSControl.ControlSize, scrollerStyle: NSScroller.Style) -> CGSize
@@ -44,347 +36,237 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: rulerViewClass
-    - name: rulerViewClass
-    - argLabels: 
+    - Selector: rulerViewClass
   */
   @objc static var rulerViewClass: AnyClass! { @objc get @objc (setRulerViewClass:) set }
 
   // Instance Methods
 
   /**
-    - jsName: addFloatingSubview
-    - name: addFloatingSubview:forAxis:
-    - argLabels: _, for
-    - constructorTokens: 
-    - available: 10.9
-    - obsoleted: 3
-    - renamed: addFloatingSubview(_:for:)
+    - Selector: addFloatingSubview:forAxis:
     - Introduced: 10.9
   */
   @objc (addFloatingSubview:forAxis:) @available(OSX 10.9, *) func addFloatingSubview(_: NSView, `for`: NSEvent.GestureAxis)
 
   /**
-    - jsName: flashScrollers
-    - name: flashScrollers
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: flashScrollers
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func flashScrollers()
 
   /**
-    - jsName: magnify
-    - name: magnifyToFitRect:
-    - argLabels: toFit
-    - constructorTokens: 
-    - available: 10.8
-    - obsoleted: 3
-    - renamed: magnify(toFit:)
+    - Selector: magnifyToFitRect:
     - Introduced: 10.8
   */
   @objc (magnifyToFitRect:) @available(OSX 10.8, *) func magnify(toFit: CGRect)
 
   /**
-    - jsName: tile
-    - name: tile
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: tile
   */
   @objc func tile()
 
   // Own Instance Properties
 
   /**
-    - jsName: allowsMagnification
-    - name: allowsMagnification
-    - argLabels: 
-    - available: 10.8
+    - Selector: allowsMagnification
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) var allowsMagnification: Bool { @objc get @objc (setAllowsMagnification:) set }
 
   /**
-    - jsName: autohidesScrollers
-    - name: autohidesScrollers
-    - argLabels: 
+    - Selector: autohidesScrollers
   */
   @objc var autohidesScrollers: Bool { @objc get @objc (setAutohidesScrollers:) set }
 
   /**
-    - jsName: automaticallyAdjustsContentInsets
-    - name: automaticallyAdjustsContentInsets
-    - argLabels: 
-    - available: 10.10
+    - Selector: automaticallyAdjustsContentInsets
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var automaticallyAdjustsContentInsets: Bool { @objc get @objc (setAutomaticallyAdjustsContentInsets:) set }
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: borderType
-    - name: borderType
-    - argLabels: 
+    - Selector: borderType
   */
   @objc var borderType: NSBorderType { @objc get @objc (setBorderType:) set }
 
   /**
-    - jsName: contentInsets
-    - name: contentInsets
-    - argLabels: 
-    - available: 10.10
+    - Selector: contentInsets
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var contentInsets: NSEdgeInsets { @objc get @objc (setContentInsets:) set }
 
   /**
-    - jsName: contentSize
-    - name: contentSize
-    - argLabels: 
+    - Selector: contentSize
   */
   @objc var contentSize: CGSize { @objc get }
 
   /**
-    - jsName: contentView
-    - name: contentView
-    - argLabels: 
+    - Selector: contentView
   */
   @objc var contentView: NSClipView { @objc get @objc (setContentView:) set }
 
   /**
-    - jsName: documentCursor
-    - name: documentCursor
-    - argLabels: 
+    - Selector: documentCursor
   */
   @objc var documentCursor: NSCursor? { @objc get @objc (setDocumentCursor:) set }
 
   /**
-    - jsName: documentView
-    - name: documentView
-    - argLabels: 
+    - Selector: documentView
   */
   @objc var documentView: NSView? { @objc get @objc (setDocumentView:) set }
 
   /**
-    - jsName: documentVisibleRect
-    - name: documentVisibleRect
-    - argLabels: 
+    - Selector: documentVisibleRect
   */
   @objc var documentVisibleRect: CGRect { @objc get }
 
   /**
-    - jsName: drawsBackground
-    - name: drawsBackground
-    - argLabels: 
+    - Selector: drawsBackground
   */
   @objc var drawsBackground: Bool { @objc get @objc (setDrawsBackground:) set }
 
   /**
-    - jsName: findBarPosition
-    - name: findBarPosition
-    - argLabels: 
-    - available: 10.7
+    - Selector: findBarPosition
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var findBarPosition: NSScrollView.FindBarPosition { @objc get @objc (setFindBarPosition:) set }
 
   /**
-    - jsName: hasHorizontalRuler
-    - name: hasHorizontalRuler
-    - argLabels: 
+    - Selector: hasHorizontalRuler
   */
   @objc var hasHorizontalRuler: Bool { @objc get @objc (setHasHorizontalRuler:) set }
 
   /**
-    - jsName: hasHorizontalScroller
-    - name: hasHorizontalScroller
-    - argLabels: 
+    - Selector: hasHorizontalScroller
   */
   @objc var hasHorizontalScroller: Bool { @objc get @objc (setHasHorizontalScroller:) set }
 
   /**
-    - jsName: hasVerticalRuler
-    - name: hasVerticalRuler
-    - argLabels: 
+    - Selector: hasVerticalRuler
   */
   @objc var hasVerticalRuler: Bool { @objc get @objc (setHasVerticalRuler:) set }
 
   /**
-    - jsName: hasVerticalScroller
-    - name: hasVerticalScroller
-    - argLabels: 
+    - Selector: hasVerticalScroller
   */
   @objc var hasVerticalScroller: Bool { @objc get @objc (setHasVerticalScroller:) set }
 
   /**
-    - jsName: horizontalLineScroll
-    - name: horizontalLineScroll
-    - argLabels: 
+    - Selector: horizontalLineScroll
   */
   @objc var horizontalLineScroll: CGFloat { @objc get @objc (setHorizontalLineScroll:) set }
 
   /**
-    - jsName: horizontalPageScroll
-    - name: horizontalPageScroll
-    - argLabels: 
+    - Selector: horizontalPageScroll
   */
   @objc var horizontalPageScroll: CGFloat { @objc get @objc (setHorizontalPageScroll:) set }
 
   /**
-    - jsName: horizontalRulerView
-    - name: horizontalRulerView
-    - argLabels: 
+    - Selector: horizontalRulerView
   */
   @objc var horizontalRulerView: NSRulerView? { @objc get @objc (setHorizontalRulerView:) set }
 
   /**
-    - jsName: horizontalScrollElasticity
-    - name: horizontalScrollElasticity
-    - argLabels: 
-    - available: 10.7
+    - Selector: horizontalScrollElasticity
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var horizontalScrollElasticity: NSScrollView.Elasticity { @objc get @objc (setHorizontalScrollElasticity:) set }
 
   /**
-    - jsName: horizontalScroller
-    - name: horizontalScroller
-    - argLabels: 
+    - Selector: horizontalScroller
   */
   @objc var horizontalScroller: NSScroller? { @objc get @objc (setHorizontalScroller:) set }
 
   /**
-    - jsName: lineScroll
-    - name: lineScroll
-    - argLabels: 
+    - Selector: lineScroll
   */
   @objc var lineScroll: CGFloat { @objc get @objc (setLineScroll:) set }
 
   /**
-    - jsName: magnification
-    - name: magnification
-    - argLabels: 
-    - available: 10.8
+    - Selector: magnification
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) var magnification: CGFloat { @objc get @objc (setMagnification:) set }
 
   /**
-    - jsName: maxMagnification
-    - name: maxMagnification
-    - argLabels: 
-    - available: 10.8
+    - Selector: maxMagnification
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) var maxMagnification: CGFloat { @objc get @objc (setMaxMagnification:) set }
 
   /**
-    - jsName: minMagnification
-    - name: minMagnification
-    - argLabels: 
-    - available: 10.8
+    - Selector: minMagnification
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) var minMagnification: CGFloat { @objc get @objc (setMinMagnification:) set }
 
   /**
-    - jsName: pageScroll
-    - name: pageScroll
-    - argLabels: 
+    - Selector: pageScroll
   */
   @objc var pageScroll: CGFloat { @objc get @objc (setPageScroll:) set }
 
   /**
-    - jsName: rulersVisible
-    - name: rulersVisible
-    - argLabels: 
+    - Selector: rulersVisible
   */
   @objc var rulersVisible: Bool { @objc get @objc (setRulersVisible:) set }
 
   /**
-    - jsName: scrollerInsets
-    - name: scrollerInsets
-    - argLabels: 
-    - available: 10.10
+    - Selector: scrollerInsets
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var scrollerInsets: NSEdgeInsets { @objc get @objc (setScrollerInsets:) set }
 
   /**
-    - jsName: scrollerKnobStyle
-    - name: scrollerKnobStyle
-    - argLabels: 
-    - available: 10.7
+    - Selector: scrollerKnobStyle
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var scrollerKnobStyle: NSScroller.KnobStyle { @objc get @objc (setScrollerKnobStyle:) set }
 
   /**
-    - jsName: scrollerStyle
-    - name: scrollerStyle
-    - argLabels: 
-    - available: 10.7
+    - Selector: scrollerStyle
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var scrollerStyle: NSScroller.Style { @objc get @objc (setScrollerStyle:) set }
 
   /**
-    - jsName: scrollsDynamically
-    - name: scrollsDynamically
-    - argLabels: 
+    - Selector: scrollsDynamically
   */
   @objc var scrollsDynamically: Bool { @objc get @objc (setScrollsDynamically:) set }
 
   /**
-    - jsName: usesPredominantAxisScrolling
-    - name: usesPredominantAxisScrolling
-    - argLabels: 
-    - available: 10.7
+    - Selector: usesPredominantAxisScrolling
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var usesPredominantAxisScrolling: Bool { @objc get @objc (setUsesPredominantAxisScrolling:) set }
 
   /**
-    - jsName: verticalLineScroll
-    - name: verticalLineScroll
-    - argLabels: 
+    - Selector: verticalLineScroll
   */
   @objc var verticalLineScroll: CGFloat { @objc get @objc (setVerticalLineScroll:) set }
 
   /**
-    - jsName: verticalPageScroll
-    - name: verticalPageScroll
-    - argLabels: 
+    - Selector: verticalPageScroll
   */
   @objc var verticalPageScroll: CGFloat { @objc get @objc (setVerticalPageScroll:) set }
 
   /**
-    - jsName: verticalRulerView
-    - name: verticalRulerView
-    - argLabels: 
+    - Selector: verticalRulerView
   */
   @objc var verticalRulerView: NSRulerView? { @objc get @objc (setVerticalRulerView:) set }
 
   /**
-    - jsName: verticalScrollElasticity
-    - name: verticalScrollElasticity
-    - argLabels: 
-    - available: 10.7
+    - Selector: verticalScrollElasticity
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var verticalScrollElasticity: NSScrollView.Elasticity { @objc get @objc (setVerticalScrollElasticity:) set }
 
   /**
-    - jsName: verticalScroller
-    - name: verticalScroller
-    - argLabels: 
+    - Selector: verticalScroller
   */
   @objc var verticalScroller: NSScroller? { @objc get @objc (setVerticalScroller:) set }
 }

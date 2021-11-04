@@ -9,178 +9,114 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTabView
-    - name: NSTabView
-    - argLabels: 
+    - Selector: NSTabView
   */
 
 @objc(NSTabView) protocol NSTabViewExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: addTabViewItem
-    - name: addTabViewItem:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: addTabViewItem:
   */
   @objc (addTabViewItem:) func addTabViewItem(_: NSTabViewItem)
 
   /**
-    - jsName: indexOfTabViewItem
-    - name: indexOfTabViewItem:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: indexOfTabViewItem:
   */
   @objc (indexOfTabViewItem:) func indexOfTabViewItem(_: NSTabViewItem) -> Int
 
   /**
-    - jsName: indexOfTabViewItem
-    - name: indexOfTabViewItemWithIdentifier:
-    - argLabels: withIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: indexOfTabViewItem(withIdentifier:)
+    - Selector: indexOfTabViewItemWithIdentifier:
   */
   @objc (indexOfTabViewItemWithIdentifier:) func indexOfTabViewItem(withIdentifier: Any) -> Int
 
   /**
-    - jsName: insertTabViewItem
-    - name: insertTabViewItem:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertTabViewItem(_:at:)
+    - Selector: insertTabViewItem:atIndex:
   */
   @objc (insertTabViewItem:atIndex:) func insertTabViewItem(_: NSTabViewItem, at: Int)
 
   /**
-    - jsName: removeTabViewItem
-    - name: removeTabViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeTabViewItem:
   */
   @objc func removeTabViewItem(_: NSTabViewItem)
 
   /**
-    - jsName: selectFirstTabViewItem
-    - name: selectFirstTabViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: selectFirstTabViewItem:
   */
   @objc func selectFirstTabViewItem(_: Any?)
 
   /**
-    - jsName: selectLastTabViewItem
-    - name: selectLastTabViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: selectLastTabViewItem:
   */
   @objc func selectLastTabViewItem(_: Any?)
 
   /**
-    - jsName: selectNextTabViewItem
-    - name: selectNextTabViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: selectNextTabViewItem:
   */
   @objc func selectNextTabViewItem(_: Any?)
 
   /**
-    - jsName: selectPreviousTabViewItem
-    - name: selectPreviousTabViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: selectPreviousTabViewItem:
   */
   @objc func selectPreviousTabViewItem(_: Any?)
 
   /**
-    - jsName: selectTabViewItem
-    - name: selectTabViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: selectTabViewItem:
   */
   @objc func selectTabViewItem(_: NSTabViewItem?)
 
   /**
-    - jsName: selectTabViewItem
-    - name: selectTabViewItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectTabViewItem(at:)
+    - Selector: selectTabViewItemAtIndex:
   */
   @objc (selectTabViewItemAtIndex:) func selectTabViewItem(at: Int)
 
   /**
-    - jsName: selectTabViewItem
-    - name: selectTabViewItemWithIdentifier:
-    - argLabels: withIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectTabViewItem(withIdentifier:)
+    - Selector: selectTabViewItemWithIdentifier:
   */
   @objc (selectTabViewItemWithIdentifier:) func selectTabViewItem(withIdentifier: Any)
 
   /**
-    - jsName: tabViewItem
-    - name: tabViewItemAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: tabViewItem(at:)
+    - Selector: tabViewItemAtIndex:
   */
   @objc (tabViewItemAtIndex:) func tabViewItem(at: Int) -> NSTabViewItem
 
   /**
-    - jsName: tabViewItem
-    - name: tabViewItemAtPoint:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: tabViewItem(at:)
+    - Selector: tabViewItemAtPoint:
   */
   @objc (tabViewItemAtPoint:) func tabViewItem(at: CGPoint) -> NSTabViewItem?
 
   /**
-    - jsName: takeSelectedTabViewItemFromSender
-    - name: takeSelectedTabViewItemFromSender:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: takeSelectedTabViewItemFromSender:
   */
   @objc func takeSelectedTabViewItemFromSender(_: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: allowsTruncatedLabels
-    - name: allowsTruncatedLabels
-    - argLabels: 
+    - Selector: allowsTruncatedLabels
   */
   @objc var allowsTruncatedLabels: Bool { @objc get @objc (setAllowsTruncatedLabels:) set }
 
   /**
-    - jsName: contentRect
-    - name: contentRect
-    - argLabels: 
+    - Selector: contentRect
   */
   @objc var contentRect: CGRect { @objc get }
 
   /**
-    - jsName: controlSize
-    - name: controlSize
-    - argLabels: 
+    - Selector: controlSize
   */
   @objc var controlSize: NSControl.ControlSize { @objc get @objc (setControlSize:) set }
 
   /**
-    - jsName: controlTint
-    - name: controlTint
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 10.14
-    - message: The controlTint property is not respected on 10.14 and later.
+    - Selector: controlTint
     - Introduced: 10.0
     - Deprecated: 100000
     - Message: The controlTint property is not respected on 10.14 and later.
@@ -188,76 +124,54 @@ import AppKit
   @objc @available(OSX 10.0, *) var controlTint: NSControlTint { @objc get @objc (setControlTint:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSTabViewDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: drawsBackground
-    - name: drawsBackground
-    - argLabels: 
+    - Selector: drawsBackground
   */
   @objc var drawsBackground: Bool { @objc get @objc (setDrawsBackground:) set }
 
   /**
-    - jsName: font
-    - name: font
-    - argLabels: 
+    - Selector: font
   */
   @objc var font: NSFont { @objc get @objc (setFont:) set }
 
   /**
-    - jsName: minimumSize
-    - name: minimumSize
-    - argLabels: 
+    - Selector: minimumSize
   */
   @objc var minimumSize: CGSize { @objc get }
 
   /**
-    - jsName: numberOfTabViewItems
-    - name: numberOfTabViewItems
-    - argLabels: 
+    - Selector: numberOfTabViewItems
   */
   @objc var numberOfTabViewItems: Int { @objc get }
 
   /**
-    - jsName: selectedTabViewItem
-    - name: selectedTabViewItem
-    - argLabels: 
+    - Selector: selectedTabViewItem
   */
   @objc var selectedTabViewItem: NSTabViewItem? { @objc get }
 
   /**
-    - jsName: tabPosition
-    - name: tabPosition
-    - argLabels: 
-    - available: 10.12
+    - Selector: tabPosition
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var tabPosition: NSTabView.TabPosition { @objc get @objc (setTabPosition:) set }
 
   /**
-    - jsName: tabViewBorderType
-    - name: tabViewBorderType
-    - argLabels: 
-    - available: 10.12
+    - Selector: tabViewBorderType
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var tabViewBorderType: NSTabView.TabViewBorderType { @objc get @objc (setTabViewBorderType:) set }
 
   /**
-    - jsName: tabViewItems
-    - name: tabViewItems
-    - argLabels: 
+    - Selector: tabViewItems
   */
   @objc var tabViewItems: [NSTabViewItem] { @objc get @objc (setTabViewItems:) set }
 
   /**
-    - jsName: tabViewType
-    - name: tabViewType
-    - argLabels: 
+    - Selector: tabViewType
   */
   @objc var tabViewType: NSTabView.TabType { @objc get @objc (setTabViewType:) set }
 }

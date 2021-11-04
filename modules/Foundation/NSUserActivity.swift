@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSUserActivity
-    - name: NSUserActivity
-    - argLabels: 
+    - Selector: NSUserActivity
     - Introduced: 10.10
   */
 
@@ -21,55 +19,32 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: addUserInfoEntries
-    - name: addUserInfoEntriesFromDictionary:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addUserInfoEntries(from:)
+    - Selector: addUserInfoEntriesFromDictionary:
   */
   @objc (addUserInfoEntriesFromDictionary:) func addUserInfoEntries(from: [AnyHashable: Any])
 
   /**
-    - jsName: becomeCurrent
-    - name: becomeCurrent
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: becomeCurrent
   */
   @objc func becomeCurrent()
 
   /**
-    - jsName: getContinuationStreams
-    - name: getContinuationStreamsWithCompletionHandler:
-    - argLabels: completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: getContinuationStreams(completionHandler:)
+    - Selector: getContinuationStreamsWithCompletionHandler:
   */
-  // jsvalue - @objc (getContinuationStreamsWithCompletionHandler:) func getContinuationStreams(completionHandler: JSValue)
+  // jsvalue @objc func getContinuationStreams(completionHandler: JSValue)
 
   /**
-    - jsName: createWithActivityType
-    - name: initWithActivityType:
-    - argLabels: 
-    - constructorTokens: activityType
+    - Selector: initWithActivityType:
   */
   @objc static func createWithActivityType(_: String) -> Self
 
   /**
-    - jsName: invalidate
-    - name: invalidate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidate
   */
   @objc func invalidate()
 
   /**
-    - jsName: resignCurrent
-    - name: resignCurrent
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.11
+    - Selector: resignCurrent
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) func resignCurrent()
@@ -77,138 +52,91 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: activityType
-    - name: activityType
-    - argLabels: 
+    - Selector: activityType
   */
   @objc var activityType: String { @objc get }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSUserActivityDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: detectedBarcodeDescriptor
-    - name: detectedBarcodeDescriptor
-    - argLabels: 
-    - available: 10.13.4
+    - Selector: detectedBarcodeDescriptor
     - Introduced: 10.13.4
   */
   @objc @available(OSX 10.13.4, *) var detectedBarcodeDescriptor: CIBarcodeDescriptor? { @objc get }
 
   /**
-    - jsName: isEligibleForHandoff
-    - name: eligibleForHandoff
-    - argLabels: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: isEligibleForHandoff
+    - Selector: eligibleForHandoff
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var isEligibleForHandoff: Bool { @objc get @objc (setEligibleForHandoff:) set }
 
   /**
-    - jsName: isEligibleForPublicIndexing
-    - name: eligibleForPublicIndexing
-    - argLabels: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: isEligibleForPublicIndexing
+    - Selector: eligibleForPublicIndexing
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var isEligibleForPublicIndexing: Bool { @objc get @objc (setEligibleForPublicIndexing:) set }
 
   /**
-    - jsName: isEligibleForSearch
-    - name: eligibleForSearch
-    - argLabels: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: isEligibleForSearch
+    - Selector: eligibleForSearch
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var isEligibleForSearch: Bool { @objc get @objc (setEligibleForSearch:) set }
 
   /**
-    - jsName: expirationDate
-    - name: expirationDate
-    - argLabels: 
-    - available: 10.11
+    - Selector: expirationDate
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var expirationDate: Date? { @objc get @objc (setExpirationDate:) set }
 
   /**
-    - jsName: keywords
-    - name: keywords
-    - argLabels: 
-    - available: 10.11
+    - Selector: keywords
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var keywords: Set<String> { @objc get @objc (setKeywords:) set }
 
   /**
-    - jsName: needsSave
-    - name: needsSave
-    - argLabels: 
+    - Selector: needsSave
   */
   @objc var needsSave: Bool { @objc get @objc (setNeedsSave:) set }
 
   /**
-    - jsName: referrerURL
-    - name: referrerURL
-    - argLabels: 
-    - available: 10.13
+    - Selector: referrerURL
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var referrerURL: URL? { @objc get @objc (setReferrerURL:) set }
 
   /**
-    - jsName: requiredUserInfoKeys
-    - name: requiredUserInfoKeys
-    - argLabels: 
-    - available: 10.11
+    - Selector: requiredUserInfoKeys
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var requiredUserInfoKeys: Set<String>? { @objc get @objc (setRequiredUserInfoKeys:) set }
 
   /**
-    - jsName: supportsContinuationStreams
-    - name: supportsContinuationStreams
-    - argLabels: 
+    - Selector: supportsContinuationStreams
   */
   @objc var supportsContinuationStreams: Bool { @objc get @objc (setSupportsContinuationStreams:) set }
 
   /**
-    - jsName: targetContentIdentifier
-    - name: targetContentIdentifier
-    - argLabels: 
-    - available: 10.15
+    - Selector: targetContentIdentifier
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) var targetContentIdentifier: String? { @objc get @objc (setTargetContentIdentifier:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String? { @objc get @objc (setTitle:) set }
 
   /**
-    - jsName: userInfo
-    - name: userInfo
-    - argLabels: 
+    - Selector: userInfo
   */
   @objc var userInfo: [AnyHashable: Any]? { @objc get @objc (setUserInfo:) set }
 
   /**
-    - jsName: webpageURL
-    - name: webpageURL
-    - argLabels: 
+    - Selector: webpageURL
   */
   @objc var webpageURL: URL? { @objc get @objc (setWebpageURL:) set }
 }

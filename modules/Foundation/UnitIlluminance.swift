@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitIlluminance
-    - name: NSUnitIlluminance
-    - argLabels: 
+    - Selector: NSUnitIlluminance
     - Introduced: 10.12
   */
 
@@ -19,19 +17,14 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: lux
-    - name: lux
-    - argLabels: 
+    - Selector: lux
   */
   @objc static var lux: UnitIlluminance { @objc get }
 }

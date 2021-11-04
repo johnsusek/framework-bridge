@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTableColumn
-    - name: NSTableColumn
-    - argLabels: 
+    - Selector: NSTableColumn
   */
 
 @objc(NSTableColumn) protocol NSTableColumnExports: JSExport, NSObjectExports {
@@ -20,123 +18,83 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: dataCell
-    - name: dataCellForRow:
-    - argLabels: forRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dataCell(forRow:)
+    - Selector: dataCellForRow:
   */
   @objc (dataCellForRow:) func dataCell(forRow: Int) -> Any
 
   /**
-    - jsName: sizeToFit
-    - name: sizeToFit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: sizeToFit
   */
   @objc func sizeToFit()
 
   // Protocol Inherited Instance Properties
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: NSUserInterfaceItemIdentifier { @objc get @objc (setIdentifier:) set }
 
   // Own Instance Properties
 
   /**
-    - jsName: dataCell
-    - name: dataCell
-    - argLabels: 
+    - Selector: dataCell
   */
   @objc var dataCell: Any { @objc get @objc (setDataCell:) set }
 
   /**
-    - jsName: isEditable
-    - name: editable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEditable
+    - Selector: editable
   */
   @objc var isEditable: Bool { @objc get @objc (setEditable:) set }
 
   /**
-    - jsName: headerCell
-    - name: headerCell
-    - argLabels: 
+    - Selector: headerCell
   */
   @objc var headerCell: NSTableHeaderCell { @objc get @objc (setHeaderCell:) set }
 
   /**
-    - jsName: headerToolTip
-    - name: headerToolTip
-    - argLabels: 
-    - available: 10.5
+    - Selector: headerToolTip
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var headerToolTip: String? { @objc get @objc (setHeaderToolTip:) set }
 
   /**
-    - jsName: isHidden
-    - name: hidden
-    - argLabels: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: isHidden
+    - Selector: hidden
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var isHidden: Bool { @objc get @objc (setHidden:) set }
 
   /**
-    - jsName: maxWidth
-    - name: maxWidth
-    - argLabels: 
+    - Selector: maxWidth
   */
   @objc var maxWidth: CGFloat { @objc get @objc (setMaxWidth:) set }
 
   /**
-    - jsName: minWidth
-    - name: minWidth
-    - argLabels: 
+    - Selector: minWidth
   */
   @objc var minWidth: CGFloat { @objc get @objc (setMinWidth:) set }
 
   /**
-    - jsName: resizingMask
-    - name: resizingMask
-    - argLabels: 
+    - Selector: resizingMask
   */
   @objc var resizingMask: NSTableColumn.ResizingOptions { @objc get @objc (setResizingMask:) set }
 
   /**
-    - jsName: sortDescriptorPrototype
-    - name: sortDescriptorPrototype
-    - argLabels: 
+    - Selector: sortDescriptorPrototype
   */
   @objc var sortDescriptorPrototype: NSSortDescriptor? { @objc get @objc (setSortDescriptorPrototype:) set }
 
   /**
-    - jsName: tableView
-    - name: tableView
-    - argLabels: 
+    - Selector: tableView
   */
   @objc var tableView: NSTableView? { @objc get @objc (setTableView:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get @objc (setTitle:) set }
 
   /**
-    - jsName: width
-    - name: width
-    - argLabels: 
+    - Selector: width
   */
   @objc var width: CGFloat { @objc get @objc (setWidth:) set }
 }

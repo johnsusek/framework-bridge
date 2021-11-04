@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSScriptWhoseTest
-    - name: NSScriptWhoseTest
-    - argLabels: 
+    - Selector: NSScriptWhoseTest
   */
 
 @objc(NSScriptWhoseTest) protocol NSScriptWhoseTestExports: JSExport, NSObjectExports {
@@ -20,10 +18,7 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: isTrue
-    - name: isTrue
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: isTrue
   */
   @objc func isTrue() -> Bool
 }

@@ -9,173 +9,111 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTableRowView
-    - name: NSTableRowView
-    - argLabels: 
+    - Selector: NSTableRowView
     - Introduced: 10.7
   */
 
 @objc(NSTableRowView) protocol NSTableRowViewExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: drawBackground
-    - name: drawBackgroundInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawBackground(in:)
+    - Selector: drawBackgroundInRect:
   */
   @objc (drawBackgroundInRect:) func drawBackground(in: CGRect)
 
   /**
-    - jsName: drawDraggingDestinationFeedback
-    - name: drawDraggingDestinationFeedbackInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawDraggingDestinationFeedback(in:)
+    - Selector: drawDraggingDestinationFeedbackInRect:
   */
   @objc (drawDraggingDestinationFeedbackInRect:) func drawDraggingDestinationFeedback(in: CGRect)
 
   /**
-    - jsName: drawSelection
-    - name: drawSelectionInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawSelection(in:)
+    - Selector: drawSelectionInRect:
   */
   @objc (drawSelectionInRect:) func drawSelection(in: CGRect)
 
   /**
-    - jsName: drawSeparator
-    - name: drawSeparatorInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawSeparator(in:)
+    - Selector: drawSeparatorInRect:
   */
   @objc (drawSeparatorInRect:) func drawSeparator(in: CGRect)
 
   /**
-    - jsName: view
-    - name: viewAtColumn:
-    - argLabels: atColumn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: view(atColumn:)
+    - Selector: viewAtColumn:
   */
   @objc (viewAtColumn:) func view(atColumn: Int) -> Any?
 
   // Own Instance Properties
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: draggingDestinationFeedbackStyle
-    - name: draggingDestinationFeedbackStyle
-    - argLabels: 
+    - Selector: draggingDestinationFeedbackStyle
   */
   @objc var draggingDestinationFeedbackStyle: NSTableView.DraggingDestinationFeedbackStyle { @objc get @objc (setDraggingDestinationFeedbackStyle:) set }
 
   /**
-    - jsName: isEmphasized
-    - name: emphasized
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEmphasized
+    - Selector: emphasized
   */
   @objc var isEmphasized: Bool { @objc get @objc (setEmphasized:) set }
 
   /**
-    - jsName: isFloating
-    - name: floating
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFloating
+    - Selector: floating
   */
   @objc var isFloating: Bool { @objc get @objc (setFloating:) set }
 
   /**
-    - jsName: isGroupRowStyle
-    - name: groupRowStyle
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isGroupRowStyle
+    - Selector: groupRowStyle
   */
   @objc var isGroupRowStyle: Bool { @objc get @objc (setGroupRowStyle:) set }
 
   /**
-    - jsName: indentationForDropOperation
-    - name: indentationForDropOperation
-    - argLabels: 
+    - Selector: indentationForDropOperation
   */
   @objc var indentationForDropOperation: CGFloat { @objc get @objc (setIndentationForDropOperation:) set }
 
   /**
-    - jsName: interiorBackgroundStyle
-    - name: interiorBackgroundStyle
-    - argLabels: 
+    - Selector: interiorBackgroundStyle
   */
   @objc var interiorBackgroundStyle: NSView.BackgroundStyle { @objc get }
 
   /**
-    - jsName: isNextRowSelected
-    - name: nextRowSelected
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isNextRowSelected
+    - Selector: nextRowSelected
   */
   @objc var isNextRowSelected: Bool { @objc get @objc (setNextRowSelected:) set }
 
   /**
-    - jsName: numberOfColumns
-    - name: numberOfColumns
-    - argLabels: 
+    - Selector: numberOfColumns
   */
   @objc var numberOfColumns: Int { @objc get }
 
   /**
-    - jsName: isPreviousRowSelected
-    - name: previousRowSelected
-    - argLabels: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: isPreviousRowSelected
+    - Selector: previousRowSelected
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var isPreviousRowSelected: Bool { @objc get @objc (setPreviousRowSelected:) set }
 
   /**
-    - jsName: isSelected
-    - name: selected
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSelected
+    - Selector: selected
   */
   @objc var isSelected: Bool { @objc get @objc (setSelected:) set }
 
   /**
-    - jsName: selectionHighlightStyle
-    - name: selectionHighlightStyle
-    - argLabels: 
+    - Selector: selectionHighlightStyle
   */
   @objc var selectionHighlightStyle: NSTableView.SelectionHighlightStyle { @objc get @objc (setSelectionHighlightStyle:) set }
 
   /**
-    - jsName: isTargetForDropOperation
-    - name: targetForDropOperation
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isTargetForDropOperation
+    - Selector: targetForDropOperation
   */
   @objc var isTargetForDropOperation: Bool { @objc get @objc (setTargetForDropOperation:) set }
 }

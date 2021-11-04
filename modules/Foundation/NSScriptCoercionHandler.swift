@@ -9,43 +9,26 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSScriptCoercionHandler
-    - name: NSScriptCoercionHandler
-    - argLabels: 
+    - Selector: NSScriptCoercionHandler
   */
 
 @objc(NSScriptCoercionHandler) protocol NSScriptCoercionHandlerExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: shared
-    - name: sharedCoercionHandler
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: shared()
+    - Selector: sharedCoercionHandler
   */
   @objc (sharedCoercionHandler) static func shared() -> NSScriptCoercionHandler
 
   // Instance Methods
 
   /**
-    - jsName: coerceValue
-    - name: coerceValue:toClass:
-    - argLabels: _, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: coerceValue(_:to:)
+    - Selector: coerceValue:toClass:
   */
   @objc (coerceValue:toClass:) func coerceValue(_: Any, to: AnyClass) -> Any?
 
   /**
-    - jsName: registerCoercer
-    - name: registerCoercer:selector:toConvertFromClass:toClass:
-    - argLabels: _, selector, toConvertFrom, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: registerCoercer(_:selector:toConvertFrom:to:)
+    - Selector: registerCoercer:selector:toConvertFromClass:toClass:
   */
   @objc (registerCoercer:selector:toConvertFromClass:toClass:) func registerCoercer(_: Any, selector: Selector, toConvertFrom: AnyClass, to: AnyClass)
 }

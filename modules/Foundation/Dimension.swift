@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: Dimension
-    - name: NSDimension
-    - argLabels: 
+    - Selector: NSDimension
     - Introduced: 10.12
   */
 
@@ -19,29 +17,21 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Instance Methods
 
   /**
-    - jsName: createWithSymbol
-    - name: initWithSymbol:converter:
-    - argLabels: converter
-    - constructorTokens: symbol, converter
+    - Selector: initWithSymbol:converter:
   */
   @objc static func createWithSymbol(_: String, converter: UnitConverter) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: converter
-    - name: converter
-    - argLabels: 
+    - Selector: converter
   */
   @objc var converter: UnitConverter { @objc get }
 }

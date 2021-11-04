@@ -9,32 +9,19 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSMachPort
-    - name: NSMachPort
-    - argLabels: 
+    - Selector: NSMachPort
   */
 
 @objc(NSMachPort) protocol NSMachPortExports: JSExport, PortExports {
   // Static Methods
 
   /**
-    - jsName: port
-    - name: portWithMachPort:
-    - argLabels: withMachPort
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: port(withMachPort:)
+    - Selector: portWithMachPort:
   */
   @objc (portWithMachPort:) static func port(withMachPort: UInt32) -> Port
 
   /**
-    - jsName: port
-    - name: portWithMachPort:options:
-    - argLabels: withMachPort, options
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: port(withMachPort:options:)
+    - Selector: portWithMachPort:options:
     - Introduced: 10.5
   */
   @objc (portWithMachPort:options:) @available(OSX 10.5, *) static func port(withMachPort: UInt32, options: NSMachPort.Options) -> Port
@@ -42,44 +29,30 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: delegate
   */
   @objc func delegate() -> NSMachPortDelegate?
 
   /**
-    - jsName: createWithMachPort
-    - name: initWithMachPort:
-    - argLabels: 
-    - constructorTokens: machPort
+    - Selector: initWithMachPort:
   */
   @objc static func createWithMachPort(_: UInt32) -> Self
 
   /**
-    - jsName: createWithMachPort
-    - name: initWithMachPort:options:
-    - argLabels: options
-    - constructorTokens: machPort, options
+    - Selector: initWithMachPort:options:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) static func createWithMachPort(_: UInt32, options: NSMachPort.Options) -> Self
 
   /**
-    - jsName: setDelegate
-    - name: setDelegate:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setDelegate:
   */
   @objc func setDelegate(_: NSMachPortDelegate?)
 
   // Own Instance Properties
 
   /**
-    - jsName: machPort
-    - name: machPort
-    - argLabels: 
+    - Selector: machPort
   */
   @objc var machPort: UInt32 { @objc get }
 }

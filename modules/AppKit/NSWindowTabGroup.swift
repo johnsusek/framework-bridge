@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSWindowTabGroup
-    - name: NSWindowTabGroup
-    - argLabels: 
+    - Selector: NSWindowTabGroup
     - Introduced: 10.13
   */
 
@@ -21,69 +19,44 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: addWindow
-    - name: addWindow:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addWindow:
   */
   @objc func addWindow(_: NSWindow)
 
   /**
-    - jsName: insertWindow
-    - name: insertWindow:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertWindow(_:at:)
+    - Selector: insertWindow:atIndex:
   */
   @objc (insertWindow:atIndex:) func insertWindow(_: NSWindow, at: Int)
 
   /**
-    - jsName: removeWindow
-    - name: removeWindow:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeWindow:
   */
   @objc func removeWindow(_: NSWindow)
 
   // Own Instance Properties
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: NSWindow.TabbingIdentifier { @objc get }
 
   /**
-    - jsName: isOverviewVisible
-    - name: overviewVisible
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isOverviewVisible
+    - Selector: overviewVisible
   */
   @objc var isOverviewVisible: Bool { @objc get @objc (setOverviewVisible:) set }
 
   /**
-    - jsName: selectedWindow
-    - name: selectedWindow
-    - argLabels: 
+    - Selector: selectedWindow
   */
   @objc var selectedWindow: NSWindow? { @objc get @objc (setSelectedWindow:) set }
 
   /**
-    - jsName: isTabBarVisible
-    - name: tabBarVisible
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isTabBarVisible
+    - Selector: tabBarVisible
   */
   @objc var isTabBarVisible: Bool { @objc get }
 
   /**
-    - jsName: windows
-    - name: windows
-    - argLabels: 
+    - Selector: windows
   */
   @objc var windows: [NSWindow] { @objc get }
 }

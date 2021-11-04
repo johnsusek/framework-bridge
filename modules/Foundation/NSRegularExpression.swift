@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSRegularExpression
-    - name: NSRegularExpression
-    - argLabels: 
+    - Selector: NSRegularExpression
     - Introduced: 10.7
   */
 
@@ -19,143 +17,81 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: escapedPattern
-    - name: escapedPatternForString:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: escapedPattern(for:)
+    - Selector: escapedPatternForString:
   */
   @objc (escapedPatternForString:) static func escapedPattern(`for`: String) -> String
 
   /**
-    - jsName: escapedTemplate
-    - name: escapedTemplateForString:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: escapedTemplate(for:)
+    - Selector: escapedTemplateForString:
   */
   @objc (escapedTemplateForString:) static func escapedTemplate(`for`: String) -> String
 
   /**
-    - jsName: regularExpressionWithPattern
-    - name: regularExpressionWithPattern:options:error:
-    - argLabels: options, error
-    - constructorTokens: 
+    - Selector: regularExpressionWithPattern:options:error:
   */
   // throws - @objc static func regularExpressionWithPattern(options: String, error: NSRegularExpression.Options) -> NSRegularExpression?
 
   // Instance Methods
 
   /**
-    - jsName: enumerateMatches
-    - name: enumerateMatchesInString:options:range:usingBlock:
-    - argLabels: in, options, range, using
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: enumerateMatches(in:options:range:using:)
+    - Selector: enumerateMatchesInString:options:range:usingBlock:
   */
-  // jsvalue - @objc (enumerateMatchesInString:options:range:usingBlock:) func enumerateMatches(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange, using: JSValue)
+  // jsvalue @objc func enumerateMatches(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange, using: JSValue)
 
   /**
-    - jsName: firstMatch
-    - name: firstMatchInString:options:range:
-    - argLabels: in, options, range
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: firstMatch(in:options:range:)
+    - Selector: firstMatchInString:options:range:
   */
   @objc (firstMatchInString:options:range:) func firstMatch(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange) -> NSTextCheckingResult?
 
   /**
-    - jsName: createWithPattern
-    - name: initWithPattern:options:error:
-    - argLabels: options, error
-    - constructorTokens: pattern, options
+    - Selector: initWithPattern:options:error:
   */
   @objc static func createWithPattern(pattern: String, options: NSRegularExpression.Options) -> Self?
 
   /**
-    - jsName: matches
-    - name: matchesInString:options:range:
-    - argLabels: in, options, range
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: matches(in:options:range:)
+    - Selector: matchesInString:options:range:
   */
   @objc (matchesInString:options:range:) func matches(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange) -> [NSTextCheckingResult]
 
   /**
-    - jsName: numberOfMatches
-    - name: numberOfMatchesInString:options:range:
-    - argLabels: in, options, range
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: numberOfMatches(in:options:range:)
+    - Selector: numberOfMatchesInString:options:range:
   */
   @objc (numberOfMatchesInString:options:range:) func numberOfMatches(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange) -> Int
 
   /**
-    - jsName: rangeOfFirstMatch
-    - name: rangeOfFirstMatchInString:options:range:
-    - argLabels: in, options, range
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rangeOfFirstMatch(in:options:range:)
+    - Selector: rangeOfFirstMatchInString:options:range:
   */
   @objc (rangeOfFirstMatchInString:options:range:) func rangeOfFirstMatch(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange) -> NSRange
 
   /**
-    - jsName: replaceMatches
-    - name: replaceMatchesInString:options:range:withTemplate:
-    - argLabels: in, options, range, withTemplate
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replaceMatches(in:options:range:withTemplate:)
+    - Selector: replaceMatchesInString:options:range:withTemplate:
   */
   @objc (replaceMatchesInString:options:range:withTemplate:) func replaceMatches(in: NSMutableString, options: NSRegularExpression.MatchingOptions, range: NSRange, withTemplate: String) -> Int
 
   /**
-    - jsName: replacementString
-    - name: replacementStringForResult:inString:offset:template:
-    - argLabels: for, in, offset, template
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replacementString(for:in:offset:template:)
+    - Selector: replacementStringForResult:inString:offset:template:
   */
   @objc (replacementStringForResult:inString:offset:template:) func replacementString(`for`: NSTextCheckingResult, in: String, offset: Int, template: String) -> String
 
   /**
-    - jsName: stringByReplacingMatches
-    - name: stringByReplacingMatchesInString:options:range:withTemplate:
-    - argLabels: in, options, range, withTemplate
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: stringByReplacingMatches(in:options:range:withTemplate:)
+    - Selector: stringByReplacingMatchesInString:options:range:withTemplate:
   */
   @objc (stringByReplacingMatchesInString:options:range:withTemplate:) func stringByReplacingMatches(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange, withTemplate: String) -> String
 
   // Own Instance Properties
 
   /**
-    - jsName: numberOfCaptureGroups
-    - name: numberOfCaptureGroups
-    - argLabels: 
+    - Selector: numberOfCaptureGroups
   */
   @objc var numberOfCaptureGroups: Int { @objc get }
 
   /**
-    - jsName: options
-    - name: options
-    - argLabels: 
+    - Selector: options
   */
   @objc var options: NSRegularExpression.Options { @objc get }
 
   /**
-    - jsName: pattern
-    - name: pattern
-    - argLabels: 
+    - Selector: pattern
   */
   @objc var pattern: String { @objc get }
 }

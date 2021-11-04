@@ -9,44 +9,31 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSScriptExecutionContext
-    - name: NSScriptExecutionContext
-    - argLabels: 
+    - Selector: NSScriptExecutionContext
   */
 
 @objc(NSScriptExecutionContext) protocol NSScriptExecutionContextExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: shared
-    - name: sharedScriptExecutionContext
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: shared()
+    - Selector: sharedScriptExecutionContext
   */
   @objc (sharedScriptExecutionContext) static func shared() -> NSScriptExecutionContext
 
   // Own Instance Properties
 
   /**
-    - jsName: objectBeingTested
-    - name: objectBeingTested
-    - argLabels: 
+    - Selector: objectBeingTested
   */
   @objc var objectBeingTested: Any? { @objc get @objc (setObjectBeingTested:) set }
 
   /**
-    - jsName: rangeContainerObject
-    - name: rangeContainerObject
-    - argLabels: 
+    - Selector: rangeContainerObject
   */
   @objc var rangeContainerObject: Any? { @objc get @objc (setRangeContainerObject:) set }
 
   /**
-    - jsName: topLevelObject
-    - name: topLevelObject
-    - argLabels: 
+    - Selector: topLevelObject
   */
   @objc var topLevelObject: Any? { @objc get @objc (setTopLevelObject:) set }
 }

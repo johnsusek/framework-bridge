@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTouchBar
-    - name: NSTouchBar
-    - argLabels: 
+    - Selector: NSTouchBar
     - Introduced: 10.12.2
   */
 
@@ -21,12 +19,7 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: isAutomaticCustomizeTouchBarMenuItemEnabled
-    - name: automaticCustomizeTouchBarMenuItemEnabled
-    - argLabels: 
-    - available: 10.15
-    - obsoleted: 3
-    - renamed: isAutomaticCustomizeTouchBarMenuItemEnabled
+    - Selector: automaticCustomizeTouchBarMenuItemEnabled
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static var isAutomaticCustomizeTouchBarMenuItemEnabled: Bool { @objc get @objc (setAutomaticCustomizeTouchBarMenuItemEnabled:) set }
@@ -34,86 +27,59 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: item
-    - name: itemForIdentifier:
-    - argLabels: forIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: item(forIdentifier:)
+    - Selector: itemForIdentifier:
   */
   @objc (itemForIdentifier:) func item(forIdentifier: NSTouchBarItem.Identifier) -> NSTouchBarItem?
 
   // Own Instance Properties
 
   /**
-    - jsName: customizationAllowedItemIdentifiers
-    - name: customizationAllowedItemIdentifiers
-    - argLabels: 
+    - Selector: customizationAllowedItemIdentifiers
   */
   @objc var customizationAllowedItemIdentifiers: [NSTouchBarItem.Identifier] { @objc get @objc (setCustomizationAllowedItemIdentifiers:) set }
 
   /**
-    - jsName: customizationIdentifier
-    - name: customizationIdentifier
-    - argLabels: 
+    - Selector: customizationIdentifier
   */
   @objc var customizationIdentifier: NSTouchBar.CustomizationIdentifier? { @objc get @objc (setCustomizationIdentifier:) set }
 
   /**
-    - jsName: customizationRequiredItemIdentifiers
-    - name: customizationRequiredItemIdentifiers
-    - argLabels: 
+    - Selector: customizationRequiredItemIdentifiers
   */
   @objc var customizationRequiredItemIdentifiers: [NSTouchBarItem.Identifier] { @objc get @objc (setCustomizationRequiredItemIdentifiers:) set }
 
   /**
-    - jsName: defaultItemIdentifiers
-    - name: defaultItemIdentifiers
-    - argLabels: 
+    - Selector: defaultItemIdentifiers
   */
   @objc var defaultItemIdentifiers: [NSTouchBarItem.Identifier] { @objc get @objc (setDefaultItemIdentifiers:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSTouchBarDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: escapeKeyReplacementItemIdentifier
-    - name: escapeKeyReplacementItemIdentifier
-    - argLabels: 
+    - Selector: escapeKeyReplacementItemIdentifier
   */
   @objc var escapeKeyReplacementItemIdentifier: NSTouchBarItem.Identifier? { @objc get @objc (setEscapeKeyReplacementItemIdentifier:) set }
 
   /**
-    - jsName: itemIdentifiers
-    - name: itemIdentifiers
-    - argLabels: 
+    - Selector: itemIdentifiers
   */
   @objc var itemIdentifiers: [NSTouchBarItem.Identifier] { @objc get }
 
   /**
-    - jsName: principalItemIdentifier
-    - name: principalItemIdentifier
-    - argLabels: 
+    - Selector: principalItemIdentifier
   */
   @objc var principalItemIdentifier: NSTouchBarItem.Identifier? { @objc get @objc (setPrincipalItemIdentifier:) set }
 
   /**
-    - jsName: templateItems
-    - name: templateItems
-    - argLabels: 
+    - Selector: templateItems
   */
   @objc var templateItems: Set<NSTouchBarItem> { @objc get @objc (setTemplateItems:) set }
 
   /**
-    - jsName: isVisible
-    - name: visible
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isVisible
+    - Selector: visible
   */
   @objc var isVisible: Bool { @objc get }
 }

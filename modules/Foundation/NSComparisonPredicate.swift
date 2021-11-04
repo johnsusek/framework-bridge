@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSComparisonPredicate
-    - name: NSComparisonPredicate
-    - argLabels: 
+    - Selector: NSComparisonPredicate
     - Introduced: 10.4
   */
 
@@ -19,68 +17,44 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: create
-    - name: predicateWithLeftExpression:rightExpression:customSelector:
-    - argLabels: leftExpression, rightExpression, customSelector
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(leftExpression:rightExpression:customSelector:)
-    - message: Not available in Swift
+    - Selector: predicateWithLeftExpression:rightExpression:customSelector:
   */
   @objc static func create(leftExpression: NSExpression, rightExpression: NSExpression, customSelector: Selector) -> NSComparisonPredicate
 
   /**
-    - jsName: create
-    - name: predicateWithLeftExpression:rightExpression:modifier:type:options:
-    - argLabels: leftExpression, rightExpression, modifier, type, options
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(leftExpression:rightExpression:modifier:type:options:)
-    - message: Not available in Swift
+    - Selector: predicateWithLeftExpression:rightExpression:modifier:type:options:
   */
   @objc static func create(leftExpression: NSExpression, rightExpression: NSExpression, modifier: NSComparisonPredicate.Modifier, type: NSComparisonPredicate.Operator, options: NSComparisonPredicate.Options) -> NSComparisonPredicate
 
   // Own Instance Properties
 
   /**
-    - jsName: comparisonPredicateModifier
-    - name: comparisonPredicateModifier
-    - argLabels: 
+    - Selector: comparisonPredicateModifier
   */
   @objc var comparisonPredicateModifier: NSComparisonPredicate.Modifier { @objc get }
 
   /**
-    - jsName: customSelector
-    - name: customSelector
-    - argLabels: 
+    - Selector: customSelector
   */
   @objc var customSelector: Selector? { @objc get }
 
   /**
-    - jsName: leftExpression
-    - name: leftExpression
-    - argLabels: 
+    - Selector: leftExpression
   */
   @objc var leftExpression: NSExpression { @objc get }
 
   /**
-    - jsName: options
-    - name: options
-    - argLabels: 
+    - Selector: options
   */
   @objc var options: NSComparisonPredicate.Options { @objc get }
 
   /**
-    - jsName: predicateOperatorType
-    - name: predicateOperatorType
-    - argLabels: 
+    - Selector: predicateOperatorType
   */
   @objc var predicateOperatorType: NSComparisonPredicate.Operator { @objc get }
 
   /**
-    - jsName: rightExpression
-    - name: rightExpression
-    - argLabels: 
+    - Selector: rightExpression
   */
   @objc var rightExpression: NSExpression { @objc get }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLSessionTaskMetrics
-    - name: NSURLSessionTaskMetrics
-    - argLabels: 
+    - Selector: NSURLSessionTaskMetrics
     - Introduced: 10.12
   */
 
@@ -21,23 +19,17 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: redirectCount
-    - name: redirectCount
-    - argLabels: 
+    - Selector: redirectCount
   */
   @objc var redirectCount: Int { @objc get }
 
   /**
-    - jsName: taskInterval
-    - name: taskInterval
-    - argLabels: 
+    - Selector: taskInterval
   */
   @objc var taskInterval: DateInterval { @objc get }
 
   /**
-    - jsName: transactionMetrics
-    - name: transactionMetrics
-    - argLabels: 
+    - Selector: transactionMetrics
   */
   @objc var transactionMetrics: [URLSessionTaskTransactionMetrics] { @objc get }
 }

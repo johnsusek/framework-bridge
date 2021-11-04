@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSActionCell
-    - name: NSActionCell
-    - argLabels: 
+    - Selector: NSActionCell
   */
 
 @objc(NSActionCell) protocol NSActionCellExports: JSExport, NSCellExports {

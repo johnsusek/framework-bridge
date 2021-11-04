@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSWhoseSpecifier
-    - name: NSWhoseSpecifier
-    - argLabels: 
+    - Selector: NSWhoseSpecifier
   */
 
 @objc(NSWhoseSpecifier) protocol NSWhoseSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
@@ -20,47 +18,34 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithContainerClassDescription
-    - name: initWithContainerClassDescription:containerSpecifier:key:test:
-    - argLabels: containerSpecifier, key, test
-    - constructorTokens: containerClassDescription, containerSpecifier, key, test
+    - Selector: initWithContainerClassDescription:containerSpecifier:key:test:
   */
   @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, test: NSScriptWhoseTest) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: endSubelementIdentifier
-    - name: endSubelementIdentifier
-    - argLabels: 
+    - Selector: endSubelementIdentifier
   */
   @objc var endSubelementIdentifier: NSWhoseSpecifier.SubelementIdentifier { @objc get @objc (setEndSubelementIdentifier:) set }
 
   /**
-    - jsName: endSubelementIndex
-    - name: endSubelementIndex
-    - argLabels: 
+    - Selector: endSubelementIndex
   */
   @objc var endSubelementIndex: Int { @objc get @objc (setEndSubelementIndex:) set }
 
   /**
-    - jsName: startSubelementIdentifier
-    - name: startSubelementIdentifier
-    - argLabels: 
+    - Selector: startSubelementIdentifier
   */
   @objc var startSubelementIdentifier: NSWhoseSpecifier.SubelementIdentifier { @objc get @objc (setStartSubelementIdentifier:) set }
 
   /**
-    - jsName: startSubelementIndex
-    - name: startSubelementIndex
-    - argLabels: 
+    - Selector: startSubelementIndex
   */
   @objc var startSubelementIndex: Int { @objc get @objc (setStartSubelementIndex:) set }
 
   /**
-    - jsName: test
-    - name: test
-    - argLabels: 
+    - Selector: test
   */
   @objc var test: NSScriptWhoseTest { @objc get @objc (setTest:) set }
 }

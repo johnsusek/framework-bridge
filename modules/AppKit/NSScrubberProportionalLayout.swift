@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubberProportionalLayout
-    - name: NSScrubberProportionalLayout
-    - argLabels: 
+    - Selector: NSScrubberProportionalLayout
     - Introduced: 10.12.2
   */
 
@@ -21,19 +19,14 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithNumberOfVisibleItems
-    - name: initWithNumberOfVisibleItems:
-    - argLabels: 
-    - constructorTokens: numberOfVisibleItems
+    - Selector: initWithNumberOfVisibleItems:
   */
   @objc static func createWithNumberOfVisibleItems(_: Int) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: numberOfVisibleItems
-    - name: numberOfVisibleItems
-    - argLabels: 
+    - Selector: numberOfVisibleItems
   */
   @objc var numberOfVisibleItems: Int { @objc get @objc (setNumberOfVisibleItems:) set }
 }

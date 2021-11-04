@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitFrequency
-    - name: NSUnitFrequency
-    - argLabels: 
+    - Selector: NSUnitFrequency
     - Introduced: 10.12
   */
 
@@ -19,77 +17,55 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: framesPerSecond
-    - name: framesPerSecond
-    - argLabels: 
-    - available: 10.15
+    - Selector: framesPerSecond
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static var framesPerSecond: UnitFrequency { @objc get }
 
   /**
-    - jsName: gigahertz
-    - name: gigahertz
-    - argLabels: 
+    - Selector: gigahertz
   */
   @objc static var gigahertz: UnitFrequency { @objc get }
 
   /**
-    - jsName: hertz
-    - name: hertz
-    - argLabels: 
+    - Selector: hertz
   */
   @objc static var hertz: UnitFrequency { @objc get }
 
   /**
-    - jsName: kilohertz
-    - name: kilohertz
-    - argLabels: 
+    - Selector: kilohertz
   */
   @objc static var kilohertz: UnitFrequency { @objc get }
 
   /**
-    - jsName: megahertz
-    - name: megahertz
-    - argLabels: 
+    - Selector: megahertz
   */
   @objc static var megahertz: UnitFrequency { @objc get }
 
   /**
-    - jsName: microhertz
-    - name: microhertz
-    - argLabels: 
+    - Selector: microhertz
   */
   @objc static var microhertz: UnitFrequency { @objc get }
 
   /**
-    - jsName: millihertz
-    - name: millihertz
-    - argLabels: 
+    - Selector: millihertz
   */
   @objc static var millihertz: UnitFrequency { @objc get }
 
   /**
-    - jsName: nanohertz
-    - name: nanohertz
-    - argLabels: 
+    - Selector: nanohertz
   */
   @objc static var nanohertz: UnitFrequency { @objc get }
 
   /**
-    - jsName: terahertz
-    - name: terahertz
-    - argLabels: 
+    - Selector: terahertz
   */
   @objc static var terahertz: UnitFrequency { @objc get }
 }

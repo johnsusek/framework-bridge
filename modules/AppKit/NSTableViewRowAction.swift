@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTableViewRowAction
-    - name: NSTableViewRowAction
-    - argLabels: 
+    - Selector: NSTableViewRowAction
     - Introduced: 10.11
   */
 
@@ -19,45 +17,30 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: rowActionWithStyle:title:handler:
-    - argLabels: style, title, handler
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(style:title:handler:)
-    - message: Not available in Swift
+    - Selector: rowActionWithStyle:title:handler:
   */
-  @objc static func create(style: NSTableViewRowAction.Style, title: String, handler: JSValue) -> Self
+// jsvalue   @objc static func create(style: NSTableViewRowAction.Style, title: String, handler: JSValue) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor! { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
-    - available: 10.12
+    - Selector: image
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var image: NSImage? { @objc get @objc (setImage:) set }
 
   /**
-    - jsName: style
-    - name: style
-    - argLabels: 
+    - Selector: style
   */
   @objc var style: NSTableViewRowAction.Style { @objc get }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get @objc (setTitle:) set }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSCompoundPredicate
-    - name: NSCompoundPredicate
-    - argLabels: 
+    - Selector: NSCompoundPredicate
     - Introduced: 10.4
   */
 
@@ -19,51 +17,29 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: create
-    - name: andPredicateWithSubpredicates:
-    - argLabels: andPredicateWithSubpredicates
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(andPredicateWithSubpredicates:)
-    - message: Not available in Swift
+    - Selector: andPredicateWithSubpredicates:
   */
   @objc static func create(andPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate
 
   /**
-    - jsName: create
-    - name: notPredicateWithSubpredicate:
-    - argLabels: notPredicateWithSubpredicate
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(notPredicateWithSubpredicate:)
-    - message: Not available in Swift
+    - Selector: notPredicateWithSubpredicate:
   */
   @objc static func create(notPredicateWithSubpredicate: NSPredicate) -> NSCompoundPredicate
 
   /**
-    - jsName: create
-    - name: orPredicateWithSubpredicates:
-    - argLabels: orPredicateWithSubpredicates
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(orPredicateWithSubpredicates:)
-    - message: Not available in Swift
+    - Selector: orPredicateWithSubpredicates:
   */
   @objc static func create(orPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate
 
   // Own Instance Properties
 
   /**
-    - jsName: compoundPredicateType
-    - name: compoundPredicateType
-    - argLabels: 
+    - Selector: compoundPredicateType
   */
   @objc var compoundPredicateType: NSCompoundPredicate.LogicalType { @objc get }
 
   /**
-    - jsName: subpredicates
-    - name: subpredicates
-    - argLabels: 
+    - Selector: subpredicates
   */
   @objc var subpredicates: [Any] { @objc get }
 }

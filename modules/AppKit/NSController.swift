@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSController
-    - name: NSController
-    - argLabels: 
+    - Selector: NSController
   */
 
 @objc(NSController) protocol NSControllerExports: JSExport, NSObjectExports {
@@ -20,11 +18,7 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: isEditing
-    - name: editing
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEditing
+    - Selector: editing
   */
   @objc var isEditing: Bool { @objc get }
 }

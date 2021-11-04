@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitPressure
-    - name: NSUnitPressure
-    - argLabels: 
+    - Selector: NSUnitPressure
     - Introduced: 10.12
   */
 
@@ -19,82 +17,59 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: bars
-    - name: bars
-    - argLabels: 
+    - Selector: bars
   */
   @objc static var bars: UnitPressure { @objc get }
 
   /**
-    - jsName: gigapascals
-    - name: gigapascals
-    - argLabels: 
+    - Selector: gigapascals
   */
   @objc static var gigapascals: UnitPressure { @objc get }
 
   /**
-    - jsName: hectopascals
-    - name: hectopascals
-    - argLabels: 
+    - Selector: hectopascals
   */
   @objc static var hectopascals: UnitPressure { @objc get }
 
   /**
-    - jsName: inchesOfMercury
-    - name: inchesOfMercury
-    - argLabels: 
+    - Selector: inchesOfMercury
   */
   @objc static var inchesOfMercury: UnitPressure { @objc get }
 
   /**
-    - jsName: kilopascals
-    - name: kilopascals
-    - argLabels: 
+    - Selector: kilopascals
   */
   @objc static var kilopascals: UnitPressure { @objc get }
 
   /**
-    - jsName: megapascals
-    - name: megapascals
-    - argLabels: 
+    - Selector: megapascals
   */
   @objc static var megapascals: UnitPressure { @objc get }
 
   /**
-    - jsName: millibars
-    - name: millibars
-    - argLabels: 
+    - Selector: millibars
   */
   @objc static var millibars: UnitPressure { @objc get }
 
   /**
-    - jsName: millimetersOfMercury
-    - name: millimetersOfMercury
-    - argLabels: 
+    - Selector: millimetersOfMercury
   */
   @objc static var millimetersOfMercury: UnitPressure { @objc get }
 
   /**
-    - jsName: newtonsPerMetersSquared
-    - name: newtonsPerMetersSquared
-    - argLabels: 
+    - Selector: newtonsPerMetersSquared
   */
   @objc static var newtonsPerMetersSquared: UnitPressure { @objc get }
 
   /**
-    - jsName: poundsForcePerSquareInch
-    - name: poundsForcePerSquareInch
-    - argLabels: 
+    - Selector: poundsForcePerSquareInch
   */
   @objc static var poundsForcePerSquareInch: UnitPressure { @objc get }
 }

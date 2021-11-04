@@ -9,20 +9,21 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSCloseCommand
-    - name: NSCloseCommand
-    - argLabels: 
+    - Selector: NSCloseCommand
   */
 
 @objc(NSCloseCommand) protocol NSCloseCommandExports: JSExport, NSScriptCommandExports {
   // Static Methods
 
+  /**
+    - Selector: currentCommand
+  */
+  @objc (currentCommand) static func current() -> NSScriptCommand?
+
   // Own Instance Properties
 
   /**
-    - jsName: saveOptions
-    - name: saveOptions
-    - argLabels: 
+    - Selector: saveOptions
   */
   @objc var saveOptions: NSSaveOptions { @objc get }
 }

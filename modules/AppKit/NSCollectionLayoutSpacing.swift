@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutSpacing
-    - name: NSCollectionLayoutSpacing
-    - argLabels: 
+    - Selector: NSCollectionLayoutSpacing
     - Introduced: 10.15
   */
 
@@ -19,49 +17,29 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: fixed
-    - name: fixedSpacing:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: fixed(_:)
+    - Selector: fixedSpacing:
   */
   @objc static func fixed(_: CGFloat) -> Self
 
   /**
-    - jsName: flexible
-    - name: flexibleSpacing:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: flexible(_:)
+    - Selector: flexibleSpacing:
   */
   @objc static func flexible(_: CGFloat) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: isFixed
-    - name: isFixedSpacing
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFixed
+    - Selector: isFixedSpacing
   */
   @objc var isFixed: Bool { @objc (isFixedSpacing) get }
 
   /**
-    - jsName: isFlexible
-    - name: isFlexibleSpacing
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFlexible
+    - Selector: isFlexibleSpacing
   */
   @objc var isFlexible: Bool { @objc (isFlexibleSpacing) get }
 
   /**
-    - jsName: spacing
-    - name: spacing
-    - argLabels: 
+    - Selector: spacing
   */
   @objc var spacing: CGFloat { @objc get }
 }

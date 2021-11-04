@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewItem
-    - name: NSCollectionViewItem
-    - argLabels: 
+    - Selector: NSCollectionViewItem
     - Introduced: 10.5
   */
 
@@ -21,53 +19,35 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: collectionView
-    - name: collectionView
-    - argLabels: 
+    - Selector: collectionView
   */
   @objc var collectionView: NSCollectionView? { @objc get }
 
   /**
-    - jsName: draggingImageComponents
-    - name: draggingImageComponents
-    - argLabels: 
-    - available: 10.7
+    - Selector: draggingImageComponents
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var draggingImageComponents: [NSDraggingImageComponent] { @objc get }
 
   /**
-    - jsName: highlightState
-    - name: highlightState
-    - argLabels: 
-    - available: 10.11
+    - Selector: highlightState
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var highlightState: NSCollectionViewItem.HighlightState { @objc get @objc (setHighlightState:) set }
 
   /**
-    - jsName: imageView
-    - name: imageView
-    - argLabels: 
-    - available: 10.7
+    - Selector: imageView
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var imageView: NSImageView? { @objc get @objc (setImageView:) set }
 
   /**
-    - jsName: isSelected
-    - name: selected
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSelected
+    - Selector: selected
   */
   @objc var isSelected: Bool { @objc get @objc (setSelected:) set }
 
   /**
-    - jsName: textField
-    - name: textField
-    - argLabels: 
-    - available: 10.7
+    - Selector: textField
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var textField: NSTextField? { @objc get @objc (setTextField:) set }

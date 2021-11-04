@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSTextCheckingResult
-    - name: NSTextCheckingResult
-    - argLabels: 
+    - Selector: NSTextCheckingResult
     - Introduced: 10.6
   */
 
@@ -19,159 +17,80 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: addressCheckingResult
-    - name: addressCheckingResultWithRange:components:
-    - argLabels: range, components
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addressCheckingResult(range:components:)
+    - Selector: addressCheckingResultWithRange:components:
   */
   @objc (addressCheckingResultWithRange:components:) static func addressCheckingResult(range: NSRange, components: [NSTextCheckingKey: String]) -> NSTextCheckingResult
 
   /**
-    - jsName: correctionCheckingResult
-    - name: correctionCheckingResultWithRange:replacementString:
-    - argLabels: range, replacementString
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: correctionCheckingResult(range:replacementString:)
+    - Selector: correctionCheckingResultWithRange:replacementString:
   */
   @objc (correctionCheckingResultWithRange:replacementString:) static func correctionCheckingResult(range: NSRange, replacementString: String) -> NSTextCheckingResult
 
   /**
-    - jsName: correctionCheckingResult
-    - name: correctionCheckingResultWithRange:replacementString:alternativeStrings:
-    - argLabels: range, replacementString, alternativeStrings
-    - constructorTokens: 
-    - available: 10.9
-    - obsoleted: 3
-    - renamed: correctionCheckingResult(range:replacementString:alternativeStrings:)
+    - Selector: correctionCheckingResultWithRange:replacementString:alternativeStrings:
     - Introduced: 10.9
   */
   @objc (correctionCheckingResultWithRange:replacementString:alternativeStrings:) @available(OSX 10.9, *) static func correctionCheckingResult(range: NSRange, replacementString: String, alternativeStrings: [String]) -> NSTextCheckingResult
 
   /**
-    - jsName: dashCheckingResult
-    - name: dashCheckingResultWithRange:replacementString:
-    - argLabels: range, replacementString
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dashCheckingResult(range:replacementString:)
+    - Selector: dashCheckingResultWithRange:replacementString:
   */
   @objc (dashCheckingResultWithRange:replacementString:) static func dashCheckingResult(range: NSRange, replacementString: String) -> NSTextCheckingResult
 
   /**
-    - jsName: dateCheckingResult
-    - name: dateCheckingResultWithRange:date:
-    - argLabels: range, date
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dateCheckingResult(range:date:)
+    - Selector: dateCheckingResultWithRange:date:
   */
   @objc (dateCheckingResultWithRange:date:) static func dateCheckingResult(range: NSRange, date: Date) -> NSTextCheckingResult
 
   /**
-    - jsName: dateCheckingResult
-    - name: dateCheckingResultWithRange:date:timeZone:duration:
-    - argLabels: range, date, timeZone, duration
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dateCheckingResult(range:date:timeZone:duration:)
+    - Selector: dateCheckingResultWithRange:date:timeZone:duration:
   */
   @objc (dateCheckingResultWithRange:date:timeZone:duration:) static func dateCheckingResult(range: NSRange, date: Date, timeZone: TimeZone, duration: TimeInterval) -> NSTextCheckingResult
 
   /**
-    - jsName: grammarCheckingResult
-    - name: grammarCheckingResultWithRange:details:
-    - argLabels: range, details
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: grammarCheckingResult(range:details:)
+    - Selector: grammarCheckingResultWithRange:details:
   */
   @objc (grammarCheckingResultWithRange:details:) static func grammarCheckingResult(range: NSRange, details: [[String: Any]]) -> NSTextCheckingResult
 
   /**
-    - jsName: linkCheckingResult
-    - name: linkCheckingResultWithRange:URL:
-    - argLabels: range, url
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: linkCheckingResult(range:url:)
+    - Selector: linkCheckingResultWithRange:URL:
   */
   @objc (linkCheckingResultWithRange:URL:) static func linkCheckingResult(range: NSRange, url: URL) -> NSTextCheckingResult
 
   /**
-    - jsName: orthographyCheckingResult
-    - name: orthographyCheckingResultWithRange:orthography:
-    - argLabels: range, orthography
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: orthographyCheckingResult(range:orthography:)
+    - Selector: orthographyCheckingResultWithRange:orthography:
   */
   @objc (orthographyCheckingResultWithRange:orthography:) static func orthographyCheckingResult(range: NSRange, orthography: NSOrthography) -> NSTextCheckingResult
 
   /**
-    - jsName: phoneNumberCheckingResult
-    - name: phoneNumberCheckingResultWithRange:phoneNumber:
-    - argLabels: range, phoneNumber
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: phoneNumberCheckingResult(range:phoneNumber:)
+    - Selector: phoneNumberCheckingResultWithRange:phoneNumber:
     - Introduced: 10.7
   */
   @objc (phoneNumberCheckingResultWithRange:phoneNumber:) @available(OSX 10.7, *) static func phoneNumberCheckingResult(range: NSRange, phoneNumber: String) -> NSTextCheckingResult
 
   /**
-    - jsName: quoteCheckingResult
-    - name: quoteCheckingResultWithRange:replacementString:
-    - argLabels: range, replacementString
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: quoteCheckingResult(range:replacementString:)
+    - Selector: quoteCheckingResultWithRange:replacementString:
   */
   @objc (quoteCheckingResultWithRange:replacementString:) static func quoteCheckingResult(range: NSRange, replacementString: String) -> NSTextCheckingResult
 
   /**
-    - jsName: regularExpressionCheckingResult
-    - name: regularExpressionCheckingResultWithRanges:count:regularExpression:
-    - argLabels: ranges, count, regularExpression
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: regularExpressionCheckingResult(ranges:count:regularExpression:)
+    - Selector: regularExpressionCheckingResultWithRanges:count:regularExpression:
     - Introduced: 10.7
   */
   @objc (regularExpressionCheckingResultWithRanges:count:regularExpression:) @available(OSX 10.7, *) static func regularExpressionCheckingResult(ranges: NSRangePointer, count: Int, regularExpression: NSRegularExpression) -> NSTextCheckingResult
 
   /**
-    - jsName: replacementCheckingResult
-    - name: replacementCheckingResultWithRange:replacementString:
-    - argLabels: range, replacementString
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replacementCheckingResult(range:replacementString:)
+    - Selector: replacementCheckingResultWithRange:replacementString:
   */
   @objc (replacementCheckingResultWithRange:replacementString:) static func replacementCheckingResult(range: NSRange, replacementString: String) -> NSTextCheckingResult
 
   /**
-    - jsName: spellCheckingResult
-    - name: spellCheckingResultWithRange:
-    - argLabels: range
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: spellCheckingResult(range:)
+    - Selector: spellCheckingResultWithRange:
   */
   @objc (spellCheckingResultWithRange:) static func spellCheckingResult(range: NSRange) -> NSTextCheckingResult
 
   /**
-    - jsName: transitInformationCheckingResult
-    - name: transitInformationCheckingResultWithRange:components:
-    - argLabels: range, components
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: transitInformationCheckingResult(range:components:)
+    - Selector: transitInformationCheckingResultWithRange:components:
     - Introduced: 10.7
   */
   @objc (transitInformationCheckingResultWithRange:components:) @available(OSX 10.7, *) static func transitInformationCheckingResult(range: NSRange, components: [NSTextCheckingKey: String]) -> NSTextCheckingResult
@@ -179,37 +98,19 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: range
-    - name: rangeAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: range(at:)
+    - Selector: rangeAtIndex:
     - Introduced: 10.7
   */
   @objc (rangeAtIndex:) @available(OSX 10.7, *) func range(at: Int) -> NSRange
 
   /**
-    - jsName: range
-    - name: rangeWithName:
-    - argLabels: withName
-    - constructorTokens: 
-    - available: 10.13
-    - obsoleted: 3
-    - renamed: range(withName:)
+    - Selector: rangeWithName:
     - Introduced: 10.13
   */
   @objc (rangeWithName:) @available(OSX 10.13, *) func range(withName: String) -> NSRange
 
   /**
-    - jsName: adjustingRanges
-    - name: resultByAdjustingRangesWithOffset:
-    - argLabels: offset
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 4
-    - renamed: adjustingRanges(offset:)
+    - Selector: resultByAdjustingRangesWithOffset:
     - Introduced: 10.7
   */
   @objc (resultByAdjustingRangesWithOffset:) @available(OSX 10.7, *) func adjustingRanges(offset: Int) -> NSTextCheckingResult
@@ -217,119 +118,82 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: url
-    - name: URL
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: url
+    - Selector: URL
   */
   @objc var url: URL? { @objc (URL) get }
 
   /**
-    - jsName: addressComponents
-    - name: addressComponents
-    - argLabels: 
+    - Selector: addressComponents
   */
   @objc var addressComponents: [NSTextCheckingKey: String]? { @objc get }
 
   /**
-    - jsName: alternativeStrings
-    - name: alternativeStrings
-    - argLabels: 
-    - available: 10.9
+    - Selector: alternativeStrings
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var alternativeStrings: [String]? { @objc get }
 
   /**
-    - jsName: components
-    - name: components
-    - argLabels: 
-    - available: 10.7
+    - Selector: components
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var components: [NSTextCheckingKey: String]? { @objc get }
 
   /**
-    - jsName: date
-    - name: date
-    - argLabels: 
+    - Selector: date
   */
   @objc var date: Date? { @objc get }
 
   /**
-    - jsName: duration
-    - name: duration
-    - argLabels: 
+    - Selector: duration
   */
   @objc var duration: TimeInterval { @objc get }
 
   /**
-    - jsName: grammarDetails
-    - name: grammarDetails
-    - argLabels: 
+    - Selector: grammarDetails
   */
   @objc var grammarDetails: [[String: Any]]? { @objc get }
 
   /**
-    - jsName: numberOfRanges
-    - name: numberOfRanges
-    - argLabels: 
-    - available: 10.7
+    - Selector: numberOfRanges
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var numberOfRanges: Int { @objc get }
 
   /**
-    - jsName: orthography
-    - name: orthography
-    - argLabels: 
+    - Selector: orthography
   */
   @objc var orthography: NSOrthography? { @objc get }
 
   /**
-    - jsName: phoneNumber
-    - name: phoneNumber
-    - argLabels: 
-    - available: 10.7
+    - Selector: phoneNumber
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var phoneNumber: String? { @objc get }
 
   /**
-    - jsName: range
-    - name: range
-    - argLabels: 
+    - Selector: range
   */
   @objc var range: NSRange { @objc get }
 
   /**
-    - jsName: regularExpression
-    - name: regularExpression
-    - argLabels: 
-    - available: 10.7
+    - Selector: regularExpression
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var regularExpression: NSRegularExpression? { @objc get }
 
   /**
-    - jsName: replacementString
-    - name: replacementString
-    - argLabels: 
+    - Selector: replacementString
   */
   @objc var replacementString: String? { @objc get }
 
   /**
-    - jsName: resultType
-    - name: resultType
-    - argLabels: 
+    - Selector: resultType
   */
   @objc var resultType: NSTextCheckingResult.CheckingType { @objc get }
 
   /**
-    - jsName: timeZone
-    - name: timeZone
-    - argLabels: 
+    - Selector: timeZone
   */
   @objc var timeZone: TimeZone? { @objc get }
 }

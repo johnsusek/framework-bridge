@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSplitViewController
-    - name: NSSplitViewController
-    - argLabels: 
+    - Selector: NSSplitViewController
     - Introduced: 10.10
   */
 
@@ -21,47 +19,27 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: addSplitViewItem
-    - name: addSplitViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addSplitViewItem:
   */
   @objc func addSplitViewItem(_: NSSplitViewItem)
 
   /**
-    - jsName: insertSplitViewItem
-    - name: insertSplitViewItem:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertSplitViewItem(_:at:)
+    - Selector: insertSplitViewItem:atIndex:
   */
   @objc (insertSplitViewItem:atIndex:) func insertSplitViewItem(_: NSSplitViewItem, at: Int)
 
   /**
-    - jsName: removeSplitViewItem
-    - name: removeSplitViewItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeSplitViewItem:
   */
   @objc func removeSplitViewItem(_: NSSplitViewItem)
 
   /**
-    - jsName: splitViewItem
-    - name: splitViewItemForViewController:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: splitViewItem(for:)
+    - Selector: splitViewItemForViewController:
   */
   @objc (splitViewItemForViewController:) func splitViewItem(`for`: NSViewController) -> NSSplitViewItem?
 
   /**
-    - jsName: toggleSidebar
-    - name: toggleSidebar:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.11
+    - Selector: toggleSidebar:
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) func toggleSidebar(_: Any?)
@@ -69,25 +47,18 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: minimumThicknessForInlineSidebars
-    - name: minimumThicknessForInlineSidebars
-    - argLabels: 
-    - available: 10.11
+    - Selector: minimumThicknessForInlineSidebars
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var minimumThicknessForInlineSidebars: CGFloat { @objc get @objc (setMinimumThicknessForInlineSidebars:) set }
 
   /**
-    - jsName: splitView
-    - name: splitView
-    - argLabels: 
+    - Selector: splitView
   */
   @objc var splitView: NSSplitView { @objc get @objc (setSplitView:) set }
 
   /**
-    - jsName: splitViewItems
-    - name: splitViewItems
-    - argLabels: 
+    - Selector: splitViewItems
   */
   @objc var splitViewItems: [NSSplitViewItem] { @objc get @objc (setSplitViewItems:) set }
 }

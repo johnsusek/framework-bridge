@@ -9,216 +9,133 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSpeechSynthesizer
-    - name: NSSpeechSynthesizer
-    - argLabels: 
+    - Selector: NSSpeechSynthesizer
   */
 
 @objc(NSSpeechSynthesizer) protocol NSSpeechSynthesizerExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: attributes
-    - name: attributesForVoice:
-    - argLabels: forVoice
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: attributes(forVoice:)
+    - Selector: attributesForVoice:
   */
   @objc (attributesForVoice:) static func attributes(forVoice: NSSpeechSynthesizer.VoiceName) -> [NSSpeechSynthesizer.VoiceAttributeKey: Any]
 
   // Own Static Properties
 
   /**
-    - jsName: isAnyApplicationSpeaking
-    - name: anyApplicationSpeaking
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isAnyApplicationSpeaking
+    - Selector: anyApplicationSpeaking
   */
   @objc static var isAnyApplicationSpeaking: Bool { @objc get }
 
   /**
-    - jsName: availableVoices
-    - name: availableVoices
-    - argLabels: 
+    - Selector: availableVoices
   */
   @objc static var availableVoices: [NSSpeechSynthesizer.VoiceName] { @objc get }
 
   /**
-    - jsName: defaultVoice
-    - name: defaultVoice
-    - argLabels: 
+    - Selector: defaultVoice
   */
   @objc static var defaultVoice: NSSpeechSynthesizer.VoiceName { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: addSpeechDictionary
-    - name: addSpeechDictionary:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: addSpeechDictionary:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func addSpeechDictionary(_: [NSSpeechSynthesizer.DictionaryKey: Any])
 
   /**
-    - jsName: continueSpeaking
-    - name: continueSpeaking
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: continueSpeaking
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func continueSpeaking()
 
   /**
-    - jsName: createWithVoice
-    - name: initWithVoice:
-    - argLabels: 
-    - constructorTokens: voice
+    - Selector: initWithVoice:
   */
   @objc static func createWithVoice(_: NSSpeechSynthesizer.VoiceName?) -> Self?
 
   /**
-    - jsName: objectForProperty
-    - name: objectForProperty:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: objectForProperty:error:
     - Introduced: 10.5
   */
   // throws - @objc @available(OSX 10.5, *) func objectForProperty(error: NSSpeechSynthesizer.SpeechPropertyKey) -> Any?
 
   /**
-    - jsName: pauseSpeaking
-    - name: pauseSpeakingAtBoundary:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: pauseSpeaking(at:)
+    - Selector: pauseSpeakingAtBoundary:
     - Introduced: 10.5
   */
   @objc (pauseSpeakingAtBoundary:) @available(OSX 10.5, *) func pauseSpeaking(at: NSSpeechSynthesizer.Boundary)
 
   /**
-    - jsName: phonemes
-    - name: phonemesFromText:
-    - argLabels: from
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: phonemes(from:)
+    - Selector: phonemesFromText:
     - Introduced: 10.5
   */
   @objc (phonemesFromText:) @available(OSX 10.5, *) func phonemes(from: String) -> String
 
   /**
-    - jsName: setObject
-    - name: setObject:forProperty:error:
-    - argLabels: forProperty, error
-    - constructorTokens: 
+    - Selector: setObject:forProperty:error:
     - Introduced: 10.5
   */
   // throws - @objc @available(OSX 10.5, *) func setObject(forProperty: Any?, error: NSSpeechSynthesizer.SpeechPropertyKey) -> Bool
 
   /**
-    - jsName: setVoice
-    - name: setVoice:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setVoice:
   */
   @objc func setVoice(_: NSSpeechSynthesizer.VoiceName?) -> Bool
 
   /**
-    - jsName: startSpeaking
-    - name: startSpeakingString:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: startSpeaking(_:)
+    - Selector: startSpeakingString:
   */
   @objc (startSpeakingString:) func startSpeaking(_: String) -> Bool
 
   /**
-    - jsName: startSpeaking
-    - name: startSpeakingString:toURL:
-    - argLabels: _, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: startSpeaking(_:to:)
+    - Selector: startSpeakingString:toURL:
   */
   @objc (startSpeakingString:toURL:) func startSpeaking(_: String, to: URL) -> Bool
 
   /**
-    - jsName: stopSpeaking
-    - name: stopSpeaking
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: stopSpeaking
   */
   @objc func stopSpeaking()
 
   /**
-    - jsName: stopSpeaking
-    - name: stopSpeakingAtBoundary:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: stopSpeaking(at:)
+    - Selector: stopSpeakingAtBoundary:
     - Introduced: 10.5
   */
   @objc (stopSpeakingAtBoundary:) @available(OSX 10.5, *) func stopSpeaking(at: NSSpeechSynthesizer.Boundary)
 
   /**
-    - jsName: voice
-    - name: voice
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: voice
   */
   @objc func voice() -> NSSpeechSynthesizer.VoiceName?
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSpeechSynthesizerDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: rate
-    - name: rate
-    - argLabels: 
-    - available: 10.5
+    - Selector: rate
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var rate: Float { @objc get @objc (setRate:) set }
 
   /**
-    - jsName: isSpeaking
-    - name: speaking
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isSpeaking
+    - Selector: speaking
   */
   @objc var isSpeaking: Bool { @objc get }
 
   /**
-    - jsName: usesFeedbackWindow
-    - name: usesFeedbackWindow
-    - argLabels: 
+    - Selector: usesFeedbackWindow
   */
   @objc var usesFeedbackWindow: Bool { @objc get @objc (setUsesFeedbackWindow:) set }
 
   /**
-    - jsName: volume
-    - name: volume
-    - argLabels: 
-    - available: 10.5
+    - Selector: volume
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var volume: Float { @objc get @objc (setVolume:) set }

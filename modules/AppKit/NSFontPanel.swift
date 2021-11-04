@@ -9,75 +9,93 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSFontPanel
-    - name: NSFontPanel
-    - argLabels: 
+    - Selector: NSFontPanel
   */
 
 @objc(NSFontPanel) protocol NSFontPanelExports: JSExport, NSPanelExports {
   // Static Methods
 
+  /**
+    - Selector: contentRectForFrameRect:styleMask:
+  */
+  @objc (contentRectForFrameRect:styleMask:) static func contentRect(forFrameRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
+
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: frameRectForContentRect:styleMask:
+  */
+  @objc (frameRectForContentRect:styleMask:) static func frameRect(forContentRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
+
+  /**
+    - Selector: minFrameWidthWithTitle:styleMask:
+  */
+  @objc (minFrameWidthWithTitle:styleMask:) static func minFrameWidth(withTitle: String, styleMask: NSWindow.StyleMask) -> CGFloat
+
+  /**
+    - Selector: removeFrameUsingName:
+  */
+  @objc (removeFrameUsingName:) static func removeFrame(usingName: NSWindow.FrameAutosaveName)
+
+  /**
+    - Selector: standardWindowButton:forStyleMask:
+  */
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+
+  /**
+    - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
+    - Introduced: 10.6
+  */
+  @objc (windowNumberAtPoint:belowWindowWithWindowNumber:) @available(OSX 10.6, *) static func windowNumber(at: CGPoint, belowWindowWithWindowNumber: Int) -> Int
+
+  /**
+    - Selector: windowNumbersWithOptions:
+    - Introduced: 10.6
+  */
+  @objc (windowNumbersWithOptions:) @available(OSX 10.6, *) static func windowNumbers(options: NSWindow.NumberListOptions) -> [NSNumber]?
+
   // Own Static Properties
 
   /**
-    - jsName: shared
-    - name: sharedFontPanel
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: shared
+    - Selector: sharedFontPanel
   */
   @objc static var shared: NSFontPanel { @objc (sharedFontPanel) get }
 
   /**
-    - jsName: sharedFontPanelExists
-    - name: sharedFontPanelExists
-    - argLabels: 
+    - Selector: sharedFontPanelExists
   */
   @objc static var sharedFontPanelExists: Bool { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: convert
-    - name: panelConvertFont:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: convert(_:)
+    - Selector: panelConvertFont:
   */
   @objc (panelConvertFont:) func convert(_: NSFont) -> NSFont
 
   /**
-    - jsName: reloadDefaultFontFamilies
-    - name: reloadDefaultFontFamilies
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reloadDefaultFontFamilies
   */
   @objc func reloadDefaultFontFamilies()
 
   /**
-    - jsName: setPanelFont
-    - name: setPanelFont:isMultiple:
-    - argLabels: isMultiple
-    - constructorTokens: 
+    - Selector: setPanelFont:isMultiple:
   */
   @objc func setPanelFont(_: NSFont, isMultiple: Bool)
 
   // Own Instance Properties
 
   /**
-    - jsName: accessoryView
-    - name: accessoryView
-    - argLabels: 
+    - Selector: accessoryView
   */
   @objc var accessoryView: NSView? { @objc get @objc (setAccessoryView:) set }
 
   /**
-    - jsName: isEnabled
-    - name: enabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEnabled
+    - Selector: enabled
   */
   @objc var isEnabled: Bool { @objc get @objc (setEnabled:) set }
 }

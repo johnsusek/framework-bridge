@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSharingServicePicker
-    - name: NSSharingServicePicker
-    - argLabels: 
+    - Selector: NSSharingServicePicker
     - Introduced: 10.8
   */
 
@@ -21,21 +19,14 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: show
-    - name: showRelativeToRect:ofView:preferredEdge:
-    - argLabels: relativeTo, of, preferredEdge
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: show(relativeTo:of:preferredEdge:)
+    - Selector: showRelativeToRect:ofView:preferredEdge:
   */
   @objc (showRelativeToRect:ofView:preferredEdge:) func show(relativeTo: CGRect, of: NSView, preferredEdge: NSRectEdge)
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSharingServicePickerDelegate? { @objc get @objc (setDelegate:) set }
 }

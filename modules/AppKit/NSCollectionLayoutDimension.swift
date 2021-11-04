@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutDimension
-    - name: NSCollectionLayoutDimension
-    - argLabels: 
+    - Selector: NSCollectionLayoutDimension
     - Introduced: 10.15
   */
 
@@ -19,79 +17,49 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: absolute
-    - name: absoluteDimension:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: absolute(_:)
+    - Selector: absoluteDimension:
   */
   @objc static func absolute(_: CGFloat) -> Self
 
   /**
-    - jsName: estimated
-    - name: estimatedDimension:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: estimated(_:)
+    - Selector: estimatedDimension:
   */
   @objc static func estimated(_: CGFloat) -> Self
 
   /**
-    - jsName: fractionalHeight
-    - name: fractionalHeightDimension:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: fractionalHeight(_:)
+    - Selector: fractionalHeightDimension:
   */
   @objc static func fractionalHeight(_: CGFloat) -> Self
 
   /**
-    - jsName: fractionalWidth
-    - name: fractionalWidthDimension:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: fractionalWidth(_:)
+    - Selector: fractionalWidthDimension:
   */
   @objc static func fractionalWidth(_: CGFloat) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: dimension
-    - name: dimension
-    - argLabels: 
+    - Selector: dimension
   */
   @objc var dimension: CGFloat { @objc get }
 
   /**
-    - jsName: isAbsolute
-    - name: isAbsolute
-    - argLabels: 
+    - Selector: isAbsolute
   */
   @objc var isAbsolute: Bool { @objc get }
 
   /**
-    - jsName: isEstimated
-    - name: isEstimated
-    - argLabels: 
+    - Selector: isEstimated
   */
   @objc var isEstimated: Bool { @objc get }
 
   /**
-    - jsName: isFractionalHeight
-    - name: isFractionalHeight
-    - argLabels: 
+    - Selector: isFractionalHeight
   */
   @objc var isFractionalHeight: Bool { @objc get }
 
   /**
-    - jsName: isFractionalWidth
-    - name: isFractionalWidth
-    - argLabels: 
+    - Selector: isFractionalWidth
   */
   @objc var isFractionalWidth: Bool { @objc get }
 }

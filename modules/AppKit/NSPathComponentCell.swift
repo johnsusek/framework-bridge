@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPathComponentCell
-    - name: NSPathComponentCell
-    - argLabels: 
+    - Selector: NSPathComponentCell
     - Introduced: 10.5
   */
 
@@ -21,11 +19,7 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: url
-    - name: URL
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: url
+    - Selector: URL
   */
   @objc var url: URL? { @objc (URL) get @objc (setURL:) set }
 }

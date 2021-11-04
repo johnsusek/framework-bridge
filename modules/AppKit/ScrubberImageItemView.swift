@@ -9,35 +9,33 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSScrubberImageItemView
-    - name: NSScrubberImageItemView
-    - argLabels: 
+    - Selector: NSScrubberImageItemView
     - Introduced: 10.12.2
   */
 
 @objc(NSScrubberImageItemView) protocol NSScrubberImageItemViewExports: JSExport, NSScrubberItemViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Own Instance Properties
 
   /**
-    - jsName: image
-    - name: image
-    - argLabels: 
+    - Selector: image
   */
   @objc var image: NSImage { @objc get @objc (setImage:) set }
 
   /**
-    - jsName: imageAlignment
-    - name: imageAlignment
-    - argLabels: 
+    - Selector: imageAlignment
   */
   @objc var imageAlignment: NSImageAlignment { @objc get @objc (setImageAlignment:) set }
 
   /**
-    - jsName: imageView
-    - name: imageView
-    - argLabels: 
+    - Selector: imageView
   */
   @objc var imageView: NSImageView { @objc get }
 }

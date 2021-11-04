@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPasteboardItem
-    - name: NSPasteboardItem
-    - argLabels: 
+    - Selector: NSPasteboardItem
     - Introduced: 10.6
   */
 
@@ -21,83 +19,49 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: availableType
-    - name: availableTypeFromArray:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: availableType(from:)
+    - Selector: availableTypeFromArray:
   */
   @objc (availableTypeFromArray:) func availableType(from: [NSPasteboard.PasteboardType]) -> NSPasteboard.PasteboardType?
 
   /**
-    - jsName: data
-    - name: dataForType:
-    - argLabels: forType
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: data(forType:)
+    - Selector: dataForType:
   */
   @objc (dataForType:) func data(forType: NSPasteboard.PasteboardType) -> Data?
 
   /**
-    - jsName: propertyList
-    - name: propertyListForType:
-    - argLabels: forType
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: propertyList(forType:)
+    - Selector: propertyListForType:
   */
   @objc (propertyListForType:) func propertyList(forType: NSPasteboard.PasteboardType) -> Any?
 
   /**
-    - jsName: setData
-    - name: setData:forType:
-    - argLabels: forType
-    - constructorTokens: 
+    - Selector: setData:forType:
   */
   @objc func setData(_: Data, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
-    - jsName: setDataProvider
-    - name: setDataProvider:forTypes:
-    - argLabels: forTypes
-    - constructorTokens: 
+    - Selector: setDataProvider:forTypes:
   */
   @objc func setDataProvider(_: NSPasteboardItemDataProvider, forTypes: [NSPasteboard.PasteboardType]) -> Bool
 
   /**
-    - jsName: setPropertyList
-    - name: setPropertyList:forType:
-    - argLabels: forType
-    - constructorTokens: 
+    - Selector: setPropertyList:forType:
   */
   @objc func setPropertyList(_: Any, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
-    - jsName: setString
-    - name: setString:forType:
-    - argLabels: forType
-    - constructorTokens: 
+    - Selector: setString:forType:
   */
   @objc func setString(_: String, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
-    - jsName: string
-    - name: stringForType:
-    - argLabels: forType
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: string(forType:)
+    - Selector: stringForType:
   */
   @objc (stringForType:) func string(forType: NSPasteboard.PasteboardType) -> String?
 
   // Own Instance Properties
 
   /**
-    - jsName: types
-    - name: types
-    - argLabels: 
+    - Selector: types
   */
   @objc var types: [NSPasteboard.PasteboardType] { @objc get }
 }

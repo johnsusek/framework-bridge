@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLResponse
-    - name: NSURLResponse
-    - argLabels: 
+    - Selector: NSURLResponse
   */
 
 @objc(URLResponse) protocol URLResponseExports: JSExport, NSObjectExports {
@@ -20,51 +18,34 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithURL
-    - name: initWithURL:MIMEType:expectedContentLength:textEncodingName:
-    - argLabels: MIMEType, expectedContentLength, textEncodingName
-    - constructorTokens: url, mimeType, expectedContentLength, textEncodingName
+    - Selector: initWithURL:MIMEType:expectedContentLength:textEncodingName:
   */
   @objc static func createWithURL(_: URL, mimeType: String?, expectedContentLength: Int, textEncodingName: String?) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: mimeType
-    - name: MIMEType
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: mimeType
+    - Selector: MIMEType
   */
   @objc var mimeType: String? { @objc (MIMEType) get }
 
   /**
-    - jsName: url
-    - name: URL
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: url
+    - Selector: URL
   */
   @objc var url: URL? { @objc (URL) get }
 
   /**
-    - jsName: expectedContentLength
-    - name: expectedContentLength
-    - argLabels: 
+    - Selector: expectedContentLength
   */
   @objc var expectedContentLength: Int64 { @objc get }
 
   /**
-    - jsName: suggestedFilename
-    - name: suggestedFilename
-    - argLabels: 
+    - Selector: suggestedFilename
   */
   @objc var suggestedFilename: String? { @objc get }
 
   /**
-    - jsName: textEncodingName
-    - name: textEncodingName
-    - argLabels: 
+    - Selector: textEncodingName
   */
   @objc var textEncodingName: String? { @objc get }
 }

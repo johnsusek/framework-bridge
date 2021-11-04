@@ -9,116 +9,85 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPathControl
-    - name: NSPathControl
-    - argLabels: 
+    - Selector: NSPathControl
     - Introduced: 10.5
   */
 
 @objc(NSPathControl) protocol NSPathControlExports: JSExport, NSControlExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: setDraggingSourceOperationMask
-    - name: setDraggingSourceOperationMask:forLocal:
-    - argLabels: forLocal
-    - constructorTokens: 
+    - Selector: setDraggingSourceOperationMask:forLocal:
   */
   @objc func setDraggingSourceOperationMask(_: NSDragOperation, forLocal: Bool)
 
   // Own Instance Properties
 
   /**
-    - jsName: url
-    - name: URL
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: url
+    - Selector: URL
   */
   @objc var url: URL? { @objc (URL) get @objc (setURL:) set }
 
   /**
-    - jsName: allowedTypes
-    - name: allowedTypes
-    - argLabels: 
-    - available: 10.10
+    - Selector: allowedTypes
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var allowedTypes: [String]? { @objc get @objc (setAllowedTypes:) set }
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor? { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: clickedPathItem
-    - name: clickedPathItem
-    - argLabels: 
-    - available: 10.10
+    - Selector: clickedPathItem
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var clickedPathItem: NSPathControlItem? { @objc get }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSPathControlDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: doubleAction
-    - name: doubleAction
-    - argLabels: 
+    - Selector: doubleAction
   */
   @objc var doubleAction: Selector? { @objc get @objc (setDoubleAction:) set }
 
   /**
-    - jsName: isEditable
-    - name: editable
-    - argLabels: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: isEditable
+    - Selector: editable
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var isEditable: Bool { @objc get @objc (setEditable:) set }
 
   /**
-    - jsName: pathItems
-    - name: pathItems
-    - argLabels: 
-    - available: 10.10
+    - Selector: pathItems
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var pathItems: [NSPathControlItem] { @objc get @objc (setPathItems:) set }
 
   /**
-    - jsName: pathStyle
-    - name: pathStyle
-    - argLabels: 
+    - Selector: pathStyle
   */
   @objc var pathStyle: NSPathControl.Style { @objc get @objc (setPathStyle:) set }
 
   /**
-    - jsName: placeholderAttributedString
-    - name: placeholderAttributedString
-    - argLabels: 
-    - available: 10.10
+    - Selector: placeholderAttributedString
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var placeholderAttributedString: NSAttributedString? { @objc get @objc (setPlaceholderAttributedString:) set }
 
   /**
-    - jsName: placeholderString
-    - name: placeholderString
-    - argLabels: 
-    - available: 10.10
+    - Selector: placeholderString
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var placeholderString: String? { @objc get @objc (setPlaceholderString:) set }

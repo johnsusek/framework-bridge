@@ -9,30 +9,28 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSDeleteCommand
-    - name: NSDeleteCommand
-    - argLabels: 
+    - Selector: NSDeleteCommand
   */
 
 @objc(NSDeleteCommand) protocol NSDeleteCommandExports: JSExport, NSScriptCommandExports {
   // Static Methods
 
+  /**
+    - Selector: currentCommand
+  */
+  @objc (currentCommand) static func current() -> NSScriptCommand?
+
   // Instance Methods
 
   /**
-    - jsName: setReceiversSpecifier
-    - name: setReceiversSpecifier:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setReceiversSpecifier:
   */
   @objc func setReceiversSpecifier(_: NSScriptObjectSpecifier?)
 
   // Own Instance Properties
 
   /**
-    - jsName: keySpecifier
-    - name: keySpecifier
-    - argLabels: 
+    - Selector: keySpecifier
   */
   @objc var keySpecifier: NSScriptObjectSpecifier { @objc get }
 }

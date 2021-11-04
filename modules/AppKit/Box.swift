@@ -9,57 +9,45 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSBox
-    - name: NSBox
-    - argLabels: 
+    - Selector: NSBox
   */
 
 @objc(NSBox) protocol NSBoxExports: JSExport, NSViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: setFrameFromContentFrame
-    - name: setFrameFromContentFrame:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setFrameFromContentFrame:
   */
   @objc func setFrameFromContentFrame(_: CGRect)
 
   /**
-    - jsName: sizeToFit
-    - name: sizeToFit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: sizeToFit
   */
   @objc func sizeToFit()
 
   // Own Instance Properties
 
   /**
-    - jsName: borderColor
-    - name: borderColor
-    - argLabels: 
-    - available: 10.5
+    - Selector: borderColor
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var borderColor: NSColor { @objc get @objc (setBorderColor:) set }
 
   /**
-    - jsName: borderRect
-    - name: borderRect
-    - argLabels: 
+    - Selector: borderRect
   */
   @objc var borderRect: CGRect { @objc get }
 
   /**
-    - jsName: borderType
-    - name: borderType
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 10.15
-    - message: borderType is only applicable to NSBoxOldStyle, which is deprecated. To replace a borderType of NSNoBorder, use the `transparent` property.
+    - Selector: borderType
     - Introduced: 10.0
     - Deprecated: 100000
     - Message: borderType is only applicable to NSBoxOldStyle, which is deprecated. To replace a borderType of NSNoBorder, use the `transparent` property.
@@ -67,95 +55,65 @@ import AppKit
   @objc @available(OSX 10.0, *) var borderType: NSBorderType { @objc get @objc (setBorderType:) set }
 
   /**
-    - jsName: borderWidth
-    - name: borderWidth
-    - argLabels: 
-    - available: 10.5
+    - Selector: borderWidth
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var borderWidth: CGFloat { @objc get @objc (setBorderWidth:) set }
 
   /**
-    - jsName: boxType
-    - name: boxType
-    - argLabels: 
+    - Selector: boxType
   */
   @objc var boxType: NSBox.BoxType { @objc get @objc (setBoxType:) set }
 
   /**
-    - jsName: contentView
-    - name: contentView
-    - argLabels: 
+    - Selector: contentView
   */
   @objc var contentView: NSView? { @objc get @objc (setContentView:) set }
 
   /**
-    - jsName: contentViewMargins
-    - name: contentViewMargins
-    - argLabels: 
+    - Selector: contentViewMargins
   */
   @objc var contentViewMargins: CGSize { @objc get @objc (setContentViewMargins:) set }
 
   /**
-    - jsName: cornerRadius
-    - name: cornerRadius
-    - argLabels: 
-    - available: 10.5
+    - Selector: cornerRadius
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var cornerRadius: CGFloat { @objc get @objc (setCornerRadius:) set }
 
   /**
-    - jsName: fillColor
-    - name: fillColor
-    - argLabels: 
-    - available: 10.5
+    - Selector: fillColor
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var fillColor: NSColor { @objc get @objc (setFillColor:) set }
 
   /**
-    - jsName: title
-    - name: title
-    - argLabels: 
+    - Selector: title
   */
   @objc var title: String { @objc get @objc (setTitle:) set }
 
   /**
-    - jsName: titleCell
-    - name: titleCell
-    - argLabels: 
+    - Selector: titleCell
   */
   @objc var titleCell: Any { @objc get }
 
   /**
-    - jsName: titleFont
-    - name: titleFont
-    - argLabels: 
+    - Selector: titleFont
   */
   @objc var titleFont: NSFont { @objc get @objc (setTitleFont:) set }
 
   /**
-    - jsName: titlePosition
-    - name: titlePosition
-    - argLabels: 
+    - Selector: titlePosition
   */
   @objc var titlePosition: NSBox.TitlePosition { @objc get @objc (setTitlePosition:) set }
 
   /**
-    - jsName: titleRect
-    - name: titleRect
-    - argLabels: 
+    - Selector: titleRect
   */
   @objc var titleRect: CGRect { @objc get }
 
   /**
-    - jsName: isTransparent
-    - name: transparent
-    - argLabels: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: isTransparent
+    - Selector: transparent
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var isTransparent: Bool { @objc get @objc (setTransparent:) set }

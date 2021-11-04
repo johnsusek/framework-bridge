@@ -9,179 +9,124 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSRulerView
-    - name: NSRulerView
-    - argLabels: 
+    - Selector: NSRulerView
   */
 
 @objc(NSRulerView) protocol NSRulerViewExports: JSExport, NSViewExports {
   // Static Methods
 
   /**
-    - jsName: registerUnit
-    - name: registerUnitWithName:abbreviation:unitToPointsConversionFactor:stepUpCycle:stepDownCycle:
-    - argLabels: withName, abbreviation, unitToPointsConversionFactor, stepUpCycle, stepDownCycle
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: registerUnit(withName:abbreviation:unitToPointsConversionFactor:stepUpCycle:stepDownCycle:)
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: registerUnitWithName:abbreviation:unitToPointsConversionFactor:stepUpCycle:stepDownCycle:
   */
   @objc (registerUnitWithName:abbreviation:unitToPointsConversionFactor:stepUpCycle:stepDownCycle:) static func registerUnit(withName: NSRulerView.UnitName, abbreviation: String, unitToPointsConversionFactor: CGFloat, stepUpCycle: [NSNumber], stepDownCycle: [NSNumber])
 
   // Instance Methods
 
   /**
-    - jsName: addMarker
-    - name: addMarker:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addMarker:
   */
   @objc func addMarker(_: NSRulerMarker)
 
   /**
-    - jsName: drawHashMarksAndLabels
-    - name: drawHashMarksAndLabelsInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawHashMarksAndLabels(in:)
+    - Selector: drawHashMarksAndLabelsInRect:
   */
   @objc (drawHashMarksAndLabelsInRect:) func drawHashMarksAndLabels(in: CGRect)
 
   /**
-    - jsName: drawMarkers
-    - name: drawMarkersInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawMarkers(in:)
+    - Selector: drawMarkersInRect:
   */
   @objc (drawMarkersInRect:) func drawMarkers(in: CGRect)
 
   /**
-    - jsName: createWithScrollView
-    - name: initWithScrollView:orientation:
-    - argLabels: orientation
-    - constructorTokens: scrollView, orientation
+    - Selector: initWithScrollView:orientation:
   */
   @objc static func createWithScrollView(_: NSScrollView?, orientation: NSRulerView.Orientation) -> Self
 
   /**
-    - jsName: invalidateHashMarks
-    - name: invalidateHashMarks
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidateHashMarks
   */
   @objc func invalidateHashMarks()
 
   /**
-    - jsName: moveRulerline
-    - name: moveRulerlineFromLocation:toLocation:
-    - argLabels: fromLocation, toLocation
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: moveRulerline(fromLocation:toLocation:)
+    - Selector: moveRulerlineFromLocation:toLocation:
   */
   @objc (moveRulerlineFromLocation:toLocation:) func moveRulerline(fromLocation: CGFloat, toLocation: CGFloat)
 
   /**
-    - jsName: removeMarker
-    - name: removeMarker:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeMarker:
   */
   @objc func removeMarker(_: NSRulerMarker)
 
   /**
-    - jsName: trackMarker
-    - name: trackMarker:withMouseEvent:
-    - argLabels: withMouseEvent
-    - constructorTokens: 
+    - Selector: trackMarker:withMouseEvent:
   */
   @objc func trackMarker(_: NSRulerMarker, withMouseEvent: NSEvent) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: accessoryView
-    - name: accessoryView
-    - argLabels: 
+    - Selector: accessoryView
   */
   @objc var accessoryView: NSView? { @objc get @objc (setAccessoryView:) set }
 
   /**
-    - jsName: baselineLocation
-    - name: baselineLocation
-    - argLabels: 
+    - Selector: baselineLocation
   */
   @objc var baselineLocation: CGFloat { @objc get }
 
   /**
-    - jsName: clientView
-    - name: clientView
-    - argLabels: 
+    - Selector: clientView
   */
   @objc var clientView: NSView? { @objc get @objc (setClientView:) set }
 
   /**
-    - jsName: markers
-    - name: markers
-    - argLabels: 
+    - Selector: markers
   */
   @objc var markers: [NSRulerMarker]? { @objc get @objc (setMarkers:) set }
 
   /**
-    - jsName: measurementUnits
-    - name: measurementUnits
-    - argLabels: 
+    - Selector: measurementUnits
   */
   @objc var measurementUnits: NSRulerView.UnitName { @objc get @objc (setMeasurementUnits:) set }
 
   /**
-    - jsName: orientation
-    - name: orientation
-    - argLabels: 
+    - Selector: orientation
   */
   @objc var orientation: NSRulerView.Orientation { @objc get @objc (setOrientation:) set }
 
   /**
-    - jsName: originOffset
-    - name: originOffset
-    - argLabels: 
+    - Selector: originOffset
   */
   @objc var originOffset: CGFloat { @objc get @objc (setOriginOffset:) set }
 
   /**
-    - jsName: requiredThickness
-    - name: requiredThickness
-    - argLabels: 
+    - Selector: requiredThickness
   */
   @objc var requiredThickness: CGFloat { @objc get }
 
   /**
-    - jsName: reservedThicknessForAccessoryView
-    - name: reservedThicknessForAccessoryView
-    - argLabels: 
+    - Selector: reservedThicknessForAccessoryView
   */
   @objc var reservedThicknessForAccessoryView: CGFloat { @objc get @objc (setReservedThicknessForAccessoryView:) set }
 
   /**
-    - jsName: reservedThicknessForMarkers
-    - name: reservedThicknessForMarkers
-    - argLabels: 
+    - Selector: reservedThicknessForMarkers
   */
   @objc var reservedThicknessForMarkers: CGFloat { @objc get @objc (setReservedThicknessForMarkers:) set }
 
   /**
-    - jsName: ruleThickness
-    - name: ruleThickness
-    - argLabels: 
+    - Selector: ruleThickness
   */
   @objc var ruleThickness: CGFloat { @objc get @objc (setRuleThickness:) set }
 
   /**
-    - jsName: scrollView
-    - name: scrollView
-    - argLabels: 
+    - Selector: scrollView
   */
   @objc var scrollView: NSScrollView? { @objc get @objc (setScrollView:) set }
 }

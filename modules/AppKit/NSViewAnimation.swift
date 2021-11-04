@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSViewAnimation
-    - name: NSViewAnimation
-    - argLabels: 
+    - Selector: NSViewAnimation
   */
 
 @objc(NSViewAnimation) protocol NSViewAnimationExports: JSExport, NSAnimationExports {
@@ -20,19 +18,14 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithViewAnimations
-    - name: initWithViewAnimations:
-    - argLabels: 
-    - constructorTokens: viewAnimations
+    - Selector: initWithViewAnimations:
   */
   @objc static func createWithViewAnimations(_: [[NSViewAnimation.Key: Any]]) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: viewAnimations
-    - name: viewAnimations
-    - argLabels: 
+    - Selector: viewAnimations
   */
   @objc var viewAnimations: [[NSViewAnimation.Key: Any]] { @objc get @objc (setViewAnimations:) set }
 }

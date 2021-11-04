@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSUserInterfaceCompressionOptions
-    - name: NSUserInterfaceCompressionOptions
-    - argLabels: 
+    - Selector: NSUserInterfaceCompressionOptions
     - Introduced: 10.13
   */
 
@@ -21,106 +19,61 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: breakEqualWidths
-    - name: breakEqualWidthsOption
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: breakEqualWidths
+    - Selector: breakEqualWidthsOption
   */
   @objc static var breakEqualWidths: NSUserInterfaceCompressionOptions { @objc (breakEqualWidthsOption) get }
 
   /**
-    - jsName: hideImages
-    - name: hideImagesOption
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: hideImages
+    - Selector: hideImagesOption
   */
   @objc static var hideImages: NSUserInterfaceCompressionOptions { @objc (hideImagesOption) get }
 
   /**
-    - jsName: hideText
-    - name: hideTextOption
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: hideText
+    - Selector: hideTextOption
   */
   @objc static var hideText: NSUserInterfaceCompressionOptions { @objc (hideTextOption) get }
 
   /**
-    - jsName: reduceMetrics
-    - name: reduceMetricsOption
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: reduceMetrics
+    - Selector: reduceMetricsOption
   */
   @objc static var reduceMetrics: NSUserInterfaceCompressionOptions { @objc (reduceMetricsOption) get }
 
   /**
-    - jsName: standardOptions
-    - name: standardOptions
-    - argLabels: 
+    - Selector: standardOptions
   */
   @objc static var standardOptions: NSUserInterfaceCompressionOptions { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: contains
-    - name: containsOptions:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: contains(_:)
+    - Selector: containsOptions:
   */
   @objc (containsOptions:) func contains(_: NSUserInterfaceCompressionOptions) -> Bool
 
   /**
-    - jsName: create
-    - name: initWithCompressionOptions:
-    - argLabels: options
-    - constructorTokens: compressionOptions
+    - Selector: initWithCompressionOptions:
   */
   @objc static func create(options: Set<NSUserInterfaceCompressionOptions>) -> Self
 
   /**
-    - jsName: intersects
-    - name: intersectsOptions:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: intersects(_:)
+    - Selector: intersectsOptions:
   */
   @objc (intersectsOptions:) func intersects(_: NSUserInterfaceCompressionOptions) -> Bool
 
   /**
-    - jsName: union
-    - name: optionsByAddingOptions:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: union(_:)
+    - Selector: optionsByAddingOptions:
   */
   @objc (optionsByAddingOptions:) func union(_: NSUserInterfaceCompressionOptions) -> NSUserInterfaceCompressionOptions
 
   /**
-    - jsName: subtracting
-    - name: optionsByRemovingOptions:
-    - argLabels: _
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: subtracting(_:)
+    - Selector: optionsByRemovingOptions:
   */
   @objc (optionsByRemovingOptions:) func subtracting(_: NSUserInterfaceCompressionOptions) -> NSUserInterfaceCompressionOptions
 
   // Own Instance Properties
 
   /**
-    - jsName: isEmpty
-    - name: empty
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEmpty
+    - Selector: empty
   */
   @objc var isEmpty: Bool { @objc get }
 }

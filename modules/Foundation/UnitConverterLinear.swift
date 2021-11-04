@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitConverterLinear
-    - name: NSUnitConverterLinear
-    - argLabels: 
+    - Selector: NSUnitConverterLinear
     - Introduced: 10.12
   */
 
@@ -21,34 +19,24 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithCoefficient
-    - name: initWithCoefficient:
-    - argLabels: 
-    - constructorTokens: coefficient
+    - Selector: initWithCoefficient:
   */
   @objc static func createWithCoefficient(_: Double) -> Self
 
   /**
-    - jsName: createWithCoefficient
-    - name: initWithCoefficient:constant:
-    - argLabels: constant
-    - constructorTokens: coefficient, constant
+    - Selector: initWithCoefficient:constant:
   */
   @objc static func createWithCoefficient(_: Double, constant: Double) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: coefficient
-    - name: coefficient
-    - argLabels: 
+    - Selector: coefficient
   */
   @objc var coefficient: Double { @objc get }
 
   /**
-    - jsName: constant
-    - name: constant
-    - argLabels: 
+    - Selector: constant
   */
   @objc var constant: Double { @objc get }
 }

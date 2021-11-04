@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSFormCell
-    - name: NSFormCell
-    - argLabels: 
+    - Selector: NSFormCell
   */
 
 @objc(NSFormCell) protocol NSFormCellExports: JSExport, NSActionCellExports {
@@ -20,70 +18,50 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: titleWidth
-    - name: titleWidth:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: titleWidth:
   */
   @objc func titleWidth(_: CGSize) -> CGFloat
 
   // Own Instance Properties
 
   /**
-    - jsName: attributedTitle
-    - name: attributedTitle
-    - argLabels: 
+    - Selector: attributedTitle
   */
   @objc var attributedTitle: NSAttributedString { @objc get @objc (setAttributedTitle:) set }
 
   /**
-    - jsName: placeholderAttributedString
-    - name: placeholderAttributedString
-    - argLabels: 
+    - Selector: placeholderAttributedString
   */
   @objc var placeholderAttributedString: NSAttributedString? { @objc get @objc (setPlaceholderAttributedString:) set }
 
   /**
-    - jsName: placeholderString
-    - name: placeholderString
-    - argLabels: 
+    - Selector: placeholderString
   */
   @objc var placeholderString: String? { @objc get @objc (setPlaceholderString:) set }
 
   /**
-    - jsName: preferredTextFieldWidth
-    - name: preferredTextFieldWidth
-    - argLabels: 
-    - available: 10.8
+    - Selector: preferredTextFieldWidth
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) var preferredTextFieldWidth: CGFloat { @objc get @objc (setPreferredTextFieldWidth:) set }
 
   /**
-    - jsName: titleAlignment
-    - name: titleAlignment
-    - argLabels: 
+    - Selector: titleAlignment
   */
   @objc var titleAlignment: NSTextAlignment { @objc get @objc (setTitleAlignment:) set }
 
   /**
-    - jsName: titleBaseWritingDirection
-    - name: titleBaseWritingDirection
-    - argLabels: 
+    - Selector: titleBaseWritingDirection
   */
   @objc var titleBaseWritingDirection: NSWritingDirection { @objc get @objc (setTitleBaseWritingDirection:) set }
 
   /**
-    - jsName: titleFont
-    - name: titleFont
-    - argLabels: 
+    - Selector: titleFont
   */
   @objc var titleFont: NSFont { @objc get @objc (setTitleFont:) set }
 
   /**
-    - jsName: titleWidth
-    - name: titleWidth
-    - argLabels: 
+    - Selector: titleWidth
   */
   @objc var titleWidth: CGFloat { @objc get @objc (setTitleWidth:) set }
 }

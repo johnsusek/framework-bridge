@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTouchBarItem
-    - name: NSTouchBarItem
-    - argLabels: 
+    - Selector: NSTouchBarItem
     - Introduced: 10.12.2
   */
 
@@ -21,46 +19,32 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: customizationLabel
-    - name: customizationLabel
-    - argLabels: 
+    - Selector: customizationLabel
   */
   @objc var customizationLabel: String { @objc get }
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: NSTouchBarItem.Identifier { @objc get }
 
   /**
-    - jsName: view
-    - name: view
-    - argLabels: 
+    - Selector: view
   */
   @objc var view: NSView? { @objc get }
 
   /**
-    - jsName: viewController
-    - name: viewController
-    - argLabels: 
+    - Selector: viewController
   */
   @objc var viewController: NSViewController? { @objc get }
 
   /**
-    - jsName: visibilityPriority
-    - name: visibilityPriority
-    - argLabels: 
+    - Selector: visibilityPriority
   */
   @objc var visibilityPriority: NSTouchBarItem.Priority { @objc get @objc (setVisibilityPriority:) set }
 
   /**
-    - jsName: isVisible
-    - name: visible
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isVisible
+    - Selector: visible
   */
   @objc var isVisible: Bool { @objc get }
 }

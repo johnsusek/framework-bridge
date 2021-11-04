@@ -9,264 +9,169 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSRuleEditor
-    - name: NSRuleEditor
-    - argLabels: 
+    - Selector: NSRuleEditor
   */
 
 @objc(NSRuleEditor) protocol NSRuleEditorExports: JSExport, NSControlExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: addRow
-    - name: addRow:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addRow:
   */
   @objc func addRow(_: Any?)
 
   /**
-    - jsName: criteria
-    - name: criteriaForRow:
-    - argLabels: forRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: criteria(forRow:)
+    - Selector: criteriaForRow:
   */
   @objc (criteriaForRow:) func criteria(forRow: Int) -> [Any]
 
   /**
-    - jsName: displayValues
-    - name: displayValuesForRow:
-    - argLabels: forRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: displayValues(forRow:)
+    - Selector: displayValuesForRow:
   */
   @objc (displayValuesForRow:) func displayValues(forRow: Int) -> [Any]
 
   /**
-    - jsName: insertRow
-    - name: insertRowAtIndex:withType:asSubrowOfRow:animate:
-    - argLabels: at, with, asSubrowOfRow, animate
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertRow(at:with:asSubrowOfRow:animate:)
+    - Selector: insertRowAtIndex:withType:asSubrowOfRow:animate:
   */
   @objc (insertRowAtIndex:withType:asSubrowOfRow:animate:) func insertRow(at: Int, with: NSRuleEditor.RowType, asSubrowOfRow: Int, animate: Bool)
 
   /**
-    - jsName: parentRow
-    - name: parentRowForRow:
-    - argLabels: forRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: parentRow(forRow:)
+    - Selector: parentRowForRow:
   */
   @objc (parentRowForRow:) func parentRow(forRow: Int) -> Int
 
   /**
-    - jsName: predicate
-    - name: predicateForRow:
-    - argLabels: forRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: predicate(forRow:)
+    - Selector: predicateForRow:
   */
   @objc (predicateForRow:) func predicate(forRow: Int) -> NSPredicate?
 
   /**
-    - jsName: reloadCriteria
-    - name: reloadCriteria
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reloadCriteria
   */
   @objc func reloadCriteria()
 
   /**
-    - jsName: reloadPredicate
-    - name: reloadPredicate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reloadPredicate
   */
   @objc func reloadPredicate()
 
   /**
-    - jsName: removeRow
-    - name: removeRowAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeRow(at:)
+    - Selector: removeRowAtIndex:
   */
   @objc (removeRowAtIndex:) func removeRow(at: Int)
 
   /**
-    - jsName: removeRows
-    - name: removeRowsAtIndexes:includeSubrows:
-    - argLabels: at, includeSubrows
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeRows(at:includeSubrows:)
+    - Selector: removeRowsAtIndexes:includeSubrows:
   */
   @objc (removeRowsAtIndexes:includeSubrows:) func removeRows(at: IndexSet, includeSubrows: Bool)
 
   /**
-    - jsName: row
-    - name: rowForDisplayValue:
-    - argLabels: forDisplayValue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: row(forDisplayValue:)
+    - Selector: rowForDisplayValue:
   */
   @objc (rowForDisplayValue:) func row(forDisplayValue: Any) -> Int
 
   /**
-    - jsName: rowType
-    - name: rowTypeForRow:
-    - argLabels: forRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: rowType(forRow:)
+    - Selector: rowTypeForRow:
   */
   @objc (rowTypeForRow:) func rowType(forRow: Int) -> NSRuleEditor.RowType
 
   /**
-    - jsName: selectRowIndexes
-    - name: selectRowIndexes:byExtendingSelection:
-    - argLabels: byExtendingSelection
-    - constructorTokens: 
+    - Selector: selectRowIndexes:byExtendingSelection:
   */
   @objc func selectRowIndexes(_: IndexSet, byExtendingSelection: Bool)
 
   /**
-    - jsName: setCriteria
-    - name: setCriteria:andDisplayValues:forRowAtIndex:
-    - argLabels: _, andDisplayValues, forRowAt
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setCriteria(_:andDisplayValues:forRowAt:)
+    - Selector: setCriteria:andDisplayValues:forRowAtIndex:
   */
   @objc (setCriteria:andDisplayValues:forRowAtIndex:) func setCriteria(_: [Any], andDisplayValues: [Any], forRowAt: Int)
 
   /**
-    - jsName: subrowIndexes
-    - name: subrowIndexesForRow:
-    - argLabels: forRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: subrowIndexes(forRow:)
+    - Selector: subrowIndexesForRow:
   */
   @objc (subrowIndexesForRow:) func subrowIndexes(forRow: Int) -> IndexSet
 
   // Own Instance Properties
 
   /**
-    - jsName: canRemoveAllRows
-    - name: canRemoveAllRows
-    - argLabels: 
+    - Selector: canRemoveAllRows
   */
   @objc var canRemoveAllRows: Bool { @objc get @objc (setCanRemoveAllRows:) set }
 
   /**
-    - jsName: criteriaKeyPath
-    - name: criteriaKeyPath
-    - argLabels: 
+    - Selector: criteriaKeyPath
   */
   @objc var criteriaKeyPath: String { @objc get @objc (setCriteriaKeyPath:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSRuleEditorDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: displayValuesKeyPath
-    - name: displayValuesKeyPath
-    - argLabels: 
+    - Selector: displayValuesKeyPath
   */
   @objc var displayValuesKeyPath: String { @objc get @objc (setDisplayValuesKeyPath:) set }
 
   /**
-    - jsName: isEditable
-    - name: editable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEditable
+    - Selector: editable
   */
   @objc var isEditable: Bool { @objc get @objc (setEditable:) set }
 
   /**
-    - jsName: formattingDictionary
-    - name: formattingDictionary
-    - argLabels: 
+    - Selector: formattingDictionary
   */
   @objc var formattingDictionary: [String: String]? { @objc get @objc (setFormattingDictionary:) set }
 
   /**
-    - jsName: formattingStringsFilename
-    - name: formattingStringsFilename
-    - argLabels: 
+    - Selector: formattingStringsFilename
   */
   @objc var formattingStringsFilename: String? { @objc get @objc (setFormattingStringsFilename:) set }
 
   /**
-    - jsName: nestingMode
-    - name: nestingMode
-    - argLabels: 
+    - Selector: nestingMode
   */
   @objc var nestingMode: NSRuleEditor.NestingMode { @objc get @objc (setNestingMode:) set }
 
   /**
-    - jsName: numberOfRows
-    - name: numberOfRows
-    - argLabels: 
+    - Selector: numberOfRows
   */
   @objc var numberOfRows: Int { @objc get }
 
   /**
-    - jsName: predicate
-    - name: predicate
-    - argLabels: 
+    - Selector: predicate
   */
   @objc var predicate: NSPredicate? { @objc get }
 
   /**
-    - jsName: rowClass
-    - name: rowClass
-    - argLabels: 
+    - Selector: rowClass
   */
   @objc var rowClass: AnyClass { @objc get @objc (setRowClass:) set }
 
   /**
-    - jsName: rowHeight
-    - name: rowHeight
-    - argLabels: 
+    - Selector: rowHeight
   */
   @objc var rowHeight: CGFloat { @objc get @objc (setRowHeight:) set }
 
   /**
-    - jsName: rowTypeKeyPath
-    - name: rowTypeKeyPath
-    - argLabels: 
+    - Selector: rowTypeKeyPath
   */
   @objc var rowTypeKeyPath: String { @objc get @objc (setRowTypeKeyPath:) set }
 
   /**
-    - jsName: selectedRowIndexes
-    - name: selectedRowIndexes
-    - argLabels: 
+    - Selector: selectedRowIndexes
   */
   @objc var selectedRowIndexes: IndexSet { @objc get }
 
   /**
-    - jsName: subrowsKeyPath
-    - name: subrowsKeyPath
-    - argLabels: 
+    - Selector: subrowsKeyPath
   */
   @objc var subrowsKeyPath: String { @objc get @objc (setSubrowsKeyPath:) set }
 }

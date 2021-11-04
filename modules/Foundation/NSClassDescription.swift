@@ -9,29 +9,19 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSClassDescription
-    - name: NSClassDescription
-    - argLabels: 
+    - Selector: NSClassDescription
   */
 
 @objc(NSClassDescription) protocol NSClassDescriptionExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: invalidateClassDescriptionCache
-    - name: invalidateClassDescriptionCache
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidateClassDescriptionCache
   */
   @objc static func invalidateClassDescriptionCache()
 
   /**
-    - jsName: register
-    - name: registerClassDescription:forClass:
-    - argLabels: _, for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: register(_:for:)
+    - Selector: registerClassDescription:forClass:
   */
   @objc (registerClassDescription:forClass:) static func register(_: NSClassDescription, `for`: AnyClass)
 }

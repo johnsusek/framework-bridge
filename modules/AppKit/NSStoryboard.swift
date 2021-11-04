@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSStoryboard
-    - name: NSStoryboard
-    - argLabels: 
+    - Selector: NSStoryboard
     - Introduced: 10.10
   */
 
@@ -19,25 +17,14 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: storyboardWithName:bundle:
-    - argLabels: name, bundle
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(name:bundle:)
-    - message: Not available in Swift
+    - Selector: storyboardWithName:bundle:
   */
   @objc static func create(name: NSStoryboard.Name, bundle: Bundle?) -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: main
-    - name: mainStoryboard
-    - argLabels: 
-    - available: 10.13
-    - obsoleted: 3
-    - renamed: main
+    - Selector: mainStoryboard
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) static var main: NSStoryboard? { @objc (mainStoryboard) get }
@@ -45,40 +32,26 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: instantiateController
-    - name: instantiateControllerWithIdentifier:
-    - argLabels: withIdentifier
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: instantiateController(withIdentifier:)
+    - Selector: instantiateControllerWithIdentifier:
   */
   @objc (instantiateControllerWithIdentifier:) func instantiateController(withIdentifier: NSStoryboard.SceneIdentifier) -> Any
 
   /**
-    - jsName: instantiateControllerWithIdentifier
-    - name: instantiateControllerWithIdentifier:creator:
-    - argLabels: creator
-    - constructorTokens: 
+    - Selector: instantiateControllerWithIdentifier:creator:
     - Introduced: 10.15
   */
-  // jsvalue - @objc @available(OSX 10.15, *) func instantiateControllerWithIdentifier(_: NSStoryboard.SceneIdentifier, creator: JSValue?) -> Any
+  // jsvalue @objc @available(OSX 10.15, *) func instantiateControllerWithIdentifier(_: NSStoryboard.SceneIdentifier, creator: JSValue?) -> Any
 
   /**
-    - jsName: instantiateInitialController
-    - name: instantiateInitialController
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: instantiateInitialController
   */
   @objc func instantiateInitialController() -> Any?
 
   /**
-    - jsName: instantiateInitialControllerWithCreator
-    - name: instantiateInitialControllerWithCreator:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: instantiateInitialControllerWithCreator:
     - Introduced: 10.15
   */
-  // jsvalue - @objc @available(OSX 10.15, *) func instantiateInitialControllerWithCreator(_: JSValue?) -> Any?
+  // jsvalue @objc @available(OSX 10.15, *) func instantiateInitialControllerWithCreator(_: JSValue?) -> Any?
 }
 
 extension NSStoryboard: NSStoryboardExports {

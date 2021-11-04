@@ -9,54 +9,59 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCustomImageRep
-    - name: NSCustomImageRep
-    - argLabels: 
+    - Selector: NSCustomImageRep
   */
 
 @objc(NSCustomImageRep) protocol NSCustomImageRepExports: JSExport, NSImageRepExports {
   // Static Methods
 
+  /**
+    - Selector: canInitWithData:
+  */
+  @objc (canInitWithData:) static func canInit(with: Data) -> Bool
+
+  /**
+    - Selector: imageRepsWithContentsOfFile:
+  */
+  @objc (imageRepsWithContentsOfFile:) static func imageReps(withContentsOfFile: String) -> [NSImageRep]?
+
+  /**
+    - Selector: registerImageRepClass:
+  */
+  @objc (registerImageRepClass:) static func registerClass(_: AnyClass)
+
+  /**
+    - Selector: unregisterImageRepClass:
+  */
+  @objc (unregisterImageRepClass:) static func unregisterClass(_: AnyClass)
+
   // Instance Methods
 
   /**
-    - jsName: createWithDrawSelector
-    - name: initWithDrawSelector:delegate:
-    - argLabels: delegate
-    - constructorTokens: drawSelector, delegate
+    - Selector: initWithDrawSelector:delegate:
   */
   @objc static func createWithDrawSelector(_: Selector, delegate: Any) -> Self
 
   /**
-    - jsName: createWithSize
-    - name: initWithSize:flipped:drawingHandler:
-    - argLabels: flipped, drawingHandler
-    - constructorTokens: size, flipped, drawingHandler
+    - Selector: initWithSize:flipped:drawingHandler:
     - Introduced: 10.8
   */
-  @objc @available(OSX 10.8, *) static func createWithSize(_: CGSize, flipped: Bool, drawingHandler: JSValue) -> Self
+  // jsvalue @objc @available(OSX 10.8, *) static func createWithSize(_: CGSize, flipped: Bool, drawingHandler: JSValue) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: AnyObject? { @objc get }
 
   /**
-    - jsName: drawSelector
-    - name: drawSelector
-    - argLabels: 
+    - Selector: drawSelector
   */
   @objc var drawSelector: Selector? { @objc get }
 
   /**
-    - jsName: drawingHandler
-    - name: drawingHandler
-    - argLabels: 
-    - available: 10.8
+    - Selector: drawingHandler
     - Introduced: 10.8
   */
 // jsvalue   @objc @available(OSX 10.8, *) var drawingHandler: JSValue? { @objc get }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSRotationGestureRecognizer
-    - name: NSRotationGestureRecognizer
-    - argLabels: 
+    - Selector: NSRotationGestureRecognizer
     - Introduced: 10.10
   */
 
@@ -21,16 +19,12 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: rotation
-    - name: rotation
-    - argLabels: 
+    - Selector: rotation
   */
   @objc var rotation: CGFloat { @objc get @objc (setRotation:) set }
 
   /**
-    - jsName: rotationInDegrees
-    - name: rotationInDegrees
-    - argLabels: 
+    - Selector: rotationInDegrees
   */
   @objc var rotationInDegrees: CGFloat { @objc get @objc (setRotationInDegrees:) set }
 }

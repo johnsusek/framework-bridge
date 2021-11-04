@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSUserAppleScriptTask
-    - name: NSUserAppleScriptTask
-    - argLabels: 
+    - Selector: NSUserAppleScriptTask
     - Introduced: 10.8
   */
 
@@ -21,14 +19,9 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: execute
-    - name: executeWithAppleEvent:completionHandler:
-    - argLabels: withAppleEvent, completionHandler
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: execute(withAppleEvent:completionHandler:)
+    - Selector: executeWithAppleEvent:completionHandler:
   */
-  // jsvalue - @objc (executeWithAppleEvent:completionHandler:) func execute(withAppleEvent: NSAppleEventDescriptor?, completionHandler: JSValue?)
+  // jsvalue @objc func execute(withAppleEvent: NSAppleEventDescriptor?, completionHandler: JSValue?)
 }
 
 extension NSUserAppleScriptTask: NSUserAppleScriptTaskExports {

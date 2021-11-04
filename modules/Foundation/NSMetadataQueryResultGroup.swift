@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSMetadataQueryResultGroup
-    - name: NSMetadataQueryResultGroup
-    - argLabels: 
+    - Selector: NSMetadataQueryResultGroup
     - Introduced: 10.4
   */
 
@@ -21,49 +19,34 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: result
-    - name: resultAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: result(at:)
+    - Selector: resultAtIndex:
   */
   @objc (resultAtIndex:) func result(at: Int) -> Any
 
   // Own Instance Properties
 
   /**
-    - jsName: attribute
-    - name: attribute
-    - argLabels: 
+    - Selector: attribute
   */
   @objc var attribute: String { @objc get }
 
   /**
-    - jsName: resultCount
-    - name: resultCount
-    - argLabels: 
+    - Selector: resultCount
   */
   @objc var resultCount: Int { @objc get }
 
   /**
-    - jsName: results
-    - name: results
-    - argLabels: 
+    - Selector: results
   */
   @objc var results: [Any] { @objc get }
 
   /**
-    - jsName: subgroups
-    - name: subgroups
-    - argLabels: 
+    - Selector: subgroups
   */
   @objc var subgroups: [NSMetadataQueryResultGroup]? { @objc get }
 
   /**
-    - jsName: value
-    - name: value
-    - argLabels: 
+    - Selector: value
   */
   @objc var value: Any { @objc get }
 }

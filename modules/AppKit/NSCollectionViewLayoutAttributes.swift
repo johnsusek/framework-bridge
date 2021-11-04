@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewLayoutAttributes
-    - name: NSCollectionViewLayoutAttributes
-    - argLabels: 
+    - Selector: NSCollectionViewLayoutAttributes
     - Introduced: 10.11
   */
 
@@ -19,106 +17,64 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: layoutAttributesForDecorationViewOfKind:withIndexPath:
-    - argLabels: forDecorationViewOfKind, with
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forDecorationViewOfKind:with:)
-    - message: Not available in Swift
+    - Selector: layoutAttributesForDecorationViewOfKind:withIndexPath:
   */
   @objc static func create(forDecorationViewOfKind: NSCollectionView.DecorationElementKind, with: IndexPath) -> Self
 
   /**
-    - jsName: create
-    - name: layoutAttributesForInterItemGapBeforeIndexPath:
-    - argLabels: forInterItemGapBefore
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forInterItemGapBefore:)
-    - message: Not available in Swift
+    - Selector: layoutAttributesForInterItemGapBeforeIndexPath:
   */
   @objc static func create(forInterItemGapBefore: IndexPath) -> Self
 
   /**
-    - jsName: create
-    - name: layoutAttributesForItemWithIndexPath:
-    - argLabels: forItemWith
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forItemWith:)
-    - message: Not available in Swift
+    - Selector: layoutAttributesForItemWithIndexPath:
   */
   @objc static func create(forItemWith: IndexPath) -> Self
 
   /**
-    - jsName: create
-    - name: layoutAttributesForSupplementaryViewOfKind:withIndexPath:
-    - argLabels: forSupplementaryViewOfKind, with
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forSupplementaryViewOfKind:with:)
-    - message: Not available in Swift
+    - Selector: layoutAttributesForSupplementaryViewOfKind:withIndexPath:
   */
   @objc static func create(forSupplementaryViewOfKind: NSCollectionView.SupplementaryElementKind, with: IndexPath) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: alpha
-    - name: alpha
-    - argLabels: 
+    - Selector: alpha
   */
   @objc var alpha: CGFloat { @objc get @objc (setAlpha:) set }
 
   /**
-    - jsName: frame
-    - name: frame
-    - argLabels: 
+    - Selector: frame
   */
   @objc var frame: CGRect { @objc get @objc (setFrame:) set }
 
   /**
-    - jsName: isHidden
-    - name: hidden
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isHidden
+    - Selector: hidden
   */
   @objc var isHidden: Bool { @objc get @objc (setHidden:) set }
 
   /**
-    - jsName: indexPath
-    - name: indexPath
-    - argLabels: 
+    - Selector: indexPath
   */
   @objc var indexPath: IndexPath? { @objc get @objc (setIndexPath:) set }
 
   /**
-    - jsName: representedElementCategory
-    - name: representedElementCategory
-    - argLabels: 
+    - Selector: representedElementCategory
   */
   @objc var representedElementCategory: NSCollectionElementCategory { @objc get }
 
   /**
-    - jsName: representedElementKind
-    - name: representedElementKind
-    - argLabels: 
+    - Selector: representedElementKind
   */
   @objc var representedElementKind: String? { @objc get }
 
   /**
-    - jsName: size
-    - name: size
-    - argLabels: 
+    - Selector: size
   */
   @objc var size: CGSize { @objc get @objc (setSize:) set }
 
   /**
-    - jsName: zIndex
-    - name: zIndex
-    - argLabels: 
+    - Selector: zIndex
   */
   @objc var zIndex: Int { @objc get @objc (setZIndex:) set }
 }

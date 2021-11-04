@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSURLHandle
-    - name: NSURLHandle
-    - argLabels: 
+    - Selector: NSURLHandle
   */
 
 @objc(NSURLHandle) protocol NSURLHandleExports: JSExport, NSObjectExports {

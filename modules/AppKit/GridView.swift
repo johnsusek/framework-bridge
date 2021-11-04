@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSGridView
-    - name: NSGridView
-    - argLabels: 
+    - Selector: NSGridView
     - Introduced: 10.12
   */
 
@@ -19,227 +17,132 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: gridViewWithNumberOfColumns:rows:
-    - argLabels: numberOfColumns, rows
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(numberOfColumns:rows:)
-    - message: Not available in Swift
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: gridViewWithNumberOfColumns:rows:
   */
   @objc static func create(numberOfColumns: Int, rows: Int) -> Self
 
   /**
-    - jsName: create
-    - name: gridViewWithViews:
-    - argLabels: views
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(views:)
-    - message: Not available in Swift
+    - Selector: gridViewWithViews:
   */
   @objc static func create(views: [[NSView]]) -> Self
 
   // Instance Methods
 
   /**
-    - jsName: addColumn
-    - name: addColumnWithViews:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addColumn(with:)
+    - Selector: addColumnWithViews:
   */
   @objc (addColumnWithViews:) func addColumn(with: [NSView]) -> NSGridColumn
 
   /**
-    - jsName: addRow
-    - name: addRowWithViews:
-    - argLabels: with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: addRow(with:)
+    - Selector: addRowWithViews:
   */
   @objc (addRowWithViews:) func addRow(with: [NSView]) -> NSGridRow
 
   /**
-    - jsName: cell
-    - name: cellAtColumnIndex:rowIndex:
-    - argLabels: atColumnIndex, rowIndex
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cell(atColumnIndex:rowIndex:)
+    - Selector: cellAtColumnIndex:rowIndex:
   */
   @objc (cellAtColumnIndex:rowIndex:) func cell(atColumnIndex: Int, rowIndex: Int) -> NSGridCell
 
   /**
-    - jsName: cell
-    - name: cellForView:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: cell(for:)
+    - Selector: cellForView:
   */
   @objc (cellForView:) func cell(`for`: NSView) -> NSGridCell?
 
   /**
-    - jsName: column
-    - name: columnAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: column(at:)
+    - Selector: columnAtIndex:
   */
   @objc (columnAtIndex:) func column(at: Int) -> NSGridColumn
 
   /**
-    - jsName: index
-    - name: indexOfColumn:
-    - argLabels: of
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: index(of:)
+    - Selector: indexOfColumn:
   */
   @objc (indexOfColumn:) func index(of: NSGridColumn) -> Int
 
   /**
-    - jsName: index
-    - name: indexOfRow:
-    - argLabels: of
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: index(of:)
+    - Selector: indexOfRow:
   */
   @objc (indexOfRow:) func index(of: NSGridRow) -> Int
 
   /**
-    - jsName: insertColumn
-    - name: insertColumnAtIndex:withViews:
-    - argLabels: at, with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertColumn(at:with:)
+    - Selector: insertColumnAtIndex:withViews:
   */
   @objc (insertColumnAtIndex:withViews:) func insertColumn(at: Int, with: [NSView]) -> NSGridColumn
 
   /**
-    - jsName: insertRow
-    - name: insertRowAtIndex:withViews:
-    - argLabels: at, with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertRow(at:with:)
+    - Selector: insertRowAtIndex:withViews:
   */
   @objc (insertRowAtIndex:withViews:) func insertRow(at: Int, with: [NSView]) -> NSGridRow
 
   /**
-    - jsName: mergeCells
-    - name: mergeCellsInHorizontalRange:verticalRange:
-    - argLabels: inHorizontalRange, verticalRange
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: mergeCells(inHorizontalRange:verticalRange:)
+    - Selector: mergeCellsInHorizontalRange:verticalRange:
   */
   @objc (mergeCellsInHorizontalRange:verticalRange:) func mergeCells(inHorizontalRange: NSRange, verticalRange: NSRange)
 
   /**
-    - jsName: moveColumn
-    - name: moveColumnAtIndex:toIndex:
-    - argLabels: at, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: moveColumn(at:to:)
+    - Selector: moveColumnAtIndex:toIndex:
   */
   @objc (moveColumnAtIndex:toIndex:) func moveColumn(at: Int, to: Int)
 
   /**
-    - jsName: moveRow
-    - name: moveRowAtIndex:toIndex:
-    - argLabels: at, to
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: moveRow(at:to:)
+    - Selector: moveRowAtIndex:toIndex:
   */
   @objc (moveRowAtIndex:toIndex:) func moveRow(at: Int, to: Int)
 
   /**
-    - jsName: removeColumn
-    - name: removeColumnAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeColumn(at:)
+    - Selector: removeColumnAtIndex:
   */
   @objc (removeColumnAtIndex:) func removeColumn(at: Int)
 
   /**
-    - jsName: removeRow
-    - name: removeRowAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeRow(at:)
+    - Selector: removeRowAtIndex:
   */
   @objc (removeRowAtIndex:) func removeRow(at: Int)
 
   /**
-    - jsName: row
-    - name: rowAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: row(at:)
+    - Selector: rowAtIndex:
   */
   @objc (rowAtIndex:) func row(at: Int) -> NSGridRow
 
   // Own Instance Properties
 
   /**
-    - jsName: columnSpacing
-    - name: columnSpacing
-    - argLabels: 
+    - Selector: columnSpacing
   */
   @objc var columnSpacing: CGFloat { @objc get @objc (setColumnSpacing:) set }
 
   /**
-    - jsName: numberOfColumns
-    - name: numberOfColumns
-    - argLabels: 
+    - Selector: numberOfColumns
   */
   @objc var numberOfColumns: Int { @objc get }
 
   /**
-    - jsName: numberOfRows
-    - name: numberOfRows
-    - argLabels: 
+    - Selector: numberOfRows
   */
   @objc var numberOfRows: Int { @objc get }
 
   /**
-    - jsName: rowAlignment
-    - name: rowAlignment
-    - argLabels: 
+    - Selector: rowAlignment
   */
   @objc var rowAlignment: NSGridRow.Alignment { @objc get @objc (setRowAlignment:) set }
 
   /**
-    - jsName: rowSpacing
-    - name: rowSpacing
-    - argLabels: 
+    - Selector: rowSpacing
   */
   @objc var rowSpacing: CGFloat { @objc get @objc (setRowSpacing:) set }
 
   /**
-    - jsName: xPlacement
-    - name: xPlacement
-    - argLabels: 
+    - Selector: xPlacement
   */
   @objc var xPlacement: NSGridCell.Placement { @objc get @objc (setXPlacement:) set }
 
   /**
-    - jsName: yPlacement
-    - name: yPlacement
-    - argLabels: 
+    - Selector: yPlacement
   */
   @objc var yPlacement: NSGridCell.Placement { @objc get @objc (setYPlacement:) set }
 }
@@ -248,24 +151,12 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: gridViewWithNumberOfColumns:rows:
-    - argLabels: numberOfColumns, rows
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(numberOfColumns:rows:)
-    - message: Not available in Swift
+    - Selector: gridViewWithNumberOfColumns:rows:
   */
   @objc static func create(numberOfColumns: Int, rows: Int) -> Self
 
   /**
-    - jsName: create
-    - name: gridViewWithViews:
-    - argLabels: views
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(views:)
-    - message: Not available in Swift
+    - Selector: gridViewWithViews:
   */
   @objc static func create(views: [[NSView]]) -> Self
 }

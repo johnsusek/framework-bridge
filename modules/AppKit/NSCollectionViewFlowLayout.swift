@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewFlowLayout
-    - name: NSCollectionViewFlowLayout
-    - argLabels: 
+    - Selector: NSCollectionViewFlowLayout
     - Introduced: 10.11
   */
 
@@ -21,37 +19,19 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: collapseSection
-    - name: collapseSectionAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: collapseSection(at:)
+    - Selector: collapseSectionAtIndex:
     - Introduced: 10.12
   */
   @objc (collapseSectionAtIndex:) @available(OSX 10.12, *) func collapseSection(at: Int)
 
   /**
-    - jsName: expandSection
-    - name: expandSectionAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: expandSection(at:)
+    - Selector: expandSectionAtIndex:
     - Introduced: 10.12
   */
   @objc (expandSectionAtIndex:) @available(OSX 10.12, *) func expandSection(at: Int)
 
   /**
-    - jsName: section
-    - name: sectionAtIndexIsCollapsed:
-    - argLabels: atIndexIsCollapsed
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: section(atIndexIsCollapsed:)
+    - Selector: sectionAtIndexIsCollapsed:
     - Introduced: 10.12
   */
   @objc (sectionAtIndexIsCollapsed:) @available(OSX 10.12, *) func section(atIndexIsCollapsed: Int) -> Bool
@@ -59,76 +39,54 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: estimatedItemSize
-    - name: estimatedItemSize
-    - argLabels: 
+    - Selector: estimatedItemSize
   */
   @objc var estimatedItemSize: CGSize { @objc get @objc (setEstimatedItemSize:) set }
 
   /**
-    - jsName: footerReferenceSize
-    - name: footerReferenceSize
-    - argLabels: 
+    - Selector: footerReferenceSize
   */
   @objc var footerReferenceSize: CGSize { @objc get @objc (setFooterReferenceSize:) set }
 
   /**
-    - jsName: headerReferenceSize
-    - name: headerReferenceSize
-    - argLabels: 
+    - Selector: headerReferenceSize
   */
   @objc var headerReferenceSize: CGSize { @objc get @objc (setHeaderReferenceSize:) set }
 
   /**
-    - jsName: itemSize
-    - name: itemSize
-    - argLabels: 
+    - Selector: itemSize
   */
   @objc var itemSize: CGSize { @objc get @objc (setItemSize:) set }
 
   /**
-    - jsName: minimumInteritemSpacing
-    - name: minimumInteritemSpacing
-    - argLabels: 
+    - Selector: minimumInteritemSpacing
   */
   @objc var minimumInteritemSpacing: CGFloat { @objc get @objc (setMinimumInteritemSpacing:) set }
 
   /**
-    - jsName: minimumLineSpacing
-    - name: minimumLineSpacing
-    - argLabels: 
+    - Selector: minimumLineSpacing
   */
   @objc var minimumLineSpacing: CGFloat { @objc get @objc (setMinimumLineSpacing:) set }
 
   /**
-    - jsName: scrollDirection
-    - name: scrollDirection
-    - argLabels: 
+    - Selector: scrollDirection
   */
   @objc var scrollDirection: NSCollectionView.ScrollDirection { @objc get @objc (setScrollDirection:) set }
 
   /**
-    - jsName: sectionFootersPinToVisibleBounds
-    - name: sectionFootersPinToVisibleBounds
-    - argLabels: 
-    - available: 10.12
+    - Selector: sectionFootersPinToVisibleBounds
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var sectionFootersPinToVisibleBounds: Bool { @objc get @objc (setSectionFootersPinToVisibleBounds:) set }
 
   /**
-    - jsName: sectionHeadersPinToVisibleBounds
-    - name: sectionHeadersPinToVisibleBounds
-    - argLabels: 
-    - available: 10.12
+    - Selector: sectionHeadersPinToVisibleBounds
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var sectionHeadersPinToVisibleBounds: Bool { @objc get @objc (setSectionHeadersPinToVisibleBounds:) set }
 
   /**
-    - jsName: sectionInset
-    - name: sectionInset
-    - argLabels: 
+    - Selector: sectionInset
   */
   @objc var sectionInset: NSEdgeInsets { @objc get @objc (setSectionInset:) set }
 }

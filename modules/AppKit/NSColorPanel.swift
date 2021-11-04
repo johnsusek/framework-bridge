@@ -9,135 +9,133 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSColorPanel
-    - name: NSColorPanel
-    - argLabels: 
+    - Selector: NSColorPanel
   */
 
 @objc(NSColorPanel) protocol NSColorPanelExports: JSExport, NSPanelExports {
   // Static Methods
 
   /**
-    - jsName: dragColor
-    - name: dragColor:withEvent:fromView:
-    - argLabels: _, with, from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dragColor(_:with:from:)
+    - Selector: contentRectForFrameRect:styleMask:
+  */
+  @objc (contentRectForFrameRect:styleMask:) static func contentRect(forFrameRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
+
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: dragColor:withEvent:fromView:
   */
   @objc (dragColor:withEvent:fromView:) static func dragColor(_: NSColor, with: NSEvent, from: NSView) -> Bool
 
   /**
-    - jsName: setPickerMask
-    - name: setPickerMask:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: frameRectForContentRect:styleMask:
+  */
+  @objc (frameRectForContentRect:styleMask:) static func frameRect(forContentRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
+
+  /**
+    - Selector: minFrameWidthWithTitle:styleMask:
+  */
+  @objc (minFrameWidthWithTitle:styleMask:) static func minFrameWidth(withTitle: String, styleMask: NSWindow.StyleMask) -> CGFloat
+
+  /**
+    - Selector: removeFrameUsingName:
+  */
+  @objc (removeFrameUsingName:) static func removeFrame(usingName: NSWindow.FrameAutosaveName)
+
+  /**
+    - Selector: setPickerMask:
   */
   @objc static func setPickerMask(_: NSColorPanel.Options)
 
   /**
-    - jsName: setPickerMode
-    - name: setPickerMode:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setPickerMode:
   */
   @objc static func setPickerMode(_: NSColorPanel.Mode)
+
+  /**
+    - Selector: standardWindowButton:forStyleMask:
+  */
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+
+  /**
+    - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
+    - Introduced: 10.6
+  */
+  @objc (windowNumberAtPoint:belowWindowWithWindowNumber:) @available(OSX 10.6, *) static func windowNumber(at: CGPoint, belowWindowWithWindowNumber: Int) -> Int
+
+  /**
+    - Selector: windowNumbersWithOptions:
+    - Introduced: 10.6
+  */
+  @objc (windowNumbersWithOptions:) @available(OSX 10.6, *) static func windowNumbers(options: NSWindow.NumberListOptions) -> [NSNumber]?
 
   // Own Static Properties
 
   /**
-    - jsName: shared
-    - name: sharedColorPanel
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: shared
+    - Selector: sharedColorPanel
   */
   @objc static var shared: NSColorPanel { @objc (sharedColorPanel) get }
 
   /**
-    - jsName: sharedColorPanelExists
-    - name: sharedColorPanelExists
-    - argLabels: 
+    - Selector: sharedColorPanelExists
   */
   @objc static var sharedColorPanelExists: Bool { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: attachColorList
-    - name: attachColorList:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: attachColorList:
   */
   @objc (attachColorList:) func attachColorList(_: NSColorList)
 
   /**
-    - jsName: detachColorList
-    - name: detachColorList:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: detachColorList:
   */
   @objc (detachColorList:) func detachColorList(_: NSColorList)
 
   /**
-    - jsName: setAction
-    - name: setAction:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setAction:
   */
   @objc func setAction(_: Selector?)
 
   /**
-    - jsName: setTarget
-    - name: setTarget:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setTarget:
   */
   @objc func setTarget(_: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: accessoryView
-    - name: accessoryView
-    - argLabels: 
+    - Selector: accessoryView
   */
   @objc var accessoryView: NSView? { @objc get @objc (setAccessoryView:) set }
 
   /**
-    - jsName: alpha
-    - name: alpha
-    - argLabels: 
+    - Selector: alpha
   */
   @objc var alpha: CGFloat { @objc get }
 
   /**
-    - jsName: color
-    - name: color
-    - argLabels: 
+    - Selector: color
   */
   @objc var color: NSColor { @objc get @objc (setColor:) set }
 
   /**
-    - jsName: isContinuous
-    - name: continuous
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isContinuous
+    - Selector: continuous
   */
   @objc var isContinuous: Bool { @objc get @objc (setContinuous:) set }
 
   /**
-    - jsName: mode
-    - name: mode
-    - argLabels: 
+    - Selector: mode
   */
   @objc var mode: NSColorPanel.Mode { @objc get @objc (setMode:) set }
 
   /**
-    - jsName: showsAlpha
-    - name: showsAlpha
-    - argLabels: 
+    - Selector: showsAlpha
   */
   @objc var showsAlpha: Bool { @objc get @objc (setShowsAlpha:) set }
 }

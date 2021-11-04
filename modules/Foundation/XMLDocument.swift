@@ -9,220 +9,188 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: XMLDocument
-    - name: NSXMLDocument
-    - argLabels: 
+    - Selector: NSXMLDocument
   */
 
 @objc(XMLDocument) protocol XMLDocumentExports: JSExport, XMLNodeExports {
   // Static Methods
 
   /**
-    - jsName: replacementClass
-    - name: replacementClassForClass:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replacementClass(for:)
+    - Selector: attributeWithName:stringValue:
+  */
+  @objc (attributeWithName:stringValue:) static func attribute(withName: String, stringValue: String) -> Any
+
+  /**
+    - Selector: commentWithStringValue:
+  */
+  @objc (commentWithStringValue:) static func comment(withStringValue: String) -> Any
+
+  /**
+    - Selector: document
+  */
+  @objc static func document() -> Any
+
+  /**
+    - Selector: DTDNodeWithXMLString:
+  */
+  @objc (DTDNodeWithXMLString:) static func dtdNode(withXMLString: String) -> Any?
+
+  /**
+    - Selector: elementWithName:
+  */
+  @objc (elementWithName:) static func element(withName: String) -> Any
+
+  /**
+    - Selector: localNameForName:
+  */
+  @objc (localNameForName:) static func localName(forName: String) -> String
+
+  /**
+    - Selector: namespaceWithName:stringValue:
+  */
+  @objc (namespaceWithName:stringValue:) static func namespace(withName: String, stringValue: String) -> Any
+
+  /**
+    - Selector: predefinedNamespaceForPrefix:
+  */
+  @objc (predefinedNamespaceForPrefix:) static func predefinedNamespace(forPrefix: String) -> XMLNode?
+
+  /**
+    - Selector: prefixForName:
+  */
+  @objc (prefixForName:) static func prefix(forName: String) -> String?
+
+  /**
+    - Selector: processingInstructionWithName:stringValue:
+  */
+  @objc (processingInstructionWithName:stringValue:) static func processingInstruction(withName: String, stringValue: String) -> Any
+
+  /**
+    - Selector: replacementClassForClass:
   */
   @objc (replacementClassForClass:) static func replacementClass(`for`: AnyClass) -> AnyClass
+
+  /**
+    - Selector: textWithStringValue:
+  */
+  @objc (textWithStringValue:) static func text(withStringValue: String) -> Any
 
   // Instance Methods
 
   /**
-    - jsName: xmlData
-    - name: XMLDataWithOptions:
-    - argLabels: options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: xmlData(options:)
+    - Selector: XMLDataWithOptions:
   */
   @objc (XMLDataWithOptions:) func xmlData(options: XMLNode.Options) -> Data
 
   /**
-    - jsName: addChild
-    - name: addChild:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addChild:
   */
   @objc func addChild(_: XMLNode)
 
   /**
-    - jsName: createWithContentsOfURL
-    - name: initWithContentsOfURL:options:error:
-    - argLabels: options, error
-    - constructorTokens: contentsOf, options
+    - Selector: initWithContentsOfURL:options:error:
   */
   @objc static func createWithContentsOfURL(contentsOf: URL, options: XMLNode.Options) -> Self?
 
   /**
-    - jsName: createWithRootElement
-    - name: initWithRootElement:
-    - argLabels: 
-    - constructorTokens: rootElement
+    - Selector: initWithRootElement:
   */
   @objc static func createWithRootElement(_: XMLElement?) -> Self
 
   /**
-    - jsName: createWithXMLString
-    - name: initWithXMLString:options:error:
-    - argLabels: options, error
-    - constructorTokens: xmlString, options
+    - Selector: initWithXMLString:options:error:
   */
   @objc static func createWithXMLString(xmlString: String, options: XMLNode.Options) -> Self?
 
   /**
-    - jsName: insertChild
-    - name: insertChild:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertChild(_:at:)
+    - Selector: insertChild:atIndex:
   */
   @objc (insertChild:atIndex:) func insertChild(_: XMLNode, at: Int)
 
   /**
-    - jsName: insertChildren
-    - name: insertChildren:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertChildren(_:at:)
+    - Selector: insertChildren:atIndex:
   */
   @objc (insertChildren:atIndex:) func insertChildren(_: [XMLNode], at: Int)
 
   /**
-    - jsName: objectByApplyingXSLT
-    - name: objectByApplyingXSLT:arguments:error:
-    - argLabels: arguments, error
-    - constructorTokens: 
+    - Selector: objectByApplyingXSLT:arguments:error:
   */
   // throws - @objc func objectByApplyingXSLT(`arguments`: Data, error: [String: String]?) -> Any?
 
   /**
-    - jsName: objectByApplyingXSLTAtURL
-    - name: objectByApplyingXSLTAtURL:arguments:error:
-    - argLabels: arguments, error
-    - constructorTokens: 
+    - Selector: objectByApplyingXSLTAtURL:arguments:error:
   */
   // throws - @objc func objectByApplyingXSLTAtURL(`arguments`: URL, error: [String: String]?) -> Any?
 
   /**
-    - jsName: objectByApplyingXSLTString
-    - name: objectByApplyingXSLTString:arguments:error:
-    - argLabels: arguments, error
-    - constructorTokens: 
+    - Selector: objectByApplyingXSLTString:arguments:error:
   */
   // throws - @objc func objectByApplyingXSLTString(`arguments`: String, error: [String: String]?) -> Any?
 
   /**
-    - jsName: removeChild
-    - name: removeChildAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeChild(at:)
+    - Selector: removeChildAtIndex:
   */
   @objc (removeChildAtIndex:) func removeChild(at: Int)
 
   /**
-    - jsName: replaceChild
-    - name: replaceChildAtIndex:withNode:
-    - argLabels: at, with
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: replaceChild(at:with:)
+    - Selector: replaceChildAtIndex:withNode:
   */
   @objc (replaceChildAtIndex:withNode:) func replaceChild(at: Int, with: XMLNode)
 
   /**
-    - jsName: rootElement
-    - name: rootElement
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: rootElement
   */
   @objc func rootElement() -> XMLElement?
 
   /**
-    - jsName: setChildren
-    - name: setChildren:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setChildren:
   */
   @objc func setChildren(_: [XMLNode]?)
 
   /**
-    - jsName: setRootElement
-    - name: setRootElement:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setRootElement:
   */
   @objc func setRootElement(_: XMLElement)
 
   /**
-    - jsName: validateAndReturnError
-    - name: validateAndReturnError:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: validateAndReturnError:
   */
   // throws - @objc func validateAndReturnError() -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: dtd
-    - name: DTD
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: dtd
+    - Selector: DTD
   */
   @objc var dtd: XMLDTD? { @objc (DTD) get @objc (setDTD:) set }
 
   /**
-    - jsName: mimeType
-    - name: MIMEType
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: mimeType
+    - Selector: MIMEType
   */
   @objc var mimeType: String? { @objc (MIMEType) get @objc (setMIMEType:) set }
 
   /**
-    - jsName: xmlData
-    - name: XMLData
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: xmlData
+    - Selector: XMLData
   */
   @objc var xmlData: Data { @objc (XMLData) get }
 
   /**
-    - jsName: characterEncoding
-    - name: characterEncoding
-    - argLabels: 
+    - Selector: characterEncoding
   */
   @objc var characterEncoding: String? { @objc get @objc (setCharacterEncoding:) set }
 
   /**
-    - jsName: documentContentKind
-    - name: documentContentKind
-    - argLabels: 
+    - Selector: documentContentKind
   */
   @objc var documentContentKind: XMLDocument.ContentKind { @objc get @objc (setDocumentContentKind:) set }
 
   /**
-    - jsName: isStandalone
-    - name: standalone
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isStandalone
+    - Selector: standalone
   */
   @objc var isStandalone: Bool { @objc get @objc (setStandalone:) set }
 
   /**
-    - jsName: version
-    - name: version
-    - argLabels: 
+    - Selector: version
   */
   @objc var version: String? { @objc get @objc (setVersion:) set }
 }

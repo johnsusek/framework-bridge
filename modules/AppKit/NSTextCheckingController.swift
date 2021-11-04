@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextCheckingController
-    - name: NSTextCheckingController
-    - argLabels: 
+    - Selector: NSTextCheckingController
     - Introduced: 10.15
   */
 
@@ -21,164 +19,99 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: changeSpelling
-    - name: changeSpelling:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: changeSpelling:
   */
   @objc func changeSpelling(_: Any?)
 
   /**
-    - jsName: checkSpelling
-    - name: checkSpelling:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: checkSpelling:
   */
   @objc func checkSpelling(_: Any?)
 
   /**
-    - jsName: checkTextInDocument
-    - name: checkTextInDocument:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: checkTextInDocument:
   */
   @objc func checkTextInDocument(_: Any?)
 
   /**
-    - jsName: checkText
-    - name: checkTextInRange:types:options:
-    - argLabels: in, types, options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: checkText(in:types:options:)
+    - Selector: checkTextInRange:types:options:
   */
   @objc (checkTextInRange:types:options:) func checkText(in: NSRange, types: UInt64, options: [NSSpellChecker.OptionKey: Any])
 
   /**
-    - jsName: checkTextInSelection
-    - name: checkTextInSelection:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: checkTextInSelection:
   */
   @objc func checkTextInSelection(_: Any?)
 
   /**
-    - jsName: considerTextChecking
-    - name: considerTextCheckingForRange:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: considerTextChecking(for:)
+    - Selector: considerTextCheckingForRange:
   */
   @objc (considerTextCheckingForRange:) func considerTextChecking(`for`: NSRange)
 
   /**
-    - jsName: didChangeSelectedRange
-    - name: didChangeSelectedRange
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: didChangeSelectedRange
   */
   @objc func didChangeSelectedRange()
 
   /**
-    - jsName: didChangeText
-    - name: didChangeTextInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: didChangeText(in:)
+    - Selector: didChangeTextInRange:
   */
   @objc (didChangeTextInRange:) func didChangeText(in: NSRange)
 
   /**
-    - jsName: ignoreSpelling
-    - name: ignoreSpelling:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: ignoreSpelling:
   */
   @objc func ignoreSpelling(_: Any?)
 
   /**
-    - jsName: createWithClient
-    - name: initWithClient:
-    - argLabels: 
-    - constructorTokens: client
+    - Selector: initWithClient:
   */
   @objc static func createWithClient(_: NSTextCheckingClient) -> Self
 
   /**
-    - jsName: insertedText
-    - name: insertedTextInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertedText(in:)
+    - Selector: insertedTextInRange:
   */
   @objc (insertedTextInRange:) func insertedText(in: NSRange)
 
   /**
-    - jsName: invalidate
-    - name: invalidate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidate
   */
   @objc func invalidate()
 
   /**
-    - jsName: menu
-    - name: menuAtIndex:clickedOnSelection:effectiveRange:
-    - argLabels: at, clickedOnSelection, effectiveRange
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: menu(at:clickedOnSelection:effectiveRange:)
+    - Selector: menuAtIndex:clickedOnSelection:effectiveRange:
   */
   @objc (menuAtIndex:clickedOnSelection:effectiveRange:) func menu(at: Int, clickedOnSelection: Bool, effectiveRange: NSRangePointer) -> NSMenu?
 
   /**
-    - jsName: orderFrontSubstitutionsPanel
-    - name: orderFrontSubstitutionsPanel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderFrontSubstitutionsPanel:
   */
   @objc func orderFrontSubstitutionsPanel(_: Any?)
 
   /**
-    - jsName: showGuessPanel
-    - name: showGuessPanel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: showGuessPanel:
   */
   @objc func showGuessPanel(_: Any?)
 
   /**
-    - jsName: updateCandidates
-    - name: updateCandidates
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: updateCandidates
   */
   @objc func updateCandidates()
 
   /**
-    - jsName: validAnnotations
-    - name: validAnnotations
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: validAnnotations
   */
   @objc func validAnnotations() -> [NSAttributedString.Key]
 
   // Own Instance Properties
 
   /**
-    - jsName: client
-    - name: client
-    - argLabels: 
+    - Selector: client
   */
   @objc var client: NSTextCheckingClient { @objc get }
 
   /**
-    - jsName: spellCheckerDocumentTag
-    - name: spellCheckerDocumentTag
-    - argLabels: 
+    - Selector: spellCheckerDocumentTag
   */
   @objc var spellCheckerDocumentTag: Int { @objc get @objc (setSpellCheckerDocumentTag:) set }
 }

@@ -9,36 +9,69 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPanel
-    - name: NSPanel
-    - argLabels: 
+    - Selector: NSPanel
   */
 
 @objc(NSPanel) protocol NSPanelExports: JSExport, NSWindowExports {
   // Static Methods
 
+  /**
+    - Selector: contentRectForFrameRect:styleMask:
+  */
+  @objc (contentRectForFrameRect:styleMask:) static func contentRect(forFrameRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
+
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: frameRectForContentRect:styleMask:
+  */
+  @objc (frameRectForContentRect:styleMask:) static func frameRect(forContentRect: CGRect, styleMask: NSWindow.StyleMask) -> CGRect
+
+  /**
+    - Selector: minFrameWidthWithTitle:styleMask:
+  */
+  @objc (minFrameWidthWithTitle:styleMask:) static func minFrameWidth(withTitle: String, styleMask: NSWindow.StyleMask) -> CGFloat
+
+  /**
+    - Selector: removeFrameUsingName:
+  */
+  @objc (removeFrameUsingName:) static func removeFrame(usingName: NSWindow.FrameAutosaveName)
+
+  /**
+    - Selector: standardWindowButton:forStyleMask:
+  */
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+
+  /**
+    - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
+    - Introduced: 10.6
+  */
+  @objc (windowNumberAtPoint:belowWindowWithWindowNumber:) @available(OSX 10.6, *) static func windowNumber(at: CGPoint, belowWindowWithWindowNumber: Int) -> Int
+
+  /**
+    - Selector: windowNumbersWithOptions:
+    - Introduced: 10.6
+  */
+  @objc (windowNumbersWithOptions:) @available(OSX 10.6, *) static func windowNumbers(options: NSWindow.NumberListOptions) -> [NSNumber]?
+
   // Own Instance Properties
 
   /**
-    - jsName: becomesKeyOnlyIfNeeded
-    - name: becomesKeyOnlyIfNeeded
-    - argLabels: 
+    - Selector: becomesKeyOnlyIfNeeded
   */
   @objc var becomesKeyOnlyIfNeeded: Bool { @objc get @objc (setBecomesKeyOnlyIfNeeded:) set }
 
   /**
-    - jsName: isFloatingPanel
-    - name: floatingPanel
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isFloatingPanel
+    - Selector: floatingPanel
   */
   @objc var isFloatingPanel: Bool { @objc get @objc (setFloatingPanel:) set }
 
   /**
-    - jsName: worksWhenModal
-    - name: worksWhenModal
-    - argLabels: 
+    - Selector: worksWhenModal
   */
   @objc var worksWhenModal: Bool { @objc get @objc (setWorksWhenModal:) set }
 }

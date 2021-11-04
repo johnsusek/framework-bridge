@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewCompositionalLayoutConfiguration
-    - name: NSCollectionViewCompositionalLayoutConfiguration
-    - argLabels: 
+    - Selector: NSCollectionViewCompositionalLayoutConfiguration
     - Introduced: 10.15
   */
 
@@ -21,23 +19,17 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: boundarySupplementaryItems
-    - name: boundarySupplementaryItems
-    - argLabels: 
+    - Selector: boundarySupplementaryItems
   */
   @objc var boundarySupplementaryItems: [NSCollectionLayoutBoundarySupplementaryItem] { @objc get @objc (setBoundarySupplementaryItems:) set }
 
   /**
-    - jsName: interSectionSpacing
-    - name: interSectionSpacing
-    - argLabels: 
+    - Selector: interSectionSpacing
   */
   @objc var interSectionSpacing: CGFloat { @objc get @objc (setInterSectionSpacing:) set }
 
   /**
-    - jsName: scrollDirection
-    - name: scrollDirection
-    - argLabels: 
+    - Selector: scrollDirection
   */
   @objc var scrollDirection: NSCollectionView.ScrollDirection { @objc get @objc (setScrollDirection:) set }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSExtensionItem
-    - name: NSExtensionItem
-    - argLabels: 
+    - Selector: NSExtensionItem
     - Introduced: 10.10
   */
 
@@ -21,30 +19,22 @@ import Foundation
   // Own Instance Properties
 
   /**
-    - jsName: attachments
-    - name: attachments
-    - argLabels: 
+    - Selector: attachments
   */
   @objc var attachments: [NSItemProvider]? { @objc get @objc (setAttachments:) set }
 
   /**
-    - jsName: attributedContentText
-    - name: attributedContentText
-    - argLabels: 
+    - Selector: attributedContentText
   */
   @objc var attributedContentText: NSAttributedString? { @objc get @objc (setAttributedContentText:) set }
 
   /**
-    - jsName: attributedTitle
-    - name: attributedTitle
-    - argLabels: 
+    - Selector: attributedTitle
   */
   @objc var attributedTitle: NSAttributedString? { @objc get @objc (setAttributedTitle:) set }
 
   /**
-    - jsName: userInfo
-    - name: userInfo
-    - argLabels: 
+    - Selector: userInfo
   */
   @objc var userInfo: [AnyHashable: Any]? { @objc get @objc (setUserInfo:) set }
 }

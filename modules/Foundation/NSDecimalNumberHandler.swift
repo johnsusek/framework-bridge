@@ -9,33 +9,21 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSDecimalNumberHandler
-    - name: NSDecimalNumberHandler
-    - argLabels: 
+    - Selector: NSDecimalNumberHandler
   */
 
 @objc(NSDecimalNumberHandler) protocol NSDecimalNumberHandlerExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: create
-    - name: decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:
-    - argLabels: roundingMode, scale, raiseOnExactness, raiseOnOverflow, raiseOnUnderflow, raiseOnDivideByZero
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(roundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:)
-    - message: Not available in Swift
+    - Selector: decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:
   */
   @objc static func create(roundingMode: NSDecimalNumber.RoundingMode, scale: Int16, raiseOnExactness: Bool, raiseOnOverflow: Bool, raiseOnUnderflow: Bool, raiseOnDivideByZero: Bool) -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: default
-    - name: defaultDecimalNumberHandler
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: default
+    - Selector: defaultDecimalNumberHandler
   */
   @objc static var `default`: NSDecimalNumberHandler { @objc (defaultDecimalNumberHandler) get }
 }

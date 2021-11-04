@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSDataAsset
-    - name: NSDataAsset
-    - argLabels: 
+    - Selector: NSDataAsset
     - Introduced: 10.11
   */
 
@@ -21,41 +19,29 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithName
-    - name: initWithName:
-    - argLabels: 
-    - constructorTokens: name
+    - Selector: initWithName:
   */
   @objc static func createWithName(_: NSDataAsset.Name) -> Self?
 
   /**
-    - jsName: createWithName
-    - name: initWithName:bundle:
-    - argLabels: bundle
-    - constructorTokens: name, bundle
+    - Selector: initWithName:bundle:
   */
   @objc static func createWithName(_: NSDataAsset.Name, bundle: Bundle) -> Self?
 
   // Own Instance Properties
 
   /**
-    - jsName: data
-    - name: data
-    - argLabels: 
+    - Selector: data
   */
   @objc var data: Data { @objc get }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: NSDataAsset.Name { @objc get }
 
   /**
-    - jsName: typeIdentifier
-    - name: typeIdentifier
-    - argLabels: 
+    - Selector: typeIdentifier
   */
   @objc var typeIdentifier: String { @objc get }
 }

@@ -9,29 +9,41 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPICTImageRep
-    - name: NSPICTImageRep
-    - argLabels: 
+    - Selector: NSPICTImageRep
   */
 
 @objc(NSPICTImageRep) protocol NSPICTImageRepExports: JSExport, NSImageRepExports {
   // Static Methods
 
+  /**
+    - Selector: canInitWithData:
+  */
+  @objc (canInitWithData:) static func canInit(with: Data) -> Bool
+
+  /**
+    - Selector: imageRepsWithContentsOfFile:
+  */
+  @objc (imageRepsWithContentsOfFile:) static func imageReps(withContentsOfFile: String) -> [NSImageRep]?
+
+  /**
+    - Selector: registerImageRepClass:
+  */
+  @objc (registerImageRepClass:) static func registerClass(_: AnyClass)
+
+  /**
+    - Selector: unregisterImageRepClass:
+  */
+  @objc (unregisterImageRepClass:) static func unregisterClass(_: AnyClass)
+
   // Own Instance Properties
 
   /**
-    - jsName: pictRepresentation
-    - name: PICTRepresentation
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: pictRepresentation
+    - Selector: PICTRepresentation
   */
   @objc var pictRepresentation: Data { @objc (PICTRepresentation) get }
 
   /**
-    - jsName: boundingBox
-    - name: boundingBox
-    - argLabels: 
+    - Selector: boundingBox
   */
   @objc var boundingBox: CGRect { @objc get }
 }

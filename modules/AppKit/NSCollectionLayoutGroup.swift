@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutGroup
-    - name: NSCollectionLayoutGroup
-    - argLabels: 
+    - Selector: NSCollectionLayoutGroup
     - Introduced: 10.15
   */
 
@@ -19,85 +17,51 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: custom
-    - name: customGroupWithLayoutSize:itemProvider:
-    - argLabels: layoutSize, itemProvider
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: custom(layoutSize:itemProvider:)
+    - Selector: customGroupWithLayoutSize:itemProvider:
   */
-  @objc static func custom(layoutSize: NSCollectionLayoutSize, itemProvider: JSValue) -> Self
+// jsvalue   @objc static func custom(layoutSize: NSCollectionLayoutSize, itemProvider: JSValue) -> Self
 
   /**
-    - jsName: horizontal
-    - name: horizontalGroupWithLayoutSize:subitem:count:
-    - argLabels: layoutSize, subitem, count
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: horizontal(layoutSize:subitem:count:)
+    - Selector: horizontalGroupWithLayoutSize:subitem:count:
   */
   @objc static func horizontal(layoutSize: NSCollectionLayoutSize, subitem: NSCollectionLayoutItem, count: Int) -> Self
 
   /**
-    - jsName: horizontal
-    - name: horizontalGroupWithLayoutSize:subitems:
-    - argLabels: layoutSize, subitems
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: horizontal(layoutSize:subitems:)
+    - Selector: horizontalGroupWithLayoutSize:subitems:
   */
   @objc static func horizontal(layoutSize: NSCollectionLayoutSize, subitems: [NSCollectionLayoutItem]) -> Self
 
   /**
-    - jsName: vertical
-    - name: verticalGroupWithLayoutSize:subitem:count:
-    - argLabels: layoutSize, subitem, count
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: vertical(layoutSize:subitem:count:)
+    - Selector: verticalGroupWithLayoutSize:subitem:count:
   */
   @objc static func vertical(layoutSize: NSCollectionLayoutSize, subitem: NSCollectionLayoutItem, count: Int) -> Self
 
   /**
-    - jsName: vertical
-    - name: verticalGroupWithLayoutSize:subitems:
-    - argLabels: layoutSize, subitems
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: vertical(layoutSize:subitems:)
+    - Selector: verticalGroupWithLayoutSize:subitems:
   */
   @objc static func vertical(layoutSize: NSCollectionLayoutSize, subitems: [NSCollectionLayoutItem]) -> Self
 
   // Instance Methods
 
   /**
-    - jsName: visualDescription
-    - name: visualDescription
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: visualDescription
   */
   @objc func visualDescription() -> String
 
   // Own Instance Properties
 
   /**
-    - jsName: interItemSpacing
-    - name: interItemSpacing
-    - argLabels: 
+    - Selector: interItemSpacing
   */
   @objc var interItemSpacing: NSCollectionLayoutSpacing? { @objc get @objc (setInterItemSpacing:) set }
 
   /**
-    - jsName: subitems
-    - name: subitems
-    - argLabels: 
+    - Selector: subitems
   */
   @objc var subitems: [NSCollectionLayoutItem] { @objc get }
 
   /**
-    - jsName: supplementaryItems
-    - name: supplementaryItems
-    - argLabels: 
+    - Selector: supplementaryItems
   */
   @objc var supplementaryItems: [NSCollectionLayoutSupplementaryItem] { @objc get @objc (setSupplementaryItems:) set }
 }

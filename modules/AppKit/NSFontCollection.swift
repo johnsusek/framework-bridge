@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSFontCollection
-    - name: NSFontCollection
-    - argLabels: 
+    - Selector: NSFontCollection
     - Introduced: 10.7
   */
 
@@ -19,143 +17,83 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: fontCollectionWithDescriptors:
-    - argLabels: descriptors
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(descriptors:)
-    - message: Not available in Swift
+    - Selector: fontCollectionWithDescriptors:
   */
   @objc static func create(descriptors: [NSFontDescriptor]) -> NSFontCollection
 
   /**
-    - jsName: create
-    - name: fontCollectionWithLocale:
-    - argLabels: locale
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(locale:)
-    - message: Not available in Swift
+    - Selector: fontCollectionWithLocale:
   */
   @objc static func create(locale: Locale) -> NSFontCollection?
 
   /**
-    - jsName: create
-    - name: fontCollectionWithName:
-    - argLabels: name
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(name:)
-    - message: Not available in Swift
+    - Selector: fontCollectionWithName:
   */
   @objc static func create(name: NSFontCollection.Name) -> NSFontCollection?
 
   /**
-    - jsName: create
-    - name: fontCollectionWithName:visibility:
-    - argLabels: name, visibility
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(name:visibility:)
-    - message: Not available in Swift
+    - Selector: fontCollectionWithName:visibility:
   */
   @objc static func create(name: NSFontCollection.Name, visibility: NSFontCollection.Visibility) -> NSFontCollection?
 
   /**
-    - jsName: hideFontCollectionWithName
-    - name: hideFontCollectionWithName:visibility:error:
-    - argLabels: visibility, error
-    - constructorTokens: 
+    - Selector: hideFontCollectionWithName:visibility:error:
   */
   // throws - @objc static func hideFontCollectionWithName(visibility: NSFontCollection.Name, error: NSFontCollection.Visibility) -> Bool
 
   /**
-    - jsName: rename
-    - name: renameFontCollectionWithName:visibility:toName:error:
-    - argLabels: fromName, visibility, toName
-    - constructorTokens: 
+    - Selector: renameFontCollectionWithName:visibility:toName:error:
   */
   // throws - @objc (renameFontCollectionWithName:visibility:toName:error:) static func rename(fromName: NSFontCollection.Name, visibility: NSFontCollection.Visibility, toName: NSFontCollection.Name) -> Bool
 
   /**
-    - jsName: showFontCollection
-    - name: showFontCollection:withName:visibility:error:
-    - argLabels: withName, visibility, error
-    - constructorTokens: 
+    - Selector: showFontCollection:withName:visibility:error:
   */
   // throws - @objc static func showFontCollection(withName: NSFontCollection, visibility: NSFontCollection.Name, error: NSFontCollection.Visibility) -> Bool
 
   // Own Static Properties
 
   /**
-    - jsName: allFontCollectionNames
-    - name: allFontCollectionNames
-    - argLabels: 
+    - Selector: allFontCollectionNames
   */
   @objc static var allFontCollectionNames: [NSFontCollection.Name] { @objc get }
 
   /**
-    - jsName: withAllAvailableDescriptors
-    - name: fontCollectionWithAllAvailableDescriptors
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: withAllAvailableDescriptors
+    - Selector: fontCollectionWithAllAvailableDescriptors
   */
   @objc static var withAllAvailableDescriptors: NSFontCollection { @objc (fontCollectionWithAllAvailableDescriptors) get }
 
   // Instance Methods
 
   /**
-    - jsName: matchingDescriptors
-    - name: matchingDescriptorsForFamily:
-    - argLabels: forFamily
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: matchingDescriptors(forFamily:)
+    - Selector: matchingDescriptorsForFamily:
   */
   @objc (matchingDescriptorsForFamily:) func matchingDescriptors(forFamily: String) -> [NSFontDescriptor]?
 
   /**
-    - jsName: matchingDescriptors
-    - name: matchingDescriptorsForFamily:options:
-    - argLabels: forFamily, options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: matchingDescriptors(forFamily:options:)
+    - Selector: matchingDescriptorsForFamily:options:
   */
   @objc (matchingDescriptorsForFamily:options:) func matchingDescriptors(forFamily: String, options: [NSFontCollectionMatchingOptionKey: NSNumber]?) -> [NSFontDescriptor]?
 
   /**
-    - jsName: matchingDescriptors
-    - name: matchingDescriptorsWithOptions:
-    - argLabels: options
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: matchingDescriptors(options:)
+    - Selector: matchingDescriptorsWithOptions:
   */
   @objc (matchingDescriptorsWithOptions:) func matchingDescriptors(options: [NSFontCollectionMatchingOptionKey: NSNumber]?) -> [NSFontDescriptor]?
 
   // Own Instance Properties
 
   /**
-    - jsName: exclusionDescriptors
-    - name: exclusionDescriptors
-    - argLabels: 
+    - Selector: exclusionDescriptors
   */
   @objc var exclusionDescriptors: [NSFontDescriptor]? { @objc get }
 
   /**
-    - jsName: matchingDescriptors
-    - name: matchingDescriptors
-    - argLabels: 
+    - Selector: matchingDescriptors
   */
   @objc var matchingDescriptors: [NSFontDescriptor]? { @objc get }
 
   /**
-    - jsName: queryDescriptors
-    - name: queryDescriptors
-    - argLabels: 
+    - Selector: queryDescriptors
   */
   @objc var queryDescriptors: [NSFontDescriptor]? { @objc get }
 }

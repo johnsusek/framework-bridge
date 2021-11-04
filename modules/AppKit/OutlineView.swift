@@ -9,286 +9,176 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSOutlineView
-    - name: NSOutlineView
-    - argLabels: 
+    - Selector: NSOutlineView
   */
 
 @objc(NSOutlineView) protocol NSOutlineViewExports: JSExport, NSTableViewExports {
   // Static Methods
 
+  /**
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
   // Instance Methods
 
   /**
-    - jsName: child
-    - name: child:ofItem:
-    - argLabels: ofItem
-    - constructorTokens: 
-    - available: 10.10
+    - Selector: child:ofItem:
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) func child(_: Int, ofItem: Any?) -> Any?
 
   /**
-    - jsName: childIndex
-    - name: childIndexForItem:
-    - argLabels: forItem
-    - constructorTokens: 
-    - available: 10.11
-    - obsoleted: 3
-    - renamed: childIndex(forItem:)
+    - Selector: childIndexForItem:
     - Introduced: 10.11
   */
   @objc (childIndexForItem:) @available(OSX 10.11, *) func childIndex(forItem: Any) -> Int
 
   /**
-    - jsName: collapseItem
-    - name: collapseItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: collapseItem:
   */
   @objc func collapseItem(_: Any?)
 
   /**
-    - jsName: collapseItem
-    - name: collapseItem:collapseChildren:
-    - argLabels: collapseChildren
-    - constructorTokens: 
+    - Selector: collapseItem:collapseChildren:
   */
   @objc func collapseItem(_: Any?, collapseChildren: Bool)
 
   /**
-    - jsName: expandItem
-    - name: expandItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: expandItem:
   */
   @objc func expandItem(_: Any?)
 
   /**
-    - jsName: expandItem
-    - name: expandItem:expandChildren:
-    - argLabels: expandChildren
-    - constructorTokens: 
+    - Selector: expandItem:expandChildren:
   */
   @objc func expandItem(_: Any?, expandChildren: Bool)
 
   /**
-    - jsName: frameOfOutlineCell
-    - name: frameOfOutlineCellAtRow:
-    - argLabels: atRow
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: frameOfOutlineCell(atRow:)
+    - Selector: frameOfOutlineCellAtRow:
     - Introduced: 10.5
   */
   @objc (frameOfOutlineCellAtRow:) @available(OSX 10.5, *) func frameOfOutlineCell(atRow: Int) -> CGRect
 
   /**
-    - jsName: insertItems
-    - name: insertItemsAtIndexes:inParent:withAnimation:
-    - argLabels: at, inParent, withAnimation
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: insertItems(at:inParent:withAnimation:)
+    - Selector: insertItemsAtIndexes:inParent:withAnimation:
     - Introduced: 10.7
   */
   @objc (insertItemsAtIndexes:inParent:withAnimation:) @available(OSX 10.7, *) func insertItems(at: IndexSet, inParent: Any?, withAnimation: NSTableView.AnimationOptions)
 
   /**
-    - jsName: isExpandable
-    - name: isExpandable:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: isExpandable:
   */
   @objc func isExpandable(_: Any?) -> Bool
 
   /**
-    - jsName: isItemExpanded
-    - name: isItemExpanded:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: isItemExpanded:
   */
   @objc func isItemExpanded(_: Any?) -> Bool
 
   /**
-    - jsName: item
-    - name: itemAtRow:
-    - argLabels: atRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: item(atRow:)
+    - Selector: itemAtRow:
   */
   @objc (itemAtRow:) func item(atRow: Int) -> Any?
 
   /**
-    - jsName: level
-    - name: levelForItem:
-    - argLabels: forItem
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: level(forItem:)
+    - Selector: levelForItem:
   */
   @objc (levelForItem:) func level(forItem: Any?) -> Int
 
   /**
-    - jsName: level
-    - name: levelForRow:
-    - argLabels: forRow
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: level(forRow:)
+    - Selector: levelForRow:
   */
   @objc (levelForRow:) func level(forRow: Int) -> Int
 
   /**
-    - jsName: moveItem
-    - name: moveItemAtIndex:inParent:toIndex:inParent:
-    - argLabels: at, inParent, to, inParent
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: moveItem(at:inParent:to:inParent:)
+    - Selector: moveItemAtIndex:inParent:toIndex:inParent:
     - Introduced: 10.7
   */
   @objc (moveItemAtIndex:inParent:toIndex:inParent:) @available(OSX 10.7, *) func moveItem(at: Int, inParent: Any?, to: Int, inParent: Any?)
 
   /**
-    - jsName: numberOfChildren
-    - name: numberOfChildrenOfItem:
-    - argLabels: ofItem
-    - constructorTokens: 
-    - available: 10.10
-    - obsoleted: 3
-    - renamed: numberOfChildren(ofItem:)
+    - Selector: numberOfChildrenOfItem:
     - Introduced: 10.10
   */
   @objc (numberOfChildrenOfItem:) @available(OSX 10.10, *) func numberOfChildren(ofItem: Any?) -> Int
 
   /**
-    - jsName: parent
-    - name: parentForItem:
-    - argLabels: forItem
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: parent(forItem:)
+    - Selector: parentForItem:
   */
   @objc (parentForItem:) func parent(forItem: Any?) -> Any?
 
   /**
-    - jsName: reloadItem
-    - name: reloadItem:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reloadItem:
   */
   @objc func reloadItem(_: Any?)
 
   /**
-    - jsName: reloadItem
-    - name: reloadItem:reloadChildren:
-    - argLabels: reloadChildren
-    - constructorTokens: 
+    - Selector: reloadItem:reloadChildren:
   */
   @objc func reloadItem(_: Any?, reloadChildren: Bool)
 
   /**
-    - jsName: removeItems
-    - name: removeItemsAtIndexes:inParent:withAnimation:
-    - argLabels: at, inParent, withAnimation
-    - constructorTokens: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: removeItems(at:inParent:withAnimation:)
+    - Selector: removeItemsAtIndexes:inParent:withAnimation:
     - Introduced: 10.7
   */
   @objc (removeItemsAtIndexes:inParent:withAnimation:) @available(OSX 10.7, *) func removeItems(at: IndexSet, inParent: Any?, withAnimation: NSTableView.AnimationOptions)
 
   /**
-    - jsName: row
-    - name: rowForItem:
-    - argLabels: forItem
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: row(forItem:)
+    - Selector: rowForItem:
   */
   @objc (rowForItem:) func row(forItem: Any?) -> Int
 
   /**
-    - jsName: setDropItem
-    - name: setDropItem:dropChildIndex:
-    - argLabels: dropChildIndex
-    - constructorTokens: 
+    - Selector: setDropItem:dropChildIndex:
   */
   @objc func setDropItem(_: Any?, dropChildIndex: Int)
 
   /**
-    - jsName: shouldCollapseAutoExpandedItems
-    - name: shouldCollapseAutoExpandedItemsForDeposited:
-    - argLabels: forDeposited
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: shouldCollapseAutoExpandedItems(forDeposited:)
+    - Selector: shouldCollapseAutoExpandedItemsForDeposited:
   */
   @objc (shouldCollapseAutoExpandedItemsForDeposited:) func shouldCollapseAutoExpandedItems(forDeposited: Bool) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: autoresizesOutlineColumn
-    - name: autoresizesOutlineColumn
-    - argLabels: 
+    - Selector: autoresizesOutlineColumn
   */
   @objc var autoresizesOutlineColumn: Bool { @objc get @objc (setAutoresizesOutlineColumn:) set }
 
   /**
-    - jsName: autosaveExpandedItems
-    - name: autosaveExpandedItems
-    - argLabels: 
+    - Selector: autosaveExpandedItems
   */
   @objc var autosaveExpandedItems: Bool { @objc get @objc (setAutosaveExpandedItems:) set }
 
   /**
-    - jsName: dataSource
-    - name: dataSource
-    - argLabels: 
+    - Selector: dataSource
   */
   @objc var dataSource: NSOutlineViewDataSource? { @objc get @objc (setDataSource:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSOutlineViewDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: indentationMarkerFollowsCell
-    - name: indentationMarkerFollowsCell
-    - argLabels: 
+    - Selector: indentationMarkerFollowsCell
   */
   @objc var indentationMarkerFollowsCell: Bool { @objc get @objc (setIndentationMarkerFollowsCell:) set }
 
   /**
-    - jsName: indentationPerLevel
-    - name: indentationPerLevel
-    - argLabels: 
+    - Selector: indentationPerLevel
   */
   @objc var indentationPerLevel: CGFloat { @objc get @objc (setIndentationPerLevel:) set }
 
   /**
-    - jsName: outlineTableColumn
-    - name: outlineTableColumn
-    - argLabels: 
+    - Selector: outlineTableColumn
   */
   @objc var outlineTableColumn: NSTableColumn? { @objc get @objc (setOutlineTableColumn:) set }
 
   /**
-    - jsName: stronglyReferencesItems
-    - name: stronglyReferencesItems
-    - argLabels: 
-    - available: 10.12
+    - Selector: stronglyReferencesItems
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) var stronglyReferencesItems: Bool { @objc get @objc (setStronglyReferencesItems:) set }

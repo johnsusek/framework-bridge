@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UndoManager
-    - name: NSUndoManager
-    - argLabels: 
+    - Selector: NSUndoManager
     - Introduced: 10.0
   */
 
@@ -21,262 +19,163 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: beginUndoGrouping
-    - name: beginUndoGrouping
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: beginUndoGrouping
   */
   @objc func beginUndoGrouping()
 
   /**
-    - jsName: disableUndoRegistration
-    - name: disableUndoRegistration
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: disableUndoRegistration
   */
   @objc func disableUndoRegistration()
 
   /**
-    - jsName: enableUndoRegistration
-    - name: enableUndoRegistration
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: enableUndoRegistration
   */
   @objc func enableUndoRegistration()
 
   /**
-    - jsName: endUndoGrouping
-    - name: endUndoGrouping
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: endUndoGrouping
   */
   @objc func endUndoGrouping()
 
   /**
-    - jsName: prepare
-    - name: prepareWithInvocationTarget:
-    - argLabels: withInvocationTarget
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: prepare(withInvocationTarget:)
+    - Selector: prepareWithInvocationTarget:
   */
   @objc (prepareWithInvocationTarget:) func prepare(withInvocationTarget: Any) -> Any
 
   /**
-    - jsName: redo
-    - name: redo
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: redo
   */
   @objc func redo()
 
   /**
-    - jsName: redoMenuTitle
-    - name: redoMenuTitleForUndoActionName:
-    - argLabels: forUndoActionName
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: redoMenuTitle(forUndoActionName:)
+    - Selector: redoMenuTitleForUndoActionName:
   */
   @objc (redoMenuTitleForUndoActionName:) func redoMenuTitle(forUndoActionName: String) -> String
 
   /**
-    - jsName: registerUndo
-    - name: registerUndoWithTarget:handler:
-    - argLabels: withTarget, handler
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: registerUndo(withTarget:handler:)
+    - Selector: registerUndoWithTarget:handler:
     - Introduced: 10.11
   */
-  // jsvalue - @objc (registerUndoWithTarget:handler:) @available(OSX 10.11, *) func registerUndo(withTarget: Any, handler: JSValue)
+  // jsvalue @objc @available(OSX 10.11, *) func registerUndo(withTarget: Any, handler: JSValue)
 
   /**
-    - jsName: registerUndo
-    - name: registerUndoWithTarget:selector:object:
-    - argLabels: withTarget, selector, object
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: registerUndo(withTarget:selector:object:)
+    - Selector: registerUndoWithTarget:selector:object:
   */
   @objc (registerUndoWithTarget:selector:object:) func registerUndo(withTarget: Any, selector: Selector, object: Any?)
 
   /**
-    - jsName: removeAllActions
-    - name: removeAllActions
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeAllActions
   */
   @objc func removeAllActions()
 
   /**
-    - jsName: removeAllActions
-    - name: removeAllActionsWithTarget:
-    - argLabels: withTarget
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeAllActions(withTarget:)
+    - Selector: removeAllActionsWithTarget:
   */
   @objc (removeAllActionsWithTarget:) func removeAllActions(withTarget: Any)
 
   /**
-    - jsName: setActionIsDiscardable
-    - name: setActionIsDiscardable:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: setActionIsDiscardable:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func setActionIsDiscardable(_: Bool)
 
   /**
-    - jsName: setActionName
-    - name: setActionName:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setActionName:
   */
   @objc func setActionName(_: String)
 
   /**
-    - jsName: undo
-    - name: undo
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: undo
   */
   @objc func undo()
 
   /**
-    - jsName: undoMenuTitle
-    - name: undoMenuTitleForUndoActionName:
-    - argLabels: forUndoActionName
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: undoMenuTitle(forUndoActionName:)
+    - Selector: undoMenuTitleForUndoActionName:
   */
   @objc (undoMenuTitleForUndoActionName:) func undoMenuTitle(forUndoActionName: String) -> String
 
   /**
-    - jsName: undoNestedGroup
-    - name: undoNestedGroup
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: undoNestedGroup
   */
   @objc func undoNestedGroup()
 
   // Own Instance Properties
 
   /**
-    - jsName: canRedo
-    - name: canRedo
-    - argLabels: 
+    - Selector: canRedo
   */
   @objc var canRedo: Bool { @objc get }
 
   /**
-    - jsName: canUndo
-    - name: canUndo
-    - argLabels: 
+    - Selector: canUndo
   */
   @objc var canUndo: Bool { @objc get }
 
   /**
-    - jsName: groupingLevel
-    - name: groupingLevel
-    - argLabels: 
+    - Selector: groupingLevel
   */
   @objc var groupingLevel: Int { @objc get }
 
   /**
-    - jsName: groupsByEvent
-    - name: groupsByEvent
-    - argLabels: 
+    - Selector: groupsByEvent
   */
   @objc var groupsByEvent: Bool { @objc get @objc (setGroupsByEvent:) set }
 
   /**
-    - jsName: levelsOfUndo
-    - name: levelsOfUndo
-    - argLabels: 
+    - Selector: levelsOfUndo
   */
   @objc var levelsOfUndo: Int { @objc get @objc (setLevelsOfUndo:) set }
 
   /**
-    - jsName: redoActionIsDiscardable
-    - name: redoActionIsDiscardable
-    - argLabels: 
-    - available: 10.7
+    - Selector: redoActionIsDiscardable
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var redoActionIsDiscardable: Bool { @objc get }
 
   /**
-    - jsName: redoActionName
-    - name: redoActionName
-    - argLabels: 
+    - Selector: redoActionName
   */
   @objc var redoActionName: String { @objc get }
 
   /**
-    - jsName: redoMenuItemTitle
-    - name: redoMenuItemTitle
-    - argLabels: 
+    - Selector: redoMenuItemTitle
   */
   @objc var redoMenuItemTitle: String { @objc get }
 
   /**
-    - jsName: isRedoing
-    - name: redoing
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isRedoing
+    - Selector: redoing
   */
   @objc var isRedoing: Bool { @objc get }
 
   /**
-    - jsName: runLoopModes
-    - name: runLoopModes
-    - argLabels: 
+    - Selector: runLoopModes
   */
   @objc var runLoopModes: [RunLoop.Mode] { @objc get @objc (setRunLoopModes:) set }
 
   /**
-    - jsName: undoActionIsDiscardable
-    - name: undoActionIsDiscardable
-    - argLabels: 
-    - available: 10.7
+    - Selector: undoActionIsDiscardable
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var undoActionIsDiscardable: Bool { @objc get }
 
   /**
-    - jsName: undoActionName
-    - name: undoActionName
-    - argLabels: 
+    - Selector: undoActionName
   */
   @objc var undoActionName: String { @objc get }
 
   /**
-    - jsName: undoMenuItemTitle
-    - name: undoMenuItemTitle
-    - argLabels: 
+    - Selector: undoMenuItemTitle
   */
   @objc var undoMenuItemTitle: String { @objc get }
 
   /**
-    - jsName: isUndoRegistrationEnabled
-    - name: undoRegistrationEnabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isUndoRegistrationEnabled
+    - Selector: undoRegistrationEnabled
   */
   @objc var isUndoRegistrationEnabled: Bool { @objc get }
 
   /**
-    - jsName: isUndoing
-    - name: undoing
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isUndoing
+    - Selector: undoing
   */
   @objc var isUndoing: Bool { @objc get }
 }

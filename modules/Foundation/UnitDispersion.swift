@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitDispersion
-    - name: NSUnitDispersion
-    - argLabels: 
+    - Selector: NSUnitDispersion
     - Introduced: 10.12
   */
 
@@ -19,19 +17,14 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: partsPerMillion
-    - name: partsPerMillion
-    - argLabels: 
+    - Selector: partsPerMillion
   */
   @objc static var partsPerMillion: UnitDispersion { @objc get }
 }

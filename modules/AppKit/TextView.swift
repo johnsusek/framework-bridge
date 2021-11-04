@@ -9,58 +9,43 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextView
-    - name: NSTextView
-    - argLabels: 
+    - Selector: NSTextView
   */
 
 @objc(NSTextView) protocol NSTextViewExports: JSExport, NSTextExports {
   // Static Methods
 
   /**
-    - jsName: fieldEditor
-    - name: fieldEditor
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.14
+    - Selector: defaultAnimationForKey:
+    - Introduced: 10.5
+  */
+  @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
+
+  /**
+    - Selector: fieldEditor
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) static func fieldEditor() -> Self
 
   /**
-    - jsName: registerForServices
-    - name: registerForServices
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: registerForServices
   */
   @objc static func registerForServices()
 
   /**
-    - jsName: scrollableDocumentContentTextView
-    - name: scrollableDocumentContentTextView
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.14
+    - Selector: scrollableDocumentContentTextView
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) static func scrollableDocumentContentTextView() -> NSScrollView
 
   /**
-    - jsName: scrollablePlainDocumentContentTextView
-    - name: scrollablePlainDocumentContentTextView
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.14
+    - Selector: scrollablePlainDocumentContentTextView
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) static func scrollablePlainDocumentContentTextView() -> NSScrollView
 
   /**
-    - jsName: scrollableTextView
-    - name: scrollableTextView
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.14
+    - Selector: scrollableTextView
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) static func scrollableTextView() -> NSScrollView
@@ -68,10 +53,7 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: stronglyReferencesTextStorage
-    - name: stronglyReferencesTextStorage
-    - argLabels: 
-    - available: 10.12
+    - Selector: stronglyReferencesTextStorage
     - Introduced: 10.12
   */
   @objc @available(OSX 10.12, *) static var stronglyReferencesTextStorage: Bool { @objc get }
@@ -79,1223 +61,744 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: alignJustified
-    - name: alignJustified:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: alignJustified:
   */
   @objc func alignJustified(_: Any?)
 
   /**
-    - jsName: breakUndoCoalescing
-    - name: breakUndoCoalescing
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: breakUndoCoalescing
   */
   @objc func breakUndoCoalescing()
 
   /**
-    - jsName: changeAttributes
-    - name: changeAttributes:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: changeAttributes:
   */
   @objc func changeAttributes(_: Any?)
 
   /**
-    - jsName: changeDocumentBackgroundColor
-    - name: changeDocumentBackgroundColor:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: changeDocumentBackgroundColor:
   */
   @objc func changeDocumentBackgroundColor(_: Any?)
 
   /**
-    - jsName: changeLayoutOrientation
-    - name: changeLayoutOrientation:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: changeLayoutOrientation:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func changeLayoutOrientation(_: Any?)
 
   /**
-    - jsName: characterIndexForInsertion
-    - name: characterIndexForInsertionAtPoint:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: characterIndexForInsertion(at:)
+    - Selector: characterIndexForInsertionAtPoint:
     - Introduced: 10.5
   */
   @objc (characterIndexForInsertionAtPoint:) @available(OSX 10.5, *) func characterIndexForInsertion(at: CGPoint) -> Int
 
   /**
-    - jsName: checkTextInDocument
-    - name: checkTextInDocument:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: checkTextInDocument:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func checkTextInDocument(_: Any?)
 
   /**
-    - jsName: checkText
-    - name: checkTextInRange:types:options:
-    - argLabels: in, types, options
-    - constructorTokens: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: checkText(in:types:options:)
+    - Selector: checkTextInRange:types:options:
     - Introduced: 10.6
   */
   @objc (checkTextInRange:types:options:) @available(OSX 10.6, *) func checkText(in: NSRange, types: UInt64, options: [NSSpellChecker.OptionKey: Any])
 
   /**
-    - jsName: checkTextInSelection
-    - name: checkTextInSelection:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: checkTextInSelection:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func checkTextInSelection(_: Any?)
 
   /**
-    - jsName: cleanUpAfterDragOperation
-    - name: cleanUpAfterDragOperation
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: cleanUpAfterDragOperation
   */
   @objc func cleanUpAfterDragOperation()
 
   /**
-    - jsName: clicked
-    - name: clickedOnLink:atIndex:
-    - argLabels: onLink, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: clicked(onLink:at:)
+    - Selector: clickedOnLink:atIndex:
   */
   @objc (clickedOnLink:atIndex:) func clicked(onLink: Any, at: Int)
 
   /**
-    - jsName: completions
-    - name: completionsForPartialWordRange:indexOfSelectedItem:
-    - argLabels: forPartialWordRange, indexOfSelectedItem
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: completions(forPartialWordRange:indexOfSelectedItem:)
+    - Selector: completionsForPartialWordRange:indexOfSelectedItem:
   */
   @objc (completionsForPartialWordRange:indexOfSelectedItem:) func completions(forPartialWordRange: NSRange, indexOfSelectedItem: UnsafeMutablePointer<NSInteger>) -> [String]?
 
   /**
-    - jsName: didChangeText
-    - name: didChangeText
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: didChangeText
   */
   @objc func didChangeText()
 
   /**
-    - jsName: dragImageForSelection
-    - name: dragImageForSelectionWithEvent:origin:
-    - argLabels: with, origin
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dragImageForSelection(with:origin:)
+    - Selector: dragImageForSelectionWithEvent:origin:
   */
   @objc (dragImageForSelectionWithEvent:origin:) func dragImageForSelection(with: NSEvent, origin: NSPointPointer?) -> NSImage?
 
   /**
-    - jsName: dragOperation
-    - name: dragOperationForDraggingInfo:type:
-    - argLabels: for, type
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dragOperation(for:type:)
+    - Selector: dragOperationForDraggingInfo:type:
   */
   @objc (dragOperationForDraggingInfo:type:) func dragOperation(`for`: NSDraggingInfo, type: NSPasteboard.PasteboardType) -> NSDragOperation
 
   /**
-    - jsName: dragSelection
-    - name: dragSelectionWithEvent:offset:slideBack:
-    - argLabels: with, offset, slideBack
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: dragSelection(with:offset:slideBack:)
+    - Selector: dragSelectionWithEvent:offset:slideBack:
   */
   @objc (dragSelectionWithEvent:offset:slideBack:) func dragSelection(with: NSEvent, offset: CGSize, slideBack: Bool) -> Bool
 
   /**
-    - jsName: drawInsertionPoint
-    - name: drawInsertionPointInRect:color:turnedOn:
-    - argLabels: in, color, turnedOn
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawInsertionPoint(in:color:turnedOn:)
+    - Selector: drawInsertionPointInRect:color:turnedOn:
   */
   @objc (drawInsertionPointInRect:color:turnedOn:) func drawInsertionPoint(in: CGRect, color: NSColor, turnedOn: Bool)
 
   /**
-    - jsName: drawBackground
-    - name: drawViewBackgroundInRect:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: drawBackground(in:)
+    - Selector: drawViewBackgroundInRect:
   */
   @objc (drawViewBackgroundInRect:) func drawBackground(in: CGRect)
 
   /**
-    - jsName: handleTextCheckingResults
-    - name: handleTextCheckingResults:forRange:types:options:orthography:wordCount:
-    - argLabels: _, forRange, types, options, orthography, wordCount
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: handleTextCheckingResults:forRange:types:options:orthography:wordCount:
     - Introduced: 10.6
   */
   @objc (handleTextCheckingResults:forRange:types:options:orthography:wordCount:) @available(OSX 10.6, *) func handleTextCheckingResults(_: [NSTextCheckingResult], forRange: NSRange, types: UInt64, options: [NSSpellChecker.OptionKey: Any], orthography: NSOrthography, wordCount: Int)
 
   /**
-    - jsName: insertCompletion
-    - name: insertCompletion:forPartialWordRange:movement:isFinal:
-    - argLabels: forPartialWordRange, movement, isFinal
-    - constructorTokens: 
+    - Selector: insertCompletion:forPartialWordRange:movement:isFinal:
   */
   @objc func insertCompletion(_: String, forPartialWordRange: NSRange, movement: Int, isFinal: Bool)
 
   /**
-    - jsName: invalidateTextContainerOrigin
-    - name: invalidateTextContainerOrigin
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidateTextContainerOrigin
   */
   @objc func invalidateTextContainerOrigin()
 
   /**
-    - jsName: loosenKerning
-    - name: loosenKerning:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: loosenKerning:
   */
   @objc func loosenKerning(_: Any?)
 
   /**
-    - jsName: lowerBaseline
-    - name: lowerBaseline:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: lowerBaseline:
   */
   @objc func lowerBaseline(_: Any?)
 
   /**
-    - jsName: orderFrontLinkPanel
-    - name: orderFrontLinkPanel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderFrontLinkPanel:
   */
   @objc func orderFrontLinkPanel(_: Any?)
 
   /**
-    - jsName: orderFrontListPanel
-    - name: orderFrontListPanel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderFrontListPanel:
   */
   @objc func orderFrontListPanel(_: Any?)
 
   /**
-    - jsName: orderFrontSharingServicePicker
-    - name: orderFrontSharingServicePicker:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.8
+    - Selector: orderFrontSharingServicePicker:
     - Introduced: 10.8
   */
   @objc @available(OSX 10.8, *) func orderFrontSharingServicePicker(_: Any?)
 
   /**
-    - jsName: orderFrontSpacingPanel
-    - name: orderFrontSpacingPanel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderFrontSpacingPanel:
   */
   @objc func orderFrontSpacingPanel(_: Any?)
 
   /**
-    - jsName: orderFrontSubstitutionsPanel
-    - name: orderFrontSubstitutionsPanel:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: orderFrontSubstitutionsPanel:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func orderFrontSubstitutionsPanel(_: Any?)
 
   /**
-    - jsName: orderFrontTablePanel
-    - name: orderFrontTablePanel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: orderFrontTablePanel:
   */
   @objc func orderFrontTablePanel(_: Any?)
 
   /**
-    - jsName: outline
-    - name: outline:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: outline:
   */
   @objc func outline(_: Any?)
 
   /**
-    - jsName: pasteAsPlainText
-    - name: pasteAsPlainText:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: pasteAsPlainText:
   */
   @objc func pasteAsPlainText(_: Any?)
 
   /**
-    - jsName: pasteAsRichText
-    - name: pasteAsRichText:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: pasteAsRichText:
   */
   @objc func pasteAsRichText(_: Any?)
 
   /**
-    - jsName: performFindPanelAction
-    - name: performFindPanelAction:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: performFindPanelAction:
   */
   @objc func performFindPanelAction(_: Any?)
 
   /**
-    - jsName: performValidatedReplacement
-    - name: performValidatedReplacementInRange:withAttributedString:
-    - argLabels: in, with
-    - constructorTokens: 
-    - available: 10.14
-    - obsoleted: 3
-    - renamed: performValidatedReplacement(in:with:)
+    - Selector: performValidatedReplacementInRange:withAttributedString:
     - Introduced: 10.14
   */
   @objc (performValidatedReplacementInRange:withAttributedString:) @available(OSX 10.14, *) func performValidatedReplacement(in: NSRange, with: NSAttributedString) -> Bool
 
   /**
-    - jsName: preferredPasteboardType
-    - name: preferredPasteboardTypeFromArray:restrictedToTypesFromArray:
-    - argLabels: from, restrictedToTypesFrom
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: preferredPasteboardType(from:restrictedToTypesFrom:)
+    - Selector: preferredPasteboardTypeFromArray:restrictedToTypesFromArray:
   */
   @objc (preferredPasteboardTypeFromArray:restrictedToTypesFromArray:) func preferredPasteboardType(from: [NSPasteboard.PasteboardType], restrictedToTypesFrom: [NSPasteboard.PasteboardType]?) -> NSPasteboard.PasteboardType?
 
   /**
-    - jsName: quickLookPreviewableItemsInRanges
-    - name: quickLookPreviewableItemsInRanges:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: quickLookPreviewableItemsInRanges:
     - Introduced: 10.7
   */
   // unavailableInSwift @objc @available(OSX 10.7, *) func quickLookPreviewableItemsInRanges(_: [NSValue]) -> [QLPreviewItem]
 
   /**
-    - jsName: raiseBaseline
-    - name: raiseBaseline:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: raiseBaseline:
   */
   @objc func raiseBaseline(_: Any?)
 
   /**
-    - jsName: readSelection
-    - name: readSelectionFromPasteboard:
-    - argLabels: from
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: readSelection(from:)
+    - Selector: readSelectionFromPasteboard:
   */
   @objc (readSelectionFromPasteboard:) func readSelection(from: NSPasteboard) -> Bool
 
   /**
-    - jsName: readSelection
-    - name: readSelectionFromPasteboard:type:
-    - argLabels: from, type
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: readSelection(from:type:)
+    - Selector: readSelectionFromPasteboard:type:
   */
   @objc (readSelectionFromPasteboard:type:) func readSelection(from: NSPasteboard, type: NSPasteboard.PasteboardType) -> Bool
 
   /**
-    - jsName: replaceTextContainer
-    - name: replaceTextContainer:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: replaceTextContainer:
   */
   @objc func replaceTextContainer(_: NSTextContainer)
 
   /**
-    - jsName: selectionRange
-    - name: selectionRangeForProposedRange:granularity:
-    - argLabels: forProposedRange, granularity
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: selectionRange(forProposedRange:granularity:)
+    - Selector: selectionRangeForProposedRange:granularity:
   */
   @objc (selectionRangeForProposedRange:granularity:) func selectionRange(forProposedRange: NSRange, granularity: NSSelectionGranularity) -> NSRange
 
   /**
-    - jsName: setAlignment
-    - name: setAlignment:range:
-    - argLabels: range
-    - constructorTokens: 
+    - Selector: setAlignment:range:
   */
   @objc func setAlignment(_: NSTextAlignment, range: NSRange)
 
   /**
-    - jsName: setBaseWritingDirection
-    - name: setBaseWritingDirection:range:
-    - argLabels: range
-    - constructorTokens: 
+    - Selector: setBaseWritingDirection:range:
   */
   @objc func setBaseWritingDirection(_: NSWritingDirection, range: NSRange)
 
   /**
-    - jsName: setConstrainedFrameSize
-    - name: setConstrainedFrameSize:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setConstrainedFrameSize:
   */
   @objc func setConstrainedFrameSize(_: CGSize)
 
   /**
-    - jsName: setLayoutOrientation
-    - name: setLayoutOrientation:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: setLayoutOrientation:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func setLayoutOrientation(_: NSLayoutManager.TextLayoutOrientation)
 
   /**
-    - jsName: setNeedsDisplay
-    - name: setNeedsDisplayInRect:avoidAdditionalLayout:
-    - argLabels: _, avoidAdditionalLayout
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: setNeedsDisplay(_:avoidAdditionalLayout:)
+    - Selector: setNeedsDisplayInRect:avoidAdditionalLayout:
   */
   @objc (setNeedsDisplayInRect:avoidAdditionalLayout:) func setNeedsDisplay(_: CGRect, avoidAdditionalLayout: Bool)
 
   /**
-    - jsName: setSelectedRange
-    - name: setSelectedRange:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setSelectedRange:
   */
   @objc func setSelectedRange(_: NSRange)
 
   /**
-    - jsName: setSelectedRange
-    - name: setSelectedRange:affinity:stillSelecting:
-    - argLabels: affinity, stillSelecting
-    - constructorTokens: 
+    - Selector: setSelectedRange:affinity:stillSelecting:
   */
   @objc func setSelectedRange(_: NSRange, affinity: NSSelectionAffinity, stillSelecting: Bool)
 
   /**
-    - jsName: setSpellingState
-    - name: setSpellingState:range:
-    - argLabels: range
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: setSpellingState:range:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func setSpellingState(_: Int, range: NSRange)
 
   /**
-    - jsName: shouldChangeText
-    - name: shouldChangeTextInRange:replacementString:
-    - argLabels: in, replacementString
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: shouldChangeText(in:replacementString:)
+    - Selector: shouldChangeTextInRange:replacementString:
   */
   @objc (shouldChangeTextInRange:replacementString:) func shouldChangeText(in: NSRange, replacementString: String?) -> Bool
 
   /**
-    - jsName: shouldChangeText
-    - name: shouldChangeTextInRanges:replacementStrings:
-    - argLabels: inRanges, replacementStrings
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: shouldChangeText(inRanges:replacementStrings:)
+    - Selector: shouldChangeTextInRanges:replacementStrings:
   */
   @objc (shouldChangeTextInRanges:replacementStrings:) func shouldChangeText(inRanges: [NSValue], replacementStrings: [String]?) -> Bool
 
   /**
-    - jsName: showFindIndicator
-    - name: showFindIndicatorForRange:
-    - argLabels: for
-    - constructorTokens: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: showFindIndicator(for:)
+    - Selector: showFindIndicatorForRange:
     - Introduced: 10.5
   */
   @objc (showFindIndicatorForRange:) @available(OSX 10.5, *) func showFindIndicator(`for`: NSRange)
 
   /**
-    - jsName: smartDeleteRange
-    - name: smartDeleteRangeForProposedRange:
-    - argLabels: forProposedRange
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: smartDeleteRange(forProposedRange:)
+    - Selector: smartDeleteRangeForProposedRange:
   */
   @objc (smartDeleteRangeForProposedRange:) func smartDeleteRange(forProposedRange: NSRange) -> NSRange
 
   /**
-    - jsName: smartInsert
-    - name: smartInsertAfterStringForString:replacingRange:
-    - argLabels: afterStringFor, replacing
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: smartInsert(afterStringFor:replacing:)
+    - Selector: smartInsertAfterStringForString:replacingRange:
   */
   @objc (smartInsertAfterStringForString:replacingRange:) func smartInsert(afterStringFor: String, replacing: NSRange) -> String?
 
   /**
-    - jsName: smartInsert
-    - name: smartInsertBeforeStringForString:replacingRange:
-    - argLabels: beforeStringFor, replacing
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: smartInsert(beforeStringFor:replacing:)
+    - Selector: smartInsertBeforeStringForString:replacingRange:
   */
   @objc (smartInsertBeforeStringForString:replacingRange:) func smartInsert(beforeStringFor: String, replacing: NSRange) -> String?
 
   /**
-    - jsName: smartInsert
-    - name: smartInsertForString:replacingRange:beforeString:afterString:
-    - argLabels: for, replacing, before, after
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: smartInsert(for:replacing:before:after:)
+    - Selector: smartInsertForString:replacingRange:beforeString:afterString:
   */
   @objc (smartInsertForString:replacingRange:beforeString:afterString:) func smartInsert(`for`: String, replacing: NSRange, before: AutoreleasingUnsafeMutablePointer<NSString?>?, after: AutoreleasingUnsafeMutablePointer<NSString?>?)
 
   /**
-    - jsName: startSpeaking
-    - name: startSpeaking:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: startSpeaking:
   */
   @objc func startSpeaking(_: Any?)
 
   /**
-    - jsName: stopSpeaking
-    - name: stopSpeaking:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: stopSpeaking:
   */
   @objc func stopSpeaking(_: Any?)
 
   /**
-    - jsName: tightenKerning
-    - name: tightenKerning:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: tightenKerning:
   */
   @objc func tightenKerning(_: Any?)
 
   /**
-    - jsName: toggleAutomaticDashSubstitution
-    - name: toggleAutomaticDashSubstitution:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: toggleAutomaticDashSubstitution:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func toggleAutomaticDashSubstitution(_: Any?)
 
   /**
-    - jsName: toggleAutomaticDataDetection
-    - name: toggleAutomaticDataDetection:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: toggleAutomaticDataDetection:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func toggleAutomaticDataDetection(_: Any?)
 
   /**
-    - jsName: toggleAutomaticLinkDetection
-    - name: toggleAutomaticLinkDetection:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: toggleAutomaticLinkDetection:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func toggleAutomaticLinkDetection(_: Any?)
 
   /**
-    - jsName: toggleAutomaticQuoteSubstitution
-    - name: toggleAutomaticQuoteSubstitution:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: toggleAutomaticQuoteSubstitution:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func toggleAutomaticQuoteSubstitution(_: Any?)
 
   /**
-    - jsName: toggleAutomaticSpellingCorrection
-    - name: toggleAutomaticSpellingCorrection:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: toggleAutomaticSpellingCorrection:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func toggleAutomaticSpellingCorrection(_: Any?)
 
   /**
-    - jsName: toggleAutomaticTextCompletion
-    - name: toggleAutomaticTextCompletion:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12.2
+    - Selector: toggleAutomaticTextCompletion:
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) func toggleAutomaticTextCompletion(_: Any?)
 
   /**
-    - jsName: toggleAutomaticTextReplacement
-    - name: toggleAutomaticTextReplacement:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.6
+    - Selector: toggleAutomaticTextReplacement:
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) func toggleAutomaticTextReplacement(_: Any?)
 
   /**
-    - jsName: toggleContinuousSpellChecking
-    - name: toggleContinuousSpellChecking:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: toggleContinuousSpellChecking:
   */
   @objc func toggleContinuousSpellChecking(_: Any?)
 
   /**
-    - jsName: toggleGrammarChecking
-    - name: toggleGrammarChecking:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.5
+    - Selector: toggleGrammarChecking:
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func toggleGrammarChecking(_: Any?)
 
   /**
-    - jsName: toggleQuickLookPreviewPanel
-    - name: toggleQuickLookPreviewPanel:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: toggleQuickLookPreviewPanel:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func toggleQuickLookPreviewPanel(_: Any?)
 
   /**
-    - jsName: toggleSmartInsertDelete
-    - name: toggleSmartInsertDelete:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: toggleSmartInsertDelete:
   */
   @objc func toggleSmartInsertDelete(_: Any?)
 
   /**
-    - jsName: turnOffKerning
-    - name: turnOffKerning:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: turnOffKerning:
   */
   @objc func turnOffKerning(_: Any?)
 
   /**
-    - jsName: turnOffLigatures
-    - name: turnOffLigatures:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: turnOffLigatures:
   */
   @objc func turnOffLigatures(_: Any?)
 
   /**
-    - jsName: updateCandidates
-    - name: updateCandidates
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12.2
+    - Selector: updateCandidates
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) func updateCandidates()
 
   /**
-    - jsName: updateDragTypeRegistration
-    - name: updateDragTypeRegistration
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: updateDragTypeRegistration
   */
   @objc func updateDragTypeRegistration()
 
   /**
-    - jsName: updateFontPanel
-    - name: updateFontPanel
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: updateFontPanel
   */
   @objc func updateFontPanel()
 
   /**
-    - jsName: updateInsertionPointStateAndRestartTimer
-    - name: updateInsertionPointStateAndRestartTimer:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: updateInsertionPointStateAndRestartTimer:
   */
   @objc func updateInsertionPointStateAndRestartTimer(_: Bool)
 
   /**
-    - jsName: updateQuickLookPreviewPanel
-    - name: updateQuickLookPreviewPanel
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.7
+    - Selector: updateQuickLookPreviewPanel
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) func updateQuickLookPreviewPanel()
 
   /**
-    - jsName: updateRuler
-    - name: updateRuler
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: updateRuler
   */
   @objc func updateRuler()
 
   /**
-    - jsName: updateTextTouchBarItems
-    - name: updateTextTouchBarItems
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12.2
+    - Selector: updateTextTouchBarItems
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) func updateTextTouchBarItems()
 
   /**
-    - jsName: updateTouchBarItemIdentifiers
-    - name: updateTouchBarItemIdentifiers
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.12.2
+    - Selector: updateTouchBarItemIdentifiers
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) func updateTouchBarItemIdentifiers()
 
   /**
-    - jsName: useAllLigatures
-    - name: useAllLigatures:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: useAllLigatures:
   */
   @objc func useAllLigatures(_: Any?)
 
   /**
-    - jsName: useStandardKerning
-    - name: useStandardKerning:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: useStandardKerning:
   */
   @objc func useStandardKerning(_: Any?)
 
   /**
-    - jsName: useStandardLigatures
-    - name: useStandardLigatures:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: useStandardLigatures:
   */
   @objc func useStandardLigatures(_: Any?)
 
   /**
-    - jsName: writeSelection
-    - name: writeSelectionToPasteboard:type:
-    - argLabels: to, type
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: writeSelection(to:type:)
+    - Selector: writeSelectionToPasteboard:type:
   */
   @objc (writeSelectionToPasteboard:type:) func writeSelection(to: NSPasteboard, type: NSPasteboard.PasteboardType) -> Bool
 
   /**
-    - jsName: writeSelection
-    - name: writeSelectionToPasteboard:types:
-    - argLabels: to, types
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: writeSelection(to:types:)
+    - Selector: writeSelectionToPasteboard:types:
   */
   @objc (writeSelectionToPasteboard:types:) func writeSelection(to: NSPasteboard, types: [NSPasteboard.PasteboardType]) -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: acceptableDragTypes
-    - name: acceptableDragTypes
-    - argLabels: 
+    - Selector: acceptableDragTypes
   */
   @objc var acceptableDragTypes: [NSPasteboard.PasteboardType] { @objc get }
 
   /**
-    - jsName: acceptsGlyphInfo
-    - name: acceptsGlyphInfo
-    - argLabels: 
+    - Selector: acceptsGlyphInfo
   */
   @objc var acceptsGlyphInfo: Bool { @objc get @objc (setAcceptsGlyphInfo:) set }
 
   /**
-    - jsName: allowedInputSourceLocales
-    - name: allowedInputSourceLocales
-    - argLabels: 
-    - available: 10.5
+    - Selector: allowedInputSourceLocales
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var allowedInputSourceLocales: [String]? { @objc get @objc (setAllowedInputSourceLocales:) set }
 
   /**
-    - jsName: allowsCharacterPickerTouchBarItem
-    - name: allowsCharacterPickerTouchBarItem
-    - argLabels: 
-    - available: 10.12.2
+    - Selector: allowsCharacterPickerTouchBarItem
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) var allowsCharacterPickerTouchBarItem: Bool { @objc get @objc (setAllowsCharacterPickerTouchBarItem:) set }
 
   /**
-    - jsName: allowsDocumentBackgroundColorChange
-    - name: allowsDocumentBackgroundColorChange
-    - argLabels: 
+    - Selector: allowsDocumentBackgroundColorChange
   */
   @objc var allowsDocumentBackgroundColorChange: Bool { @objc get @objc (setAllowsDocumentBackgroundColorChange:) set }
 
   /**
-    - jsName: allowsImageEditing
-    - name: allowsImageEditing
-    - argLabels: 
-    - available: 10.5
+    - Selector: allowsImageEditing
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var allowsImageEditing: Bool { @objc get @objc (setAllowsImageEditing:) set }
 
   /**
-    - jsName: allowsUndo
-    - name: allowsUndo
-    - argLabels: 
+    - Selector: allowsUndo
   */
   @objc var allowsUndo: Bool { @objc get @objc (setAllowsUndo:) set }
 
   /**
-    - jsName: isAutomaticDashSubstitutionEnabled
-    - name: automaticDashSubstitutionEnabled
-    - argLabels: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: isAutomaticDashSubstitutionEnabled
+    - Selector: automaticDashSubstitutionEnabled
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var isAutomaticDashSubstitutionEnabled: Bool { @objc get @objc (setAutomaticDashSubstitutionEnabled:) set }
 
   /**
-    - jsName: isAutomaticDataDetectionEnabled
-    - name: automaticDataDetectionEnabled
-    - argLabels: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: isAutomaticDataDetectionEnabled
+    - Selector: automaticDataDetectionEnabled
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var isAutomaticDataDetectionEnabled: Bool { @objc get @objc (setAutomaticDataDetectionEnabled:) set }
 
   /**
-    - jsName: isAutomaticLinkDetectionEnabled
-    - name: automaticLinkDetectionEnabled
-    - argLabels: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: isAutomaticLinkDetectionEnabled
+    - Selector: automaticLinkDetectionEnabled
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var isAutomaticLinkDetectionEnabled: Bool { @objc get @objc (setAutomaticLinkDetectionEnabled:) set }
 
   /**
-    - jsName: isAutomaticQuoteSubstitutionEnabled
-    - name: automaticQuoteSubstitutionEnabled
-    - argLabels: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: isAutomaticQuoteSubstitutionEnabled
+    - Selector: automaticQuoteSubstitutionEnabled
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var isAutomaticQuoteSubstitutionEnabled: Bool { @objc get @objc (setAutomaticQuoteSubstitutionEnabled:) set }
 
   /**
-    - jsName: isAutomaticSpellingCorrectionEnabled
-    - name: automaticSpellingCorrectionEnabled
-    - argLabels: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: isAutomaticSpellingCorrectionEnabled
+    - Selector: automaticSpellingCorrectionEnabled
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var isAutomaticSpellingCorrectionEnabled: Bool { @objc get @objc (setAutomaticSpellingCorrectionEnabled:) set }
 
   /**
-    - jsName: isAutomaticTextCompletionEnabled
-    - name: automaticTextCompletionEnabled
-    - argLabels: 
-    - available: 10.12.2
-    - obsoleted: 3
-    - renamed: isAutomaticTextCompletionEnabled
+    - Selector: automaticTextCompletionEnabled
     - Introduced: 10.12.2
   */
   @objc @available(OSX 10.12.2, *) var isAutomaticTextCompletionEnabled: Bool { @objc get @objc (setAutomaticTextCompletionEnabled:) set }
 
   /**
-    - jsName: isAutomaticTextReplacementEnabled
-    - name: automaticTextReplacementEnabled
-    - argLabels: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: isAutomaticTextReplacementEnabled
+    - Selector: automaticTextReplacementEnabled
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var isAutomaticTextReplacementEnabled: Bool { @objc get @objc (setAutomaticTextReplacementEnabled:) set }
 
   /**
-    - jsName: isCoalescingUndo
-    - name: coalescingUndo
-    - argLabels: 
-    - available: 10.6
-    - obsoleted: 3
-    - renamed: isCoalescingUndo
+    - Selector: coalescingUndo
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var isCoalescingUndo: Bool { @objc get }
 
   /**
-    - jsName: isContinuousSpellCheckingEnabled
-    - name: continuousSpellCheckingEnabled
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isContinuousSpellCheckingEnabled
+    - Selector: continuousSpellCheckingEnabled
   */
   @objc var isContinuousSpellCheckingEnabled: Bool { @objc get @objc (setContinuousSpellCheckingEnabled:) set }
 
   /**
-    - jsName: defaultParagraphStyle
-    - name: defaultParagraphStyle
-    - argLabels: 
+    - Selector: defaultParagraphStyle
   */
   @objc var defaultParagraphStyle: NSParagraphStyle? { @objc get @objc (setDefaultParagraphStyle:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSTextViewDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: displaysLinkToolTips
-    - name: displaysLinkToolTips
-    - argLabels: 
-    - available: 10.5
+    - Selector: displaysLinkToolTips
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var displaysLinkToolTips: Bool { @objc get @objc (setDisplaysLinkToolTips:) set }
 
   /**
-    - jsName: enabledTextCheckingTypes
-    - name: enabledTextCheckingTypes
-    - argLabels: 
-    - available: 10.6
+    - Selector: enabledTextCheckingTypes
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var enabledTextCheckingTypes: UInt64 { @objc get @objc (setEnabledTextCheckingTypes:) set }
 
   /**
-    - jsName: isGrammarCheckingEnabled
-    - name: grammarCheckingEnabled
-    - argLabels: 
-    - available: 10.5
-    - obsoleted: 3
-    - renamed: isGrammarCheckingEnabled
+    - Selector: grammarCheckingEnabled
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) var isGrammarCheckingEnabled: Bool { @objc get @objc (setGrammarCheckingEnabled:) set }
 
   /**
-    - jsName: isIncrementalSearchingEnabled
-    - name: incrementalSearchingEnabled
-    - argLabels: 
-    - available: 10.7
-    - obsoleted: 3
-    - renamed: isIncrementalSearchingEnabled
+    - Selector: incrementalSearchingEnabled
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var isIncrementalSearchingEnabled: Bool { @objc get @objc (setIncrementalSearchingEnabled:) set }
 
   /**
-    - jsName: insertionPointColor
-    - name: insertionPointColor
-    - argLabels: 
+    - Selector: insertionPointColor
   */
   @objc var insertionPointColor: NSColor { @objc get @objc (setInsertionPointColor:) set }
 
   /**
-    - jsName: layoutManager
-    - name: layoutManager
-    - argLabels: 
+    - Selector: layoutManager
   */
   @objc var layoutManager: NSLayoutManager? { @objc get }
 
   /**
-    - jsName: linkTextAttributes
-    - name: linkTextAttributes
-    - argLabels: 
+    - Selector: linkTextAttributes
   */
   @objc var linkTextAttributes: [NSAttributedString.Key: Any]? { @objc get @objc (setLinkTextAttributes:) set }
 
   /**
-    - jsName: markedTextAttributes
-    - name: markedTextAttributes
-    - argLabels: 
+    - Selector: markedTextAttributes
   */
   @objc var markedTextAttributes: [NSAttributedString.Key: Any]? { @objc get @objc (setMarkedTextAttributes:) set }
 
   /**
-    - jsName: rangeForUserCharacterAttributeChange
-    - name: rangeForUserCharacterAttributeChange
-    - argLabels: 
+    - Selector: rangeForUserCharacterAttributeChange
   */
   @objc var rangeForUserCharacterAttributeChange: NSRange { @objc get }
 
   /**
-    - jsName: rangeForUserCompletion
-    - name: rangeForUserCompletion
-    - argLabels: 
+    - Selector: rangeForUserCompletion
   */
   @objc var rangeForUserCompletion: NSRange { @objc get }
 
   /**
-    - jsName: rangeForUserParagraphAttributeChange
-    - name: rangeForUserParagraphAttributeChange
-    - argLabels: 
+    - Selector: rangeForUserParagraphAttributeChange
   */
   @objc var rangeForUserParagraphAttributeChange: NSRange { @objc get }
 
   /**
-    - jsName: rangeForUserTextChange
-    - name: rangeForUserTextChange
-    - argLabels: 
+    - Selector: rangeForUserTextChange
   */
   @objc var rangeForUserTextChange: NSRange { @objc get }
 
   /**
-    - jsName: rangesForUserCharacterAttributeChange
-    - name: rangesForUserCharacterAttributeChange
-    - argLabels: 
+    - Selector: rangesForUserCharacterAttributeChange
   */
   @objc var rangesForUserCharacterAttributeChange: [NSValue]? { @objc get }
 
   /**
-    - jsName: rangesForUserParagraphAttributeChange
-    - name: rangesForUserParagraphAttributeChange
-    - argLabels: 
+    - Selector: rangesForUserParagraphAttributeChange
   */
   @objc var rangesForUserParagraphAttributeChange: [NSValue]? { @objc get }
 
   /**
-    - jsName: rangesForUserTextChange
-    - name: rangesForUserTextChange
-    - argLabels: 
+    - Selector: rangesForUserTextChange
   */
   @objc var rangesForUserTextChange: [NSValue]? { @objc get }
 
   /**
-    - jsName: readablePasteboardTypes
-    - name: readablePasteboardTypes
-    - argLabels: 
+    - Selector: readablePasteboardTypes
   */
   @objc var readablePasteboardTypes: [NSPasteboard.PasteboardType] { @objc get }
 
   /**
-    - jsName: isRulerVisible
-    - name: rulerVisible
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isRulerVisible
+    - Selector: rulerVisible
   */
   @objc var isRulerVisible: Bool { @objc get @objc (setRulerVisible:) set }
 
   /**
-    - jsName: selectedRanges
-    - name: selectedRanges
-    - argLabels: 
+    - Selector: selectedRanges
   */
   @objc var selectedRanges: [NSValue] { @objc get @objc (setSelectedRanges:) set }
 
   /**
-    - jsName: selectedTextAttributes
-    - name: selectedTextAttributes
-    - argLabels: 
+    - Selector: selectedTextAttributes
   */
   @objc var selectedTextAttributes: [NSAttributedString.Key: Any] { @objc get @objc (setSelectedTextAttributes:) set }
 
   /**
-    - jsName: selectionAffinity
-    - name: selectionAffinity
-    - argLabels: 
+    - Selector: selectionAffinity
   */
   @objc var selectionAffinity: NSSelectionAffinity { @objc get }
 
   /**
-    - jsName: selectionGranularity
-    - name: selectionGranularity
-    - argLabels: 
+    - Selector: selectionGranularity
   */
   @objc var selectionGranularity: NSSelectionGranularity { @objc get @objc (setSelectionGranularity:) set }
 
   /**
-    - jsName: shouldDrawInsertionPoint
-    - name: shouldDrawInsertionPoint
-    - argLabels: 
+    - Selector: shouldDrawInsertionPoint
   */
   @objc var shouldDrawInsertionPoint: Bool { @objc get }
 
   /**
-    - jsName: smartInsertDeleteEnabled
-    - name: smartInsertDeleteEnabled
-    - argLabels: 
+    - Selector: smartInsertDeleteEnabled
   */
   @objc var smartInsertDeleteEnabled: Bool { @objc get @objc (setSmartInsertDeleteEnabled:) set }
 
   /**
-    - jsName: spellCheckerDocumentTag
-    - name: spellCheckerDocumentTag
-    - argLabels: 
+    - Selector: spellCheckerDocumentTag
   */
   @objc var spellCheckerDocumentTag: Int { @objc get }
 
   /**
-    - jsName: textContainer
-    - name: textContainer
-    - argLabels: 
+    - Selector: textContainer
   */
   @objc var textContainer: NSTextContainer? { @objc get @objc (setTextContainer:) set }
 
   /**
-    - jsName: textContainerInset
-    - name: textContainerInset
-    - argLabels: 
+    - Selector: textContainerInset
   */
   @objc var textContainerInset: CGSize { @objc get @objc (setTextContainerInset:) set }
 
   /**
-    - jsName: textContainerOrigin
-    - name: textContainerOrigin
-    - argLabels: 
+    - Selector: textContainerOrigin
   */
   @objc var textContainerOrigin: CGPoint { @objc get }
 
   /**
-    - jsName: textStorage
-    - name: textStorage
-    - argLabels: 
+    - Selector: textStorage
   */
   @objc var textStorage: NSTextStorage? { @objc get }
 
   /**
-    - jsName: typingAttributes
-    - name: typingAttributes
-    - argLabels: 
+    - Selector: typingAttributes
   */
   @objc var typingAttributes: [NSAttributedString.Key: Any] { @objc get @objc (setTypingAttributes:) set }
 
   /**
-    - jsName: usesAdaptiveColorMappingForDarkAppearance
-    - name: usesAdaptiveColorMappingForDarkAppearance
-    - argLabels: 
-    - available: 10.14
+    - Selector: usesAdaptiveColorMappingForDarkAppearance
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) var usesAdaptiveColorMappingForDarkAppearance: Bool { @objc get @objc (setUsesAdaptiveColorMappingForDarkAppearance:) set }
 
   /**
-    - jsName: usesFindBar
-    - name: usesFindBar
-    - argLabels: 
-    - available: 10.7
+    - Selector: usesFindBar
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var usesFindBar: Bool { @objc get @objc (setUsesFindBar:) set }
 
   /**
-    - jsName: usesFindPanel
-    - name: usesFindPanel
-    - argLabels: 
+    - Selector: usesFindPanel
   */
   @objc var usesFindPanel: Bool { @objc get @objc (setUsesFindPanel:) set }
 
   /**
-    - jsName: usesInspectorBar
-    - name: usesInspectorBar
-    - argLabels: 
-    - available: 10.7
+    - Selector: usesInspectorBar
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) var usesInspectorBar: Bool { @objc get @objc (setUsesInspectorBar:) set }
 
   /**
-    - jsName: usesRolloverButtonForSelection
-    - name: usesRolloverButtonForSelection
-    - argLabels: 
-    - available: 10.10
+    - Selector: usesRolloverButtonForSelection
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var usesRolloverButtonForSelection: Bool { @objc get @objc (setUsesRolloverButtonForSelection:) set }
 
   /**
-    - jsName: usesRuler
-    - name: usesRuler
-    - argLabels: 
+    - Selector: usesRuler
   */
   @objc var usesRuler: Bool { @objc get @objc (setUsesRuler:) set }
 
   /**
-    - jsName: writablePasteboardTypes
-    - name: writablePasteboardTypes
-    - argLabels: 
+    - Selector: writablePasteboardTypes
   */
   @objc var writablePasteboardTypes: [NSPasteboard.PasteboardType] { @objc get }
 }
@@ -1304,11 +807,7 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: fieldEditor
-    - name: fieldEditor
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.14
+    - Selector: fieldEditor
     - Introduced: 10.14
   */
   @objc @available(OSX 10.14, *) static func fieldEditor() -> Self

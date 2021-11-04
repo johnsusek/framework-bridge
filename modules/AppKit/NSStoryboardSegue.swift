@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSStoryboardSegue
-    - name: NSStoryboardSegue
-    - argLabels: 
+    - Selector: NSStoryboardSegue
     - Introduced: 10.10
   */
 
@@ -19,46 +17,31 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: segueWithIdentifier:source:destination:performHandler:
-    - argLabels: identifier, source, destination, performHandler
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(identifier:source:destination:performHandler:)
-    - message: Not available in Swift
+    - Selector: segueWithIdentifier:source:destination:performHandler:
   */
-  @objc static func create(identifier: NSStoryboardSegue.Identifier, source: Any, destination: Any, performHandler: JSValue) -> Self
+// jsvalue   @objc static func create(identifier: NSStoryboardSegue.Identifier, source: Any, destination: Any, performHandler: JSValue) -> Self
 
   // Instance Methods
 
   /**
-    - jsName: perform
-    - name: perform
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: perform
   */
   @objc func perform()
 
   // Own Instance Properties
 
   /**
-    - jsName: destinationController
-    - name: destinationController
-    - argLabels: 
+    - Selector: destinationController
   */
   @objc var destinationController: Any { @objc get }
 
   /**
-    - jsName: identifier
-    - name: identifier
-    - argLabels: 
+    - Selector: identifier
   */
   @objc var identifier: NSStoryboardSegue.Identifier? { @objc get }
 
   /**
-    - jsName: sourceController
-    - name: sourceController
-    - argLabels: 
+    - Selector: sourceController
   */
   @objc var sourceController: Any { @objc get }
 }

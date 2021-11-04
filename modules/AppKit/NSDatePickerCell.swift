@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSDatePickerCell
-    - name: NSDatePickerCell
-    - argLabels: 
+    - Selector: NSDatePickerCell
   */
 
 @objc(NSDatePickerCell) protocol NSDatePickerCellExports: JSExport, NSActionCellExports {
@@ -20,100 +18,72 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: backgroundColor
-    - name: backgroundColor
-    - argLabels: 
+    - Selector: backgroundColor
   */
   @objc var backgroundColor: NSColor { @objc get @objc (setBackgroundColor:) set }
 
   /**
-    - jsName: calendar
-    - name: calendar
-    - argLabels: 
+    - Selector: calendar
   */
   @objc var calendar: Calendar? { @objc get @objc (setCalendar:) set }
 
   /**
-    - jsName: datePickerElements
-    - name: datePickerElements
-    - argLabels: 
+    - Selector: datePickerElements
   */
   @objc var datePickerElements: NSDatePicker.ElementFlags { @objc get @objc (setDatePickerElements:) set }
 
   /**
-    - jsName: datePickerMode
-    - name: datePickerMode
-    - argLabels: 
+    - Selector: datePickerMode
   */
   @objc var datePickerMode: NSDatePicker.Mode { @objc get @objc (setDatePickerMode:) set }
 
   /**
-    - jsName: datePickerStyle
-    - name: datePickerStyle
-    - argLabels: 
+    - Selector: datePickerStyle
   */
   @objc var datePickerStyle: NSDatePicker.Style { @objc get @objc (setDatePickerStyle:) set }
 
   /**
-    - jsName: dateValue
-    - name: dateValue
-    - argLabels: 
+    - Selector: dateValue
   */
   @objc var dateValue: Date { @objc get @objc (setDateValue:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSDatePickerCellDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: drawsBackground
-    - name: drawsBackground
-    - argLabels: 
+    - Selector: drawsBackground
   */
   @objc var drawsBackground: Bool { @objc get @objc (setDrawsBackground:) set }
 
   /**
-    - jsName: locale
-    - name: locale
-    - argLabels: 
+    - Selector: locale
   */
   @objc var locale: Locale? { @objc get @objc (setLocale:) set }
 
   /**
-    - jsName: maxDate
-    - name: maxDate
-    - argLabels: 
+    - Selector: maxDate
   */
   @objc var maxDate: Date? { @objc get @objc (setMaxDate:) set }
 
   /**
-    - jsName: minDate
-    - name: minDate
-    - argLabels: 
+    - Selector: minDate
   */
   @objc var minDate: Date? { @objc get @objc (setMinDate:) set }
 
   /**
-    - jsName: textColor
-    - name: textColor
-    - argLabels: 
+    - Selector: textColor
   */
   @objc var textColor: NSColor { @objc get @objc (setTextColor:) set }
 
   /**
-    - jsName: timeInterval
-    - name: timeInterval
-    - argLabels: 
+    - Selector: timeInterval
   */
   @objc var timeInterval: TimeInterval { @objc get @objc (setTimeInterval:) set }
 
   /**
-    - jsName: timeZone
-    - name: timeZone
-    - argLabels: 
+    - Selector: timeZone
   */
   @objc var timeZone: TimeZone? { @objc get @objc (setTimeZone:) set }
 }

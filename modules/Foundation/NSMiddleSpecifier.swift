@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSMiddleSpecifier
-    - name: NSMiddleSpecifier
-    - argLabels: 
+    - Selector: NSMiddleSpecifier
   */
 
 @objc(NSMiddleSpecifier) protocol NSMiddleSpecifierExports: JSExport, NSScriptObjectSpecifierExports {

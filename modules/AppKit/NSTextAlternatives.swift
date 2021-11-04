@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextAlternatives
-    - name: NSTextAlternatives
-    - argLabels: 
+    - Selector: NSTextAlternatives
     - Introduced: 10.8
   */
 
@@ -21,34 +19,24 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: createWithPrimaryString
-    - name: initWithPrimaryString:alternativeStrings:
-    - argLabels: alternativeStrings
-    - constructorTokens: primaryString, alternativeStrings
+    - Selector: initWithPrimaryString:alternativeStrings:
   */
   @objc static func createWithPrimaryString(_: String, alternativeStrings: [String]) -> Self
 
   /**
-    - jsName: noteSelectedAlternativeString
-    - name: noteSelectedAlternativeString:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: noteSelectedAlternativeString:
   */
   @objc func noteSelectedAlternativeString(_: String)
 
   // Own Instance Properties
 
   /**
-    - jsName: alternativeStrings
-    - name: alternativeStrings
-    - argLabels: 
+    - Selector: alternativeStrings
   */
   @objc var alternativeStrings: [String] { @objc get }
 
   /**
-    - jsName: primaryString
-    - name: primaryString
-    - argLabels: 
+    - Selector: primaryString
   */
   @objc var primaryString: String { @objc get }
 }

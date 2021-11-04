@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPopoverTouchBarItem
-    - name: NSPopoverTouchBarItem
-    - argLabels: 
+    - Selector: NSPopoverTouchBarItem
     - Introduced: 10.12.2
   */
 
@@ -21,77 +19,54 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: dismissPopover
-    - name: dismissPopover:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: dismissPopover:
   */
   @objc func dismissPopover(_: Any?)
 
   /**
-    - jsName: makeStandardActivatePopoverGestureRecognizer
-    - name: makeStandardActivatePopoverGestureRecognizer
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: makeStandardActivatePopoverGestureRecognizer
   */
   @objc func makeStandardActivatePopoverGestureRecognizer() -> NSGestureRecognizer
 
   /**
-    - jsName: showPopover
-    - name: showPopover:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: showPopover:
   */
   @objc func showPopover(_: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: collapsedRepresentation
-    - name: collapsedRepresentation
-    - argLabels: 
+    - Selector: collapsedRepresentation
   */
   @objc var collapsedRepresentation: NSView { @objc get @objc (setCollapsedRepresentation:) set }
 
   /**
-    - jsName: collapsedRepresentationImage
-    - name: collapsedRepresentationImage
-    - argLabels: 
+    - Selector: collapsedRepresentationImage
   */
   @objc var collapsedRepresentationImage: NSImage? { @objc get @objc (setCollapsedRepresentationImage:) set }
 
   /**
-    - jsName: collapsedRepresentationLabel
-    - name: collapsedRepresentationLabel
-    - argLabels: 
+    - Selector: collapsedRepresentationLabel
   */
   @objc var collapsedRepresentationLabel: String { @objc get @objc (setCollapsedRepresentationLabel:) set }
 
   /**
-    - jsName: customizationLabel
-    - name: customizationLabel
-    - argLabels: 
+    - Selector: customizationLabel
   */
   @objc var customizationLabel: String! { @objc get @objc (setCustomizationLabel:) set }
 
   /**
-    - jsName: popoverTouchBar
-    - name: popoverTouchBar
-    - argLabels: 
+    - Selector: popoverTouchBar
   */
   @objc var popoverTouchBar: NSTouchBar { @objc get @objc (setPopoverTouchBar:) set }
 
   /**
-    - jsName: pressAndHoldTouchBar
-    - name: pressAndHoldTouchBar
-    - argLabels: 
+    - Selector: pressAndHoldTouchBar
   */
   @objc var pressAndHoldTouchBar: NSTouchBar? { @objc get @objc (setPressAndHoldTouchBar:) set }
 
   /**
-    - jsName: showsCloseButton
-    - name: showsCloseButton
-    - argLabels: 
+    - Selector: showsCloseButton
   */
   @objc var showsCloseButton: Bool { @objc get @objc (setShowsCloseButton:) set }
 }

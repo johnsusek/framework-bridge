@@ -9,43 +9,34 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSMutableParagraphStyle
-    - name: NSMutableParagraphStyle
-    - argLabels: 
+    - Selector: NSMutableParagraphStyle
     - Introduced: 10.0
   */
 
 @objc(NSMutableParagraphStyle) protocol NSMutableParagraphStyleExports: JSExport, NSParagraphStyleExports {
   // Static Methods
 
+  /**
+    - Selector: defaultWritingDirectionForLanguage:
+  */
+  @objc (defaultWritingDirectionForLanguage:) static func defaultWritingDirection(forLanguage: String?) -> NSWritingDirection
+
   // Instance Methods
 
   /**
-    - jsName: addTabStop
-    - name: addTabStop:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.0
+    - Selector: addTabStop:
     - Introduced: 10.0
   */
   @objc @available(OSX 10.0, *) func addTabStop(_: NSTextTab)
 
   /**
-    - jsName: removeTabStop
-    - name: removeTabStop:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.0
+    - Selector: removeTabStop:
     - Introduced: 10.0
   */
   @objc @available(OSX 10.0, *) func removeTabStop(_: NSTextTab)
 
   /**
-    - jsName: setParagraphStyle
-    - name: setParagraphStyle:
-    - argLabels: 
-    - constructorTokens: 
-    - available: 10.0
+    - Selector: setParagraphStyle:
     - Introduced: 10.0
   */
   @objc @available(OSX 10.0, *) func setParagraphStyle(_: NSParagraphStyle)
@@ -53,148 +44,105 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: alignment
-    - name: alignment
-    - argLabels: 
+    - Selector: alignment
   */
   @objc var alignment: NSTextAlignment { @objc get @objc (setAlignment:) set }
 
   /**
-    - jsName: allowsDefaultTighteningForTruncation
-    - name: allowsDefaultTighteningForTruncation
-    - argLabels: 
-    - available: 10.11
+    - Selector: allowsDefaultTighteningForTruncation
     - Introduced: 10.11
   */
   @objc @available(OSX 10.11, *) var allowsDefaultTighteningForTruncation: Bool { @objc get @objc (setAllowsDefaultTighteningForTruncation:) set }
 
   /**
-    - jsName: baseWritingDirection
-    - name: baseWritingDirection
-    - argLabels: 
+    - Selector: baseWritingDirection
   */
   @objc var baseWritingDirection: NSWritingDirection { @objc get @objc (setBaseWritingDirection:) set }
 
   /**
-    - jsName: defaultTabInterval
-    - name: defaultTabInterval
-    - argLabels: 
-    - available: 10.0
+    - Selector: defaultTabInterval
     - Introduced: 10.0
   */
   @objc @available(OSX 10.0, *) var defaultTabInterval: CGFloat { @objc get @objc (setDefaultTabInterval:) set }
 
   /**
-    - jsName: firstLineHeadIndent
-    - name: firstLineHeadIndent
-    - argLabels: 
+    - Selector: firstLineHeadIndent
   */
   @objc var firstLineHeadIndent: CGFloat { @objc get @objc (setFirstLineHeadIndent:) set }
 
   /**
-    - jsName: headIndent
-    - name: headIndent
-    - argLabels: 
+    - Selector: headIndent
   */
   @objc var headIndent: CGFloat { @objc get @objc (setHeadIndent:) set }
 
   /**
-    - jsName: headerLevel
-    - name: headerLevel
-    - argLabels: 
+    - Selector: headerLevel
   */
   @objc var headerLevel: Int { @objc get @objc (setHeaderLevel:) set }
 
   /**
-    - jsName: hyphenationFactor
-    - name: hyphenationFactor
-    - argLabels: 
+    - Selector: hyphenationFactor
   */
   @objc var hyphenationFactor: Float { @objc get @objc (setHyphenationFactor:) set }
 
   /**
-    - jsName: lineBreakMode
-    - name: lineBreakMode
-    - argLabels: 
+    - Selector: lineBreakMode
   */
   @objc var lineBreakMode: NSLineBreakMode { @objc get @objc (setLineBreakMode:) set }
 
   /**
-    - jsName: lineHeightMultiple
-    - name: lineHeightMultiple
-    - argLabels: 
+    - Selector: lineHeightMultiple
   */
   @objc var lineHeightMultiple: CGFloat { @objc get @objc (setLineHeightMultiple:) set }
 
   /**
-    - jsName: lineSpacing
-    - name: lineSpacing
-    - argLabels: 
+    - Selector: lineSpacing
   */
   @objc var lineSpacing: CGFloat { @objc get @objc (setLineSpacing:) set }
 
   /**
-    - jsName: maximumLineHeight
-    - name: maximumLineHeight
-    - argLabels: 
+    - Selector: maximumLineHeight
   */
   @objc var maximumLineHeight: CGFloat { @objc get @objc (setMaximumLineHeight:) set }
 
   /**
-    - jsName: minimumLineHeight
-    - name: minimumLineHeight
-    - argLabels: 
+    - Selector: minimumLineHeight
   */
   @objc var minimumLineHeight: CGFloat { @objc get @objc (setMinimumLineHeight:) set }
 
   /**
-    - jsName: paragraphSpacing
-    - name: paragraphSpacing
-    - argLabels: 
+    - Selector: paragraphSpacing
   */
   @objc var paragraphSpacing: CGFloat { @objc get @objc (setParagraphSpacing:) set }
 
   /**
-    - jsName: paragraphSpacingBefore
-    - name: paragraphSpacingBefore
-    - argLabels: 
+    - Selector: paragraphSpacingBefore
   */
   @objc var paragraphSpacingBefore: CGFloat { @objc get @objc (setParagraphSpacingBefore:) set }
 
   /**
-    - jsName: tabStops
-    - name: tabStops
-    - argLabels: 
-    - available: 10.0
+    - Selector: tabStops
     - Introduced: 10.0
   */
   @objc @available(OSX 10.0, *) var tabStops: [NSTextTab]! { @objc get @objc (setTabStops:) set }
 
   /**
-    - jsName: tailIndent
-    - name: tailIndent
-    - argLabels: 
+    - Selector: tailIndent
   */
   @objc var tailIndent: CGFloat { @objc get @objc (setTailIndent:) set }
 
   /**
-    - jsName: textBlocks
-    - name: textBlocks
-    - argLabels: 
+    - Selector: textBlocks
   */
   @objc var textBlocks: [NSTextBlock] { @objc get @objc (setTextBlocks:) set }
 
   /**
-    - jsName: textLists
-    - name: textLists
-    - argLabels: 
+    - Selector: textLists
   */
   @objc var textLists: [NSTextList] { @objc get @objc (setTextLists:) set }
 
   /**
-    - jsName: tighteningFactorForTruncation
-    - name: tighteningFactorForTruncation
-    - argLabels: 
+    - Selector: tighteningFactorForTruncation
   */
   @objc var tighteningFactorForTruncation: Float { @objc get @objc (setTighteningFactorForTruncation:) set }
 }

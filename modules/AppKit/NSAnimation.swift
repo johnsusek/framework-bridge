@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSAnimation
-    - name: NSAnimation
-    - argLabels: 
+    - Selector: NSAnimation
   */
 
 @objc(NSAnimation) protocol NSAnimationExports: JSExport, NSObjectExports {
@@ -20,160 +18,99 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: addProgressMark
-    - name: addProgressMark:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addProgressMark:
   */
   @objc func addProgressMark(_: NSAnimation.Progress)
 
   /**
-    - jsName: clearStart
-    - name: clearStartAnimation
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: clearStart()
+    - Selector: clearStartAnimation
   */
   @objc (clearStartAnimation) func clearStart()
 
   /**
-    - jsName: clearStop
-    - name: clearStopAnimation
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: clearStop()
+    - Selector: clearStopAnimation
   */
   @objc (clearStopAnimation) func clearStop()
 
   /**
-    - jsName: createWithDuration
-    - name: initWithDuration:animationCurve:
-    - argLabels: animationCurve
-    - constructorTokens: duration, animationCurve
+    - Selector: initWithDuration:animationCurve:
   */
   @objc static func createWithDuration(_: TimeInterval, animationCurve: NSAnimation.Curve) -> Self
 
   /**
-    - jsName: removeProgressMark
-    - name: removeProgressMark:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeProgressMark:
   */
   @objc func removeProgressMark(_: NSAnimation.Progress)
 
   /**
-    - jsName: start
-    - name: startAnimation
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: start()
+    - Selector: startAnimation
   */
   @objc (startAnimation) func start()
 
   /**
-    - jsName: start
-    - name: startWhenAnimation:reachesProgress:
-    - argLabels: when, reachesProgress
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: start(when:reachesProgress:)
+    - Selector: startWhenAnimation:reachesProgress:
   */
   @objc (startWhenAnimation:reachesProgress:) func start(when: NSAnimation, reachesProgress: NSAnimation.Progress)
 
   /**
-    - jsName: stop
-    - name: stopAnimation
-    - argLabels: 
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: stop()
+    - Selector: stopAnimation
   */
   @objc (stopAnimation) func stop()
 
   /**
-    - jsName: stop
-    - name: stopWhenAnimation:reachesProgress:
-    - argLabels: when, reachesProgress
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: stop(when:reachesProgress:)
+    - Selector: stopWhenAnimation:reachesProgress:
   */
   @objc (stopWhenAnimation:reachesProgress:) func stop(when: NSAnimation, reachesProgress: NSAnimation.Progress)
 
   // Own Instance Properties
 
   /**
-    - jsName: isAnimating
-    - name: animating
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isAnimating
+    - Selector: animating
   */
   @objc var isAnimating: Bool { @objc get }
 
   /**
-    - jsName: animationBlockingMode
-    - name: animationBlockingMode
-    - argLabels: 
+    - Selector: animationBlockingMode
   */
   @objc var animationBlockingMode: NSAnimation.BlockingMode { @objc get @objc (setAnimationBlockingMode:) set }
 
   /**
-    - jsName: animationCurve
-    - name: animationCurve
-    - argLabels: 
+    - Selector: animationCurve
   */
   @objc var animationCurve: NSAnimation.Curve { @objc get @objc (setAnimationCurve:) set }
 
   /**
-    - jsName: currentProgress
-    - name: currentProgress
-    - argLabels: 
+    - Selector: currentProgress
   */
   @objc var currentProgress: NSAnimation.Progress { @objc get @objc (setCurrentProgress:) set }
 
   /**
-    - jsName: currentValue
-    - name: currentValue
-    - argLabels: 
+    - Selector: currentValue
   */
   @objc var currentValue: Float { @objc get }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSAnimationDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: duration
-    - name: duration
-    - argLabels: 
+    - Selector: duration
   */
   @objc var duration: TimeInterval { @objc get @objc (setDuration:) set }
 
   /**
-    - jsName: frameRate
-    - name: frameRate
-    - argLabels: 
+    - Selector: frameRate
   */
   @objc var frameRate: Float { @objc get @objc (setFrameRate:) set }
 
   /**
-    - jsName: progressMarks
-    - name: progressMarks
-    - argLabels: 
+    - Selector: progressMarks
   */
   @objc var progressMarks: [NSNumber] { @objc get @objc (setProgressMarks:) set }
 
   /**
-    - jsName: runLoopModesForAnimating
-    - name: runLoopModesForAnimating
-    - argLabels: 
+    - Selector: runLoopModesForAnimating
   */
   @objc var runLoopModesForAnimating: [RunLoop.Mode]? { @objc get }
 }

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSColorList
-    - name: NSColorList
-    - argLabels: 
+    - Selector: NSColorList
   */
 
 @objc(NSColorList) protocol NSColorListExports: JSExport, NSObjectExports {
@@ -20,81 +18,49 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: availableColorLists
-    - name: availableColorLists
-    - argLabels: 
+    - Selector: availableColorLists
   */
   @objc static var availableColorLists: [NSColorList] { @objc get }
 
   // Instance Methods
 
   /**
-    - jsName: color
-    - name: colorWithKey:
-    - argLabels: withKey
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: color(withKey:)
+    - Selector: colorWithKey:
   */
   @objc (colorWithKey:) func color(withKey: NSColor.Name) -> NSColor?
 
   /**
-    - jsName: createWithName
-    - name: initWithName:
-    - argLabels: 
-    - constructorTokens: name
+    - Selector: initWithName:
   */
   @objc static func createWithName(_: NSColorList.Name) -> Self
 
   /**
-    - jsName: createWithName
-    - name: initWithName:fromFile:
-    - argLabels: fromFile
-    - constructorTokens: name, fromFile
+    - Selector: initWithName:fromFile:
   */
   @objc static func createWithName(_: NSColorList.Name, fromFile: String?) -> Self?
 
   /**
-    - jsName: insertColor
-    - name: insertColor:key:atIndex:
-    - argLabels: _, key, at
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: insertColor(_:key:at:)
+    - Selector: insertColor:key:atIndex:
   */
   @objc (insertColor:key:atIndex:) func insertColor(_: NSColor, key: NSColor.Name, at: Int)
 
   /**
-    - jsName: removeColor
-    - name: removeColorWithKey:
-    - argLabels: withKey
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: removeColor(withKey:)
+    - Selector: removeColorWithKey:
   */
   @objc (removeColorWithKey:) func removeColor(withKey: NSColor.Name)
 
   /**
-    - jsName: removeFile
-    - name: removeFile
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeFile
   */
   @objc func removeFile()
 
   /**
-    - jsName: setColor
-    - name: setColor:forKey:
-    - argLabels: forKey
-    - constructorTokens: 
+    - Selector: setColor:forKey:
   */
   @objc func setColor(_: NSColor, forKey: NSColor.Name)
 
   /**
-    - jsName: writeToURL
-    - name: writeToURL:error:
-    - argLabels: error
-    - constructorTokens: 
+    - Selector: writeToURL:error:
     - Introduced: 10.11
   */
   // throws - @objc @available(OSX 10.11, *) func writeToURL(error: URL?) -> Bool
@@ -102,25 +68,17 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: allKeys
-    - name: allKeys
-    - argLabels: 
+    - Selector: allKeys
   */
   @objc var allKeys: [NSColor.Name] { @objc get }
 
   /**
-    - jsName: isEditable
-    - name: editable
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isEditable
+    - Selector: editable
   */
   @objc var isEditable: Bool { @objc get }
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: NSColorList.Name? { @objc get }
 }

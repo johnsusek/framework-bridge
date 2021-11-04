@@ -9,32 +9,20 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: Process
-    - name: NSTask
-    - argLabels: 
+    - Selector: NSTask
   */
 
 @objc(Process) protocol ProcessExports: JSExport, NSObjectExports {
   // Static Methods
 
   /**
-    - jsName: launchedTaskWithExecutableURL
-    - name: launchedTaskWithExecutableURL:arguments:error:terminationHandler:
-    - argLabels: arguments, error, terminationHandler
-    - constructorTokens: 
+    - Selector: launchedTaskWithExecutableURL:arguments:error:terminationHandler:
     - Introduced: 10.13
   */
-  // jsvalue - @objc @available(OSX 10.13, *) static func launchedTaskWithExecutableURL(_: URL, `arguments`: [String], error: UnsafeMutablePointer<Error?>?, terminationHandler: JSValue) -> Process?
+// jsvalue   @objc @available(OSX 10.13, *) static func launchedTaskWithExecutableURL(_: URL, `arguments`: [String], error: UnsafeMutablePointer<Error?>?, terminationHandler: JSValue) -> Process?
 
   /**
-    - jsName: launchedProcess
-    - name: launchedTaskWithLaunchPath:arguments:
-    - argLabels: launchPath, arguments
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: launchedProcess(launchPath:arguments:)
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: launchedTaskWithLaunchPath:arguments:
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: launchedTaskWithExecutableURL:arguments:error:
@@ -44,20 +32,12 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: interrupt
-    - name: interrupt
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: interrupt
   */
   @objc func interrupt()
 
   /**
-    - jsName: launch
-    - name: launch
-    - argLabels: 
-    - constructorTokens: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: launch
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: launchAndReturnError:
@@ -65,61 +45,40 @@ import Foundation
   @objc @available(OSX 10.0, *) func launch()
 
   /**
-    - jsName: launchAndReturnError
-    - name: launchAndReturnError:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: launchAndReturnError:
     - Introduced: 10.13
   */
   // throws - // unavailableInSwift @objc @available(OSX 10.13, *) func launchAndReturnError() -> Bool
 
   /**
-    - jsName: resume
-    - name: resume
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: resume
   */
   @objc func resume() -> Bool
 
   /**
-    - jsName: suspend
-    - name: suspend
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: suspend
   */
   @objc func suspend() -> Bool
 
   /**
-    - jsName: terminate
-    - name: terminate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: terminate
   */
   @objc func terminate()
 
   /**
-    - jsName: waitUntilExit
-    - name: waitUntilExit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: waitUntilExit
   */
   @objc func waitUntilExit()
 
   // Own Instance Properties
 
   /**
-    - jsName: arguments
-    - name: arguments
-    - argLabels: 
+    - Selector: arguments
   */
   @objc var `arguments`: [String]? { @objc get @objc (setArguments:) set }
 
   /**
-    - jsName: currentDirectoryPath
-    - name: currentDirectoryPath
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: currentDirectoryPath
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: currentDirectoryURL
@@ -127,36 +86,24 @@ import Foundation
   @objc @available(OSX 10.0, *) var currentDirectoryPath: String { @objc get @objc (setCurrentDirectoryPath:) set }
 
   /**
-    - jsName: currentDirectoryURL
-    - name: currentDirectoryURL
-    - argLabels: 
-    - available: 10.13
+    - Selector: currentDirectoryURL
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var currentDirectoryURL: URL? { @objc get @objc (setCurrentDirectoryURL:) set }
 
   /**
-    - jsName: environment
-    - name: environment
-    - argLabels: 
+    - Selector: environment
   */
   @objc var environment: [String: String]? { @objc get @objc (setEnvironment:) set }
 
   /**
-    - jsName: executableURL
-    - name: executableURL
-    - argLabels: 
-    - available: 10.13
+    - Selector: executableURL
     - Introduced: 10.13
   */
   @objc @available(OSX 10.13, *) var executableURL: URL? { @objc get @objc (setExecutableURL:) set }
 
   /**
-    - jsName: launchPath
-    - name: launchPath
-    - argLabels: 
-    - introduced: 10.0
-    - deprecated: 100000
+    - Selector: launchPath
     - Introduced: 10.0
     - Deprecated: 100000
     - Replacement: executableURL
@@ -164,73 +111,50 @@ import Foundation
   @objc @available(OSX 10.0, *) var launchPath: String? { @objc get @objc (setLaunchPath:) set }
 
   /**
-    - jsName: processIdentifier
-    - name: processIdentifier
-    - argLabels: 
+    - Selector: processIdentifier
   */
   @objc var processIdentifier: Int32 { @objc get }
 
   /**
-    - jsName: qualityOfService
-    - name: qualityOfService
-    - argLabels: 
-    - available: 10.10
+    - Selector: qualityOfService
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var qualityOfService: QualityOfService { @objc get @objc (setQualityOfService:) set }
 
   /**
-    - jsName: isRunning
-    - name: running
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isRunning
+    - Selector: running
   */
   @objc var isRunning: Bool { @objc get }
 
   /**
-    - jsName: standardError
-    - name: standardError
-    - argLabels: 
+    - Selector: standardError
   */
   @objc var standardError: Any? { @objc get @objc (setStandardError:) set }
 
   /**
-    - jsName: standardInput
-    - name: standardInput
-    - argLabels: 
+    - Selector: standardInput
   */
   @objc var standardInput: Any? { @objc get @objc (setStandardInput:) set }
 
   /**
-    - jsName: standardOutput
-    - name: standardOutput
-    - argLabels: 
+    - Selector: standardOutput
   */
   @objc var standardOutput: Any? { @objc get @objc (setStandardOutput:) set }
 
   /**
-    - jsName: terminationHandler
-    - name: terminationHandler
-    - argLabels: 
-    - available: 10.7
+    - Selector: terminationHandler
     - Introduced: 10.7
   */
 // jsvalue   @objc @available(OSX 10.7, *) var terminationHandler: JSValue? { @objc get @objc (setTerminationHandler:) set }
 
   /**
-    - jsName: terminationReason
-    - name: terminationReason
-    - argLabels: 
-    - available: 10.6
+    - Selector: terminationReason
     - Introduced: 10.6
   */
   @objc @available(OSX 10.6, *) var terminationReason: Process.TerminationReason { @objc get }
 
   /**
-    - jsName: terminationStatus
-    - name: terminationStatus
-    - argLabels: 
+    - Selector: terminationStatus
   */
   @objc var terminationStatus: Int32 { @objc get }
 }

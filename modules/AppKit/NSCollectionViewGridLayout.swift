@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionViewGridLayout
-    - name: NSCollectionViewGridLayout
-    - argLabels: 
+    - Selector: NSCollectionViewGridLayout
     - Introduced: 10.11
   */
 
@@ -21,58 +19,42 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: backgroundColors
-    - name: backgroundColors
-    - argLabels: 
+    - Selector: backgroundColors
   */
   @objc var backgroundColors: [NSColor]! { @objc get @objc (setBackgroundColors:) set }
 
   /**
-    - jsName: margins
-    - name: margins
-    - argLabels: 
+    - Selector: margins
   */
   @objc var margins: NSEdgeInsets { @objc get @objc (setMargins:) set }
 
   /**
-    - jsName: maximumItemSize
-    - name: maximumItemSize
-    - argLabels: 
+    - Selector: maximumItemSize
   */
   @objc var maximumItemSize: CGSize { @objc get @objc (setMaximumItemSize:) set }
 
   /**
-    - jsName: maximumNumberOfColumns
-    - name: maximumNumberOfColumns
-    - argLabels: 
+    - Selector: maximumNumberOfColumns
   */
   @objc var maximumNumberOfColumns: Int { @objc get @objc (setMaximumNumberOfColumns:) set }
 
   /**
-    - jsName: maximumNumberOfRows
-    - name: maximumNumberOfRows
-    - argLabels: 
+    - Selector: maximumNumberOfRows
   */
   @objc var maximumNumberOfRows: Int { @objc get @objc (setMaximumNumberOfRows:) set }
 
   /**
-    - jsName: minimumInteritemSpacing
-    - name: minimumInteritemSpacing
-    - argLabels: 
+    - Selector: minimumInteritemSpacing
   */
   @objc var minimumInteritemSpacing: CGFloat { @objc get @objc (setMinimumInteritemSpacing:) set }
 
   /**
-    - jsName: minimumItemSize
-    - name: minimumItemSize
-    - argLabels: 
+    - Selector: minimumItemSize
   */
   @objc var minimumItemSize: CGSize { @objc get @objc (setMinimumItemSize:) set }
 
   /**
-    - jsName: minimumLineSpacing
-    - name: minimumLineSpacing
-    - argLabels: 
+    - Selector: minimumLineSpacing
   */
   @objc var minimumLineSpacing: CGFloat { @objc get @objc (setMinimumLineSpacing:) set }
 }

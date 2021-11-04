@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSRandomSpecifier
-    - name: NSRandomSpecifier
-    - argLabels: 
+    - Selector: NSRandomSpecifier
   */
 
 @objc(NSRandomSpecifier) protocol NSRandomSpecifierExports: JSExport, NSScriptObjectSpecifierExports {

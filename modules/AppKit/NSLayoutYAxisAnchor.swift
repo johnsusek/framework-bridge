@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSLayoutYAxisAnchor
-    - name: NSLayoutYAxisAnchor
-    - argLabels: 
+    - Selector: NSLayoutYAxisAnchor
     - Introduced: 10.11
   */
 
@@ -21,13 +19,7 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: anchorWithOffset
-    - name: anchorWithOffsetToAnchor:
-    - argLabels: to
-    - constructorTokens: 
-    - available: 10.12
-    - obsoleted: 3
-    - renamed: anchorWithOffset(to:)
+    - Selector: anchorWithOffsetToAnchor:
     - Introduced: 10.12
   */
   @objc (anchorWithOffsetToAnchor:) @available(OSX 10.12, *) func anchorWithOffset(to: NSLayoutYAxisAnchor) -> NSLayoutDimension

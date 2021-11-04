@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: URLSessionDataTask
-    - name: NSURLSessionDataTask
-    - argLabels: 
+    - Selector: NSURLSessionDataTask
   */
 
 @objc(URLSessionDataTask) protocol URLSessionDataTaskExports: JSExport, URLSessionTaskExports {

@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSharingServicePickerToolbarItem
-    - name: NSSharingServicePickerToolbarItem
-    - argLabels: 
+    - Selector: NSSharingServicePickerToolbarItem
     - Introduced: 10.15
   */
 
@@ -21,9 +19,7 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSharingServicePickerToolbarItemDelegate? { @objc get @objc (setDelegate:) set }
 }

@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitAcceleration
-    - name: NSUnitAcceleration
-    - argLabels: 
+    - Selector: NSUnitAcceleration
     - Introduced: 10.12
   */
 
@@ -19,26 +17,19 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: baseUnit
-    - name: baseUnit
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: baseUnit
   */
   @objc static func baseUnit() -> Self
 
   // Own Static Properties
 
   /**
-    - jsName: gravity
-    - name: gravity
-    - argLabels: 
+    - Selector: gravity
   */
   @objc static var gravity: UnitAcceleration { @objc get }
 
   /**
-    - jsName: metersPerSecondSquared
-    - name: metersPerSecondSquared
-    - argLabels: 
+    - Selector: metersPerSecondSquared
   */
   @objc static var metersPerSecondSquared: UnitAcceleration { @objc get }
 }

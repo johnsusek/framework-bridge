@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSNameSpecifier
-    - name: NSNameSpecifier
-    - argLabels: 
+    - Selector: NSNameSpecifier
   */
 
 @objc(NSNameSpecifier) protocol NSNameSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
@@ -20,19 +18,14 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithContainerClassDescription
-    - name: initWithContainerClassDescription:containerSpecifier:key:name:
-    - argLabels: containerSpecifier, key, name
-    - constructorTokens: containerClassDescription, containerSpecifier, key, name
+    - Selector: initWithContainerClassDescription:containerSpecifier:key:name:
   */
   @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, name: String) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: name
-    - name: name
-    - argLabels: 
+    - Selector: name
   */
   @objc var name: String { @objc get @objc (setName:) set }
 }

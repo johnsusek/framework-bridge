@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: UnitConverter
-    - name: NSUnitConverter
-    - argLabels: 
+    - Selector: NSUnitConverter
     - Introduced: 10.12
   */
 
@@ -21,22 +19,12 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: baseUnitValue
-    - name: baseUnitValueFromValue:
-    - argLabels: fromValue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: baseUnitValue(fromValue:)
+    - Selector: baseUnitValueFromValue:
   */
   @objc (baseUnitValueFromValue:) func baseUnitValue(fromValue: Double) -> Double
 
   /**
-    - jsName: value
-    - name: valueFromBaseUnitValue:
-    - argLabels: fromBaseUnitValue
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: value(fromBaseUnitValue:)
+    - Selector: valueFromBaseUnitValue:
   */
   @objc (valueFromBaseUnitValue:) func value(fromBaseUnitValue: Double) -> Double
 }

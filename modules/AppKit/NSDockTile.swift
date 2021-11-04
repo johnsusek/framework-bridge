@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSDockTile
-    - name: NSDockTile
-    - argLabels: 
+    - Selector: NSDockTile
     - Introduced: 10.5
   */
 
@@ -21,47 +19,34 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: display
-    - name: display
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: display
   */
   @objc func display()
 
   // Own Instance Properties
 
   /**
-    - jsName: badgeLabel
-    - name: badgeLabel
-    - argLabels: 
+    - Selector: badgeLabel
   */
   @objc var badgeLabel: String? { @objc get @objc (setBadgeLabel:) set }
 
   /**
-    - jsName: contentView
-    - name: contentView
-    - argLabels: 
+    - Selector: contentView
   */
   @objc var contentView: NSView? { @objc get @objc (setContentView:) set }
 
   /**
-    - jsName: owner
-    - name: owner
-    - argLabels: 
+    - Selector: owner
   */
   @objc var owner: AnyObject? { @objc get }
 
   /**
-    - jsName: showsApplicationBadge
-    - name: showsApplicationBadge
-    - argLabels: 
+    - Selector: showsApplicationBadge
   */
   @objc var showsApplicationBadge: Bool { @objc get @objc (setShowsApplicationBadge:) set }
 
   /**
-    - jsName: size
-    - name: size
-    - argLabels: 
+    - Selector: size
   */
   @objc var size: CGSize { @objc get }
 }

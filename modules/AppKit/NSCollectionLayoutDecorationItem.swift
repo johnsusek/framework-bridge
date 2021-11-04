@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSCollectionLayoutDecorationItem
-    - name: NSCollectionLayoutDecorationItem
-    - argLabels: 
+    - Selector: NSCollectionLayoutDecorationItem
     - Introduced: 10.15
   */
 
@@ -19,28 +17,19 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: background
-    - name: backgroundDecorationItemWithElementKind:
-    - argLabels: elementKind
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: background(elementKind:)
+    - Selector: backgroundDecorationItemWithElementKind:
   */
   @objc static func background(elementKind: String) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: elementKind
-    - name: elementKind
-    - argLabels: 
+    - Selector: elementKind
   */
   @objc var elementKind: String { @objc get }
 
   /**
-    - jsName: zIndex
-    - name: zIndex
-    - argLabels: 
+    - Selector: zIndex
   */
   @objc var zIndex: Int { @objc get @objc (setZIndex:) set }
 }

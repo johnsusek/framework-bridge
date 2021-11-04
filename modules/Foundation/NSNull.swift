@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSNull
-    - name: NSNull
-    - argLabels: 
+    - Selector: NSNull
   */
 
 @objc(NSNull) protocol NSNullExports: JSExport, NSObjectExports {

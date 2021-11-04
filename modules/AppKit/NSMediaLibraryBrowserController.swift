@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSMediaLibraryBrowserController
-    - name: NSMediaLibraryBrowserController
-    - argLabels: 
+    - Selector: NSMediaLibraryBrowserController
     - Introduced: 10.9
   */
 
@@ -21,46 +19,31 @@ import AppKit
   // Own Static Properties
 
   /**
-    - jsName: shared
-    - name: sharedMediaLibraryBrowserController
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: shared
+    - Selector: sharedMediaLibraryBrowserController
   */
   @objc static var shared: NSMediaLibraryBrowserController { @objc (sharedMediaLibraryBrowserController) get }
 
   // Instance Methods
 
   /**
-    - jsName: togglePanel
-    - name: togglePanel:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: togglePanel:
   */
   @objc func togglePanel(_: Any?)
 
   // Own Instance Properties
 
   /**
-    - jsName: frame
-    - name: frame
-    - argLabels: 
+    - Selector: frame
   */
   @objc var frame: CGRect { @objc get @objc (setFrame:) set }
 
   /**
-    - jsName: mediaLibraries
-    - name: mediaLibraries
-    - argLabels: 
+    - Selector: mediaLibraries
   */
   @objc var mediaLibraries: NSMediaLibraryBrowserController.Library { @objc get @objc (setMediaLibraries:) set }
 
   /**
-    - jsName: isVisible
-    - name: visible
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: isVisible
+    - Selector: visible
   */
   @objc var isVisible: Bool { @objc get @objc (setVisible:) set }
 }

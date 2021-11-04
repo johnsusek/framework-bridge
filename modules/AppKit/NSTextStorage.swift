@@ -9,152 +9,114 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextStorage
-    - name: NSTextStorage
-    - argLabels: 
+    - Selector: NSTextStorage
     - Introduced: 10.0
   */
 
 @objc(NSTextStorage) protocol NSTextStorageExports: JSExport, NSMutableAttributedStringExports {
   // Static Methods
 
+  /**
+    - Selector: readableTypesForPasteboard:
+  */
+  @objc (readableTypesForPasteboard:) static func readableTypes(`for`: NSPasteboard) -> [NSPasteboard.PasteboardType]
+
+  /**
+    - Selector: readingOptionsForType:pasteboard:
+  */
+  @objc (readingOptionsForType:pasteboard:) static func readingOptions(forType: NSPasteboard.PasteboardType, pasteboard: NSPasteboard) -> NSPasteboard.ReadingOptions
+
   // Instance Methods
 
   /**
-    - jsName: addLayoutManager
-    - name: addLayoutManager:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: addLayoutManager:
   */
   @objc func addLayoutManager(_: NSLayoutManager)
 
   /**
-    - jsName: edited
-    - name: edited:range:changeInLength:
-    - argLabels: range, changeInLength
-    - constructorTokens: 
+    - Selector: edited:range:changeInLength:
   */
   @objc func edited(_: NSTextStorageEditActions, range: NSRange, changeInLength: Int)
 
   /**
-    - jsName: ensureAttributesAreFixed
-    - name: ensureAttributesAreFixedInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: ensureAttributesAreFixed(in:)
+    - Selector: ensureAttributesAreFixedInRange:
   */
   @objc (ensureAttributesAreFixedInRange:) func ensureAttributesAreFixed(in: NSRange)
 
   /**
-    - jsName: invalidateAttributes
-    - name: invalidateAttributesInRange:
-    - argLabels: in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: invalidateAttributes(in:)
+    - Selector: invalidateAttributesInRange:
   */
   @objc (invalidateAttributesInRange:) func invalidateAttributes(in: NSRange)
 
   /**
-    - jsName: processEditing
-    - name: processEditing
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: processEditing
   */
   @objc func processEditing()
 
   /**
-    - jsName: removeLayoutManager
-    - name: removeLayoutManager:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: removeLayoutManager:
   */
   @objc func removeLayoutManager(_: NSLayoutManager)
 
   // Own Instance Properties
 
   /**
-    - jsName: attributeRuns
-    - name: attributeRuns
-    - argLabels: 
+    - Selector: attributeRuns
   */
   @objc var attributeRuns: [NSTextStorage] { @objc get @objc (setAttributeRuns:) set }
 
   /**
-    - jsName: changeInLength
-    - name: changeInLength
-    - argLabels: 
+    - Selector: changeInLength
   */
   @objc var changeInLength: Int { @objc get }
 
   /**
-    - jsName: characters
-    - name: characters
-    - argLabels: 
+    - Selector: characters
   */
   @objc var characters: [NSTextStorage] { @objc get @objc (setCharacters:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSTextStorageDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: editedMask
-    - name: editedMask
-    - argLabels: 
+    - Selector: editedMask
   */
   @objc var editedMask: NSTextStorageEditActions { @objc get }
 
   /**
-    - jsName: editedRange
-    - name: editedRange
-    - argLabels: 
+    - Selector: editedRange
   */
   @objc var editedRange: NSRange { @objc get }
 
   /**
-    - jsName: fixesAttributesLazily
-    - name: fixesAttributesLazily
-    - argLabels: 
+    - Selector: fixesAttributesLazily
   */
   @objc var fixesAttributesLazily: Bool { @objc get }
 
   /**
-    - jsName: font
-    - name: font
-    - argLabels: 
+    - Selector: font
   */
   @objc var font: NSFont? { @objc get @objc (setFont:) set }
 
   /**
-    - jsName: foregroundColor
-    - name: foregroundColor
-    - argLabels: 
+    - Selector: foregroundColor
   */
   @objc var foregroundColor: NSColor? { @objc get @objc (setForegroundColor:) set }
 
   /**
-    - jsName: layoutManagers
-    - name: layoutManagers
-    - argLabels: 
+    - Selector: layoutManagers
   */
   @objc var layoutManagers: [NSLayoutManager] { @objc get }
 
   /**
-    - jsName: paragraphs
-    - name: paragraphs
-    - argLabels: 
+    - Selector: paragraphs
   */
   @objc var paragraphs: [NSTextStorage] { @objc get @objc (setParagraphs:) set }
 
   /**
-    - jsName: words
-    - name: words
-    - argLabels: 
+    - Selector: words
   */
   @objc var words: [NSTextStorage] { @objc get @objc (setWords:) set }
 }

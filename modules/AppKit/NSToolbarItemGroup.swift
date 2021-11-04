@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSToolbarItemGroup
-    - name: NSToolbarItemGroup
-    - argLabels: 
+    - Selector: NSToolbarItemGroup
     - Introduced: 10.5
   */
 
@@ -19,27 +17,13 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: create
-    - name: groupWithItemIdentifier:images:selectionMode:labels:target:action:
-    - argLabels: itemIdentifier, images, selectionMode, labels, target, action
-    - constructorTokens: 
-    - available: 10.15
-    - unavailable: true
-    - renamed: init(itemIdentifier:images:selectionMode:labels:target:action:)
-    - message: Not available in Swift
+    - Selector: groupWithItemIdentifier:images:selectionMode:labels:target:action:
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static func create(itemIdentifier: NSToolbarItem.Identifier, images: [NSImage], selectionMode: NSToolbarItemGroup.SelectionMode, labels: [String]?) -> Self
 
   /**
-    - jsName: create
-    - name: groupWithItemIdentifier:titles:selectionMode:labels:target:action:
-    - argLabels: itemIdentifier, titles, selectionMode, labels, target, action
-    - constructorTokens: 
-    - available: 10.15
-    - unavailable: true
-    - renamed: init(itemIdentifier:titles:selectionMode:labels:target:action:)
-    - message: Not available in Swift
+    - Selector: groupWithItemIdentifier:titles:selectionMode:labels:target:action:
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) static func create(itemIdentifier: NSToolbarItem.Identifier, titles: [String], selectionMode: NSToolbarItemGroup.SelectionMode, labels: [String]?) -> Self
@@ -47,25 +31,13 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: isSelected
-    - name: isSelectedAtIndex:
-    - argLabels: at
-    - constructorTokens: 
-    - available: 10.15
-    - obsoleted: 3
-    - renamed: isSelected(at:)
+    - Selector: isSelectedAtIndex:
     - Introduced: 10.15
   */
   @objc (isSelectedAtIndex:) @available(OSX 10.15, *) func isSelected(at: Int) -> Bool
 
   /**
-    - jsName: setSelected
-    - name: setSelected:atIndex:
-    - argLabels: _, at
-    - constructorTokens: 
-    - available: 10.15
-    - obsoleted: 3
-    - renamed: setSelected(_:at:)
+    - Selector: setSelected:atIndex:
     - Introduced: 10.15
   */
   @objc (setSelected:atIndex:) @available(OSX 10.15, *) func setSelected(_: Bool, at: Int)
@@ -73,36 +45,25 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: controlRepresentation
-    - name: controlRepresentation
-    - argLabels: 
-    - available: 10.15
+    - Selector: controlRepresentation
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) var controlRepresentation: NSToolbarItemGroup.ControlRepresentation { @objc get @objc (setControlRepresentation:) set }
 
   /**
-    - jsName: selectedIndex
-    - name: selectedIndex
-    - argLabels: 
-    - available: 10.15
+    - Selector: selectedIndex
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) var selectedIndex: Int { @objc get @objc (setSelectedIndex:) set }
 
   /**
-    - jsName: selectionMode
-    - name: selectionMode
-    - argLabels: 
-    - available: 10.15
+    - Selector: selectionMode
     - Introduced: 10.15
   */
   @objc @available(OSX 10.15, *) var selectionMode: NSToolbarItemGroup.SelectionMode { @objc get @objc (setSelectionMode:) set }
 
   /**
-    - jsName: subitems
-    - name: subitems
-    - argLabels: 
+    - Selector: subitems
   */
   @objc var subitems: [NSToolbarItem] { @objc get @objc (setSubitems:) set }
 }

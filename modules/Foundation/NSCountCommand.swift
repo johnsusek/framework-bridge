@@ -9,13 +9,16 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSCountCommand
-    - name: NSCountCommand
-    - argLabels: 
+    - Selector: NSCountCommand
   */
 
 @objc(NSCountCommand) protocol NSCountCommandExports: JSExport, NSScriptCommandExports {
   // Static Methods
+
+  /**
+    - Selector: currentCommand
+  */
+  @objc (currentCommand) static func current() -> NSScriptCommand?
 }
 
 extension NSCountCommand: NSCountCommandExports {

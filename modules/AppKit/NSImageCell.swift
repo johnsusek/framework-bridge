@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSImageCell
-    - name: NSImageCell
-    - argLabels: 
+    - Selector: NSImageCell
   */
 
 @objc(NSImageCell) protocol NSImageCellExports: JSExport, NSCellExports {
@@ -20,23 +18,17 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: imageAlignment
-    - name: imageAlignment
-    - argLabels: 
+    - Selector: imageAlignment
   */
   @objc var imageAlignment: NSImageAlignment { @objc get @objc (setImageAlignment:) set }
 
   /**
-    - jsName: imageFrameStyle
-    - name: imageFrameStyle
-    - argLabels: 
+    - Selector: imageFrameStyle
   */
   @objc var imageFrameStyle: NSImageView.FrameStyle { @objc get @objc (setImageFrameStyle:) set }
 
   /**
-    - jsName: imageScaling
-    - name: imageScaling
-    - argLabels: 
+    - Selector: imageScaling
   */
   @objc var imageScaling: NSImageScaling { @objc get @objc (setImageScaling:) set }
 }

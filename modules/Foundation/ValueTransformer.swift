@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: ValueTransformer
-    - name: NSValueTransformer
-    - argLabels: 
+    - Selector: NSValueTransformer
     - Introduced: 10.3
   */
 
@@ -19,63 +17,39 @@ import Foundation
   // Static Methods
 
   /**
-    - jsName: allowsReverseTransformation
-    - name: allowsReverseTransformation
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: allowsReverseTransformation
   */
   @objc static func allowsReverseTransformation() -> Bool
 
   /**
-    - jsName: setValueTransformer
-    - name: setValueTransformer:forName:
-    - argLabels: forName
-    - constructorTokens: 
+    - Selector: setValueTransformer:forName:
   */
   @objc static func setValueTransformer(_: ValueTransformer?, forName: NSValueTransformerName)
 
   /**
-    - jsName: transformedValueClass
-    - name: transformedValueClass
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: transformedValueClass
   */
   @objc static func transformedValueClass() -> AnyClass
 
   /**
-    - jsName: create
-    - name: valueTransformerForName:
-    - argLabels: forName
-    - constructorTokens: 
-    - unavailable: true
-    - renamed: init(forName:)
-    - message: Not available in Swift
+    - Selector: valueTransformerForName:
   */
   @objc static func create(forName: NSValueTransformerName) -> ValueTransformer?
 
   /**
-    - jsName: valueTransformerNames
-    - name: valueTransformerNames
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: valueTransformerNames
   */
   @objc static func valueTransformerNames() -> [NSValueTransformerName]
 
   // Instance Methods
 
   /**
-    - jsName: reverseTransformedValue
-    - name: reverseTransformedValue:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: reverseTransformedValue:
   */
   @objc func reverseTransformedValue(_: Any?) -> Any?
 
   /**
-    - jsName: transformedValue
-    - name: transformedValue:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: transformedValue:
   */
   @objc func transformedValue(_: Any?) -> Any?
 }

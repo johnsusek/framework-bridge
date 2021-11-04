@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: NSIndexSpecifier
-    - name: NSIndexSpecifier
-    - argLabels: 
+    - Selector: NSIndexSpecifier
   */
 
 @objc(NSIndexSpecifier) protocol NSIndexSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
@@ -20,19 +18,14 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: createWithContainerClassDescription
-    - name: initWithContainerClassDescription:containerSpecifier:key:index:
-    - argLabels: containerSpecifier, key, index
-    - constructorTokens: containerClassDescription, containerSpecifier, key, index
+    - Selector: initWithContainerClassDescription:containerSpecifier:key:index:
   */
   @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, index: Int) -> Self
 
   // Own Instance Properties
 
   /**
-    - jsName: index
-    - name: index
-    - argLabels: 
+    - Selector: index
   */
   @objc var index: Int { @objc get @objc (setIndex:) set }
 }

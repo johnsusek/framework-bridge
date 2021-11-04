@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSSpeechRecognizer
-    - name: NSSpeechRecognizer
-    - argLabels: 
+    - Selector: NSSpeechRecognizer
   */
 
 @objc(NSSpeechRecognizer) protocol NSSpeechRecognizerExports: JSExport, NSObjectExports {
@@ -20,55 +18,39 @@ import AppKit
   // Instance Methods
 
   /**
-    - jsName: startListening
-    - name: startListening
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: startListening
   */
   @objc func startListening()
 
   /**
-    - jsName: stopListening
-    - name: stopListening
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: stopListening
   */
   @objc func stopListening()
 
   // Own Instance Properties
 
   /**
-    - jsName: blocksOtherRecognizers
-    - name: blocksOtherRecognizers
-    - argLabels: 
+    - Selector: blocksOtherRecognizers
   */
   @objc var blocksOtherRecognizers: Bool { @objc get @objc (setBlocksOtherRecognizers:) set }
 
   /**
-    - jsName: commands
-    - name: commands
-    - argLabels: 
+    - Selector: commands
   */
   @objc var commands: [String]? { @objc get @objc (setCommands:) set }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: NSSpeechRecognizerDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: displayedCommandsTitle
-    - name: displayedCommandsTitle
-    - argLabels: 
+    - Selector: displayedCommandsTitle
   */
   @objc var displayedCommandsTitle: String? { @objc get @objc (setDisplayedCommandsTitle:) set }
 
   /**
-    - jsName: listensInForegroundOnly
-    - name: listensInForegroundOnly
-    - argLabels: 
+    - Selector: listensInForegroundOnly
   */
   @objc var listensInForegroundOnly: Bool { @objc get @objc (setListensInForegroundOnly:) set }
 }

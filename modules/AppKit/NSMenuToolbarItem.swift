@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSMenuToolbarItem
-    - name: NSMenuToolbarItem
-    - argLabels: 
+    - Selector: NSMenuToolbarItem
     - Introduced: 10.15
   */
 
@@ -21,16 +19,12 @@ import AppKit
   // Own Instance Properties
 
   /**
-    - jsName: menu
-    - name: menu
-    - argLabels: 
+    - Selector: menu
   */
   @objc var menu: NSMenu { @objc get @objc (setMenu:) set }
 
   /**
-    - jsName: showsIndicator
-    - name: showsIndicator
-    - argLabels: 
+    - Selector: showsIndicator
   */
   @objc var showsIndicator: Bool { @objc get @objc (setShowsIndicator:) set }
 }

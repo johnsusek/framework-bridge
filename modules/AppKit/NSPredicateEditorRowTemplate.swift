@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSPredicateEditorRowTemplate
-    - name: NSPredicateEditorRowTemplate
-    - argLabels: 
+    - Selector: NSPredicateEditorRowTemplate
     - Introduced: 10.5
   */
 
@@ -19,134 +17,86 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: templates
-    - name: templatesWithAttributeKeyPaths:inEntityDescription:
-    - argLabels: withAttributeKeyPaths, in
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: templates(withAttributeKeyPaths:in:)
+    - Selector: templatesWithAttributeKeyPaths:inEntityDescription:
   */
   @objc (templatesWithAttributeKeyPaths:inEntityDescription:) static func templates(withAttributeKeyPaths: [String], in: NSEntityDescription) -> [NSPredicateEditorRowTemplate]
 
   // Instance Methods
 
   /**
-    - jsName: displayableSubpredicates
-    - name: displayableSubpredicatesOfPredicate:
-    - argLabels: of
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: displayableSubpredicates(of:)
+    - Selector: displayableSubpredicatesOfPredicate:
   */
   @objc (displayableSubpredicatesOfPredicate:) func displayableSubpredicates(of: NSPredicate) -> [NSPredicate]?
 
   /**
-    - jsName: createWithCompoundTypes
-    - name: initWithCompoundTypes:
-    - argLabels: 
-    - constructorTokens: compoundTypes
+    - Selector: initWithCompoundTypes:
   */
   @objc static func createWithCompoundTypes(_: [NSNumber]) -> Self
 
   /**
-    - jsName: createWithLeftExpressions
-    - name: initWithLeftExpressions:rightExpressionAttributeType:modifier:operators:options:
-    - argLabels: rightExpressionAttributeType, modifier, operators, options
-    - constructorTokens: leftExpressions, rightExpressionAttributeType, modifier, operators, options
+    - Selector: initWithLeftExpressions:rightExpressionAttributeType:modifier:operators:options:
   */
   @objc static func createWithLeftExpressions(_: [NSExpression], rightExpressionAttributeType: NSAttributeType, modifier: NSComparisonPredicate.Modifier, operators: [NSNumber], options: Int) -> Self
 
   /**
-    - jsName: createWithLeftExpressions
-    - name: initWithLeftExpressions:rightExpressions:modifier:operators:options:
-    - argLabels: rightExpressions, modifier, operators, options
-    - constructorTokens: leftExpressions, rightExpressions, modifier, operators, options
+    - Selector: initWithLeftExpressions:rightExpressions:modifier:operators:options:
   */
   @objc static func createWithLeftExpressions(_: [NSExpression], rightExpressions: [NSExpression], modifier: NSComparisonPredicate.Modifier, operators: [NSNumber], options: Int) -> Self
 
   /**
-    - jsName: match
-    - name: matchForPredicate:
-    - argLabels: for
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: match(for:)
+    - Selector: matchForPredicate:
   */
   @objc (matchForPredicate:) func match(`for`: NSPredicate) -> Double
 
   /**
-    - jsName: predicate
-    - name: predicateWithSubpredicates:
-    - argLabels: withSubpredicates
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: predicate(withSubpredicates:)
+    - Selector: predicateWithSubpredicates:
   */
   @objc (predicateWithSubpredicates:) func predicate(withSubpredicates: [NSPredicate]?) -> NSPredicate
 
   /**
-    - jsName: setPredicate
-    - name: setPredicate:
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: setPredicate:
   */
   @objc func setPredicate(_: NSPredicate)
 
   // Own Instance Properties
 
   /**
-    - jsName: compoundTypes
-    - name: compoundTypes
-    - argLabels: 
+    - Selector: compoundTypes
   */
   @objc var compoundTypes: [NSNumber]? { @objc get }
 
   /**
-    - jsName: leftExpressions
-    - name: leftExpressions
-    - argLabels: 
+    - Selector: leftExpressions
   */
   @objc var leftExpressions: [NSExpression]? { @objc get }
 
   /**
-    - jsName: modifier
-    - name: modifier
-    - argLabels: 
+    - Selector: modifier
   */
   @objc var modifier: NSComparisonPredicate.Modifier { @objc get }
 
   /**
-    - jsName: operators
-    - name: operators
-    - argLabels: 
+    - Selector: operators
   */
   @objc var operators: [NSNumber]? { @objc get }
 
   /**
-    - jsName: options
-    - name: options
-    - argLabels: 
+    - Selector: options
   */
   @objc var options: Int { @objc get }
 
   /**
-    - jsName: rightExpressionAttributeType
-    - name: rightExpressionAttributeType
-    - argLabels: 
+    - Selector: rightExpressionAttributeType
   */
   @objc var rightExpressionAttributeType: NSAttributeType { @objc get }
 
   /**
-    - jsName: rightExpressions
-    - name: rightExpressions
-    - argLabels: 
+    - Selector: rightExpressions
   */
   @objc var rightExpressions: [NSExpression]? { @objc get }
 
   /**
-    - jsName: templateViews
-    - name: templateViews
-    - argLabels: 
+    - Selector: templateViews
   */
   @objc var templateViews: [NSView] { @objc get }
 }

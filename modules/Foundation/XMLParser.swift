@@ -9,9 +9,7 @@ import Foundation
 // Interface 
 
   /**
-    - jsName: XMLParser
-    - name: NSXMLParser
-    - argLabels: 
+    - Selector: NSXMLParser
   */
 
 @objc(XMLParser) protocol XMLParserExports: JSExport, NSObjectExports {
@@ -20,118 +18,82 @@ import Foundation
   // Instance Methods
 
   /**
-    - jsName: abortParsing
-    - name: abortParsing
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: abortParsing
   */
   @objc func abortParsing()
 
   /**
-    - jsName: createWithContentsOfURL
-    - name: initWithContentsOfURL:
-    - argLabels: 
-    - constructorTokens: contentsOf
+    - Selector: initWithContentsOfURL:
   */
   @objc static func createWithContentsOfURL(_: URL) -> Self?
 
   /**
-    - jsName: createWithStream
-    - name: initWithStream:
-    - argLabels: 
-    - constructorTokens: stream
+    - Selector: initWithStream:
     - Introduced: 10.7
   */
   @objc @available(OSX 10.7, *) static func createWithStream(_: InputStream) -> Self
 
   /**
-    - jsName: parse
-    - name: parse
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: parse
   */
   @objc func parse() -> Bool
 
   // Own Instance Properties
 
   /**
-    - jsName: allowedExternalEntityURLs
-    - name: allowedExternalEntityURLs
-    - argLabels: 
-    - available: 10.9
+    - Selector: allowedExternalEntityURLs
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var allowedExternalEntityURLs: Set<URL>? { @objc get @objc (setAllowedExternalEntityURLs:) set }
 
   /**
-    - jsName: columnNumber
-    - name: columnNumber
-    - argLabels: 
+    - Selector: columnNumber
   */
   @objc var columnNumber: Int { @objc get }
 
   /**
-    - jsName: delegate
-    - name: delegate
-    - argLabels: 
+    - Selector: delegate
   */
   @objc var delegate: XMLParserDelegate? { @objc get @objc (setDelegate:) set }
 
   /**
-    - jsName: externalEntityResolvingPolicy
-    - name: externalEntityResolvingPolicy
-    - argLabels: 
-    - available: 10.9
+    - Selector: externalEntityResolvingPolicy
     - Introduced: 10.9
   */
   @objc @available(OSX 10.9, *) var externalEntityResolvingPolicy: XMLParser.ExternalEntityResolvingPolicy { @objc get @objc (setExternalEntityResolvingPolicy:) set }
 
   /**
-    - jsName: lineNumber
-    - name: lineNumber
-    - argLabels: 
+    - Selector: lineNumber
   */
   @objc var lineNumber: Int { @objc get }
 
   /**
-    - jsName: parserError
-    - name: parserError
-    - argLabels: 
+    - Selector: parserError
   */
   @objc var parserError: Error? { @objc get }
 
   /**
-    - jsName: publicID
-    - name: publicID
-    - argLabels: 
+    - Selector: publicID
   */
   @objc var publicID: String? { @objc get }
 
   /**
-    - jsName: shouldProcessNamespaces
-    - name: shouldProcessNamespaces
-    - argLabels: 
+    - Selector: shouldProcessNamespaces
   */
   @objc var shouldProcessNamespaces: Bool { @objc get @objc (setShouldProcessNamespaces:) set }
 
   /**
-    - jsName: shouldReportNamespacePrefixes
-    - name: shouldReportNamespacePrefixes
-    - argLabels: 
+    - Selector: shouldReportNamespacePrefixes
   */
   @objc var shouldReportNamespacePrefixes: Bool { @objc get @objc (setShouldReportNamespacePrefixes:) set }
 
   /**
-    - jsName: shouldResolveExternalEntities
-    - name: shouldResolveExternalEntities
-    - argLabels: 
+    - Selector: shouldResolveExternalEntities
   */
   @objc var shouldResolveExternalEntities: Bool { @objc get @objc (setShouldResolveExternalEntities:) set }
 
   /**
-    - jsName: systemID
-    - name: systemID
-    - argLabels: 
+    - Selector: systemID
   */
   @objc var systemID: String? { @objc get }
 }

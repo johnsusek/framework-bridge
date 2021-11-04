@@ -9,9 +9,7 @@ import AppKit
 // Interface 
 
   /**
-    - jsName: NSTextInputContext
-    - name: NSTextInputContext
-    - argLabels: 
+    - Selector: NSTextInputContext
     - Introduced: 10.6
   */
 
@@ -19,110 +17,73 @@ import AppKit
   // Static Methods
 
   /**
-    - jsName: localizedName
-    - name: localizedNameForInputSource:
-    - argLabels: forInputSource
-    - constructorTokens: 
-    - obsoleted: 3
-    - renamed: localizedName(forInputSource:)
+    - Selector: localizedNameForInputSource:
   */
   @objc (localizedNameForInputSource:) static func localizedName(forInputSource: NSTextInputSourceIdentifier) -> String?
 
   // Own Static Properties
 
   /**
-    - jsName: current
-    - name: currentInputContext
-    - argLabels: 
-    - obsoleted: 3
-    - renamed: current
+    - Selector: currentInputContext
   */
   @objc static var current: NSTextInputContext? { @objc (currentInputContext) get }
 
   // Instance Methods
 
   /**
-    - jsName: activate
-    - name: activate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: activate
   */
   @objc func activate()
 
   /**
-    - jsName: deactivate
-    - name: deactivate
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: deactivate
   */
   @objc func deactivate()
 
   /**
-    - jsName: discardMarkedText
-    - name: discardMarkedText
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: discardMarkedText
   */
   @objc func discardMarkedText()
 
   /**
-    - jsName: handleEvent
-    - name: handleEvent:
-    - argLabels: _
-    - constructorTokens: 
+    - Selector: handleEvent:
   */
   @objc (handleEvent:) func handleEvent(_: NSEvent) -> Bool
 
   /**
-    - jsName: createWithClient
-    - name: initWithClient:
-    - argLabels: 
-    - constructorTokens: client
+    - Selector: initWithClient:
   */
   @objc static func createWithClient(_: NSTextInputClient) -> Self
 
   /**
-    - jsName: invalidateCharacterCoordinates
-    - name: invalidateCharacterCoordinates
-    - argLabels: 
-    - constructorTokens: 
+    - Selector: invalidateCharacterCoordinates
   */
   @objc func invalidateCharacterCoordinates()
 
   // Own Instance Properties
 
   /**
-    - jsName: acceptsGlyphInfo
-    - name: acceptsGlyphInfo
-    - argLabels: 
+    - Selector: acceptsGlyphInfo
   */
   @objc var acceptsGlyphInfo: Bool { @objc get @objc (setAcceptsGlyphInfo:) set }
 
   /**
-    - jsName: allowedInputSourceLocales
-    - name: allowedInputSourceLocales
-    - argLabels: 
+    - Selector: allowedInputSourceLocales
   */
   @objc var allowedInputSourceLocales: [String]? { @objc get @objc (setAllowedInputSourceLocales:) set }
 
   /**
-    - jsName: client
-    - name: client
-    - argLabels: 
+    - Selector: client
   */
   @objc var client: NSTextInputClient { @objc get }
 
   /**
-    - jsName: keyboardInputSources
-    - name: keyboardInputSources
-    - argLabels: 
+    - Selector: keyboardInputSources
   */
   @objc var keyboardInputSources: [NSTextInputSourceIdentifier]? { @objc get }
 
   /**
-    - jsName: selectedKeyboardInputSource
-    - name: selectedKeyboardInputSource
-    - argLabels: 
+    - Selector: selectedKeyboardInputSource
   */
   @objc var selectedKeyboardInputSource: NSTextInputSourceIdentifier? { @objc get @objc (setSelectedKeyboardInputSource:) set }
 }

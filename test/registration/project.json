@@ -15,6 +15,7 @@
       "platform": "macOS",
       "sources": [
         "./src",
+        "../../modules/",
         "../../Sources/",
         "./assets"
       ]

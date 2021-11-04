@@ -1,6 +1,7 @@
-let classesToTest = require('./classesToTest.json');
+let fs = require('fs');
+let classesToTest = require('./classesToTest.js');
 
-const swiftPath = `${__dirname}/../modules`;
+const swiftPath = `${__dirname}/../../tmp/swift`;
 const destPath = `${__dirname}/../registration/src`;
 
 for (const [framework, classNames] of Object.entries(classesToTest)) {

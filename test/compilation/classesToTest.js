@@ -1,6 +1,4 @@
-let fs = require('fs');
-
-const classesToTest = {
+module.exports = {
   Foundation: [
     // "Array",
     // "ByteCountFormatter",
@@ -89,7 +87,6 @@ const classesToTest = {
     // "PersonNameComponents",
     // "PersonNameComponentsFormatter",
     // "PortMessage",
-    // "ProcessInfo",
     // "Progress",
     // "RelativeDateTimeFormatter",
     // "RunLoop",
@@ -106,7 +103,8 @@ const classesToTest = {
     // "URLRequest",
     // "URLSessionTaskTransactionMetrics",
     // "UUID",
-    "AffineTransform",
+
+    "NSAffineTransform",
     "BlockOperation",
     "Bundle",
     "CachedURLResponse",
@@ -210,6 +208,7 @@ const classesToTest = {
     "Pipe",
     "Port",
     "Process",
+    "ProcessInfo",
     "PropertyListSerialization",
     "Stream",
     "Thread",
@@ -284,7 +283,6 @@ const classesToTest = {
     // "NSObjectController",
     // "NSPathCell",
     // "NSPDFInfo",
-    // "NSPersistentDocument",
     // "NSPrintInfo",
     // "NSPrintPanel",
     // "NSRulerMarker",
@@ -428,6 +426,7 @@ const classesToTest = {
     "NSPathControlItem",
     "NSPDFImageRep",
     "NSPDFPanel",
+    "NSPersistentDocument",
     "NSPickerTouchBarItem",
     "NSPICTImageRep",
     "NSPopover",
@@ -540,5 +539,3 @@ const classesToTest = {
     "VisualEffectView"
   ]
 }
-
-module.exports = classesToTest

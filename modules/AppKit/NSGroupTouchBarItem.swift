@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -20,18 +22,18 @@ import AppKit
     - Selector: alertStyleGroupItemWithIdentifier:
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) static func create(alertStyleWithIdentifier: NSTouchBarItem.Identifier) -> Self
+  @objc @available(OSX 10.13, *) static func createWithAlertStyleGroupItemWithIdentifier(_ alertStyleWithIdentifier: NSTouchBarItem.Identifier) -> Self
 
   /**
     - Selector: groupItemWithIdentifier:items:
   */
-  @objc static func create(identifier: NSTouchBarItem.Identifier, items: [NSTouchBarItem]) -> Self
+  @objc static func createWithGroupItemWithIdentifierWithItems(_ identifier: NSTouchBarItem.Identifier, _ items: [NSTouchBarItem]) -> Self
 
   /**
     - Selector: groupItemWithIdentifier:items:allowedCompressionOptions:
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) static func create(identifier: NSTouchBarItem.Identifier, items: [NSTouchBarItem], allowedCompressionOptions: NSUserInterfaceCompressionOptions) -> Self
+  @objc @available(OSX 10.13, *) static func createWithGroupItemWithIdentifierWithItemsWithAllowedCompressionOptions(_ identifier: NSTouchBarItem.Identifier, _ items: [NSTouchBarItem], _ allowedCompressionOptions: NSUserInterfaceCompressionOptions) -> Self
 
   // Own Instance Properties
 
@@ -77,15 +79,29 @@ import AppKit
 }
 
 extension NSGroupTouchBarItem: NSGroupTouchBarItemExports {
-  @objc public static func create(alertStyleWithIdentifier: NSTouchBarItem.Identifier) -> Self {
+
+  /**
+    - Selector: alertStyleGroupItemWithIdentifier:
+    - Introduced: 10.13
+  */
+  @objc public static func createWithAlertStyleGroupItemWithIdentifier(_ alertStyleWithIdentifier: NSTouchBarItem.Identifier) -> Self {
     return self.init(alertStyleWithIdentifier: alertStyleWithIdentifier)
   }
 
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, items: [NSTouchBarItem]) -> Self {
+
+  /**
+    - Selector: groupItemWithIdentifier:items:
+  */
+  @objc public static func createWithGroupItemWithIdentifierWithItems(_ identifier: NSTouchBarItem.Identifier, _ items: [NSTouchBarItem]) -> Self {
     return self.init(identifier: identifier, items: items)
   }
 
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, items: [NSTouchBarItem], allowedCompressionOptions: NSUserInterfaceCompressionOptions) -> Self {
+
+  /**
+    - Selector: groupItemWithIdentifier:items:allowedCompressionOptions:
+    - Introduced: 10.13
+  */
+  @objc public static func createWithGroupItemWithIdentifierWithItemsWithAllowedCompressionOptions(_ identifier: NSTouchBarItem.Identifier, _ items: [NSTouchBarItem], _ allowedCompressionOptions: NSUserInterfaceCompressionOptions) -> Self {
     return self.init(identifier: identifier, items: items, allowedCompressionOptions: allowedCompressionOptions)
   }
 

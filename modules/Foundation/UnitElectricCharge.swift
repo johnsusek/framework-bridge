@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -19,7 +21,7 @@ import Foundation
   /**
     - Selector: baseUnit
   */
-  @objc static func baseUnit() -> Self
+  @objc static func createWithBaseUnit() -> Self
 
   // Own Static Properties
 
@@ -55,4 +57,12 @@ import Foundation
 }
 
 extension UnitElectricCharge: UnitElectricChargeExports {
+
+  /**
+    - Selector: baseUnit
+  */
+  @objc public static func createWithBaseUnit() -> Self {
+    return self.baseUnit()
+  }
+
 }

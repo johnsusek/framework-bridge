@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -89,24 +91,6 @@ import AppKit
   */
   @objc @available(OSX 10.5, *) static var sRGB: NSColorSpace { @objc (sRGBColorSpace) get }
 
-  // Instance Methods
-
-  /**
-    - Selector: initWithCGColorSpace:
-    - Introduced: 10.5
-  */
-  @objc @available(OSX 10.5, *) static func createWithCGColorSpace(_: CGColorSpace) -> Self?
-
-  /**
-    - Selector: initWithColorSyncProfile:
-  */
-  @objc static func createWithColorSyncProfile(_: UnsafeMutableRawPointer) -> Self?
-
-  /**
-    - Selector: initWithICCProfileData:
-  */
-  @objc static func createWithICCProfileData(_: Data) -> Self?
-
   // Own Instance Properties
 
   /**
@@ -142,16 +126,4 @@ import AppKit
 }
 
 extension NSColorSpace: NSColorSpaceExports {
-  @objc public static func createWithCGColorSpace(_ cgColorSpace: CGColorSpace) -> Self? {
-    return self.init(cgColorSpace: cgColorSpace)
-  }
-
-  @objc public static func createWithColorSyncProfile(_ colorSyncProfile: UnsafeMutableRawPointer) -> Self? {
-    return self.init(colorSyncProfile: colorSyncProfile)
-  }
-
-  @objc public static func createWithICCProfileData(_ iccProfileData: Data) -> Self? {
-    return self.init(iccProfileData: iccProfileData)
-  }
-
 }

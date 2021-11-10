@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -18,17 +20,22 @@ import AppKit
   /**
     - Selector: pasteboardByFilteringData:ofType:
   */
-  @objc static func create(byFilteringData: Data, ofType: NSPasteboard.PasteboardType) -> NSPasteboard
+  @objc static func createWithPasteboardByFilteringDataWithOfType(_ byFilteringData: Data, _ ofType: NSPasteboard.PasteboardType) -> NSPasteboard
 
   /**
     - Selector: pasteboardByFilteringFile:
   */
-  @objc static func create(byFilteringFile: String) -> NSPasteboard
+  @objc static func createWithPasteboardByFilteringFile(_ byFilteringFile: String) -> NSPasteboard
 
   /**
     - Selector: pasteboardByFilteringTypesInPasteboard:
   */
-  @objc static func create(byFilteringTypesIn: NSPasteboard) -> NSPasteboard
+  @objc static func createWithPasteboardByFilteringTypesInPasteboard(_ byFilteringTypesIn: NSPasteboard) -> NSPasteboard
+
+  /**
+    - Selector: pasteboardWithName:
+  */
+  @objc static func createWithPasteboardWithName(_ name: NSPasteboard.Name) -> NSPasteboard
 
   /**
     - Selector: pasteboardWithUniqueName
@@ -186,16 +193,36 @@ import AppKit
 }
 
 extension NSPasteboard: NSPasteboardExports {
-  @objc public static func create(byFilteringData: Data, ofType: NSPasteboard.PasteboardType) -> NSPasteboard {
+
+  /**
+    - Selector: pasteboardByFilteringData:ofType:
+  */
+  @objc public static func createWithPasteboardByFilteringDataWithOfType(_ byFilteringData: Data, _ ofType: NSPasteboard.PasteboardType) -> NSPasteboard {
     return self.init(byFilteringData: byFilteringData, ofType: ofType)
   }
 
-  @objc public static func create(byFilteringFile: String) -> NSPasteboard {
+
+  /**
+    - Selector: pasteboardByFilteringFile:
+  */
+  @objc public static func createWithPasteboardByFilteringFile(_ byFilteringFile: String) -> NSPasteboard {
     return self.init(byFilteringFile: byFilteringFile)
   }
 
-  @objc public static func create(byFilteringTypesIn: NSPasteboard) -> NSPasteboard {
+
+  /**
+    - Selector: pasteboardByFilteringTypesInPasteboard:
+  */
+  @objc public static func createWithPasteboardByFilteringTypesInPasteboard(_ byFilteringTypesIn: NSPasteboard) -> NSPasteboard {
     return self.init(byFilteringTypesIn: byFilteringTypesIn)
+  }
+
+
+  /**
+    - Selector: pasteboardWithName:
+  */
+  @objc public static func createWithPasteboardWithName(_ name: NSPasteboard.Name) -> NSPasteboard {
+    return self.init(name: name)
   }
 
 }

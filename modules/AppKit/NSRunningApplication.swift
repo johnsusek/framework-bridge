@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: runningApplicationWithProcessIdentifier:
   */
-  @objc static func create(processIdentifier: Int32) -> Self?
+  @objc static func createWithRunningApplicationWithProcessIdentifier(_ processIdentifier: Int32) -> Self?
 
   /**
     - Selector: runningApplicationsWithBundleIdentifier:
@@ -140,7 +142,11 @@ import AppKit
 }
 
 extension NSRunningApplication: NSRunningApplicationExports {
-  @objc public static func create(processIdentifier: Int32) -> Self? {
+
+  /**
+    - Selector: runningApplicationWithProcessIdentifier:
+  */
+  @objc public static func createWithRunningApplicationWithProcessIdentifier(_ processIdentifier: Int32) -> Self? {
     return self.init(processIdentifier: processIdentifier)
   }
 

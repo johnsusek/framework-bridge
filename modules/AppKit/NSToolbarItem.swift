@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -16,11 +18,6 @@ import AppKit
   // Static Methods
 
   // Instance Methods
-
-  /**
-    - Selector: initWithItemIdentifier:
-  */
-  @objc static func createWithItemIdentifier(_: NSToolbarItem.Identifier) -> Self
 
   /**
     - Selector: validate
@@ -128,8 +125,4 @@ import AppKit
 }
 
 extension NSToolbarItem: NSToolbarItemExports {
-  @objc public static func createWithItemIdentifier(_ itemIdentifier: NSToolbarItem.Identifier) -> Self {
-    return self.init(itemIdentifier: itemIdentifier)
-  }
-
 }

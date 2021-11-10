@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -21,11 +23,6 @@ import Foundation
     - Selector: evaluate
   */
   @objc func evaluate()
-
-  /**
-    - Selector: initWithPosition:objectSpecifier:
-  */
-  @objc static func createWithPosition(_: NSPositionalSpecifier.InsertionPosition, objectSpecifier: NSScriptObjectSpecifier) -> Self
 
   /**
     - Selector: setInsertionClassDescription:
@@ -62,8 +59,4 @@ import Foundation
 }
 
 extension NSPositionalSpecifier: NSPositionalSpecifierExports {
-  @objc public static func createWithPosition(_ position: NSPositionalSpecifier.InsertionPosition, objectSpecifier: NSScriptObjectSpecifier) -> Self {
-    return self.init(position: position, objectSpecifier: objectSpecifier)
-  }
-
 }

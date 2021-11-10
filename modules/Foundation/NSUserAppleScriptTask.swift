@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -21,7 +23,7 @@ import Foundation
   /**
     - Selector: executeWithAppleEvent:completionHandler:
   */
-  // jsvalue @objc func execute(withAppleEvent: NSAppleEventDescriptor?, completionHandler: JSValue?)
+  // jsvalue @objc func executeWithAppleEventWithCompletionHandler(_ withAppleEvent: NSAppleEventDescriptor?, _ completionHandler: JSValue?)
 }
 
 extension NSUserAppleScriptTask: NSUserAppleScriptTaskExports {

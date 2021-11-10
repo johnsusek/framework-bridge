@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: segueWithIdentifier:source:destination:performHandler:
   */
-// jsvalue   @objc static func create(identifier: NSStoryboardSegue.Identifier, source: Any, destination: Any, performHandler: JSValue) -> Self
+// jsvalue   @objc static func createWithSegueWithIdentifierWithSourceWithDestinationWithPerformHandler(_ identifier: NSStoryboardSegue.Identifier, _ source: Any, _ destination: Any, _ performHandler: JSValue) -> Self
 
   // Instance Methods
 
@@ -47,7 +49,11 @@ import AppKit
 }
 
 extension NSStoryboardSegue: NSStoryboardSegueExports {
-  @objc public static func create(identifier: NSStoryboardSegue.Identifier, source: Any, destination: Any, performHandler: JSValue) -> Self {
+
+  /**
+    - Selector: segueWithIdentifier:source:destination:performHandler:
+  */
+  @objc public static func createWithSegueWithIdentifierWithSourceWithDestinationWithPerformHandler(_ identifier: NSStoryboardSegue.Identifier, _ source: Any, _ destination: Any, _ performHandler: JSValue) -> Self {
     return self.init(identifier: identifier, source: source, destination: destination, performHandler: { 
       performHandler.call(withArguments: [])!
     })

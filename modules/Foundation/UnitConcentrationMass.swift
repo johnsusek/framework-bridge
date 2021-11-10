@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -19,7 +21,7 @@ import Foundation
   /**
     - Selector: baseUnit
   */
-  @objc static func baseUnit() -> Self
+  @objc static func createWithBaseUnit() -> Self
 
   /**
     - Selector: millimolesPerLiterWithGramsPerMole:
@@ -40,4 +42,12 @@ import Foundation
 }
 
 extension UnitConcentrationMass: UnitConcentrationMassExports {
+
+  /**
+    - Selector: baseUnit
+  */
+  @objc public static func createWithBaseUnit() -> Self {
+    return self.baseUnit()
+  }
+
 }

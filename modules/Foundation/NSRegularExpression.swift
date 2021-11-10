@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -36,17 +38,12 @@ import Foundation
   /**
     - Selector: enumerateMatchesInString:options:range:usingBlock:
   */
-  // jsvalue @objc func enumerateMatches(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange, using: JSValue)
+  // jsvalue @objc func enumerateMatchesInStringWithOptionsWithRangeWithUsingBlock(_ in: String, _ options: NSRegularExpression.MatchingOptions, _ range: NSRange, _ using: JSValue)
 
   /**
     - Selector: firstMatchInString:options:range:
   */
   @objc (firstMatchInString:options:range:) func firstMatch(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange) -> NSTextCheckingResult?
-
-  /**
-    - Selector: initWithPattern:options:error:
-  */
-  @objc static func createWithPattern(pattern: String, options: NSRegularExpression.Options) -> Self?
 
   /**
     - Selector: matchesInString:options:range:
@@ -97,8 +94,4 @@ import Foundation
 }
 
 extension NSRegularExpression: NSRegularExpressionExports {
-  @objc public static func createWithPattern(pattern: String, options: NSRegularExpression.Options) -> Self? {
-    return try? self.init(pattern: pattern, options: options)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -23,11 +25,6 @@ import AppKit
   @objc static var shared: NSUserDefaultsController { @objc (sharedUserDefaultsController) get }
 
   // Instance Methods
-
-  /**
-    - Selector: initWithDefaults:initialValues:
-  */
-  @objc static func createWithDefaults(_: UserDefaults?, initialValues: [String: Any]?) -> Self
 
   /**
     - Selector: revert:
@@ -73,8 +70,4 @@ import AppKit
 }
 
 extension NSUserDefaultsController: NSUserDefaultsControllerExports {
-  @objc public static func createWithDefaults(_ defaults: UserDefaults?, initialValues: [String: Any]?) -> Self {
-    return self.init(defaults: defaults, initialValues: initialValues)
-  }
-
 }

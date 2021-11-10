@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -18,7 +20,17 @@ import AppKit
   /**
     - Selector: fontDescriptorWithFontAttributes:
   */
-  @objc static func create(fontAttributes: [NSFontDescriptor.AttributeName: Any]?) -> NSFontDescriptor
+  @objc static func createWithFontDescriptorWithFontAttributes(_ fontAttributes: [NSFontDescriptor.AttributeName: Any]?) -> NSFontDescriptor
+
+  /**
+    - Selector: fontDescriptorWithName:matrix:
+  */
+  @objc static func createWithFontDescriptorWithNameWithMatrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor
+
+  /**
+    - Selector: fontDescriptorWithName:size:
+  */
+  @objc static func createWithFontDescriptorWithNameWithSize(_ name: String, _ size: CGFloat) -> NSFontDescriptor
 
   // Instance Methods
 
@@ -26,12 +38,6 @@ import AppKit
     - Selector: fontDescriptorByAddingAttributes:
   */
   @objc (fontDescriptorByAddingAttributes:) func addingAttributes(_: [NSFontDescriptor.AttributeName: Any]) -> NSFontDescriptor
-
-  /**
-    - Selector: fontDescriptorWithDesign:
-    - Introduced: 10.15
-  */
-  @objc @available(OSX 10.15, *) static func withDesign(_: NSFontDescriptor.SystemDesign) -> Self?
 
   /**
     - Selector: fontDescriptorWithFace:
@@ -109,12 +115,28 @@ import AppKit
 }
 
 extension NSFontDescriptor: NSFontDescriptorExports {
-  @objc public static func create(fontAttributes: [NSFontDescriptor.AttributeName: Any]?) -> NSFontDescriptor {
+
+  /**
+    - Selector: fontDescriptorWithFontAttributes:
+  */
+  @objc public static func createWithFontDescriptorWithFontAttributes(_ fontAttributes: [NSFontDescriptor.AttributeName: Any]?) -> NSFontDescriptor {
     return self.init(fontAttributes: fontAttributes)
   }
 
-  @objc public static func withDesign(_ p0: NSFontDescriptor.SystemDesign) -> Self? {
-    return self.withDesign(p0)
+
+  /**
+    - Selector: fontDescriptorWithName:matrix:
+  */
+  @objc public static func createWithFontDescriptorWithNameWithMatrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor {
+    return self.init(name: name, matrix: matrix)
+  }
+
+
+  /**
+    - Selector: fontDescriptorWithName:size:
+  */
+  @objc public static func createWithFontDescriptorWithNameWithSize(_ name: String, _ size: CGFloat) -> NSFontDescriptor {
+    return self.init(name: name, size: size)
   }
 
 }

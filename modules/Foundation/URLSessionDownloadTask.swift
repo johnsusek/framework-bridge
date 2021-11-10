@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -20,7 +22,7 @@ import Foundation
   /**
     - Selector: cancelByProducingResumeData:
   */
-  // jsvalue @objc func cancel(byProducingResumeData: JSValue)
+  // jsvalue @objc func cancelByProducingResumeData(_ byProducingResumeData: JSValue)
 }
 
 extension URLSessionDownloadTask: URLSessionDownloadTaskExports {

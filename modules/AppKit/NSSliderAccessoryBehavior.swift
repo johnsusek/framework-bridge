@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: behaviorWithHandler:
   */
-// jsvalue   @objc static func create(handler: JSValue) -> NSSliderAccessoryBehavior
+// jsvalue   @objc static func createWithBehaviorWithHandler(_ handler: JSValue) -> NSSliderAccessoryBehavior
 
   // Own Static Properties
 
@@ -47,7 +49,11 @@ import AppKit
 }
 
 extension NSSliderAccessoryBehavior: NSSliderAccessoryBehaviorExports {
-  @objc public static func create(handler: JSValue) -> NSSliderAccessoryBehavior {
+
+  /**
+    - Selector: behaviorWithHandler:
+  */
+  @objc public static func createWithBehaviorWithHandler(_ handler: JSValue) -> NSSliderAccessoryBehavior {
     return self.init(handler: { p1 in
       handler.call(withArguments: [p1 as AnyObject])!
     })

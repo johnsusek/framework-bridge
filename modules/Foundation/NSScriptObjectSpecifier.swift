@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -19,7 +21,7 @@ import Foundation
     - Selector: objectSpecifierWithDescriptor:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) static func create(descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier?
+  @objc @available(OSX 10.5, *) static func createWithObjectSpecifierWithDescriptor(_ descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier?
 
   // Instance Methods
 
@@ -27,16 +29,6 @@ import Foundation
     - Selector: indicesOfObjectsByEvaluatingWithContainer:count:
   */
   @objc (indicesOfObjectsByEvaluatingWithContainer:count:) func indicesOfObjectsByEvaluating(withContainer: Any, count: UnsafeMutablePointer<NSInteger>) -> UnsafeMutablePointer<NSInteger>?
-
-  /**
-    - Selector: initWithContainerClassDescription:containerSpecifier:key:
-  */
-  @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String) -> Self
-
-  /**
-    - Selector: initWithContainerSpecifier:key:
-  */
-  @objc static func createWithContainerSpecifier(_: NSScriptObjectSpecifier, key: String) -> Self
 
   /**
     - Selector: objectsByEvaluatingWithContainers:
@@ -103,16 +95,13 @@ import Foundation
 }
 
 extension NSScriptObjectSpecifier: NSScriptObjectSpecifierExports {
-  @objc public static func create(descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier? {
+
+  /**
+    - Selector: objectSpecifierWithDescriptor:
+    - Introduced: 10.5
+  */
+  @objc public static func createWithObjectSpecifierWithDescriptor(_ descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier? {
     return self.init(descriptor: descriptor)
-  }
-
-  @objc public static func createWithContainerClassDescription(_ containerClassDescription: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String) -> Self {
-    return self.init(containerClassDescription: containerClassDescription, containerSpecifier: containerSpecifier, key: key)
-  }
-
-  @objc public static func createWithContainerSpecifier(_ containerSpecifier: NSScriptObjectSpecifier, key: String) -> Self {
-    return self.init(containerSpecifier: containerSpecifier, key: key)
   }
 
 }

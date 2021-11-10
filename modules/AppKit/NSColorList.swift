@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -14,6 +16,11 @@ import AppKit
 
 @objc(NSColorList) protocol NSColorListExports: JSExport, NSObjectExports {
   // Static Methods
+
+  /**
+    - Selector: colorListNamed:
+  */
+  @objc static func createWithColorListNamed(_ named: NSColorList.Name) -> NSColorList?
 
   // Own Static Properties
 
@@ -28,16 +35,6 @@ import AppKit
     - Selector: colorWithKey:
   */
   @objc (colorWithKey:) func color(withKey: NSColor.Name) -> NSColor?
-
-  /**
-    - Selector: initWithName:
-  */
-  @objc static func createWithName(_: NSColorList.Name) -> Self
-
-  /**
-    - Selector: initWithName:fromFile:
-  */
-  @objc static func createWithName(_: NSColorList.Name, fromFile: String?) -> Self?
 
   /**
     - Selector: insertColor:key:atIndex:
@@ -84,12 +81,12 @@ import AppKit
 }
 
 extension NSColorList: NSColorListExports {
-  @objc public static func createWithName(_ name: NSColorList.Name) -> Self {
-    return self.init(name: name)
-  }
 
-  @objc public static func createWithName(_ name: NSColorList.Name, fromFile: String?) -> Self? {
-    return self.init(name: name, fromFile: fromFile)
+  /**
+    - Selector: colorListNamed:
+  */
+  @objc public static func createWithColorListNamed(_ named: NSColorList.Name) -> NSColorList? {
+    return self.init(named: named)
   }
 
 }

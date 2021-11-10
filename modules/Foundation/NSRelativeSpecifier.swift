@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -14,13 +16,6 @@ import Foundation
 
 @objc(NSRelativeSpecifier) protocol NSRelativeSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithContainerClassDescription:containerSpecifier:key:relativePosition:baseSpecifier:
-  */
-  @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, relativePosition: NSRelativeSpecifier.RelativePosition, baseSpecifier: NSScriptObjectSpecifier?) -> Self
 
   // Own Instance Properties
 
@@ -36,8 +31,4 @@ import Foundation
 }
 
 extension NSRelativeSpecifier: NSRelativeSpecifierExports {
-  @objc public static func createWithContainerClassDescription(_ containerClassDescription: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, relativePosition: NSRelativeSpecifier.RelativePosition, baseSpecifier: NSScriptObjectSpecifier?) -> Self {
-    return self.init(containerClassDescription: containerClassDescription, containerSpecifier: containerSpecifier, key: key, relativePosition: relativePosition, baseSpecifier: baseSpecifier)
-  }
-
 }

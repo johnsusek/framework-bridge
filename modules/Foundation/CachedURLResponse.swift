@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -14,18 +16,6 @@ import Foundation
 
 @objc(CachedURLResponse) protocol CachedURLResponseExports: JSExport, NSObjectExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithResponse:data:
-  */
-  @objc static func createWithResponse(_: URLResponse, data: Data) -> Self
-
-  /**
-    - Selector: initWithResponse:data:userInfo:storagePolicy:
-  */
-  @objc static func createWithResponse(_: URLResponse, data: Data, userInfo: [AnyHashable: Any]?, storagePolicy: URLCache.StoragePolicy) -> Self
 
   // Own Instance Properties
 
@@ -51,12 +41,4 @@ import Foundation
 }
 
 extension CachedURLResponse: CachedURLResponseExports {
-  @objc public static func createWithResponse(_ response: URLResponse, data: Data) -> Self {
-    return self.init(response: response, data: data)
-  }
-
-  @objc public static func createWithResponse(_ response: URLResponse, data: Data, userInfo: [AnyHashable: Any]?, storagePolicy: URLCache.StoragePolicy) -> Self {
-    return self.init(response: response, data: data, userInfo: userInfo, storagePolicy: storagePolicy)
-  }
-
 }

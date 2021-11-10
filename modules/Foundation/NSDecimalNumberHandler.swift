@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -18,7 +20,7 @@ import Foundation
   /**
     - Selector: decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:
   */
-  @objc static func create(roundingMode: NSDecimalNumber.RoundingMode, scale: Int16, raiseOnExactness: Bool, raiseOnOverflow: Bool, raiseOnUnderflow: Bool, raiseOnDivideByZero: Bool) -> Self
+  @objc static func createWithDecimalNumberHandlerWithRoundingModeWithScaleWithRaiseOnExactnessWithRaiseOnOverflowWithRaiseOnUnderflowWithRaiseOnDivideByZero(_ roundingMode: NSDecimalNumber.RoundingMode, _ scale: Int16, _ raiseOnExactness: Bool, _ raiseOnOverflow: Bool, _ raiseOnUnderflow: Bool, _ raiseOnDivideByZero: Bool) -> Self
 
   // Own Static Properties
 
@@ -29,7 +31,11 @@ import Foundation
 }
 
 extension NSDecimalNumberHandler: NSDecimalNumberHandlerExports {
-  @objc public static func create(roundingMode: NSDecimalNumber.RoundingMode, scale: Int16, raiseOnExactness: Bool, raiseOnOverflow: Bool, raiseOnUnderflow: Bool, raiseOnDivideByZero: Bool) -> Self {
+
+  /**
+    - Selector: decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:
+  */
+  @objc public static func createWithDecimalNumberHandlerWithRoundingModeWithScaleWithRaiseOnExactnessWithRaiseOnOverflowWithRaiseOnUnderflowWithRaiseOnDivideByZero(_ roundingMode: NSDecimalNumber.RoundingMode, _ scale: Int16, _ raiseOnExactness: Bool, _ raiseOnOverflow: Bool, _ raiseOnUnderflow: Bool, _ raiseOnDivideByZero: Bool) -> Self {
     return self.init(roundingMode: roundingMode, scale: scale, raiseOnExactness: raiseOnExactness, raiseOnOverflow: raiseOnOverflow, raiseOnUnderflow: raiseOnUnderflow, raiseOnDivideByZero: raiseOnDivideByZero)
   }
 

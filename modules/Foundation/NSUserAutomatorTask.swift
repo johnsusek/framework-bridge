@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -21,7 +23,7 @@ import Foundation
   /**
     - Selector: executeWithInput:completionHandler:
   */
-  // jsvalue @objc func execute(withInput: NSSecureCoding?, completionHandler: JSValue?)
+  // jsvalue @objc func executeWithInputWithCompletionHandler(_ withInput: NSSecureCoding?, _ completionHandler: JSValue?)
 
   // Own Instance Properties
 

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -14,13 +16,6 @@ import Foundation
 
 @objc(URLResponse) protocol URLResponseExports: JSExport, NSObjectExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithURL:MIMEType:expectedContentLength:textEncodingName:
-  */
-  @objc static func createWithURL(_: URL, mimeType: String?, expectedContentLength: Int, textEncodingName: String?) -> Self
 
   // Own Instance Properties
 
@@ -51,8 +46,4 @@ import Foundation
 }
 
 extension URLResponse: URLResponseExports {
-  @objc public static func createWithURL(_ url: URL, mimeType: String?, expectedContentLength: Int, textEncodingName: String?) -> Self {
-    return self.init(url: url, mimeType: mimeType, expectedContentLength: expectedContentLength, textEncodingName: textEncodingName)
-  }
-
 }

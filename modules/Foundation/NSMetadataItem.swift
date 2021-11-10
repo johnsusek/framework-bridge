@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -17,12 +19,6 @@ import Foundation
   // Static Methods
 
   // Instance Methods
-
-  /**
-    - Selector: initWithURL:
-    - Introduced: 10.9
-  */
-  @objc @available(OSX 10.9, *) static func createWithURL(_: URL) -> Self?
 
   /**
     - Selector: valueForAttribute:
@@ -43,8 +39,4 @@ import Foundation
 }
 
 extension NSMetadataItem: NSMetadataItemExports {
-  @objc public static func createWithURL(_ url: URL) -> Self? {
-    return self.init(url: url)
-  }
-
 }

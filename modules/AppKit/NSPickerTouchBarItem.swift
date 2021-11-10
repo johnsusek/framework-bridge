@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,12 +21,12 @@ import AppKit
   /**
     - Selector: pickerTouchBarItemWithIdentifier:images:selectionMode:target:action:
   */
-  @objc static func create(identifier: NSTouchBarItem.Identifier, images: [NSImage], selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self
+  @objc static func createWithPickerTouchBarItemWithIdentifierWithImagesWithSelectionMode(_ identifier: NSTouchBarItem.Identifier, _ images: [NSImage], _ selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self
 
   /**
     - Selector: pickerTouchBarItemWithIdentifier:labels:selectionMode:target:action:
   */
-  @objc static func create(identifier: NSTouchBarItem.Identifier, labels: [String], selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self
+  @objc static func createWithPickerTouchBarItemWithIdentifierWithLabelsWithSelectionMode(_ identifier: NSTouchBarItem.Identifier, _ labels: [String], _ selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self
 
   // Instance Methods
 
@@ -112,11 +114,19 @@ import AppKit
 }
 
 extension NSPickerTouchBarItem: NSPickerTouchBarItemExports {
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, images: [NSImage], selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self {
+
+  /**
+    - Selector: pickerTouchBarItemWithIdentifier:images:selectionMode:target:action:
+  */
+  @objc public static func createWithPickerTouchBarItemWithIdentifierWithImagesWithSelectionMode(_ identifier: NSTouchBarItem.Identifier, _ images: [NSImage], _ selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self {
     return self.init(identifier: identifier, images: images, selectionMode: selectionMode, target: nil, action: nil)
   }
 
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, labels: [String], selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self {
+
+  /**
+    - Selector: pickerTouchBarItemWithIdentifier:labels:selectionMode:target:action:
+  */
+  @objc public static func createWithPickerTouchBarItemWithIdentifierWithLabelsWithSelectionMode(_ identifier: NSTouchBarItem.Identifier, _ labels: [String], _ selectionMode: NSPickerTouchBarItem.SelectionMode) -> Self {
     return self.init(identifier: identifier, labels: labels, selectionMode: selectionMode, target: nil, action: nil)
   }
 

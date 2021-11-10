@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -64,13 +66,13 @@ import AppKit
     - Selector: beginSheetModalForWindow:completionHandler:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func beginSheetModal(`for`: NSWindow, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func beginSheetModalForWindowWithCompletionHandler(_ for: NSWindow, _ completionHandler: JSValue)
 
   /**
     - Selector: beginWithCompletionHandler:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func begin(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func beginWithCompletionHandler(_ completionHandler: JSValue)
 
   /**
     - Selector: cancel:

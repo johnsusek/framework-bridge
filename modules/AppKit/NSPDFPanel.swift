@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -21,7 +23,7 @@ import AppKit
   /**
     - Selector: beginSheetWithPDFInfo:modalForWindow:completionHandler:
   */
-  // jsvalue @objc func beginSheet(with: NSPDFInfo, modalFor: NSWindow?, completionHandler: JSValue)
+  // jsvalue @objc func beginSheetWithPDFInfoWithModalForWindowWithCompletionHandler(_ with: NSPDFInfo, _ modalFor: NSWindow?, _ completionHandler: JSValue)
 
   // Own Instance Properties
 

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -34,7 +36,7 @@ import Foundation
   /**
     - Selector: valueTransformerForName:
   */
-  @objc static func create(forName: NSValueTransformerName) -> ValueTransformer?
+  @objc static func createWithValueTransformerForName(_ forName: NSValueTransformerName) -> ValueTransformer?
 
   /**
     - Selector: valueTransformerNames
@@ -55,7 +57,11 @@ import Foundation
 }
 
 extension ValueTransformer: ValueTransformerExports {
-  @objc public static func create(forName: NSValueTransformerName) -> ValueTransformer? {
+
+  /**
+    - Selector: valueTransformerForName:
+  */
+  @objc public static func createWithValueTransformerForName(_ forName: NSValueTransformerName) -> ValueTransformer? {
     return self.init(forName: forName)
   }
 

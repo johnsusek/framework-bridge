@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: appearanceNamed:
   */
-  @objc static func create(named: NSAppearance.Name) -> NSAppearance?
+  @objc static func createWithAppearanceNamed(_ named: NSAppearance.Name) -> NSAppearance?
 
   // Own Static Properties
 
@@ -35,11 +37,6 @@ import AppKit
     - Introduced: 10.14
   */
   @objc (bestMatchFromAppearancesWithNames:) @available(OSX 10.14, *) func bestMatch(from: [NSAppearance.Name]) -> NSAppearance.Name?
-
-  /**
-    - Selector: initWithAppearanceNamed:bundle:
-  */
-  @objc static func createWithAppearanceNamed(_: NSAppearance.Name, bundle: Bundle?) -> Self?
 
   // Own Instance Properties
 
@@ -57,12 +54,12 @@ import AppKit
 }
 
 extension NSAppearance: NSAppearanceExports {
-  @objc public static func create(named: NSAppearance.Name) -> NSAppearance? {
-    return self.init(named: named)
-  }
 
-  @objc public static func createWithAppearanceNamed(_ appearanceNamed: NSAppearance.Name, bundle: Bundle?) -> Self? {
-    return self.init(appearanceNamed: appearanceNamed, bundle: bundle)
+  /**
+    - Selector: appearanceNamed:
+  */
+  @objc public static func createWithAppearanceNamed(_ named: NSAppearance.Name) -> NSAppearance? {
+    return self.init(named: named)
   }
 
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -21,7 +23,7 @@ import AppKit
   /**
     - Selector: enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:
   */
-  // jsvalue @objc func enumerateDraggingItems(options: NSDraggingItemEnumerationOptions, `for`: NSView?, classes: [AnyClass], searchOptions: [NSPasteboard.ReadingOptionKey: Any], using: JSValue)
+  // jsvalue @objc func enumerateDraggingItemsWithOptionsWithForViewWithClassesWithSearchOptionsWithUsingBlock(_ options: NSDraggingItemEnumerationOptions, _ for: NSView?, _ classes: [AnyClass], _ searchOptions: [NSPasteboard.ReadingOptionKey: Any], _ using: JSValue)
 
   // Own Instance Properties
 

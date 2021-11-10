@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,12 +21,12 @@ import AppKit
   /**
     - Selector: supplementaryItemWithLayoutSize:elementKind:containerAnchor:
   */
-  @objc static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, containerAnchor: NSCollectionLayoutAnchor) -> Self
+  @objc static func createWithSupplementaryItemWithLayoutSizeWithElementKindWithContainerAnchor(_ layoutSize: NSCollectionLayoutSize, _ elementKind: String, _ containerAnchor: NSCollectionLayoutAnchor) -> Self
 
   /**
     - Selector: supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor:
   */
-  @objc static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, containerAnchor: NSCollectionLayoutAnchor, itemAnchor: NSCollectionLayoutAnchor) -> Self
+  @objc static func createWithSupplementaryItemWithLayoutSizeWithElementKindWithContainerAnchorWithItemAnchor(_ layoutSize: NSCollectionLayoutSize, _ elementKind: String, _ containerAnchor: NSCollectionLayoutAnchor, _ itemAnchor: NSCollectionLayoutAnchor) -> Self
 
   // Own Instance Properties
 
@@ -50,11 +52,19 @@ import AppKit
 }
 
 extension NSCollectionLayoutSupplementaryItem: NSCollectionLayoutSupplementaryItemExports {
-  @objc public static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, containerAnchor: NSCollectionLayoutAnchor) -> Self {
+
+  /**
+    - Selector: supplementaryItemWithLayoutSize:elementKind:containerAnchor:
+  */
+  @objc public static func createWithSupplementaryItemWithLayoutSizeWithElementKindWithContainerAnchor(_ layoutSize: NSCollectionLayoutSize, _ elementKind: String, _ containerAnchor: NSCollectionLayoutAnchor) -> Self {
     return self.init(layoutSize: layoutSize, elementKind: elementKind, containerAnchor: containerAnchor)
   }
 
-  @objc public static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, containerAnchor: NSCollectionLayoutAnchor, itemAnchor: NSCollectionLayoutAnchor) -> Self {
+
+  /**
+    - Selector: supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor:
+  */
+  @objc public static func createWithSupplementaryItemWithLayoutSizeWithElementKindWithContainerAnchorWithItemAnchor(_ layoutSize: NSCollectionLayoutSize, _ elementKind: String, _ containerAnchor: NSCollectionLayoutAnchor, _ itemAnchor: NSCollectionLayoutAnchor) -> Self {
     return self.init(layoutSize: layoutSize, elementKind: elementKind, containerAnchor: containerAnchor, itemAnchor: itemAnchor)
   }
 

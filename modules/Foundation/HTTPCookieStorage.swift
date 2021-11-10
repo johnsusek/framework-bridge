@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -44,7 +46,7 @@ import Foundation
     - Selector: getCookiesForTask:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func getCookiesFor(_: URLSessionTask, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getCookiesForTaskWithCompletionHandler(_ p0: URLSessionTask, _ completionHandler: JSValue)
 
   /**
     - Selector: removeCookiesSinceDate:

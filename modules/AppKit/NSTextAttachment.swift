@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -15,13 +17,6 @@ import AppKit
 
 @objc(NSTextAttachment) protocol NSTextAttachmentExports: JSExport, NSObjectExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithFileWrapper:
-  */
-  @objc static func createWithFileWrapper(_: FileWrapper?) -> Self
 
   // Own Instance Properties
 
@@ -62,8 +57,4 @@ import AppKit
 }
 
 extension NSTextAttachment: NSTextAttachmentExports {
-  @objc public static func createWithFileWrapper(_ fileWrapper: FileWrapper?) -> Self {
-    return self.init(fileWrapper: fileWrapper)
-  }
-
 }

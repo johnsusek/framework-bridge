@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -28,9 +30,25 @@ import Foundation
   @objc (URLsForResourcesWithExtension:subdirectory:inBundleWithURL:) @available(OSX 10.6, *) static func urls(forResourcesWithExtension: String?, subdirectory: String?, in: URL) -> [URL]?
 
   /**
+    - Selector: bundleForClass:
+  */
+  @objc static func createWithBundleForClass(_ for: AnyClass) -> Bundle
+
+  /**
+    - Selector: bundleWithIdentifier:
+  */
+  @objc static func createWithBundleWithIdentifier(_ identifier: String) -> Bundle?
+
+  /**
     - Selector: bundleWithPath:
   */
-  @objc static func create(path: String) -> Self?
+  @objc static func createWithBundleWithPath(_ path: String) -> Self?
+
+  /**
+    - Selector: bundleWithURL:
+    - Introduced: 10.6
+  */
+  @objc @available(OSX 10.6, *) static func createWithBundleWithURL(_ url: URL) -> Self?
 
   /**
     - Selector: pathForResource:ofType:inDirectory:
@@ -128,12 +146,6 @@ import Foundation
     - Introduced: 10.7
   */
   @objc (imageForResource:) @available(OSX 10.7, *) func image(forResource: NSImage.Name) -> NSImage?
-
-  /**
-    - Selector: initWithURL:
-    - Introduced: 10.6
-  */
-  @objc @available(OSX 10.6, *) static func createWithURL(_: URL) -> Self?
 
   /**
     - Selector: loadAndReturnError:
@@ -341,11 +353,36 @@ import Foundation
 }
 
 extension Bundle: BundleExports {
-  @objc public static func create(path: String) -> Self? {
+
+  /**
+    - Selector: bundleForClass:
+  */
+  @objc public static func createWithBundleForClass(_ for: AnyClass) -> Bundle {
+    return self.init(for: `for`)
+  }
+
+
+  /**
+    - Selector: bundleWithIdentifier:
+  */
+  @objc public static func createWithBundleWithIdentifier(_ identifier: String) -> Bundle? {
+    return self.init(identifier: identifier)
+  }
+
+
+  /**
+    - Selector: bundleWithPath:
+  */
+  @objc public static func createWithBundleWithPath(_ path: String) -> Self? {
     return self.init(path: path)
   }
 
-  @objc public static func createWithURL(_ url: URL) -> Self? {
+
+  /**
+    - Selector: bundleWithURL:
+    - Introduced: 10.6
+  */
+  @objc public static func createWithBundleWithURL(_ url: URL) -> Self? {
     return self.init(url: url)
   }
 

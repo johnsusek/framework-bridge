@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -35,11 +37,6 @@ import AppKit
     - Introduced: 10.10
   */
   @objc (dismissViewController:) @available(OSX 10.10, *) func dismiss(_: NSViewController)
-
-  /**
-    - Selector: initWithNibName:bundle:
-  */
-  @objc static func createWithNibName(_: NSNib.Name?, bundle: Bundle?) -> Self
 
   /**
     - Selector: insertChildViewController:atIndex:
@@ -98,7 +95,7 @@ import AppKit
     - Selector: transitionFromViewController:toViewController:options:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func transition(from: NSViewController, to: NSViewController, options: NSViewController.TransitionOptions, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func transitionFromViewControllerWithToViewControllerWithOptionsWithCompletionHandler(_ from: NSViewController, _ to: NSViewController, _ options: NSViewController.TransitionOptions, _ completionHandler: JSValue)
 
   /**
     - Selector: updateViewConstraints
@@ -262,8 +259,4 @@ import AppKit
 }
 
 extension NSViewController: NSViewControllerExports {
-  @objc public static func createWithNibName(_ nibName: NSNib.Name?, bundle: Bundle?) -> Self {
-    return self.init(nibName: nibName, bundle: bundle)
-  }
-
 }

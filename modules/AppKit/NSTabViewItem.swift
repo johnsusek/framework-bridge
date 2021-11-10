@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -14,6 +16,12 @@ import AppKit
 
 @objc(NSTabViewItem) protocol NSTabViewItemExports: JSExport, NSObjectExports {
   // Static Methods
+
+  /**
+    - Selector: tabViewItemWithViewController:
+    - Introduced: 10.10
+  */
+  @objc @available(OSX 10.10, *) static func createWithTabViewItemWithViewController(_ viewController: NSViewController) -> Self
 
   // Instance Methods
 
@@ -84,4 +92,13 @@ import AppKit
 }
 
 extension NSTabViewItem: NSTabViewItemExports {
+
+  /**
+    - Selector: tabViewItemWithViewController:
+    - Introduced: 10.10
+  */
+  @objc public static func createWithTabViewItemWithViewController(_ viewController: NSViewController) -> Self {
+    return self.init(viewController: viewController)
+  }
+
 }

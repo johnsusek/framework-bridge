@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -15,13 +17,6 @@ import AppKit
 @objc(NSViewAnimation) protocol NSViewAnimationExports: JSExport, NSAnimationExports {
   // Static Methods
 
-  // Instance Methods
-
-  /**
-    - Selector: initWithViewAnimations:
-  */
-  @objc static func createWithViewAnimations(_: [[NSViewAnimation.Key: Any]]) -> Self
-
   // Own Instance Properties
 
   /**
@@ -31,8 +26,4 @@ import AppKit
 }
 
 extension NSViewAnimation: NSViewAnimationExports {
-  @objc public static func createWithViewAnimations(_ viewAnimations: [[NSViewAnimation.Key: Any]]) -> Self {
-    return self.init(viewAnimations: viewAnimations)
-  }
-
 }

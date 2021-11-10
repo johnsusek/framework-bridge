@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -32,11 +34,6 @@ import AppKit
     - Selector: flagsChanged:
   */
   @objc (flagsChanged:) func flagsChanged(with: NSEvent)
-
-  /**
-    - Selector: initWithTarget:action:
-  */
-  @objc static func createWithTarget(_: Any?, action: Selector?) -> Self
 
   /**
     - Selector: keyDown:
@@ -234,8 +231,4 @@ import AppKit
 }
 
 extension NSGestureRecognizer: NSGestureRecognizerExports {
-  @objc public static func createWithTarget(_ target: Any?, action: Selector?) -> Self {
-    return self.init(target: target, action: action)
-  }
-
 }

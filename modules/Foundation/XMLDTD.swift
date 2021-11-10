@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -98,11 +100,6 @@ import Foundation
   @objc (entityDeclarationForName:) func entityDeclaration(forName: String) -> XMLDTDNode?
 
   /**
-    - Selector: initWithContentsOfURL:options:error:
-  */
-  @objc static func createWithContentsOfURL(contentsOf: URL, options: XMLNode.Options) -> Self?
-
-  /**
     - Selector: insertChild:atIndex:
   */
   @objc (insertChild:atIndex:) func insertChild(_: XMLNode, at: Int)
@@ -146,8 +143,4 @@ import Foundation
 }
 
 extension XMLDTD: XMLDTDExports {
-  @objc public static func createWithContentsOfURL(contentsOf: URL, options: XMLNode.Options) -> Self? {
-    return try? self.init(contentsOf: contentsOf, options: options)
-  }
-
 }

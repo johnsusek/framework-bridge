@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -16,14 +18,14 @@ import Foundation
   // Static Methods
 
   /**
-    - Selector: currentHost
-  */
-  @objc static func current() -> Self
-
-  /**
     - Selector: hostWithAddress:
   */
-  @objc static func create(address: String) -> Self
+  @objc static func createWithHostWithAddress(_ address: String) -> Self
+
+  /**
+    - Selector: hostWithName:
+  */
+  @objc static func createWithHostWithName(_ name: String?) -> Self
 
   // Instance Methods
 
@@ -62,12 +64,20 @@ import Foundation
 }
 
 extension Host: HostExports {
-  @objc public static func current() -> Self {
-    return self.current()
+
+  /**
+    - Selector: hostWithAddress:
+  */
+  @objc public static func createWithHostWithAddress(_ address: String) -> Self {
+    return self.init(address: address)
   }
 
-  @objc public static func create(address: String) -> Self {
-    return self.init(address: address)
+
+  /**
+    - Selector: hostWithName:
+  */
+  @objc public static func createWithHostWithName(_ name: String?) -> Self {
+    return self.init(name: name)
   }
 
 }

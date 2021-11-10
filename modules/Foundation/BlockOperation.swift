@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -19,14 +21,14 @@ import Foundation
   /**
     - Selector: blockOperationWithBlock:
   */
-// jsvalue   @objc static func create(block: JSValue) -> Self
+// jsvalue   @objc static func createWithBlockOperationWithBlock(_ block: JSValue) -> Self
 
   // Instance Methods
 
   /**
     - Selector: addExecutionBlock:
   */
-  // jsvalue @objc func addExecutionBlock(_: JSValue)
+  // jsvalue @objc func addExecutionBlock(_ p0: JSValue)
 
   // Own Instance Properties
 
@@ -37,7 +39,11 @@ import Foundation
 }
 
 extension BlockOperation: BlockOperationExports {
-  @objc public static func create(block: JSValue) -> Self {
+
+  /**
+    - Selector: blockOperationWithBlock:
+  */
+  @objc public static func createWithBlockOperationWithBlock(_ block: JSValue) -> Self {
     return self.init(block: { 
       block.call(withArguments: [])!
     })

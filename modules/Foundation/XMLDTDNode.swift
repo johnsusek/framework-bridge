@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -70,13 +72,6 @@ import Foundation
   */
   @objc (textWithStringValue:) static func text(withStringValue: String) -> Any
 
-  // Instance Methods
-
-  /**
-    - Selector: initWithXMLString:
-  */
-  @objc static func createWithXMLString(_: String) -> Self?
-
   // Own Instance Properties
 
   /**
@@ -106,8 +101,4 @@ import Foundation
 }
 
 extension XMLDTDNode: XMLDTDNodeExports {
-  @objc public static func createWithXMLString(_ xmlString: String) -> Self? {
-    return self.init(xmlString: xmlString)
-  }
-
 }

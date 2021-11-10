@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -36,7 +38,7 @@ import Foundation
     - Selector: addBarrierBlock:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func addBarrierBlock(_: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func addBarrierBlock(_ p0: JSValue)
 
   /**
     - Selector: addOperation:
@@ -47,7 +49,7 @@ import Foundation
     - Selector: addOperationWithBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func addOperation(_: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func addOperationWithBlock(_ p0: JSValue)
 
   /**
     - Selector: addOperations:waitUntilFinished:

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -15,13 +17,6 @@ import AppKit
 
 @objc(NSFilePromiseProvider) protocol NSFilePromiseProviderExports: JSExport, NSObjectExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithFileType:delegate:
-  */
-  @objc static func createWithFileType(_: String, delegate: NSFilePromiseProviderDelegate) -> Self
 
   // Own Instance Properties
 
@@ -42,8 +37,4 @@ import AppKit
 }
 
 extension NSFilePromiseProvider: NSFilePromiseProviderExports {
-  @objc public static func createWithFileType(_ fileType: String, delegate: NSFilePromiseProviderDelegate) -> Self {
-    return self.init(fileType: fileType, delegate: delegate)
-  }
-
 }

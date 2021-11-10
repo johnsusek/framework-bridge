@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,17 +21,17 @@ import AppKit
   /**
     - Selector: layoutAnchorWithEdges:
   */
-  @objc static func create(edges: NSDirectionalRectEdge) -> Self
+  @objc static func createWithLayoutAnchorWithEdges(_ edges: NSDirectionalRectEdge) -> Self
 
   /**
     - Selector: layoutAnchorWithEdges:absoluteOffset:
   */
-  @objc static func create(edges: NSDirectionalRectEdge, absoluteOffset: CGPoint) -> Self
+  @objc static func createWithLayoutAnchorWithEdgesWithAbsoluteOffset(_ edges: NSDirectionalRectEdge, _ absoluteOffset: CGPoint) -> Self
 
   /**
     - Selector: layoutAnchorWithEdges:fractionalOffset:
   */
-  @objc static func create(edges: NSDirectionalRectEdge, fractionalOffset: CGPoint) -> Self
+  @objc static func createWithLayoutAnchorWithEdgesWithFractionalOffset(_ edges: NSDirectionalRectEdge, _ fractionalOffset: CGPoint) -> Self
 
   // Own Instance Properties
 
@@ -55,15 +57,27 @@ import AppKit
 }
 
 extension NSCollectionLayoutAnchor: NSCollectionLayoutAnchorExports {
-  @objc public static func create(edges: NSDirectionalRectEdge) -> Self {
+
+  /**
+    - Selector: layoutAnchorWithEdges:
+  */
+  @objc public static func createWithLayoutAnchorWithEdges(_ edges: NSDirectionalRectEdge) -> Self {
     return self.init(edges: edges)
   }
 
-  @objc public static func create(edges: NSDirectionalRectEdge, absoluteOffset: CGPoint) -> Self {
+
+  /**
+    - Selector: layoutAnchorWithEdges:absoluteOffset:
+  */
+  @objc public static func createWithLayoutAnchorWithEdgesWithAbsoluteOffset(_ edges: NSDirectionalRectEdge, _ absoluteOffset: CGPoint) -> Self {
     return self.init(edges: edges, absoluteOffset: absoluteOffset)
   }
 
-  @objc public static func create(edges: NSDirectionalRectEdge, fractionalOffset: CGPoint) -> Self {
+
+  /**
+    - Selector: layoutAnchorWithEdges:fractionalOffset:
+  */
+  @objc public static func createWithLayoutAnchorWithEdgesWithFractionalOffset(_ edges: NSDirectionalRectEdge, _ fractionalOffset: CGPoint) -> Self {
     return self.init(edges: edges, fractionalOffset: fractionalOffset)
   }
 

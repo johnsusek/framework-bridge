@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -48,12 +50,12 @@ import AppKit
   /**
     - Selector: printOperationWithView:
   */
-  @objc static func create(view: NSView) -> NSPrintOperation
+  @objc static func createWithPrintOperationWithView(_ view: NSView) -> NSPrintOperation
 
   /**
     - Selector: printOperationWithView:printInfo:
   */
-  @objc static func create(view: NSView, printInfo: NSPrintInfo) -> NSPrintOperation
+  @objc static func createWithPrintOperationWithViewWithPrintInfo(_ view: NSView, _ printInfo: NSPrintInfo) -> NSPrintOperation
 
   // Own Static Properties
 
@@ -172,11 +174,19 @@ import AppKit
 }
 
 extension NSPrintOperation: NSPrintOperationExports {
-  @objc public static func create(view: NSView) -> NSPrintOperation {
+
+  /**
+    - Selector: printOperationWithView:
+  */
+  @objc public static func createWithPrintOperationWithView(_ view: NSView) -> NSPrintOperation {
     return self.init(view: view)
   }
 
-  @objc public static func create(view: NSView, printInfo: NSPrintInfo) -> NSPrintOperation {
+
+  /**
+    - Selector: printOperationWithView:printInfo:
+  */
+  @objc public static func createWithPrintOperationWithViewWithPrintInfo(_ view: NSView, _ printInfo: NSPrintInfo) -> NSPrintOperation {
     return self.init(view: view, printInfo: printInfo)
   }
 

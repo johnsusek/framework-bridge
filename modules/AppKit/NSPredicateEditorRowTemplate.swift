@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -27,21 +29,6 @@ import AppKit
     - Selector: displayableSubpredicatesOfPredicate:
   */
   @objc (displayableSubpredicatesOfPredicate:) func displayableSubpredicates(of: NSPredicate) -> [NSPredicate]?
-
-  /**
-    - Selector: initWithCompoundTypes:
-  */
-  @objc static func createWithCompoundTypes(_: [NSNumber]) -> Self
-
-  /**
-    - Selector: initWithLeftExpressions:rightExpressionAttributeType:modifier:operators:options:
-  */
-  @objc static func createWithLeftExpressions(_: [NSExpression], rightExpressionAttributeType: NSAttributeType, modifier: NSComparisonPredicate.Modifier, operators: [NSNumber], options: Int) -> Self
-
-  /**
-    - Selector: initWithLeftExpressions:rightExpressions:modifier:operators:options:
-  */
-  @objc static func createWithLeftExpressions(_: [NSExpression], rightExpressions: [NSExpression], modifier: NSComparisonPredicate.Modifier, operators: [NSNumber], options: Int) -> Self
 
   /**
     - Selector: matchForPredicate:
@@ -102,16 +89,4 @@ import AppKit
 }
 
 extension NSPredicateEditorRowTemplate: NSPredicateEditorRowTemplateExports {
-  @objc public static func createWithCompoundTypes(_ compoundTypes: [NSNumber]) -> Self {
-    return self.init(compoundTypes: compoundTypes)
-  }
-
-  @objc public static func createWithLeftExpressions(_ leftExpressions: [NSExpression], rightExpressionAttributeType: NSAttributeType, modifier: NSComparisonPredicate.Modifier, operators: [NSNumber], options: Int) -> Self {
-    return self.init(leftExpressions: leftExpressions, rightExpressionAttributeType: rightExpressionAttributeType, modifier: modifier, operators: operators, options: options)
-  }
-
-  @objc public static func createWithLeftExpressions(_ leftExpressions: [NSExpression], rightExpressions: [NSExpression], modifier: NSComparisonPredicate.Modifier, operators: [NSNumber], options: Int) -> Self {
-    return self.init(leftExpressions: leftExpressions, rightExpressions: rightExpressions, modifier: modifier, operators: operators, options: options)
-  }
-
 }

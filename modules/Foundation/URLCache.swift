@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -33,21 +35,7 @@ import Foundation
     - Selector: getCachedResponseForDataTask:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func getCachedResponse(`for`: URLSessionDataTask, completionHandler: JSValue)
-
-  /**
-    - Selector: initWithMemoryCapacity:diskCapacity:directoryURL:
-    - Introduced: 10.15
-  */
-  @objc @available(OSX 10.15, *) static func createWithMemoryCapacity(_: Int, diskCapacity: Int, directoryURL: URL?) -> Self
-
-  /**
-    - Selector: initWithMemoryCapacity:diskCapacity:diskPath:
-    - Introduced: 10.2
-    - Deprecated: 100000
-    - Replacement: initWithMemoryCapacity:diskCapacity:directoryURL:
-  */
-  @objc @available(OSX 10.2, *) static func createWithMemoryCapacity(_: Int, diskCapacity: Int, diskPath: String?) -> Self
+  // jsvalue @objc @available(OSX 10.10, *) func getCachedResponseForDataTaskWithCompletionHandler(_ for: URLSessionDataTask, _ completionHandler: JSValue)
 
   /**
     - Selector: removeAllCachedResponses
@@ -106,12 +94,4 @@ import Foundation
 }
 
 extension URLCache: URLCacheExports {
-  @objc public static func createWithMemoryCapacity(_ memoryCapacity: Int, diskCapacity: Int, directoryURL: URL?) -> Self {
-    return self.init(__memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, directoryURL: directoryURL)
-  }
-
-  @objc public static func createWithMemoryCapacity(_ memoryCapacity: Int, diskCapacity: Int, diskPath: String?) -> Self {
-    return self.init(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: diskPath)
-  }
-
 }

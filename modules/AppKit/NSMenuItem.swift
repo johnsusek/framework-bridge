@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -21,13 +23,6 @@ import AppKit
     - Selector: usesUserKeyEquivalents
   */
   @objc static var usesUserKeyEquivalents: Bool { @objc get @objc (setUsesUserKeyEquivalents:) set }
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithTitle:action:keyEquivalent:
-  */
-  @objc static func createWithTitle(_: String, action: Selector?, keyEquivalent: String) -> Self
 
   // Protocol Inherited Instance Properties
 
@@ -186,8 +181,4 @@ import AppKit
 }
 
 extension NSMenuItem: NSMenuItemExports {
-  @objc public static func createWithTitle(_ title: String, action: Selector?, keyEquivalent: String) -> Self {
-    return self.init(title: title, action: action, keyEquivalent: keyEquivalent)
-  }
-
 }

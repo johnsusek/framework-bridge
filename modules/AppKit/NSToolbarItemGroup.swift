@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -20,13 +22,13 @@ import AppKit
     - Selector: groupWithItemIdentifier:images:selectionMode:labels:target:action:
     - Introduced: 10.15
   */
-  @objc @available(OSX 10.15, *) static func create(itemIdentifier: NSToolbarItem.Identifier, images: [NSImage], selectionMode: NSToolbarItemGroup.SelectionMode, labels: [String]?) -> Self
+  @objc @available(OSX 10.15, *) static func createWithGroupWithItemIdentifierWithImagesWithSelectionModeWithLabels(_ itemIdentifier: NSToolbarItem.Identifier, _ images: [NSImage], _ selectionMode: NSToolbarItemGroup.SelectionMode, _ labels: [String]?) -> Self
 
   /**
     - Selector: groupWithItemIdentifier:titles:selectionMode:labels:target:action:
     - Introduced: 10.15
   */
-  @objc @available(OSX 10.15, *) static func create(itemIdentifier: NSToolbarItem.Identifier, titles: [String], selectionMode: NSToolbarItemGroup.SelectionMode, labels: [String]?) -> Self
+  @objc @available(OSX 10.15, *) static func createWithGroupWithItemIdentifierWithTitlesWithSelectionModeWithLabels(_ itemIdentifier: NSToolbarItem.Identifier, _ titles: [String], _ selectionMode: NSToolbarItemGroup.SelectionMode, _ labels: [String]?) -> Self
 
   // Instance Methods
 
@@ -69,11 +71,21 @@ import AppKit
 }
 
 extension NSToolbarItemGroup: NSToolbarItemGroupExports {
-  @objc public static func create(itemIdentifier: NSToolbarItem.Identifier, images: [NSImage], selectionMode: NSToolbarItemGroup.SelectionMode, labels: [String]?) -> Self {
+
+  /**
+    - Selector: groupWithItemIdentifier:images:selectionMode:labels:target:action:
+    - Introduced: 10.15
+  */
+  @objc public static func createWithGroupWithItemIdentifierWithImagesWithSelectionModeWithLabels(_ itemIdentifier: NSToolbarItem.Identifier, _ images: [NSImage], _ selectionMode: NSToolbarItemGroup.SelectionMode, _ labels: [String]?) -> Self {
     return self.init(itemIdentifier: itemIdentifier, images: images, selectionMode: selectionMode, labels: labels, target: nil, action: nil)
   }
 
-  @objc public static func create(itemIdentifier: NSToolbarItem.Identifier, titles: [String], selectionMode: NSToolbarItemGroup.SelectionMode, labels: [String]?) -> Self {
+
+  /**
+    - Selector: groupWithItemIdentifier:titles:selectionMode:labels:target:action:
+    - Introduced: 10.15
+  */
+  @objc public static func createWithGroupWithItemIdentifierWithTitlesWithSelectionModeWithLabels(_ itemIdentifier: NSToolbarItem.Identifier, _ titles: [String], _ selectionMode: NSToolbarItemGroup.SelectionMode, _ labels: [String]?) -> Self {
     return self.init(itemIdentifier: itemIdentifier, titles: titles, selectionMode: selectionMode, labels: labels, target: nil, action: nil)
   }
 

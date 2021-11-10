@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -18,17 +20,6 @@ import AppKit
   // Instance Methods
 
   /**
-    - Selector: initWithNibData:bundle:
-    - Introduced: 10.8
-  */
-  @objc @available(OSX 10.8, *) static func createWithNibData(_: Data, bundle: Bundle?) -> Self
-
-  /**
-    - Selector: initWithNibNamed:bundle:
-  */
-  @objc static func createWithNibNamed(_: NSNib.Name, bundle: Bundle?) -> Self?
-
-  /**
     - Selector: instantiateWithOwner:topLevelObjects:
     - Introduced: 10.8
   */
@@ -36,12 +27,4 @@ import AppKit
 }
 
 extension NSNib: NSNibExports {
-  @objc public static func createWithNibData(_ nibData: Data, bundle: Bundle?) -> Self {
-    return self.init(nibData: nibData, bundle: bundle)
-  }
-
-  @objc public static func createWithNibNamed(_ nibNamed: NSNib.Name, bundle: Bundle?) -> Self? {
-    return self.init(nibNamed: nibNamed, bundle: bundle)
-  }
-
 }

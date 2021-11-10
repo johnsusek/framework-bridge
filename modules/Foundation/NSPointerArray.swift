@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -17,9 +19,14 @@ import Foundation
   // Static Methods
 
   /**
+    - Selector: pointerArrayWithOptions:
+  */
+  @objc static func createWithPointerArrayWithOptions(_ options: NSPointerFunctions.Options) -> NSPointerArray
+
+  /**
     - Selector: pointerArrayWithPointerFunctions:
   */
-  @objc static func create(pointerFunctions: NSPointerFunctions) -> NSPointerArray
+  @objc static func createWithPointerArrayWithPointerFunctions(_ pointerFunctions: NSPointerFunctions) -> NSPointerArray
 
   /**
     - Selector: strongObjectsPointerArray
@@ -84,7 +91,19 @@ import Foundation
 }
 
 extension NSPointerArray: NSPointerArrayExports {
-  @objc public static func create(pointerFunctions: NSPointerFunctions) -> NSPointerArray {
+
+  /**
+    - Selector: pointerArrayWithOptions:
+  */
+  @objc public static func createWithPointerArrayWithOptions(_ options: NSPointerFunctions.Options) -> NSPointerArray {
+    return self.init(options: options)
+  }
+
+
+  /**
+    - Selector: pointerArrayWithPointerFunctions:
+  */
+  @objc public static func createWithPointerArrayWithPointerFunctions(_ pointerFunctions: NSPointerFunctions) -> NSPointerArray {
     return self.init(pointerFunctions: pointerFunctions)
   }
 

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -74,12 +76,6 @@ import Foundation
     - Selector: floatForKey:
   */
   @objc (floatForKey:) func float(forKey: String) -> Float
-
-  /**
-    - Selector: initWithSuiteName:
-    - Introduced: 10.9
-  */
-  @objc @available(OSX 10.9, *) static func createWithSuiteName(_: String?) -> Self?
 
   /**
     - Selector: integerForKey:
@@ -201,8 +197,4 @@ import Foundation
 }
 
 extension UserDefaults: UserDefaultsExports {
-  @objc public static func createWithSuiteName(_ suiteName: String?) -> Self? {
-    return self.init(suiteName: suiteName)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -35,19 +37,6 @@ import AppKit
   */
   @objc (unregisterImageRepClass:) static func unregisterClass(_: AnyClass)
 
-  // Instance Methods
-
-  /**
-    - Selector: initWithDrawSelector:delegate:
-  */
-  @objc static func createWithDrawSelector(_: Selector, delegate: Any) -> Self
-
-  /**
-    - Selector: initWithSize:flipped:drawingHandler:
-    - Introduced: 10.8
-  */
-  // jsvalue @objc @available(OSX 10.8, *) static func createWithSize(_: CGSize, flipped: Bool, drawingHandler: JSValue) -> Self
-
   // Own Instance Properties
 
   /**
@@ -68,15 +57,4 @@ import AppKit
 }
 
 extension NSCustomImageRep: NSCustomImageRepExports {
-  @objc public static func createWithDrawSelector(_ draw: Selector, delegate: Any) -> Self {
-    return self.init(draw: draw, delegate: delegate)
-  }
-
-  @objc public static func createWithSize(_ size: CGSize, flipped: Bool, drawingHandler: JSValue) -> Self {
-    return self.init(size: size, flipped: flipped, drawingHandler: { p1 in
-      let res = drawingHandler.call(withArguments: [p1 as AnyObject])!
-      return res.toBool()
-    })
-  }
-
 }

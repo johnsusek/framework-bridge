@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -18,7 +20,7 @@ import Foundation
   /**
     - Selector: exceptionWithName:reason:userInfo:
   */
-  @objc static func create(name: NSExceptionName, reason: String?, userInfo: [AnyHashable: Any]?) -> NSException
+  @objc static func createWithExceptionWithNameWithReasonWithUserInfo(_ name: NSExceptionName, _ reason: String?, _ userInfo: [AnyHashable: Any]?) -> NSException
 
   // Instance Methods
 
@@ -58,7 +60,11 @@ import Foundation
 }
 
 extension NSException: NSExceptionExports {
-  @objc public static func create(name: NSExceptionName, reason: String?, userInfo: [AnyHashable: Any]?) -> NSException {
+
+  /**
+    - Selector: exceptionWithName:reason:userInfo:
+  */
+  @objc public static func createWithExceptionWithNameWithReasonWithUserInfo(_ name: NSExceptionName, _ reason: String?, _ userInfo: [AnyHashable: Any]?) -> NSException {
     return self.init(name: name, reason: reason, userInfo: userInfo)
   }
 

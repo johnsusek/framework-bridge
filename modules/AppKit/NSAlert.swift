@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -18,7 +20,7 @@ import AppKit
   /**
     - Selector: alertWithError:
   */
-  @objc static func create(error: Error) -> NSAlert
+  @objc static func createWithAlertWithError(_ error: Error) -> NSAlert
 
   // Instance Methods
 
@@ -31,7 +33,7 @@ import AppKit
     - Selector: beginSheetModalForWindow:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func beginSheetModal(`for`: NSWindow, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginSheetModalForWindowWithCompletionHandler(_ for: NSWindow, _ completionHandler: JSValue)
 
   /**
     - Selector: layout
@@ -111,7 +113,11 @@ import AppKit
 }
 
 extension NSAlert: NSAlertExports {
-  @objc public static func create(error: Error) -> NSAlert {
+
+  /**
+    - Selector: alertWithError:
+  */
+  @objc public static func createWithAlertWithError(_ error: Error) -> NSAlert {
     return self.init(error: error)
   }
 

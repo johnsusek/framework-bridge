@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -31,11 +33,6 @@ import AppKit
     - Selector: clearStopAnimation
   */
   @objc (clearStopAnimation) func clearStop()
-
-  /**
-    - Selector: initWithDuration:animationCurve:
-  */
-  @objc static func createWithDuration(_: TimeInterval, animationCurve: NSAnimation.Curve) -> Self
 
   /**
     - Selector: removeProgressMark:
@@ -116,8 +113,4 @@ import AppKit
 }
 
 extension NSAnimation: NSAnimationExports {
-  @objc public static func createWithDuration(_ duration: TimeInterval, animationCurve: NSAnimation.Curve) -> Self {
-    return self.init(duration: duration, animationCurve: animationCurve)
-  }
-
 }

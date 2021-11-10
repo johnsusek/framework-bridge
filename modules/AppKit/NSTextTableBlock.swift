@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -14,13 +16,6 @@ import AppKit
 
 @objc(NSTextTableBlock) protocol NSTextTableBlockExports: JSExport, NSTextBlockExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithTable:startingRow:rowSpan:startingColumn:columnSpan:
-  */
-  @objc static func createWithTable(_: NSTextTable, startingRow: Int, rowSpan: Int, startingColumn: Int, columnSpan: Int) -> Self
 
   // Own Instance Properties
 
@@ -51,8 +46,4 @@ import AppKit
 }
 
 extension NSTextTableBlock: NSTextTableBlockExports {
-  @objc public static func createWithTable(_ table: NSTextTable, startingRow: Int, rowSpan: Int, startingColumn: Int, columnSpan: Int) -> Self {
-    return self.init(table: table, startingRow: startingRow, rowSpan: rowSpan, startingColumn: startingColumn, columnSpan: columnSpan)
-  }
-
 }

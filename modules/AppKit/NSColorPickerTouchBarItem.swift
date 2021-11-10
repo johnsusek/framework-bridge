@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,22 +21,22 @@ import AppKit
   /**
     - Selector: colorPickerWithIdentifier:
   */
-  @objc static func colorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self
+  @objc static func createWithColorPickerWithIdentifier(_ withIdentifier: NSTouchBarItem.Identifier) -> Self
 
   /**
     - Selector: colorPickerWithIdentifier:buttonImage:
   */
-  @objc static func colorPicker(withIdentifier: NSTouchBarItem.Identifier, buttonImage: NSImage) -> Self
+  @objc static func createWithColorPickerWithIdentifierWithButtonImage(_ withIdentifier: NSTouchBarItem.Identifier, _ buttonImage: NSImage) -> Self
 
   /**
     - Selector: strokeColorPickerWithIdentifier:
   */
-  @objc static func strokeColorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self
+  @objc static func createWithStrokeColorPickerWithIdentifier(_ withIdentifier: NSTouchBarItem.Identifier) -> Self
 
   /**
     - Selector: textColorPickerWithIdentifier:
   */
-  @objc static func textColorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self
+  @objc static func createWithTextColorPickerWithIdentifier(_ withIdentifier: NSTouchBarItem.Identifier) -> Self
 
   // Own Instance Properties
 
@@ -81,19 +83,35 @@ import AppKit
 }
 
 extension NSColorPickerTouchBarItem: NSColorPickerTouchBarItemExports {
-  @objc public static func colorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self {
+
+  /**
+    - Selector: colorPickerWithIdentifier:
+  */
+  @objc public static func createWithColorPickerWithIdentifier(_ withIdentifier: NSTouchBarItem.Identifier) -> Self {
     return self.colorPicker(withIdentifier: withIdentifier)
   }
 
-  @objc public static func colorPicker(withIdentifier: NSTouchBarItem.Identifier, buttonImage: NSImage) -> Self {
+
+  /**
+    - Selector: colorPickerWithIdentifier:buttonImage:
+  */
+  @objc public static func createWithColorPickerWithIdentifierWithButtonImage(_ withIdentifier: NSTouchBarItem.Identifier, _ buttonImage: NSImage) -> Self {
     return self.colorPicker(withIdentifier: withIdentifier, buttonImage: buttonImage)
   }
 
-  @objc public static func strokeColorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self {
+
+  /**
+    - Selector: strokeColorPickerWithIdentifier:
+  */
+  @objc public static func createWithStrokeColorPickerWithIdentifier(_ withIdentifier: NSTouchBarItem.Identifier) -> Self {
     return self.strokeColorPicker(withIdentifier: withIdentifier)
   }
 
-  @objc public static func textColorPicker(withIdentifier: NSTouchBarItem.Identifier) -> Self {
+
+  /**
+    - Selector: textColorPickerWithIdentifier:
+  */
+  @objc public static func createWithTextColorPickerWithIdentifier(_ withIdentifier: NSTouchBarItem.Identifier) -> Self {
     return self.textColorPicker(withIdentifier: withIdentifier)
   }
 

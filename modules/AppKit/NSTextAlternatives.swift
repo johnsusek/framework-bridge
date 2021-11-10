@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -17,11 +19,6 @@ import AppKit
   // Static Methods
 
   // Instance Methods
-
-  /**
-    - Selector: initWithPrimaryString:alternativeStrings:
-  */
-  @objc static func createWithPrimaryString(_: String, alternativeStrings: [String]) -> Self
 
   /**
     - Selector: noteSelectedAlternativeString:
@@ -42,8 +39,4 @@ import AppKit
 }
 
 extension NSTextAlternatives: NSTextAlternativesExports {
-  @objc public static func createWithPrimaryString(_ primaryString: String, alternativeStrings: [String]) -> Self {
-    return self.init(primaryString: primaryString, alternativeStrings: alternativeStrings)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,12 +21,12 @@ import AppKit
   /**
     - Selector: stepperTouchBarItemWithIdentifier:drawingHandler:
   */
-// jsvalue   @objc static func create(identifier: NSTouchBarItem.Identifier, drawingHandler: JSValue) -> Self
+// jsvalue   @objc static func createWithStepperTouchBarItemWithIdentifierWithDrawingHandler(_ identifier: NSTouchBarItem.Identifier, _ drawingHandler: JSValue) -> Self
 
   /**
     - Selector: stepperTouchBarItemWithIdentifier:formatter:
   */
-  @objc static func create(identifier: NSTouchBarItem.Identifier, formatter: Formatter) -> Self
+  @objc static func createWithStepperTouchBarItemWithIdentifierWithFormatter(_ identifier: NSTouchBarItem.Identifier, _ formatter: Formatter) -> Self
 
   // Own Instance Properties
 
@@ -65,13 +67,21 @@ import AppKit
 }
 
 extension NSStepperTouchBarItem: NSStepperTouchBarItemExports {
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, drawingHandler: JSValue) -> Self {
+
+  /**
+    - Selector: stepperTouchBarItemWithIdentifier:drawingHandler:
+  */
+  @objc public static func createWithStepperTouchBarItemWithIdentifierWithDrawingHandler(_ identifier: NSTouchBarItem.Identifier, _ drawingHandler: JSValue) -> Self {
     return self.init(identifier: identifier, drawingHandler: { p1, p2 in
       drawingHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject])!
     })
   }
 
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, formatter: Formatter) -> Self {
+
+  /**
+    - Selector: stepperTouchBarItemWithIdentifier:formatter:
+  */
+  @objc public static func createWithStepperTouchBarItemWithIdentifierWithFormatter(_ identifier: NSTouchBarItem.Identifier, _ formatter: Formatter) -> Self {
     return self.init(identifier: identifier, formatter: formatter)
   }
 

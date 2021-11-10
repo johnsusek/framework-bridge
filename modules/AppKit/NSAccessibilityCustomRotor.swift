@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -15,18 +17,6 @@ import AppKit
 
 @objc(NSAccessibilityCustomRotor) protocol NSAccessibilityCustomRotorExports: JSExport, NSObjectExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithLabel:itemSearchDelegate:
-  */
-  @objc static func createWithLabel(_: String, itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegate) -> Self
-
-  /**
-    - Selector: initWithRotorType:itemSearchDelegate:
-  */
-  @objc static func createWithRotorType(_: NSAccessibilityCustomRotor.RotorType, itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegate) -> Self
 
   // Own Instance Properties
 
@@ -52,12 +42,4 @@ import AppKit
 }
 
 extension NSAccessibilityCustomRotor: NSAccessibilityCustomRotorExports {
-  @objc public static func createWithLabel(_ label: String, itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegate) -> Self {
-    return self.init(label: label, itemSearchDelegate: itemSearchDelegate)
-  }
-
-  @objc public static func createWithRotorType(_ rotorType: NSAccessibilityCustomRotor.RotorType, itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegate) -> Self {
-    return self.init(rotorType: rotorType, itemSearchDelegate: itemSearchDelegate)
-  }
-
 }

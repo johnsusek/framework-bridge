@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: sectionWithGroup:
   */
-  @objc static func create(group: NSCollectionLayoutGroup) -> Self
+  @objc static func createWithSectionWithGroup(_ group: NSCollectionLayoutGroup) -> Self
 
   // Own Instance Properties
 
@@ -60,7 +62,11 @@ import AppKit
 }
 
 extension NSCollectionLayoutSection: NSCollectionLayoutSectionExports {
-  @objc public static func create(group: NSCollectionLayoutGroup) -> Self {
+
+  /**
+    - Selector: sectionWithGroup:
+  */
+  @objc public static func createWithSectionWithGroup(_ group: NSCollectionLayoutGroup) -> Self {
     return self.init(group: group)
   }
 

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -20,13 +22,13 @@ import Foundation
     - Selector: defaultOrthographyForLanguage:
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) static func defaultOrthography(forLanguage: String) -> Self
+  @objc @available(OSX 10.13, *) static func createWithDefaultOrthographyForLanguage(_ forLanguage: String) -> Self
 
   /**
     - Selector: orthographyWithDominantScript:languageMap:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) static func create(dominantScript: String, languageMap: [String: [String]]) -> Self
+  @objc @available(OSX 10.6, *) static func createWithOrthographyWithDominantScriptWithLanguageMap(_ dominantScript: String, _ languageMap: [String: [String]]) -> Self
 
   // Instance Methods
 
@@ -74,11 +76,21 @@ import Foundation
 }
 
 extension NSOrthography: NSOrthographyExports {
-  @objc public static func defaultOrthography(forLanguage: String) -> Self {
+
+  /**
+    - Selector: defaultOrthographyForLanguage:
+    - Introduced: 10.13
+  */
+  @objc public static func createWithDefaultOrthographyForLanguage(_ forLanguage: String) -> Self {
     return self.defaultOrthography(forLanguage: forLanguage)
   }
 
-  @objc public static func create(dominantScript: String, languageMap: [String: [String]]) -> Self {
+
+  /**
+    - Selector: orthographyWithDominantScript:languageMap:
+    - Introduced: 10.6
+  */
+  @objc public static func createWithOrthographyWithDominantScriptWithLanguageMap(_ dominantScript: String, _ languageMap: [String: [String]]) -> Self {
     return self.init(dominantScript: dominantScript, languageMap: languageMap)
   }
 

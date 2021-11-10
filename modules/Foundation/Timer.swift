@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -19,7 +21,7 @@ import Foundation
     - Selector: scheduledTimerWithTimeInterval:repeats:block:
     - Introduced: 10.12
   */
-// jsvalue   @objc @available(OSX 10.12, *) static func scheduledTimer(withTimeInterval: TimeInterval, repeats: Bool, block: JSValue) -> Timer
+// jsvalue   @objc @available(OSX 10.12, *) static func scheduledTimerWithTimeIntervalWithRepeatsWithBlock(_ withTimeInterval: TimeInterval, _ repeats: Bool, _ block: JSValue) -> Timer
 
   /**
     - Selector: scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:
@@ -30,12 +32,12 @@ import Foundation
     - Selector: timerWithTimeInterval:repeats:block:
     - Introduced: 10.12
   */
-// jsvalue   @objc @available(OSX 10.12, *) static func create(timeInterval: TimeInterval, repeats: Bool, block: JSValue) -> Timer
+// jsvalue   @objc @available(OSX 10.12, *) static func createWithTimerWithTimeIntervalWithRepeatsWithBlock(_ timeInterval: TimeInterval, _ repeats: Bool, _ block: JSValue) -> Timer
 
   /**
     - Selector: timerWithTimeInterval:target:selector:userInfo:repeats:
   */
-  @objc static func create(timeInterval: TimeInterval, target: Any, selector: Selector, userInfo: Any?, repeats: Bool) -> Timer
+  @objc static func createWithTimerWithTimeIntervalWithTargetWithSelectorWithUserInfoWithRepeats(_ timeInterval: TimeInterval, _ target: Any, _ selector: Selector, _ userInfo: Any?, _ repeats: Bool) -> Timer
 
   // Instance Methods
 
@@ -43,17 +45,6 @@ import Foundation
     - Selector: fire
   */
   @objc func fire()
-
-  /**
-    - Selector: initWithFireDate:interval:repeats:block:
-    - Introduced: 10.12
-  */
-  // jsvalue @objc @available(OSX 10.12, *) static func createWithFireDate(_: Date, interval: TimeInterval, repeats: Bool, block: JSValue) -> Self
-
-  /**
-    - Selector: initWithFireDate:interval:target:selector:userInfo:repeats:
-  */
-  @objc static func createWithFireDate(_: Date, interval: TimeInterval, target: Any, selector: Selector, userInfo: Any?, repeats: Bool) -> Self
 
   /**
     - Selector: invalidate
@@ -90,24 +81,23 @@ import Foundation
 }
 
 extension Timer: TimerExports {
-  @objc public static func create(timeInterval: TimeInterval, repeats: Bool, block: JSValue) -> Timer {
+
+  /**
+    - Selector: timerWithTimeInterval:repeats:block:
+    - Introduced: 10.12
+  */
+  @objc public static func createWithTimerWithTimeIntervalWithRepeatsWithBlock(_ timeInterval: TimeInterval, _ repeats: Bool, _ block: JSValue) -> Timer {
     return self.init(timeInterval: timeInterval, repeats: repeats, block: { p1 in
       block.call(withArguments: [p1 as AnyObject])!
     })
   }
 
-  @objc public static func create(timeInterval: TimeInterval, target: Any, selector: Selector, userInfo: Any?, repeats: Bool) -> Timer {
+
+  /**
+    - Selector: timerWithTimeInterval:target:selector:userInfo:repeats:
+  */
+  @objc public static func createWithTimerWithTimeIntervalWithTargetWithSelectorWithUserInfoWithRepeats(_ timeInterval: TimeInterval, _ target: Any, _ selector: Selector, _ userInfo: Any?, _ repeats: Bool) -> Timer {
     return self.init(timeInterval: timeInterval, target: target, selector: selector, userInfo: userInfo, repeats: repeats)
-  }
-
-  @objc public static func createWithFireDate(_ fireDate: Date, interval: TimeInterval, repeats: Bool, block: JSValue) -> Self {
-    return self.init(fire: fireDate, interval: interval, repeats: repeats, block: { p1 in
-      block.call(withArguments: [p1 as AnyObject])!
-    })
-  }
-
-  @objc public static func createWithFireDate(_ fireDate: Date, interval: TimeInterval, target: Any, selector: Selector, userInfo: Any?, repeats: Bool) -> Self {
-    return self.init(fireAt: fireDate, interval: interval, target: target, selector: selector, userInfo: userInfo, repeats: repeats)
   }
 
 }

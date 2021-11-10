@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -19,12 +21,12 @@ import Foundation
   /**
     - Selector: readingIntentWithURL:options:
   */
-  @objc static func readingIntent(with: URL, options: NSFileCoordinator.ReadingOptions) -> Self
+  @objc static func createWithReadingIntentWithURLWithOptions(_ with: URL, _ options: NSFileCoordinator.ReadingOptions) -> Self
 
   /**
     - Selector: writingIntentWithURL:options:
   */
-  @objc static func writingIntent(with: URL, options: NSFileCoordinator.WritingOptions) -> Self
+  @objc static func createWithWritingIntentWithURLWithOptions(_ with: URL, _ options: NSFileCoordinator.WritingOptions) -> Self
 
   // Own Instance Properties
 
@@ -35,11 +37,19 @@ import Foundation
 }
 
 extension NSFileAccessIntent: NSFileAccessIntentExports {
-  @objc public static func readingIntent(with: URL, options: NSFileCoordinator.ReadingOptions) -> Self {
+
+  /**
+    - Selector: readingIntentWithURL:options:
+  */
+  @objc public static func createWithReadingIntentWithURLWithOptions(_ with: URL, _ options: NSFileCoordinator.ReadingOptions) -> Self {
     return self.readingIntent(with: with, options: options)
   }
 
-  @objc public static func writingIntent(with: URL, options: NSFileCoordinator.WritingOptions) -> Self {
+
+  /**
+    - Selector: writingIntentWithURL:options:
+  */
+  @objc public static func createWithWritingIntentWithURLWithOptions(_ with: URL, _ options: NSFileCoordinator.WritingOptions) -> Self {
     return self.writingIntent(with: with, options: options)
   }
 

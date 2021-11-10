@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -14,13 +16,6 @@ import Foundation
 
 @objc(NSWhoseSpecifier) protocol NSWhoseSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithContainerClassDescription:containerSpecifier:key:test:
-  */
-  @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, test: NSScriptWhoseTest) -> Self
 
   // Own Instance Properties
 
@@ -51,8 +46,4 @@ import Foundation
 }
 
 extension NSWhoseSpecifier: NSWhoseSpecifierExports {
-  @objc public static func createWithContainerClassDescription(_ containerClassDescription: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, test: NSScriptWhoseTest) -> Self {
-    return self.init(containerClassDescription: containerClassDescription, containerSpecifier: containerSpecifier, key: key, test: test)
-  }
-
 }

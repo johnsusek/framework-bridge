@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -51,11 +53,6 @@ import AppKit
   @objc (containsOptions:) func contains(_: NSUserInterfaceCompressionOptions) -> Bool
 
   /**
-    - Selector: initWithCompressionOptions:
-  */
-  @objc static func create(options: Set<NSUserInterfaceCompressionOptions>) -> Self
-
-  /**
     - Selector: intersectsOptions:
   */
   @objc (intersectsOptions:) func intersects(_: NSUserInterfaceCompressionOptions) -> Bool
@@ -79,8 +76,4 @@ import AppKit
 }
 
 extension NSUserInterfaceCompressionOptions: NSUserInterfaceCompressionOptionsExports {
-  @objc public static func create(options: Set<NSUserInterfaceCompressionOptions>) -> Self {
-    return self.init(options: options)
-  }
-
 }

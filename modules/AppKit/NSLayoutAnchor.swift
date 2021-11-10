@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -21,32 +23,32 @@ import AppKit
   /**
     - Selector: constraintEqualToAnchor:
   */
-  @objc func constraint(equalTo: JSValue) -> NSLayoutConstraint
+  @objc func constraintEqualToAnchor(_ equalTo: JSValue) -> NSLayoutConstraint
 
   /**
     - Selector: constraintEqualToAnchor:constant:
   */
-  @objc func constraint(equalTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
+  @objc func constraintEqualToAnchorWithConstant(_ equalTo: JSValue, _ constant: CGFloat) -> NSLayoutConstraint
 
   /**
     - Selector: constraintGreaterThanOrEqualToAnchor:
   */
-  @objc func constraint(greaterThanOrEqualTo: JSValue) -> NSLayoutConstraint
+  @objc func constraintGreaterThanOrEqualToAnchor(_ greaterThanOrEqualTo: JSValue) -> NSLayoutConstraint
 
   /**
     - Selector: constraintGreaterThanOrEqualToAnchor:constant:
   */
-  @objc func constraint(greaterThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
+  @objc func constraintGreaterThanOrEqualToAnchorWithConstant(_ greaterThanOrEqualTo: JSValue, _ constant: CGFloat) -> NSLayoutConstraint
 
   /**
     - Selector: constraintLessThanOrEqualToAnchor:
   */
-  @objc func constraint(lessThanOrEqualTo: JSValue) -> NSLayoutConstraint
+  @objc func constraintLessThanOrEqualToAnchor(_ lessThanOrEqualTo: JSValue) -> NSLayoutConstraint
 
   /**
     - Selector: constraintLessThanOrEqualToAnchor:constant:
   */
-  @objc func constraint(lessThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint
+  @objc func constraintLessThanOrEqualToAnchorWithConstant(_ lessThanOrEqualTo: JSValue, _ constant: CGFloat) -> NSLayoutConstraint
 
   // Own Instance Properties
 
@@ -76,27 +78,51 @@ import AppKit
 }
 
 extension NSLayoutAnchor: NSLayoutAnchorExports {
-  @objc public func constraint(equalTo: JSValue) -> NSLayoutConstraint {
+
+  /**
+    - Selector: constraintEqualToAnchor:
+  */
+  @objc public func constraintEqualToAnchor(_ equalTo: JSValue) -> NSLayoutConstraint {
     return self.constraint(equalTo: equalTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>)
   }
 
-  @objc public func constraint(equalTo: JSValue, constant: CGFloat) -> NSLayoutConstraint {
+
+  /**
+    - Selector: constraintEqualToAnchor:constant:
+  */
+  @objc public func constraintEqualToAnchorWithConstant(_ equalTo: JSValue, _ constant: CGFloat) -> NSLayoutConstraint {
     return self.constraint(equalTo: equalTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>, constant: constant)
   }
 
-  @objc public func constraint(greaterThanOrEqualTo: JSValue) -> NSLayoutConstraint {
+
+  /**
+    - Selector: constraintGreaterThanOrEqualToAnchor:
+  */
+  @objc public func constraintGreaterThanOrEqualToAnchor(_ greaterThanOrEqualTo: JSValue) -> NSLayoutConstraint {
     return self.constraint(greaterThanOrEqualTo: greaterThanOrEqualTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>)
   }
 
-  @objc public func constraint(greaterThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint {
+
+  /**
+    - Selector: constraintGreaterThanOrEqualToAnchor:constant:
+  */
+  @objc public func constraintGreaterThanOrEqualToAnchorWithConstant(_ greaterThanOrEqualTo: JSValue, _ constant: CGFloat) -> NSLayoutConstraint {
     return self.constraint(greaterThanOrEqualTo: greaterThanOrEqualTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>, constant: constant)
   }
 
-  @objc public func constraint(lessThanOrEqualTo: JSValue) -> NSLayoutConstraint {
+
+  /**
+    - Selector: constraintLessThanOrEqualToAnchor:
+  */
+  @objc public func constraintLessThanOrEqualToAnchor(_ lessThanOrEqualTo: JSValue) -> NSLayoutConstraint {
     return self.constraint(lessThanOrEqualTo: lessThanOrEqualTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>)
   }
 
-  @objc public func constraint(lessThanOrEqualTo: JSValue, constant: CGFloat) -> NSLayoutConstraint {
+
+  /**
+    - Selector: constraintLessThanOrEqualToAnchor:constant:
+  */
+  @objc public func constraintLessThanOrEqualToAnchorWithConstant(_ lessThanOrEqualTo: JSValue, _ constant: CGFloat) -> NSLayoutConstraint {
     return self.constraint(lessThanOrEqualTo: lessThanOrEqualTo.toObjectOf(NSLayoutAnchor.self) as! NSLayoutAnchor<AnchorType>, constant: constant)
   }
 

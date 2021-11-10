@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -20,6 +22,11 @@ import AppKit
   */
   @objc (canInitWithPasteboard:) static func canInit(with: NSPasteboard) -> Bool
 
+  /**
+    - Selector: soundNamed:
+  */
+  @objc static func createWithSoundNamed(_ named: NSSound.Name) -> NSSound?
+
   // Own Static Properties
 
   /**
@@ -29,11 +36,6 @@ import AppKit
   @objc @available(OSX 10.5, *) static var soundUnfilteredTypes: [String] { @objc get }
 
   // Instance Methods
-
-  /**
-    - Selector: initWithContentsOfURL:byReference:
-  */
-  @objc static func createWithContentsOfURL(_: URL, byReference: Bool) -> Self?
 
   /**
     - Selector: pause
@@ -114,8 +116,12 @@ import AppKit
 }
 
 extension NSSound: NSSoundExports {
-  @objc public static func createWithContentsOfURL(_ contentsOf: URL, byReference: Bool) -> Self? {
-    return self.init(contentsOf: contentsOf, byReference: byReference)
+
+  /**
+    - Selector: soundNamed:
+  */
+  @objc public static func createWithSoundNamed(_ named: NSSound.Name) -> NSSound? {
+    return self.init(named: named)
   }
 
 }

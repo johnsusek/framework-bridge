@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -21,17 +23,6 @@ import Foundation
     - Selector: abortParsing
   */
   @objc func abortParsing()
-
-  /**
-    - Selector: initWithContentsOfURL:
-  */
-  @objc static func createWithContentsOfURL(_: URL) -> Self?
-
-  /**
-    - Selector: initWithStream:
-    - Introduced: 10.7
-  */
-  @objc @available(OSX 10.7, *) static func createWithStream(_: InputStream) -> Self
 
   /**
     - Selector: parse
@@ -99,12 +90,4 @@ import Foundation
 }
 
 extension XMLParser: XMLParserExports {
-  @objc public static func createWithContentsOfURL(_ contentsOf: URL) -> Self? {
-    return self.init(contentsOf: contentsOf)
-  }
-
-  @objc public static func createWithStream(_ stream: InputStream) -> Self {
-    return self.init(stream: stream)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -18,60 +20,71 @@ import Foundation
   /**
     - Selector: value:withObjCType:
   */
-  @objc static func create(_: UnsafeRawPointer, withObjCType: UnsafePointer<Int8>) -> NSValue
+  @objc static func createWithValueWithObjCType(_ p0: UnsafeRawPointer, _ withObjCType: UnsafePointer<Int8>) -> NSValue
 
   /**
     - Selector: valueWithBytes:objCType:
   */
-  @objc static func create(bytes: UnsafeRawPointer, objCType: UnsafePointer<Int8>) -> NSValue
+  @objc static func createWithValueWithBytesWithObjCType(_ bytes: UnsafeRawPointer, _ objCType: UnsafePointer<Int8>) -> NSValue
 
   /**
     - Selector: valueWithCATransform3D:
   */
-  @objc static func create(caTransform3D: CATransform3D) -> NSValue
+  @objc static func createWithValueWithCATransform3D(_ caTransform3D: CATransform3D) -> NSValue
 
   /**
     - Selector: valueWithCMTime:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func create(time: CMTime) -> NSValue
+  @objc @available(OSX 10.7, *) static func createWithValueWithCMTime(_ time: CMTime) -> NSValue
 
   /**
     - Selector: valueWithCMTimeMapping:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func create(timeMapping: CMTimeMapping) -> NSValue
+  @objc @available(OSX 10.7, *) static func createWithValueWithCMTimeMapping(_ timeMapping: CMTimeMapping) -> NSValue
+
+  /**
+    - Selector: valueWithCMTimeRange:
+    - Introduced: 10.7
+  */
+  @objc @available(OSX 10.7, *) static func createWithValueWithCMTimeRange(_ timeRange: CMTimeRange) -> NSValue
 
   /**
     - Selector: valueWithEdgeInsets:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static func create(edgeInsets: NSEdgeInsets) -> NSValue
+  @objc @available(OSX 10.10, *) static func createWithValueWithEdgeInsets(_ edgeInsets: NSEdgeInsets) -> NSValue
 
   /**
     - Selector: valueWithNonretainedObject:
   */
-  @objc static func create(nonretainedObject: Any?) -> NSValue
+  @objc static func createWithValueWithNonretainedObject(_ nonretainedObject: Any?) -> NSValue
 
   /**
     - Selector: valueWithPoint:
   */
-  @objc static func create(point: CGPoint) -> NSValue
+  @objc static func createWithValueWithPoint(_ point: CGPoint) -> NSValue
 
   /**
     - Selector: valueWithPointer:
   */
-  @objc static func create(pointer: UnsafeRawPointer?) -> NSValue
+  @objc static func createWithValueWithPointer(_ pointer: UnsafeRawPointer?) -> NSValue
 
   /**
     - Selector: valueWithRange:
   */
-  @objc static func create(range: NSRange) -> NSValue
+  @objc static func createWithValueWithRange(_ range: NSRange) -> NSValue
+
+  /**
+    - Selector: valueWithRect:
+  */
+  @objc static func createWithValueWithRect(_ rect: CGRect) -> NSValue
 
   /**
     - Selector: valueWithSize:
   */
-  @objc static func create(size: CGSize) -> NSValue
+  @objc static func createWithValueWithSize(_ size: CGSize) -> NSValue
 
   // Instance Methods
 
@@ -162,47 +175,111 @@ import Foundation
 }
 
 extension NSValue: NSValueExports {
-  @objc public static func create(_ p0: UnsafeRawPointer, withObjCType: UnsafePointer<Int8>) -> NSValue {
+
+  /**
+    - Selector: value:withObjCType:
+  */
+  @objc public static func createWithValueWithObjCType(_ p0: UnsafeRawPointer, _ withObjCType: UnsafePointer<Int8>) -> NSValue {
     return self.init(p0, withObjCType: withObjCType)
   }
 
-  @objc public static func create(bytes: UnsafeRawPointer, objCType: UnsafePointer<Int8>) -> NSValue {
+
+  /**
+    - Selector: valueWithBytes:objCType:
+  */
+  @objc public static func createWithValueWithBytesWithObjCType(_ bytes: UnsafeRawPointer, _ objCType: UnsafePointer<Int8>) -> NSValue {
     return self.init(bytes: bytes, objCType: objCType)
   }
 
-  @objc public static func create(caTransform3D: CATransform3D) -> NSValue {
+
+  /**
+    - Selector: valueWithCATransform3D:
+  */
+  @objc public static func createWithValueWithCATransform3D(_ caTransform3D: CATransform3D) -> NSValue {
     return self.init(caTransform3D: caTransform3D)
   }
 
-  @objc public static func create(time: CMTime) -> NSValue {
+
+  /**
+    - Selector: valueWithCMTime:
+    - Introduced: 10.7
+  */
+  @objc public static func createWithValueWithCMTime(_ time: CMTime) -> NSValue {
     return self.init(time: time)
   }
 
-  @objc public static func create(timeMapping: CMTimeMapping) -> NSValue {
+
+  /**
+    - Selector: valueWithCMTimeMapping:
+    - Introduced: 10.7
+  */
+  @objc public static func createWithValueWithCMTimeMapping(_ timeMapping: CMTimeMapping) -> NSValue {
     return self.init(timeMapping: timeMapping)
   }
 
-  @objc public static func create(edgeInsets: NSEdgeInsets) -> NSValue {
+
+  /**
+    - Selector: valueWithCMTimeRange:
+    - Introduced: 10.7
+  */
+  @objc public static func createWithValueWithCMTimeRange(_ timeRange: CMTimeRange) -> NSValue {
+    return self.init(timeRange: timeRange)
+  }
+
+
+  /**
+    - Selector: valueWithEdgeInsets:
+    - Introduced: 10.10
+  */
+  @objc public static func createWithValueWithEdgeInsets(_ edgeInsets: NSEdgeInsets) -> NSValue {
     return self.init(edgeInsets: edgeInsets)
   }
 
-  @objc public static func create(nonretainedObject: Any?) -> NSValue {
+
+  /**
+    - Selector: valueWithNonretainedObject:
+  */
+  @objc public static func createWithValueWithNonretainedObject(_ nonretainedObject: Any?) -> NSValue {
     return self.init(nonretainedObject: nonretainedObject)
   }
 
-  @objc public static func create(point: CGPoint) -> NSValue {
+
+  /**
+    - Selector: valueWithPoint:
+  */
+  @objc public static func createWithValueWithPoint(_ point: CGPoint) -> NSValue {
     return self.init(point: point)
   }
 
-  @objc public static func create(pointer: UnsafeRawPointer?) -> NSValue {
+
+  /**
+    - Selector: valueWithPointer:
+  */
+  @objc public static func createWithValueWithPointer(_ pointer: UnsafeRawPointer?) -> NSValue {
     return self.init(pointer: pointer)
   }
 
-  @objc public static func create(range: NSRange) -> NSValue {
+
+  /**
+    - Selector: valueWithRange:
+  */
+  @objc public static func createWithValueWithRange(_ range: NSRange) -> NSValue {
     return self.init(range: range)
   }
 
-  @objc public static func create(size: CGSize) -> NSValue {
+
+  /**
+    - Selector: valueWithRect:
+  */
+  @objc public static func createWithValueWithRect(_ rect: CGRect) -> NSValue {
+    return self.init(rect: rect)
+  }
+
+
+  /**
+    - Selector: valueWithSize:
+  */
+  @objc public static func createWithValueWithSize(_ size: CGSize) -> NSValue {
     return self.init(size: size)
   }
 

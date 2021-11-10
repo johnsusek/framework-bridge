@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -21,7 +23,7 @@ import AppKit
   /**
     - Selector: showSamplerWithSelectionHandler:
   */
-  // jsvalue @objc func show(selectionHandler: JSValue)
+  // jsvalue @objc func showSamplerWithSelectionHandler(_ selectionHandler: JSValue)
 }
 
 extension NSColorSampler: NSColorSamplerExports {

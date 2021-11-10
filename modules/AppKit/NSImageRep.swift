@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -28,17 +30,17 @@ import AppKit
   /**
     - Selector: imageRepWithContentsOfFile:
   */
-  @objc static func create(contentsOfFile: String) -> NSImageRep?
+  @objc static func createWithImageRepWithContentsOfFile(_ contentsOfFile: String) -> NSImageRep?
 
   /**
     - Selector: imageRepWithContentsOfURL:
   */
-  @objc static func create(contentsOf: URL) -> NSImageRep?
+  @objc static func createWithImageRepWithContentsOfURL(_ contentsOf: URL) -> NSImageRep?
 
   /**
     - Selector: imageRepWithPasteboard:
   */
-  @objc static func create(pasteboard: NSPasteboard) -> NSImageRep?
+  @objc static func createWithImageRepWithPasteboard(_ pasteboard: NSPasteboard) -> NSImageRep?
 
   /**
     - Selector: imageRepsWithContentsOfFile:
@@ -158,15 +160,27 @@ import AppKit
 }
 
 extension NSImageRep: NSImageRepExports {
-  @objc public static func create(contentsOfFile: String) -> NSImageRep? {
+
+  /**
+    - Selector: imageRepWithContentsOfFile:
+  */
+  @objc public static func createWithImageRepWithContentsOfFile(_ contentsOfFile: String) -> NSImageRep? {
     return self.init(contentsOfFile: contentsOfFile)
   }
 
-  @objc public static func create(contentsOf: URL) -> NSImageRep? {
+
+  /**
+    - Selector: imageRepWithContentsOfURL:
+  */
+  @objc public static func createWithImageRepWithContentsOfURL(_ contentsOf: URL) -> NSImageRep? {
     return self.init(contentsOf: contentsOf)
   }
 
-  @objc public static func create(pasteboard: NSPasteboard) -> NSImageRep? {
+
+  /**
+    - Selector: imageRepWithPasteboard:
+  */
+  @objc public static func createWithImageRepWithPasteboard(_ pasteboard: NSPasteboard) -> NSImageRep? {
     return self.init(pasteboard: pasteboard)
   }
 

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -21,12 +23,7 @@ import Foundation
   /**
     - Selector: executeWithCompletionHandler:
   */
-  // jsvalue @objc func execute(completionHandler: JSValue?)
-
-  /**
-    - Selector: initWithURL:error:
-  */
-  @objc static func createWithURL(url: URL) -> Self?
+  // jsvalue @objc func executeWithCompletionHandler(_ completionHandler: JSValue?)
 
   // Own Instance Properties
 
@@ -37,8 +34,4 @@ import Foundation
 }
 
 extension NSUserScriptTask: NSUserScriptTaskExports {
-  @objc public static func createWithURL(url: URL) -> Self? {
-    return try? self.init(url: url)
-  }
-
 }

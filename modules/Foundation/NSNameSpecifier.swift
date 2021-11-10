@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -15,13 +17,6 @@ import Foundation
 @objc(NSNameSpecifier) protocol NSNameSpecifierExports: JSExport, NSScriptObjectSpecifierExports {
   // Static Methods
 
-  // Instance Methods
-
-  /**
-    - Selector: initWithContainerClassDescription:containerSpecifier:key:name:
-  */
-  @objc static func createWithContainerClassDescription(_: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, name: String) -> Self
-
   // Own Instance Properties
 
   /**
@@ -31,8 +26,4 @@ import Foundation
 }
 
 extension NSNameSpecifier: NSNameSpecifierExports {
-  @objc public static func createWithContainerClassDescription(_ containerClassDescription: NSScriptClassDescription, containerSpecifier: NSScriptObjectSpecifier?, key: String, name: String) -> Self {
-    return self.init(containerClassDescription: containerClassDescription, containerSpecifier: containerSpecifier, key: key, name: name)
-  }
-
 }

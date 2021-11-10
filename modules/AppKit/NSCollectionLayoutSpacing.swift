@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,12 +21,12 @@ import AppKit
   /**
     - Selector: fixedSpacing:
   */
-  @objc static func fixed(_: CGFloat) -> Self
+  @objc static func createWithFixedSpacing(_ p0: CGFloat) -> Self
 
   /**
     - Selector: flexibleSpacing:
   */
-  @objc static func flexible(_: CGFloat) -> Self
+  @objc static func createWithFlexibleSpacing(_ p0: CGFloat) -> Self
 
   // Own Instance Properties
 
@@ -45,11 +47,19 @@ import AppKit
 }
 
 extension NSCollectionLayoutSpacing: NSCollectionLayoutSpacingExports {
-  @objc public static func fixed(_ p0: CGFloat) -> Self {
+
+  /**
+    - Selector: fixedSpacing:
+  */
+  @objc public static func createWithFixedSpacing(_ p0: CGFloat) -> Self {
     return self.fixed(p0)
   }
 
-  @objc public static func flexible(_ p0: CGFloat) -> Self {
+
+  /**
+    - Selector: flexibleSpacing:
+  */
+  @objc public static func createWithFlexibleSpacing(_ p0: CGFloat) -> Self {
     return self.flexible(p0)
   }
 

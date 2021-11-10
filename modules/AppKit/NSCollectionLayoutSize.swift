@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: sizeWithWidthDimension:heightDimension:
   */
-  @objc static func create(widthDimension: NSCollectionLayoutDimension, heightDimension: NSCollectionLayoutDimension) -> Self
+  @objc static func createWithSizeWithWidthDimensionWithHeightDimension(_ widthDimension: NSCollectionLayoutDimension, _ heightDimension: NSCollectionLayoutDimension) -> Self
 
   // Own Instance Properties
 
@@ -35,7 +37,11 @@ import AppKit
 }
 
 extension NSCollectionLayoutSize: NSCollectionLayoutSizeExports {
-  @objc public static func create(widthDimension: NSCollectionLayoutDimension, heightDimension: NSCollectionLayoutDimension) -> Self {
+
+  /**
+    - Selector: sizeWithWidthDimension:heightDimension:
+  */
+  @objc public static func createWithSizeWithWidthDimensionWithHeightDimension(_ widthDimension: NSCollectionLayoutDimension, _ heightDimension: NSCollectionLayoutDimension) -> Self {
     return self.init(widthDimension: widthDimension, heightDimension: heightDimension)
   }
 

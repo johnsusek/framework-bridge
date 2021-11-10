@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,17 +21,17 @@ import AppKit
   /**
     - Selector: buttonTouchBarItemWithIdentifier:image:target:action:
   */
-  @objc static func create(identifier: NSTouchBarItem.Identifier, image: NSImage) -> Self
+  @objc static func createWithButtonTouchBarItemWithIdentifierWithImage(_ identifier: NSTouchBarItem.Identifier, _ image: NSImage) -> Self
 
   /**
     - Selector: buttonTouchBarItemWithIdentifier:title:image:target:action:
   */
-  @objc static func create(identifier: NSTouchBarItem.Identifier, title: String, image: NSImage) -> Self
+  @objc static func createWithButtonTouchBarItemWithIdentifierWithTitleWithImage(_ identifier: NSTouchBarItem.Identifier, _ title: String, _ image: NSImage) -> Self
 
   /**
     - Selector: buttonTouchBarItemWithIdentifier:title:target:action:
   */
-  @objc static func create(identifier: NSTouchBarItem.Identifier, title: String) -> Self
+  @objc static func createWithButtonTouchBarItemWithIdentifierWithTitle(_ identifier: NSTouchBarItem.Identifier, _ title: String) -> Self
 
   // Own Instance Properties
 
@@ -70,15 +72,27 @@ import AppKit
 }
 
 extension NSButtonTouchBarItem: NSButtonTouchBarItemExports {
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, image: NSImage) -> Self {
+
+  /**
+    - Selector: buttonTouchBarItemWithIdentifier:image:target:action:
+  */
+  @objc public static func createWithButtonTouchBarItemWithIdentifierWithImage(_ identifier: NSTouchBarItem.Identifier, _ image: NSImage) -> Self {
     return self.init(identifier: identifier, image: image, target: nil, action: nil)
   }
 
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, title: String, image: NSImage) -> Self {
+
+  /**
+    - Selector: buttonTouchBarItemWithIdentifier:title:image:target:action:
+  */
+  @objc public static func createWithButtonTouchBarItemWithIdentifierWithTitleWithImage(_ identifier: NSTouchBarItem.Identifier, _ title: String, _ image: NSImage) -> Self {
     return self.init(identifier: identifier, title: title, image: image, target: nil, action: nil)
   }
 
-  @objc public static func create(identifier: NSTouchBarItem.Identifier, title: String) -> Self {
+
+  /**
+    - Selector: buttonTouchBarItemWithIdentifier:title:target:action:
+  */
+  @objc public static func createWithButtonTouchBarItemWithIdentifierWithTitle(_ identifier: NSTouchBarItem.Identifier, _ title: String) -> Self {
     return self.init(identifier: identifier, title: title, target: nil, action: nil)
   }
 

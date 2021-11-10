@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -31,7 +33,7 @@ import Foundation
     - Selector: getNonlocalVersionsOfItemAtURL:completionHandler:
     - Introduced: 10.10
   */
-// jsvalue   @objc @available(OSX 10.10, *) static func getNonlocalVersionsOfItem(at: URL, completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.10, *) static func getNonlocalVersionsOfItemAtURLWithCompletionHandler(_ at: URL, _ completionHandler: JSValue)
 
   /**
     - Selector: otherVersionsOfItemAtURL:

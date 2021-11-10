@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -23,23 +25,23 @@ import AppKit
   /**
     - Selector: graphicsContextWithAttributes:
   */
-  @objc static func create(attributes: [NSGraphicsContext.AttributeKey: Any]) -> NSGraphicsContext?
+  @objc static func createWithGraphicsContextWithAttributes(_ attributes: [NSGraphicsContext.AttributeKey: Any]) -> NSGraphicsContext?
 
   /**
     - Selector: graphicsContextWithBitmapImageRep:
   */
-  @objc static func create(bitmapImageRep: NSBitmapImageRep) -> NSGraphicsContext?
+  @objc static func createWithGraphicsContextWithBitmapImageRep(_ bitmapImageRep: NSBitmapImageRep) -> NSGraphicsContext?
 
   /**
     - Selector: graphicsContextWithCGContext:flipped:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static func create(cgContext: CGContext, flipped: Bool) -> NSGraphicsContext
+  @objc @available(OSX 10.10, *) static func createWithGraphicsContextWithCGContextWithFlipped(_ cgContext: CGContext, _ flipped: Bool) -> NSGraphicsContext
 
   /**
     - Selector: graphicsContextWithWindow:
   */
-  @objc static func create(window: NSWindow) -> NSGraphicsContext
+  @objc static func createWithGraphicsContextWithWindow(_ window: NSWindow) -> NSGraphicsContext
 
   /**
     - Selector: restoreGraphicsState
@@ -131,19 +133,36 @@ import AppKit
 }
 
 extension NSGraphicsContext: NSGraphicsContextExports {
-  @objc public static func create(attributes: [NSGraphicsContext.AttributeKey: Any]) -> NSGraphicsContext? {
+
+  /**
+    - Selector: graphicsContextWithAttributes:
+  */
+  @objc public static func createWithGraphicsContextWithAttributes(_ attributes: [NSGraphicsContext.AttributeKey: Any]) -> NSGraphicsContext? {
     return self.init(attributes: attributes)
   }
 
-  @objc public static func create(bitmapImageRep: NSBitmapImageRep) -> NSGraphicsContext? {
+
+  /**
+    - Selector: graphicsContextWithBitmapImageRep:
+  */
+  @objc public static func createWithGraphicsContextWithBitmapImageRep(_ bitmapImageRep: NSBitmapImageRep) -> NSGraphicsContext? {
     return self.init(bitmapImageRep: bitmapImageRep)
   }
 
-  @objc public static func create(cgContext: CGContext, flipped: Bool) -> NSGraphicsContext {
+
+  /**
+    - Selector: graphicsContextWithCGContext:flipped:
+    - Introduced: 10.10
+  */
+  @objc public static func createWithGraphicsContextWithCGContextWithFlipped(_ cgContext: CGContext, _ flipped: Bool) -> NSGraphicsContext {
     return self.init(cgContext: cgContext, flipped: flipped)
   }
 
-  @objc public static func create(window: NSWindow) -> NSGraphicsContext {
+
+  /**
+    - Selector: graphicsContextWithWindow:
+  */
+  @objc public static func createWithGraphicsContextWithWindow(_ window: NSWindow) -> NSGraphicsContext {
     return self.init(window: window)
   }
 

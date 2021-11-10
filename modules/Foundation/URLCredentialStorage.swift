@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -38,13 +40,13 @@ import Foundation
     - Selector: getCredentialsForProtectionSpace:task:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func getCredentials(`for`: URLProtectionSpace, task: URLSessionTask, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getCredentialsForProtectionSpaceWithTaskWithCompletionHandler(_ for: URLProtectionSpace, _ task: URLSessionTask, _ completionHandler: JSValue)
 
   /**
     - Selector: getDefaultCredentialForProtectionSpace:task:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func getDefaultCredential(`for`: URLProtectionSpace, task: URLSessionTask, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getDefaultCredentialForProtectionSpaceWithTaskWithCompletionHandler(_ for: URLProtectionSpace, _ task: URLSessionTask, _ completionHandler: JSValue)
 
   /**
     - Selector: removeCredential:forProtectionSpace:

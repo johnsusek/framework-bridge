@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -50,11 +52,6 @@ import AppKit
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func continueSpeaking()
-
-  /**
-    - Selector: initWithVoice:
-  */
-  @objc static func createWithVoice(_: NSSpeechSynthesizer.VoiceName?) -> Self?
 
   /**
     - Selector: objectForProperty:error:
@@ -142,8 +139,4 @@ import AppKit
 }
 
 extension NSSpeechSynthesizer: NSSpeechSynthesizerExports {
-  @objc public static func createWithVoice(_ voice: NSSpeechSynthesizer.VoiceName?) -> Self? {
-    return self.init(voice: voice)
-  }
-
 }

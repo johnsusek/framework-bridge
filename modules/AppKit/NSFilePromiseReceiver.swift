@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -28,7 +30,7 @@ import AppKit
   /**
     - Selector: receivePromisedFilesAtDestination:options:operationQueue:reader:
   */
-  // jsvalue @objc func receivePromisedFiles(atDestination: URL, options: [AnyHashable: Any], operationQueue: OperationQueue, reader: JSValue)
+  // jsvalue @objc func receivePromisedFilesAtDestinationWithOptionsWithOperationQueueWithReader(_ atDestination: URL, _ options: [AnyHashable: Any], _ operationQueue: OperationQueue, _ reader: JSValue)
 
   // Own Instance Properties
 

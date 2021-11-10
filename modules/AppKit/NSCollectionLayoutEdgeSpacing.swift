@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: spacingForLeading:top:trailing:bottom:
   */
-  @objc static func create(leading: NSCollectionLayoutSpacing?, top: NSCollectionLayoutSpacing?, trailing: NSCollectionLayoutSpacing?, bottom: NSCollectionLayoutSpacing?) -> Self
+  @objc static func createWithSpacingForLeadingWithTopWithTrailingWithBottom(_ leading: NSCollectionLayoutSpacing?, _ top: NSCollectionLayoutSpacing?, _ trailing: NSCollectionLayoutSpacing?, _ bottom: NSCollectionLayoutSpacing?) -> Self
 
   // Own Instance Properties
 
@@ -45,7 +47,11 @@ import AppKit
 }
 
 extension NSCollectionLayoutEdgeSpacing: NSCollectionLayoutEdgeSpacingExports {
-  @objc public static func create(leading: NSCollectionLayoutSpacing?, top: NSCollectionLayoutSpacing?, trailing: NSCollectionLayoutSpacing?, bottom: NSCollectionLayoutSpacing?) -> Self {
+
+  /**
+    - Selector: spacingForLeading:top:trailing:bottom:
+  */
+  @objc public static func createWithSpacingForLeadingWithTopWithTrailingWithBottom(_ leading: NSCollectionLayoutSpacing?, _ top: NSCollectionLayoutSpacing?, _ trailing: NSCollectionLayoutSpacing?, _ bottom: NSCollectionLayoutSpacing?) -> Self {
     return self.init(leading: leading, top: top, trailing: trailing, bottom: bottom)
   }
 

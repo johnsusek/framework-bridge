@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -18,18 +20,18 @@ import AppKit
   /**
     - Selector: bezierPathWithOvalInRect:
   */
-  @objc static func create(ovalIn: CGRect) -> NSBezierPath
+  @objc static func createWithBezierPathWithOvalInRect(_ ovalIn: CGRect) -> NSBezierPath
 
   /**
     - Selector: bezierPathWithRect:
   */
-  @objc static func create(rect: CGRect) -> NSBezierPath
+  @objc static func createWithBezierPathWithRect(_ rect: CGRect) -> NSBezierPath
 
   /**
     - Selector: bezierPathWithRoundedRect:xRadius:yRadius:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) static func create(roundedRect: CGRect, xRadius: CGFloat, yRadius: CGFloat) -> NSBezierPath
+  @objc @available(OSX 10.5, *) static func createWithBezierPathWithRoundedRectWithXRadiusWithYRadius(_ roundedRect: CGRect, _ xRadius: CGFloat, _ yRadius: CGFloat) -> NSBezierPath
 
   /**
     - Selector: clipRect:
@@ -307,15 +309,28 @@ import AppKit
 }
 
 extension NSBezierPath: NSBezierPathExports {
-  @objc public static func create(ovalIn: CGRect) -> NSBezierPath {
+
+  /**
+    - Selector: bezierPathWithOvalInRect:
+  */
+  @objc public static func createWithBezierPathWithOvalInRect(_ ovalIn: CGRect) -> NSBezierPath {
     return self.init(ovalIn: ovalIn)
   }
 
-  @objc public static func create(rect: CGRect) -> NSBezierPath {
+
+  /**
+    - Selector: bezierPathWithRect:
+  */
+  @objc public static func createWithBezierPathWithRect(_ rect: CGRect) -> NSBezierPath {
     return self.init(rect: rect)
   }
 
-  @objc public static func create(roundedRect: CGRect, xRadius: CGFloat, yRadius: CGFloat) -> NSBezierPath {
+
+  /**
+    - Selector: bezierPathWithRoundedRect:xRadius:yRadius:
+    - Introduced: 10.5
+  */
+  @objc public static func createWithBezierPathWithRoundedRectWithXRadiusWithYRadius(_ roundedRect: CGRect, _ xRadius: CGFloat, _ yRadius: CGFloat) -> NSBezierPath {
     return self.init(roundedRect: roundedRect, xRadius: xRadius, yRadius: yRadius)
   }
 

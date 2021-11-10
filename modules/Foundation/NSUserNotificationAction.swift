@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -21,7 +23,7 @@ import Foundation
   /**
     - Selector: actionWithIdentifier:title:
   */
-  @objc static func create(identifier: String?, title: String?) -> Self
+  @objc static func createWithActionWithIdentifierWithTitle(_ identifier: String?, _ title: String?) -> Self
 
   // Own Instance Properties
 
@@ -37,7 +39,11 @@ import Foundation
 }
 
 extension NSUserNotificationAction: NSUserNotificationActionExports {
-  @objc public static func create(identifier: String?, title: String?) -> Self {
+
+  /**
+    - Selector: actionWithIdentifier:title:
+  */
+  @objc public static func createWithActionWithIdentifierWithTitle(_ identifier: String?, _ title: String?) -> Self {
     return self.init(identifier: identifier, title: title)
   }
 

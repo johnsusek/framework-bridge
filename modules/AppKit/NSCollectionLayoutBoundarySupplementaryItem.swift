@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,12 +21,12 @@ import AppKit
   /**
     - Selector: boundarySupplementaryItemWithLayoutSize:elementKind:alignment:
   */
-  @objc static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, alignment: NSRectAlignment) -> Self
+  @objc static func createWithBoundarySupplementaryItemWithLayoutSizeWithElementKindWithAlignment(_ layoutSize: NSCollectionLayoutSize, _ elementKind: String, _ alignment: NSRectAlignment) -> Self
 
   /**
     - Selector: boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset:
   */
-  @objc static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, alignment: NSRectAlignment, absoluteOffset: CGPoint) -> Self
+  @objc static func createWithBoundarySupplementaryItemWithLayoutSizeWithElementKindWithAlignmentWithAbsoluteOffset(_ layoutSize: NSCollectionLayoutSize, _ elementKind: String, _ alignment: NSRectAlignment, _ absoluteOffset: CGPoint) -> Self
 
   // Own Instance Properties
 
@@ -50,11 +52,19 @@ import AppKit
 }
 
 extension NSCollectionLayoutBoundarySupplementaryItem: NSCollectionLayoutBoundarySupplementaryItemExports {
-  @objc public static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, alignment: NSRectAlignment) -> Self {
+
+  /**
+    - Selector: boundarySupplementaryItemWithLayoutSize:elementKind:alignment:
+  */
+  @objc public static func createWithBoundarySupplementaryItemWithLayoutSizeWithElementKindWithAlignment(_ layoutSize: NSCollectionLayoutSize, _ elementKind: String, _ alignment: NSRectAlignment) -> Self {
     return self.init(layoutSize: layoutSize, elementKind: elementKind, alignment: alignment)
   }
 
-  @objc public static func create(layoutSize: NSCollectionLayoutSize, elementKind: String, alignment: NSRectAlignment, absoluteOffset: CGPoint) -> Self {
+
+  /**
+    - Selector: boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset:
+  */
+  @objc public static func createWithBoundarySupplementaryItemWithLayoutSizeWithElementKindWithAlignmentWithAbsoluteOffset(_ layoutSize: NSCollectionLayoutSize, _ elementKind: String, _ alignment: NSRectAlignment, _ absoluteOffset: CGPoint) -> Self {
     return self.init(layoutSize: layoutSize, elementKind: elementKind, alignment: alignment, absoluteOffset: absoluteOffset)
   }
 

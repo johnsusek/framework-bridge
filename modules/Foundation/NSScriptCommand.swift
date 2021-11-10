@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -26,11 +28,6 @@ import Foundation
     - Selector: executeCommand
   */
   @objc (executeCommand) func execute() -> Any?
-
-  /**
-    - Selector: initWithCommandDescription:
-  */
-  @objc static func createWithCommandDescription(_: NSScriptCommandDescription) -> Self
 
   /**
     - Selector: performDefaultImplementation
@@ -113,8 +110,4 @@ import Foundation
 }
 
 extension NSScriptCommand: NSScriptCommandExports {
-  @objc public static func createWithCommandDescription(_ commandDescription: NSScriptCommandDescription) -> Self {
-    return self.init(commandDescription: commandDescription)
-  }
-
 }

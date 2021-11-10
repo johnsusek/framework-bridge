@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: draggingImageComponentWithKey:
   */
-  @objc static func create(key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent
+  @objc static func createWithDraggingImageComponentWithKey(_ key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent
 
   // Own Instance Properties
 
@@ -40,7 +42,11 @@ import AppKit
 }
 
 extension NSDraggingImageComponent: NSDraggingImageComponentExports {
-  @objc public static func create(key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent {
+
+  /**
+    - Selector: draggingImageComponentWithKey:
+  */
+  @objc public static func createWithDraggingImageComponentWithKey(_ key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent {
     return self.init(key: key)
   }
 

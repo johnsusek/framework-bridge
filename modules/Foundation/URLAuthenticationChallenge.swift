@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -14,18 +16,6 @@ import Foundation
 
 @objc(URLAuthenticationChallenge) protocol URLAuthenticationChallengeExports: JSExport, NSObjectExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithAuthenticationChallenge:sender:
-  */
-  @objc static func createWithAuthenticationChallenge(_: URLAuthenticationChallenge, sender: URLAuthenticationChallengeSender) -> Self
-
-  /**
-    - Selector: initWithProtectionSpace:proposedCredential:previousFailureCount:failureResponse:error:sender:
-  */
-  @objc static func createWithProtectionSpace(_: URLProtectionSpace, proposedCredential: URLCredential?, previousFailureCount: Int, failureResponse: URLResponse?, error: Error?, sender: URLAuthenticationChallengeSender) -> Self
 
   // Own Instance Properties
 
@@ -61,12 +51,4 @@ import Foundation
 }
 
 extension URLAuthenticationChallenge: URLAuthenticationChallengeExports {
-  @objc public static func createWithAuthenticationChallenge(_ authenticationChallenge: URLAuthenticationChallenge, sender: URLAuthenticationChallengeSender) -> Self {
-    return self.init(authenticationChallenge: authenticationChallenge, sender: sender)
-  }
-
-  @objc public static func createWithProtectionSpace(_ protectionSpace: URLProtectionSpace, proposedCredential: URLCredential?, previousFailureCount: Int, failureResponse: URLResponse?, error: Error?, sender: URLAuthenticationChallengeSender) -> Self {
-    return self.init(protectionSpace: protectionSpace, proposedCredential: proposedCredential, previousFailureCount: previousFailureCount, failureResponse: failureResponse, error: error, sender: sender)
-  }
-
 }

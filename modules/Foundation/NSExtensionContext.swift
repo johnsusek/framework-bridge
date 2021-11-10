@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -26,12 +28,12 @@ import Foundation
   /**
     - Selector: completeRequestReturningItems:completionHandler:
   */
-  // jsvalue @objc func completeRequest(returningItems: [Any]?, completionHandler: JSValue)
+  // jsvalue @objc func completeRequestReturningItemsWithCompletionHandler(_ returningItems: [Any]?, _ completionHandler: JSValue)
 
   /**
     - Selector: openURL:completionHandler:
   */
-  // jsvalue @objc func open(_: URL, completionHandler: JSValue)
+  // jsvalue @objc func openURLWithCompletionHandler(_ p0: URL, _ completionHandler: JSValue)
 
   // Own Instance Properties
 

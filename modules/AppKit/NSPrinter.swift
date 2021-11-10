@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -16,9 +18,14 @@ import AppKit
   // Static Methods
 
   /**
+    - Selector: printerWithName:
+  */
+  @objc static func createWithPrinterWithName(_ name: String) -> NSPrinter?
+
+  /**
     - Selector: printerWithType:
   */
-  @objc static func create(type: NSPrinter.TypeName) -> NSPrinter?
+  @objc static func createWithPrinterWithType(_ type: NSPrinter.TypeName) -> NSPrinter?
 
   // Own Static Properties
 
@@ -63,7 +70,19 @@ import AppKit
 }
 
 extension NSPrinter: NSPrinterExports {
-  @objc public static func create(type: NSPrinter.TypeName) -> NSPrinter? {
+
+  /**
+    - Selector: printerWithName:
+  */
+  @objc public static func createWithPrinterWithName(_ name: String) -> NSPrinter? {
+    return self.init(name: name)
+  }
+
+
+  /**
+    - Selector: printerWithType:
+  */
+  @objc public static func createWithPrinterWithType(_ type: NSPrinter.TypeName) -> NSPrinter? {
     return self.init(type: type)
   }
 

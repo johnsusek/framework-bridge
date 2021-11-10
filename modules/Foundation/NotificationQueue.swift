@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -38,16 +40,7 @@ import Foundation
     - Selector: enqueueNotification:postingStyle:coalesceMask:forModes:
   */
   @objc (enqueueNotification:postingStyle:coalesceMask:forModes:) func enqueue(_: Notification, postingStyle: NotificationQueue.PostingStyle, coalesceMask: NotificationQueue.NotificationCoalescing, forModes: [RunLoop.Mode]?)
-
-  /**
-    - Selector: initWithNotificationCenter:
-  */
-  @objc static func createWithNotificationCenter(_: NotificationCenter) -> Self
 }
 
 extension NotificationQueue: NotificationQueueExports {
-  @objc public static func createWithNotificationCenter(_ notificationCenter: NotificationCenter) -> Self {
-    return self.init(notificationCenter: notificationCenter)
-  }
-
 }

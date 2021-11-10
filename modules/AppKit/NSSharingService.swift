@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -17,6 +19,11 @@ import AppKit
   // Static Methods
 
   /**
+    - Selector: sharingServiceNamed:
+  */
+  @objc static func createWithSharingServiceNamed(_ named: NSSharingService.Name) -> NSSharingService?
+
+  /**
     - Selector: sharingServicesForItems:
   */
   @objc (sharingServicesForItems:) static func sharingServices(forItems: [Any]) -> [NSSharingService]
@@ -27,11 +34,6 @@ import AppKit
     - Selector: canPerformWithItems:
   */
   @objc (canPerformWithItems:) func canPerform(withItems: [Any]?) -> Bool
-
-  /**
-    - Selector: initWithTitle:image:alternateImage:handler:
-  */
-  // jsvalue @objc static func createWithTitle(_: String, image: NSImage, alternateImage: NSImage?, handler: JSValue) -> Self
 
   /**
     - Selector: performWithItems:
@@ -104,10 +106,12 @@ import AppKit
 }
 
 extension NSSharingService: NSSharingServiceExports {
-  @objc public static func createWithTitle(_ title: String, image: NSImage, alternateImage: NSImage?, handler: JSValue) -> Self {
-    return self.init(title: title, image: image, alternateImage: alternateImage, handler: { 
-      handler.call(withArguments: [])!
-    })
+
+  /**
+    - Selector: sharingServiceNamed:
+  */
+  @objc public static func createWithSharingServiceNamed(_ named: NSSharingService.Name) -> NSSharingService? {
+    return self.init(named: named)
   }
 
 }

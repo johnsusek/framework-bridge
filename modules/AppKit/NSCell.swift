@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -145,16 +147,6 @@ import AppKit
     - Selector: imageRectForBounds:
   */
   @objc (imageRectForBounds:) func imageRect(forBounds: CGRect) -> CGRect
-
-  /**
-    - Selector: initImageCell:
-  */
-  @objc static func createImageCell(_: NSImage?) -> Self
-
-  /**
-    - Selector: initTextCell:
-  */
-  @objc static func createTextCell(_: String) -> Self
 
   /**
     - Selector: menuForEvent:inRect:ofView:
@@ -537,12 +529,4 @@ import AppKit
 }
 
 extension NSCell: NSCellExports {
-  @objc public static func createImageCell(_ imageCell: NSImage?) -> Self {
-    return self.init(imageCell: imageCell)
-  }
-
-  @objc public static func createTextCell(_ textCell: String) -> Self {
-    return self.init(textCell: textCell)
-  }
-
 }

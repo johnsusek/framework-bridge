@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -16,18 +18,6 @@ import Foundation
 @objc(Dimension) protocol DimensionExports: JSExport, UnitExports {
   // Static Methods
 
-  /**
-    - Selector: baseUnit
-  */
-  @objc static func baseUnit() -> Self
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithSymbol:converter:
-  */
-  @objc static func createWithSymbol(_: String, converter: UnitConverter) -> Self
-
   // Own Instance Properties
 
   /**
@@ -37,8 +27,4 @@ import Foundation
 }
 
 extension Dimension: DimensionExports {
-  @objc public static func createWithSymbol(_ symbol: String, converter: UnitConverter) -> Self {
-    return self.init(symbol: symbol, converter: converter)
-  }
-
 }

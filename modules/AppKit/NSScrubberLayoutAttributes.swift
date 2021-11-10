@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: layoutAttributesForItemAtIndex:
   */
-  @objc static func create(forItemAt: Int) -> Self
+  @objc static func createWithLayoutAttributesForItemAtIndex(_ forItemAt: Int) -> Self
 
   // Own Instance Properties
 
@@ -40,7 +42,11 @@ import AppKit
 }
 
 extension NSScrubberLayoutAttributes: NSScrubberLayoutAttributesExports {
-  @objc public static func create(forItemAt: Int) -> Self {
+
+  /**
+    - Selector: layoutAttributesForItemAtIndex:
+  */
+  @objc public static func createWithLayoutAttributesForItemAtIndex(_ forItemAt: Int) -> Self {
     return self.init(forItemAt: forItemAt)
   }
 

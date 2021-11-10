@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -15,6 +17,11 @@ import AppKit
 
 @objc(NSSliderAccessory) protocol NSSliderAccessoryExports: JSExport, NSObjectExports {
   // Static Methods
+
+  /**
+    - Selector: accessoryWithImage:
+  */
+  @objc static func createWithAccessoryWithImage(_ image: NSImage) -> NSSliderAccessory
 
   // Own Instance Properties
 
@@ -30,4 +37,12 @@ import AppKit
 }
 
 extension NSSliderAccessory: NSSliderAccessoryExports {
+
+  /**
+    - Selector: accessoryWithImage:
+  */
+  @objc public static func createWithAccessoryWithImage(_ image: NSImage) -> NSSliderAccessory {
+    return self.init(image: image)
+  }
+
 }

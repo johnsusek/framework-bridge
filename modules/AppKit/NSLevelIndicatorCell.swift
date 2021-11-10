@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -16,11 +18,6 @@ import AppKit
   // Static Methods
 
   // Instance Methods
-
-  /**
-    - Selector: initWithLevelIndicatorStyle:
-  */
-  @objc static func createWithLevelIndicatorStyle(_: NSLevelIndicator.Style) -> Self
 
   /**
     - Selector: rectOfTickMarkAtIndex:
@@ -76,8 +73,4 @@ import AppKit
 }
 
 extension NSLevelIndicatorCell: NSLevelIndicatorCellExports {
-  @objc public static func createWithLevelIndicatorStyle(_ levelIndicatorStyle: NSLevelIndicator.Style) -> Self {
-    return self.init(levelIndicatorStyle: levelIndicatorStyle)
-  }
-
 }

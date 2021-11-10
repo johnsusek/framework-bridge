@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -88,11 +90,6 @@ import AppKit
     - Selector: indexOfItemWithTitle:
   */
   @objc (indexOfItemWithTitle:) func indexOfItem(withTitle: String) -> Int
-
-  /**
-    - Selector: initWithTitle:
-  */
-  @objc static func createWithTitle(_: String) -> Self
 
   /**
     - Selector: insertItem:atIndex:
@@ -265,8 +262,4 @@ import AppKit
 }
 
 extension NSMenu: NSMenuExports {
-  @objc public static func createWithTitle(_ title: String) -> Self {
-    return self.init(title: title)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,11 +21,6 @@ import AppKit
   // Instance Methods
 
   /**
-    - Selector: initWithPressureBehavior:
-  */
-  @objc static func createWithPressureBehavior(_: NSEvent.PressureBehavior) -> Self
-
-  /**
     - Selector: set
   */
   @objc func set()
@@ -37,8 +34,4 @@ import AppKit
 }
 
 extension NSPressureConfiguration: NSPressureConfigurationExports {
-  @objc public static func createWithPressureBehavior(_ pressureBehavior: NSEvent.PressureBehavior) -> Self {
-    return self.init(pressureBehavior: pressureBehavior)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,12 +21,12 @@ import AppKit
   /**
     - Selector: customItemWithFrame:
   */
-  @objc static func create(frame: CGRect) -> Self
+  @objc static func createWithCustomItemWithFrame(_ frame: CGRect) -> Self
 
   /**
     - Selector: customItemWithFrame:zIndex:
   */
-  @objc static func create(frame: CGRect, zIndex: Int) -> Self
+  @objc static func createWithCustomItemWithFrameWithZIndex(_ frame: CGRect, _ zIndex: Int) -> Self
 
   // Own Instance Properties
 
@@ -40,11 +42,19 @@ import AppKit
 }
 
 extension NSCollectionLayoutGroupCustomItem: NSCollectionLayoutGroupCustomItemExports {
-  @objc public static func create(frame: CGRect) -> Self {
+
+  /**
+    - Selector: customItemWithFrame:
+  */
+  @objc public static func createWithCustomItemWithFrame(_ frame: CGRect) -> Self {
     return self.init(frame: frame)
   }
 
-  @objc public static func create(frame: CGRect, zIndex: Int) -> Self {
+
+  /**
+    - Selector: customItemWithFrame:zIndex:
+  */
+  @objc public static func createWithCustomItemWithFrameWithZIndex(_ frame: CGRect, _ zIndex: Int) -> Self {
     return self.init(frame: frame, zIndex: zIndex)
   }
 

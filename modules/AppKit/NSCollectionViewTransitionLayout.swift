@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -17,11 +19,6 @@ import AppKit
   // Static Methods
 
   // Instance Methods
-
-  /**
-    - Selector: initWithCurrentLayout:nextLayout:
-  */
-  @objc static func createWithCurrentLayout(_: NSCollectionViewLayout, nextLayout: NSCollectionViewLayout) -> Self
 
   /**
     - Selector: updateValue:forAnimatedKey:
@@ -52,8 +49,4 @@ import AppKit
 }
 
 extension NSCollectionViewTransitionLayout: NSCollectionViewTransitionLayoutExports {
-  @objc public static func createWithCurrentLayout(_ currentLayout: NSCollectionViewLayout, nextLayout: NSCollectionViewLayout) -> Self {
-    return self.init(currentLayout: currentLayout, nextLayout: nextLayout)
-  }
-
 }

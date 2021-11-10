@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: backgroundDecorationItemWithElementKind:
   */
-  @objc static func background(elementKind: String) -> Self
+  @objc static func createWithBackgroundDecorationItemWithElementKind(_ elementKind: String) -> Self
 
   // Own Instance Properties
 
@@ -35,7 +37,11 @@ import AppKit
 }
 
 extension NSCollectionLayoutDecorationItem: NSCollectionLayoutDecorationItemExports {
-  @objc public static func background(elementKind: String) -> Self {
+
+  /**
+    - Selector: backgroundDecorationItemWithElementKind:
+  */
+  @objc public static func createWithBackgroundDecorationItemWithElementKind(_ elementKind: String) -> Self {
     return self.background(elementKind: elementKind)
   }
 

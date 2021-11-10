@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -14,39 +16,6 @@ import Foundation
 
 @objc(FileHandle) protocol FileHandleExports: JSExport, NSObjectExports {
   // Static Methods
-
-  /**
-    - Selector: fileHandleForReadingAtPath:
-  */
-  @objc static func create(forReadingAtPath: String) -> Self?
-
-  /**
-    - Selector: fileHandleForReadingFromURL:error:
-    - Introduced: 10.6
-  */
-  @objc @available(OSX 10.6, *) static func fileHandleForReadingFromURL(error: URL) -> Self?
-
-  /**
-    - Selector: fileHandleForUpdatingAtPath:
-  */
-  @objc static func create(forUpdatingAtPath: String) -> Self?
-
-  /**
-    - Selector: fileHandleForUpdatingURL:error:
-    - Introduced: 10.6
-  */
-  @objc @available(OSX 10.6, *) static func fileHandleForUpdatingURL(error: URL) -> Self?
-
-  /**
-    - Selector: fileHandleForWritingAtPath:
-  */
-  @objc static func create(forWritingAtPath: String) -> Self?
-
-  /**
-    - Selector: fileHandleForWritingToURL:error:
-    - Introduced: 10.6
-  */
-  @objc @available(OSX 10.6, *) static func fileHandleForWritingToURL(error: URL) -> Self?
 
   // Own Static Properties
 
@@ -101,16 +70,6 @@ import Foundation
     - Introduced: 10.15
   */
   // throws - @objc @available(OSX 10.15, *) func getOffset(error: UnsafeMutablePointer<unsigned long long>) -> Bool
-
-  /**
-    - Selector: initWithFileDescriptor:
-  */
-  @objc static func createWithFileDescriptor(_: Int32) -> Self
-
-  /**
-    - Selector: initWithFileDescriptor:closeOnDealloc:
-  */
-  @objc static func createWithFileDescriptor(_: Int32, closeOnDealloc: Bool) -> Self
 
   /**
     - Selector: readDataOfLength:
@@ -274,36 +233,4 @@ import Foundation
 }
 
 extension FileHandle: FileHandleExports {
-  @objc public static func create(forReadingAtPath: String) -> Self? {
-    return self.init(forReadingAtPath: forReadingAtPath)
-  }
-
-  @objc public static func fileHandleForReadingFromURL(error: URL) -> Self? {
-    return try? self.fileHandleForReadingFromURL(error: error)
-  }
-
-  @objc public static func create(forUpdatingAtPath: String) -> Self? {
-    return self.init(forUpdatingAtPath: forUpdatingAtPath)
-  }
-
-  @objc public static func fileHandleForUpdatingURL(error: URL) -> Self? {
-    return try? self.fileHandleForUpdatingURL(error: error)
-  }
-
-  @objc public static func create(forWritingAtPath: String) -> Self? {
-    return self.init(forWritingAtPath: forWritingAtPath)
-  }
-
-  @objc public static func fileHandleForWritingToURL(error: URL) -> Self? {
-    return try? self.fileHandleForWritingToURL(error: error)
-  }
-
-  @objc public static func createWithFileDescriptor(_ fileDescriptor: Int32) -> Self {
-    return self.init(fileDescriptor: fileDescriptor)
-  }
-
-  @objc public static func createWithFileDescriptor(_ fileDescriptor: Int32, closeOnDealloc: Bool) -> Self {
-    return self.init(fileDescriptor: fileDescriptor, closeOnDealloc: closeOnDealloc)
-  }
-
 }

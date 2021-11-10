@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -30,61 +32,72 @@ import Foundation
     - Selector: descriptorWithApplicationURL:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func create(applicationURL: URL) -> NSAppleEventDescriptor
+  @objc @available(OSX 10.11, *) static func createWithDescriptorWithApplicationURL(_ applicationURL: URL) -> NSAppleEventDescriptor
 
   /**
     - Selector: descriptorWithBoolean:
   */
-  @objc static func create(boolean: Bool) -> NSAppleEventDescriptor
+  @objc static func createWithDescriptorWithBoolean(_ boolean: Bool) -> NSAppleEventDescriptor
 
   /**
     - Selector: descriptorWithBundleIdentifier:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func create(bundleIdentifier: String) -> NSAppleEventDescriptor
+  @objc @available(OSX 10.11, *) static func createWithDescriptorWithBundleIdentifier(_ bundleIdentifier: String) -> NSAppleEventDescriptor
 
   /**
     - Selector: descriptorWithDate:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func create(date: Date) -> NSAppleEventDescriptor
+  @objc @available(OSX 10.11, *) static func createWithDescriptorWithDate(_ date: Date) -> NSAppleEventDescriptor
 
   /**
     - Selector: descriptorWithDescriptorType:bytes:length:
   */
-  @objc static func create(descriptorType: DescType, bytes: UnsafeRawPointer?, length: Int) -> NSAppleEventDescriptor?
+  @objc static func createWithDescriptorWithDescriptorTypeWithBytesWithLength(_ descriptorType: DescType, _ bytes: UnsafeRawPointer?, _ length: Int) -> NSAppleEventDescriptor?
 
   /**
     - Selector: descriptorWithDescriptorType:data:
   */
-  @objc static func create(descriptorType: DescType, data: Data?) -> NSAppleEventDescriptor?
+  @objc static func createWithDescriptorWithDescriptorTypeWithData(_ descriptorType: DescType, _ data: Data?) -> NSAppleEventDescriptor?
 
   /**
     - Selector: descriptorWithDouble:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func create(double: Double) -> NSAppleEventDescriptor
+  @objc @available(OSX 10.11, *) static func createWithDescriptorWithDouble(_ double: Double) -> NSAppleEventDescriptor
 
   /**
     - Selector: descriptorWithEnumCode:
   */
-  @objc static func create(enumCode: OSType) -> NSAppleEventDescriptor
+  @objc static func createWithDescriptorWithEnumCode(_ enumCode: OSType) -> NSAppleEventDescriptor
 
   /**
     - Selector: descriptorWithFileURL:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func create(fileURL: URL) -> NSAppleEventDescriptor
+  @objc @available(OSX 10.11, *) static func createWithDescriptorWithFileURL(_ fileURL: URL) -> NSAppleEventDescriptor
 
   /**
     - Selector: descriptorWithInt32:
   */
-  @objc static func create(int32: Int32) -> NSAppleEventDescriptor
+  @objc static func createWithDescriptorWithInt32(_ int32: Int32) -> NSAppleEventDescriptor
+
+  /**
+    - Selector: descriptorWithProcessIdentifier:
+    - Introduced: 10.11
+  */
+  @objc @available(OSX 10.11, *) static func createWithDescriptorWithProcessIdentifier(_ processIdentifier: Int32) -> NSAppleEventDescriptor
+
+  /**
+    - Selector: descriptorWithString:
+  */
+  @objc static func createWithDescriptorWithString(_ string: String) -> NSAppleEventDescriptor
 
   /**
     - Selector: descriptorWithTypeCode:
   */
-  @objc static func create(typeCode: OSType) -> NSAppleEventDescriptor
+  @objc static func createWithDescriptorWithTypeCode(_ typeCode: OSType) -> NSAppleEventDescriptor
 
   /**
     - Selector: listDescriptor
@@ -122,26 +135,6 @@ import Foundation
     - Selector: descriptorForKeyword:
   */
   @objc (descriptorForKeyword:) func forKeyword(_: AEKeyword) -> NSAppleEventDescriptor?
-
-  /**
-    - Selector: initListDescriptor
-  */
-  @objc static func createListDescriptor() -> Self
-
-  /**
-    - Selector: initRecordDescriptor
-  */
-  @objc static func createRecordDescriptor() -> Self
-
-  /**
-    - Selector: initWithAEDescNoCopy:
-  */
-  @objc static func createWithAEDescNoCopy(_: UnsafePointer<AEDesc>) -> Self
-
-  /**
-    - Selector: initWithEventClass:eventID:targetDescriptor:returnID:transactionID:
-  */
-  @objc static func createWithEventClass(_: AEEventClass, eventID: AEEventID, targetDescriptor: NSAppleEventDescriptor?, returnID: Int16, transactionID: Int32) -> Self
 
   /**
     - Selector: insertDescriptor:atIndex:
@@ -287,64 +280,114 @@ import Foundation
 }
 
 extension NSAppleEventDescriptor: NSAppleEventDescriptorExports {
-  @objc public static func create(applicationURL: URL) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithApplicationURL:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithDescriptorWithApplicationURL(_ applicationURL: URL) -> NSAppleEventDescriptor {
     return self.init(applicationURL: applicationURL)
   }
 
-  @objc public static func create(boolean: Bool) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithBoolean:
+  */
+  @objc public static func createWithDescriptorWithBoolean(_ boolean: Bool) -> NSAppleEventDescriptor {
     return self.init(boolean: boolean)
   }
 
-  @objc public static func create(bundleIdentifier: String) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithBundleIdentifier:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithDescriptorWithBundleIdentifier(_ bundleIdentifier: String) -> NSAppleEventDescriptor {
     return self.init(bundleIdentifier: bundleIdentifier)
   }
 
-  @objc public static func create(date: Date) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithDate:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithDescriptorWithDate(_ date: Date) -> NSAppleEventDescriptor {
     return self.init(date: date)
   }
 
-  @objc public static func create(descriptorType: DescType, bytes: UnsafeRawPointer?, length: Int) -> NSAppleEventDescriptor? {
+
+  /**
+    - Selector: descriptorWithDescriptorType:bytes:length:
+  */
+  @objc public static func createWithDescriptorWithDescriptorTypeWithBytesWithLength(_ descriptorType: DescType, _ bytes: UnsafeRawPointer?, _ length: Int) -> NSAppleEventDescriptor? {
     return self.init(descriptorType: descriptorType, bytes: bytes, length: length)
   }
 
-  @objc public static func create(descriptorType: DescType, data: Data?) -> NSAppleEventDescriptor? {
+
+  /**
+    - Selector: descriptorWithDescriptorType:data:
+  */
+  @objc public static func createWithDescriptorWithDescriptorTypeWithData(_ descriptorType: DescType, _ data: Data?) -> NSAppleEventDescriptor? {
     return self.init(descriptorType: descriptorType, data: data)
   }
 
-  @objc public static func create(double: Double) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithDouble:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithDescriptorWithDouble(_ double: Double) -> NSAppleEventDescriptor {
     return self.init(double: double)
   }
 
-  @objc public static func create(enumCode: OSType) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithEnumCode:
+  */
+  @objc public static func createWithDescriptorWithEnumCode(_ enumCode: OSType) -> NSAppleEventDescriptor {
     return self.init(enumCode: enumCode)
   }
 
-  @objc public static func create(fileURL: URL) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithFileURL:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithDescriptorWithFileURL(_ fileURL: URL) -> NSAppleEventDescriptor {
     return self.init(fileURL: fileURL)
   }
 
-  @objc public static func create(int32: Int32) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithInt32:
+  */
+  @objc public static func createWithDescriptorWithInt32(_ int32: Int32) -> NSAppleEventDescriptor {
     return self.init(int32: int32)
   }
 
-  @objc public static func create(typeCode: OSType) -> NSAppleEventDescriptor {
+
+  /**
+    - Selector: descriptorWithProcessIdentifier:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithDescriptorWithProcessIdentifier(_ processIdentifier: Int32) -> NSAppleEventDescriptor {
+    return self.init(processIdentifier: processIdentifier)
+  }
+
+
+  /**
+    - Selector: descriptorWithString:
+  */
+  @objc public static func createWithDescriptorWithString(_ string: String) -> NSAppleEventDescriptor {
+    return self.init(string: string)
+  }
+
+
+  /**
+    - Selector: descriptorWithTypeCode:
+  */
+  @objc public static func createWithDescriptorWithTypeCode(_ typeCode: OSType) -> NSAppleEventDescriptor {
     return self.init(typeCode: typeCode)
-  }
-
-  @objc public static func createListDescriptor() -> Self {
-    return self.init()
-  }
-
-  @objc public static func createRecordDescriptor() -> Self {
-    return self.init()
-  }
-
-  @objc public static func createWithAEDescNoCopy(_ aeDescNoCopy: UnsafePointer<AEDesc>) -> Self {
-    return self.init(aeDescNoCopy: aeDescNoCopy)
-  }
-
-  @objc public static func createWithEventClass(_ eventClass: AEEventClass, eventID: AEEventID, targetDescriptor: NSAppleEventDescriptor?, returnID: Int16, transactionID: Int32) -> Self {
-    return self.init(eventClass: eventClass, eventID: eventID, targetDescriptor: targetDescriptor, returnID: returnID, transactionID: transactionID)
   }
 
 }

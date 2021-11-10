@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -24,7 +26,7 @@ import Foundation
     - Selector: detachNewThreadWithBlock:
     - Introduced: 10.12
   */
-// jsvalue   @objc @available(OSX 10.12, *) static func detachNewThread(_: JSValue)
+// jsvalue   @objc @available(OSX 10.12, *) static func detachNewThreadWithBlock(_ p0: JSValue)
 
   /**
     - Selector: exit
@@ -89,12 +91,6 @@ import Foundation
     - Introduced: 10.5
   */
   @objc @available(OSX 10.5, *) func cancel()
-
-  /**
-    - Selector: initWithTarget:selector:object:
-    - Introduced: 10.5
-  */
-  @objc @available(OSX 10.5, *) static func createWithTarget(_: Any, selector: Selector, object: Any?) -> Self
 
   /**
     - Selector: main
@@ -165,8 +161,4 @@ import Foundation
 }
 
 extension Thread: ThreadExports {
-  @objc public static func createWithTarget(_ target: Any, selector: Selector, object: Any?) -> Self {
-    return self.init(target: target, selector: selector, object: object)
-  }
-
 }

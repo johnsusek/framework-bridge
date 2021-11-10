@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -62,11 +64,6 @@ import Foundation
   @objc (hasWritablePropertyForKey:) @available(OSX 10.5, *) func hasWritableProperty(forKey: String) -> Bool
 
   /**
-    - Selector: initWithSuiteName:className:dictionary:
-  */
-  @objc static func createWithSuiteName(_: String, className: String, dictionary: [AnyHashable: Any]?) -> Self?
-
-  /**
     - Selector: isLocationRequiredToCreateForKey:
   */
   @objc (isLocationRequiredToCreateForKey:) func isLocationRequiredToCreate(forKey: String) -> Bool
@@ -125,8 +122,4 @@ import Foundation
 }
 
 extension NSScriptClassDescription: NSScriptClassDescriptionExports {
-  @objc public static func createWithSuiteName(_ suiteName: String, className: String, dictionary: [AnyHashable: Any]?) -> Self? {
-    return self.init(suiteName: suiteName, className: className, dictionary: dictionary)
-  }
-
 }

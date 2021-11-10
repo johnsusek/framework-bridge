@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -26,7 +28,7 @@ import AppKit
     - Selector: constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func create(item: Any, attribute: NSLayoutConstraint.Attribute, relatedBy: NSLayoutConstraint.Relation, toItem: Any?, attribute: NSLayoutConstraint.Attribute, multiplier: CGFloat, constant: CGFloat) -> Self
+  @objc @available(OSX 10.7, *) static func createWithConstraintWithItemWithAttributeWithRelatedByWithToItemWithAttributeWithMultiplierWithConstant(_ item: Any, _ attribute: NSLayoutConstraint.Attribute, _ relatedBy: NSLayoutConstraint.Relation, _ toItem: Any?, attribute attribute1: NSLayoutConstraint.Attribute, _ multiplier: CGFloat, _ constant: CGFloat) -> Self
 
   /**
     - Selector: constraintsWithVisualFormat:options:metrics:views:
@@ -113,7 +115,12 @@ import AppKit
 }
 
 extension NSLayoutConstraint: NSLayoutConstraintExports {
-  @objc public static func create(item: Any, attribute: NSLayoutConstraint.Attribute, relatedBy: NSLayoutConstraint.Relation, toItem: Any?, attribute attribute1: NSLayoutConstraint.Attribute, multiplier: CGFloat, constant: CGFloat) -> Self {
+
+  /**
+    - Selector: constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:
+    - Introduced: 10.7
+  */
+  @objc public static func createWithConstraintWithItemWithAttributeWithRelatedByWithToItemWithAttributeWithMultiplierWithConstant(_ item: Any, _ attribute: NSLayoutConstraint.Attribute, _ relatedBy: NSLayoutConstraint.Relation, _ toItem: Any?, attribute attribute1: NSLayoutConstraint.Attribute, _ multiplier: CGFloat, _ constant: CGFloat) -> Self {
     return self.init(item: item, attribute: attribute, relatedBy: relatedBy, toItem: toItem, attribute: attribute1, multiplier: multiplier, constant: constant)
   }
 

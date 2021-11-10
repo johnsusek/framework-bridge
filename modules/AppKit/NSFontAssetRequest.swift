@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -21,12 +23,7 @@ import AppKit
   /**
     - Selector: downloadFontAssetsWithCompletionHandler:
   */
-  // jsvalue @objc func download(withCompletionHandler: JSValue)
-
-  /**
-    - Selector: initWithFontDescriptors:options:
-  */
-  @objc static func createWithFontDescriptors(_: [NSFontDescriptor], options: NSFontAssetRequest.Options) -> Self
+  // jsvalue @objc func downloadFontAssetsWithCompletionHandler(_ withCompletionHandler: JSValue)
 
   // Own Instance Properties
 
@@ -37,8 +34,4 @@ import AppKit
 }
 
 extension NSFontAssetRequest: NSFontAssetRequestExports {
-  @objc public static func createWithFontDescriptors(_ fontDescriptors: [NSFontDescriptor], options: NSFontAssetRequest.Options) -> Self {
-    return self.init(fontDescriptors: fontDescriptors, options: options)
-  }
-
 }

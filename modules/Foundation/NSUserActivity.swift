@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -31,12 +33,7 @@ import Foundation
   /**
     - Selector: getContinuationStreamsWithCompletionHandler:
   */
-  // jsvalue @objc func getContinuationStreams(completionHandler: JSValue)
-
-  /**
-    - Selector: initWithActivityType:
-  */
-  @objc static func createWithActivityType(_: String) -> Self
+  // jsvalue @objc func getContinuationStreamsWithCompletionHandler(_ completionHandler: JSValue)
 
   /**
     - Selector: invalidate
@@ -55,6 +52,12 @@ import Foundation
     - Selector: activityType
   */
   @objc var activityType: String { @objc get }
+
+  /**
+    - Selector: contentAttributeSet
+    - Introduced: 10.11
+  */
+  @objc @available(OSX 10.11, *) var contentAttributeSet: CSSearchableItemAttributeSet? { @objc get @objc (setContentAttributeSet:) set }
 
   /**
     - Selector: delegate
@@ -142,8 +145,4 @@ import Foundation
 }
 
 extension NSUserActivity: NSUserActivityExports {
-  @objc public static func createWithActivityType(_ activityType: String) -> Self {
-    return self.init(activityType: activityType)
-  }
-
 }

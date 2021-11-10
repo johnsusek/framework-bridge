@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -32,16 +34,6 @@ import Foundation
   */
   @objc func executeAppleEvent(_: NSAppleEventDescriptor, error: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> NSAppleEventDescriptor
 
-  /**
-    - Selector: initWithContentsOfURL:error:
-  */
-  @objc static func createWithContentsOfURL(_: URL, error: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
-
-  /**
-    - Selector: initWithSource:
-  */
-  @objc static func createWithSource(_: String) -> Self?
-
   // Own Instance Properties
 
   /**
@@ -61,12 +53,4 @@ import Foundation
 }
 
 extension NSAppleScript: NSAppleScriptExports {
-  @objc public static func createWithContentsOfURL(_ contentsOf: URL, error: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return self.init(contentsOf: contentsOf, error: error)
-  }
-
-  @objc public static func createWithSource(_ source: String) -> Self? {
-    return self.init(source: source)
-  }
-
 }

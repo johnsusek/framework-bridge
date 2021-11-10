@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 mkdir -p test/registration/build
 cd test/registration

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -21,7 +23,7 @@ import Foundation
   /**
     - Selector: getFileProviderConnectionWithCompletionHandler:
   */
-  // jsvalue @objc func getFileProviderConnection(completionHandler: JSValue)
+  // jsvalue @objc func getFileProviderConnectionWithCompletionHandler(_ completionHandler: JSValue)
 
   // Own Instance Properties
 

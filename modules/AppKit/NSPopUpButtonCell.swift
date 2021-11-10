@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -61,11 +63,6 @@ import AppKit
     - Selector: indexOfItemWithTitle:
   */
   @objc (indexOfItemWithTitle:) func indexOfItem(withTitle: String) -> Int
-
-  /**
-    - Selector: initTextCell:pullsDown:
-  */
-  @objc static func createTextCell(_: String, pullsDown: Bool) -> Self
 
   /**
     - Selector: insertItemWithTitle:atIndex:
@@ -206,8 +203,4 @@ import AppKit
 }
 
 extension NSPopUpButtonCell: NSPopUpButtonCellExports {
-  @objc public static func createTextCell(_ textCell: String, pullsDown: Bool) -> Self {
-    return self.init(textCell: textCell, pullsDown: pullsDown)
-  }
-
 }

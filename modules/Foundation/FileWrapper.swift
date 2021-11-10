@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -27,33 +29,6 @@ import Foundation
     - Selector: addRegularFileWithContents:preferredFilename:
   */
   @objc (addRegularFileWithContents:preferredFilename:) func addRegularFile(withContents: Data, preferredFilename: String) -> String
-
-  /**
-    - Selector: initDirectoryWithFileWrappers:
-  */
-  @objc static func createDirectoryWithFileWrappers(_: [String: FileWrapper]) -> Self
-
-  /**
-    - Selector: initRegularFileWithContents:
-  */
-  @objc static func createRegularFileWithContents(_: Data) -> Self
-
-  /**
-    - Selector: initSymbolicLinkWithDestinationURL:
-    - Introduced: 10.6
-  */
-  @objc @available(OSX 10.6, *) static func createSymbolicLinkWithDestinationURL(_: URL) -> Self
-
-  /**
-    - Selector: initWithSerializedRepresentation:
-  */
-  @objc static func createWithSerializedRepresentation(_: Data) -> Self?
-
-  /**
-    - Selector: initWithURL:options:error:
-    - Introduced: 10.6
-  */
-  @objc @available(OSX 10.6, *) static func createWithURL(url: URL, options: FileWrapper.ReadingOptions) -> Self?
 
   /**
     - Selector: keyForFileWrapper:
@@ -143,24 +118,4 @@ import Foundation
 }
 
 extension FileWrapper: FileWrapperExports {
-  @objc public static func createDirectoryWithFileWrappers(_ directoryWithFileWrappers: [String: FileWrapper]) -> Self {
-    return self.init(directoryWithFileWrappers: directoryWithFileWrappers)
-  }
-
-  @objc public static func createRegularFileWithContents(_ regularFileWithContents: Data) -> Self {
-    return self.init(regularFileWithContents: regularFileWithContents)
-  }
-
-  @objc public static func createSymbolicLinkWithDestinationURL(_ symbolicLinkWithDestinationURL: URL) -> Self {
-    return self.init(symbolicLinkWithDestinationURL: symbolicLinkWithDestinationURL)
-  }
-
-  @objc public static func createWithSerializedRepresentation(_ serializedRepresentation: Data) -> Self? {
-    return self.init(serializedRepresentation: serializedRepresentation)
-  }
-
-  @objc public static func createWithURL(url: URL, options: FileWrapper.ReadingOptions) -> Self? {
-    return try? self.init(url: url, options: options)
-  }
-
 }

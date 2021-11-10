@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -64,11 +66,6 @@ import AppKit
   @objc func ignoreSpelling(_: Any?)
 
   /**
-    - Selector: initWithClient:
-  */
-  @objc static func createWithClient(_: NSTextCheckingClient) -> Self
-
-  /**
     - Selector: insertedTextInRange:
   */
   @objc (insertedTextInRange:) func insertedText(in: NSRange)
@@ -117,8 +114,4 @@ import AppKit
 }
 
 extension NSTextCheckingController: NSTextCheckingControllerExports {
-  @objc public static func createWithClient(_ client: NSTextCheckingClient) -> Self {
-    return self.init(client: client)
-  }
-
 }

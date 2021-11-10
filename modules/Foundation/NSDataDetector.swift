@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -36,13 +38,6 @@ import Foundation
   */
   // throws - @objc static func regularExpressionWithPattern(options: String, error: NSRegularExpression.Options) -> NSRegularExpression?
 
-  // Instance Methods
-
-  /**
-    - Selector: initWithTypes:error:
-  */
-  @objc static func createWithTypes(types: UInt64) -> Self?
-
   // Own Instance Properties
 
   /**
@@ -52,8 +47,4 @@ import Foundation
 }
 
 extension NSDataDetector: NSDataDetectorExports {
-  @objc public static func createWithTypes(types: UInt64) -> Self? {
-    return try? self.init(types: types)
-  }
-
 }

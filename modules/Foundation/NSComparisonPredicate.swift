@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -19,12 +21,12 @@ import Foundation
   /**
     - Selector: predicateWithLeftExpression:rightExpression:customSelector:
   */
-  @objc static func create(leftExpression: NSExpression, rightExpression: NSExpression, customSelector: Selector) -> NSComparisonPredicate
+  @objc static func createWithPredicateWithLeftExpressionWithRightExpressionWithCustomSelector(_ leftExpression: NSExpression, _ rightExpression: NSExpression, _ customSelector: Selector) -> NSComparisonPredicate
 
   /**
     - Selector: predicateWithLeftExpression:rightExpression:modifier:type:options:
   */
-  @objc static func create(leftExpression: NSExpression, rightExpression: NSExpression, modifier: NSComparisonPredicate.Modifier, type: NSComparisonPredicate.Operator, options: NSComparisonPredicate.Options) -> NSComparisonPredicate
+  @objc static func createWithPredicateWithLeftExpressionWithRightExpressionWithModifierWithTypeWithOptions(_ leftExpression: NSExpression, _ rightExpression: NSExpression, _ modifier: NSComparisonPredicate.Modifier, _ type: NSComparisonPredicate.Operator, _ options: NSComparisonPredicate.Options) -> NSComparisonPredicate
 
   // Own Instance Properties
 
@@ -60,11 +62,19 @@ import Foundation
 }
 
 extension NSComparisonPredicate: NSComparisonPredicateExports {
-  @objc public static func create(leftExpression: NSExpression, rightExpression: NSExpression, customSelector: Selector) -> NSComparisonPredicate {
+
+  /**
+    - Selector: predicateWithLeftExpression:rightExpression:customSelector:
+  */
+  @objc public static func createWithPredicateWithLeftExpressionWithRightExpressionWithCustomSelector(_ leftExpression: NSExpression, _ rightExpression: NSExpression, _ customSelector: Selector) -> NSComparisonPredicate {
     return self.init(leftExpression: leftExpression, rightExpression: rightExpression, customSelector: customSelector)
   }
 
-  @objc public static func create(leftExpression: NSExpression, rightExpression: NSExpression, modifier: NSComparisonPredicate.Modifier, type: NSComparisonPredicate.Operator, options: NSComparisonPredicate.Options) -> NSComparisonPredicate {
+
+  /**
+    - Selector: predicateWithLeftExpression:rightExpression:modifier:type:options:
+  */
+  @objc public static func createWithPredicateWithLeftExpressionWithRightExpressionWithModifierWithTypeWithOptions(_ leftExpression: NSExpression, _ rightExpression: NSExpression, _ modifier: NSComparisonPredicate.Modifier, _ type: NSComparisonPredicate.Operator, _ options: NSComparisonPredicate.Options) -> NSComparisonPredicate {
     return self.init(leftExpression: leftExpression, rightExpression: rightExpression, modifier: modifier, type: type, options: options)
   }
 

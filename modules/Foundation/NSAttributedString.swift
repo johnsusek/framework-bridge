@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -20,7 +22,7 @@ import Foundation
     - Selector: attributedStringWithAttachment:
     - Introduced: 10.0
   */
-  @objc @available(OSX 10.0, *) static func create(attachment: NSTextAttachment) -> NSAttributedString
+  @objc @available(OSX 10.0, *) static func createWithAttributedStringWithAttachment(_ attachment: NSTextAttachment) -> NSAttributedString
 
   // Own Static Properties
 
@@ -138,13 +140,13 @@ import Foundation
     - Selector: enumerateAttribute:inRange:options:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttribute(_: NSAttributedString.Key, in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributeWithInRangeWithOptionsWithUsingBlock(_ p0: NSAttributedString.Key, _ in: NSRange, _ options: NSAttributedString.EnumerationOptions, _ using: JSValue)
 
   /**
     - Selector: enumerateAttributesInRange:options:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributes(in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributesInRangeWithOptionsWithUsingBlock(_ in: NSRange, _ options: NSAttributedString.EnumerationOptions, _ using: JSValue)
 
   /**
     - Selector: fileWrapperFromRange:documentAttributes:error:
@@ -156,47 +158,6 @@ import Foundation
     - Selector: fontAttributesInRange:
   */
   @objc (fontAttributesInRange:) func fontAttributes(in: NSRange) -> [NSAttributedString.Key: Any]
-
-  /**
-    - Selector: initWithDocFormat:documentAttributes:
-  */
-  @objc static func createWithDocFormat(_: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
-
-  /**
-    - Selector: initWithHTML:baseURL:documentAttributes:
-  */
-  @objc static func createWithHTML(_: Data, baseURL: URL, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
-
-  /**
-    - Selector: initWithHTML:documentAttributes:
-  */
-  @objc static func createWithHTML(_: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
-
-  /**
-    - Selector: initWithHTML:options:documentAttributes:
-  */
-  @objc static func createWithHTML(_: Data, options: [NSAttributedString.DocumentReadingOptionKey: Any], documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
-
-  /**
-    - Selector: initWithRTF:documentAttributes:
-  */
-  @objc static func createWithRTF(_: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
-
-  /**
-    - Selector: initWithRTFD:documentAttributes:
-  */
-  @objc static func createWithRTFD(_: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
-
-  /**
-    - Selector: initWithRTFDFileWrapper:documentAttributes:
-  */
-  @objc static func createWithRTFDFileWrapper(_: FileWrapper, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
-
-  /**
-    - Selector: initWithURL:options:documentAttributes:error:
-    - Introduced: 10.4
-  */
-  @objc @available(OSX 10.4, *) static func createWithURL(url: URL, options: [NSAttributedString.DocumentReadingOptionKey: Any], documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self?
 
   /**
     - Selector: isEqualToAttributedString:
@@ -268,40 +229,13 @@ import Foundation
 }
 
 extension NSAttributedString: NSAttributedStringExports {
-  @objc public static func create(attachment: NSTextAttachment) -> NSAttributedString {
+
+  /**
+    - Selector: attributedStringWithAttachment:
+    - Introduced: 10.0
+  */
+  @objc public static func createWithAttributedStringWithAttachment(_ attachment: NSTextAttachment) -> NSAttributedString {
     return self.init(attachment: attachment)
-  }
-
-  @objc public static func createWithDocFormat(_ docFormat: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return self.init(docFormat: docFormat, documentAttributes: documentAttributes)
-  }
-
-  @objc public static func createWithHTML(_ html: Data, baseURL: URL, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return self.init(html: html, baseURL: baseURL, documentAttributes: documentAttributes)
-  }
-
-  @objc public static func createWithHTML(_ html: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return self.init(html: html, documentAttributes: documentAttributes)
-  }
-
-  @objc public static func createWithHTML(_ html: Data, options: [NSAttributedString.DocumentReadingOptionKey: Any], documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return self.init(html: html, options: options, documentAttributes: documentAttributes)
-  }
-
-  @objc public static func createWithRTF(_ rtf: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return self.init(rtf: rtf, documentAttributes: documentAttributes)
-  }
-
-  @objc public static func createWithRTFD(_ rtfd: Data, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return self.init(rtfd: rtfd, documentAttributes: documentAttributes)
-  }
-
-  @objc public static func createWithRTFDFileWrapper(_ rtfdFileWrapper: FileWrapper, documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return self.init(rtfdFileWrapper: rtfdFileWrapper, documentAttributes: documentAttributes)
-  }
-
-  @objc public static func createWithURL(url: URL, options: [NSAttributedString.DocumentReadingOptionKey: Any], documentAttributes: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Self? {
-    return try? self.init(url: url, options: options, documentAttributes: documentAttributes)
   }
 
 }

@@ -89,13 +89,11 @@ function run(framework, file, cb) {
 
   swift.on('close', (code) => {
     let className = file.replace('.swift', '');
-    // console.log(code, framework, file);
     if (code > 0) {
       console.log(`❌  ${className}`, errs);
       failed.push(className);
       cb(errs);
     } else {
-      // console.log('Copy', filePath, 'to', path.join(successPath, framework));
       if (!fs.existsSync(path.join(successPath, framework))) {
         fs.mkdirSync(path.join(successPath, framework))
       }

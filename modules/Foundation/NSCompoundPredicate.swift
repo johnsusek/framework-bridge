@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -19,17 +21,17 @@ import Foundation
   /**
     - Selector: andPredicateWithSubpredicates:
   */
-  @objc static func create(andPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate
+  @objc static func createWithAndPredicateWithSubpredicates(_ andPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate
 
   /**
     - Selector: notPredicateWithSubpredicate:
   */
-  @objc static func create(notPredicateWithSubpredicate: NSPredicate) -> NSCompoundPredicate
+  @objc static func createWithNotPredicateWithSubpredicate(_ notPredicateWithSubpredicate: NSPredicate) -> NSCompoundPredicate
 
   /**
     - Selector: orPredicateWithSubpredicates:
   */
-  @objc static func create(orPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate
+  @objc static func createWithOrPredicateWithSubpredicates(_ orPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate
 
   // Own Instance Properties
 
@@ -45,15 +47,27 @@ import Foundation
 }
 
 extension NSCompoundPredicate: NSCompoundPredicateExports {
-  @objc public static func create(andPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate {
+
+  /**
+    - Selector: andPredicateWithSubpredicates:
+  */
+  @objc public static func createWithAndPredicateWithSubpredicates(_ andPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate {
     return self.init(andPredicateWithSubpredicates: andPredicateWithSubpredicates)
   }
 
-  @objc public static func create(notPredicateWithSubpredicate: NSPredicate) -> NSCompoundPredicate {
+
+  /**
+    - Selector: notPredicateWithSubpredicate:
+  */
+  @objc public static func createWithNotPredicateWithSubpredicate(_ notPredicateWithSubpredicate: NSPredicate) -> NSCompoundPredicate {
     return self.init(notPredicateWithSubpredicate: notPredicateWithSubpredicate)
   }
 
-  @objc public static func create(orPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate {
+
+  /**
+    - Selector: orPredicateWithSubpredicates:
+  */
+  @objc public static func createWithOrPredicateWithSubpredicates(_ orPredicateWithSubpredicates: [NSPredicate]) -> NSCompoundPredicate {
     return self.init(orPredicateWithSubpredicates: orPredicateWithSubpredicates)
   }
 

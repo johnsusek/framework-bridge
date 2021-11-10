@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -15,13 +17,6 @@ import AppKit
 
 @objc(NSDraggingItem) protocol NSDraggingItemExports: JSExport, NSObjectExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithPasteboardWriter:
-  */
-  @objc static func createWithPasteboardWriter(_: NSPasteboardWriting) -> Self
 
   // Own Instance Properties
 
@@ -47,8 +42,4 @@ import AppKit
 }
 
 extension NSDraggingItem: NSDraggingItemExports {
-  @objc public static func createWithPasteboardWriter(_ pasteboardWriter: NSPasteboardWriting) -> Self {
-    return self.init(pasteboardWriter: pasteboardWriter)
-  }
-
 }

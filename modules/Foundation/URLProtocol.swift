@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -64,17 +66,6 @@ import Foundation
   // Instance Methods
 
   /**
-    - Selector: initWithRequest:cachedResponse:client:
-  */
-  @objc static func createWithRequest(_: URLRequest, cachedResponse: CachedURLResponse?, client: URLProtocolClient?) -> Self
-
-  /**
-    - Selector: initWithTask:cachedResponse:client:
-    - Introduced: 10.10
-  */
-  @objc @available(OSX 10.10, *) static func createWithTask(_: URLSessionTask, cachedResponse: CachedURLResponse?, client: URLProtocolClient?) -> Self
-
-  /**
     - Selector: startLoading
   */
   @objc func startLoading()
@@ -109,12 +100,4 @@ import Foundation
 }
 
 extension URLProtocol: URLProtocolExports {
-  @objc public static func createWithRequest(_ request: URLRequest, cachedResponse: CachedURLResponse?, client: URLProtocolClient?) -> Self {
-    return self.init(request: request, cachedResponse: cachedResponse, client: client)
-  }
-
-  @objc public static func createWithTask(_ task: URLSessionTask, cachedResponse: CachedURLResponse?, client: URLProtocolClient?) -> Self {
-    return self.init(task: task, cachedResponse: cachedResponse, client: client)
-  }
-
 }

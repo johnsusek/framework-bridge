@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -15,18 +17,6 @@ import AppKit
 
 @objc(NSDataAsset) protocol NSDataAssetExports: JSExport, NSObjectExports {
   // Static Methods
-
-  // Instance Methods
-
-  /**
-    - Selector: initWithName:
-  */
-  @objc static func createWithName(_: NSDataAsset.Name) -> Self?
-
-  /**
-    - Selector: initWithName:bundle:
-  */
-  @objc static func createWithName(_: NSDataAsset.Name, bundle: Bundle) -> Self?
 
   // Own Instance Properties
 
@@ -47,12 +37,4 @@ import AppKit
 }
 
 extension NSDataAsset: NSDataAssetExports {
-  @objc public static func createWithName(_ name: NSDataAsset.Name) -> Self? {
-    return self.init(name: name)
-  }
-
-  @objc public static func createWithName(_ name: NSDataAsset.Name, bundle: Bundle) -> Self? {
-    return self.init(name: name, bundle: bundle)
-  }
-
 }

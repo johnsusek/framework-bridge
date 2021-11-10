@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -27,11 +29,6 @@ import Foundation
   @objc (serviceListener) static func service() -> NSXPCListener
 
   // Instance Methods
-
-  /**
-    - Selector: initWithMachServiceName:
-  */
-  @objc static func createWithMachServiceName(_: String) -> Self
 
   /**
     - Selector: invalidate
@@ -62,8 +59,4 @@ import Foundation
 }
 
 extension NSXPCListener: NSXPCListenerExports {
-  @objc public static func createWithMachServiceName(_ machServiceName: String) -> Self {
-    return self.init(machServiceName: machServiceName)
-  }
-
 }

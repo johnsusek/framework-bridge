@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,12 +21,12 @@ import AppKit
   /**
     - Selector: itemWithLayoutSize:
   */
-  @objc static func create(layoutSize: NSCollectionLayoutSize) -> Self
+  @objc static func createWithItemWithLayoutSize(_ layoutSize: NSCollectionLayoutSize) -> Self
 
   /**
     - Selector: itemWithLayoutSize:supplementaryItems:
   */
-  @objc static func create(layoutSize: NSCollectionLayoutSize, supplementaryItems: [NSCollectionLayoutSupplementaryItem]) -> Self
+  @objc static func createWithItemWithLayoutSizeWithSupplementaryItems(_ layoutSize: NSCollectionLayoutSize, _ supplementaryItems: [NSCollectionLayoutSupplementaryItem]) -> Self
 
   // Own Instance Properties
 
@@ -50,11 +52,19 @@ import AppKit
 }
 
 extension NSCollectionLayoutItem: NSCollectionLayoutItemExports {
-  @objc public static func create(layoutSize: NSCollectionLayoutSize) -> Self {
+
+  /**
+    - Selector: itemWithLayoutSize:
+  */
+  @objc public static func createWithItemWithLayoutSize(_ layoutSize: NSCollectionLayoutSize) -> Self {
     return self.init(layoutSize: layoutSize)
   }
 
-  @objc public static func create(layoutSize: NSCollectionLayoutSize, supplementaryItems: [NSCollectionLayoutSupplementaryItem]) -> Self {
+
+  /**
+    - Selector: itemWithLayoutSize:supplementaryItems:
+  */
+  @objc public static func createWithItemWithLayoutSizeWithSupplementaryItems(_ layoutSize: NSCollectionLayoutSize, _ supplementaryItems: [NSCollectionLayoutSupplementaryItem]) -> Self {
     return self.init(layoutSize: layoutSize, supplementaryItems: supplementaryItems)
   }
 

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -15,6 +17,11 @@ import Foundation
 
 @objc(NSPointerFunctions) protocol NSPointerFunctionsExports: JSExport, NSObjectExports {
   // Static Methods
+
+  /**
+    - Selector: pointerFunctionsWithOptions:
+  */
+  @objc static func createWithPointerFunctionsWithOptions(_ options: NSPointerFunctions.Options) -> NSPointerFunctions
 
   // Own Instance Properties
 
@@ -50,4 +57,12 @@ import Foundation
 }
 
 extension NSPointerFunctions: NSPointerFunctionsExports {
+
+  /**
+    - Selector: pointerFunctionsWithOptions:
+  */
+  @objc public static func createWithPointerFunctionsWithOptions(_ options: NSPointerFunctions.Options) -> NSPointerFunctions {
+    return self.init(options: options)
+  }
+
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -147,11 +149,6 @@ import AppKit
   // Instance Methods
 
   /**
-    - Selector: initWithImage:hotSpot:
-  */
-  @objc static func createWithImage(_: NSImage, hotSpot: CGPoint) -> Self
-
-  /**
     - Selector: pop
   */
   @objc func pop()
@@ -180,8 +177,4 @@ import AppKit
 }
 
 extension NSCursor: NSCursorExports {
-  @objc public static func createWithImage(_ image: NSImage, hotSpot: CGPoint) -> Self {
-    return self.init(image: image, hotSpot: hotSpot)
-  }
-
 }

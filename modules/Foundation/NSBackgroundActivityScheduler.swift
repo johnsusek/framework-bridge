@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -26,7 +28,7 @@ import Foundation
   /**
     - Selector: scheduleWithBlock:
   */
-  // jsvalue @objc func schedule(_: JSValue)
+  // jsvalue @objc func scheduleWithBlock(_ p0: JSValue)
 
   // Own Instance Properties
 

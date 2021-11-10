@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -20,18 +22,18 @@ import AppKit
     - Selector: contentListWithViewController:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func create(contentListWithViewController: NSViewController) -> Self
+  @objc @available(OSX 10.11, *) static func createWithContentListWithViewController(_ contentListWithViewController: NSViewController) -> Self
 
   /**
     - Selector: sidebarWithViewController:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func create(sidebarWithViewController: NSViewController) -> Self
+  @objc @available(OSX 10.11, *) static func createWithSidebarWithViewController(_ sidebarWithViewController: NSViewController) -> Self
 
   /**
     - Selector: splitViewItemWithViewController:
   */
-  @objc static func create(viewController: NSViewController) -> Self
+  @objc static func createWithSplitViewItemWithViewController(_ viewController: NSViewController) -> Self
 
   // Own Instance Properties
 
@@ -99,15 +101,29 @@ import AppKit
 }
 
 extension NSSplitViewItem: NSSplitViewItemExports {
-  @objc public static func create(contentListWithViewController: NSViewController) -> Self {
+
+  /**
+    - Selector: contentListWithViewController:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithContentListWithViewController(_ contentListWithViewController: NSViewController) -> Self {
     return self.init(contentListWithViewController: contentListWithViewController)
   }
 
-  @objc public static func create(sidebarWithViewController: NSViewController) -> Self {
+
+  /**
+    - Selector: sidebarWithViewController:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithSidebarWithViewController(_ sidebarWithViewController: NSViewController) -> Self {
     return self.init(sidebarWithViewController: sidebarWithViewController)
   }
 
-  @objc public static func create(viewController: NSViewController) -> Self {
+
+  /**
+    - Selector: splitViewItemWithViewController:
+  */
+  @objc public static func createWithSplitViewItemWithViewController(_ viewController: NSViewController) -> Self {
     return self.init(viewController: viewController)
   }
 

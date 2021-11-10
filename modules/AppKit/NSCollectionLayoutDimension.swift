@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,22 +21,22 @@ import AppKit
   /**
     - Selector: absoluteDimension:
   */
-  @objc static func absolute(_: CGFloat) -> Self
+  @objc static func createWithAbsoluteDimension(_ p0: CGFloat) -> Self
 
   /**
     - Selector: estimatedDimension:
   */
-  @objc static func estimated(_: CGFloat) -> Self
+  @objc static func createWithEstimatedDimension(_ p0: CGFloat) -> Self
 
   /**
     - Selector: fractionalHeightDimension:
   */
-  @objc static func fractionalHeight(_: CGFloat) -> Self
+  @objc static func createWithFractionalHeightDimension(_ p0: CGFloat) -> Self
 
   /**
     - Selector: fractionalWidthDimension:
   */
-  @objc static func fractionalWidth(_: CGFloat) -> Self
+  @objc static func createWithFractionalWidthDimension(_ p0: CGFloat) -> Self
 
   // Own Instance Properties
 
@@ -65,19 +67,35 @@ import AppKit
 }
 
 extension NSCollectionLayoutDimension: NSCollectionLayoutDimensionExports {
-  @objc public static func absolute(_ p0: CGFloat) -> Self {
+
+  /**
+    - Selector: absoluteDimension:
+  */
+  @objc public static func createWithAbsoluteDimension(_ p0: CGFloat) -> Self {
     return self.absolute(p0)
   }
 
-  @objc public static func estimated(_ p0: CGFloat) -> Self {
+
+  /**
+    - Selector: estimatedDimension:
+  */
+  @objc public static func createWithEstimatedDimension(_ p0: CGFloat) -> Self {
     return self.estimated(p0)
   }
 
-  @objc public static func fractionalHeight(_ p0: CGFloat) -> Self {
+
+  /**
+    - Selector: fractionalHeightDimension:
+  */
+  @objc public static func createWithFractionalHeightDimension(_ p0: CGFloat) -> Self {
     return self.fractionalHeight(p0)
   }
 
-  @objc public static func fractionalWidth(_ p0: CGFloat) -> Self {
+
+  /**
+    - Selector: fractionalWidthDimension:
+  */
+  @objc public static func createWithFractionalWidthDimension(_ p0: CGFloat) -> Self {
     return self.fractionalWidth(p0)
   }
 

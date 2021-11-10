@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -20,12 +22,23 @@ import Foundation
     - Selector: predicateFromMetadataQueryString:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func create(fromMetadataQueryString: String) -> NSPredicate?
+  @objc @available(OSX 10.9, *) static func createWithPredicateFromMetadataQueryString(_ fromMetadataQueryString: String) -> NSPredicate?
+
+  /**
+    - Selector: predicateWithBlock:
+    - Introduced: 10.6
+  */
+// jsvalue   @objc @available(OSX 10.6, *) static func createWithPredicateWithBlock(_ block: JSValue) -> NSPredicate
+
+  /**
+    - Selector: predicateWithFormat:argumentArray:
+  */
+  @objc static func createWithPredicateWithFormatWithArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate
 
   /**
     - Selector: predicateWithValue:
   */
-  @objc static func create(value: Bool) -> NSPredicate
+  @objc static func createWithPredicateWithValue(_ value: Bool) -> NSPredicate
 
   // Instance Methods
 
@@ -46,11 +59,6 @@ import Foundation
   */
   @objc (evaluateWithObject:substitutionVariables:) @available(OSX 10.5, *) func evaluate(with: Any?, substitutionVariables: [String: Any]?) -> Bool
 
-  /**
-    - Selector: predicateWithSubstitutionVariables:
-  */
-  @objc static func withSubstitutionVariables(_: [String: Any]) -> Self
-
   // Own Instance Properties
 
   /**
@@ -60,16 +68,41 @@ import Foundation
 }
 
 extension NSPredicate: NSPredicateExports {
-  @objc public static func create(fromMetadataQueryString: String) -> NSPredicate? {
+
+  /**
+    - Selector: predicateFromMetadataQueryString:
+    - Introduced: 10.9
+  */
+  @objc public static func createWithPredicateFromMetadataQueryString(_ fromMetadataQueryString: String) -> NSPredicate? {
     return self.init(fromMetadataQueryString: fromMetadataQueryString)
   }
 
-  @objc public static func create(value: Bool) -> NSPredicate {
-    return self.init(value: value)
+
+  /**
+    - Selector: predicateWithBlock:
+    - Introduced: 10.6
+  */
+  @objc public static func createWithPredicateWithBlock(_ block: JSValue) -> NSPredicate {
+    return self.init(block: { p1, p2 in
+      let res = block.call(withArguments: [p1 as AnyObject, p2 as AnyObject])!
+      return res.toBool()
+    })
   }
 
-  @objc public static func withSubstitutionVariables(_ p0: [String: Any]) -> Self {
-    return self.withSubstitutionVariables(p0)
+
+  /**
+    - Selector: predicateWithFormat:argumentArray:
+  */
+  @objc public static func createWithPredicateWithFormatWithArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate {
+    return self.init(format: format, argumentArray: argumentArray)
+  }
+
+
+  /**
+    - Selector: predicateWithValue:
+  */
+  @objc public static func createWithPredicateWithValue(_ value: Bool) -> NSPredicate {
+    return self.init(value: value)
   }
 
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -118,16 +120,6 @@ import Foundation
   @objc func detach()
 
   /**
-    - Selector: initWithKind:
-  */
-  @objc static func createWithKind(_: XMLNode.Kind) -> Self
-
-  /**
-    - Selector: initWithKind:options:
-  */
-  @objc static func createWithKind(_: XMLNode.Kind, options: XMLNode.Options) -> Self
-
-  /**
     - Selector: nodesForXPath:error:
   */
   // throws - @objc func nodesForXPath(error: String) -> [XMLNode]?
@@ -241,12 +233,4 @@ import Foundation
 }
 
 extension XMLNode: XMLNodeExports {
-  @objc public static func createWithKind(_ kind: XMLNode.Kind) -> Self {
-    return self.init(kind: kind)
-  }
-
-  @objc public static func createWithKind(_ kind: XMLNode.Kind, options: XMLNode.Options) -> Self {
-    return self.init(kind: kind, options: options)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -18,7 +20,7 @@ import Foundation
   /**
     - Selector: cookieWithProperties:
   */
-  @objc static func create(properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie?
+  @objc static func createWithCookieWithProperties(_ properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie?
 
   /**
     - Selector: cookiesWithResponseHeaderFields:forURL:
@@ -105,7 +107,11 @@ import Foundation
 }
 
 extension HTTPCookie: HTTPCookieExports {
-  @objc public static func create(properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie? {
+
+  /**
+    - Selector: cookieWithProperties:
+  */
+  @objc public static func createWithCookieWithProperties(_ properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie? {
     return self.init(properties: properties)
   }
 

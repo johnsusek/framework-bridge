@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -16,6 +18,11 @@ import Foundation
   // Static Methods
 
   /**
+    - Selector: classDescriptionForClass:
+  */
+  @objc static func createWithClassDescriptionForClass(_ for: AnyClass) -> NSClassDescription?
+
+  /**
     - Selector: invalidateClassDescriptionCache
   */
   @objc static func invalidateClassDescriptionCache()
@@ -27,4 +34,12 @@ import Foundation
 }
 
 extension NSClassDescription: NSClassDescriptionExports {
+
+  /**
+    - Selector: classDescriptionForClass:
+  */
+  @objc public static func createWithClassDescriptionForClass(_ for: AnyClass) -> NSClassDescription? {
+    return self.init(for: `for`)
+  }
+
 }

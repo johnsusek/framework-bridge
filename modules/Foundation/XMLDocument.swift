@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -86,21 +88,6 @@ import Foundation
     - Selector: addChild:
   */
   @objc func addChild(_: XMLNode)
-
-  /**
-    - Selector: initWithContentsOfURL:options:error:
-  */
-  @objc static func createWithContentsOfURL(contentsOf: URL, options: XMLNode.Options) -> Self?
-
-  /**
-    - Selector: initWithRootElement:
-  */
-  @objc static func createWithRootElement(_: XMLElement?) -> Self
-
-  /**
-    - Selector: initWithXMLString:options:error:
-  */
-  @objc static func createWithXMLString(xmlString: String, options: XMLNode.Options) -> Self?
 
   /**
     - Selector: insertChild:atIndex:
@@ -196,16 +183,4 @@ import Foundation
 }
 
 extension XMLDocument: XMLDocumentExports {
-  @objc public static func createWithContentsOfURL(contentsOf: URL, options: XMLNode.Options) -> Self? {
-    return try? self.init(contentsOf: contentsOf, options: options)
-  }
-
-  @objc public static func createWithRootElement(_ rootElement: XMLElement?) -> Self {
-    return self.init(rootElement: rootElement)
-  }
-
-  @objc public static func createWithXMLString(xmlString: String, options: XMLNode.Options) -> Self? {
-    return try? self.init(xmlString: xmlString, options: options)
-  }
-
 }

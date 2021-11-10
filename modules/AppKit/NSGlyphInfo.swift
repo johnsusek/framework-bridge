@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,22 +21,22 @@ import AppKit
     - Selector: glyphInfoWithCGGlyph:forFont:baseString:
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) static func create(cgGlyph: CGGlyph, `for`: NSFont, baseString: String) -> NSGlyphInfo?
+  @objc @available(OSX 10.13, *) static func createWithGlyphInfoWithCGGlyphWithForFontWithBaseString(_ cgGlyph: CGGlyph, _ for: NSFont, _ baseString: String) -> NSGlyphInfo?
 
   /**
     - Selector: glyphInfoWithCharacterIdentifier:collection:baseString:
   */
-  @objc static func create(characterIdentifier: Int, collection: NSCharacterCollection, baseString: String) -> NSGlyphInfo?
+  @objc static func createWithGlyphInfoWithCharacterIdentifierWithCollectionWithBaseString(_ characterIdentifier: Int, _ collection: NSCharacterCollection, _ baseString: String) -> NSGlyphInfo?
 
   /**
     - Selector: glyphInfoWithGlyph:forFont:baseString:
   */
-  @objc static func create(glyph: NSGlyph, `for`: NSFont, baseString: String) -> NSGlyphInfo?
+  @objc static func createWithGlyphInfoWithGlyphWithForFontWithBaseString(_ glyph: NSGlyph, _ for: NSFont, _ baseString: String) -> NSGlyphInfo?
 
   /**
     - Selector: glyphInfoWithGlyphName:forFont:baseString:
   */
-  @objc static func create(glyphName: String, `for`: NSFont, baseString: String) -> NSGlyphInfo?
+  @objc static func createWithGlyphInfoWithGlyphNameWithForFontWithBaseString(_ glyphName: String, _ for: NSFont, _ baseString: String) -> NSGlyphInfo?
 
   // Own Instance Properties
 
@@ -67,19 +69,36 @@ import AppKit
 }
 
 extension NSGlyphInfo: NSGlyphInfoExports {
-  @objc public static func create(cgGlyph: CGGlyph, for: NSFont, baseString: String) -> NSGlyphInfo? {
+
+  /**
+    - Selector: glyphInfoWithCGGlyph:forFont:baseString:
+    - Introduced: 10.13
+  */
+  @objc public static func createWithGlyphInfoWithCGGlyphWithForFontWithBaseString(_ cgGlyph: CGGlyph, _ for: NSFont, _ baseString: String) -> NSGlyphInfo? {
     return self.init(cgGlyph: cgGlyph, for: `for`, baseString: baseString)
   }
 
-  @objc public static func create(characterIdentifier: Int, collection: NSCharacterCollection, baseString: String) -> NSGlyphInfo? {
+
+  /**
+    - Selector: glyphInfoWithCharacterIdentifier:collection:baseString:
+  */
+  @objc public static func createWithGlyphInfoWithCharacterIdentifierWithCollectionWithBaseString(_ characterIdentifier: Int, _ collection: NSCharacterCollection, _ baseString: String) -> NSGlyphInfo? {
     return self.init(characterIdentifier: characterIdentifier, collection: collection, baseString: baseString)
   }
 
-  @objc public static func create(glyph: NSGlyph, for: NSFont, baseString: String) -> NSGlyphInfo? {
+
+  /**
+    - Selector: glyphInfoWithGlyph:forFont:baseString:
+  */
+  @objc public static func createWithGlyphInfoWithGlyphWithForFontWithBaseString(_ glyph: NSGlyph, _ for: NSFont, _ baseString: String) -> NSGlyphInfo? {
     return self.init(glyph: glyph, for: `for`, baseString: baseString)
   }
 
-  @objc public static func create(glyphName: String, for: NSFont, baseString: String) -> NSGlyphInfo? {
+
+  /**
+    - Selector: glyphInfoWithGlyphName:forFont:baseString:
+  */
+  @objc public static func createWithGlyphInfoWithGlyphNameWithForFontWithBaseString(_ glyphName: String, _ for: NSFont, _ baseString: String) -> NSGlyphInfo? {
     return self.init(glyphName: glyphName, for: `for`, baseString: baseString)
   }
 

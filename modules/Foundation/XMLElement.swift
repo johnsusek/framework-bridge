@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -108,11 +110,6 @@ import Foundation
   @objc (elementsForName:) func elements(forName: String) -> [XMLElement]
 
   /**
-    - Selector: initWithXMLString:error:
-  */
-  @objc static func createWithXMLString(xmlString: String) -> Self?
-
-  /**
     - Selector: insertChild:atIndex:
   */
   @objc (insertChild:atIndex:) func insertChild(_: XMLNode, at: Int)
@@ -194,8 +191,4 @@ import Foundation
 }
 
 extension XMLElement: XMLElementExports {
-  @objc public static func createWithXMLString(xmlString: String) -> Self? {
-    return try? self.init(xmlString: xmlString)
-  }
-
 }

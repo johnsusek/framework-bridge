@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -51,11 +53,6 @@ import AppKit
   @objc (handleEvent:) func handleEvent(_: NSEvent) -> Bool
 
   /**
-    - Selector: initWithClient:
-  */
-  @objc static func createWithClient(_: NSTextInputClient) -> Self
-
-  /**
     - Selector: invalidateCharacterCoordinates
   */
   @objc func invalidateCharacterCoordinates()
@@ -89,8 +86,4 @@ import AppKit
 }
 
 extension NSTextInputContext: NSTextInputContextExports {
-  @objc public static func createWithClient(_ client: NSTextInputClient) -> Self {
-    return self.init(client: client)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -38,7 +40,7 @@ import AppKit
   /**
     - Selector: imageRepWithData:
   */
-  @objc static func create(data: Data) -> Self?
+  @objc static func createWithImageRepWithData(_ data: Data) -> Self?
 
   /**
     - Selector: imageRepsWithContentsOfFile:
@@ -123,33 +125,6 @@ import AppKit
     - Selector: incrementalLoadFromData:complete:
   */
   @objc (incrementalLoadFromData:complete:) func incrementalLoad(from: Data, complete: Bool) -> Int
-
-  /**
-    - Selector: initForIncrementalLoad
-  */
-  @objc static func createForIncrementalLoad() -> Self
-
-  /**
-    - Selector: initWithBitmapDataPlanes:pixelsWide:pixelsHigh:bitsPerSample:samplesPerPixel:hasAlpha:isPlanar:colorSpaceName:bitmapFormat:bytesPerRow:bitsPerPixel:
-  */
-  @objc static func createWithBitmapDataPlanes(_: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>?>?, pixelsWide: Int, pixelsHigh: Int, bitsPerSample: Int, samplesPerPixel: Int, hasAlpha: Bool, isPlanar: Bool, colorSpaceName: NSColorSpaceName, bitmapFormat: NSBitmapImageRep.Format, bytesPerRow: Int, bitsPerPixel: Int) -> Self?
-
-  /**
-    - Selector: initWithBitmapDataPlanes:pixelsWide:pixelsHigh:bitsPerSample:samplesPerPixel:hasAlpha:isPlanar:colorSpaceName:bytesPerRow:bitsPerPixel:
-  */
-  @objc static func createWithBitmapDataPlanes(_: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>?>?, pixelsWide: Int, pixelsHigh: Int, bitsPerSample: Int, samplesPerPixel: Int, hasAlpha: Bool, isPlanar: Bool, colorSpaceName: NSColorSpaceName, bytesPerRow: Int, bitsPerPixel: Int) -> Self?
-
-  /**
-    - Selector: initWithCGImage:
-    - Introduced: 10.5
-  */
-  @objc @available(OSX 10.5, *) static func createWithCGImage(_: CGImage) -> Self
-
-  /**
-    - Selector: initWithCIImage:
-    - Introduced: 10.5
-  */
-  @objc @available(OSX 10.5, *) static func createWithCIImage(_: CIImage) -> Self
 
   /**
     - Selector: representationUsingType:properties:
@@ -242,28 +217,12 @@ import AppKit
 }
 
 extension NSBitmapImageRep: NSBitmapImageRepExports {
-  @objc public static func create(data: Data) -> Self? {
+
+  /**
+    - Selector: imageRepWithData:
+  */
+  @objc public static func createWithImageRepWithData(_ data: Data) -> Self? {
     return self.init(data: data)
-  }
-
-  @objc public static func createForIncrementalLoad() -> Self {
-    return self.init()
-  }
-
-  @objc public static func createWithBitmapDataPlanes(_ bitmapDataPlanes: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>?>?, pixelsWide: Int, pixelsHigh: Int, bitsPerSample: Int, samplesPerPixel: Int, hasAlpha: Bool, isPlanar: Bool, colorSpaceName: NSColorSpaceName, bitmapFormat: NSBitmapImageRep.Format, bytesPerRow: Int, bitsPerPixel: Int) -> Self? {
-    return self.init(bitmapDataPlanes: bitmapDataPlanes, pixelsWide: pixelsWide, pixelsHigh: pixelsHigh, bitsPerSample: bitsPerSample, samplesPerPixel: samplesPerPixel, hasAlpha: hasAlpha, isPlanar: isPlanar, colorSpaceName: colorSpaceName, bitmapFormat: bitmapFormat, bytesPerRow: bytesPerRow, bitsPerPixel: bitsPerPixel)
-  }
-
-  @objc public static func createWithBitmapDataPlanes(_ bitmapDataPlanes: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>?>?, pixelsWide: Int, pixelsHigh: Int, bitsPerSample: Int, samplesPerPixel: Int, hasAlpha: Bool, isPlanar: Bool, colorSpaceName: NSColorSpaceName, bytesPerRow: Int, bitsPerPixel: Int) -> Self? {
-    return self.init(bitmapDataPlanes: bitmapDataPlanes, pixelsWide: pixelsWide, pixelsHigh: pixelsHigh, bitsPerSample: bitsPerSample, samplesPerPixel: samplesPerPixel, hasAlpha: hasAlpha, isPlanar: isPlanar, colorSpaceName: colorSpaceName, bytesPerRow: bytesPerRow, bitsPerPixel: bitsPerPixel)
-  }
-
-  @objc public static func createWithCGImage(_ cgImage: CGImage) -> Self {
-    return self.init(cgImage: cgImage)
-  }
-
-  @objc public static func createWithCIImage(_ ciImage: CIImage) -> Self {
-    return self.init(ciImage: ciImage)
   }
 
 }

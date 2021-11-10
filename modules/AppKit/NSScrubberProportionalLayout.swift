@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -16,13 +18,6 @@ import AppKit
 @objc(NSScrubberProportionalLayout) protocol NSScrubberProportionalLayoutExports: JSExport, NSScrubberLayoutExports {
   // Static Methods
 
-  // Instance Methods
-
-  /**
-    - Selector: initWithNumberOfVisibleItems:
-  */
-  @objc static func createWithNumberOfVisibleItems(_: Int) -> Self
-
   // Own Instance Properties
 
   /**
@@ -32,8 +27,4 @@ import AppKit
 }
 
 extension NSScrubberProportionalLayout: NSScrubberProportionalLayoutExports {
-  @objc public static func createWithNumberOfVisibleItems(_ numberOfVisibleItems: Int) -> Self {
-    return self.init(numberOfVisibleItems: numberOfVisibleItems)
-  }
-
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -21,10 +23,15 @@ import AppKit
   @objc (canInitWithPasteboard:) static func canInit(with: NSPasteboard) -> Bool
 
   /**
+    - Selector: imageNamed:
+  */
+  @objc static func createWithImageNamed(_ named: NSImage.Name) -> NSImage?
+
+  /**
     - Selector: imageWithSize:flipped:drawingHandler:
     - Introduced: 10.8
   */
-// jsvalue   @objc @available(OSX 10.8, *) static func create(size: CGSize, flipped: Bool, drawingHandler: JSValue) -> Self
+// jsvalue   @objc @available(OSX 10.8, *) static func createWithImageWithSizeWithFlippedWithDrawingHandler(_ size: CGSize, _ flipped: Bool, _ drawingHandler: JSValue) -> Self
 
   // Own Static Properties
 
@@ -106,56 +113,6 @@ import AppKit
     - Introduced: 10.6
   */
   @objc (hitTestRect:withImageDestinationRect:context:hints:flipped:) @available(OSX 10.6, *) func hitTest(_: CGRect, withDestinationRect: CGRect, context: NSGraphicsContext?, hints: [NSImageRep.HintKey: Any]?, flipped: Bool) -> Bool
-
-  /**
-    - Selector: initByReferencingFile:
-  */
-  @objc static func createByReferencingFile(_: String) -> Self?
-
-  /**
-    - Selector: initByReferencingURL:
-  */
-  @objc static func create(byReferencing: URL) -> Self
-
-  /**
-    - Selector: initWithCGImage:size:
-    - Introduced: 10.6
-  */
-  @objc @available(OSX 10.6, *) static func createWithCGImage(_: CGImage, size: CGSize) -> Self
-
-  /**
-    - Selector: initWithContentsOfFile:
-  */
-  @objc static func createWithContentsOfFile(_: String) -> Self?
-
-  /**
-    - Selector: initWithContentsOfURL:
-  */
-  @objc static func createWithContentsOfURL(_: URL) -> Self?
-
-  /**
-    - Selector: initWithDataIgnoringOrientation:
-    - Introduced: 10.6
-  */
-  @objc @available(OSX 10.6, *) static func createWithDataIgnoringOrientation(_: Data) -> Self?
-
-  /**
-    - Selector: initWithIconRef:
-    - Introduced: 10.5
-    - Deprecated: 100000
-    - Message: Use -[NSWorkspace iconForFile:], -[NSWorkspace iconForFiles:], -[NSWorkspace iconForFileType:], or +[NSImage imageNamed:] instead.
-  */
-  @objc @available(OSX 10.5, *) static func createWithIconRef(_: IconRef) -> Self
-
-  /**
-    - Selector: initWithPasteboard:
-  */
-  @objc static func createWithPasteboard(_: NSPasteboard) -> Self?
-
-  /**
-    - Selector: initWithSize:
-  */
-  @objc static func createWithSize(_: CGSize) -> Self
 
   /**
     - Selector: layerContentsForContentsScale:
@@ -295,47 +252,24 @@ import AppKit
 }
 
 extension NSImage: NSImageExports {
-  @objc public static func create(size: CGSize, flipped: Bool, drawingHandler: JSValue) -> Self {
+
+  /**
+    - Selector: imageNamed:
+  */
+  @objc public static func createWithImageNamed(_ named: NSImage.Name) -> NSImage? {
+    return self.init(named: named)
+  }
+
+
+  /**
+    - Selector: imageWithSize:flipped:drawingHandler:
+    - Introduced: 10.8
+  */
+  @objc public static func createWithImageWithSizeWithFlippedWithDrawingHandler(_ size: CGSize, _ flipped: Bool, _ drawingHandler: JSValue) -> Self {
     return self.init(size: size, flipped: flipped, drawingHandler: { p1 in
       let res = drawingHandler.call(withArguments: [p1 as AnyObject])!
       return res.toBool()
     })
-  }
-
-  @objc public static func createByReferencingFile(_ byReferencingFile: String) -> Self? {
-    return self.init(byReferencingFile: byReferencingFile)
-  }
-
-  @objc public static func create(byReferencing: URL) -> Self {
-    return self.init(byReferencing: byReferencing)
-  }
-
-  @objc public static func createWithCGImage(_ cgImage: CGImage, size: CGSize) -> Self {
-    return self.init(cgImage: cgImage, size: size)
-  }
-
-  @objc public static func createWithContentsOfFile(_ contentsOfFile: String) -> Self? {
-    return self.init(contentsOfFile: contentsOfFile)
-  }
-
-  @objc public static func createWithContentsOfURL(_ contentsOf: URL) -> Self? {
-    return self.init(contentsOf: contentsOf)
-  }
-
-  @objc public static func createWithDataIgnoringOrientation(_ dataIgnoringOrientation: Data) -> Self? {
-    return self.init(dataIgnoringOrientation: dataIgnoringOrientation)
-  }
-
-  @objc public static func createWithIconRef(_ iconRef: IconRef) -> Self {
-    return self.init(iconRef: iconRef)
-  }
-
-  @objc public static func createWithPasteboard(_ pasteboard: NSPasteboard) -> Self? {
-    return self.init(pasteboard: pasteboard)
-  }
-
-  @objc public static func createWithSize(_ size: CGSize) -> Self {
-    return self.init(size: size)
   }
 
 }

@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -16,11 +18,6 @@ import AppKit
   // Static Methods
 
   // Instance Methods
-
-  /**
-    - Selector: initWithMarkerFormat:options:
-  */
-  @objc static func createWithMarkerFormat(_: NSTextList.MarkerFormat, options: Int) -> Self
 
   /**
     - Selector: markerForItemNumber:
@@ -47,8 +44,4 @@ import AppKit
 }
 
 extension NSTextList: NSTextListExports {
-  @objc public static func createWithMarkerFormat(_ markerFormat: NSTextList.MarkerFormat, options: Int) -> Self {
-    return self.init(markerFormat: markerFormat, options: options)
-  }
-
 }

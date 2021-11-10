@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -23,7 +25,7 @@ import AppKit
   /**
     - Selector: imageRepWithCIImage:
   */
-  @objc static func create(ciImage: CIImage) -> Self
+  @objc static func createWithImageRepWithCIImage(_ ciImage: CIImage) -> Self
 
   /**
     - Selector: imageRepsWithContentsOfFile:
@@ -40,13 +42,6 @@ import AppKit
   */
   @objc (unregisterImageRepClass:) static func unregisterClass(_: AnyClass)
 
-  // Instance Methods
-
-  /**
-    - Selector: initWithCIImage:
-  */
-  @objc static func createWithCIImage(_: CIImage) -> Self
-
   // Own Instance Properties
 
   /**
@@ -56,11 +51,11 @@ import AppKit
 }
 
 extension NSCIImageRep: NSCIImageRepExports {
-  @objc public static func create(ciImage: CIImage) -> Self {
-    return self.init(ciImage: ciImage)
-  }
 
-  @objc public static func createWithCIImage(_ ciImage: CIImage) -> Self {
+  /**
+    - Selector: imageRepWithCIImage:
+  */
+  @objc public static func createWithImageRepWithCIImage(_ ciImage: CIImage) -> Self {
     return self.init(ciImage: ciImage)
   }
 

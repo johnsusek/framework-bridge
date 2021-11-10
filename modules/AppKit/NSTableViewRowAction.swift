@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import AppKit
@@ -19,7 +21,7 @@ import AppKit
   /**
     - Selector: rowActionWithStyle:title:handler:
   */
-// jsvalue   @objc static func create(style: NSTableViewRowAction.Style, title: String, handler: JSValue) -> Self
+// jsvalue   @objc static func createWithRowActionWithStyleWithTitleWithHandler(_ style: NSTableViewRowAction.Style, _ title: String, _ handler: JSValue) -> Self
 
   // Own Instance Properties
 
@@ -46,7 +48,11 @@ import AppKit
 }
 
 extension NSTableViewRowAction: NSTableViewRowActionExports {
-  @objc public static func create(style: NSTableViewRowAction.Style, title: String, handler: JSValue) -> Self {
+
+  /**
+    - Selector: rowActionWithStyle:title:handler:
+  */
+  @objc public static func createWithRowActionWithStyleWithTitleWithHandler(_ style: NSTableViewRowAction.Style, _ title: String, _ handler: JSValue) -> Self {
     return self.init(style: style, title: title, handler: { p1, p2 in
       handler.call(withArguments: [p1 as AnyObject, p2 as AnyObject])!
     })

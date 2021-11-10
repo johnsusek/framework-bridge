@@ -2,6 +2,8 @@ import AppKit
 import JavaScriptCore
 import Quartz
 import AVKit
+import CoreMedia
+import CoreSpotlight
 import CoreImage
 import CoreGraphics
 import Foundation
@@ -25,21 +27,6 @@ import Foundation
   // Instance Methods
 
   /**
-    - Selector: initWithListenerEndpoint:
-  */
-  @objc static func createWithListenerEndpoint(_: NSXPCListenerEndpoint) -> Self
-
-  /**
-    - Selector: initWithMachServiceName:options:
-  */
-  @objc static func createWithMachServiceName(_: String, options: NSXPCConnection.Options) -> Self
-
-  /**
-    - Selector: initWithServiceName:
-  */
-  @objc static func createWithServiceName(_: String) -> Self
-
-  /**
     - Selector: invalidate
   */
   @objc func invalidate()
@@ -53,7 +40,7 @@ import Foundation
     - Selector: scheduleSendBarrierBlock:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func scheduleSendBarrierBlock(_: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func scheduleSendBarrierBlock(_ p0: JSValue)
 
   /**
     - Selector: suspend
@@ -124,16 +111,4 @@ import Foundation
 }
 
 extension NSXPCConnection: NSXPCConnectionExports {
-  @objc public static func createWithListenerEndpoint(_ listenerEndpoint: NSXPCListenerEndpoint) -> Self {
-    return self.init(listenerEndpoint: listenerEndpoint)
-  }
-
-  @objc public static func createWithMachServiceName(_ machServiceName: String, options: NSXPCConnection.Options) -> Self {
-    return self.init(machServiceName: machServiceName, options: options)
-  }
-
-  @objc public static func createWithServiceName(_ serviceName: String) -> Self {
-    return self.init(serviceName: serviceName)
-  }
-
 }

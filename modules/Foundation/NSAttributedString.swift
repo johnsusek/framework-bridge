@@ -140,7 +140,7 @@ import Foundation
     - Selector: enumerateAttribute:inRange:options:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributeWithInRangeWithOptionsWithUsingBlock(_ p0: NSAttributedString.Key, _ in: NSRange, _ options: NSAttributedString.EnumerationOptions, _ using: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributeInRangeWithOptionsWithUsingBlock(_ p0: NSAttributedString.Key, _ in: NSRange, _ options: NSAttributedString.EnumerationOptions, _ using: JSValue)
 
   /**
     - Selector: enumerateAttributesInRange:options:usingBlock:

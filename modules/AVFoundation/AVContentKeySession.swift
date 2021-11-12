@@ -61,7 +61,7 @@ import AVFoundation
     - Selector: invalidatePersistableContentKey:options:completionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func invalidatePersistableContentKeyWithOptionsWithCompletionHandler(_ options: Data, options options1: [AVContentKeySessionServerPlaybackContextOption: Any]?, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func invalidatePersistableContentKeyOptionsWithCompletionHandler(_ options: Data, options options1: [AVContentKeySessionServerPlaybackContextOption: Any]?, _ completionHandler: JSValue)
 
   /**
     - Selector: makeSecureTokenForExpirationDateOfPersistableContentKey:completionHandler:

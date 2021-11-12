@@ -134,13 +134,13 @@ import AppKit
     - Selector: beginCriticalSheet:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func beginCriticalSheetWithCompletionHandler(_ completionHandler: NSWindow, completionHandler completionHandler1: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginCriticalSheetCompletionHandler(_ completionHandler: NSWindow, completionHandler completionHandler1: JSValue)
 
   /**
     - Selector: beginSheet:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func beginSheetWithCompletionHandler(_ completionHandler: NSWindow, completionHandler completionHandler1: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginSheetCompletionHandler(_ completionHandler: NSWindow, completionHandler completionHandler1: JSValue)
 
   /**
     - Selector: canRepresentDisplayGamut:

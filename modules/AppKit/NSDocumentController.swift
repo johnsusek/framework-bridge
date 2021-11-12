@@ -40,7 +40,7 @@ import AppKit
     - Selector: beginOpenPanel:forTypes:completionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func beginOpenPanelWithForTypesWithCompletionHandler(_ p0: NSOpenPanel, _ forTypes: [String]?, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func beginOpenPanelForTypesWithCompletionHandler(_ p0: NSOpenPanel, _ forTypes: [String]?, _ completionHandler: JSValue)
 
   /**
     - Selector: beginOpenPanelWithCompletionHandler:

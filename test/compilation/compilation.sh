@@ -7,12 +7,10 @@ let path = require('path');
 let cq = require('concurrent-queue');
 let cores = require('os').cpus().length;
 let inheritence = require('../../metadata/inheritence.json');
-let classesToTest = require('./classesToTest.js');
-
+let classesToRegister = require('../classesToRegister.json');
 let bridgePath = path.join(__dirname, '../../Sources/FrameworkBridge');
 let sourcePath = path.join(__dirname, '../../tmp/swift');
 let successPath = path.join(__dirname, '../../modules');
-
 let args = process.argv.slice(2);
 let fileName = args[0];
 let failed = [];
@@ -34,18 +32,18 @@ function run(framework, file, cb) {
   let className = file.replace('.swift', '');
 
   if (!inheritence[className]) {
-    className = "NS" + className;
-  }
-
-  if (!inheritence[className]) {
-    if (className != "NSError") {
-      console.log('!! Could not find inheritence for ' + className);
+    if (inheritence["NS" + className]) {
+      className = "NS" + className;
+    }
+    else if (className != "Error") {
+      console.warn('⚠️ Could not find inheritence for ' + className);
     }
   }
-  else {
+
+  if (inheritence[className]) {
     while (inheritence[className]) {
       if (inheritence[className] && inheritence[className] !== 'NSObject') {
-        // TODO: add module names to inheritence.json so we don't have to do this
+        // TODO: add module names to inheritence.json so we dont have to do this
         if (inheritence[className].startsWith('NS')) {
           let iPath0 = path.join(sourcePath, 'AppKit', `${inheritence[className].replace(/^NS/, '')}.swift`);
           if (fs.existsSync(iPath0)) inh.unshift(iPath0);
@@ -121,7 +119,7 @@ queue.drained(() => {
 
 let frameworks = fs.readdirSync(sourcePath);
 
-classesToTest = Object.values(classesToTest).flat();
+classesToRegister = Object.values(classesToRegister).flat();
 
 (async () => {
   for (let framework of frameworks) {
@@ -136,7 +134,7 @@ classesToTest = Object.values(classesToTest).flat();
       if (!file.endsWith('.swift')) continue;
       let filePath = path.join(sourcePath, framework, file);
       if (fileName && !file.startsWith(fileName)) continue;
-      if (!fileName && !classesToTest.some(c => c + ".swift" === file)) {
+      if (!fileName && !classesToRegister.some(c => c + ".swift" === file)) {
         continue;
       }
 

@@ -1,10 +1,10 @@
 let fs = require('fs');
-let classesToTest = require('./classesToTest.js');
+let classesToRegister = require('./classesToRegister.js');
 
 const swiftPath = `${__dirname}/../../tmp/swift`;
 const destPath = `${__dirname}/../registration/src`;
 
-for (const [framework, classNames] of Object.entries(classesToTest)) {
+for (const [framework, classNames] of Object.entries(classesToRegister)) {
   if (!fs.existsSync(`${destPath}/${framework}`)) {
     fs.mkdirSync(`${destPath}/${framework}`);
   }

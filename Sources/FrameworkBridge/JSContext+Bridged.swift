@@ -18,7 +18,7 @@ public extension JSContext {
 
     if (classType != nil) {
       self.setObject(classType!, forKeyedSubscript: className as (NSCopying & NSObjectProtocol)?)
-      print("✔ Registered \(classOrProto) as \(className)")
+      // print("✔ Registered \(classOrProto) as \(className)")
       registered = true
     }
     else {

@@ -167,7 +167,7 @@ import AppKit
     - Selector: performBatchUpdates:completionHandler:
     - Introduced: 10.11
   */
-  // jsvalue @objc @available(OSX 10.11, *) func performBatchUpdatesCompletionHandler(_ completionHandler: JSValue, completionHandler completionHandler1: JSValue)
+  // jsvalue @objc @available(OSX 10.11, *) func performBatchUpdates(_: JSValue, completionHandler: JSValue)
 
   /**
     - Selector: registerClass:forItemWithIdentifier:
@@ -337,20 +337,6 @@ import AppKit
     - Selector: selectionIndexes
   */
   @objc var selectionIndexes: IndexSet { @objc get @objc (setSelectionIndexes:) set }
-}
-
-@objc protocol CollectionViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(CollectionView) public class CollectionView: NSCollectionView, CollectionViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
 }
 
 extension NSCollectionView: NSCollectionViewExports {

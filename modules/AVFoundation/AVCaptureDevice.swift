@@ -44,7 +44,7 @@ import AVFoundation
     - Selector: requestAccessForMediaType:completionHandler:
     - Introduced: 10.14
   */
-// jsvalue   @objc @available(OSX 10.14, *) static func requestAccessForMediaTypeWithCompletionHandler(_ for: AVMediaType, _ completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.14, *) static func requestAccess(`for`: AVMediaType, completionHandler: JSValue)
 
   // Instance Methods
 

@@ -29,7 +29,7 @@ import AVKit
   /**
     - Selector: beginTrimmingWithCompletionHandler:
   */
-  // jsvalue @objc func beginTrimmingWithCompletionHandler(_ completionHandler: JSValue)
+  // jsvalue @objc func beginTrimming(completionHandler: JSValue)
 
   /**
     - Selector: flashChapterNumber:chapterTitle:
@@ -120,20 +120,6 @@ import AVKit
     - Introduced: 10.10
   */
   @objc @available(OSX 10.10, *) var videoGravity: AVLayerVideoGravity { @objc get @objc (setVideoGravity:) set }
-}
-
-@objc protocol PlayerViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(PlayerView) public class PlayerView: AVPlayerView, PlayerViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
 }
 
 extension AVPlayerView: AVPlayerViewExports {

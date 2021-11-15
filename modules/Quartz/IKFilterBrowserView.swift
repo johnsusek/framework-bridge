@@ -36,19 +36,5 @@ import Quartz
   @objc func setPreviewState(_: Bool)
 }
 
-@objc protocol FilterBrowserViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(FilterBrowserView) public class FilterBrowserView: IKFilterBrowserView, FilterBrowserViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension IKFilterBrowserView: IKFilterBrowserViewExports {
 }

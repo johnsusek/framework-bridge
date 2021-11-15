@@ -37,19 +37,5 @@ import AppKit
   @objc var title: String { @objc get @objc (setTitle:) set }
 }
 
-@objc protocol ScrubberTextItemViewExports: JSExport, NSScrubberItemViewExports {
-  // Static Methods
-}
-
-@objc(ScrubberTextItemView) public class ScrubberTextItemView: NSScrubberTextItemView, ScrubberTextItemViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSScrubberTextItemView: NSScrubberTextItemViewExports {
 }

@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: runningApplicationWithProcessIdentifier:
   */
-  @objc static func createWithRunningApplicationWithProcessIdentifier(_ processIdentifier: Int32) -> Self?
+  @objc static func createWithProcessIdentifier(_ processIdentifier: Int32) -> Self?
 
   /**
     - Selector: runningApplicationsWithBundleIdentifier:
@@ -146,7 +146,7 @@ extension NSRunningApplication: NSRunningApplicationExports {
   /**
     - Selector: runningApplicationWithProcessIdentifier:
   */
-  @objc public static func createWithRunningApplicationWithProcessIdentifier(_ processIdentifier: Int32) -> Self? {
+  @objc public static func createWithProcessIdentifier(_ processIdentifier: Int32) -> Self? {
     return self.init(processIdentifier: processIdentifier)
   }
 

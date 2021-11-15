@@ -178,19 +178,5 @@ import AppKit
   @objc var titleOfSelectedItem: String? { @objc get }
 }
 
-@objc protocol PopUpButtonExports: JSExport, NSButtonExports {
-  // Static Methods
-}
-
-@objc(PopUpButton) public class PopUpButton: NSPopUpButton, PopUpButtonExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSPopUpButton: NSPopUpButtonExports {
 }

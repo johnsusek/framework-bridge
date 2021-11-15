@@ -20,7 +20,7 @@ import Foundation
   /**
     - Selector: classDescriptionForClass:
   */
-  @objc static func createWithClassDescriptionForClass(_ for: AnyClass) -> NSClassDescription?
+  @objc static func createWithClassDescriptionForClass(_ `for`: AnyClass) -> NSClassDescription?
 
   /**
     - Selector: invalidateClassDescriptionCache
@@ -38,7 +38,7 @@ extension NSClassDescription: NSClassDescriptionExports {
   /**
     - Selector: classDescriptionForClass:
   */
-  @objc public static func createWithClassDescriptionForClass(_ for: AnyClass) -> NSClassDescription? {
+  @objc public static func createWithClassDescriptionForClass(_ `for`: AnyClass) -> NSClassDescription? {
     return self.init(for: `for`)
   }
 

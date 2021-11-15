@@ -178,19 +178,5 @@ import AppKit
   @objc var subrowsKeyPath: String { @objc get @objc (setSubrowsKeyPath:) set }
 }
 
-@objc protocol RuleEditorExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(RuleEditor) public class RuleEditor: NSRuleEditor, RuleEditorExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSRuleEditor: NSRuleEditorExports {
 }

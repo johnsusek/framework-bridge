@@ -25,7 +25,7 @@ import Foundation
   /**
     - Selector: valueWithBytes:objCType:
   */
-  @objc static func createWithValueWithBytesWithObjCType(_ bytes: UnsafeRawPointer, _ objCType: UnsafePointer<Int8>) -> NSValue
+  @objc static func createWithBytesWithObjCType(_ bytes: UnsafeRawPointer, _ objCType: UnsafePointer<Int8>) -> NSValue
 
   /**
     - Selector: valueWithCATransform3D:
@@ -59,7 +59,7 @@ import Foundation
   /**
     - Selector: valueWithNonretainedObject:
   */
-  @objc static func createWithValueWithNonretainedObject(_ nonretainedObject: Any?) -> NSValue
+  @objc static func createWithNonretainedObject(_ nonretainedObject: Any?) -> NSValue
 
   /**
     - Selector: valueWithPoint:
@@ -69,7 +69,7 @@ import Foundation
   /**
     - Selector: valueWithPointer:
   */
-  @objc static func createWithValueWithPointer(_ pointer: UnsafeRawPointer?) -> NSValue
+  @objc static func createWithPointer(_ pointer: UnsafeRawPointer?) -> NSValue
 
   /**
     - Selector: valueWithRange:
@@ -187,7 +187,7 @@ extension NSValue: NSValueExports {
   /**
     - Selector: valueWithBytes:objCType:
   */
-  @objc public static func createWithValueWithBytesWithObjCType(_ bytes: UnsafeRawPointer, _ objCType: UnsafePointer<Int8>) -> NSValue {
+  @objc public static func createWithBytesWithObjCType(_ bytes: UnsafeRawPointer, _ objCType: UnsafePointer<Int8>) -> NSValue {
     return self.init(bytes: bytes, objCType: objCType)
   }
 
@@ -239,7 +239,7 @@ extension NSValue: NSValueExports {
   /**
     - Selector: valueWithNonretainedObject:
   */
-  @objc public static func createWithValueWithNonretainedObject(_ nonretainedObject: Any?) -> NSValue {
+  @objc public static func createWithNonretainedObject(_ nonretainedObject: Any?) -> NSValue {
     return self.init(nonretainedObject: nonretainedObject)
   }
 
@@ -255,7 +255,7 @@ extension NSValue: NSValueExports {
   /**
     - Selector: valueWithPointer:
   */
-  @objc public static func createWithValueWithPointer(_ pointer: UnsafeRawPointer?) -> NSValue {
+  @objc public static func createWithPointer(_ pointer: UnsafeRawPointer?) -> NSValue {
     return self.init(pointer: pointer)
   }
 

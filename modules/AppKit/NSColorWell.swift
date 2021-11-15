@@ -63,19 +63,5 @@ import AppKit
   @objc var color: NSColor { @objc get @objc (setColor:) set }
 }
 
-@objc protocol ColorWellExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(ColorWell) public class ColorWell: NSColorWell, ColorWellExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSColorWell: NSColorWellExports {
 }

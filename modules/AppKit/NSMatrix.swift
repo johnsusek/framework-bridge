@@ -213,7 +213,7 @@ import AppKit
   /**
     - Selector: sortUsingFunction:context:
   */
-  // jsvalue @objc (sortUsingFunction:context:) func sortUsingFunctionWithContext(_ using: JSValue, _ context: UnsafeMutableRawPointer?)
+  // jsvalue @objc (sortUsingFunction:context:) func sort(using: JSValue, context: UnsafeMutableRawPointer?)
 
   /**
     - Selector: sortUsingSelector:
@@ -377,20 +377,6 @@ import AppKit
     - Selector: tabKeyTraversesCells
   */
   @objc var tabKeyTraversesCells: Bool { @objc get @objc (setTabKeyTraversesCells:) set }
-}
-
-@objc protocol MatrixExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(Matrix) public class Matrix: NSMatrix, MatrixExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
 }
 
 extension NSMatrix: NSMatrixExports {

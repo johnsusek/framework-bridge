@@ -39,7 +39,7 @@ import AppKit
     - Selector: textFieldWithString:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithTextFieldWithString(_ string: String) -> Self
+  @objc @available(OSX 10.12, *) static func createWithString(_ string: String) -> Self
 
   /**
     - Selector: wrappingLabelWithString:
@@ -179,44 +179,6 @@ import AppKit
   @objc var textColor: NSColor? { @objc get @objc (setTextColor:) set }
 }
 
-@objc protocol TextFieldExports: JSExport, NSControlExports {
-  // Static Methods
-
-  /**
-    - Selector: labelWithAttributedString:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithLabelWithAttributedString(_ labelWithAttributedString: NSAttributedString) -> Self
-
-  /**
-    - Selector: labelWithString:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithLabelWithString(_ labelWithString: String) -> Self
-
-  /**
-    - Selector: textFieldWithString:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithTextFieldWithString(_ string: String) -> Self
-
-  /**
-    - Selector: wrappingLabelWithString:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithWrappingLabelWithString(_ wrappingLabelWithString: String) -> Self
-}
-
-@objc(TextField) public class TextField: NSTextField, TextFieldExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSTextField: NSTextFieldExports {
 
   /**
@@ -241,7 +203,7 @@ extension NSTextField: NSTextFieldExports {
     - Selector: textFieldWithString:
     - Introduced: 10.12
   */
-  @objc public static func createWithTextFieldWithString(_ string: String) -> Self {
+  @objc public static func createWithString(_ string: String) -> Self {
     return self.init(string: string)
   }
 

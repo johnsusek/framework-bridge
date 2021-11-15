@@ -30,17 +30,17 @@ import AppKit
   /**
     - Selector: imageRepWithContentsOfFile:
   */
-  @objc static func createWithImageRepWithContentsOfFile(_ contentsOfFile: String) -> NSImageRep?
+  @objc static func createWithContentsOfFile(_ contentsOfFile: String) -> NSImageRep?
 
   /**
     - Selector: imageRepWithContentsOfURL:
   */
-  @objc static func createWithImageRepWithContentsOfURL(_ contentsOf: URL) -> NSImageRep?
+  @objc static func createWithContentsOfURL(_ contentsOf: URL) -> NSImageRep?
 
   /**
     - Selector: imageRepWithPasteboard:
   */
-  @objc static func createWithImageRepWithPasteboard(_ pasteboard: NSPasteboard) -> NSImageRep?
+  @objc static func createWithPasteboard(_ pasteboard: NSPasteboard) -> NSImageRep?
 
   /**
     - Selector: imageRepsWithContentsOfFile:
@@ -164,7 +164,7 @@ extension NSImageRep: NSImageRepExports {
   /**
     - Selector: imageRepWithContentsOfFile:
   */
-  @objc public static func createWithImageRepWithContentsOfFile(_ contentsOfFile: String) -> NSImageRep? {
+  @objc public static func createWithContentsOfFile(_ contentsOfFile: String) -> NSImageRep? {
     return self.init(contentsOfFile: contentsOfFile)
   }
 
@@ -172,7 +172,7 @@ extension NSImageRep: NSImageRepExports {
   /**
     - Selector: imageRepWithContentsOfURL:
   */
-  @objc public static func createWithImageRepWithContentsOfURL(_ contentsOf: URL) -> NSImageRep? {
+  @objc public static func createWithContentsOfURL(_ contentsOf: URL) -> NSImageRep? {
     return self.init(contentsOf: contentsOf)
   }
 
@@ -180,7 +180,7 @@ extension NSImageRep: NSImageRepExports {
   /**
     - Selector: imageRepWithPasteboard:
   */
-  @objc public static func createWithImageRepWithPasteboard(_ pasteboard: NSPasteboard) -> NSImageRep? {
+  @objc public static func createWithPasteboard(_ pasteboard: NSPasteboard) -> NSImageRep? {
     return self.init(pasteboard: pasteboard)
   }
 

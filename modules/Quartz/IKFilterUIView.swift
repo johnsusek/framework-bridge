@@ -41,19 +41,5 @@ import Quartz
   @objc func objectController() -> NSObjectController
 }
 
-@objc protocol FilterUIViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(FilterUIView) public class FilterUIView: IKFilterUIView, FilterUIViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension IKFilterUIView: IKFilterUIViewExports {
 }

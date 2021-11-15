@@ -27,13 +27,13 @@ import AppKit
     - Selector: segmentedControlWithImages:trackingMode:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithSegmentedControlWithImagesWithTrackingMode(_ images: [NSImage], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self
+  @objc @available(OSX 10.12, *) static func createWithImagesWithTrackingMode(_ images: [NSImage], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self
 
   /**
     - Selector: segmentedControlWithLabels:trackingMode:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithSegmentedControlWithLabelsWithTrackingMode(_ labels: [String], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self
+  @objc @available(OSX 10.12, *) static func createWithLabelsWithTrackingMode(_ labels: [String], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self
 
   // Instance Methods
 
@@ -217,39 +217,13 @@ import AppKit
   @objc @available(OSX 10.10.3, *) var trackingMode: NSSegmentedControl.SwitchTracking { @objc get @objc (setTrackingMode:) set }
 }
 
-@objc protocol SegmentedControlExports: JSExport, NSControlExports {
-  // Static Methods
-
-  /**
-    - Selector: segmentedControlWithImages:trackingMode:target:action:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithSegmentedControlWithImagesWithTrackingMode(_ images: [NSImage], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self
-
-  /**
-    - Selector: segmentedControlWithLabels:trackingMode:target:action:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithSegmentedControlWithLabelsWithTrackingMode(_ labels: [String], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self
-}
-
-@objc(SegmentedControl) public class SegmentedControl: NSSegmentedControl, SegmentedControlExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSSegmentedControl: NSSegmentedControlExports {
 
   /**
     - Selector: segmentedControlWithImages:trackingMode:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithSegmentedControlWithImagesWithTrackingMode(_ images: [NSImage], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self {
+  @objc public static func createWithImagesWithTrackingMode(_ images: [NSImage], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self {
     return self.init(images: images, trackingMode: trackingMode, target: nil, action: nil)
   }
 
@@ -258,7 +232,7 @@ extension NSSegmentedControl: NSSegmentedControlExports {
     - Selector: segmentedControlWithLabels:trackingMode:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithSegmentedControlWithLabelsWithTrackingMode(_ labels: [String], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self {
+  @objc public static func createWithLabelsWithTrackingMode(_ labels: [String], _ trackingMode: NSSegmentedControl.SwitchTracking) -> Self {
     return self.init(labels: labels, trackingMode: trackingMode, target: nil, action: nil)
   }
 

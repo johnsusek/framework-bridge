@@ -27,12 +27,12 @@ import AppKit
   /**
     - Selector: gridViewWithNumberOfColumns:rows:
   */
-  @objc static func createWithGridViewWithNumberOfColumnsWithRows(_ numberOfColumns: Int, _ rows: Int) -> Self
+  @objc static func createWithNumberOfColumnsWithRows(_ numberOfColumns: Int, _ rows: Int) -> Self
 
   /**
     - Selector: gridViewWithViews:
   */
-  @objc static func createWithGridViewWithViews(_ views: [[NSView]]) -> Self
+  @objc static func createWithViews(_ views: [[NSView]]) -> Self
 
   // Instance Methods
 
@@ -149,36 +149,12 @@ import AppKit
   @objc var yPlacement: NSGridCell.Placement { @objc get @objc (setYPlacement:) set }
 }
 
-@objc protocol GridViewExports: JSExport, NSViewExports {
-  // Static Methods
-
-  /**
-    - Selector: gridViewWithNumberOfColumns:rows:
-  */
-  @objc static func createWithGridViewWithNumberOfColumnsWithRows(_ numberOfColumns: Int, _ rows: Int) -> Self
-
-  /**
-    - Selector: gridViewWithViews:
-  */
-  @objc static func createWithGridViewWithViews(_ views: [[NSView]]) -> Self
-}
-
-@objc(GridView) public class GridView: NSGridView, GridViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSGridView: NSGridViewExports {
 
   /**
     - Selector: gridViewWithNumberOfColumns:rows:
   */
-  @objc public static func createWithGridViewWithNumberOfColumnsWithRows(_ numberOfColumns: Int, _ rows: Int) -> Self {
+  @objc public static func createWithNumberOfColumnsWithRows(_ numberOfColumns: Int, _ rows: Int) -> Self {
     return self.init(numberOfColumns: numberOfColumns, rows: rows)
   }
 
@@ -186,7 +162,7 @@ extension NSGridView: NSGridViewExports {
   /**
     - Selector: gridViewWithViews:
   */
-  @objc public static func createWithGridViewWithViews(_ views: [[NSView]]) -> Self {
+  @objc public static func createWithViews(_ views: [[NSView]]) -> Self {
     return self.init(views: views)
   }
 

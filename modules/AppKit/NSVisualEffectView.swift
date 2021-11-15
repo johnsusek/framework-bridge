@@ -58,19 +58,5 @@ import AppKit
   @objc var state: NSVisualEffectView.State { @objc get @objc (setState:) set }
 }
 
-@objc protocol VisualEffectViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(VisualEffectView) public class VisualEffectView: NSVisualEffectView, VisualEffectViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSVisualEffectView: NSVisualEffectViewExports {
 }

@@ -32,19 +32,5 @@ import AppKit
   @objc var rowTemplates: [NSPredicateEditorRowTemplate] { @objc get @objc (setRowTemplates:) set }
 }
 
-@objc protocol PredicateEditorExports: JSExport, NSRuleEditorExports {
-  // Static Methods
-}
-
-@objc(PredicateEditor) public class PredicateEditor: NSPredicateEditor, PredicateEditorExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSPredicateEditor: NSPredicateEditorExports {
 }

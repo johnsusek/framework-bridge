@@ -303,19 +303,5 @@ import AppKit
   @objc @available(OSX 10.10, *) var usesSingleLineMode: Bool { @objc get @objc (setUsesSingleLineMode:) set }
 }
 
-@objc protocol ControlExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(Control) public class Control: NSControl, ControlExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSControl: NSControlExports {
 }

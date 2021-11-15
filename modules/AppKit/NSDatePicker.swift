@@ -112,19 +112,5 @@ import AppKit
   @objc var timeZone: TimeZone? { @objc get @objc (setTimeZone:) set }
 }
 
-@objc protocol DatePickerExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(DatePicker) public class DatePicker: NSDatePicker, DatePickerExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSDatePicker: NSDatePickerExports {
 }

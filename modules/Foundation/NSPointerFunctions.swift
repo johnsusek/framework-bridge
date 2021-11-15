@@ -21,7 +21,7 @@ import Foundation
   /**
     - Selector: pointerFunctionsWithOptions:
   */
-  @objc static func createWithPointerFunctionsWithOptions(_ options: NSPointerFunctions.Options) -> NSPointerFunctions
+  @objc static func createWithOptions(_ options: NSPointerFunctions.Options) -> NSPointerFunctions
 
   // Own Instance Properties
 
@@ -61,7 +61,7 @@ extension NSPointerFunctions: NSPointerFunctionsExports {
   /**
     - Selector: pointerFunctionsWithOptions:
   */
-  @objc public static func createWithPointerFunctionsWithOptions(_ options: NSPointerFunctions.Options) -> NSPointerFunctions {
+  @objc public static func createWithOptions(_ options: NSPointerFunctions.Options) -> NSPointerFunctions {
     return self.init(options: options)
   }
 

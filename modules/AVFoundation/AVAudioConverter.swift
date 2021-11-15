@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: convertToBuffer:error:withInputFromBlock:
   */
-  // jsvalue @objc func convertToBufferWithErrorWithInputFromBlock(_ to: AVAudioBuffer, _ error: UnsafeMutablePointer<Error?>?, _ withInputFrom: JSValue) -> AVAudioConverterOutputStatus
+  // jsvalue @objc func convert(to: AVAudioBuffer, error: UnsafeMutablePointer<Error?>?, withInputFrom: JSValue) -> AVAudioConverterOutputStatus
 
   /**
     - Selector: convertToBuffer:fromBuffer:error:

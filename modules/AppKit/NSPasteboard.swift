@@ -35,7 +35,7 @@ import AppKit
   /**
     - Selector: pasteboardWithName:
   */
-  @objc static func createWithPasteboardWithName(_ name: NSPasteboard.Name) -> NSPasteboard
+  @objc static func createWithName(_ name: NSPasteboard.Name) -> NSPasteboard
 
   /**
     - Selector: pasteboardWithUniqueName
@@ -221,7 +221,7 @@ extension NSPasteboard: NSPasteboardExports {
   /**
     - Selector: pasteboardWithName:
   */
-  @objc public static func createWithPasteboardWithName(_ name: NSPasteboard.Name) -> NSPasteboard {
+  @objc public static func createWithName(_ name: NSPasteboard.Name) -> NSPasteboard {
     return self.init(name: name)
   }
 

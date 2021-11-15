@@ -21,22 +21,22 @@ import AppKit
   /**
     - Selector: fontCollectionWithDescriptors:
   */
-  @objc static func createWithFontCollectionWithDescriptors(_ descriptors: [NSFontDescriptor]) -> NSFontCollection
+  @objc static func createWithDescriptors(_ descriptors: [NSFontDescriptor]) -> NSFontCollection
 
   /**
     - Selector: fontCollectionWithLocale:
   */
-  @objc static func createWithFontCollectionWithLocale(_ locale: Locale) -> NSFontCollection?
+  @objc static func createWithLocale(_ locale: Locale) -> NSFontCollection?
 
   /**
     - Selector: fontCollectionWithName:
   */
-  @objc static func createWithFontCollectionWithName(_ name: NSFontCollection.Name) -> NSFontCollection?
+  @objc static func createWithName(_ name: NSFontCollection.Name) -> NSFontCollection?
 
   /**
     - Selector: fontCollectionWithName:visibility:
   */
-  @objc static func createWithFontCollectionWithNameWithVisibility(_ name: NSFontCollection.Name, _ visibility: NSFontCollection.Visibility) -> NSFontCollection?
+  @objc static func createWithNameWithVisibility(_ name: NSFontCollection.Name, _ visibility: NSFontCollection.Visibility) -> NSFontCollection?
 
   /**
     - Selector: hideFontCollectionWithName:visibility:error:
@@ -105,7 +105,7 @@ extension NSFontCollection: NSFontCollectionExports {
   /**
     - Selector: fontCollectionWithDescriptors:
   */
-  @objc public static func createWithFontCollectionWithDescriptors(_ descriptors: [NSFontDescriptor]) -> NSFontCollection {
+  @objc public static func createWithDescriptors(_ descriptors: [NSFontDescriptor]) -> NSFontCollection {
     return self.init(descriptors: descriptors)
   }
 
@@ -113,7 +113,7 @@ extension NSFontCollection: NSFontCollectionExports {
   /**
     - Selector: fontCollectionWithLocale:
   */
-  @objc public static func createWithFontCollectionWithLocale(_ locale: Locale) -> NSFontCollection? {
+  @objc public static func createWithLocale(_ locale: Locale) -> NSFontCollection? {
     return self.init(locale: locale)
   }
 
@@ -121,7 +121,7 @@ extension NSFontCollection: NSFontCollectionExports {
   /**
     - Selector: fontCollectionWithName:
   */
-  @objc public static func createWithFontCollectionWithName(_ name: NSFontCollection.Name) -> NSFontCollection? {
+  @objc public static func createWithName(_ name: NSFontCollection.Name) -> NSFontCollection? {
     return self.init(name: name)
   }
 
@@ -129,7 +129,7 @@ extension NSFontCollection: NSFontCollectionExports {
   /**
     - Selector: fontCollectionWithName:visibility:
   */
-  @objc public static func createWithFontCollectionWithNameWithVisibility(_ name: NSFontCollection.Name, _ visibility: NSFontCollection.Visibility) -> NSFontCollection? {
+  @objc public static func createWithNameWithVisibility(_ name: NSFontCollection.Name, _ visibility: NSFontCollection.Visibility) -> NSFontCollection? {
     return self.init(name: name, visibility: visibility)
   }
 

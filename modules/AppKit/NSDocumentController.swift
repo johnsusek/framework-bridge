@@ -40,13 +40,13 @@ import AppKit
     - Selector: beginOpenPanel:forTypes:completionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func beginOpenPanelForTypesWithCompletionHandler(_ p0: NSOpenPanel, _ forTypes: [String]?, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func beginOpenPanel(_: NSOpenPanel, forTypes: [String]?, completionHandler: JSValue)
 
   /**
     - Selector: beginOpenPanelWithCompletionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func beginOpenPanelWithCompletionHandler(_ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func beginOpenPanel(completionHandler: JSValue)
 
   /**
     - Selector: clearRecentDocuments:
@@ -123,7 +123,7 @@ import AppKit
     - Selector: openDocumentWithContentsOfURL:display:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func openDocumentWithContentsOfURLWithDisplayWithCompletionHandler(_ withContentsOf: URL, _ display: Bool, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func openDocument(withContentsOf: URL, display: Bool, completionHandler: JSValue)
 
   /**
     - Selector: openUntitledDocumentAndDisplay:error:
@@ -149,7 +149,7 @@ import AppKit
     - Selector: reopenDocumentForURL:withContentsOfURL:display:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func reopenDocumentForURLWithContentsOfURLWithDisplayWithCompletionHandler(_ for: URL?, _ withContentsOf: URL, _ display: Bool, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func reopenDocument(`for`: URL?, withContentsOf: URL, display: Bool, completionHandler: JSValue)
 
   /**
     - Selector: reviewUnsavedDocumentsWithAlertTitle:cancellable:delegate:didReviewAllSelector:contextInfo:

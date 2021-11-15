@@ -92,19 +92,5 @@ import AppKit
   @objc @available(OSX 10.10, *) var sendsWholeSearchString: Bool { @objc get @objc (setSendsWholeSearchString:) set }
 }
 
-@objc protocol SearchFieldExports: JSExport, NSTextFieldExports {
-  // Static Methods
-}
-
-@objc(SearchField) public class SearchField: NSSearchField, SearchFieldExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSSearchField: NSSearchFieldExports {
 }

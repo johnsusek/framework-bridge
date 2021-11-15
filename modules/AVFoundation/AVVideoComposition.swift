@@ -19,10 +19,16 @@ import AVFoundation
   // Static Methods
 
   /**
+    - Selector: videoCompositionWithAsset:applyingCIFiltersWithHandler:
+    - Introduced: 10.11
+  */
+// jsvalue   @objc @available(OSX 10.11, *) static func createWithAssetWithApplyingCIFiltersWithHandler(_ asset: AVAsset, _ applyingCIFiltersWithHandler: JSValue) -> AVVideoComposition
+
+  /**
     - Selector: videoCompositionWithPropertiesOfAsset:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func createWithVideoCompositionWithPropertiesOfAsset(_ propertiesOf: AVAsset) -> AVVideoComposition
+  @objc @available(OSX 10.9, *) static func createWithPropertiesOfAsset(_ propertiesOf: AVAsset) -> AVVideoComposition
 
   // Instance Methods
 
@@ -94,10 +100,21 @@ import AVFoundation
 extension AVVideoComposition: AVVideoCompositionExports {
 
   /**
+    - Selector: videoCompositionWithAsset:applyingCIFiltersWithHandler:
+    - Introduced: 10.11
+  */
+  @objc public static func createWithAssetWithApplyingCIFiltersWithHandler(_ asset: AVAsset, _ applyingCIFiltersWithHandler: JSValue) -> AVVideoComposition {
+    return self.init(asset: asset, applyingCIFiltersWithHandler: { p1 in
+      applyingCIFiltersWithHandler.call(withArguments: [p1 as AnyObject])!
+    })
+  }
+
+
+  /**
     - Selector: videoCompositionWithPropertiesOfAsset:
     - Introduced: 10.9
   */
-  @objc public static func createWithVideoCompositionWithPropertiesOfAsset(_ propertiesOf: AVAsset) -> AVVideoComposition {
+  @objc public static func createWithPropertiesOfAsset(_ propertiesOf: AVAsset) -> AVVideoComposition {
     return self.init(propertiesOf: propertiesOf)
   }
 

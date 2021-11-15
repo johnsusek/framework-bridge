@@ -58,19 +58,5 @@ import AppKit
   @objc var tableView: NSTableView? { @objc get @objc (setTableView:) set }
 }
 
-@objc protocol TableHeaderViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(TableHeaderView) public class TableHeaderView: NSTableHeaderView, TableHeaderViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSTableHeaderView: NSTableHeaderViewExports {
 }

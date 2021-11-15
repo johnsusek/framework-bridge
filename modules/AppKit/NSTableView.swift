@@ -125,7 +125,7 @@ import AppKit
     - Selector: enumerateAvailableRowViewsUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func enumerateAvailableRowViewsUsingBlock(_ p0: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func enumerateAvailableRowViews(_: JSValue)
 
   /**
     - Selector: frameOfCellAtColumn:row:
@@ -555,20 +555,6 @@ import AppKit
     - Selector: verticalMotionCanBeginDrag
   */
   @objc var verticalMotionCanBeginDrag: Bool { @objc get @objc (setVerticalMotionCanBeginDrag:) set }
-}
-
-@objc protocol TableViewExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(TableView) public class TableView: NSTableView, TableViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
 }
 
 extension NSTableView: NSTableViewExports {

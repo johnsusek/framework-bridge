@@ -21,12 +21,12 @@ import AVFoundation
   /**
     - Selector: playerLooperWithPlayer:templateItem:
   */
-  @objc static func createWithPlayerLooperWithPlayerWithTemplateItem(_ player: AVQueuePlayer, _ templateItem: AVPlayerItem) -> Self
+  @objc static func createWithPlayerWithTemplateItem(_ player: AVQueuePlayer, _ templateItem: AVPlayerItem) -> Self
 
   /**
     - Selector: playerLooperWithPlayer:templateItem:timeRange:
   */
-  @objc static func createWithPlayerLooperWithPlayerWithTemplateItemWithTimeRange(_ player: AVQueuePlayer, _ templateItem: AVPlayerItem, _ timeRange: CMTimeRange) -> Self
+  @objc static func createWithPlayerWithTemplateItemWithTimeRange(_ player: AVQueuePlayer, _ templateItem: AVPlayerItem, _ timeRange: CMTimeRange) -> Self
 
   // Instance Methods
 
@@ -63,7 +63,7 @@ extension AVPlayerLooper: AVPlayerLooperExports {
   /**
     - Selector: playerLooperWithPlayer:templateItem:
   */
-  @objc public static func createWithPlayerLooperWithPlayerWithTemplateItem(_ player: AVQueuePlayer, _ templateItem: AVPlayerItem) -> Self {
+  @objc public static func createWithPlayerWithTemplateItem(_ player: AVQueuePlayer, _ templateItem: AVPlayerItem) -> Self {
     return self.init(player: player, templateItem: templateItem)
   }
 
@@ -71,7 +71,7 @@ extension AVPlayerLooper: AVPlayerLooperExports {
   /**
     - Selector: playerLooperWithPlayer:templateItem:timeRange:
   */
-  @objc public static func createWithPlayerLooperWithPlayerWithTemplateItemWithTimeRange(_ player: AVQueuePlayer, _ templateItem: AVPlayerItem, _ timeRange: CMTimeRange) -> Self {
+  @objc public static func createWithPlayerWithTemplateItemWithTimeRange(_ player: AVQueuePlayer, _ templateItem: AVPlayerItem, _ timeRange: CMTimeRange) -> Self {
     return self.init(player: player, templateItem: templateItem, timeRange: timeRange)
   }
 

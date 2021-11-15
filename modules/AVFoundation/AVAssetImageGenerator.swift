@@ -21,7 +21,7 @@ import AVFoundation
   /**
     - Selector: assetImageGeneratorWithAsset:
   */
-  @objc static func createWithAssetImageGeneratorWithAsset(_ asset: AVAsset) -> Self
+  @objc static func createWithAsset(_ asset: AVAsset) -> Self
 
   // Instance Methods
 
@@ -38,7 +38,7 @@ import AVFoundation
   /**
     - Selector: generateCGImagesAsynchronouslyForTimes:completionHandler:
   */
-  // jsvalue @objc func generateCGImagesAsynchronouslyForTimesWithCompletionHandler(_ forTimes: [NSValue], _ completionHandler: JSValue)
+  // jsvalue @objc func generateCGImagesAsynchronously(forTimes: [NSValue], completionHandler: JSValue)
 
   // Own Instance Properties
 
@@ -92,7 +92,7 @@ extension AVAssetImageGenerator: AVAssetImageGeneratorExports {
   /**
     - Selector: assetImageGeneratorWithAsset:
   */
-  @objc public static func createWithAssetImageGeneratorWithAsset(_ asset: AVAsset) -> Self {
+  @objc public static func createWithAsset(_ asset: AVAsset) -> Self {
     return self.init(asset: asset)
   }
 

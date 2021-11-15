@@ -23,7 +23,7 @@ import AppKit
     - Deprecated: 100000
     - Message: NSControlTint does not describe the full range of available control accent colors. Use +[NSColor controlAccentColor] instead.
   */
-  @objc @available(OSX 10.0, *) static func createWithColorForControlTint(_ for: NSControlTint) -> NSColor
+  @objc @available(OSX 10.0, *) static func createWithColorForControlTint(_ `for`: NSControlTint) -> NSColor
 
   /**
     - Selector: colorFromPasteboard:
@@ -46,110 +46,110 @@ import AppKit
     - Selector: colorWithCGColor:
     - Introduced: 10.8
   */
-  @objc @available(OSX 10.8, *) static func createWithColorWithCGColor(_ cgColor: CGColor) -> NSColor?
+  @objc @available(OSX 10.8, *) static func createWithCGColor(_ cgColor: CGColor) -> NSColor?
 
   /**
     - Selector: colorWithCIColor:
   */
-  @objc static func createWithColorWithCIColor(_ ciColor: CIColor) -> NSColor
+  @objc static func createWithCIColor(_ ciColor: CIColor) -> NSColor
 
   /**
     - Selector: colorWithCalibratedHue:saturation:brightness:alpha:
   */
-  @objc static func createWithColorWithCalibratedHueWithSaturationWithBrightnessWithAlpha(_ calibratedHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithCalibratedHueWithSaturationWithBrightnessWithAlpha(_ calibratedHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithCalibratedRed:green:blue:alpha:
   */
-  @objc static func createWithColorWithCalibratedRedWithGreenWithBlueWithAlpha(_ calibratedRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithCalibratedRedWithGreenWithBlueWithAlpha(_ calibratedRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithCalibratedWhite:alpha:
   */
-  @objc static func createWithColorWithCalibratedWhiteWithAlpha(_ calibratedWhite: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithCalibratedWhiteWithAlpha(_ calibratedWhite: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithCatalogName:colorName:
   */
-  @objc static func createWithColorWithCatalogNameWithColorName(_ catalogName: NSColorList.Name, _ colorName: NSColor.Name) -> NSColor?
+  @objc static func createWithCatalogNameWithColorName(_ catalogName: NSColorList.Name, _ colorName: NSColor.Name) -> NSColor?
 
   /**
     - Selector: colorWithColorSpace:components:count:
   */
-  @objc static func createWithColorWithColorSpaceWithComponentsWithCount(_ colorSpace: NSColorSpace, _ components: UnsafePointer<CGFloat>, _ count: Int) -> NSColor
+  @objc static func createWithColorSpaceWithComponentsWithCount(_ colorSpace: NSColorSpace, _ components: UnsafePointer<CGFloat>, _ count: Int) -> NSColor
 
   /**
     - Selector: colorWithColorSpace:hue:saturation:brightness:alpha:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithColorWithColorSpaceWithHueWithSaturationWithBrightnessWithAlpha(_ colorSpace: NSColorSpace, _ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.12, *) static func createWithColorSpaceWithHueWithSaturationWithBrightnessWithAlpha(_ colorSpace: NSColorSpace, _ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDeviceCyan:magenta:yellow:black:alpha:
   */
-  @objc static func createWithColorWithDeviceCyanWithMagentaWithYellowWithBlackWithAlpha(_ deviceCyan: CGFloat, _ magenta: CGFloat, _ yellow: CGFloat, _ black: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithDeviceCyanWithMagentaWithYellowWithBlackWithAlpha(_ deviceCyan: CGFloat, _ magenta: CGFloat, _ yellow: CGFloat, _ black: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDeviceHue:saturation:brightness:alpha:
   */
-  @objc static func createWithColorWithDeviceHueWithSaturationWithBrightnessWithAlpha(_ deviceHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithDeviceHueWithSaturationWithBrightnessWithAlpha(_ deviceHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDeviceRed:green:blue:alpha:
   */
-  @objc static func createWithColorWithDeviceRedWithGreenWithBlueWithAlpha(_ deviceRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithDeviceRedWithGreenWithBlueWithAlpha(_ deviceRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDeviceWhite:alpha:
   */
-  @objc static func createWithColorWithDeviceWhiteWithAlpha(_ deviceWhite: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithDeviceWhiteWithAlpha(_ deviceWhite: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDisplayP3Red:green:blue:alpha:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithColorWithDisplayP3RedWithGreenWithBlueWithAlpha(_ displayP3Red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.12, *) static func createWithDisplayP3RedWithGreenWithBlueWithAlpha(_ displayP3Red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithGenericGamma22White:alpha:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func createWithColorWithGenericGamma22WhiteWithAlpha(_ genericGamma22White: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.7, *) static func createWithGenericGamma22WhiteWithAlpha(_ genericGamma22White: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithHue:saturation:brightness:alpha:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func createWithColorWithHueWithSaturationWithBrightnessWithAlpha(_ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.9, *) static func createWithHueWithSaturationWithBrightnessWithAlpha(_ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithName:dynamicProvider:
     - Introduced: 10.15
   */
-// jsvalue   @objc @available(OSX 10.15, *) static func createWithColorWithNameWithDynamicProvider(_ name: NSColor.Name?, _ dynamicProvider: JSValue) -> NSColor
+// jsvalue   @objc @available(OSX 10.15, *) static func createWithNameWithDynamicProvider(_ name: NSColor.Name?, _ dynamicProvider: JSValue) -> NSColor
 
   /**
     - Selector: colorWithPatternImage:
   */
-  @objc static func createWithColorWithPatternImage(_ patternImage: NSImage) -> NSColor
+  @objc static func createWithPatternImage(_ patternImage: NSImage) -> NSColor
 
   /**
     - Selector: colorWithRed:green:blue:alpha:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func createWithColorWithRedWithGreenWithBlueWithAlpha(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.9, *) static func createWithRedWithGreenWithBlueWithAlpha(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithSRGBRed:green:blue:alpha:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func createWithColorWithSRGBRedWithGreenWithBlueWithAlpha(_ srgbRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.7, *) static func createWithSRGBRedWithGreenWithBlueWithAlpha(_ srgbRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithWhite:alpha:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func createWithColorWithWhiteWithAlpha(_ white: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.9, *) static func createWithWhiteWithAlpha(_ white: CGFloat, _ alpha: CGFloat) -> NSColor
 
   // Own Static Properties
 
@@ -806,7 +806,7 @@ extension NSColor: NSColorExports {
     - Deprecated: 100000
     - Message: NSControlTint does not describe the full range of available control accent colors. Use +[NSColor controlAccentColor] instead.
   */
-  @objc public static func createWithColorForControlTint(_ for: NSControlTint) -> NSColor {
+  @objc public static func createWithColorForControlTint(_ `for`: NSControlTint) -> NSColor {
     return self.init(for: `for`)
   }
 
@@ -841,7 +841,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithCGColor:
     - Introduced: 10.8
   */
-  @objc public static func createWithColorWithCGColor(_ cgColor: CGColor) -> NSColor? {
+  @objc public static func createWithCGColor(_ cgColor: CGColor) -> NSColor? {
     return self.init(cgColor: cgColor)
   }
 
@@ -849,7 +849,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCIColor:
   */
-  @objc public static func createWithColorWithCIColor(_ ciColor: CIColor) -> NSColor {
+  @objc public static func createWithCIColor(_ ciColor: CIColor) -> NSColor {
     return self.init(ciColor: ciColor)
   }
 
@@ -857,7 +857,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCalibratedHue:saturation:brightness:alpha:
   */
-  @objc public static func createWithColorWithCalibratedHueWithSaturationWithBrightnessWithAlpha(_ calibratedHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithCalibratedHueWithSaturationWithBrightnessWithAlpha(_ calibratedHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(calibratedHue: calibratedHue, saturation: saturation, brightness: brightness, alpha: alpha)
   }
 
@@ -865,7 +865,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCalibratedRed:green:blue:alpha:
   */
-  @objc public static func createWithColorWithCalibratedRedWithGreenWithBlueWithAlpha(_ calibratedRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithCalibratedRedWithGreenWithBlueWithAlpha(_ calibratedRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(calibratedRed: calibratedRed, green: green, blue: blue, alpha: alpha)
   }
 
@@ -873,7 +873,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCalibratedWhite:alpha:
   */
-  @objc public static func createWithColorWithCalibratedWhiteWithAlpha(_ calibratedWhite: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithCalibratedWhiteWithAlpha(_ calibratedWhite: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(calibratedWhite: calibratedWhite, alpha: alpha)
   }
 
@@ -881,7 +881,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCatalogName:colorName:
   */
-  @objc public static func createWithColorWithCatalogNameWithColorName(_ catalogName: NSColorList.Name, _ colorName: NSColor.Name) -> NSColor? {
+  @objc public static func createWithCatalogNameWithColorName(_ catalogName: NSColorList.Name, _ colorName: NSColor.Name) -> NSColor? {
     return self.init(catalogName: catalogName, colorName: colorName)
   }
 
@@ -889,7 +889,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithColorSpace:components:count:
   */
-  @objc public static func createWithColorWithColorSpaceWithComponentsWithCount(_ colorSpace: NSColorSpace, _ components: UnsafePointer<CGFloat>, _ count: Int) -> NSColor {
+  @objc public static func createWithColorSpaceWithComponentsWithCount(_ colorSpace: NSColorSpace, _ components: UnsafePointer<CGFloat>, _ count: Int) -> NSColor {
     return self.init(colorSpace: colorSpace, components: components, count: count)
   }
 
@@ -898,7 +898,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithColorSpace:hue:saturation:brightness:alpha:
     - Introduced: 10.12
   */
-  @objc public static func createWithColorWithColorSpaceWithHueWithSaturationWithBrightnessWithAlpha(_ colorSpace: NSColorSpace, _ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithColorSpaceWithHueWithSaturationWithBrightnessWithAlpha(_ colorSpace: NSColorSpace, _ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(colorSpace: colorSpace, hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
   }
 
@@ -906,7 +906,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithDeviceCyan:magenta:yellow:black:alpha:
   */
-  @objc public static func createWithColorWithDeviceCyanWithMagentaWithYellowWithBlackWithAlpha(_ deviceCyan: CGFloat, _ magenta: CGFloat, _ yellow: CGFloat, _ black: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDeviceCyanWithMagentaWithYellowWithBlackWithAlpha(_ deviceCyan: CGFloat, _ magenta: CGFloat, _ yellow: CGFloat, _ black: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(deviceCyan: deviceCyan, magenta: magenta, yellow: yellow, black: black, alpha: alpha)
   }
 
@@ -914,7 +914,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithDeviceHue:saturation:brightness:alpha:
   */
-  @objc public static func createWithColorWithDeviceHueWithSaturationWithBrightnessWithAlpha(_ deviceHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDeviceHueWithSaturationWithBrightnessWithAlpha(_ deviceHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(deviceHue: deviceHue, saturation: saturation, brightness: brightness, alpha: alpha)
   }
 
@@ -922,7 +922,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithDeviceRed:green:blue:alpha:
   */
-  @objc public static func createWithColorWithDeviceRedWithGreenWithBlueWithAlpha(_ deviceRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDeviceRedWithGreenWithBlueWithAlpha(_ deviceRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(deviceRed: deviceRed, green: green, blue: blue, alpha: alpha)
   }
 
@@ -930,7 +930,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithDeviceWhite:alpha:
   */
-  @objc public static func createWithColorWithDeviceWhiteWithAlpha(_ deviceWhite: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDeviceWhiteWithAlpha(_ deviceWhite: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(deviceWhite: deviceWhite, alpha: alpha)
   }
 
@@ -939,7 +939,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithDisplayP3Red:green:blue:alpha:
     - Introduced: 10.12
   */
-  @objc public static func createWithColorWithDisplayP3RedWithGreenWithBlueWithAlpha(_ displayP3Red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDisplayP3RedWithGreenWithBlueWithAlpha(_ displayP3Red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(displayP3Red: displayP3Red, green: green, blue: blue, alpha: alpha)
   }
 
@@ -948,7 +948,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithGenericGamma22White:alpha:
     - Introduced: 10.7
   */
-  @objc public static func createWithColorWithGenericGamma22WhiteWithAlpha(_ genericGamma22White: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithGenericGamma22WhiteWithAlpha(_ genericGamma22White: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(genericGamma22White: genericGamma22White, alpha: alpha)
   }
 
@@ -957,7 +957,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithHue:saturation:brightness:alpha:
     - Introduced: 10.9
   */
-  @objc public static func createWithColorWithHueWithSaturationWithBrightnessWithAlpha(_ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithHueWithSaturationWithBrightnessWithAlpha(_ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
   }
 
@@ -966,7 +966,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithName:dynamicProvider:
     - Introduced: 10.15
   */
-  @objc public static func createWithColorWithNameWithDynamicProvider(_ name: NSColor.Name?, _ dynamicProvider: JSValue) -> NSColor {
+  @objc public static func createWithNameWithDynamicProvider(_ name: NSColor.Name?, _ dynamicProvider: JSValue) -> NSColor {
     return self.init(name: name, dynamicProvider: { p1 in
       let res = dynamicProvider.call(withArguments: [p1 as AnyObject])!
       return res.toObjectOf(NSColor.self) as! NSColor 
@@ -977,7 +977,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithPatternImage:
   */
-  @objc public static func createWithColorWithPatternImage(_ patternImage: NSImage) -> NSColor {
+  @objc public static func createWithPatternImage(_ patternImage: NSImage) -> NSColor {
     return self.init(patternImage: patternImage)
   }
 
@@ -986,7 +986,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithRed:green:blue:alpha:
     - Introduced: 10.9
   */
-  @objc public static func createWithColorWithRedWithGreenWithBlueWithAlpha(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithRedWithGreenWithBlueWithAlpha(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(red: red, green: green, blue: blue, alpha: alpha)
   }
 
@@ -995,7 +995,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithSRGBRed:green:blue:alpha:
     - Introduced: 10.7
   */
-  @objc public static func createWithColorWithSRGBRedWithGreenWithBlueWithAlpha(_ srgbRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithSRGBRedWithGreenWithBlueWithAlpha(_ srgbRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(srgbRed: srgbRed, green: green, blue: blue, alpha: alpha)
   }
 
@@ -1004,7 +1004,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithWhite:alpha:
     - Introduced: 10.9
   */
-  @objc public static func createWithColorWithWhiteWithAlpha(_ white: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithWhiteWithAlpha(_ white: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(white: white, alpha: alpha)
   }
 

@@ -20,17 +20,17 @@ import Quartz
   /**
     - Selector: quartzFilterWithOutputIntents:
   */
-  @objc static func createWithQuartzFilterWithOutputIntents(_ outputIntents: [Any]) -> QuartzFilter
+  @objc static func createWithOutputIntents(_ outputIntents: [Any]) -> QuartzFilter
 
   /**
     - Selector: quartzFilterWithProperties:
   */
-  @objc static func createWithQuartzFilterWithProperties(_ properties: [AnyHashable: Any]) -> QuartzFilter
+  @objc static func createWithProperties(_ properties: [AnyHashable: Any]) -> QuartzFilter
 
   /**
     - Selector: quartzFilterWithURL:
   */
-  @objc static func createWithQuartzFilterWithURL(_ url: URL) -> QuartzFilter
+  @objc static func createWithURL(_ url: URL) -> QuartzFilter
 
   // Instance Methods
 
@@ -65,7 +65,7 @@ extension QuartzFilter: QuartzFilterExports {
   /**
     - Selector: quartzFilterWithOutputIntents:
   */
-  @objc public static func createWithQuartzFilterWithOutputIntents(_ outputIntents: [Any]) -> QuartzFilter {
+  @objc public static func createWithOutputIntents(_ outputIntents: [Any]) -> QuartzFilter {
     return self.init(outputIntents: outputIntents)
   }
 
@@ -73,7 +73,7 @@ extension QuartzFilter: QuartzFilterExports {
   /**
     - Selector: quartzFilterWithProperties:
   */
-  @objc public static func createWithQuartzFilterWithProperties(_ properties: [AnyHashable: Any]) -> QuartzFilter {
+  @objc public static func createWithProperties(_ properties: [AnyHashable: Any]) -> QuartzFilter {
     return self.init(properties: properties)
   }
 
@@ -81,7 +81,7 @@ extension QuartzFilter: QuartzFilterExports {
   /**
     - Selector: quartzFilterWithURL:
   */
-  @objc public static func createWithQuartzFilterWithURL(_ url: URL) -> QuartzFilter {
+  @objc public static func createWithURL(_ url: URL) -> QuartzFilter {
     return self.init(url: url)
   }
 

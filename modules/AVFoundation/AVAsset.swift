@@ -21,7 +21,7 @@ import AVFoundation
   /**
     - Selector: assetWithURL:
   */
-  @objc static func createWithAssetWithURL(_ url: URL) -> Self
+  @objc static func createWithURL(_ url: URL) -> Self
 
   // Instance Methods
 
@@ -234,7 +234,7 @@ extension AVAsset: AVAssetExports {
   /**
     - Selector: assetWithURL:
   */
-  @objc public static func createWithAssetWithURL(_ url: URL) -> Self {
+  @objc public static func createWithURL(_ url: URL) -> Self {
     return self.init(url: url)
   }
 

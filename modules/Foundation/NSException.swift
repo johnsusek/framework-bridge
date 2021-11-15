@@ -20,7 +20,7 @@ import Foundation
   /**
     - Selector: exceptionWithName:reason:userInfo:
   */
-  @objc static func createWithExceptionWithNameWithReasonWithUserInfo(_ name: NSExceptionName, _ reason: String?, _ userInfo: [AnyHashable: Any]?) -> NSException
+  @objc static func createWithNameWithReasonWithUserInfo(_ name: NSExceptionName, _ reason: String?, _ userInfo: [AnyHashable: Any]?) -> NSException
 
   // Instance Methods
 
@@ -64,7 +64,7 @@ extension NSException: NSExceptionExports {
   /**
     - Selector: exceptionWithName:reason:userInfo:
   */
-  @objc public static func createWithExceptionWithNameWithReasonWithUserInfo(_ name: NSExceptionName, _ reason: String?, _ userInfo: [AnyHashable: Any]?) -> NSException {
+  @objc public static func createWithNameWithReasonWithUserInfo(_ name: NSExceptionName, _ reason: String?, _ userInfo: [AnyHashable: Any]?) -> NSException {
     return self.init(name: name, reason: reason, userInfo: userInfo)
   }
 

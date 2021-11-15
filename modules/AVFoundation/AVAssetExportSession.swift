@@ -27,7 +27,7 @@ import AVFoundation
     - Selector: determineCompatibilityOfExportPreset:withAsset:outputFileType:completionHandler:
     - Introduced: 10.9
   */
-// jsvalue   @objc @available(OSX 10.9, *) static func determineCompatibilityOfExportPresetWithAssetWithOutputFileTypeWithCompletionHandler(_ ofExportPreset: String, _ with: AVAsset, _ outputFileType: AVFileType?, _ completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.9, *) static func determineCompatibility(ofExportPreset: String, with: AVAsset, outputFileType: AVFileType?, completionHandler: JSValue)
 
   /**
     - Selector: exportPresetsCompatibleWithAsset:
@@ -51,24 +51,24 @@ import AVFoundation
     - Selector: determineCompatibleFileTypesWithCompletionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func determineCompatibleFileTypesWithCompletionHandler(_ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func determineCompatibleFileTypes(completionHandler: JSValue)
 
   /**
     - Selector: estimateMaximumDurationWithCompletionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func estimateMaximumDurationWithCompletionHandler(_ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func estimateMaximumDuration(completionHandler: JSValue)
 
   /**
     - Selector: estimateOutputFileLengthWithCompletionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func estimateOutputFileLengthWithCompletionHandler(_ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func estimateOutputFileLength(completionHandler: JSValue)
 
   /**
     - Selector: exportAsynchronouslyWithCompletionHandler:
   */
-  // jsvalue @objc func exportAsynchronouslyWithCompletionHandler(_ completionHandler: JSValue)
+  // jsvalue @objc func exportAsynchronously(completionHandler: JSValue)
 
   // Own Instance Properties
 

@@ -23,6 +23,11 @@ import AppKit
   @objc (canInitWithData:) static func canInit(with: Data) -> Bool
 
   /**
+    - Selector: imageRepWithData:
+  */
+  @objc static func createWithImageRepWithData(_ data: Data) -> Self?
+
+  /**
     - Selector: imageRepsWithContentsOfFile:
   */
   @objc (imageRepsWithContentsOfFile:) static func imageReps(withContentsOfFile: String) -> [NSImageRep]?
@@ -61,4 +66,12 @@ import AppKit
 }
 
 extension NSPDFImageRep: NSPDFImageRepExports {
+
+  /**
+    - Selector: imageRepWithData:
+  */
+  @objc public static func createWithImageRepWithData(_ data: Data) -> Self? {
+    return self.init(data: data)
+  }
+
 }

@@ -149,19 +149,5 @@ import Quartz
   @objc var transferMode: IKCameraDeviceViewTransferMode { @objc get @objc (setTransferMode:) set }
 }
 
-@objc protocol CameraDeviceViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(CameraDeviceView) public class CameraDeviceView: IKCameraDeviceView, CameraDeviceViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension IKCameraDeviceView: IKCameraDeviceViewExports {
 }

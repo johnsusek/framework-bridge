@@ -51,19 +51,5 @@ import AppKit
   @objc var valueWraps: Bool { @objc get @objc (setValueWraps:) set }
 }
 
-@objc protocol StepperExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(Stepper) public class Stepper: NSStepper, StepperExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSStepper: NSStepperExports {
 }

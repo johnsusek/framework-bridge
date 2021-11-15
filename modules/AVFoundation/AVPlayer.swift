@@ -21,12 +21,12 @@ import AVFoundation
   /**
     - Selector: playerWithPlayerItem:
   */
-  @objc static func createWithPlayerWithPlayerItem(_ playerItem: AVPlayerItem?) -> Self
+  @objc static func createWithPlayerItem(_ playerItem: AVPlayerItem?) -> Self
 
   /**
     - Selector: playerWithURL:
   */
-  @objc static func createWithPlayerWithURL(_ url: URL) -> Self
+  @objc static func createWithURL(_ url: URL) -> Self
 
   // Own Static Properties
 
@@ -41,12 +41,12 @@ import AVFoundation
   /**
     - Selector: addBoundaryTimeObserverForTimes:queue:usingBlock:
   */
-  // jsvalue @objc func addBoundaryTimeObserverForTimesWithQueueWithUsingBlock(_ forTimes: [NSValue], _ queue: DispatchQueue?, _ using: JSValue) -> Any
+  // jsvalue @objc func addBoundaryTimeObserver(forTimes: [NSValue], queue: DispatchQueue?, using: JSValue) -> Any
 
   /**
     - Selector: addPeriodicTimeObserverForInterval:queue:usingBlock:
   */
-  // jsvalue @objc func addPeriodicTimeObserverForIntervalWithQueueWithUsingBlock(_ forInterval: CMTime, _ queue: DispatchQueue?, _ using: JSValue) -> Any
+  // jsvalue @objc func addPeriodicTimeObserver(forInterval: CMTime, queue: DispatchQueue?, using: JSValue) -> Any
 
   /**
     - Selector: cancelPendingPrerolls
@@ -85,7 +85,7 @@ import AVFoundation
     - Selector: prerollAtRate:completionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func prerollAtRateWithCompletionHandler(_ atRate: Float, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func preroll(atRate: Float, completionHandler: JSValue)
 
   /**
     - Selector: removeTimeObserver:
@@ -106,7 +106,7 @@ import AVFoundation
     - Selector: seekToDate:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seekToDateWithCompletionHandler(_ to: Date, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seek(to: Date, completionHandler: JSValue)
 
   /**
     - Selector: seekToTime:
@@ -117,7 +117,7 @@ import AVFoundation
     - Selector: seekToTime:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seekToTimeWithCompletionHandler(_ to: CMTime, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seek(to: CMTime, completionHandler: JSValue)
 
   /**
     - Selector: seekToTime:toleranceBefore:toleranceAfter:
@@ -128,7 +128,7 @@ import AVFoundation
     - Selector: seekToTime:toleranceBefore:toleranceAfter:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seekToTimeWithToleranceBeforeWithToleranceAfterWithCompletionHandler(_ to: CMTime, _ toleranceBefore: CMTime, _ toleranceAfter: CMTime, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seek(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime, completionHandler: JSValue)
 
   /**
     - Selector: setMediaSelectionCriteria:forMediaCharacteristic:
@@ -247,7 +247,7 @@ extension AVPlayer: AVPlayerExports {
   /**
     - Selector: playerWithPlayerItem:
   */
-  @objc public static func createWithPlayerWithPlayerItem(_ playerItem: AVPlayerItem?) -> Self {
+  @objc public static func createWithPlayerItem(_ playerItem: AVPlayerItem?) -> Self {
     return self.init(playerItem: playerItem)
   }
 
@@ -255,7 +255,7 @@ extension AVPlayer: AVPlayerExports {
   /**
     - Selector: playerWithURL:
   */
-  @objc public static func createWithPlayerWithURL(_ url: URL) -> Self {
+  @objc public static func createWithURL(_ url: URL) -> Self {
     return self.init(url: url)
   }
 

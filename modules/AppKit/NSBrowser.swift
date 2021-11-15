@@ -471,19 +471,5 @@ import AppKit
   @objc var isTitled: Bool { @objc get @objc (setTitled:) set }
 }
 
-@objc protocol BrowserExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(Browser) public class Browser: NSBrowser, BrowserExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSBrowser: NSBrowserExports {
 }

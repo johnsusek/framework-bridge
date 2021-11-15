@@ -42,19 +42,5 @@ import AppKit
   @objc var imageView: NSImageView { @objc get }
 }
 
-@objc protocol ScrubberImageItemViewExports: JSExport, NSScrubberItemViewExports {
-  // Static Methods
-}
-
-@objc(ScrubberImageItemView) public class ScrubberImageItemView: NSScrubberImageItemView, ScrubberImageItemViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSScrubberImageItemView: NSScrubberImageItemViewExports {
 }

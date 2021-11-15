@@ -95,19 +95,5 @@ import AppKit
   @objc @available(OSX 10.10, *) var placeholderString: String? { @objc get @objc (setPlaceholderString:) set }
 }
 
-@objc protocol PathControlExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(PathControl) public class PathControl: NSPathControl, PathControlExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSPathControl: NSPathControlExports {
 }

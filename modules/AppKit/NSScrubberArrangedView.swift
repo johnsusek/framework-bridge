@@ -44,19 +44,5 @@ import AppKit
   @objc var isSelected: Bool { @objc get @objc (setSelected:) set }
 }
 
-@objc protocol ScrubberArrangedViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(ScrubberArrangedView) public class ScrubberArrangedView: NSScrubberArrangedView, ScrubberArrangedViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSScrubberArrangedView: NSScrubberArrangedViewExports {
 }

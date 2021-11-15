@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: storyboardWithName:bundle:
   */
-  @objc static func createWithStoryboardWithNameWithBundle(_ name: NSStoryboard.Name, _ bundle: Bundle?) -> Self
+  @objc static func createWithNameWithBundle(_ name: NSStoryboard.Name, _ bundle: Bundle?) -> Self
 
   // Own Static Properties
 
@@ -42,7 +42,7 @@ import AppKit
     - Selector: instantiateControllerWithIdentifier:creator:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func instantiateControllerWithIdentifierCreator(_ creator: NSStoryboard.SceneIdentifier, creator creator1: JSValue?) -> Any
+  // jsvalue @objc @available(OSX 10.15, *) func instantiateControllerWithIdentifier(_: NSStoryboard.SceneIdentifier, creator: JSValue?) -> Any
 
   /**
     - Selector: instantiateInitialController
@@ -53,7 +53,7 @@ import AppKit
     - Selector: instantiateInitialControllerWithCreator:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func instantiateInitialControllerWithCreator(_ p0: JSValue?) -> Any?
+  // jsvalue @objc @available(OSX 10.15, *) func instantiateInitialControllerWithCreator(_: JSValue?) -> Any?
 }
 
 extension NSStoryboard: NSStoryboardExports {
@@ -61,7 +61,7 @@ extension NSStoryboard: NSStoryboardExports {
   /**
     - Selector: storyboardWithName:bundle:
   */
-  @objc public static func createWithStoryboardWithNameWithBundle(_ name: NSStoryboard.Name, _ bundle: Bundle?) -> Self {
+  @objc public static func createWithNameWithBundle(_ name: NSStoryboard.Name, _ bundle: Bundle?) -> Self {
     return self.init(name: name, bundle: bundle)
   }
 

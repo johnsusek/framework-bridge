@@ -21,19 +21,19 @@ import AppKit
     - Selector: buttonWithImage:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithButtonWithImage(_ image: NSImage) -> Self
+  @objc @available(OSX 10.12, *) static func createWithImage(_ image: NSImage) -> Self
 
   /**
     - Selector: buttonWithTitle:image:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithButtonWithTitleWithImage(_ title: String, _ image: NSImage) -> Self
+  @objc @available(OSX 10.12, *) static func createWithTitleWithImage(_ title: String, _ image: NSImage) -> Self
 
   /**
     - Selector: buttonWithTitle:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithButtonWithTitle(_ title: String) -> Self
+  @objc @available(OSX 10.12, *) static func createWithTitle(_ title: String) -> Self
 
   /**
     - Selector: checkboxWithTitle:target:action:
@@ -199,57 +199,13 @@ import AppKit
   @objc var isTransparent: Bool { @objc get @objc (setTransparent:) set }
 }
 
-@objc protocol ButtonExports: JSExport, NSControlExports {
-  // Static Methods
-
-  /**
-    - Selector: buttonWithImage:target:action:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithButtonWithImage(_ image: NSImage) -> Self
-
-  /**
-    - Selector: buttonWithTitle:image:target:action:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithButtonWithTitleWithImage(_ title: String, _ image: NSImage) -> Self
-
-  /**
-    - Selector: buttonWithTitle:target:action:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithButtonWithTitle(_ title: String) -> Self
-
-  /**
-    - Selector: checkboxWithTitle:target:action:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithCheckboxWithTitle(_ checkboxWithTitle: String) -> Self
-
-  /**
-    - Selector: radioButtonWithTitle:target:action:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithRadioButtonWithTitle(_ radioButtonWithTitle: String) -> Self
-}
-
-@objc(Button) public class Button: NSButton, ButtonExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSButton: NSButtonExports {
 
   /**
     - Selector: buttonWithImage:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithButtonWithImage(_ image: NSImage) -> Self {
+  @objc public static func createWithImage(_ image: NSImage) -> Self {
     return self.init(image: image, target: nil, action: nil)
   }
 
@@ -258,7 +214,7 @@ extension NSButton: NSButtonExports {
     - Selector: buttonWithTitle:image:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithButtonWithTitleWithImage(_ title: String, _ image: NSImage) -> Self {
+  @objc public static func createWithTitleWithImage(_ title: String, _ image: NSImage) -> Self {
     return self.init(title: title, image: image, target: nil, action: nil)
   }
 
@@ -267,7 +223,7 @@ extension NSButton: NSButtonExports {
     - Selector: buttonWithTitle:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithButtonWithTitle(_ title: String) -> Self {
+  @objc public static func createWithTitle(_ title: String) -> Self {
     return self.init(title: title, target: nil, action: nil)
   }
 

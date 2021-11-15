@@ -59,19 +59,5 @@ import AVKit
   @objc var videoGravity: AVLayerVideoGravity { @objc get @objc (setVideoGravity:) set }
 }
 
-@objc protocol CaptureViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(CaptureView) public class CaptureView: AVCaptureView, CaptureViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension AVCaptureView: AVCaptureViewExports {
 }

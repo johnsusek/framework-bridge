@@ -127,19 +127,5 @@ import AppKit
   @objc var warningValue: Double { @objc get @objc (setWarningValue:) set }
 }
 
-@objc protocol LevelIndicatorExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(LevelIndicator) public class LevelIndicator: NSLevelIndicator, LevelIndicatorExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSLevelIndicator: NSLevelIndicatorExports {
 }

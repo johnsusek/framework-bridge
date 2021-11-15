@@ -92,19 +92,5 @@ import Quartz
   @objc var transferMode: IKScannerDeviceViewTransferMode { @objc get @objc (setTransferMode:) set }
 }
 
-@objc protocol ScannerDeviceViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(ScannerDeviceView) public class ScannerDeviceView: IKScannerDeviceView, ScannerDeviceViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension IKScannerDeviceView: IKScannerDeviceViewExports {
 }

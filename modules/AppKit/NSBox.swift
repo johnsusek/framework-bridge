@@ -121,19 +121,5 @@ import AppKit
   @objc @available(OSX 10.5, *) var isTransparent: Bool { @objc get @objc (setTransparent:) set }
 }
 
-@objc protocol BoxExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(Box) public class Box: NSBox, BoxExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSBox: NSBoxExports {
 }

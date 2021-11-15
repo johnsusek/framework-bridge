@@ -27,7 +27,7 @@ import AppKit
   /**
     - Selector: stackViewWithViews:
   */
-  @objc static func createWithStackViewWithViews(_ views: [NSView]) -> Self
+  @objc static func createWithViews(_ views: [NSView]) -> Self
 
   // Instance Methods
 
@@ -170,31 +170,12 @@ import AppKit
   @objc var views: [NSView] { @objc get }
 }
 
-@objc protocol StackViewExports: JSExport, NSViewExports {
-  // Static Methods
-
-  /**
-    - Selector: stackViewWithViews:
-  */
-  @objc static func createWithStackViewWithViews(_ views: [NSView]) -> Self
-}
-
-@objc(StackView) public class StackView: NSStackView, StackViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSStackView: NSStackViewExports {
 
   /**
     - Selector: stackViewWithViews:
   */
-  @objc public static func createWithStackViewWithViews(_ views: [NSView]) -> Self {
+  @objc public static func createWithViews(_ views: [NSView]) -> Self {
     return self.init(views: views)
   }
 

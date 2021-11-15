@@ -178,19 +178,5 @@ import AppKit
   @objc var tabViewType: NSTabView.TabType { @objc get @objc (setTabViewType:) set }
 }
 
-@objc protocol TabViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(TabView) public class TabView: NSTabView, TabViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSTabView: NSTabViewExports {
 }

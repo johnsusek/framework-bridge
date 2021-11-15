@@ -59,19 +59,5 @@ import Quartz
   @objc var shouldCloseWithWindow: Bool { @objc get @objc (setShouldCloseWithWindow:) set }
 }
 
-@objc protocol PreviewViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(PreviewView) public class PreviewView: QLPreviewView, PreviewViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension QLPreviewView: QLPreviewViewExports {
 }

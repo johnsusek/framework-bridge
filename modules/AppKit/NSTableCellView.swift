@@ -57,19 +57,5 @@ import AppKit
   @objc var textField: NSTextField? { @objc get @objc (setTextField:) set }
 }
 
-@objc protocol TableCellViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(TableCellView) public class TableCellView: NSTableCellView, TableCellViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSTableCellView: NSTableCellViewExports {
 }

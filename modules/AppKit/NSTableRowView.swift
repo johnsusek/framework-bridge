@@ -120,19 +120,5 @@ import AppKit
   @objc var isTargetForDropOperation: Bool { @objc get @objc (setTargetForDropOperation:) set }
 }
 
-@objc protocol TableRowViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(TableRowView) public class TableRowView: NSTableRowView, TableRowViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSTableRowView: NSTableRowViewExports {
 }

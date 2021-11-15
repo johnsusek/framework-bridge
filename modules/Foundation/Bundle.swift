@@ -32,23 +32,23 @@ import Foundation
   /**
     - Selector: bundleForClass:
   */
-  @objc static func createWithBundleForClass(_ for: AnyClass) -> Bundle
+  @objc static func createWithBundleForClass(_ `for`: AnyClass) -> Bundle
 
   /**
     - Selector: bundleWithIdentifier:
   */
-  @objc static func createWithBundleWithIdentifier(_ identifier: String) -> Bundle?
+  @objc static func createWithIdentifier(_ identifier: String) -> Bundle?
 
   /**
     - Selector: bundleWithPath:
   */
-  @objc static func createWithBundleWithPath(_ path: String) -> Self?
+  @objc static func createWithPath(_ path: String) -> Self?
 
   /**
     - Selector: bundleWithURL:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) static func createWithBundleWithURL(_ url: URL) -> Self?
+  @objc @available(OSX 10.6, *) static func createWithURL(_ url: URL) -> Self?
 
   /**
     - Selector: pathForResource:ofType:inDirectory:
@@ -157,7 +157,7 @@ import Foundation
     - Selector: loadNibNamed:owner:topLevelObjects:
     - Introduced: 10.8
   */
-  @objc @available(OSX 10.8, *) func loadNibNamed(_: NSNib.Name, owner: Any?, topLevelObjects: AutoreleasingUnsafeMutablePointer<NSArray?>?) -> Bool
+  @objc (loadNibNamed:owner:topLevelObjects:) @available(OSX 10.8, *) func loadNibNamed(_: NSNib.Name, owner: Any?, topLevelObjects: AutoreleasingUnsafeMutablePointer<NSArray?>?) -> Bool
 
   /**
     - Selector: localizedStringForKey:value:table:
@@ -177,7 +177,7 @@ import Foundation
   /**
     - Selector: pathForImageResource:
   */
-  @objc func pathForImageResource(_: NSImage.Name) -> String?
+  @objc (pathForImageResource:) func pathForImageResource(_: NSImage.Name) -> String?
 
   /**
     - Selector: pathForResource:ofType:
@@ -357,7 +357,7 @@ extension Bundle: BundleExports {
   /**
     - Selector: bundleForClass:
   */
-  @objc public static func createWithBundleForClass(_ for: AnyClass) -> Bundle {
+  @objc public static func createWithBundleForClass(_ `for`: AnyClass) -> Bundle {
     return self.init(for: `for`)
   }
 
@@ -365,7 +365,7 @@ extension Bundle: BundleExports {
   /**
     - Selector: bundleWithIdentifier:
   */
-  @objc public static func createWithBundleWithIdentifier(_ identifier: String) -> Bundle? {
+  @objc public static func createWithIdentifier(_ identifier: String) -> Bundle? {
     return self.init(identifier: identifier)
   }
 
@@ -373,7 +373,7 @@ extension Bundle: BundleExports {
   /**
     - Selector: bundleWithPath:
   */
-  @objc public static func createWithBundleWithPath(_ path: String) -> Self? {
+  @objc public static func createWithPath(_ path: String) -> Self? {
     return self.init(path: path)
   }
 
@@ -382,7 +382,7 @@ extension Bundle: BundleExports {
     - Selector: bundleWithURL:
     - Introduced: 10.6
   */
-  @objc public static func createWithBundleWithURL(_ url: URL) -> Self? {
+  @objc public static func createWithURL(_ url: URL) -> Self? {
     return self.init(url: url)
   }
 

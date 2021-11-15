@@ -168,19 +168,5 @@ import AppKit
   @objc var usesDataSource: Bool { @objc get @objc (setUsesDataSource:) set }
 }
 
-@objc protocol ComboBoxExports: JSExport, NSTextFieldExports {
-  // Static Methods
-}
-
-@objc(ComboBox) public class ComboBox: NSComboBox, ComboBoxExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSComboBox: NSComboBoxExports {
 }

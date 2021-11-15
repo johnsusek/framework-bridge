@@ -34,13 +34,13 @@ import Foundation
     - Selector: enumerateResultsUsingBlock:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func enumerateResultsUsingBlock(_ p0: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func enumerateResults(_: JSValue)
 
   /**
     - Selector: enumerateResultsWithOptions:usingBlock:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func enumerateResultsWithOptionsWithUsingBlock(_ options: NSEnumerationOptions, _ using: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func enumerateResults(options: NSEnumerationOptions, using: JSValue)
 
   /**
     - Selector: indexOfResult:

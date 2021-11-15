@@ -20,7 +20,7 @@ import AppKit
   /**
     - Selector: alertWithError:
   */
-  @objc static func createWithAlertWithError(_ error: Error) -> NSAlert
+  @objc static func createWithError(_ error: Error) -> NSAlert
 
   // Instance Methods
 
@@ -33,7 +33,7 @@ import AppKit
     - Selector: beginSheetModalForWindow:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func beginSheetModalForWindowWithCompletionHandler(_ for: NSWindow, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginSheetModal(`for`: NSWindow, completionHandler: JSValue)
 
   /**
     - Selector: layout
@@ -117,7 +117,7 @@ extension NSAlert: NSAlertExports {
   /**
     - Selector: alertWithError:
   */
-  @objc public static func createWithAlertWithError(_ error: Error) -> NSAlert {
+  @objc public static func createWithError(_ error: Error) -> NSAlert {
     return self.init(error: error)
   }
 

@@ -49,7 +49,7 @@ import AppKit
   /**
     - Selector: performSequentialBatchUpdates:
   */
-  // jsvalue @objc func performSequentialBatchUpdates(_ p0: JSValue)
+  // jsvalue @objc func performSequentialBatchUpdates(_: JSValue)
 
   /**
     - Selector: registerClass:forItemIdentifier:
@@ -162,20 +162,6 @@ import AppKit
     - Selector: showsArrowButtons
   */
   @objc var showsArrowButtons: Bool { @objc get @objc (setShowsArrowButtons:) set }
-}
-
-@objc protocol ScrubberExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(Scrubber) public class Scrubber: NSScrubber, ScrubberExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
 }
 
 extension NSScrubber: NSScrubberExports {

@@ -23,7 +23,7 @@ import AppKit
   /**
     - Selector: beginSheetWithPDFInfo:modalForWindow:completionHandler:
   */
-  // jsvalue @objc func beginSheetWithPDFInfoWithModalForWindowWithCompletionHandler(_ with: NSPDFInfo, _ modalFor: NSWindow?, _ completionHandler: JSValue)
+  // jsvalue @objc func beginSheet(with: NSPDFInfo, modalFor: NSWindow?, completionHandler: JSValue)
 
   // Own Instance Properties
 

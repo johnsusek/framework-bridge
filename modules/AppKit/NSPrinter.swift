@@ -20,12 +20,12 @@ import AppKit
   /**
     - Selector: printerWithName:
   */
-  @objc static func createWithPrinterWithName(_ name: String) -> NSPrinter?
+  @objc static func createWithName(_ name: String) -> NSPrinter?
 
   /**
     - Selector: printerWithType:
   */
-  @objc static func createWithPrinterWithType(_ type: NSPrinter.TypeName) -> NSPrinter?
+  @objc static func createWithType(_ type: NSPrinter.TypeName) -> NSPrinter?
 
   // Own Static Properties
 
@@ -74,7 +74,7 @@ extension NSPrinter: NSPrinterExports {
   /**
     - Selector: printerWithName:
   */
-  @objc public static func createWithPrinterWithName(_ name: String) -> NSPrinter? {
+  @objc public static func createWithName(_ name: String) -> NSPrinter? {
     return self.init(name: name)
   }
 
@@ -82,7 +82,7 @@ extension NSPrinter: NSPrinterExports {
   /**
     - Selector: printerWithType:
   */
-  @objc public static func createWithPrinterWithType(_ type: NSPrinter.TypeName) -> NSPrinter? {
+  @objc public static func createWithType(_ type: NSPrinter.TypeName) -> NSPrinter? {
     return self.init(type: type)
   }
 

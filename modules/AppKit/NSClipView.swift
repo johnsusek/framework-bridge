@@ -99,19 +99,5 @@ import AppKit
   @objc var drawsBackground: Bool { @objc get @objc (setDrawsBackground:) set }
 }
 
-@objc protocol ClipViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(ClipView) public class ClipView: NSClipView, ClipViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSClipView: NSClipViewExports {
 }

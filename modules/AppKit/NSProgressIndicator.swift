@@ -98,19 +98,5 @@ import AppKit
   @objc var usesThreadedAnimation: Bool { @objc get @objc (setUsesThreadedAnimation:) set }
 }
 
-@objc protocol ProgressIndicatorExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(ProgressIndicator) public class ProgressIndicator: NSProgressIndicator, ProgressIndicatorExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSProgressIndicator: NSProgressIndicatorExports {
 }

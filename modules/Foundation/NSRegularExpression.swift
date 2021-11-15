@@ -38,7 +38,7 @@ import Foundation
   /**
     - Selector: enumerateMatchesInString:options:range:usingBlock:
   */
-  // jsvalue @objc func enumerateMatchesInStringWithOptionsWithRangeWithUsingBlock(_ in: String, _ options: NSRegularExpression.MatchingOptions, _ range: NSRange, _ using: JSValue)
+  // jsvalue @objc func enumerateMatches(in: String, options: NSRegularExpression.MatchingOptions, range: NSRange, using: JSValue)
 
   /**
     - Selector: firstMatchInString:options:range:

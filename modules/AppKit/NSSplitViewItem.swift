@@ -33,7 +33,7 @@ import AppKit
   /**
     - Selector: splitViewItemWithViewController:
   */
-  @objc static func createWithSplitViewItemWithViewController(_ viewController: NSViewController) -> Self
+  @objc static func createWithViewController(_ viewController: NSViewController) -> Self
 
   // Own Instance Properties
 
@@ -123,7 +123,7 @@ extension NSSplitViewItem: NSSplitViewItemExports {
   /**
     - Selector: splitViewItemWithViewController:
   */
-  @objc public static func createWithSplitViewItemWithViewController(_ viewController: NSViewController) -> Self {
+  @objc public static func createWithViewController(_ viewController: NSViewController) -> Self {
     return self.init(viewController: viewController)
   }
 

@@ -50,12 +50,12 @@ import AppKit
   /**
     - Selector: printOperationWithView:
   */
-  @objc static func createWithPrintOperationWithView(_ view: NSView) -> NSPrintOperation
+  @objc static func createWithView(_ view: NSView) -> NSPrintOperation
 
   /**
     - Selector: printOperationWithView:printInfo:
   */
-  @objc static func createWithPrintOperationWithViewWithPrintInfo(_ view: NSView, _ printInfo: NSPrintInfo) -> NSPrintOperation
+  @objc static func createWithViewWithPrintInfo(_ view: NSView, _ printInfo: NSPrintInfo) -> NSPrintOperation
 
   // Own Static Properties
 
@@ -178,7 +178,7 @@ extension NSPrintOperation: NSPrintOperationExports {
   /**
     - Selector: printOperationWithView:
   */
-  @objc public static func createWithPrintOperationWithView(_ view: NSView) -> NSPrintOperation {
+  @objc public static func createWithView(_ view: NSView) -> NSPrintOperation {
     return self.init(view: view)
   }
 
@@ -186,7 +186,7 @@ extension NSPrintOperation: NSPrintOperationExports {
   /**
     - Selector: printOperationWithView:printInfo:
   */
-  @objc public static func createWithPrintOperationWithViewWithPrintInfo(_ view: NSView, _ printInfo: NSPrintInfo) -> NSPrintOperation {
+  @objc public static func createWithViewWithPrintInfo(_ view: NSView, _ printInfo: NSPrintInfo) -> NSPrintOperation {
     return self.init(view: view, printInfo: printInfo)
   }
 

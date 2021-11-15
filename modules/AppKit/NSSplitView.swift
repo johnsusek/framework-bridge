@@ -136,19 +136,5 @@ import AppKit
   @objc var isVertical: Bool { @objc get @objc (setVertical:) set }
 }
 
-@objc protocol SplitViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(SplitView) public class SplitView: NSSplitView, SplitViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSSplitView: NSSplitViewExports {
 }

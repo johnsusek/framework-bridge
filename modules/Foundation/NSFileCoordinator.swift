@@ -46,27 +46,27 @@ import Foundation
     - Selector: coordinateAccessWithIntents:queue:byAccessor:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func coordinateAccessWithIntentsWithQueueWithByAccessor(_ with: [NSFileAccessIntent], _ queue: OperationQueue, _ byAccessor: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func coordinate(with: [NSFileAccessIntent], queue: OperationQueue, byAccessor: JSValue)
 
   /**
     - Selector: coordinateReadingItemAtURL:options:error:byAccessor:
   */
-  // jsvalue @objc func coordinateReadingItemAtURLWithOptionsWithErrorWithByAccessor(_ readingItemAt: URL, _ options: NSFileCoordinator.ReadingOptions, _ error: UnsafeMutablePointer<Error?>?, _ byAccessor: JSValue)
+  // jsvalue @objc func coordinate(readingItemAt: URL, options: NSFileCoordinator.ReadingOptions, error: UnsafeMutablePointer<Error?>?, byAccessor: JSValue)
 
   /**
     - Selector: coordinateReadingItemAtURL:options:writingItemAtURL:options:error:byAccessor:
   */
-  // jsvalue @objc func coordinateReadingItemAtURLWithOptionsWithWritingItemAtURLWithOptionsWithErrorWithByAccessor(_ readingItemAt: URL, _ options: NSFileCoordinator.ReadingOptions, _ writingItemAt: URL, options options1: NSFileCoordinator.WritingOptions, _ error: UnsafeMutablePointer<Error?>?, _ byAccessor: JSValue)
+  // jsvalue @objc func coordinate(readingItemAt: URL, options: NSFileCoordinator.ReadingOptions, writingItemAt: URL, options: NSFileCoordinator.WritingOptions, error: UnsafeMutablePointer<Error?>?, byAccessor: JSValue)
 
   /**
     - Selector: coordinateWritingItemAtURL:options:error:byAccessor:
   */
-  // jsvalue @objc func coordinateWritingItemAtURLWithOptionsWithErrorWithByAccessor(_ writingItemAt: URL, _ options: NSFileCoordinator.WritingOptions, _ error: UnsafeMutablePointer<Error?>?, _ byAccessor: JSValue)
+  // jsvalue @objc func coordinate(writingItemAt: URL, options: NSFileCoordinator.WritingOptions, error: UnsafeMutablePointer<Error?>?, byAccessor: JSValue)
 
   /**
     - Selector: coordinateWritingItemAtURL:options:writingItemAtURL:options:error:byAccessor:
   */
-  // jsvalue @objc func coordinateWritingItemAtURLWithOptionsWithWritingItemAtURLWithOptionsWithErrorWithByAccessor(_ writingItemAt: URL, _ options: NSFileCoordinator.WritingOptions, writingItemAt writingItemAt1: URL, options options1: NSFileCoordinator.WritingOptions, _ error: UnsafeMutablePointer<Error?>?, _ byAccessor: JSValue)
+  // jsvalue @objc func coordinate(writingItemAt: URL, options: NSFileCoordinator.WritingOptions, writingItemAt: URL, options: NSFileCoordinator.WritingOptions, error: UnsafeMutablePointer<Error?>?, byAccessor: JSValue)
 
   /**
     - Selector: itemAtURL:didChangeUbiquityAttributes:
@@ -88,7 +88,7 @@ import Foundation
   /**
     - Selector: prepareForReadingItemsAtURLs:options:writingItemsAtURLs:options:error:byAccessor:
   */
-  // jsvalue @objc func prepareForReadingItemsAtURLsWithOptionsWithWritingItemsAtURLsWithOptionsWithErrorWithByAccessor(_ forReadingItemsAt: [URL], _ options: NSFileCoordinator.ReadingOptions, _ writingItemsAt: [URL], options options1: NSFileCoordinator.WritingOptions, _ error: UnsafeMutablePointer<Error?>?, _ byAccessor: JSValue)
+  // jsvalue @objc func prepare(forReadingItemsAt: [URL], options: NSFileCoordinator.ReadingOptions, writingItemsAt: [URL], options: NSFileCoordinator.WritingOptions, error: UnsafeMutablePointer<Error?>?, byAccessor: JSValue)
 
   // Own Instance Properties
 

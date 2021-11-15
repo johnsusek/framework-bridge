@@ -253,19 +253,5 @@ import AppKit
   @objc var isVerticallyResizable: Bool { @objc get @objc (setVerticallyResizable:) set }
 }
 
-@objc protocol TextExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(Text) public class Text: NSText, TextExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSText: NSTextExports {
 }

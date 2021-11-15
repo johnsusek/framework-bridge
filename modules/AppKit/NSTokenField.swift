@@ -58,19 +58,5 @@ import AppKit
   @objc var tokenizingCharacterSet: CharacterSet! { @objc get @objc (setTokenizingCharacterSet:) set }
 }
 
-@objc protocol TokenFieldExports: JSExport, NSTextFieldExports {
-  // Static Methods
-}
-
-@objc(TokenField) public class TokenField: NSTokenField, TokenFieldExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSTokenField: NSTokenFieldExports {
 }

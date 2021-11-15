@@ -21,7 +21,7 @@ import AppKit
     - Selector: tabViewItemWithViewController:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static func createWithTabViewItemWithViewController(_ viewController: NSViewController) -> Self
+  @objc @available(OSX 10.10, *) static func createWithViewController(_ viewController: NSViewController) -> Self
 
   // Instance Methods
 
@@ -97,7 +97,7 @@ extension NSTabViewItem: NSTabViewItemExports {
     - Selector: tabViewItemWithViewController:
     - Introduced: 10.10
   */
-  @objc public static func createWithTabViewItemWithViewController(_ viewController: NSViewController) -> Self {
+  @objc public static func createWithViewController(_ viewController: NSViewController) -> Self {
     return self.init(viewController: viewController)
   }
 

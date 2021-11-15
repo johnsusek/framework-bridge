@@ -128,19 +128,5 @@ import AppKit
   @objc var scrollView: NSScrollView? { @objc get @objc (setScrollView:) set }
 }
 
-@objc protocol RulerViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(RulerView) public class RulerView: NSRulerView, RulerViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSRulerView: NSRulerViewExports {
 }

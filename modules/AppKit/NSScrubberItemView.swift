@@ -25,19 +25,5 @@ import AppKit
   @objc (defaultAnimationForKey:) @available(OSX 10.5, *) static func defaultAnimation(forKey: NSAnimatablePropertyKey) -> Any?
 }
 
-@objc protocol ScrubberItemViewExports: JSExport, NSScrubberArrangedViewExports {
-  // Static Methods
-}
-
-@objc(ScrubberItemView) public class ScrubberItemView: NSScrubberItemView, ScrubberItemViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSScrubberItemView: NSScrubberItemViewExports {
 }

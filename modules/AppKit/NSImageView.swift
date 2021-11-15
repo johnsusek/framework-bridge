@@ -27,7 +27,7 @@ import AppKit
     - Selector: imageViewWithImage:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithImageViewWithImage(_ image: NSImage) -> Self
+  @objc @available(OSX 10.12, *) static func createWithImage(_ image: NSImage) -> Self
 
   // Own Instance Properties
 
@@ -73,33 +73,13 @@ import AppKit
   @objc var imageScaling: NSImageScaling { @objc get @objc (setImageScaling:) set }
 }
 
-@objc protocol ImageViewExports: JSExport, NSControlExports {
-  // Static Methods
-
-  /**
-    - Selector: imageViewWithImage:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithImageViewWithImage(_ image: NSImage) -> Self
-}
-
-@objc(ImageView) public class ImageView: NSImageView, ImageViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSImageView: NSImageViewExports {
 
   /**
     - Selector: imageViewWithImage:
     - Introduced: 10.12
   */
-  @objc public static func createWithImageViewWithImage(_ image: NSImage) -> Self {
+  @objc public static func createWithImage(_ image: NSImage) -> Self {
     return self.init(image: image)
   }
 

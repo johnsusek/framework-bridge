@@ -186,19 +186,5 @@ import AppKit
   @objc @available(OSX 10.12, *) var stronglyReferencesItems: Bool { @objc get @objc (setStronglyReferencesItems:) set }
 }
 
-@objc protocol OutlineViewExports: JSExport, NSTableViewExports {
-  // Static Methods
-}
-
-@objc(OutlineView) public class OutlineView: NSOutlineView, OutlineViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSOutlineView: NSOutlineViewExports {
 }

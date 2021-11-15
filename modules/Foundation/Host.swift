@@ -20,12 +20,12 @@ import Foundation
   /**
     - Selector: hostWithAddress:
   */
-  @objc static func createWithHostWithAddress(_ address: String) -> Self
+  @objc static func createWithAddress(_ address: String) -> Self
 
   /**
     - Selector: hostWithName:
   */
-  @objc static func createWithHostWithName(_ name: String?) -> Self
+  @objc static func createWithName(_ name: String?) -> Self
 
   // Instance Methods
 
@@ -68,7 +68,7 @@ extension Host: HostExports {
   /**
     - Selector: hostWithAddress:
   */
-  @objc public static func createWithHostWithAddress(_ address: String) -> Self {
+  @objc public static func createWithAddress(_ address: String) -> Self {
     return self.init(address: address)
   }
 
@@ -76,7 +76,7 @@ extension Host: HostExports {
   /**
     - Selector: hostWithName:
   */
-  @objc public static func createWithHostWithName(_ name: String?) -> Self {
+  @objc public static func createWithName(_ name: String?) -> Self {
     return self.init(name: name)
   }
 

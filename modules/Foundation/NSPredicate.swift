@@ -28,17 +28,17 @@ import Foundation
     - Selector: predicateWithBlock:
     - Introduced: 10.6
   */
-// jsvalue   @objc @available(OSX 10.6, *) static func createWithPredicateWithBlock(_ block: JSValue) -> NSPredicate
+// jsvalue   @objc @available(OSX 10.6, *) static func createWithBlock(_ block: JSValue) -> NSPredicate
 
   /**
     - Selector: predicateWithFormat:argumentArray:
   */
-  @objc static func createWithPredicateWithFormatWithArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate
+  @objc static func createWithFormatWithArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate
 
   /**
     - Selector: predicateWithValue:
   */
-  @objc static func createWithPredicateWithValue(_ value: Bool) -> NSPredicate
+  @objc static func createWithValue(_ value: Bool) -> NSPredicate
 
   // Instance Methods
 
@@ -82,7 +82,7 @@ extension NSPredicate: NSPredicateExports {
     - Selector: predicateWithBlock:
     - Introduced: 10.6
   */
-  @objc public static func createWithPredicateWithBlock(_ block: JSValue) -> NSPredicate {
+  @objc public static func createWithBlock(_ block: JSValue) -> NSPredicate {
     return self.init(block: { p1, p2 in
       let res = block.call(withArguments: [p1 as AnyObject, p2 as AnyObject])!
       return res.toBool()
@@ -93,7 +93,7 @@ extension NSPredicate: NSPredicateExports {
   /**
     - Selector: predicateWithFormat:argumentArray:
   */
-  @objc public static func createWithPredicateWithFormatWithArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate {
+  @objc public static func createWithFormatWithArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate {
     return self.init(format: format, argumentArray: argumentArray)
   }
 
@@ -101,7 +101,7 @@ extension NSPredicate: NSPredicateExports {
   /**
     - Selector: predicateWithValue:
   */
-  @objc public static func createWithPredicateWithValue(_ value: Bool) -> NSPredicate {
+  @objc public static func createWithValue(_ value: Bool) -> NSPredicate {
     return self.init(value: value)
   }
 

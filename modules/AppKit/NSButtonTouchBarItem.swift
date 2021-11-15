@@ -21,17 +21,17 @@ import AppKit
   /**
     - Selector: buttonTouchBarItemWithIdentifier:image:target:action:
   */
-  @objc static func createWithButtonTouchBarItemWithIdentifierWithImage(_ identifier: NSTouchBarItem.Identifier, _ image: NSImage) -> Self
+  @objc static func createWithIdentifierWithImage(_ identifier: NSTouchBarItem.Identifier, _ image: NSImage) -> Self
 
   /**
     - Selector: buttonTouchBarItemWithIdentifier:title:image:target:action:
   */
-  @objc static func createWithButtonTouchBarItemWithIdentifierWithTitleWithImage(_ identifier: NSTouchBarItem.Identifier, _ title: String, _ image: NSImage) -> Self
+  @objc static func createWithIdentifierWithTitleWithImage(_ identifier: NSTouchBarItem.Identifier, _ title: String, _ image: NSImage) -> Self
 
   /**
     - Selector: buttonTouchBarItemWithIdentifier:title:target:action:
   */
-  @objc static func createWithButtonTouchBarItemWithIdentifierWithTitle(_ identifier: NSTouchBarItem.Identifier, _ title: String) -> Self
+  @objc static func createWithIdentifierWithTitle(_ identifier: NSTouchBarItem.Identifier, _ title: String) -> Self
 
   // Own Instance Properties
 
@@ -76,7 +76,7 @@ extension NSButtonTouchBarItem: NSButtonTouchBarItemExports {
   /**
     - Selector: buttonTouchBarItemWithIdentifier:image:target:action:
   */
-  @objc public static func createWithButtonTouchBarItemWithIdentifierWithImage(_ identifier: NSTouchBarItem.Identifier, _ image: NSImage) -> Self {
+  @objc public static func createWithIdentifierWithImage(_ identifier: NSTouchBarItem.Identifier, _ image: NSImage) -> Self {
     return self.init(identifier: identifier, image: image, target: nil, action: nil)
   }
 
@@ -84,7 +84,7 @@ extension NSButtonTouchBarItem: NSButtonTouchBarItemExports {
   /**
     - Selector: buttonTouchBarItemWithIdentifier:title:image:target:action:
   */
-  @objc public static func createWithButtonTouchBarItemWithIdentifierWithTitleWithImage(_ identifier: NSTouchBarItem.Identifier, _ title: String, _ image: NSImage) -> Self {
+  @objc public static func createWithIdentifierWithTitleWithImage(_ identifier: NSTouchBarItem.Identifier, _ title: String, _ image: NSImage) -> Self {
     return self.init(identifier: identifier, title: title, image: image, target: nil, action: nil)
   }
 
@@ -92,7 +92,7 @@ extension NSButtonTouchBarItem: NSButtonTouchBarItemExports {
   /**
     - Selector: buttonTouchBarItemWithIdentifier:title:target:action:
   */
-  @objc public static func createWithButtonTouchBarItemWithIdentifierWithTitle(_ identifier: NSTouchBarItem.Identifier, _ title: String) -> Self {
+  @objc public static func createWithIdentifierWithTitle(_ identifier: NSTouchBarItem.Identifier, _ title: String) -> Self {
     return self.init(identifier: identifier, title: title, target: nil, action: nil)
   }
 

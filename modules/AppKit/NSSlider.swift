@@ -27,7 +27,7 @@ import AppKit
     - Selector: sliderWithValue:minValue:maxValue:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithSliderWithValueWithMinValueWithMaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self
+  @objc @available(OSX 10.12, *) static func createWithValueWithMinValueWithMaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self
 
   // Instance Methods
 
@@ -107,33 +107,13 @@ import AppKit
   @objc @available(OSX 10.0, *) var isVertical: Bool { @objc get }
 }
 
-@objc protocol SliderExports: JSExport, NSControlExports {
-  // Static Methods
-
-  /**
-    - Selector: sliderWithValue:minValue:maxValue:target:action:
-    - Introduced: 10.12
-  */
-  @objc @available(OSX 10.12, *) static func createWithSliderWithValueWithMinValueWithMaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self
-}
-
-@objc(Slider) public class Slider: NSSlider, SliderExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSSlider: NSSliderExports {
 
   /**
     - Selector: sliderWithValue:minValue:maxValue:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithSliderWithValueWithMinValueWithMaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self {
+  @objc public static func createWithValueWithMinValueWithMaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self {
     return self.init(value: value, minValue: minValue, maxValue: maxValue, target: nil, action: nil)
   }
 

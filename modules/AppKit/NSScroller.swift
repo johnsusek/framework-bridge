@@ -105,19 +105,5 @@ import AppKit
   @objc var usableParts: NSScroller.UsableParts { @objc get }
 }
 
-@objc protocol ScrollerExports: JSExport, NSControlExports {
-  // Static Methods
-}
-
-@objc(Scroller) public class Scroller: NSScroller, ScrollerExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSScroller: NSScrollerExports {
 }

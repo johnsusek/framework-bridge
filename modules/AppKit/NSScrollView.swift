@@ -273,19 +273,5 @@ import AppKit
   @objc var verticalScroller: NSScroller? { @objc get @objc (setVerticalScroller:) set }
 }
 
-@objc protocol ScrollViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(ScrollView) public class ScrollView: NSScrollView, ScrollViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSScrollView: NSScrollViewExports {
 }

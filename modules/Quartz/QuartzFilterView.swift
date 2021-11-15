@@ -31,19 +31,5 @@ import Quartz
   @objc func sizeToFit()
 }
 
-@objc protocol artzFilterViewExports: JSExport, NSViewExports {
-  // Static Methods
-}
-
-@objc(artzFilterView) public class artzFilterView: QuartzFilterView, artzFilterViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension QuartzFilterView: QuartzFilterViewExports {
 }

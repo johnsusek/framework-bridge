@@ -20,17 +20,17 @@ import AppKit
   /**
     - Selector: fontDescriptorWithFontAttributes:
   */
-  @objc static func createWithFontDescriptorWithFontAttributes(_ fontAttributes: [NSFontDescriptor.AttributeName: Any]?) -> NSFontDescriptor
+  @objc static func createWithFontAttributes(_ fontAttributes: [NSFontDescriptor.AttributeName: Any]?) -> NSFontDescriptor
 
   /**
     - Selector: fontDescriptorWithName:matrix:
   */
-  @objc static func createWithFontDescriptorWithNameWithMatrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor
+  @objc static func createWithNameWithMatrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor
 
   /**
     - Selector: fontDescriptorWithName:size:
   */
-  @objc static func createWithFontDescriptorWithNameWithSize(_ name: String, _ size: CGFloat) -> NSFontDescriptor
+  @objc static func createWithNameWithSize(_ name: String, _ size: CGFloat) -> NSFontDescriptor
 
   // Instance Methods
 
@@ -119,7 +119,7 @@ extension NSFontDescriptor: NSFontDescriptorExports {
   /**
     - Selector: fontDescriptorWithFontAttributes:
   */
-  @objc public static func createWithFontDescriptorWithFontAttributes(_ fontAttributes: [NSFontDescriptor.AttributeName: Any]?) -> NSFontDescriptor {
+  @objc public static func createWithFontAttributes(_ fontAttributes: [NSFontDescriptor.AttributeName: Any]?) -> NSFontDescriptor {
     return self.init(fontAttributes: fontAttributes)
   }
 
@@ -127,7 +127,7 @@ extension NSFontDescriptor: NSFontDescriptorExports {
   /**
     - Selector: fontDescriptorWithName:matrix:
   */
-  @objc public static func createWithFontDescriptorWithNameWithMatrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor {
+  @objc public static func createWithNameWithMatrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor {
     return self.init(name: name, matrix: matrix)
   }
 
@@ -135,7 +135,7 @@ extension NSFontDescriptor: NSFontDescriptorExports {
   /**
     - Selector: fontDescriptorWithName:size:
   */
-  @objc public static func createWithFontDescriptorWithNameWithSize(_ name: String, _ size: CGFloat) -> NSFontDescriptor {
+  @objc public static func createWithNameWithSize(_ name: String, _ size: CGFloat) -> NSFontDescriptor {
     return self.init(name: name, size: size)
   }
 

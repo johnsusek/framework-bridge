@@ -799,19 +799,5 @@ import AppKit
   @objc var writablePasteboardTypes: [NSPasteboard.PasteboardType] { @objc get }
 }
 
-@objc protocol TextViewExports: JSExport, NSTextExports {
-  // Static Methods
-}
-
-@objc(TextView) public class TextView: NSTextView, TextViewExports, JSOverridableView {
-  public var draw: JSValue?
-  
-  public override func draw(_ dirtyRect: NSRect) {
-    super.draw(dirtyRect)
-    drawOverride(dirtyRect)
-  }
-
-}
-
 extension NSTextView: NSTextViewExports {
 }

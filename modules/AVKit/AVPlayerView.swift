@@ -29,7 +29,7 @@ import AVKit
   /**
     - Selector: beginTrimmingWithCompletionHandler:
   */
-  // jsvalue @objc func beginTrimmingWithCompletionHandler(_ completionHandler: JSValue)
+  // jsvalue @objc func beginTrimmingWithCallback(_ completionHandler: JSValue)
 
   /**
     - Selector: flashChapterNumber:chapterTitle:

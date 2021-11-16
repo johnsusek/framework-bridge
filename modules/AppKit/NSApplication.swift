@@ -229,7 +229,7 @@ import AppKit
     - Selector: restoreWindowWithIdentifier:state:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func restoreWindowWithIdentifierWithStateWithCompletionHandler(_ withIdentifier: NSUserInterfaceItemIdentifier, _ state: NSCoder, _ completionHandler: JSValue) -> Bool
+  // jsvalue @objc @available(OSX 10.7, *) func restoreWindowWithIdentifierWithStateWithCallback(_ withIdentifier: NSUserInterfaceItemIdentifier, _ state: NSCoder, _ completionHandler: JSValue) -> Bool
 
   /**
     - Selector: run

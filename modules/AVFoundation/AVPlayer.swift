@@ -85,7 +85,7 @@ import AVFoundation
     - Selector: prerollAtRate:completionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func prerollAtRateWithCompletionHandler(_ atRate: Float, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func prerollAtRateWithCallback(_ atRate: Float, _ completionHandler: JSValue)
 
   /**
     - Selector: removeTimeObserver:
@@ -106,7 +106,7 @@ import AVFoundation
     - Selector: seekToDate:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seekToDateWithCompletionHandler(_ to: Date, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seekToDateWithCallback(_ to: Date, _ completionHandler: JSValue)
 
   /**
     - Selector: seekToTime:
@@ -117,7 +117,7 @@ import AVFoundation
     - Selector: seekToTime:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seekToTimeWithCompletionHandler(_ to: CMTime, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seekToTimeWithCallback(_ to: CMTime, _ completionHandler: JSValue)
 
   /**
     - Selector: seekToTime:toleranceBefore:toleranceAfter:
@@ -128,7 +128,7 @@ import AVFoundation
     - Selector: seekToTime:toleranceBefore:toleranceAfter:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seekToTimeWithToleranceBeforeWithToleranceAfterWithCompletionHandler(_ to: CMTime, _ toleranceBefore: CMTime, _ toleranceAfter: CMTime, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seekToTimeWithToleranceBeforeWithToleranceAfterWithCallback(_ to: CMTime, _ toleranceBefore: CMTime, _ toleranceAfter: CMTime, _ completionHandler: JSValue)
 
   /**
     - Selector: setMediaSelectionCriteria:forMediaCharacteristic:

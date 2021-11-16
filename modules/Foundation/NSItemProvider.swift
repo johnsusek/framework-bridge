@@ -41,36 +41,36 @@ import Foundation
     - Selector: loadDataRepresentationForTypeIdentifier:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func loadDataRepresentationForTypeIdentifierWithCompletionHandler(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
+  // jsvalue @objc @available(OSX 10.13, *) func loadDataRepresentationForTypeIdentifierWithCallback(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
 
   /**
     - Selector: loadFileRepresentationForTypeIdentifier:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func loadFileRepresentationForTypeIdentifierWithCompletionHandler(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
+  // jsvalue @objc @available(OSX 10.13, *) func loadFileRepresentationForTypeIdentifierWithCallback(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
 
   /**
     - Selector: loadInPlaceFileRepresentationForTypeIdentifier:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func loadInPlaceFileRepresentationForTypeIdentifierWithCompletionHandler(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
+  // jsvalue @objc @available(OSX 10.13, *) func loadInPlaceFileRepresentationForTypeIdentifierWithCallback(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
 
   /**
     - Selector: loadItemForTypeIdentifier:options:completionHandler:
   */
-  // jsvalue @objc func loadItemForTypeIdentifierWithOptionsWithCompletionHandler(_ forTypeIdentifier: String, _ options: [AnyHashable: Any]?, _ completionHandler: JSValue?)
+  // jsvalue @objc func loadItemForTypeIdentifierWithOptionsWithCallback(_ forTypeIdentifier: String, _ options: [AnyHashable: Any]?, _ completionHandler: JSValue?)
 
   /**
     - Selector: loadObjectOfClass:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func loadObjectOfClassWithCompletionHandler(_ ofClass: NSItemProviderReading.Type, _ completionHandler: JSValue) -> Progress
+  // jsvalue @objc @available(OSX 10.13, *) func loadObjectOfClassWithCallback(_ ofClass: NSItemProviderReading.Type, _ completionHandler: JSValue) -> Progress
 
   /**
     - Selector: loadPreviewImageWithOptions:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func loadPreviewImageWithOptionsWithCompletionHandler(_ options: [AnyHashable: Any], _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func loadPreviewImageWithOptionsWithCallback(_ options: [AnyHashable: Any], _ completionHandler: JSValue)
 
   /**
     - Selector: registerCloudKitShare:container:

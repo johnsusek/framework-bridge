@@ -28,12 +28,12 @@ import Foundation
   /**
     - Selector: receiveMessageWithCompletionHandler:
   */
-  // jsvalue @objc func receiveMessageWithCompletionHandler(_ p0: JSValue)
+  // jsvalue @objc func receiveMessageWithCallback(_ p0: JSValue)
 
   /**
     - Selector: sendMessage:completionHandler:
   */
-  // jsvalue @objc func sendMessageCompletionHandler(_ completionHandler: NSURLSessionWebSocketMessage, _ completionHandler1: JSValue)
+  // jsvalue @objc func sendMessageCallback(_ completionHandler: NSURLSessionWebSocketMessage, _ completionHandler1: JSValue)
 
   /**
     - Selector: sendPingWithPongReceiveHandler:

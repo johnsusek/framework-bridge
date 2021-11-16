@@ -33,7 +33,7 @@ import AVFoundation
   /**
     - Selector: componentsPassingTest:
   */
-  // jsvalue @objc func componentsPassingTest(passingTest: JSValue) -> [AVAudioUnitComponent]
+  // jsvalue @objc func componentsPassingTest(_ passingTest: JSValue) -> [AVAudioUnitComponent]
 
   // Own Instance Properties
 

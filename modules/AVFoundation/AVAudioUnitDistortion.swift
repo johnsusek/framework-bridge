@@ -22,7 +22,7 @@ import AVFoundation
     - Selector: instantiateWithComponentDescription:options:completionHandler:
     - Introduced: 10.11
   */
-// jsvalue   @objc @available(OSX 10.11, *) static func instantiateWithComponentDescriptionWithOptionsWithCompletionHandler(with: AudioComponentDescription, options: AudioComponentInstantiationOptions, completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.11, *) static func instantiateWithComponentDescriptionWithOptionsWithCompletionHandler(_ with: AudioComponentDescription, _ options: AudioComponentInstantiationOptions, _ completionHandler: JSValue)
 
   // Instance Methods
 

@@ -27,7 +27,7 @@ import AVFoundation
     - Selector: determineCompatibilityOfExportPreset:withAsset:outputFileType:completionHandler:
     - Introduced: 10.9
   */
-// jsvalue   @objc @available(OSX 10.9, *) static func determineCompatibilityOfExportPresetWithAssetWithOutputFileTypeWithCompletionHandler(ofExportPreset: String, with: AVAsset, outputFileType: AVFileType?, completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.9, *) static func determineCompatibilityOfExportPresetWithAssetWithOutputFileTypeWithCompletionHandler(_ ofExportPreset: String, _ with: AVAsset, _ outputFileType: AVFileType?, _ completionHandler: JSValue)
 
   /**
     - Selector: exportPresetsCompatibleWithAsset:
@@ -51,24 +51,24 @@ import AVFoundation
     - Selector: determineCompatibleFileTypesWithCompletionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func determineCompatibleFileTypesWithCompletionHandler(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func determineCompatibleFileTypesWithCompletionHandler(_ completionHandler: JSValue)
 
   /**
     - Selector: estimateMaximumDurationWithCompletionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func estimateMaximumDurationWithCompletionHandler(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func estimateMaximumDurationWithCompletionHandler(_ completionHandler: JSValue)
 
   /**
     - Selector: estimateOutputFileLengthWithCompletionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func estimateOutputFileLengthWithCompletionHandler(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func estimateOutputFileLengthWithCompletionHandler(_ completionHandler: JSValue)
 
   /**
     - Selector: exportAsynchronouslyWithCompletionHandler:
   */
-  // jsvalue @objc func exportAsynchronouslyWithCompletionHandler(completionHandler: JSValue)
+  // jsvalue @objc func exportAsynchronouslyWithCompletionHandler(_ completionHandler: JSValue)
 
   // Own Instance Properties
 

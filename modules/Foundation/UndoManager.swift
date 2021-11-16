@@ -59,7 +59,7 @@ import Foundation
     - Selector: registerUndoWithTarget:handler:
     - Introduced: 10.11
   */
-  // jsvalue @objc @available(OSX 10.11, *) func registerUndoWithTargetWithHandler(withTarget: Any, handler: JSValue)
+  // jsvalue @objc @available(OSX 10.11, *) func registerUndoWithTargetWithHandler(_ withTarget: Any, _ handler: JSValue)
 
   /**
     - Selector: registerUndoWithTarget:selector:object:

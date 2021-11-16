@@ -42,7 +42,7 @@ import AppKit
     - Selector: instantiateControllerWithIdentifier:creator:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func instantiateControllerWithIdentifierCreator(_ creator: NSStoryboard.SceneIdentifier, creator creator1: JSValue?) -> Any
+  // jsvalue @objc @available(OSX 10.15, *) func instantiateControllerWithIdentifierCreator(_ creator: NSStoryboard.SceneIdentifier, _ creator1: JSValue?) -> Any
 
   /**
     - Selector: instantiateInitialController

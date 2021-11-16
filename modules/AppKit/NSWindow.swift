@@ -134,13 +134,13 @@ import AppKit
     - Selector: beginCriticalSheet:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func beginCriticalSheetCompletionHandler(_ completionHandler: NSWindow, completionHandler completionHandler1: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginCriticalSheetCompletionHandler(_ completionHandler: NSWindow, _ completionHandler1: JSValue)
 
   /**
     - Selector: beginSheet:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func beginSheetCompletionHandler(_ completionHandler: NSWindow, completionHandler completionHandler1: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginSheetCompletionHandler(_ completionHandler: NSWindow, _ completionHandler1: JSValue)
 
   /**
     - Selector: canRepresentDisplayGamut:
@@ -686,7 +686,7 @@ import AppKit
     - Selector: trackEventsMatchingMask:timeout:mode:handler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func trackEventsMatchingMaskWithTimeoutWithModeWithHandler(matching: NSEvent.EventTypeMask, timeout: TimeInterval, mode: RunLoop.Mode, handler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func trackEventsMatchingMaskWithTimeoutWithModeWithHandler(_ matching: NSEvent.EventTypeMask, _ timeout: TimeInterval, _ mode: RunLoop.Mode, _ handler: JSValue)
 
   /**
     - Selector: unregisterDraggedTypes

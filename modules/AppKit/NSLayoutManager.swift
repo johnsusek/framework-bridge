@@ -152,13 +152,13 @@ import AppKit
     - Selector: enumerateEnclosingRectsForGlyphRange:withinSelectedGlyphRange:inTextContainer:usingBlock:
     - Introduced: 10.11
   */
-  // jsvalue @objc @available(OSX 10.11, *) func enumerateEnclosingRectsForGlyphRangeWithinSelectedGlyphRangeWithInTextContainerWithUsingBlock(forGlyphRange: NSRange, withinSelectedGlyphRange: NSRange, in: NSTextContainer, using: JSValue)
+  // jsvalue @objc @available(OSX 10.11, *) func enumerateEnclosingRectsForGlyphRangeWithinSelectedGlyphRangeWithInTextContainerWithUsingBlock(_ forGlyphRange: NSRange, _ withinSelectedGlyphRange: NSRange, _ in: NSTextContainer, _ using: JSValue)
 
   /**
     - Selector: enumerateLineFragmentsForGlyphRange:usingBlock:
     - Introduced: 10.11
   */
-  // jsvalue @objc @available(OSX 10.11, *) func enumerateLineFragmentsForGlyphRangeWithUsingBlock(forGlyphRange: NSRange, using: JSValue)
+  // jsvalue @objc @available(OSX 10.11, *) func enumerateLineFragmentsForGlyphRangeWithUsingBlock(_ forGlyphRange: NSRange, _ using: JSValue)
 
   /**
     - Selector: fillBackgroundRectArray:count:forCharacterRange:color:

@@ -40,7 +40,7 @@ import Foundation
     - Selector: enumerateResultsWithOptions:usingBlock:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func enumerateResultsWithOptionsWithUsingBlock(options: NSEnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func enumerateResultsWithOptionsWithUsingBlock(_ options: NSEnumerationOptions, _ using: JSValue)
 
   /**
     - Selector: indexOfResult:

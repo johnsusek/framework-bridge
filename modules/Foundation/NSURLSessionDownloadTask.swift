@@ -22,7 +22,7 @@ import Foundation
   /**
     - Selector: cancelByProducingResumeData:
   */
-  // jsvalue @objc func cancelByProducingResumeData(byProducingResumeData: JSValue)
+  // jsvalue @objc func cancelByProducingResumeData(_ byProducingResumeData: JSValue)
 }
 
 extension URLSessionDownloadTask: URLSessionDownloadTaskExports {

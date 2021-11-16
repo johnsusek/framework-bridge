@@ -23,7 +23,7 @@ import Foundation
   /**
     - Selector: executeWithAppleEvent:completionHandler:
   */
-  // jsvalue @objc func executeWithAppleEventWithCompletionHandler(withAppleEvent: NSAppleEventDescriptor?, completionHandler: JSValue?)
+  // jsvalue @objc func executeWithAppleEventWithCompletionHandler(_ withAppleEvent: NSAppleEventDescriptor?, _ completionHandler: JSValue?)
 }
 
 extension NSUserAppleScriptTask: NSUserAppleScriptTaskExports {

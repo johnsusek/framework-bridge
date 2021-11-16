@@ -33,7 +33,7 @@ import Foundation
   /**
     - Selector: getContinuationStreamsWithCompletionHandler:
   */
-  // jsvalue @objc func getContinuationStreamsWithCompletionHandler(completionHandler: JSValue)
+  // jsvalue @objc func getContinuationStreamsWithCompletionHandler(_ completionHandler: JSValue)
 
   /**
     - Selector: invalidate

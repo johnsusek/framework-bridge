@@ -23,7 +23,7 @@ import Foundation
   /**
     - Selector: executeWithCompletionHandler:
   */
-  // jsvalue @objc func executeWithCompletionHandler(completionHandler: JSValue?)
+  // jsvalue @objc func executeWithCompletionHandler(_ completionHandler: JSValue?)
 
   // Own Instance Properties
 

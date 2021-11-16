@@ -33,12 +33,12 @@ import Foundation
   /**
     - Selector: sendMessage:completionHandler:
   */
-  // jsvalue @objc func sendMessageCompletionHandler(_ completionHandler: NSURLSessionWebSocketMessage, completionHandler completionHandler1: JSValue)
+  // jsvalue @objc func sendMessageCompletionHandler(_ completionHandler: NSURLSessionWebSocketMessage, _ completionHandler1: JSValue)
 
   /**
     - Selector: sendPingWithPongReceiveHandler:
   */
-  // jsvalue @objc func sendPingWithPongReceiveHandler(pongReceiveHandler: JSValue)
+  // jsvalue @objc func sendPingWithPongReceiveHandler(_ pongReceiveHandler: JSValue)
 
   // Own Instance Properties
 

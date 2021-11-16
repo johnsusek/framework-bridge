@@ -45,7 +45,7 @@ import Foundation
   /**
     - Selector: dataTaskWithRequest:completionHandler:
   */
-  // jsvalue @objc func dataTask(with: URLRequest, completionHandler: JSValue) -> URLSessionDataTask
+  @objc func dataTaskWithRequestWithCompletionHandler(with: URLRequest, completionHandler: JSValue) -> URLSessionDataTask
 
   /**
     - Selector: dataTaskWithURL:
@@ -55,7 +55,7 @@ import Foundation
   /**
     - Selector: dataTaskWithURL:completionHandler:
   */
-  // jsvalue @objc func dataTask(with: URL, completionHandler: JSValue) -> URLSessionDataTask
+  @objc func dataTaskWithURLWithCompletionHandler(with: URL, completionHandler: JSValue) -> URLSessionDataTask
 
   /**
     - Selector: downloadTaskWithRequest:
@@ -65,7 +65,7 @@ import Foundation
   /**
     - Selector: downloadTaskWithRequest:completionHandler:
   */
-  // jsvalue @objc func downloadTask(with: URLRequest, completionHandler: JSValue) -> URLSessionDownloadTask
+  @objc func downloadTaskWithRequestWithCompletionHandler(with: URLRequest, completionHandler: JSValue) -> URLSessionDownloadTask
 
   /**
     - Selector: downloadTaskWithResumeData:
@@ -75,7 +75,7 @@ import Foundation
   /**
     - Selector: downloadTaskWithResumeData:completionHandler:
   */
-  // jsvalue @objc func downloadTask(withResumeData: Data, completionHandler: JSValue) -> URLSessionDownloadTask
+  @objc func downloadTaskWithResumeDataWithCompletionHandler(withResumeData: Data, completionHandler: JSValue) -> URLSessionDownloadTask
 
   /**
     - Selector: downloadTaskWithURL:
@@ -85,7 +85,7 @@ import Foundation
   /**
     - Selector: downloadTaskWithURL:completionHandler:
   */
-  // jsvalue @objc func downloadTask(with: URL, completionHandler: JSValue) -> URLSessionDownloadTask
+  @objc func downloadTaskWithURLWithCompletionHandler(with: URL, completionHandler: JSValue) -> URLSessionDownloadTask
 
   /**
     - Selector: finishTasksAndInvalidate
@@ -95,18 +95,13 @@ import Foundation
   /**
     - Selector: flushWithCompletionHandler:
   */
-  // jsvalue @objc func flush(completionHandler: JSValue)
+  @objc func flushWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: getAllTasksWithCompletionHandler:
     - Introduced: 10.11
   */
-  // jsvalue @objc @available(OSX 10.11, *) func getAllTasks(completionHandler: JSValue)
-
-  /**
-    - Selector: getTasksWithCompletionHandler:
-  */
-  // jsvalue @objc func getTasksWithCompletionHandler(_: JSValue)
+  @objc @available(OSX 10.11, *) func getAllTasksWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: invalidateAndCancel
@@ -116,7 +111,7 @@ import Foundation
   /**
     - Selector: resetWithCompletionHandler:
   */
-  // jsvalue @objc func reset(completionHandler: JSValue)
+  @objc func resetWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: streamTaskWithHostName:port:
@@ -138,7 +133,7 @@ import Foundation
   /**
     - Selector: uploadTaskWithRequest:fromData:completionHandler:
   */
-  // jsvalue @objc func uploadTask(with: URLRequest, from: Data?, completionHandler: JSValue) -> URLSessionUploadTask
+  @objc func uploadTaskWithRequestWithFromDataWithCompletionHandler(with: URLRequest, from: Data?, completionHandler: JSValue) -> URLSessionUploadTask
 
   /**
     - Selector: uploadTaskWithRequest:fromFile:
@@ -148,7 +143,7 @@ import Foundation
   /**
     - Selector: uploadTaskWithRequest:fromFile:completionHandler:
   */
-  // jsvalue @objc func uploadTask(with: URLRequest, fromFile: URL, completionHandler: JSValue) -> URLSessionUploadTask
+  @objc func uploadTaskWithRequestWithFromFileWithCompletionHandler(with: URLRequest, fromFile: URL, completionHandler: JSValue) -> URLSessionUploadTask
 
   /**
     - Selector: uploadTaskWithStreamedRequest:
@@ -211,6 +206,107 @@ extension URLSession: URLSessionExports {
   */
   @objc public static func createWithSessionWithConfigurationWithDelegateWithDelegateQueue(_ configuration: URLSessionConfiguration, _ delegate: URLSessionDelegate?, _ delegateQueue: OperationQueue?) -> URLSession {
     return self.init(configuration: configuration, delegate: delegate, delegateQueue: delegateQueue)
+  }
+
+
+  /**
+    - Selector: dataTaskWithRequest:completionHandler:
+  */
+  @objc public func dataTaskWithRequestWithCompletionHandler(with: URLRequest, completionHandler: JSValue) -> URLSessionDataTask {
+    return self.dataTask(with: with, completionHandler: { p1, p2, p3 in
+      completionHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject, p3 as AnyObject])
+    })
+  }
+
+
+  /**
+    - Selector: dataTaskWithURL:completionHandler:
+  */
+  @objc public func dataTaskWithURLWithCompletionHandler(with: URL, completionHandler: JSValue) -> URLSessionDataTask {
+    return self.dataTask(with: with, completionHandler: { p1, p2, p3 in
+      completionHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject, p3 as AnyObject])
+    })
+  }
+
+
+  /**
+    - Selector: downloadTaskWithRequest:completionHandler:
+  */
+  @objc public func downloadTaskWithRequestWithCompletionHandler(with: URLRequest, completionHandler: JSValue) -> URLSessionDownloadTask {
+    return self.downloadTask(with: with, completionHandler: { p1, p2, p3 in
+      completionHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject, p3 as AnyObject])
+    })
+  }
+
+
+  /**
+    - Selector: downloadTaskWithResumeData:completionHandler:
+  */
+  @objc public func downloadTaskWithResumeDataWithCompletionHandler(withResumeData: Data, completionHandler: JSValue) -> URLSessionDownloadTask {
+    return self.downloadTask(withResumeData: withResumeData, completionHandler: { p1, p2, p3 in
+      completionHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject, p3 as AnyObject])
+    })
+  }
+
+
+  /**
+    - Selector: downloadTaskWithURL:completionHandler:
+  */
+  @objc public func downloadTaskWithURLWithCompletionHandler(with: URL, completionHandler: JSValue) -> URLSessionDownloadTask {
+    return self.downloadTask(with: with, completionHandler: { p1, p2, p3 in
+      completionHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject, p3 as AnyObject])
+    })
+  }
+
+
+  /**
+    - Selector: flushWithCompletionHandler:
+  */
+  @objc public func flushWithCompletionHandler(completionHandler: JSValue) -> Void {
+    return self.flush(completionHandler: { 
+      completionHandler.call(withArguments: [])
+    })
+  }
+
+
+  /**
+    - Selector: getAllTasksWithCompletionHandler:
+    - Introduced: 10.11
+  */
+  @objc public func getAllTasksWithCompletionHandler(completionHandler: JSValue) -> Void {
+    return self.getAllTasks(completionHandler: { p1 in
+      completionHandler.call(withArguments: [p1 as AnyObject])
+    })
+  }
+
+
+  /**
+    - Selector: resetWithCompletionHandler:
+  */
+  @objc public func resetWithCompletionHandler(completionHandler: JSValue) -> Void {
+    return self.reset(completionHandler: { 
+      completionHandler.call(withArguments: [])
+    })
+  }
+
+
+  /**
+    - Selector: uploadTaskWithRequest:fromData:completionHandler:
+  */
+  @objc public func uploadTaskWithRequestWithFromDataWithCompletionHandler(with: URLRequest, from: Data?, completionHandler: JSValue) -> URLSessionUploadTask {
+    return self.uploadTask(with: with, from: from, completionHandler: { p1, p2, p3 in
+      completionHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject, p3 as AnyObject])
+    })
+  }
+
+
+  /**
+    - Selector: uploadTaskWithRequest:fromFile:completionHandler:
+  */
+  @objc public func uploadTaskWithRequestWithFromFileWithCompletionHandler(with: URLRequest, fromFile: URL, completionHandler: JSValue) -> URLSessionUploadTask {
+    return self.uploadTask(with: with, fromFile: fromFile, completionHandler: { p1, p2, p3 in
+      completionHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject, p3 as AnyObject])
+    })
   }
 
 }

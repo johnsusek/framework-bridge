@@ -28,7 +28,7 @@ import Foundation
   /**
     - Selector: addExecutionBlock:
   */
-  // jsvalue @objc func addExecutionBlock(_: JSValue)
+  // jsvalue @objc func addExecutionBlock(_ p0: JSValue)
 
   // Own Instance Properties
 
@@ -45,7 +45,7 @@ extension BlockOperation: BlockOperationExports {
   */
   @objc public static func createWithBlockOperationWithBlock(_ block: JSValue) -> Self {
     return self.init(block: { 
-      block.call(withArguments: [])!
+      block.call(withArguments: [])
     })
   }
 

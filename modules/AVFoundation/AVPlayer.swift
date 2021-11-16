@@ -41,12 +41,12 @@ import AVFoundation
   /**
     - Selector: addBoundaryTimeObserverForTimes:queue:usingBlock:
   */
-  // jsvalue @objc func addBoundaryTimeObserver(forTimes: [NSValue], queue: DispatchQueue?, using: JSValue) -> Any
+  // jsvalue @objc func addBoundaryTimeObserverForTimesWithQueueWithUsingBlock(forTimes: [NSValue], queue: DispatchQueue?, using: JSValue) -> Any
 
   /**
     - Selector: addPeriodicTimeObserverForInterval:queue:usingBlock:
   */
-  // jsvalue @objc func addPeriodicTimeObserver(forInterval: CMTime, queue: DispatchQueue?, using: JSValue) -> Any
+  // jsvalue @objc func addPeriodicTimeObserverForIntervalWithQueueWithUsingBlock(forInterval: CMTime, queue: DispatchQueue?, using: JSValue) -> Any
 
   /**
     - Selector: cancelPendingPrerolls
@@ -85,7 +85,7 @@ import AVFoundation
     - Selector: prerollAtRate:completionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func preroll(atRate: Float, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func prerollAtRateWithCompletionHandler(atRate: Float, completionHandler: JSValue)
 
   /**
     - Selector: removeTimeObserver:
@@ -106,7 +106,7 @@ import AVFoundation
     - Selector: seekToDate:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seek(to: Date, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seekToDateWithCompletionHandler(to: Date, completionHandler: JSValue)
 
   /**
     - Selector: seekToTime:
@@ -117,7 +117,7 @@ import AVFoundation
     - Selector: seekToTime:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seek(to: CMTime, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seekToTimeWithCompletionHandler(to: CMTime, completionHandler: JSValue)
 
   /**
     - Selector: seekToTime:toleranceBefore:toleranceAfter:
@@ -128,7 +128,7 @@ import AVFoundation
     - Selector: seekToTime:toleranceBefore:toleranceAfter:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func seek(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func seekToTimeWithToleranceBeforeWithToleranceAfterWithCompletionHandler(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime, completionHandler: JSValue)
 
   /**
     - Selector: setMediaSelectionCriteria:forMediaCharacteristic:

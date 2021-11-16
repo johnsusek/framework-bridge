@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: flushFromSourceTime:completionHandler:
   */
-  // jsvalue @objc func flush(fromSourceTime: CMTime, completionHandler: JSValue)
+  // jsvalue @objc func flushFromSourceTimeWithCompletionHandler(fromSourceTime: CMTime, completionHandler: JSValue)
 
   // Own Instance Properties
 

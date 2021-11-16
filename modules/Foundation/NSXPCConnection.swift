@@ -40,7 +40,7 @@ import Foundation
     - Selector: scheduleSendBarrierBlock:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func scheduleSendBarrierBlock(_: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func scheduleSendBarrierBlock(_ p0: JSValue)
 
   /**
     - Selector: suspend

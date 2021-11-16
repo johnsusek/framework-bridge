@@ -21,7 +21,7 @@ import Foundation
     - Selector: launchedTaskWithExecutableURL:arguments:error:terminationHandler:
     - Introduced: 10.13
   */
-// jsvalue   @objc @available(OSX 10.13, *) static func run(_: URL, _: [String], `arguments`: UnsafeMutablePointer<Error?>?, terminationHandler: JSValue) -> Process?
+// jsvalue   @objc @available(OSX 10.13, *) static func launchedTaskWithExecutableURLWithArgumentsWithErrorWithTerminationHandler(_ p0: URL, _ p1: [String], `arguments`: UnsafeMutablePointer<Error?>?, terminationHandler: JSValue) -> Process?
 
   /**
     - Selector: launchedTaskWithLaunchPath:arguments:

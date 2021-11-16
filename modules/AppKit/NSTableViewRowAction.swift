@@ -54,7 +54,7 @@ extension NSTableViewRowAction: NSTableViewRowActionExports {
   */
   @objc public static func createWithRowActionWithStyleWithTitleWithHandler(_ style: NSTableViewRowAction.Style, _ title: String, _ handler: JSValue) -> Self {
     return self.init(style: style, title: title, handler: { p1, p2 in
-      handler.call(withArguments: [p1 as AnyObject, p2 as AnyObject])!
+      handler.call(withArguments: [p1 as AnyObject, p2 as AnyObject])
     })
   }
 

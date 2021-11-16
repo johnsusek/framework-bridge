@@ -73,7 +73,7 @@ extension NSStepperTouchBarItem: NSStepperTouchBarItemExports {
   */
   @objc public static func createWithIdentifierWithDrawingHandler(_ identifier: NSTouchBarItem.Identifier, _ drawingHandler: JSValue) -> Self {
     return self.init(identifier: identifier, drawingHandler: { p1, p2 in
-      drawingHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject])!
+      drawingHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject])
     })
   }
 

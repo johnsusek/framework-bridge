@@ -23,7 +23,7 @@ import Foundation
   /**
     - Selector: executeWithInput:completionHandler:
   */
-  // jsvalue @objc func execute(withInput: NSSecureCoding?, completionHandler: JSValue?)
+  // jsvalue @objc func executeWithInputWithCompletionHandler(withInput: NSSecureCoding?, completionHandler: JSValue?)
 
   // Own Instance Properties
 

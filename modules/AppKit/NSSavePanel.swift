@@ -66,13 +66,13 @@ import AppKit
     - Selector: beginSheetModalForWindow:completionHandler:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func beginSheetModal(`for`: NSWindow, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func beginSheetModalForWindowWithCompletionHandler(`for`: NSWindow, completionHandler: JSValue)
 
   /**
     - Selector: beginWithCompletionHandler:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func begin(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func beginWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: cancel:

@@ -72,7 +72,7 @@ import Foundation
     - Selector: performActivityWithOptions:reason:usingBlock:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func performActivity(options: ProcessInfo.ActivityOptions, reason: String, using: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func performActivityWithOptionsWithReasonWithUsingBlock(options: ProcessInfo.ActivityOptions, reason: String, using: JSValue)
 
   // Own Instance Properties
 

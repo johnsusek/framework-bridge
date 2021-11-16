@@ -38,7 +38,7 @@ import Foundation
   /**
     - Selector: readDataOfMinLength:maxLength:timeout:completionHandler:
   */
-  // jsvalue @objc func readData(ofMinLength: Int, maxLength: Int, timeout: TimeInterval, completionHandler: JSValue)
+  // jsvalue @objc func readDataOfMinLengthWithMaxLengthWithTimeoutWithCompletionHandler(ofMinLength: Int, maxLength: Int, timeout: TimeInterval, completionHandler: JSValue)
 
   /**
     - Selector: startSecureConnection
@@ -48,7 +48,7 @@ import Foundation
   /**
     - Selector: writeData:timeout:completionHandler:
   */
-  // jsvalue @objc func write(_: Data, timeout: TimeInterval, completionHandler: JSValue)
+  // jsvalue @objc func writeDataWithTimeoutWithCompletionHandler(_ p0: Data, timeout: TimeInterval, completionHandler: JSValue)
 }
 
 extension URLSessionStreamTask: URLSessionStreamTaskExports {

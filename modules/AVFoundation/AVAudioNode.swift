@@ -28,7 +28,7 @@ import AVFoundation
   /**
     - Selector: installTapOnBus:bufferSize:format:block:
   */
-  // jsvalue @objc func installTap(onBus: Int, bufferSize: AVAudioFrameCount, format: AVAudioFormat?, block: JSValue)
+  // jsvalue @objc func installTapOnBusWithBufferSizeWithFormatWithBlock(onBus: Int, bufferSize: AVAudioFrameCount, format: AVAudioFormat?, block: JSValue)
 
   /**
     - Selector: nameForInputBus:

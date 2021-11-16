@@ -95,7 +95,7 @@ import AppKit
     - Selector: transitionFromViewController:toViewController:options:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func transition(from: NSViewController, to: NSViewController, options: NSViewController.TransitionOptions, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func transitionFromViewControllerWithToViewControllerWithOptionsWithCompletionHandler(from: NSViewController, to: NSViewController, options: NSViewController.TransitionOptions, completionHandler: JSValue)
 
   /**
     - Selector: updateViewConstraints

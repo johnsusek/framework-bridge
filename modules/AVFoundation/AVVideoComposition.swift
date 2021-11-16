@@ -105,7 +105,7 @@ extension AVVideoComposition: AVVideoCompositionExports {
   */
   @objc public static func createWithAssetWithApplyingCIFiltersWithHandler(_ asset: AVAsset, _ applyingCIFiltersWithHandler: JSValue) -> AVVideoComposition {
     return self.init(asset: asset, applyingCIFiltersWithHandler: { p1 in
-      applyingCIFiltersWithHandler.call(withArguments: [p1 as AnyObject])!
+      applyingCIFiltersWithHandler.call(withArguments: [p1 as AnyObject])
     })
   }
 

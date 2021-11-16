@@ -49,7 +49,7 @@ import AppKit
   /**
     - Selector: performSequentialBatchUpdates:
   */
-  // jsvalue @objc func performSequentialBatchUpdates(_: JSValue)
+  // jsvalue @objc func performSequentialBatchUpdates(_ p0: JSValue)
 
   /**
     - Selector: registerClass:forItemIdentifier:

@@ -55,19 +55,19 @@ import AVFoundation
     - Selector: invalidateAllPersistableContentKeysForApp:options:completionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func invalidateAllPersistableContentKeys(forApp: Data, options: [AVContentKeySessionServerPlaybackContextOption: Any]?, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func invalidateAllPersistableContentKeysForAppWithOptionsWithCompletionHandler(forApp: Data, options: [AVContentKeySessionServerPlaybackContextOption: Any]?, completionHandler: JSValue)
 
   /**
     - Selector: invalidatePersistableContentKey:options:completionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func invalidatePersistableContentKey(_: Data, options: [AVContentKeySessionServerPlaybackContextOption: Any]?, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func invalidatePersistableContentKeyOptionsWithCompletionHandler(_ options: Data, options options1: [AVContentKeySessionServerPlaybackContextOption: Any]?, completionHandler: JSValue)
 
   /**
     - Selector: makeSecureTokenForExpirationDateOfPersistableContentKey:completionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func makeSecureTokenForExpirationDate(ofPersistableContentKey: Data, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func makeSecureTokenForExpirationDateOfPersistableContentKeyWithCompletionHandler(ofPersistableContentKey: Data, completionHandler: JSValue)
 
   /**
     - Selector: processContentKeyRequestWithIdentifier:initializationData:options:

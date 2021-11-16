@@ -35,7 +35,7 @@ import Foundation
     - Selector: addObserverForName:object:queue:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func addObserver(forName: NSNotification.Name?, object: Any?, queue: OperationQueue?, using: JSValue) -> NSObjectProtocol
+  // jsvalue @objc @available(OSX 10.6, *) func addObserverForNameWithObjectWithQueueWithUsingBlock(forName: NSNotification.Name?, object: Any?, queue: OperationQueue?, using: JSValue) -> NSObjectProtocol
 
   /**
     - Selector: postNotification:

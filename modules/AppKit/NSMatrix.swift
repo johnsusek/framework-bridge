@@ -213,7 +213,7 @@ import AppKit
   /**
     - Selector: sortUsingFunction:context:
   */
-  // jsvalue @objc (sortUsingFunction:context:) func sort(using: JSValue, context: UnsafeMutableRawPointer?)
+  // jsvalue @objc (sortUsingFunction:context:) func sortUsingFunctionWithContext(using: JSValue, context: UnsafeMutableRawPointer?)
 
   /**
     - Selector: sortUsingSelector:

@@ -30,7 +30,7 @@ import AppKit
   /**
     - Selector: receivePromisedFilesAtDestination:options:operationQueue:reader:
   */
-  // jsvalue @objc func receivePromisedFiles(atDestination: URL, options: [AnyHashable: Any], operationQueue: OperationQueue, reader: JSValue)
+  // jsvalue @objc func receivePromisedFilesAtDestinationWithOptionsWithOperationQueueWithReader(atDestination: URL, options: [AnyHashable: Any], operationQueue: OperationQueue, reader: JSValue)
 
   // Own Instance Properties
 

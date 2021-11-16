@@ -55,7 +55,7 @@ extension NSSliderAccessoryBehavior: NSSliderAccessoryBehaviorExports {
   */
   @objc public static func createWithBehaviorWithHandler(_ handler: JSValue) -> NSSliderAccessoryBehavior {
     return self.init(handler: { p1 in
-      handler.call(withArguments: [p1 as AnyObject])!
+      handler.call(withArguments: [p1 as AnyObject])
     })
   }
 

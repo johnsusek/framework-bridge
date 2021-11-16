@@ -114,7 +114,7 @@ import AppKit
     - Selector: enumerateWindowsWithOptions:usingBlock:
     - Introduced: 10.12
   */
-  // jsvalue @objc @available(OSX 10.12, *) func enumerateWindows(options: NSApplication.WindowListOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.12, *) func enumerateWindowsWithOptionsWithUsingBlock(options: NSApplication.WindowListOptions, using: JSValue)
 
   /**
     - Selector: extendStateRestoration
@@ -229,7 +229,7 @@ import AppKit
     - Selector: restoreWindowWithIdentifier:state:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func restoreWindow(withIdentifier: NSUserInterfaceItemIdentifier, state: NSCoder, completionHandler: JSValue) -> Bool
+  // jsvalue @objc @available(OSX 10.7, *) func restoreWindowWithIdentifierWithStateWithCompletionHandler(withIdentifier: NSUserInterfaceItemIdentifier, state: NSCoder, completionHandler: JSValue) -> Bool
 
   /**
     - Selector: run

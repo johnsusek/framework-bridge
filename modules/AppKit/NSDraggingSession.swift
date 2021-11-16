@@ -23,7 +23,7 @@ import AppKit
   /**
     - Selector: enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:
   */
-  // jsvalue @objc func enumerateDraggingItems(options: NSDraggingItemEnumerationOptions, `for`: NSView?, classes: [AnyClass], searchOptions: [NSPasteboard.ReadingOptionKey: Any], using: JSValue)
+  // jsvalue @objc func enumerateDraggingItemsWithOptionsWithForViewWithClassesWithSearchOptionsWithUsingBlock(options: NSDraggingItemEnumerationOptions, `for`: NSView?, classes: [AnyClass], searchOptions: [NSPasteboard.ReadingOptionKey: Any], using: JSValue)
 
   // Own Instance Properties
 

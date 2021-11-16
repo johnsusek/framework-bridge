@@ -35,7 +35,7 @@ import Foundation
     - Selector: getCachedResponseForDataTask:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func getCachedResponse(`for`: URLSessionDataTask, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getCachedResponseForDataTaskWithCompletionHandler(`for`: URLSessionDataTask, completionHandler: JSValue)
 
   /**
     - Selector: removeAllCachedResponses

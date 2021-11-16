@@ -140,13 +140,13 @@ import Foundation
     - Selector: enumerateAttribute:inRange:options:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttribute(_: NSAttributedString.Key, in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributeInRangeWithOptionsWithUsingBlock(_ p0: NSAttributedString.Key, in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
 
   /**
     - Selector: enumerateAttributesInRange:options:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributes(in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttributesInRangeWithOptionsWithUsingBlock(in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
 
   /**
     - Selector: fileWrapperFromRange:documentAttributes:error:

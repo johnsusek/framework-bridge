@@ -86,7 +86,7 @@ import AppKit
     - Selector: autosaveWithImplicitCancellability:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func autosave(withImplicitCancellability: Bool, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func autosaveWithImplicitCancellabilityWithCompletionHandler(withImplicitCancellability: Bool, completionHandler: JSValue)
 
   /**
     - Selector: browseDocumentVersions:
@@ -126,13 +126,13 @@ import AppKit
     - Selector: continueActivityUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func continueActivity(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func continueActivityUsingBlock(_ p0: JSValue)
 
   /**
     - Selector: continueAsynchronousWorkOnMainThreadUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func continueAsynchronousWorkOnMainThread(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func continueAsynchronousWorkOnMainThreadUsingBlock(_ p0: JSValue)
 
   /**
     - Selector: dataOfType:error:
@@ -222,13 +222,13 @@ import AppKit
     - Selector: lockDocumentWithCompletionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func lock(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func lockDocumentWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: lockWithCompletionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func lock(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func lockWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: makeWindowControllers
@@ -251,31 +251,31 @@ import AppKit
     - Selector: moveDocumentWithCompletionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func move(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func moveDocumentWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: moveToURL:completionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func move(to: URL, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func moveToURLWithCompletionHandler(to: URL, completionHandler: JSValue)
 
   /**
     - Selector: performActivityWithSynchronousWaiting:usingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func performActivity(withSynchronousWaiting: Bool, using: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func performActivityWithSynchronousWaitingWithUsingBlock(withSynchronousWaiting: Bool, using: JSValue)
 
   /**
     - Selector: performAsynchronousFileAccessUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func performAsynchronousFileAccess(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func performAsynchronousFileAccessUsingBlock(_ p0: JSValue)
 
   /**
     - Selector: performSynchronousFileAccessUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func performSynchronousFileAccess(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func performSynchronousFileAccessUsingBlock(_ p0: JSValue)
 
   /**
     - Selector: preparePageLayout:
@@ -348,7 +348,7 @@ import AppKit
     - Selector: restoreDocumentWindowWithIdentifier:state:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func restoreWindow(withIdentifier: NSUserInterfaceItemIdentifier, state: NSCoder, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func restoreDocumentWindowWithIdentifierWithStateWithCompletionHandler(withIdentifier: NSUserInterfaceItemIdentifier, state: NSCoder, completionHandler: JSValue)
 
   /**
     - Selector: restoreStateWithCoder:
@@ -416,7 +416,7 @@ import AppKit
     - Selector: saveToURL:ofType:forSaveOperation:completionHandler:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func save(to: URL, ofType: String, `for`: NSDocument.SaveOperationType, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func saveToURLWithOfTypeWithForSaveOperationWithCompletionHandler(to: URL, ofType: String, `for`: NSDocument.SaveOperationType, completionHandler: JSValue)
 
   /**
     - Selector: saveToURL:ofType:forSaveOperation:delegate:didSaveSelector:contextInfo:
@@ -438,7 +438,7 @@ import AppKit
     - Selector: shareDocumentWithSharingService:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func share(with: NSSharingService, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.13, *) func shareDocumentWithSharingServiceWithCompletionHandler(with: NSSharingService, completionHandler: JSValue)
 
   /**
     - Selector: shouldChangePrintInfo:
@@ -459,7 +459,7 @@ import AppKit
     - Selector: stopBrowsingVersionsWithCompletionHandler:
     - Introduced: 10.12
   */
-  // jsvalue @objc @available(OSX 10.12, *) func stopBrowsingVersions(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.12, *) func stopBrowsingVersionsWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: unblockUserInteraction
@@ -477,13 +477,13 @@ import AppKit
     - Selector: unlockDocumentWithCompletionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func unlock(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func unlockDocumentWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: unlockWithCompletionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func unlock(completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func unlockWithCompletionHandler(completionHandler: JSValue)
 
   /**
     - Selector: updateChangeCount:

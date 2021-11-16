@@ -44,7 +44,7 @@ import AVFoundation
     - Selector: writeUtterance:toBufferCallback:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func write(_: AVSpeechUtterance, toBufferCallback: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func writeUtteranceWithToBufferCallback(_ p0: AVSpeechUtterance, toBufferCallback: JSValue)
 
   // Own Instance Properties
 

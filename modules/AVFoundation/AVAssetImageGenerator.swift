@@ -38,7 +38,7 @@ import AVFoundation
   /**
     - Selector: generateCGImagesAsynchronouslyForTimes:completionHandler:
   */
-  // jsvalue @objc func generateCGImagesAsynchronously(forTimes: [NSValue], completionHandler: JSValue)
+  // jsvalue @objc func generateCGImagesAsynchronouslyForTimesWithCompletionHandler(forTimes: [NSValue], completionHandler: JSValue)
 
   // Own Instance Properties
 

@@ -32,13 +32,13 @@ import AppKit
     - Selector: runAnimationGroup:
     - Introduced: 10.12
   */
-// jsvalue   @objc @available(OSX 10.12, *) static func runAnimationGroup(_: JSValue)
+// jsvalue   @objc @available(OSX 10.12, *) static func runAnimationGroup(_ p0: JSValue)
 
   /**
     - Selector: runAnimationGroup:completionHandler:
     - Introduced: 10.7
   */
-// jsvalue   @objc @available(OSX 10.7, *) static func runAnimationGroup(_: JSValue, completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.7, *) static func runAnimationGroupCompletionHandler(_ completionHandler: JSValue, completionHandler completionHandler1: JSValue)
 
   // Own Static Properties
 

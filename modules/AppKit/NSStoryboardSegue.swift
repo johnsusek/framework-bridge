@@ -55,7 +55,7 @@ extension NSStoryboardSegue: NSStoryboardSegueExports {
   */
   @objc public static func createWithSegueWithIdentifierWithSourceWithDestinationWithPerformHandler(_ identifier: NSStoryboardSegue.Identifier, _ source: Any, _ destination: Any, _ performHandler: JSValue) -> Self {
     return self.init(identifier: identifier, source: source, destination: destination, performHandler: { 
-      performHandler.call(withArguments: [])!
+      performHandler.call(withArguments: [])
     })
   }
 

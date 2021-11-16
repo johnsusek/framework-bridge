@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: makeStreamingContentKeyRequestDataForApp:contentIdentifier:options:completionHandler:
   */
-  // jsvalue @objc func makeStreamingContentKeyRequestData(forApp: Data, contentIdentifier: Data?, options: [String: Any]?, completionHandler: JSValue)
+  // jsvalue @objc func makeStreamingContentKeyRequestDataForAppWithContentIdentifierWithOptionsWithCompletionHandler(forApp: Data, contentIdentifier: Data?, options: [String: Any]?, completionHandler: JSValue)
 
   /**
     - Selector: processContentKeyResponse:

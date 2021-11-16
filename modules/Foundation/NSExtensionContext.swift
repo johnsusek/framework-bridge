@@ -28,12 +28,12 @@ import Foundation
   /**
     - Selector: completeRequestReturningItems:completionHandler:
   */
-  // jsvalue @objc func completeRequest(returningItems: [Any]?, completionHandler: JSValue)
+  // jsvalue @objc func completeRequestReturningItemsWithCompletionHandler(returningItems: [Any]?, completionHandler: JSValue)
 
   /**
     - Selector: openURL:completionHandler:
   */
-  // jsvalue @objc func open(_: URL, completionHandler: JSValue)
+  // jsvalue @objc func openURLWithCompletionHandler(_ p0: URL, completionHandler: JSValue)
 
   // Own Instance Properties
 

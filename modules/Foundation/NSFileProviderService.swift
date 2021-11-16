@@ -23,7 +23,7 @@ import Foundation
   /**
     - Selector: getFileProviderConnectionWithCompletionHandler:
   */
-  // jsvalue @objc func getFileProviderConnection(completionHandler: JSValue)
+  // jsvalue @objc func getFileProviderConnectionWithCompletionHandler(completionHandler: JSValue)
 
   // Own Instance Properties
 

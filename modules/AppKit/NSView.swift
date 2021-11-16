@@ -744,12 +744,12 @@ import AppKit
     - Selector: showDefinitionForAttributedString:range:options:baselineOriginProvider:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func showDefinition(`for`: NSAttributedString?, range: NSRange, options: [NSView.DefinitionOptionKey: Any]?, baselineOriginProvider: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func showDefinitionForAttributedStringWithRangeWithOptionsWithBaselineOriginProvider(`for`: NSAttributedString?, range: NSRange, options: [NSView.DefinitionOptionKey: Any]?, baselineOriginProvider: JSValue)
 
   /**
     - Selector: sortSubviewsUsingFunction:context:
   */
-  // jsvalue @objc (sortSubviewsUsingFunction:context:) func sortSubviews(_: JSValue, context: UnsafeMutableRawPointer?)
+  // jsvalue @objc (sortSubviewsUsingFunction:context:) func sortSubviewsUsingFunctionWithContext(_ p0: JSValue, context: UnsafeMutableRawPointer?)
 
   /**
     - Selector: translateOriginToPoint:

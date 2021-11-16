@@ -23,7 +23,7 @@ import AppKit
   /**
     - Selector: showSamplerWithSelectionHandler:
   */
-  // jsvalue @objc func show(selectionHandler: JSValue)
+  // jsvalue @objc func showSamplerWithSelectionHandler(selectionHandler: JSValue)
 }
 
 extension NSColorSampler: NSColorSamplerExports {

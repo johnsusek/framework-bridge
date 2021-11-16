@@ -29,6 +29,7 @@ const classesToRegister = {
     "NSCondition",
     "NSCountCommand",
     "NSCreateCommand",
+    "NSData",
     "NSDataDetector",
     "NSDecimalNumberHandler",
     "NSDeleteCommand",

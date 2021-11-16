@@ -42,10 +42,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     do {
+      print("\n✨ \(numRegistered) classes registered successfully.")
       let script = try String(contentsOf: bundleUrl, encoding: .utf8)
       _ = context.evaluateScript(script)
-      print("\n✨ \(numRegistered) classes registered successfully.")
-      exit(0);
+      // exit(0);
     } catch {
       print(error)
       exit(1)

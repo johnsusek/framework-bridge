@@ -41,36 +41,36 @@ import Foundation
     - Selector: loadDataRepresentationForTypeIdentifier:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func loadDataRepresentationForTypeIdentifierWithCallback(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
+  // jsvalue @objc @available(OSX 10.13, *) func loadDataRepresentation(forTypeIdentifier: String, completionHandler: JSValue) -> Progress
 
   /**
     - Selector: loadFileRepresentationForTypeIdentifier:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func loadFileRepresentationForTypeIdentifierWithCallback(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
+  // jsvalue @objc @available(OSX 10.13, *) func loadFileRepresentation(forTypeIdentifier: String, completionHandler: JSValue) -> Progress
 
   /**
     - Selector: loadInPlaceFileRepresentationForTypeIdentifier:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func loadInPlaceFileRepresentationForTypeIdentifierWithCallback(_ forTypeIdentifier: String, _ completionHandler: JSValue) -> Progress
+  // jsvalue @objc @available(OSX 10.13, *) func loadInPlaceFileRepresentation(forTypeIdentifier: String, completionHandler: JSValue) -> Progress
 
   /**
     - Selector: loadItemForTypeIdentifier:options:completionHandler:
   */
-  // jsvalue @objc func loadItemForTypeIdentifierWithOptionsWithCallback(_ forTypeIdentifier: String, _ options: [AnyHashable: Any]?, _ completionHandler: JSValue?)
+  // jsvalue @objc func loadItem(forTypeIdentifier: String, options: [AnyHashable: Any]?, completionHandler: JSValue?)
 
   /**
     - Selector: loadObjectOfClass:completionHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func loadObjectOfClassWithCallback(_ ofClass: NSItemProviderReading.Type, _ completionHandler: JSValue) -> Progress
+  // jsvalue @objc @available(OSX 10.13, *) func loadObject(ofClass: NSItemProviderReading.Type, completionHandler: JSValue) -> Progress
 
   /**
     - Selector: loadPreviewImageWithOptions:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func loadPreviewImageWithOptionsWithCallback(_ options: [AnyHashable: Any], _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func loadPreviewImage(options: [AnyHashable: Any], completionHandler: JSValue)
 
   /**
     - Selector: registerCloudKitShare:container:
@@ -82,24 +82,24 @@ import Foundation
     - Selector: registerCloudKitShareWithPreparationHandler:
     - Introduced: 10.12
   */
-  // jsvalue @objc @available(OSX 10.12, *) func registerCloudKitShareWithPreparationHandler(_ preparationHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.12, *) func registerCloudKitShare(preparationHandler: JSValue)
 
   /**
     - Selector: registerDataRepresentationForTypeIdentifier:visibility:loadHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func registerDataRepresentationForTypeIdentifierWithVisibilityWithLoadHandler(_ forTypeIdentifier: String, _ visibility: NSItemProviderRepresentationVisibility, _ loadHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.13, *) func registerDataRepresentation(forTypeIdentifier: String, visibility: NSItemProviderRepresentationVisibility, loadHandler: JSValue)
 
   /**
     - Selector: registerFileRepresentationForTypeIdentifier:fileOptions:visibility:loadHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func registerFileRepresentationForTypeIdentifierWithFileOptionsWithVisibilityWithLoadHandler(_ forTypeIdentifier: String, _ fileOptions: NSItemProviderFileOptions, _ visibility: NSItemProviderRepresentationVisibility, _ loadHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.13, *) func registerFileRepresentation(forTypeIdentifier: String, fileOptions: NSItemProviderFileOptions, visibility: NSItemProviderRepresentationVisibility, loadHandler: JSValue)
 
   /**
     - Selector: registerItemForTypeIdentifier:loadHandler:
   */
-  // jsvalue @objc func registerItemForTypeIdentifierWithLoadHandler(_ forTypeIdentifier: String, _ loadHandler: JSValue)
+  // jsvalue @objc func registerItem(forTypeIdentifier: String, loadHandler: JSValue)
 
   /**
     - Selector: registerObject:visibility:
@@ -111,7 +111,7 @@ import Foundation
     - Selector: registerObjectOfClass:visibility:loadHandler:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func registerObjectOfClassWithVisibilityWithLoadHandler(_ ofClass: NSItemProviderWriting.Type, _ visibility: NSItemProviderRepresentationVisibility, _ loadHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.13, *) func registerObject(ofClass: NSItemProviderWriting.Type, visibility: NSItemProviderRepresentationVisibility, loadHandler: JSValue)
 
   /**
     - Selector: registeredTypeIdentifiersWithFileOptions:

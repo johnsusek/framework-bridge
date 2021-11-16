@@ -40,13 +40,13 @@ import Foundation
     - Selector: getCredentialsForProtectionSpace:task:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func getCredentialsForProtectionSpaceWithTaskWithCallback(_ `for`: URLProtectionSpace, _ task: URLSessionTask, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getCredentials(`for`: URLProtectionSpace, task: URLSessionTask, completionHandler: JSValue)
 
   /**
     - Selector: getDefaultCredentialForProtectionSpace:task:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func getDefaultCredentialForProtectionSpaceWithTaskWithCallback(_ `for`: URLProtectionSpace, _ task: URLSessionTask, _ completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getDefaultCredential(`for`: URLProtectionSpace, task: URLSessionTask, completionHandler: JSValue)
 
   /**
     - Selector: removeCredential:forProtectionSpace:

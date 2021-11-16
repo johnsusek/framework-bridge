@@ -23,7 +23,7 @@ import AppKit
   /**
     - Selector: downloadFontAssetsWithCompletionHandler:
   */
-  // jsvalue @objc func downloadFontAssetsWithCallback(_ withCompletionHandler: JSValue)
+  // jsvalue @objc func download(withCompletionHandler: JSValue)
 
   // Own Instance Properties
 

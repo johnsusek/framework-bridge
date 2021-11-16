@@ -167,7 +167,7 @@ import AppKit
     - Selector: performBatchUpdates:completionHandler:
     - Introduced: 10.11
   */
-  // jsvalue @objc @available(OSX 10.11, *) func performBatchUpdatesCallback(_ completionHandler: JSValue, _ completionHandler1: JSValue)
+  // jsvalue @objc @available(OSX 10.11, *) func performBatchUpdates(_: JSValue, completionHandler: JSValue)
 
   /**
     - Selector: registerClass:forItemWithIdentifier:

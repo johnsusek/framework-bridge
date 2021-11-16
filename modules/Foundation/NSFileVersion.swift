@@ -33,7 +33,7 @@ import Foundation
     - Selector: getNonlocalVersionsOfItemAtURL:completionHandler:
     - Introduced: 10.10
   */
-// jsvalue   @objc @available(OSX 10.10, *) static func getNonlocalVersionsOfItemAtURLWithCallback(_ at: URL, _ completionHandler: JSValue)
+// jsvalue   @objc @available(OSX 10.10, *) static func getNonlocalVersionsOfItem(at: URL, completionHandler: JSValue)
 
   /**
     - Selector: otherVersionsOfItemAtURL:

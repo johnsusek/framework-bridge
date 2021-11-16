@@ -21,7 +21,7 @@ import Foundation
     - Selector: scheduledTimerWithTimeInterval:repeats:block:
     - Introduced: 10.12
   */
-// jsvalue   @objc @available(OSX 10.12, *) static func scheduledTimerWithTimeIntervalWithRepeatsWithBlock(_ withTimeInterval: TimeInterval, _ repeats: Bool, _ block: JSValue) -> Timer
+// jsvalue   @objc @available(OSX 10.12, *) static func scheduledTimer(withTimeInterval: TimeInterval, repeats: Bool, block: JSValue) -> Timer
 
   /**
     - Selector: scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:

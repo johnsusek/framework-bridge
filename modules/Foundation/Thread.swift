@@ -26,7 +26,7 @@ import Foundation
     - Selector: detachNewThreadWithBlock:
     - Introduced: 10.12
   */
-// jsvalue   @objc @available(OSX 10.12, *) static func detachNewThreadWithBlock(_ p0: JSValue)
+// jsvalue   @objc @available(OSX 10.12, *) static func detachNewThread(_: JSValue)
 
   /**
     - Selector: exit

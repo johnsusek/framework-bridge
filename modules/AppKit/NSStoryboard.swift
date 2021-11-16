@@ -42,7 +42,7 @@ import AppKit
     - Selector: instantiateControllerWithIdentifier:creator:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func instantiateControllerWithIdentifierCreator(_ creator: NSStoryboard.SceneIdentifier, _ creator1: JSValue?) -> Any
+  // jsvalue @objc @available(OSX 10.15, *) func instantiateControllerWithIdentifier(_: NSStoryboard.SceneIdentifier, creator: JSValue?) -> Any
 
   /**
     - Selector: instantiateInitialController
@@ -53,7 +53,7 @@ import AppKit
     - Selector: instantiateInitialControllerWithCreator:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func instantiateInitialControllerWithCreator(_ p0: JSValue?) -> Any?
+  // jsvalue @objc @available(OSX 10.15, *) func instantiateInitialControllerWithCreator(_: JSValue?) -> Any?
 }
 
 extension NSStoryboard: NSStoryboardExports {

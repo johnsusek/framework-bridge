@@ -23,7 +23,7 @@ import Foundation
   /**
     - Selector: executeWithArguments:completionHandler:
   */
-  // jsvalue @objc func executeWithArgumentsWithCallback(_ withArguments: [String]?, _ completionHandler: JSValue?)
+  // jsvalue @objc func execute(withArguments: [String]?, completionHandler: JSValue?)
 
   // Own Instance Properties
 

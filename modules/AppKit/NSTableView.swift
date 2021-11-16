@@ -125,7 +125,7 @@ import AppKit
     - Selector: enumerateAvailableRowViewsUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func enumerateAvailableRowViewsUsingBlock(_ p0: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func enumerateAvailableRowViews(_: JSValue)
 
   /**
     - Selector: frameOfCellAtColumn:row:

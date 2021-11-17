@@ -79,6 +79,7 @@
     "NSSortDescriptor",
     "NSSpecifierTest",
     "NSSpellServer",
+    "NSString",
     "NSTextCheckingResult",
     "NSUbiquitousKeyValueStore",
     "NSUniqueIDSpecifier",

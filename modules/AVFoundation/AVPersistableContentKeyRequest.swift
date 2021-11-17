@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: persistableContentKeyFromKeyVendorResponse:options:error:
   */
-  // throws - @objc func persistableContentKeyFromKeyVendorResponse(options: Data, error: [String: Any]?) -> Data?
+  // throws - @objc func persistableContentKeyFromKeyVendorResponse(keyVendorResponse: Data, options: [String: Any]?) -> Data?
 }
 
 extension AVPersistableContentKeyRequest: AVPersistableContentKeyRequestExports {

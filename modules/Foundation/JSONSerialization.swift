@@ -21,17 +21,17 @@ import Foundation
   /**
     - Selector: JSONObjectWithData:options:error:
   */
-  // throws - @objc static func JSONObjectWithData(options: Data, error: JSONSerialization.ReadingOptions) -> Any?
+  // throws - @objc static func JSONObjectWithData(data: Data, options: JSONSerialization.ReadingOptions) -> Any?
 
   /**
     - Selector: JSONObjectWithStream:options:error:
   */
-  // throws - @objc static func JSONObjectWithStream(options: InputStream, error: JSONSerialization.ReadingOptions) -> Any?
+  // throws - @objc static func JSONObjectWithStream(stream: InputStream, options: JSONSerialization.ReadingOptions) -> Any?
 
   /**
     - Selector: dataWithJSONObject:options:error:
   */
-  // throws - @objc static func dataWithJSONObject(options: Any, error: JSONSerialization.WritingOptions) -> Data?
+  // throws - @objc static func dataWithJSONObject(obj: Any, options: JSONSerialization.WritingOptions) -> Data?
 
   /**
     - Selector: isValidJSONObject:

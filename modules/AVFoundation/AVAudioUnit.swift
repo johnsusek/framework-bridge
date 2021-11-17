@@ -29,7 +29,7 @@ import AVFoundation
   /**
     - Selector: loadAudioUnitPresetAtURL:error:
   */
-  // throws - @objc func loadAudioUnitPresetAtURL(error: URL) -> Bool
+  // throws - @objc func loadAudioUnitPresetAtURL(url: URL) -> Bool
 
   // Own Instance Properties
 

@@ -170,7 +170,7 @@ import Foundation
     - Selector: sendEventWithOptions:timeout:error:
     - Introduced: 10.11
   */
-  // throws - @objc @available(OSX 10.11, *) func sendEventWithOptions(timeout: NSAppleEventDescriptor.SendOptions, error: TimeInterval) -> NSAppleEventDescriptor?
+  // throws - @objc @available(OSX 10.11, *) func sendEventWithOptions(sendOptions: NSAppleEventDescriptor.SendOptions, timeout: TimeInterval) -> NSAppleEventDescriptor?
 
   /**
     - Selector: setAttributeDescriptor:forKeyword:

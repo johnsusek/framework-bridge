@@ -21,17 +21,17 @@ import AppKit
   /**
     - Selector: hideFontCollectionWithName:visibility:error:
   */
-  // throws - @objc static func hideFontCollectionWithName(visibility: NSFontCollection.Name, error: NSFontCollection.Visibility) -> Bool
+  // throws - @objc static func hideFontCollectionWithName(name: NSFontCollection.Name, visibility: NSFontCollection.Visibility) -> Bool
 
   /**
     - Selector: renameFontCollectionWithName:visibility:toName:error:
   */
-  // throws - @objc (renameFontCollectionWithName:visibility:toName:error:) static func rename(fromName: NSFontCollection.Name, visibility: NSFontCollection.Visibility, toName: NSFontCollection.Name) -> Bool
+  // throws - @objc (renameFontCollectionWithName:visibility:toName:error:) static func rename(name: NSFontCollection.Name, fromName: NSFontCollection.Visibility, visibility: NSFontCollection.Name) -> Bool
 
   /**
     - Selector: showFontCollection:withName:visibility:error:
   */
-  // throws - @objc static func showFontCollection(withName: NSFontCollection, visibility: NSFontCollection.Name, error: NSFontCollection.Visibility) -> Bool
+  // throws - @objc static func showFontCollection(collection: NSFontCollection, withName: NSFontCollection.Name, visibility: NSFontCollection.Visibility) -> Bool
 
   // Own Static Properties
 

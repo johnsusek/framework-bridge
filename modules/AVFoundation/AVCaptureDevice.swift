@@ -87,7 +87,7 @@ import AVFoundation
     - Selector: setTorchModeOnWithLevel:error:
     - Introduced: 10.15
   */
-  // throws - @objc (setTorchModeOnWithLevel:error:) @available(OSX 10.15, *) func setTorchModeOn(level: Float) -> Bool
+  // throws - @objc (setTorchModeOnWithLevel:error:) @available(OSX 10.15, *) func setTorchModeOn(torchLevel: Float) -> Bool
 
   /**
     - Selector: setTransportControlsPlaybackMode:speed:

@@ -39,7 +39,7 @@ import AVFoundation
   /**
     - Selector: insertTimeRange:ofAsset:atTime:error:
   */
-  // throws - @objc (insertTimeRange:ofAsset:atTime:error:) func insertTimeRange(_: CMTimeRange, of: AVAsset, at: CMTime) -> Bool
+  // throws - @objc (insertTimeRange:ofAsset:atTime:error:) func insertTimeRange(timeRange: CMTimeRange, _: AVAsset, of: CMTime) -> Bool
 
   /**
     - Selector: mutableTrackCompatibleWithTrack:

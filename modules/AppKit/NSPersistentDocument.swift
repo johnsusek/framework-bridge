@@ -34,7 +34,7 @@ import AppKit
     - Selector: configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error:
     - Introduced: 10.5
   */
-  // throws - @objc @available(OSX 10.5, *) func configurePersistentStoreCoordinatorForURL(ofType: URL, modelConfiguration: String, storeOptions: String?, error: [String: Any]?) -> Bool
+  // throws - @objc @available(OSX 10.5, *) func configurePersistentStoreCoordinatorForURL(url: URL, ofType: String, modelConfiguration: String?, storeOptions: [String: Any]?) -> Bool
 
   /**
     - Selector: persistentStoreTypeForFileType:

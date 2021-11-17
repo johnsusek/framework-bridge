@@ -122,17 +122,17 @@ import Foundation
   /**
     - Selector: nodesForXPath:error:
   */
-  // throws - @objc func nodesForXPath(error: String) -> [XMLNode]?
+  // throws - @objc func nodesForXPath(xpath: String) -> [XMLNode]?
 
   /**
     - Selector: objectsForXQuery:constants:error:
   */
-  // throws - @objc func objectsForXQuery(constants: String, error: [String: Any]?) -> [Any]?
+  // throws - @objc func objectsForXQuery(xquery: String, constants: [String: Any]?) -> [Any]?
 
   /**
     - Selector: objectsForXQuery:error:
   */
-  // throws - @objc func objectsForXQuery(error: String) -> [Any]?
+  // throws - @objc func objectsForXQuery(xquery: String) -> [Any]?
 
   // Own Instance Properties
 

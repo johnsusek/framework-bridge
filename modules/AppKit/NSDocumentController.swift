@@ -82,22 +82,22 @@ import AppKit
     - Selector: duplicateDocumentWithContentsOfURL:copying:displayName:error:
     - Introduced: 10.7
   */
-  // throws - @objc @available(OSX 10.7, *) func duplicateDocumentWithContentsOfURL(copying: URL, displayName: Bool, error: String?) -> NSDocument?
+  // throws - @objc @available(OSX 10.7, *) func duplicateDocumentWithContentsOfURL(url: URL, copying: Bool, displayName: String?) -> NSDocument?
 
   /**
     - Selector: makeDocumentForURL:withContentsOfURL:ofType:error:
   */
-  // throws - @objc func makeDocumentForURL(withContentsOfURL: URL?, ofType: URL, error: String) -> NSDocument?
+  // throws - @objc func makeDocumentForURL(urlOrNil: URL?, withContentsOfURL: URL, ofType: String) -> NSDocument?
 
   /**
     - Selector: makeDocumentWithContentsOfURL:ofType:error:
   */
-  // throws - @objc func makeDocumentWithContentsOfURL(ofType: URL, error: String) -> NSDocument?
+  // throws - @objc func makeDocumentWithContentsOfURL(url: URL, ofType: String) -> NSDocument?
 
   /**
     - Selector: makeUntitledDocumentOfType:error:
   */
-  // throws - @objc func makeUntitledDocumentOfType(error: String) -> NSDocument?
+  // throws - @objc func makeUntitledDocumentOfType(typeName: String) -> NSDocument?
 
   /**
     - Selector: newDocument:
@@ -128,7 +128,7 @@ import AppKit
   /**
     - Selector: openUntitledDocumentAndDisplay:error:
   */
-  // throws - @objc func openUntitledDocumentAndDisplay(error: Bool) -> NSDocument?
+  // throws - @objc func openUntitledDocumentAndDisplay(displayDocument: Bool) -> NSDocument?
 
   /**
     - Selector: presentError:
@@ -175,7 +175,7 @@ import AppKit
   /**
     - Selector: typeForContentsOfURL:error:
   */
-  // throws - @objc func typeForContentsOfURL(error: URL) -> String?
+  // throws - @objc func typeForContentsOfURL(url: URL) -> String?
 
   /**
     - Selector: willPresentError:

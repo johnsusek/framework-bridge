@@ -57,7 +57,7 @@ import AppKit
     - Selector: objectForProperty:error:
     - Introduced: 10.5
   */
-  // throws - @objc @available(OSX 10.5, *) func objectForProperty(error: NSSpeechSynthesizer.SpeechPropertyKey) -> Any?
+  // throws - @objc @available(OSX 10.5, *) func objectForProperty(property: NSSpeechSynthesizer.SpeechPropertyKey) -> Any?
 
   /**
     - Selector: pauseSpeakingAtBoundary:
@@ -75,7 +75,7 @@ import AppKit
     - Selector: setObject:forProperty:error:
     - Introduced: 10.5
   */
-  // throws - @objc @available(OSX 10.5, *) func setObject(forProperty: Any?, error: NSSpeechSynthesizer.SpeechPropertyKey) -> Bool
+  // throws - @objc @available(OSX 10.5, *) func setObject(object: Any?, forProperty: NSSpeechSynthesizer.SpeechPropertyKey) -> Bool
 
   /**
     - Selector: setVoice:

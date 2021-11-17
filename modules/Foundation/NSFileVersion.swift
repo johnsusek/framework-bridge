@@ -22,7 +22,7 @@ import Foundation
     - Selector: addVersionOfItemAtURL:withContentsOfURL:options:error:
     - Introduced: 10.7
   */
-  // throws - @objc @available(OSX 10.7, *) static func addVersionOfItemAtURL(withContentsOfURL: URL, options: URL, error: NSFileVersion.AddingOptions) -> NSFileVersion?
+  // throws - @objc @available(OSX 10.7, *) static func addVersionOfItemAtURL(url: URL, withContentsOfURL: URL, options: NSFileVersion.AddingOptions) -> NSFileVersion?
 
   /**
     - Selector: currentVersionOfItemAtURL:
@@ -43,7 +43,7 @@ import Foundation
   /**
     - Selector: removeOtherVersionsOfItemAtURL:error:
   */
-  // throws - @objc static func removeOtherVersionsOfItemAtURL(error: URL) -> Bool
+  // throws - @objc static func removeOtherVersionsOfItemAtURL(url: URL) -> Bool
 
   /**
     - Selector: temporaryDirectoryURLForNewVersionOfItemAtURL:
@@ -71,7 +71,7 @@ import Foundation
   /**
     - Selector: replaceItemAtURL:options:error:
   */
-  // throws - @objc func replaceItemAtURL(options: URL, error: NSFileVersion.ReplacingOptions) -> URL?
+  // throws - @objc func replaceItemAtURL(url: URL, options: NSFileVersion.ReplacingOptions) -> URL?
 
   // Own Instance Properties
 

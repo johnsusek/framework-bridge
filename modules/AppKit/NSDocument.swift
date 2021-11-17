@@ -137,7 +137,7 @@ import AppKit
   /**
     - Selector: dataOfType:error:
   */
-  // throws - @objc func dataOfType(error: String) -> Data?
+  // throws - @objc func dataOfType(typeName: String) -> Data?
 
   /**
     - Selector: defaultDraftName
@@ -178,7 +178,7 @@ import AppKit
   /**
     - Selector: fileAttributesToWriteToURL:ofType:forSaveOperation:originalContentsURL:error:
   */
-  // throws - @objc func fileAttributesToWriteToURL(ofType: URL, forSaveOperation: String, originalContentsURL: NSDocument.SaveOperationType, error: URL?) -> [String: Any]?
+  // throws - @objc func fileAttributesToWriteToURL(url: URL, ofType: String, forSaveOperation: NSDocument.SaveOperationType, originalContentsURL: URL?) -> [String: Any]?
 
   /**
     - Selector: fileNameExtensionForType:saveOperation:
@@ -189,7 +189,7 @@ import AppKit
   /**
     - Selector: fileWrapperOfType:error:
   */
-  // throws - @objc func fileWrapperOfType(error: String) -> FileWrapper?
+  // throws - @objc func fileWrapperOfType(typeName: String) -> FileWrapper?
 
   /**
     - Selector: handleCloseScriptCommand:
@@ -316,22 +316,22 @@ import AppKit
   /**
     - Selector: printOperationWithSettings:error:
   */
-  // throws - @objc func printOperationWithSettings(error: [NSPrintInfo.AttributeKey: Any]) -> NSPrintOperation?
+  // throws - @objc func printOperationWithSettings(printSettings: [NSPrintInfo.AttributeKey: Any]) -> NSPrintOperation?
 
   /**
     - Selector: readFromData:ofType:error:
   */
-  // throws - @objc func readFromData(ofType: Data, error: String) -> Bool
+  // throws - @objc func readFromData(data: Data, ofType: String) -> Bool
 
   /**
     - Selector: readFromFileWrapper:ofType:error:
   */
-  // throws - @objc func readFromFileWrapper(ofType: FileWrapper, error: String) -> Bool
+  // throws - @objc func readFromFileWrapper(fileWrapper: FileWrapper, ofType: String) -> Bool
 
   /**
     - Selector: readFromURL:ofType:error:
   */
-  // throws - @objc func readFromURL(ofType: URL, error: String) -> Bool
+  // throws - @objc func readFromURL(url: URL, ofType: String) -> Bool
 
   /**
     - Selector: removeWindowController:
@@ -364,7 +364,7 @@ import AppKit
   /**
     - Selector: revertToContentsOfURL:ofType:error:
   */
-  // throws - @objc func revertToContentsOfURL(ofType: URL, error: String) -> Bool
+  // throws - @objc func revertToContentsOfURL(url: URL, ofType: String) -> Bool
 
   /**
     - Selector: runModalPageLayoutWithPrintInfo:delegate:didRunSelector:contextInfo:
@@ -531,17 +531,17 @@ import AppKit
   /**
     - Selector: writeSafelyToURL:ofType:forSaveOperation:error:
   */
-  // throws - @objc func writeSafelyToURL(ofType: URL, forSaveOperation: String, error: NSDocument.SaveOperationType) -> Bool
+  // throws - @objc func writeSafelyToURL(url: URL, ofType: String, forSaveOperation: NSDocument.SaveOperationType) -> Bool
 
   /**
     - Selector: writeToURL:ofType:error:
   */
-  // throws - @objc func writeToURL(ofType: URL, error: String) -> Bool
+  // throws - @objc func writeToURL(url: URL, ofType: String) -> Bool
 
   /**
     - Selector: writeToURL:ofType:forSaveOperation:originalContentsURL:error:
   */
-  // throws - @objc func writeToURL(ofType: URL, forSaveOperation: String, originalContentsURL: NSDocument.SaveOperationType, error: URL?) -> Bool
+  // throws - @objc func writeToURL(url: URL, ofType: String, forSaveOperation: NSDocument.SaveOperationType, originalContentsURL: URL?) -> Bool
 
   // Own Instance Properties
 

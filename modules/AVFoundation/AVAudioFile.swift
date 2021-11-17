@@ -23,17 +23,17 @@ import AVFoundation
   /**
     - Selector: readIntoBuffer:error:
   */
-  // throws - @objc func readIntoBuffer(error: AVAudioPCMBuffer) -> Bool
+  // throws - @objc func readIntoBuffer(buffer: AVAudioPCMBuffer) -> Bool
 
   /**
     - Selector: readIntoBuffer:frameCount:error:
   */
-  // throws - @objc func readIntoBuffer(frameCount: AVAudioPCMBuffer, error: AVAudioFrameCount) -> Bool
+  // throws - @objc func readIntoBuffer(buffer: AVAudioPCMBuffer, frameCount: AVAudioFrameCount) -> Bool
 
   /**
     - Selector: writeFromBuffer:error:
   */
-  // throws - @objc func writeFromBuffer(error: AVAudioPCMBuffer) -> Bool
+  // throws - @objc func writeFromBuffer(buffer: AVAudioPCMBuffer) -> Bool
 
   // Own Instance Properties
 

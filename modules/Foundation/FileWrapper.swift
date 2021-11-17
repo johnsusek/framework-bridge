@@ -45,7 +45,7 @@ import Foundation
     - Selector: readFromURL:options:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) func readFromURL(options: URL, error: FileWrapper.ReadingOptions) -> Bool
+  // throws - @objc @available(OSX 10.6, *) func readFromURL(url: URL, options: FileWrapper.ReadingOptions) -> Bool
 
   /**
     - Selector: removeFileWrapper:
@@ -56,7 +56,7 @@ import Foundation
     - Selector: writeToURL:options:originalContentsURL:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) func writeToURL(options: URL, originalContentsURL: FileWrapper.WritingOptions, error: URL?) -> Bool
+  // throws - @objc @available(OSX 10.6, *) func writeToURL(url: URL, options: FileWrapper.WritingOptions, originalContentsURL: URL?) -> Bool
 
   // Own Instance Properties
 

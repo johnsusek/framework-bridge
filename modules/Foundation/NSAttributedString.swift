@@ -101,7 +101,7 @@ import Foundation
     - Selector: dataFromRange:documentAttributes:error:
     - Introduced: 10.0
   */
-  // throws - @objc @available(OSX 10.0, *) func dataFromRange(documentAttributes: NSRange, error: [NSAttributedString.DocumentAttributeKey: Any]) -> Data?
+  // throws - @objc @available(OSX 10.0, *) func dataFromRange(range: NSRange, documentAttributes: [NSAttributedString.DocumentAttributeKey: Any]) -> Data?
 
   /**
     - Selector: docFormatFromRange:documentAttributes:
@@ -152,7 +152,7 @@ import Foundation
     - Selector: fileWrapperFromRange:documentAttributes:error:
     - Introduced: 10.0
   */
-  // throws - @objc @available(OSX 10.0, *) func fileWrapperFromRange(documentAttributes: NSRange, error: [NSAttributedString.DocumentAttributeKey: Any]) -> FileWrapper?
+  // throws - @objc @available(OSX 10.0, *) func fileWrapperFromRange(range: NSRange, documentAttributes: [NSAttributedString.DocumentAttributeKey: Any]) -> FileWrapper?
 
   /**
     - Selector: fontAttributesInRange:

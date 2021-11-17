@@ -69,7 +69,7 @@ import Foundation
     - Selector: getOffset:error:
     - Introduced: 10.15
   */
-  // throws - @objc @available(OSX 10.15, *) func getOffset(error: UnsafeMutablePointer<unsigned long long>) -> Bool
+  // throws - @objc @available(OSX 10.15, *) func getOffset(offsetInFile: UnsafeMutablePointer<unsigned long long>) -> Bool
 
   /**
     - Selector: readDataOfLength:
@@ -97,7 +97,7 @@ import Foundation
     - Selector: readDataUpToLength:error:
     - Introduced: 10.15
   */
-  // throws - @objc @available(OSX 10.15, *) func readDataUpToLength(error: Int) -> Data?
+  // throws - @objc @available(OSX 10.15, *) func readDataUpToLength(length: Int) -> Data?
 
   /**
     - Selector: readInBackgroundAndNotify
@@ -131,7 +131,7 @@ import Foundation
     - Selector: seekToEndReturningOffset:error:
     - Introduced: 10.15
   */
-  // throws - @objc @available(OSX 10.15, *) func seekToEndReturningOffset(error: UnsafeMutablePointer<unsigned long long>?) -> Bool
+  // throws - @objc @available(OSX 10.15, *) func seekToEndReturningOffset(offsetInFile: UnsafeMutablePointer<unsigned long long>?) -> Bool
 
   /**
     - Selector: seekToFileOffset:
@@ -145,7 +145,7 @@ import Foundation
     - Selector: seekToOffset:error:
     - Introduced: 10.15
   */
-  // throws - @objc @available(OSX 10.15, *) func seekToOffset(error: UInt64) -> Bool
+  // throws - @objc @available(OSX 10.15, *) func seekToOffset(offset: UInt64) -> Bool
 
   /**
     - Selector: synchronizeAndReturnError:
@@ -165,7 +165,7 @@ import Foundation
     - Selector: truncateAtOffset:error:
     - Introduced: 10.15
   */
-  // throws - @objc @available(OSX 10.15, *) func truncateAtOffset(error: UInt64) -> Bool
+  // throws - @objc @available(OSX 10.15, *) func truncateAtOffset(offset: UInt64) -> Bool
 
   /**
     - Selector: truncateFileAtOffset:
@@ -197,7 +197,7 @@ import Foundation
     - Selector: writeData:error:
     - Introduced: 10.15
   */
-  // throws - @objc @available(OSX 10.15, *) func writeData(error: Data) -> Bool
+  // throws - @objc @available(OSX 10.15, *) func writeData(data: Data) -> Bool
 
   // Own Instance Properties
 

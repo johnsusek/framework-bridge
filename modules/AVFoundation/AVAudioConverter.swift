@@ -28,7 +28,7 @@ import AVFoundation
   /**
     - Selector: convertToBuffer:fromBuffer:error:
   */
-  // throws - @objc func convertToBuffer(fromBuffer: AVAudioPCMBuffer, error: AVAudioPCMBuffer) -> Bool
+  // throws - @objc func convertToBuffer(outputBuffer: AVAudioPCMBuffer, fromBuffer: AVAudioPCMBuffer) -> Bool
 
   /**
     - Selector: reset

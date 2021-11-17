@@ -60,7 +60,7 @@ import AppKit
     - Selector: writeToURL:error:
     - Introduced: 10.11
   */
-  // throws - @objc @available(OSX 10.11, *) func writeToURL(error: URL?) -> Bool
+  // throws - @objc @available(OSX 10.11, *) func writeToURL(url: URL?) -> Bool
 
   // Own Instance Properties
 

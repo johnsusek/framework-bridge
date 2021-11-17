@@ -43,12 +43,12 @@ import AVFoundation
   /**
     - Selector: loadFromData:options:error:
   */
-  // throws - @objc func loadFromData(options: Data, error: AVMusicSequenceLoadOptions) -> Bool
+  // throws - @objc func loadFromData(data: Data, options: AVMusicSequenceLoadOptions) -> Bool
 
   /**
     - Selector: loadFromURL:options:error:
   */
-  // throws - @objc func loadFromURL(options: URL, error: AVMusicSequenceLoadOptions) -> Bool
+  // throws - @objc func loadFromURL(fileURL: URL, options: AVMusicSequenceLoadOptions) -> Bool
 
   /**
     - Selector: prepareToPlay
@@ -73,7 +73,7 @@ import AVFoundation
   /**
     - Selector: writeToURL:SMPTEResolution:replaceExisting:error:
   */
-  // throws - @objc func writeToURL(SMPTEResolution: URL, replaceExisting: Int, error: Bool) -> Bool
+  // throws - @objc func writeToURL(fileURL: URL, SMPTEResolution: Int, replaceExisting: Bool) -> Bool
 
   // Own Instance Properties
 

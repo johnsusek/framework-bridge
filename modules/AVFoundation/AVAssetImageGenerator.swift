@@ -33,7 +33,7 @@ import AVFoundation
   /**
     - Selector: copyCGImageAtTime:actualTime:error:
   */
-  // throws - @objc func copyCGImageAtTime(actualTime: CMTime, error: UnsafeMutablePointer<CMTime>?) -> CGImage?
+  // throws - @objc func copyCGImageAtTime(requestedTime: CMTime, actualTime: UnsafeMutablePointer<CMTime>?) -> CGImage?
 
   /**
     - Selector: generateCGImagesAsynchronouslyForTimes:completionHandler:

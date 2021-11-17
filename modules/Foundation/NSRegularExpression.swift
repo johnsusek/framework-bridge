@@ -31,7 +31,7 @@ import Foundation
   /**
     - Selector: regularExpressionWithPattern:options:error:
   */
-  // throws - @objc static func regularExpressionWithPattern(options: String, error: NSRegularExpression.Options) -> NSRegularExpression?
+  // throws - @objc static func regularExpressionWithPattern(pattern: String, options: NSRegularExpression.Options) -> NSRegularExpression?
 
   // Instance Methods
 

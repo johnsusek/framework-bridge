@@ -24,7 +24,7 @@ import AVFoundation
     - Selector: setVoiceProcessingEnabled:error:
     - Introduced: 10.15
   */
-  // throws - @objc @available(OSX 10.15, *) func setVoiceProcessingEnabled(error: Bool) -> Bool
+  // throws - @objc @available(OSX 10.15, *) func setVoiceProcessingEnabled(enabled: Bool) -> Bool
 
   // Own Instance Properties
 

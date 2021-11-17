@@ -102,17 +102,17 @@ import Foundation
   /**
     - Selector: objectByApplyingXSLT:arguments:error:
   */
-  // throws - @objc func objectByApplyingXSLT(`arguments`: Data, error: [String: String]?) -> Any?
+  // throws - @objc func objectByApplyingXSLT(xslt: Data, `arguments`: [String: String]?) -> Any?
 
   /**
     - Selector: objectByApplyingXSLTAtURL:arguments:error:
   */
-  // throws - @objc func objectByApplyingXSLTAtURL(`arguments`: URL, error: [String: String]?) -> Any?
+  // throws - @objc func objectByApplyingXSLTAtURL(xsltURL: URL, `arguments`: [String: String]?) -> Any?
 
   /**
     - Selector: objectByApplyingXSLTString:arguments:error:
   */
-  // throws - @objc func objectByApplyingXSLTString(`arguments`: String, error: [String: String]?) -> Any?
+  // throws - @objc func objectByApplyingXSLTString(xslt: String, `arguments`: [String: String]?) -> Any?
 
   /**
     - Selector: removeChildAtIndex:

@@ -35,12 +35,12 @@ import AVFoundation
     - Selector: persistentContentKeyFromKeyVendorResponse:options:error:
     - Introduced: 10.15
   */
-  // throws - @objc @available(OSX 10.15, *) func persistentContentKeyFromKeyVendorResponse(options: Data, error: [String: Any]?) -> Data?
+  // throws - @objc @available(OSX 10.15, *) func persistentContentKeyFromKeyVendorResponse(keyVendorResponse: Data, options: [String: Any]?) -> Data?
 
   /**
     - Selector: streamingContentKeyRequestDataForApp:contentIdentifier:options:error:
   */
-  // throws - @objc func streamingContentKeyRequestDataForApp(contentIdentifier: Data, options: Data, error: [String: Any]?) -> Data?
+  // throws - @objc func streamingContentKeyRequestDataForApp(appIdentifier: Data, contentIdentifier: Data, options: [String: Any]?) -> Data?
 
   // Own Instance Properties
 

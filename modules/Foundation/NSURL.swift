@@ -18,12 +18,6 @@ import Foundation
   // Static Methods
 
   /**
-    - Selector: URLByResolvingAliasFileAtURL:options:error:
-    - Introduced: 10.10
-  */
-  @objc @available(OSX 10.10, *) static func createWithURLByResolvingAliasFileAtURLWithOptions(_ resolvingAliasFileAt: URL, _ options: NSURL.BookmarkResolutionOptions) -> Self?
-
-  /**
     - Selector: URLFromPasteboard:
   */
   @objc static func createWithURLFromPasteboard(_ from: NSPasteboard) -> NSURL?
@@ -54,7 +48,7 @@ import Foundation
     - Selector: bookmarkDataWithContentsOfURL:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) static func bookmarkDataWithContentsOfURL(error: URL) -> Data?
+  // throws - @objc @available(OSX 10.6, *) static func bookmarkDataWithContentsOfURL(bookmarkFileURL: URL) -> Data?
 
   /**
     - Selector: fileURLWithFileSystemRepresentation:isDirectory:relativeToURL:
@@ -101,7 +95,7 @@ import Foundation
     - Selector: writeBookmarkData:toURL:options:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) static func writeBookmarkData(toURL: Data, options: URL, error: Int) -> Bool
+  // throws - @objc @available(OSX 10.6, *) static func writeBookmarkData(bookmarkData: Data, toURL: URL, options: Int) -> Bool
 
   // Instance Methods
 
@@ -127,7 +121,7 @@ import Foundation
     - Selector: bookmarkDataWithOptions:includingResourceValuesForKeys:relativeToURL:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) func bookmarkDataWithOptions(includingResourceValuesForKeys: NSURL.BookmarkCreationOptions, relativeToURL: [URLResourceKey]?, error: URL?) -> Data?
+  // throws - @objc @available(OSX 10.6, *) func bookmarkDataWithOptions(options: NSURL.BookmarkCreationOptions, includingResourceValuesForKeys: [URLResourceKey]?, relativeToURL: URL?) -> Data?
 
   /**
     - Selector: checkPromisedItemIsReachableAndReturnError:
@@ -157,13 +151,13 @@ import Foundation
     - Selector: getPromisedItemResourceValue:forKey:error:
     - Introduced: 10.10
   */
-  // throws - @objc @available(OSX 10.10, *) func getPromisedItemResourceValue(forKey: AutoreleasingUnsafeMutablePointer<Any?>, error: URLResourceKey) -> Bool
+  // throws - @objc @available(OSX 10.10, *) func getPromisedItemResourceValue(value: AutoreleasingUnsafeMutablePointer<Any?>, forKey: URLResourceKey) -> Bool
 
   /**
     - Selector: getResourceValue:forKey:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) func getResourceValue(forKey: AutoreleasingUnsafeMutablePointer<Any?>, error: URLResourceKey) -> Bool
+  // throws - @objc @available(OSX 10.6, *) func getResourceValue(value: AutoreleasingUnsafeMutablePointer<Any?>, forKey: URLResourceKey) -> Bool
 
   /**
     - Selector: isFileReferenceURL
@@ -175,7 +169,7 @@ import Foundation
     - Selector: promisedItemResourceValuesForKeys:error:
     - Introduced: 10.10
   */
-  // throws - @objc @available(OSX 10.10, *) func promisedItemResourceValuesForKeys(error: [URLResourceKey]) -> [URLResourceKey: Any]?
+  // throws - @objc @available(OSX 10.10, *) func promisedItemResourceValuesForKeys(keys: [URLResourceKey]) -> [URLResourceKey: Any]?
 
   /**
     - Selector: removeAllCachedResourceValues
@@ -193,19 +187,19 @@ import Foundation
     - Selector: resourceValuesForKeys:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) func resourceValuesForKeys(error: [URLResourceKey]) -> [URLResourceKey: Any]?
+  // throws - @objc @available(OSX 10.6, *) func resourceValuesForKeys(keys: [URLResourceKey]) -> [URLResourceKey: Any]?
 
   /**
     - Selector: setResourceValue:forKey:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) func setResourceValue(forKey: Any?, error: URLResourceKey) -> Bool
+  // throws - @objc @available(OSX 10.6, *) func setResourceValue(value: Any?, forKey: URLResourceKey) -> Bool
 
   /**
     - Selector: setResourceValues:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) func setResourceValues(error: [URLResourceKey: Any]) -> Bool
+  // throws - @objc @available(OSX 10.6, *) func setResourceValues(keyedValues: [URLResourceKey: Any]) -> Bool
 
   /**
     - Selector: setTemporaryResourceValue:forKey:
@@ -380,15 +374,6 @@ import Foundation
 }
 
 extension NSURL: NSURLExports {
-
-  /**
-    - Selector: URLByResolvingAliasFileAtURL:options:error:
-    - Introduced: 10.10
-  */
-  @objc public static func createWithURLByResolvingAliasFileAtURLWithOptions(_ resolvingAliasFileAt: URL, _ options: NSURL.BookmarkResolutionOptions) -> Self? {
-    return try? self.init(resolvingAliasFileAt: resolvingAliasFileAt, options: options)
-  }
-
 
   /**
     - Selector: URLFromPasteboard:

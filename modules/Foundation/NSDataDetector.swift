@@ -21,7 +21,7 @@ import Foundation
   /**
     - Selector: dataDetectorWithTypes:error:
   */
-  // throws - @objc static func dataDetectorWithTypes(error: UInt64) -> NSDataDetector?
+  // throws - @objc static func dataDetectorWithTypes(checkingTypes: UInt64) -> NSDataDetector?
 
   /**
     - Selector: escapedPatternForString:
@@ -36,7 +36,7 @@ import Foundation
   /**
     - Selector: regularExpressionWithPattern:options:error:
   */
-  // throws - @objc static func regularExpressionWithPattern(options: String, error: NSRegularExpression.Options) -> NSRegularExpression?
+  // throws - @objc static func regularExpressionWithPattern(pattern: String, options: NSRegularExpression.Options) -> NSRegularExpression?
 
   // Own Instance Properties
 

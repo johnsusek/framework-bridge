@@ -21,7 +21,7 @@ import Foundation
     - Selector: dataWithPropertyList:format:options:error:
     - Introduced: 10.6
   */
-  // throws - @objc (dataWithPropertyList:format:options:error:) @available(OSX 10.6, *) static func data(fromPropertyList: Any, format: PropertyListSerialization.PropertyListFormat, options: Int) -> Data?
+  // throws - @objc (dataWithPropertyList:format:options:error:) @available(OSX 10.6, *) static func data(plist: Any, fromPropertyList: PropertyListSerialization.PropertyListFormat, format: Int) -> Data?
 
   /**
     - Selector: propertyList:isValidForFormat:
@@ -32,13 +32,13 @@ import Foundation
     - Selector: propertyListWithData:options:format:error:
     - Introduced: 10.6
   */
-  // throws - @objc (propertyListWithData:options:format:error:) @available(OSX 10.6, *) static func propertyList(from: Data, options: PropertyListSerialization.MutabilityOptions, format: UnsafeMutablePointer<PropertyListSerialization.PropertyListFormat>?) -> Any?
+  // throws - @objc (propertyListWithData:options:format:error:) @available(OSX 10.6, *) static func propertyList(data: Data, from: PropertyListSerialization.MutabilityOptions, options: UnsafeMutablePointer<PropertyListSerialization.PropertyListFormat>?) -> Any?
 
   /**
     - Selector: propertyListWithStream:options:format:error:
     - Introduced: 10.6
   */
-  // throws - @objc @available(OSX 10.6, *) static func propertyListWithStream(options: InputStream, format: PropertyListSerialization.MutabilityOptions, error: UnsafeMutablePointer<PropertyListSerialization.PropertyListFormat>?) -> Any?
+  // throws - @objc @available(OSX 10.6, *) static func propertyListWithStream(stream: InputStream, options: PropertyListSerialization.MutabilityOptions, format: UnsafeMutablePointer<PropertyListSerialization.PropertyListFormat>?) -> Any?
 
   /**
     - Selector: writePropertyList:toStream:format:options:error:

@@ -44,7 +44,7 @@ Generates swift headers for AppKit classes. This data is used by ast-builder
 
 ### ast-builder
 
-Parses swift headers into an ast and store is json.
+Parses swift headers into an ast and store in json.
 
 `swift run ast-builder ../../metadata/frameworks.json ../../tmp/headers ../../tmp/ast`
 
@@ -69,5 +69,5 @@ See README in [macos-metadata-generator](https://github.com/johnsusek/macos-meta
 
 * Edit metadata/frameworks.json if you are adding a new framework
 * Run gen-header, ast-builder and attribute-list-builder to populate tmp/ folders
-* Run macos-metadata-generator to populate swift/ folder
+* Run macos-metadata-generator to populate tmp/swift/
 * Add classes to classesToRegister.json and registration test app

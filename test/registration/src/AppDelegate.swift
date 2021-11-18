@@ -1,6 +1,7 @@
 import AppKit
 import JavaScriptCore
 import SwiftyJSON
+import Dispatch
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -33,6 +34,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         numRegistered += 1
       }
     }
+
+    context.setObject(DispatchQueue.self, forKeyedSubscript: "DispatchQueue" as (NSCopying & NSObjectProtocol)?)
 
     let fileManager = FileManager.default
 

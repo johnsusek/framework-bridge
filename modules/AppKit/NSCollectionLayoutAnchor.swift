@@ -21,17 +21,17 @@ import AppKit
   /**
     - Selector: layoutAnchorWithEdges:
   */
-  @objc static func createWithLayoutAnchorWithEdges(_ edges: NSDirectionalRectEdge) -> Self
+  @objc static func createWithEdges(_ edges: NSDirectionalRectEdge) -> Self
 
   /**
     - Selector: layoutAnchorWithEdges:absoluteOffset:
   */
-  @objc static func createWithLayoutAnchorWithEdgesWithAbsoluteOffset(_ edges: NSDirectionalRectEdge, _ absoluteOffset: CGPoint) -> Self
+  @objc static func createWithEdges_AbsoluteOffset(_ edges: NSDirectionalRectEdge, _ absoluteOffset: CGPoint) -> Self
 
   /**
     - Selector: layoutAnchorWithEdges:fractionalOffset:
   */
-  @objc static func createWithLayoutAnchorWithEdgesWithFractionalOffset(_ edges: NSDirectionalRectEdge, _ fractionalOffset: CGPoint) -> Self
+  @objc static func createWithEdges_FractionalOffset(_ edges: NSDirectionalRectEdge, _ fractionalOffset: CGPoint) -> Self
 
   // Own Instance Properties
 
@@ -61,7 +61,7 @@ extension NSCollectionLayoutAnchor: NSCollectionLayoutAnchorExports {
   /**
     - Selector: layoutAnchorWithEdges:
   */
-  @objc public static func createWithLayoutAnchorWithEdges(_ edges: NSDirectionalRectEdge) -> Self {
+  @objc public static func createWithEdges(_ edges: NSDirectionalRectEdge) -> Self {
     return self.init(edges: edges)
   }
 
@@ -69,7 +69,7 @@ extension NSCollectionLayoutAnchor: NSCollectionLayoutAnchorExports {
   /**
     - Selector: layoutAnchorWithEdges:absoluteOffset:
   */
-  @objc public static func createWithLayoutAnchorWithEdgesWithAbsoluteOffset(_ edges: NSDirectionalRectEdge, _ absoluteOffset: CGPoint) -> Self {
+  @objc public static func createWithEdges_AbsoluteOffset(_ edges: NSDirectionalRectEdge, _ absoluteOffset: CGPoint) -> Self {
     return self.init(edges: edges, absoluteOffset: absoluteOffset)
   }
 
@@ -77,7 +77,7 @@ extension NSCollectionLayoutAnchor: NSCollectionLayoutAnchorExports {
   /**
     - Selector: layoutAnchorWithEdges:fractionalOffset:
   */
-  @objc public static func createWithLayoutAnchorWithEdgesWithFractionalOffset(_ edges: NSDirectionalRectEdge, _ fractionalOffset: CGPoint) -> Self {
+  @objc public static func createWithEdges_FractionalOffset(_ edges: NSDirectionalRectEdge, _ fractionalOffset: CGPoint) -> Self {
     return self.init(edges: edges, fractionalOffset: fractionalOffset)
   }
 

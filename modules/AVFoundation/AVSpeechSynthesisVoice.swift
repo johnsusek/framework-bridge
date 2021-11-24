@@ -32,12 +32,12 @@ import AVFoundation
     - Selector: voiceWithIdentifier:
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static func createWithVoiceWithIdentifier(_ identifier: String) -> AVSpeechSynthesisVoice?
+  @objc @available(OSX 10.14, *) static func createWithIdentifier(_ identifier: String) -> AVSpeechSynthesisVoice?
 
   /**
     - Selector: voiceWithLanguage:
   */
-  @objc static func createWithVoiceWithLanguage(_ language: String?) -> AVSpeechSynthesisVoice?
+  @objc static func createWithLanguage(_ language: String?) -> AVSpeechSynthesisVoice?
 
   // Own Instance Properties
 
@@ -83,7 +83,7 @@ extension AVSpeechSynthesisVoice: AVSpeechSynthesisVoiceExports {
     - Selector: voiceWithIdentifier:
     - Introduced: 10.14
   */
-  @objc public static func createWithVoiceWithIdentifier(_ identifier: String) -> AVSpeechSynthesisVoice? {
+  @objc public static func createWithIdentifier(_ identifier: String) -> AVSpeechSynthesisVoice? {
     return self.init(identifier: identifier)
   }
 
@@ -91,7 +91,7 @@ extension AVSpeechSynthesisVoice: AVSpeechSynthesisVoiceExports {
   /**
     - Selector: voiceWithLanguage:
   */
-  @objc public static func createWithVoiceWithLanguage(_ language: String?) -> AVSpeechSynthesisVoice? {
+  @objc public static func createWithLanguage(_ language: String?) -> AVSpeechSynthesisVoice? {
     return self.init(language: language)
   }
 

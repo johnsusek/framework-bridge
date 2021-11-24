@@ -36,7 +36,7 @@ import AppKit
   /**
     - Selector: fontCollectionWithName:visibility:
   */
-  @objc static func createWithNameWithVisibility(_ name: NSFontCollection.Name, _ visibility: NSFontCollection.Visibility) -> NSFontCollection?
+  @objc static func createWithName_Visibility(_ name: NSFontCollection.Name, _ visibility: NSFontCollection.Visibility) -> NSFontCollection?
 
   /**
     - Selector: hideFontCollectionWithName:visibility:error:
@@ -129,7 +129,7 @@ extension NSFontCollection: NSFontCollectionExports {
   /**
     - Selector: fontCollectionWithName:visibility:
   */
-  @objc public static func createWithNameWithVisibility(_ name: NSFontCollection.Name, _ visibility: NSFontCollection.Visibility) -> NSFontCollection? {
+  @objc public static func createWithName_Visibility(_ name: NSFontCollection.Name, _ visibility: NSFontCollection.Visibility) -> NSFontCollection? {
     return self.init(name: name, visibility: visibility)
   }
 

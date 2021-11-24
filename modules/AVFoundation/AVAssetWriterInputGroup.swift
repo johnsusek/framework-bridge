@@ -21,7 +21,7 @@ import AVFoundation
   /**
     - Selector: assetWriterInputGroupWithInputs:defaultInput:
   */
-  @objc static func createWithAssetWriterInputGroupWithInputsWithDefaultInput(_ inputs: [AVAssetWriterInput], _ defaultInput: AVAssetWriterInput?) -> Self
+  @objc static func createWithInputs_DefaultInput(_ inputs: [AVAssetWriterInput], _ defaultInput: AVAssetWriterInput?) -> Self
 
   /**
     - Selector: mediaSelectionOptionsFromArray:filteredAndSortedAccordingToPreferredLanguages:
@@ -52,7 +52,7 @@ extension AVAssetWriterInputGroup: AVAssetWriterInputGroupExports {
   /**
     - Selector: assetWriterInputGroupWithInputs:defaultInput:
   */
-  @objc public static func createWithAssetWriterInputGroupWithInputsWithDefaultInput(_ inputs: [AVAssetWriterInput], _ defaultInput: AVAssetWriterInput?) -> Self {
+  @objc public static func createWithInputs_DefaultInput(_ inputs: [AVAssetWriterInput], _ defaultInput: AVAssetWriterInput?) -> Self {
     return self.init(inputs: inputs, defaultInput: defaultInput)
   }
 

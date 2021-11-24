@@ -21,7 +21,7 @@ import AVFoundation
   /**
     - Selector: URLAssetWithURL:options:
   */
-  @objc static func createWithURLAssetWithURLWithOptions(_ url: URL, _ options: [String: Any]?) -> Self
+  @objc static func createWithUrl_Options(_ url: URL, _ options: [String: Any]?) -> Self
 
   /**
     - Selector: audiovisualMIMETypes
@@ -73,7 +73,7 @@ extension AVURLAsset: AVURLAssetExports {
   /**
     - Selector: URLAssetWithURL:options:
   */
-  @objc public static func createWithURLAssetWithURLWithOptions(_ url: URL, _ options: [String: Any]?) -> Self {
+  @objc public static func createWithUrl_Options(_ url: URL, _ options: [String: Any]?) -> Self {
     return self.init(url: url, options: options)
   }
 

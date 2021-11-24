@@ -20,7 +20,7 @@ import AppKit
   /**
     - Selector: bezierPathWithOvalInRect:
   */
-  @objc static func createWithOvalInRect(_ ovalIn: CGRect) -> NSBezierPath
+  @objc static func createWithOvalIn(_ ovalIn: CGRect) -> NSBezierPath
 
   /**
     - Selector: bezierPathWithRect:
@@ -31,7 +31,7 @@ import AppKit
     - Selector: bezierPathWithRoundedRect:xRadius:yRadius:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) static func createWithRoundedRectWithXRadiusWithYRadius(_ roundedRect: CGRect, _ xRadius: CGFloat, _ yRadius: CGFloat) -> NSBezierPath
+  @objc @available(OSX 10.5, *) static func createWithRoundedRect_XRadius_YRadius(_ roundedRect: CGRect, _ xRadius: CGFloat, _ yRadius: CGFloat) -> NSBezierPath
 
   /**
     - Selector: clipRect:
@@ -313,7 +313,7 @@ extension NSBezierPath: NSBezierPathExports {
   /**
     - Selector: bezierPathWithOvalInRect:
   */
-  @objc public static func createWithOvalInRect(_ ovalIn: CGRect) -> NSBezierPath {
+  @objc public static func createWithOvalIn(_ ovalIn: CGRect) -> NSBezierPath {
     return self.init(ovalIn: ovalIn)
   }
 
@@ -330,7 +330,7 @@ extension NSBezierPath: NSBezierPathExports {
     - Selector: bezierPathWithRoundedRect:xRadius:yRadius:
     - Introduced: 10.5
   */
-  @objc public static func createWithRoundedRectWithXRadiusWithYRadius(_ roundedRect: CGRect, _ xRadius: CGFloat, _ yRadius: CGFloat) -> NSBezierPath {
+  @objc public static func createWithRoundedRect_XRadius_YRadius(_ roundedRect: CGRect, _ xRadius: CGFloat, _ yRadius: CGFloat) -> NSBezierPath {
     return self.init(roundedRect: roundedRect, xRadius: xRadius, yRadius: yRadius)
   }
 

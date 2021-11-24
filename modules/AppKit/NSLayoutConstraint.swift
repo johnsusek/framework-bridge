@@ -28,7 +28,7 @@ import AppKit
     - Selector: constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func createWithConstraintWithItemWithAttributeWithRelatedByWithToItemWithAttributeWithMultiplierWithConstant(_ item: Any, _ attribute: NSLayoutConstraint.Attribute, _ relatedBy: NSLayoutConstraint.Relation, _ toItem: Any?, _ attribute1: NSLayoutConstraint.Attribute, _ multiplier: CGFloat, _ constant: CGFloat) -> Self
+  @objc @available(OSX 10.7, *) static func createWithItem_Attribute_RelatedBy_ToItem_Attribute_Multiplier_Constant(_ item: Any, _ attribute: NSLayoutConstraint.Attribute, _ relatedBy: NSLayoutConstraint.Relation, _ toItem: Any?, _ attribute1: NSLayoutConstraint.Attribute, _ multiplier: CGFloat, _ constant: CGFloat) -> Self
 
   /**
     - Selector: constraintsWithVisualFormat:options:metrics:views:
@@ -120,7 +120,7 @@ extension NSLayoutConstraint: NSLayoutConstraintExports {
     - Selector: constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:
     - Introduced: 10.7
   */
-  @objc public static func createWithConstraintWithItemWithAttributeWithRelatedByWithToItemWithAttributeWithMultiplierWithConstant(_ item: Any, _ attribute: NSLayoutConstraint.Attribute, _ relatedBy: NSLayoutConstraint.Relation, _ toItem: Any?, _ attribute1: NSLayoutConstraint.Attribute, _ multiplier: CGFloat, _ constant: CGFloat) -> Self {
+  @objc public static func createWithItem_Attribute_RelatedBy_ToItem_Attribute_Multiplier_Constant(_ item: Any, _ attribute: NSLayoutConstraint.Attribute, _ relatedBy: NSLayoutConstraint.Relation, _ toItem: Any?, _ attribute1: NSLayoutConstraint.Attribute, _ multiplier: CGFloat, _ constant: CGFloat) -> Self {
     return self.init(item: item, attribute: attribute, relatedBy: relatedBy, toItem: toItem, attribute: attribute1, multiplier: multiplier, constant: constant)
   }
 

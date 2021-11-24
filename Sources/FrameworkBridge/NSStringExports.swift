@@ -36,32 +36,32 @@ import Foundation
   /**
     - Selector: stringWithCString:encoding:
   */
-  @objc static func createWithCStringWithEncoding(_ cString: UnsafePointer<Int8>, _ encoding: UInt) -> Self?
+  @objc static func createWithCString_Encoding(_ cString: UnsafePointer<Int8>, _ encoding: UInt) -> Self?
 
   /**
     - Selector: stringWithCharacters:length:
   */
-  @objc static func createWithCharactersWithLength(_ characters: UnsafePointer<unichar>, _ length: Int) -> Self
+  @objc static func createWithCharacters_Length(_ characters: UnsafePointer<unichar>, _ length: Int) -> Self
 
   /**
     - Selector: stringWithContentsOfFile:encoding:error:
   */
-  @objc static func createWithContentsOfFileEncodingWithError(_ path: String, _ encoding: UInt) -> Self?
+  @objc static func createWithContentsOfFile_Encoding(_ path: String, _ encoding: UInt) -> Self?
 
   /**
     - Selector: stringWithContentsOfFile:usedEncoding:error:
   */
-  @objc static func createWithContentsOfFileUsedEncodingWithError(_ path: String, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self?
+  @objc static func createWithContentsOfFile_UsedEncoding(_ path: String, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self?
 
   /**
     - Selector: stringWithContentsOfURL:encoding:error:
   */
-  @objc static func createWithContentsOfURLEncodingWithError(_ url: URL, _ encoding: UInt) -> Self?
+  @objc static func createWithContentsOfURL_Encoding(_ url: URL, _ encoding: UInt) -> Self?
 
   /**
     - Selector: stringWithContentsOfURL:usedEncoding:error:
   */
-  @objc static func createWithContentsOfURLUsedEncodingWithError(_ url: URL, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self?
+  @objc static func createWithContentsOfURL_UsedEncoding(_ url: URL, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self?
 
   /**
     - Selector: stringWithString:
@@ -270,52 +270,52 @@ import Foundation
   /**
     - Selector: initWithBytes:length:encoding:
   */
-  @objc static func createWithBytesWithLengthWithEncoding(_ bytes: UnsafeRawPointer, _ length: Int, _ encoding: UInt) -> Self?
+  @objc static func createWithBytes_Length_Encoding(_ bytes: UnsafeRawPointer, _ length: Int, _ encoding: UInt) -> Self?
 
   /**
     - Selector: initWithBytesNoCopy:length:encoding:freeWhenDone:
   */
-  @objc static func createWithBytesNoCopyWithLengthWithEncodingWithFreeWhenDone(_ bytesNoCopy: UnsafeMutableRawPointer, _ length: Int, _ encoding: UInt, _ freeWhenDone: Bool) -> Self?
+  @objc static func createWithBytesNoCopy_Length_Encoding_FreeWhenDone(_ bytesNoCopy: UnsafeMutableRawPointer, _ length: Int, _ encoding: UInt, _ freeWhenDone: Bool) -> Self?
 
   /**
     - Selector: initWithCString:encoding:
   */
-  // @objc static func createWithCStringWithEncoding(_ cString: UnsafePointer<Int8>, _ encoding: UInt) -> Self?
+  // @objc static func createWithCString_Encoding(_ cString: UnsafePointer<Int8>, _ encoding: UInt) -> Self?
 
   /**
     - Selector: initWithCharacters:length:
   */
-  // @objc static func createWithCharactersWithLength(_ characters: UnsafePointer<unichar>, _ length: Int) -> Self
+  // @objc static func createWithCharacters_Length(_ characters: UnsafePointer<unichar>, _ length: Int) -> Self
 
   /**
     - Selector: initWithCharactersNoCopy:length:freeWhenDone:
   */
-  @objc static func createWithCharactersNoCopyWithLengthWithFreeWhenDone(_ charactersNoCopy: UnsafeMutablePointer<unichar>, _ length: Int, _ freeWhenDone: Bool) -> Self
+  @objc static func createWithCharactersNoCopy_Length_FreeWhenDone(_ charactersNoCopy: UnsafeMutablePointer<unichar>, _ length: Int, _ freeWhenDone: Bool) -> Self
 
   /**
     - Selector: initWithContentsOfFile:encoding:error:
   */
-  @objc static func createWithContentsOfFileWithEncoding(_ contentsOfFile: String, _ encoding: UInt) -> Self?
+  @objc static func createWithContentsOfFile__Encoding(_ contentsOfFile: String, _ encoding: UInt) -> Self?
 
   /**
     - Selector: initWithContentsOfFile:usedEncoding:error:
   */
-  @objc static func createWithContentsOfFileWithUsedEncoding(_ contentsOfFile: String, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self?
+  @objc static func createWithContentsOfFile__UsedEncoding(_ contentsOfFile: String, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self?
 
   /**
     - Selector: initWithContentsOfURL:encoding:error:
   */
-  @objc static func createWithContentsOfWithEncoding(_ contentsOf: URL, _ encoding: UInt) -> Self?
+  @objc static func createWithContentsOf_Encoding(_ contentsOf: URL, _ encoding: UInt) -> Self?
 
   /**
     - Selector: initWithContentsOfURL:usedEncoding:error:
   */
-  @objc static func createWithContentsOfWithUsedEncoding(_ contentsOf: URL, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self?
+  @objc static func createWithContentsOf_UsedEncoding(_ contentsOf: URL, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self?
 
   /**
     - Selector: initWithData:encoding:
   */
-  @objc static func createWithDataWithEncoding(_ data: Data, _ encoding: UInt) -> Self?
+  @objc static func createWithData_Encoding(_ data: Data, _ encoding: UInt) -> Self?
 
   /**
     - Selector: isEqualToString:
@@ -728,7 +728,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: stringWithCString:encoding:
   */
-  @objc public static func createWithCStringWithEncoding(_ cString: UnsafePointer<Int8>, _ encoding: UInt) -> Self? {
+  @objc public static func createWithCString_Encoding(_ cString: UnsafePointer<Int8>, _ encoding: UInt) -> Self? {
     return self.init(cString: cString, encoding: encoding)
   }
 
@@ -736,7 +736,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: stringWithCharacters:length:
   */
-  @objc public static func createWithCharactersWithLength(_ characters: UnsafePointer<unichar>, _ length: Int) -> Self {
+  @objc public static func createWithCharacters_Length(_ characters: UnsafePointer<unichar>, _ length: Int) -> Self {
     return self.init(characters: characters, length: length)
   }
 
@@ -744,7 +744,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: stringWithContentsOfFile:encoding:error:
   */
-  @objc public static func createWithContentsOfFileEncodingWithError(_ path: String, _ encoding: UInt) -> Self? {
+  @objc public static func createWithContentsOfFile_Encoding(_ path: String, _ encoding: UInt) -> Self? {
     return try? self.init(contentsOfFile: path, encoding: encoding)
   }
 
@@ -752,7 +752,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: stringWithContentsOfFile:usedEncoding:error:
   */
-  @objc public static func createWithContentsOfFileUsedEncodingWithError(_ path: String, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self? {
+  @objc public static func createWithContentsOfFile_UsedEncoding(_ path: String, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self? {
     return try? self.init(contentsOfFile: path, usedEncoding: usedEncoding)
   }
 
@@ -760,7 +760,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: stringWithContentsOfURL:encoding:error:
   */
-  @objc public static func createWithContentsOfURLEncodingWithError(_ url: URL, _ encoding: UInt) -> Self? {
+  @objc public static func createWithContentsOfURL_Encoding(_ url: URL, _ encoding: UInt) -> Self? {
     return try? self.init(contentsOf: url, encoding: encoding)
   }
 
@@ -768,7 +768,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: stringWithContentsOfURL:usedEncoding:error:
   */
-  @objc public static func createWithContentsOfURLUsedEncodingWithError(_ url: URL, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self? {
+  @objc public static func createWithContentsOfURL_UsedEncoding(_ url: URL, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self? {
     return try? self.init(contentsOf: url, usedEncoding: usedEncoding)
   }
 
@@ -792,7 +792,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithBytes:length:encoding:
   */
-  @objc public static func createWithBytesWithLengthWithEncoding(_ bytes: UnsafeRawPointer, _ length: Int, _ encoding: UInt) -> Self? {
+  @objc public static func createWithBytes_Length_Encoding(_ bytes: UnsafeRawPointer, _ length: Int, _ encoding: UInt) -> Self? {
     return self.init(bytes: bytes, length: length, encoding: encoding)
   }
 
@@ -800,7 +800,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithBytesNoCopy:length:encoding:freeWhenDone:
   */
-  @objc public static func createWithBytesNoCopyWithLengthWithEncodingWithFreeWhenDone(_ bytesNoCopy: UnsafeMutableRawPointer, _ length: Int, _ encoding: UInt, _ freeWhenDone: Bool) -> Self? {
+  @objc public static func createWithBytesNoCopy_Length_Encoding_FreeWhenDone(_ bytesNoCopy: UnsafeMutableRawPointer, _ length: Int, _ encoding: UInt, _ freeWhenDone: Bool) -> Self? {
     return self.init(bytesNoCopy: bytesNoCopy, length: length, encoding: encoding, freeWhenDone: freeWhenDone)
   }
 
@@ -808,7 +808,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithCString:encoding:
   */
-  // @objc public static func createWithCStringWithEncoding(_ cString: UnsafePointer<Int8>, _ encoding: UInt) -> Self? {
+  // @objc public static func createWithCString_Encoding(_ cString: UnsafePointer<Int8>, _ encoding: UInt) -> Self? {
   //   return self.init(cString: cString, encoding: encoding)
   // }
 
@@ -816,7 +816,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithCharacters:length:
   */
-  // @objc public static func createWithCharactersWithLength(_ characters: UnsafePointer<unichar>, _ length: Int) -> Self {
+  // @objc public static func createWithCharacters_Length(_ characters: UnsafePointer<unichar>, _ length: Int) -> Self {
   //   return self.init(characters: characters, length: length)
   // }
 
@@ -824,7 +824,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithCharactersNoCopy:length:freeWhenDone:
   */
-  @objc public static func createWithCharactersNoCopyWithLengthWithFreeWhenDone(_ charactersNoCopy: UnsafeMutablePointer<unichar>, _ length: Int, _ freeWhenDone: Bool) -> Self {
+  @objc public static func createWithCharactersNoCopy_Length_FreeWhenDone(_ charactersNoCopy: UnsafeMutablePointer<unichar>, _ length: Int, _ freeWhenDone: Bool) -> Self {
     return self.init(charactersNoCopy: charactersNoCopy, length: length, freeWhenDone: freeWhenDone)
   }
 
@@ -832,7 +832,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithContentsOfFile:encoding:error:
   */
-  @objc public static func createWithContentsOfFileWithEncoding(_ contentsOfFile: String, _ encoding: UInt) -> Self? {
+  @objc public static func createWithContentsOfFile__Encoding(_ contentsOfFile: String, _ encoding: UInt) -> Self? {
     return try? self.init(contentsOfFile: contentsOfFile, encoding: encoding)
   }
 
@@ -840,7 +840,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithContentsOfFile:usedEncoding:error:
   */
-  @objc public static func createWithContentsOfFileWithUsedEncoding(_ contentsOfFile: String, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self? {
+  @objc public static func createWithContentsOfFile__UsedEncoding(_ contentsOfFile: String, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self? {
     return try? self.init(contentsOfFile: contentsOfFile, usedEncoding: usedEncoding)
   }
 
@@ -848,7 +848,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithContentsOfURL:encoding:error:
   */
-  @objc public static func createWithContentsOfWithEncoding(_ contentsOf: URL, _ encoding: UInt) -> Self? {
+  @objc public static func createWithContentsOf_Encoding(_ contentsOf: URL, _ encoding: UInt) -> Self? {
     return try? self.init(contentsOf: contentsOf, encoding: encoding)
   }
 
@@ -856,7 +856,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithContentsOfURL:usedEncoding:error:
   */
-  @objc public static func createWithContentsOfWithUsedEncoding(_ contentsOf: URL, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self? {
+  @objc public static func createWithContentsOf_UsedEncoding(_ contentsOf: URL, _ usedEncoding: UnsafeMutablePointer<UInt>?) -> Self? {
     return try? self.init(contentsOf: contentsOf, usedEncoding: usedEncoding)
   }
 
@@ -864,7 +864,7 @@ extension NSString: NSStringExports {
   /**
     - Selector: initWithData:encoding:
   */
-  @objc public static func createWithDataWithEncoding(_ data: Data, _ encoding: UInt) -> Self? {
+  @objc public static func createWithData_Encoding(_ data: Data, _ encoding: UInt) -> Self? {
     return self.init(data: data, encoding: encoding)
   }
 

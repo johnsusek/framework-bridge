@@ -21,7 +21,7 @@ import Foundation
   /**
     - Selector: blockOperationWithBlock:
   */
-// jsvalue   @objc static func createWithBlockOperationWithBlock(_ block: JSValue) -> Self
+// jsvalue   @objc static func createWithBlock(_ block: JSValue) -> Self
 
   // Instance Methods
 
@@ -43,7 +43,7 @@ extension BlockOperation: BlockOperationExports {
   /**
     - Selector: blockOperationWithBlock:
   */
-  @objc public static func createWithBlockOperationWithBlock(_ block: JSValue) -> Self {
+  @objc public static func createWithBlock(_ block: JSValue) -> Self {
     return self.init(block: { 
       block.call(withArguments: [])
     })

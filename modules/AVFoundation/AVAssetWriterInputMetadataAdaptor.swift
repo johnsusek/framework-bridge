@@ -21,7 +21,7 @@ import AVFoundation
   /**
     - Selector: assetWriterInputMetadataAdaptorWithAssetWriterInput:
   */
-  @objc static func createWithAssetWriterInputMetadataAdaptorWithAssetWriterInput(_ assetWriterInput: AVAssetWriterInput) -> Self
+  @objc static func createWithAssetWriterInput(_ assetWriterInput: AVAssetWriterInput) -> Self
 
   // Instance Methods
 
@@ -43,7 +43,7 @@ extension AVAssetWriterInputMetadataAdaptor: AVAssetWriterInputMetadataAdaptorEx
   /**
     - Selector: assetWriterInputMetadataAdaptorWithAssetWriterInput:
   */
-  @objc public static func createWithAssetWriterInputMetadataAdaptorWithAssetWriterInput(_ assetWriterInput: AVAssetWriterInput) -> Self {
+  @objc public static func createWithAssetWriterInput(_ assetWriterInput: AVAssetWriterInput) -> Self {
     return self.init(assetWriterInput: assetWriterInput)
   }
 

@@ -35,7 +35,7 @@ import AppKit
   /**
     - Selector: imageRepWithContentsOfURL:
   */
-  @objc static func createWithContentsOfURL(_ contentsOf: URL) -> NSImageRep?
+  @objc static func createWithContentsOf(_ contentsOf: URL) -> NSImageRep?
 
   /**
     - Selector: imageRepWithPasteboard:
@@ -172,7 +172,7 @@ extension NSImageRep: NSImageRepExports {
   /**
     - Selector: imageRepWithContentsOfURL:
   */
-  @objc public static func createWithContentsOfURL(_ contentsOf: URL) -> NSImageRep? {
+  @objc public static func createWithContentsOf(_ contentsOf: URL) -> NSImageRep? {
     return self.init(contentsOf: contentsOf)
   }
 

@@ -21,12 +21,12 @@ import AVFoundation
   /**
     - Selector: connectionWithInputPort:videoPreviewLayer:
   */
-  @objc static func createWithConnectionWithInputPortWithVideoPreviewLayer(_ inputPort: AVCaptureInput.Port, _ videoPreviewLayer: AVCaptureVideoPreviewLayer) -> Self
+  @objc static func createWithInputPort_VideoPreviewLayer(_ inputPort: AVCaptureInput.Port, _ videoPreviewLayer: AVCaptureVideoPreviewLayer) -> Self
 
   /**
     - Selector: connectionWithInputPorts:output:
   */
-  @objc static func createWithConnectionWithInputPortsWithOutput(_ inputPorts: [AVCaptureInput.Port], _ output: AVCaptureOutput) -> Self
+  @objc static func createWithInputPorts_Output(_ inputPorts: [AVCaptureInput.Port], _ output: AVCaptureOutput) -> Self
 
   // Own Instance Properties
 
@@ -123,7 +123,7 @@ extension AVCaptureConnection: AVCaptureConnectionExports {
   /**
     - Selector: connectionWithInputPort:videoPreviewLayer:
   */
-  @objc public static func createWithConnectionWithInputPortWithVideoPreviewLayer(_ inputPort: AVCaptureInput.Port, _ videoPreviewLayer: AVCaptureVideoPreviewLayer) -> Self {
+  @objc public static func createWithInputPort_VideoPreviewLayer(_ inputPort: AVCaptureInput.Port, _ videoPreviewLayer: AVCaptureVideoPreviewLayer) -> Self {
     return self.init(inputPort: inputPort, videoPreviewLayer: videoPreviewLayer)
   }
 
@@ -131,7 +131,7 @@ extension AVCaptureConnection: AVCaptureConnectionExports {
   /**
     - Selector: connectionWithInputPorts:output:
   */
-  @objc public static func createWithConnectionWithInputPortsWithOutput(_ inputPorts: [AVCaptureInput.Port], _ output: AVCaptureOutput) -> Self {
+  @objc public static func createWithInputPorts_Output(_ inputPorts: [AVCaptureInput.Port], _ output: AVCaptureOutput) -> Self {
     return self.init(inputPorts: inputPorts, output: output)
   }
 

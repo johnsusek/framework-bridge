@@ -22,7 +22,7 @@ import Foundation
     - Selector: predicateFromMetadataQueryString:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func createWithPredicateFromMetadataQueryString(_ fromMetadataQueryString: String) -> NSPredicate?
+  @objc @available(OSX 10.9, *) static func createWithFromMetadataQueryString(_ fromMetadataQueryString: String) -> NSPredicate?
 
   /**
     - Selector: predicateWithBlock:
@@ -33,7 +33,7 @@ import Foundation
   /**
     - Selector: predicateWithFormat:argumentArray:
   */
-  @objc static func createWithFormatWithArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate
+  @objc static func createWithFormat_ArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate
 
   /**
     - Selector: predicateWithValue:
@@ -73,7 +73,7 @@ extension NSPredicate: NSPredicateExports {
     - Selector: predicateFromMetadataQueryString:
     - Introduced: 10.9
   */
-  @objc public static func createWithPredicateFromMetadataQueryString(_ fromMetadataQueryString: String) -> NSPredicate? {
+  @objc public static func createWithFromMetadataQueryString(_ fromMetadataQueryString: String) -> NSPredicate? {
     return self.init(fromMetadataQueryString: fromMetadataQueryString)
   }
 
@@ -93,7 +93,7 @@ extension NSPredicate: NSPredicateExports {
   /**
     - Selector: predicateWithFormat:argumentArray:
   */
-  @objc public static func createWithFormatWithArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate {
+  @objc public static func createWithFormat_ArgumentArray(_ format: String, _ argumentArray: [Any]?) -> NSPredicate {
     return self.init(format: format, argumentArray: argumentArray)
   }
 

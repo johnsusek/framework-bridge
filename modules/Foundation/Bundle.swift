@@ -32,7 +32,7 @@ import Foundation
   /**
     - Selector: bundleForClass:
   */
-  @objc static func createWithBundleForClass(_ `for`: AnyClass) -> Bundle
+  @objc static func createWithFor(_ `for`: AnyClass) -> Bundle
 
   /**
     - Selector: bundleWithIdentifier:
@@ -48,7 +48,7 @@ import Foundation
     - Selector: bundleWithURL:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) static func createWithURL(_ url: URL) -> Self?
+  @objc @available(OSX 10.6, *) static func createWithUrl(_ url: URL) -> Self?
 
   /**
     - Selector: pathForResource:ofType:inDirectory:
@@ -357,7 +357,7 @@ extension Bundle: BundleExports {
   /**
     - Selector: bundleForClass:
   */
-  @objc public static func createWithBundleForClass(_ `for`: AnyClass) -> Bundle {
+  @objc public static func createWithFor(_ `for`: AnyClass) -> Bundle {
     return self.init(for: `for`)
   }
 
@@ -382,7 +382,7 @@ extension Bundle: BundleExports {
     - Selector: bundleWithURL:
     - Introduced: 10.6
   */
-  @objc public static func createWithURL(_ url: URL) -> Self? {
+  @objc public static func createWithUrl(_ url: URL) -> Self? {
     return self.init(url: url)
   }
 

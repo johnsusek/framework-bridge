@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: sectionWithGroup:
   */
-  @objc static func createWithSectionWithGroup(_ group: NSCollectionLayoutGroup) -> Self
+  @objc static func createWithGroup(_ group: NSCollectionLayoutGroup) -> Self
 
   // Own Instance Properties
 
@@ -66,7 +66,7 @@ extension NSCollectionLayoutSection: NSCollectionLayoutSectionExports {
   /**
     - Selector: sectionWithGroup:
   */
-  @objc public static func createWithSectionWithGroup(_ group: NSCollectionLayoutGroup) -> Self {
+  @objc public static func createWithGroup(_ group: NSCollectionLayoutGroup) -> Self {
     return self.init(group: group)
   }
 

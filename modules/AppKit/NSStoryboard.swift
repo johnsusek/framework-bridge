@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: storyboardWithName:bundle:
   */
-  @objc static func createWithNameWithBundle(_ name: NSStoryboard.Name, _ bundle: Bundle?) -> Self
+  @objc static func createWithName_Bundle(_ name: NSStoryboard.Name, _ bundle: Bundle?) -> Self
 
   // Own Static Properties
 
@@ -61,7 +61,7 @@ extension NSStoryboard: NSStoryboardExports {
   /**
     - Selector: storyboardWithName:bundle:
   */
-  @objc public static func createWithNameWithBundle(_ name: NSStoryboard.Name, _ bundle: Bundle?) -> Self {
+  @objc public static func createWithName_Bundle(_ name: NSStoryboard.Name, _ bundle: Bundle?) -> Self {
     return self.init(name: name, bundle: bundle)
   }
 

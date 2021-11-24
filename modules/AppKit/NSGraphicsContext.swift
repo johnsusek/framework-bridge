@@ -36,7 +36,7 @@ import AppKit
     - Selector: graphicsContextWithCGContext:flipped:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static func createWithCGContextWithFlipped(_ cgContext: CGContext, _ flipped: Bool) -> NSGraphicsContext
+  @objc @available(OSX 10.10, *) static func createWithCgContext_Flipped(_ cgContext: CGContext, _ flipped: Bool) -> NSGraphicsContext
 
   /**
     - Selector: graphicsContextWithWindow:
@@ -154,7 +154,7 @@ extension NSGraphicsContext: NSGraphicsContextExports {
     - Selector: graphicsContextWithCGContext:flipped:
     - Introduced: 10.10
   */
-  @objc public static func createWithCGContextWithFlipped(_ cgContext: CGContext, _ flipped: Bool) -> NSGraphicsContext {
+  @objc public static func createWithCgContext_Flipped(_ cgContext: CGContext, _ flipped: Bool) -> NSGraphicsContext {
     return self.init(cgContext: cgContext, flipped: flipped)
   }
 

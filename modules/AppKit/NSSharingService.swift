@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: sharingServiceNamed:
   */
-  @objc static func createWithSharingServiceNamed(_ named: NSSharingService.Name) -> NSSharingService?
+  @objc static func createWithNamed(_ named: NSSharingService.Name) -> NSSharingService?
 
   /**
     - Selector: sharingServicesForItems:
@@ -110,7 +110,7 @@ extension NSSharingService: NSSharingServiceExports {
   /**
     - Selector: sharingServiceNamed:
   */
-  @objc public static func createWithSharingServiceNamed(_ named: NSSharingService.Name) -> NSSharingService? {
+  @objc public static func createWithNamed(_ named: NSSharingService.Name) -> NSSharingService? {
     return self.init(named: named)
   }
 

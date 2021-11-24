@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: backgroundDecorationItemWithElementKind:
   */
-  @objc static func createWithBackgroundDecorationItemWithElementKind(_ elementKind: String) -> Self
+  @objc static func createWithElementKind(_ elementKind: String) -> Self
 
   // Own Instance Properties
 
@@ -41,7 +41,7 @@ extension NSCollectionLayoutDecorationItem: NSCollectionLayoutDecorationItemExpo
   /**
     - Selector: backgroundDecorationItemWithElementKind:
   */
-  @objc public static func createWithBackgroundDecorationItemWithElementKind(_ elementKind: String) -> Self {
+  @objc public static func createWithElementKind(_ elementKind: String) -> Self {
     return self.background(elementKind: elementKind)
   }
 

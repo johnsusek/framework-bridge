@@ -347,12 +347,12 @@ import AppKit
   /**
     - Selector: initWithContentRect:styleMask:backing:defer:
   */
-  @objc static func createWithContentRectWithStyleMaskWithBackingWithDefer(_ contentRect: CGRect, _ styleMask: NSWindow.StyleMask, _ backing: NSWindow.BackingStoreType, _ `defer`: Bool) -> Self
+  @objc static func createWithContentRect_StyleMask_Backing_Defer(_ contentRect: CGRect, _ styleMask: NSWindow.StyleMask, _ backing: NSWindow.BackingStoreType, _ `defer`: Bool) -> Self
 
   /**
     - Selector: initWithContentRect:styleMask:backing:defer:screen:
   */
-  @objc static func createWithContentRectWithStyleMaskWithBackingWithDeferWithScreen(_ contentRect: CGRect, _ styleMask: NSWindow.StyleMask, _ backing: NSWindow.BackingStoreType, _ `defer`: Bool, _ screen: NSScreen?) -> Self
+  @objc static func createWithContentRect_StyleMask_Backing_Defer_Screen(_ contentRect: CGRect, _ styleMask: NSWindow.StyleMask, _ backing: NSWindow.BackingStoreType, _ `defer`: Bool, _ screen: NSScreen?) -> Self
 
   /**
     - Selector: initWithWindowRef:
@@ -1317,7 +1317,7 @@ extension NSWindow: NSWindowExports {
   /**
     - Selector: initWithContentRect:styleMask:backing:defer:
   */
-  @objc public static func createWithContentRectWithStyleMaskWithBackingWithDefer(_ contentRect: CGRect, _ styleMask: NSWindow.StyleMask, _ backing: NSWindow.BackingStoreType, _ `defer`: Bool) -> Self {
+  @objc public static func createWithContentRect_StyleMask_Backing_Defer(_ contentRect: CGRect, _ styleMask: NSWindow.StyleMask, _ backing: NSWindow.BackingStoreType, _ `defer`: Bool) -> Self {
     return self.init(contentRect: contentRect, styleMask: styleMask, backing: backing, defer: `defer`)
   }
 
@@ -1325,7 +1325,7 @@ extension NSWindow: NSWindowExports {
   /**
     - Selector: initWithContentRect:styleMask:backing:defer:screen:
   */
-  @objc public static func createWithContentRectWithStyleMaskWithBackingWithDeferWithScreen(_ contentRect: CGRect, _ styleMask: NSWindow.StyleMask, _ backing: NSWindow.BackingStoreType, _ `defer`: Bool, _ screen: NSScreen?) -> Self {
+  @objc public static func createWithContentRect_StyleMask_Backing_Defer_Screen(_ contentRect: CGRect, _ styleMask: NSWindow.StyleMask, _ backing: NSWindow.BackingStoreType, _ `defer`: Bool, _ screen: NSScreen?) -> Self {
     return self.init(contentRect: contentRect, styleMask: styleMask, backing: backing, defer: `defer`, screen: screen)
   }
 

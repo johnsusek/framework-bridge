@@ -22,7 +22,7 @@ import AVFoundation
     - Selector: compositionWithURLAssetInitializationOptions:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func createWithURLAssetInitializationOptions(_ urlAssetInitializationOptions: [String: Any]?) -> Self
+  @objc @available(OSX 10.11, *) static func createWithUrlAssetInitializationOptions(_ urlAssetInitializationOptions: [String: Any]?) -> Self
 
   // Instance Methods
 
@@ -80,7 +80,7 @@ extension AVMutableComposition: AVMutableCompositionExports {
     - Selector: compositionWithURLAssetInitializationOptions:
     - Introduced: 10.11
   */
-  @objc public static func createWithURLAssetInitializationOptions(_ urlAssetInitializationOptions: [String: Any]?) -> Self {
+  @objc public static func createWithUrlAssetInitializationOptions(_ urlAssetInitializationOptions: [String: Any]?) -> Self {
     return self.init(urlAssetInitializationOptions: urlAssetInitializationOptions)
   }
 

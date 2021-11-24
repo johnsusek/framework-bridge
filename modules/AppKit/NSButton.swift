@@ -27,7 +27,7 @@ import AppKit
     - Selector: buttonWithTitle:image:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithTitleWithImage(_ title: String, _ image: NSImage) -> Self
+  @objc @available(OSX 10.12, *) static func createWithTitle_Image(_ title: String, _ image: NSImage) -> Self
 
   /**
     - Selector: buttonWithTitle:target:action:
@@ -39,7 +39,7 @@ import AppKit
     - Selector: checkboxWithTitle:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithCheckboxWithTitle(_ checkboxWithTitle: String) -> Self
+  @objc @available(OSX 10.12, *) static func createWithCheckbox_Title(_ checkboxWithTitle: String) -> Self
 
   /**
     - Selector: defaultAnimationForKey:
@@ -51,7 +51,7 @@ import AppKit
     - Selector: radioButtonWithTitle:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithRadioButtonWithTitle(_ radioButtonWithTitle: String) -> Self
+  @objc @available(OSX 10.12, *) static func createWithRadioButton_Title(_ radioButtonWithTitle: String) -> Self
 
   // Instance Methods
 
@@ -214,7 +214,7 @@ extension NSButton: NSButtonExports {
     - Selector: buttonWithTitle:image:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithTitleWithImage(_ title: String, _ image: NSImage) -> Self {
+  @objc public static func createWithTitle_Image(_ title: String, _ image: NSImage) -> Self {
     return self.init(title: title, image: image, target: nil, action: nil)
   }
 
@@ -232,7 +232,7 @@ extension NSButton: NSButtonExports {
     - Selector: checkboxWithTitle:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithCheckboxWithTitle(_ checkboxWithTitle: String) -> Self {
+  @objc public static func createWithCheckbox_Title(_ checkboxWithTitle: String) -> Self {
     return self.init(checkboxWithTitle: checkboxWithTitle, target: nil, action: nil)
   }
 
@@ -241,7 +241,7 @@ extension NSButton: NSButtonExports {
     - Selector: radioButtonWithTitle:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithRadioButtonWithTitle(_ radioButtonWithTitle: String) -> Self {
+  @objc public static func createWithRadioButton_Title(_ radioButtonWithTitle: String) -> Self {
     return self.init(radioButtonWithTitle: radioButtonWithTitle, target: nil, action: nil)
   }
 

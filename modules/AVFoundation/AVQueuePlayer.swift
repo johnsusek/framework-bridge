@@ -21,7 +21,7 @@ import AVFoundation
   /**
     - Selector: queuePlayerWithItems:
   */
-  @objc static func createWithQueuePlayerWithItems(_ items: [AVPlayerItem]) -> Self
+  @objc static func createWithItems(_ items: [AVPlayerItem]) -> Self
 
   // Instance Methods
 
@@ -61,7 +61,7 @@ extension AVQueuePlayer: AVQueuePlayerExports {
   /**
     - Selector: queuePlayerWithItems:
   */
-  @objc public static func createWithQueuePlayerWithItems(_ items: [AVPlayerItem]) -> Self {
+  @objc public static func createWithItems(_ items: [AVPlayerItem]) -> Self {
     return self.init(items: items)
   }
 

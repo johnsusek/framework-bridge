@@ -31,7 +31,7 @@ import AVFoundation
   /**
     - Selector: textStyleRuleWithTextMarkupAttributes:textSelector:
   */
-  @objc static func createWithTextMarkupAttributesWithTextSelector(_ textMarkupAttributes: [String: Any], _ textSelector: String?) -> AVTextStyleRule?
+  @objc static func createWithTextMarkupAttributes_TextSelector(_ textMarkupAttributes: [String: Any], _ textSelector: String?) -> AVTextStyleRule?
 
   /**
     - Selector: textStyleRulesFromPropertyList:
@@ -64,7 +64,7 @@ extension AVTextStyleRule: AVTextStyleRuleExports {
   /**
     - Selector: textStyleRuleWithTextMarkupAttributes:textSelector:
   */
-  @objc public static func createWithTextMarkupAttributesWithTextSelector(_ textMarkupAttributes: [String: Any], _ textSelector: String?) -> AVTextStyleRule? {
+  @objc public static func createWithTextMarkupAttributes_TextSelector(_ textMarkupAttributes: [String: Any], _ textSelector: String?) -> AVTextStyleRule? {
     return self.init(textMarkupAttributes: textMarkupAttributes, textSelector: textSelector)
   }
 

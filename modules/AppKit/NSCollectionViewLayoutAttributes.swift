@@ -21,22 +21,22 @@ import AppKit
   /**
     - Selector: layoutAttributesForDecorationViewOfKind:withIndexPath:
   */
-  @objc static func createWithLayoutAttributesForDecorationViewOfKindWithIndexPath(_ forDecorationViewOfKind: NSCollectionView.DecorationElementKind, _ with: IndexPath) -> Self
+  @objc static func createWithForDecorationViewOfKind__(_ forDecorationViewOfKind: NSCollectionView.DecorationElementKind, _ with: IndexPath) -> Self
 
   /**
     - Selector: layoutAttributesForInterItemGapBeforeIndexPath:
   */
-  @objc static func createWithLayoutAttributesForInterItemGapBeforeIndexPath(_ forInterItemGapBefore: IndexPath) -> Self
+  @objc static func createWithForInterItemGapBefore(_ forInterItemGapBefore: IndexPath) -> Self
 
   /**
     - Selector: layoutAttributesForItemWithIndexPath:
   */
-  @objc static func createWithLayoutAttributesForItemWithIndexPath(_ forItemWith: IndexPath) -> Self
+  @objc static func createWithForItem_(_ forItemWith: IndexPath) -> Self
 
   /**
     - Selector: layoutAttributesForSupplementaryViewOfKind:withIndexPath:
   */
-  @objc static func createWithLayoutAttributesForSupplementaryViewOfKindWithIndexPath(_ forSupplementaryViewOfKind: NSCollectionView.SupplementaryElementKind, _ with: IndexPath) -> Self
+  @objc static func createWithForSupplementaryViewOfKind__(_ forSupplementaryViewOfKind: NSCollectionView.SupplementaryElementKind, _ with: IndexPath) -> Self
 
   // Own Instance Properties
 
@@ -86,7 +86,7 @@ extension NSCollectionViewLayoutAttributes: NSCollectionViewLayoutAttributesExpo
   /**
     - Selector: layoutAttributesForDecorationViewOfKind:withIndexPath:
   */
-  @objc public static func createWithLayoutAttributesForDecorationViewOfKindWithIndexPath(_ forDecorationViewOfKind: NSCollectionView.DecorationElementKind, _ with: IndexPath) -> Self {
+  @objc public static func createWithForDecorationViewOfKind__(_ forDecorationViewOfKind: NSCollectionView.DecorationElementKind, _ with: IndexPath) -> Self {
     return self.init(forDecorationViewOfKind: forDecorationViewOfKind, with: with)
   }
 
@@ -94,7 +94,7 @@ extension NSCollectionViewLayoutAttributes: NSCollectionViewLayoutAttributesExpo
   /**
     - Selector: layoutAttributesForInterItemGapBeforeIndexPath:
   */
-  @objc public static func createWithLayoutAttributesForInterItemGapBeforeIndexPath(_ forInterItemGapBefore: IndexPath) -> Self {
+  @objc public static func createWithForInterItemGapBefore(_ forInterItemGapBefore: IndexPath) -> Self {
     return self.init(forInterItemGapBefore: forInterItemGapBefore)
   }
 
@@ -102,7 +102,7 @@ extension NSCollectionViewLayoutAttributes: NSCollectionViewLayoutAttributesExpo
   /**
     - Selector: layoutAttributesForItemWithIndexPath:
   */
-  @objc public static func createWithLayoutAttributesForItemWithIndexPath(_ forItemWith: IndexPath) -> Self {
+  @objc public static func createWithForItem_(_ forItemWith: IndexPath) -> Self {
     return self.init(forItemWith: forItemWith)
   }
 
@@ -110,7 +110,7 @@ extension NSCollectionViewLayoutAttributes: NSCollectionViewLayoutAttributesExpo
   /**
     - Selector: layoutAttributesForSupplementaryViewOfKind:withIndexPath:
   */
-  @objc public static func createWithLayoutAttributesForSupplementaryViewOfKindWithIndexPath(_ forSupplementaryViewOfKind: NSCollectionView.SupplementaryElementKind, _ with: IndexPath) -> Self {
+  @objc public static func createWithForSupplementaryViewOfKind__(_ forSupplementaryViewOfKind: NSCollectionView.SupplementaryElementKind, _ with: IndexPath) -> Self {
     return self.init(forSupplementaryViewOfKind: forSupplementaryViewOfKind, with: with)
   }
 

@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: sizeWithWidthDimension:heightDimension:
   */
-  @objc static func createWithSizeWithWidthDimensionWithHeightDimension(_ widthDimension: NSCollectionLayoutDimension, _ heightDimension: NSCollectionLayoutDimension) -> Self
+  @objc static func createWithWidthDimension_HeightDimension(_ widthDimension: NSCollectionLayoutDimension, _ heightDimension: NSCollectionLayoutDimension) -> Self
 
   // Own Instance Properties
 
@@ -41,7 +41,7 @@ extension NSCollectionLayoutSize: NSCollectionLayoutSizeExports {
   /**
     - Selector: sizeWithWidthDimension:heightDimension:
   */
-  @objc public static func createWithSizeWithWidthDimensionWithHeightDimension(_ widthDimension: NSCollectionLayoutDimension, _ heightDimension: NSCollectionLayoutDimension) -> Self {
+  @objc public static func createWithWidthDimension_HeightDimension(_ widthDimension: NSCollectionLayoutDimension, _ heightDimension: NSCollectionLayoutDimension) -> Self {
     return self.init(widthDimension: widthDimension, heightDimension: heightDimension)
   }
 

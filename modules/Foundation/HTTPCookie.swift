@@ -20,7 +20,7 @@ import Foundation
   /**
     - Selector: cookieWithProperties:
   */
-  @objc static func createWithCookieWithProperties(_ properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie?
+  @objc static func createWithProperties(_ properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie?
 
   /**
     - Selector: cookiesWithResponseHeaderFields:forURL:
@@ -111,7 +111,7 @@ extension HTTPCookie: HTTPCookieExports {
   /**
     - Selector: cookieWithProperties:
   */
-  @objc public static func createWithCookieWithProperties(_ properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie? {
+  @objc public static func createWithProperties(_ properties: [HTTPCookiePropertyKey: Any]) -> HTTPCookie? {
     return self.init(properties: properties)
   }
 

@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: appearanceNamed:
   */
-  @objc static func createWithAppearanceNamed(_ named: NSAppearance.Name) -> NSAppearance?
+  @objc static func createWithNamed(_ named: NSAppearance.Name) -> NSAppearance?
 
   // Own Static Properties
 
@@ -58,7 +58,7 @@ extension NSAppearance: NSAppearanceExports {
   /**
     - Selector: appearanceNamed:
   */
-  @objc public static func createWithAppearanceNamed(_ named: NSAppearance.Name) -> NSAppearance? {
+  @objc public static func createWithNamed(_ named: NSAppearance.Name) -> NSAppearance? {
     return self.init(named: named)
   }
 

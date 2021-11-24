@@ -25,12 +25,12 @@ import AppKit
   /**
     - Selector: fontDescriptorWithName:matrix:
   */
-  @objc static func createWithNameWithMatrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor
+  @objc static func createWithName_Matrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor
 
   /**
     - Selector: fontDescriptorWithName:size:
   */
-  @objc static func createWithNameWithSize(_ name: String, _ size: CGFloat) -> NSFontDescriptor
+  @objc static func createWithName_Size(_ name: String, _ size: CGFloat) -> NSFontDescriptor
 
   // Instance Methods
 
@@ -127,7 +127,7 @@ extension NSFontDescriptor: NSFontDescriptorExports {
   /**
     - Selector: fontDescriptorWithName:matrix:
   */
-  @objc public static func createWithNameWithMatrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor {
+  @objc public static func createWithName_Matrix(_ name: String, _ matrix: AffineTransform) -> NSFontDescriptor {
     return self.init(name: name, matrix: matrix)
   }
 
@@ -135,7 +135,7 @@ extension NSFontDescriptor: NSFontDescriptorExports {
   /**
     - Selector: fontDescriptorWithName:size:
   */
-  @objc public static func createWithNameWithSize(_ name: String, _ size: CGFloat) -> NSFontDescriptor {
+  @objc public static func createWithName_Size(_ name: String, _ size: CGFloat) -> NSFontDescriptor {
     return self.init(name: name, size: size)
   }
 

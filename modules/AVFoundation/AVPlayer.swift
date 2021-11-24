@@ -26,7 +26,7 @@ import AVFoundation
   /**
     - Selector: playerWithURL:
   */
-  @objc static func createWithURL(_ url: URL) -> Self
+  @objc static func createWithUrl(_ url: URL) -> Self
 
   // Own Static Properties
 
@@ -255,7 +255,7 @@ extension AVPlayer: AVPlayerExports {
   /**
     - Selector: playerWithURL:
   */
-  @objc public static func createWithURL(_ url: URL) -> Self {
+  @objc public static func createWithUrl(_ url: URL) -> Self {
     return self.init(url: url)
   }
 

@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: accessoryWithImage:
   */
-  @objc static func createWithAccessoryWithImage(_ image: NSImage) -> NSSliderAccessory
+  @objc static func createWithImage(_ image: NSImage) -> NSSliderAccessory
 
   // Own Instance Properties
 
@@ -41,7 +41,7 @@ extension NSSliderAccessory: NSSliderAccessoryExports {
   /**
     - Selector: accessoryWithImage:
   */
-  @objc public static func createWithAccessoryWithImage(_ image: NSImage) -> NSSliderAccessory {
+  @objc public static func createWithImage(_ image: NSImage) -> NSSliderAccessory {
     return self.init(image: image)
   }
 

@@ -21,12 +21,7 @@ import Foundation
   /**
     - Selector: readingIntentWithURL:options:
   */
-  @objc static func createWithReadingIntentWithURLWithOptions(_ with: URL, _ options: NSFileCoordinator.ReadingOptions) -> Self
-
-  /**
-    - Selector: writingIntentWithURL:options:
-  */
-  @objc static func createWithWritingIntentWithURLWithOptions(_ with: URL, _ options: NSFileCoordinator.WritingOptions) -> Self
+  @objc static func createWith__Options(_ with: URL, _ options: NSFileCoordinator.ReadingOptions) -> Self
 
   // Own Instance Properties
 
@@ -41,16 +36,8 @@ extension NSFileAccessIntent: NSFileAccessIntentExports {
   /**
     - Selector: readingIntentWithURL:options:
   */
-  @objc public static func createWithReadingIntentWithURLWithOptions(_ with: URL, _ options: NSFileCoordinator.ReadingOptions) -> Self {
+  @objc public static func createWith__Options(_ with: URL, _ options: NSFileCoordinator.ReadingOptions) -> Self {
     return self.readingIntent(with: with, options: options)
-  }
-
-
-  /**
-    - Selector: writingIntentWithURL:options:
-  */
-  @objc public static func createWithWritingIntentWithURLWithOptions(_ with: URL, _ options: NSFileCoordinator.WritingOptions) -> Self {
-    return self.writingIntent(with: with, options: options)
   }
 
 }

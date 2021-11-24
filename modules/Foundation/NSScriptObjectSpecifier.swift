@@ -21,7 +21,7 @@ import Foundation
     - Selector: objectSpecifierWithDescriptor:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) static func createWithObjectSpecifierWithDescriptor(_ descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier?
+  @objc @available(OSX 10.5, *) static func createWithDescriptor(_ descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier?
 
   // Instance Methods
 
@@ -100,7 +100,7 @@ extension NSScriptObjectSpecifier: NSScriptObjectSpecifierExports {
     - Selector: objectSpecifierWithDescriptor:
     - Introduced: 10.5
   */
-  @objc public static func createWithObjectSpecifierWithDescriptor(_ descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier? {
+  @objc public static func createWithDescriptor(_ descriptor: NSAppleEventDescriptor) -> NSScriptObjectSpecifier? {
     return self.init(descriptor: descriptor)
   }
 

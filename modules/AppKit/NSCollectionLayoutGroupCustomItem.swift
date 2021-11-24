@@ -21,12 +21,12 @@ import AppKit
   /**
     - Selector: customItemWithFrame:
   */
-  @objc static func createWithCustomItemWithFrame(_ frame: CGRect) -> Self
+  @objc static func createWithFrame(_ frame: CGRect) -> Self
 
   /**
     - Selector: customItemWithFrame:zIndex:
   */
-  @objc static func createWithCustomItemWithFrameWithZIndex(_ frame: CGRect, _ zIndex: Int) -> Self
+  @objc static func createWithFrame_ZIndex(_ frame: CGRect, _ zIndex: Int) -> Self
 
   // Own Instance Properties
 
@@ -46,7 +46,7 @@ extension NSCollectionLayoutGroupCustomItem: NSCollectionLayoutGroupCustomItemEx
   /**
     - Selector: customItemWithFrame:
   */
-  @objc public static func createWithCustomItemWithFrame(_ frame: CGRect) -> Self {
+  @objc public static func createWithFrame(_ frame: CGRect) -> Self {
     return self.init(frame: frame)
   }
 
@@ -54,7 +54,7 @@ extension NSCollectionLayoutGroupCustomItem: NSCollectionLayoutGroupCustomItemEx
   /**
     - Selector: customItemWithFrame:zIndex:
   */
-  @objc public static func createWithCustomItemWithFrameWithZIndex(_ frame: CGRect, _ zIndex: Int) -> Self {
+  @objc public static func createWithFrame_ZIndex(_ frame: CGRect, _ zIndex: Int) -> Self {
     return self.init(frame: frame, zIndex: zIndex)
   }
 

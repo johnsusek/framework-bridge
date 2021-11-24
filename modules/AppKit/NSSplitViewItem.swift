@@ -22,13 +22,13 @@ import AppKit
     - Selector: contentListWithViewController:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func createWithContentListWithViewController(_ contentListWithViewController: NSViewController) -> Self
+  @objc @available(OSX 10.11, *) static func createWithContentList_ViewController(_ contentListWithViewController: NSViewController) -> Self
 
   /**
     - Selector: sidebarWithViewController:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func createWithSidebarWithViewController(_ sidebarWithViewController: NSViewController) -> Self
+  @objc @available(OSX 10.11, *) static func createWithSidebar_ViewController(_ sidebarWithViewController: NSViewController) -> Self
 
   /**
     - Selector: splitViewItemWithViewController:
@@ -106,7 +106,7 @@ extension NSSplitViewItem: NSSplitViewItemExports {
     - Selector: contentListWithViewController:
     - Introduced: 10.11
   */
-  @objc public static func createWithContentListWithViewController(_ contentListWithViewController: NSViewController) -> Self {
+  @objc public static func createWithContentList_ViewController(_ contentListWithViewController: NSViewController) -> Self {
     return self.init(contentListWithViewController: contentListWithViewController)
   }
 
@@ -115,7 +115,7 @@ extension NSSplitViewItem: NSSplitViewItemExports {
     - Selector: sidebarWithViewController:
     - Introduced: 10.11
   */
-  @objc public static func createWithSidebarWithViewController(_ sidebarWithViewController: NSViewController) -> Self {
+  @objc public static func createWithSidebar_ViewController(_ sidebarWithViewController: NSViewController) -> Self {
     return self.init(sidebarWithViewController: sidebarWithViewController)
   }
 

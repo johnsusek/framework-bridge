@@ -26,7 +26,7 @@ import AVFoundation
   /**
     - Selector: compositionTrackSegmentWithURL:trackID:sourceTimeRange:targetTimeRange:
   */
-  @objc static func createWithURLWithTrackIDWithSourceTimeRangeWithTargetTimeRange(_ url: URL, _ trackID: Int32, _ sourceTimeRange: CMTimeRange, _ targetTimeRange: CMTimeRange) -> Self
+  @objc static func createWithUrl_TrackID_SourceTimeRange_TargetTimeRange(_ url: URL, _ trackID: Int32, _ sourceTimeRange: CMTimeRange, _ targetTimeRange: CMTimeRange) -> Self
 
   // Own Instance Properties
 
@@ -54,7 +54,7 @@ extension AVCompositionTrackSegment: AVCompositionTrackSegmentExports {
   /**
     - Selector: compositionTrackSegmentWithURL:trackID:sourceTimeRange:targetTimeRange:
   */
-  @objc public static func createWithURLWithTrackIDWithSourceTimeRangeWithTargetTimeRange(_ url: URL, _ trackID: Int32, _ sourceTimeRange: CMTimeRange, _ targetTimeRange: CMTimeRange) -> Self {
+  @objc public static func createWithUrl_TrackID_SourceTimeRange_TargetTimeRange(_ url: URL, _ trackID: Int32, _ sourceTimeRange: CMTimeRange, _ targetTimeRange: CMTimeRange) -> Self {
     return self.init(url: url, trackID: trackID, sourceTimeRange: sourceTimeRange, targetTimeRange: targetTimeRange)
   }
 

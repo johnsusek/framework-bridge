@@ -21,12 +21,12 @@ import AppKit
   /**
     - Selector: stepperTouchBarItemWithIdentifier:drawingHandler:
   */
-// jsvalue   @objc static func createWithIdentifierWithDrawingHandler(_ identifier: NSTouchBarItem.Identifier, _ drawingHandler: JSValue) -> Self
+// jsvalue   @objc static func createWithIdentifier_DrawingHandler(_ identifier: NSTouchBarItem.Identifier, _ drawingHandler: JSValue) -> Self
 
   /**
     - Selector: stepperTouchBarItemWithIdentifier:formatter:
   */
-  @objc static func createWithIdentifierWithFormatter(_ identifier: NSTouchBarItem.Identifier, _ formatter: Formatter) -> Self
+  @objc static func createWithIdentifier_Formatter(_ identifier: NSTouchBarItem.Identifier, _ formatter: Formatter) -> Self
 
   // Own Instance Properties
 
@@ -71,7 +71,7 @@ extension NSStepperTouchBarItem: NSStepperTouchBarItemExports {
   /**
     - Selector: stepperTouchBarItemWithIdentifier:drawingHandler:
   */
-  @objc public static func createWithIdentifierWithDrawingHandler(_ identifier: NSTouchBarItem.Identifier, _ drawingHandler: JSValue) -> Self {
+  @objc public static func createWithIdentifier_DrawingHandler(_ identifier: NSTouchBarItem.Identifier, _ drawingHandler: JSValue) -> Self {
     return self.init(identifier: identifier, drawingHandler: { p1, p2 in
       drawingHandler.call(withArguments: [p1 as AnyObject, p2 as AnyObject])
     })
@@ -81,7 +81,7 @@ extension NSStepperTouchBarItem: NSStepperTouchBarItemExports {
   /**
     - Selector: stepperTouchBarItemWithIdentifier:formatter:
   */
-  @objc public static func createWithIdentifierWithFormatter(_ identifier: NSTouchBarItem.Identifier, _ formatter: Formatter) -> Self {
+  @objc public static func createWithIdentifier_Formatter(_ identifier: NSTouchBarItem.Identifier, _ formatter: Formatter) -> Self {
     return self.init(identifier: identifier, formatter: formatter)
   }
 

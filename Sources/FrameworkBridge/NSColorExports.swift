@@ -8,7 +8,7 @@ import CoreImage
 import CoreGraphics
 import AppKit
 
-// Interface 
+// Interface
 
   /**
     - Selector: NSColor
@@ -40,7 +40,7 @@ import AppKit
     - Selector: colorNamed:bundle:
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) static func createWithColorNamedWithBundle(_ named: NSColor.Name, _ bundle: Bundle?) -> NSColor?
+  @objc @available(OSX 10.13, *) static func createWithColorNamed_Bundle(_ named: NSColor.Name, _ bundle: Bundle?) -> NSColor?
 
   /**
     - Selector: colorWithCGColor:
@@ -56,77 +56,77 @@ import AppKit
   /**
     - Selector: colorWithCalibratedHue:saturation:brightness:alpha:
   */
-  @objc static func createWithCalibratedHueWithSaturationWithBrightnessWithAlpha(_ calibratedHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithCalibratedHue_Saturation_Brightness_Alpha(_ calibratedHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithCalibratedRed:green:blue:alpha:
   */
-  @objc static func createWithCalibratedRedWithGreenWithBlueWithAlpha(_ calibratedRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithCalibratedRed_Green_Blue_Alpha(_ calibratedRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithCalibratedWhite:alpha:
   */
-  @objc static func createWithCalibratedWhiteWithAlpha(_ calibratedWhite: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithCalibratedWhite_Alpha(_ calibratedWhite: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithCatalogName:colorName:
   */
-  @objc static func createWithCatalogNameWithColorName(_ catalogName: NSColorList.Name, _ colorName: NSColor.Name) -> NSColor?
+  @objc static func createWithCatalogName_ColorName(_ catalogName: NSColorList.Name, _ colorName: NSColor.Name) -> NSColor?
 
   /**
     - Selector: colorWithColorSpace:components:count:
   */
-  @objc static func createWithColorSpaceWithComponentsWithCount(_ colorSpace: NSColorSpace, _ components: UnsafePointer<CGFloat>, _ count: Int) -> NSColor
+  @objc static func createWithColorSpace_Components_Count(_ colorSpace: NSColorSpace, _ components: UnsafePointer<CGFloat>, _ count: Int) -> NSColor
 
   /**
     - Selector: colorWithColorSpace:hue:saturation:brightness:alpha:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithColorSpaceWithHueWithSaturationWithBrightnessWithAlpha(_ colorSpace: NSColorSpace, _ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.12, *) static func createWithColorSpace_Hue_Saturation_Brightness_Alpha(_ colorSpace: NSColorSpace, _ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDeviceCyan:magenta:yellow:black:alpha:
   */
-  @objc static func createWithDeviceCyanWithMagentaWithYellowWithBlackWithAlpha(_ deviceCyan: CGFloat, _ magenta: CGFloat, _ yellow: CGFloat, _ black: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithDeviceCyan_Magenta_Yellow_Black_Alpha(_ deviceCyan: CGFloat, _ magenta: CGFloat, _ yellow: CGFloat, _ black: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDeviceHue:saturation:brightness:alpha:
   */
-  @objc static func createWithDeviceHueWithSaturationWithBrightnessWithAlpha(_ deviceHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithDeviceHue_Saturation_Brightness_Alpha(_ deviceHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDeviceRed:green:blue:alpha:
   */
-  @objc static func createWithDeviceRedWithGreenWithBlueWithAlpha(_ deviceRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithDeviceRed_Green_Blue_Alpha(_ deviceRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDeviceWhite:alpha:
   */
-  @objc static func createWithDeviceWhiteWithAlpha(_ deviceWhite: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc static func createWithDeviceWhite_Alpha(_ deviceWhite: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithDisplayP3Red:green:blue:alpha:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithDisplayP3RedWithGreenWithBlueWithAlpha(_ displayP3Red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.12, *) static func createWithDisplayP3Red_Green_Blue_Alpha(_ displayP3Red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithGenericGamma22White:alpha:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func createWithGenericGamma22WhiteWithAlpha(_ genericGamma22White: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.7, *) static func createWithGenericGamma22White_Alpha(_ genericGamma22White: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithHue:saturation:brightness:alpha:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func createWithHueWithSaturationWithBrightnessWithAlpha(_ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.9, *) static func createWithHue_Saturation_Brightness_Alpha(_ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithName:dynamicProvider:
     - Introduced: 10.15
   */
-// jsvalue   @objc @available(OSX 10.15, *) static func createWithNameWithDynamicProvider(_ name: NSColor.Name?, _ dynamicProvider: JSValue) -> NSColor
+// jsvalue   @objc @available(OSX 10.15, *) static func createWithName_DynamicProvider(_ name: NSColor.Name?, _ dynamicProvider: JSValue) -> NSColor
 
   /**
     - Selector: colorWithPatternImage:
@@ -137,19 +137,19 @@ import AppKit
     - Selector: colorWithRed:green:blue:alpha:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func createWithRedWithGreenWithBlueWithAlpha(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.9, *) static func createWithRed_Green_Blue_Alpha(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithSRGBRed:green:blue:alpha:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func createWithSRGBRedWithGreenWithBlueWithAlpha(_ srgbRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.7, *) static func createWithSRGBRed_Green_Blue_Alpha(_ srgbRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor
 
   /**
     - Selector: colorWithWhite:alpha:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) static func createWithWhiteWithAlpha(_ white: CGFloat, _ alpha: CGFloat) -> NSColor
+  @objc @available(OSX 10.9, *) static func createWithWhite_Alpha(_ white: CGFloat, _ alpha: CGFloat) -> NSColor
 
   // Own Static Properties
 
@@ -159,44 +159,44 @@ import AppKit
     - Deprecated: 100000
     - Replacement: selectedContentBackgroundColor
   */
-  @objc @available(OSX 10.2, *) static var alternateSelectedControlColor: NSColor { @objc get }
+  // @objc @available(OSX 10.2, *) static var alternateSelectedControlColor: NSColor { @objc get }
 
   /**
     - Selector: alternateSelectedControlTextColor
   */
-  @objc static var alternateSelectedControlTextColor: NSColor { @objc get }
+  // @objc static var alternateSelectedControlTextColor: NSColor { @objc get }
 
   /**
     - Selector: alternatingContentBackgroundColors
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static var alternatingContentBackgroundColors: [NSColor] { @objc get }
+  // @objc @available(OSX 10.14, *) static var alternatingContentBackgroundColors: [NSColor] { @objc get }
 
   /**
     - Selector: blackColor
   */
-  @objc static var black: NSColor { @objc (blackColor) get }
+  // @objc static var black: NSColor { @objc (blackColor) get }
 
   /**
     - Selector: blueColor
   */
-  @objc static var blue: NSColor { @objc (blueColor) get }
+  // @objc static var blue: NSColor { @objc (blueColor) get }
 
   /**
     - Selector: brownColor
   */
-  @objc static var brown: NSColor { @objc (brownColor) get }
+  // @objc static var brown: NSColor { @objc (brownColor) get }
 
   /**
     - Selector: clearColor
   */
-  @objc static var clear: NSColor { @objc (clearColor) get }
+  // @objc static var clear: NSColor { @objc (clearColor) get }
 
   /**
     - Selector: controlAccentColor
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static var controlAccentColor: NSColor { @objc get }
+  // @objc @available(OSX 10.14, *) static var controlAccentColor: NSColor { @objc get }
 
   /**
     - Selector: controlAlternatingRowBackgroundColors
@@ -204,17 +204,17 @@ import AppKit
     - Deprecated: 100000
     - Replacement: alternatingContentBackgroundColors
   */
-  @objc @available(OSX 10.3, *) static var controlAlternatingRowBackgroundColors: [NSColor] { @objc get }
+  // @objc @available(OSX 10.3, *) static var controlAlternatingRowBackgroundColors: [NSColor] { @objc get }
 
   /**
     - Selector: controlBackgroundColor
   */
-  @objc static var controlBackgroundColor: NSColor { @objc get }
+  // @objc static var controlBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: controlColor
   */
-  @objc static var controlColor: NSColor { @objc get }
+  // @objc static var controlColor: NSColor { @objc get }
 
   /**
     - Selector: controlDarkShadowColor
@@ -222,7 +222,7 @@ import AppKit
     - Deprecated: 100000
     - Message: Use a color that matches the semantics being used, such as `separatorColor`
   */
-  @objc @available(OSX 10.0, *) static var controlDarkShadowColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var controlDarkShadowColor: NSColor { @objc get }
 
   /**
     - Selector: controlHighlightColor
@@ -230,7 +230,7 @@ import AppKit
     - Deprecated: 100000
     - Message: Use a color that matches the semantics being used, such as `separatorColor`
   */
-  @objc @available(OSX 10.0, *) static var controlHighlightColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var controlHighlightColor: NSColor { @objc get }
 
   /**
     - Selector: controlLightHighlightColor
@@ -238,7 +238,7 @@ import AppKit
     - Deprecated: 100000
     - Message: Use a color that matches the semantics being used, such as `separatorColor`
   */
-  @objc @available(OSX 10.0, *) static var controlLightHighlightColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var controlLightHighlightColor: NSColor { @objc get }
 
   /**
     - Selector: controlShadowColor
@@ -246,12 +246,12 @@ import AppKit
     - Deprecated: 100000
     - Message: Use a color that matches the semantics being used, such as `separatorColor`
   */
-  @objc @available(OSX 10.0, *) static var controlShadowColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var controlShadowColor: NSColor { @objc get }
 
   /**
     - Selector: controlTextColor
   */
-  @objc static var controlTextColor: NSColor { @objc get }
+  // @objc static var controlTextColor: NSColor { @objc get }
 
   /**
     - Selector: currentControlTint
@@ -261,38 +261,38 @@ import AppKit
   /**
     - Selector: cyanColor
   */
-  @objc static var cyan: NSColor { @objc (cyanColor) get }
+  // @objc static var cyan: NSColor { @objc (cyanColor) get }
 
   /**
     - Selector: darkGrayColor
   */
-  @objc static var darkGray: NSColor { @objc (darkGrayColor) get }
+  // @objc static var darkGray: NSColor { @objc (darkGrayColor) get }
 
   /**
     - Selector: disabledControlTextColor
   */
-  @objc static var disabledControlTextColor: NSColor { @objc get }
+  // @objc static var disabledControlTextColor: NSColor { @objc get }
 
   /**
     - Selector: findHighlightColor
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) static var findHighlightColor: NSColor { @objc get }
+  // @objc @available(OSX 10.13, *) static var findHighlightColor: NSColor { @objc get }
 
   /**
     - Selector: grayColor
   */
-  @objc static var gray: NSColor { @objc (grayColor) get }
+  // @objc static var gray: NSColor { @objc (grayColor) get }
 
   /**
     - Selector: greenColor
   */
-  @objc static var green: NSColor { @objc (greenColor) get }
+  // @objc static var green: NSColor { @objc (greenColor) get }
 
   /**
     - Selector: gridColor
   */
-  @objc static var gridColor: NSColor { @objc get }
+  // @objc static var gridColor: NSColor { @objc get }
 
   /**
     - Selector: headerColor
@@ -300,17 +300,17 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSVisualEffectMaterialHeaderView
   */
-  @objc @available(OSX 10.0, *) static var headerColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var headerColor: NSColor { @objc get }
 
   /**
     - Selector: headerTextColor
   */
-  @objc static var headerTextColor: NSColor { @objc get }
+  // @objc static var headerTextColor: NSColor { @objc get }
 
   /**
     - Selector: highlightColor
   */
-  @objc static var highlightColor: NSColor { @objc get }
+  // @objc static var highlightColor: NSColor { @objc get }
 
   /**
     - Selector: ignoresAlpha
@@ -320,7 +320,7 @@ import AppKit
   /**
     - Selector: keyboardFocusIndicatorColor
   */
-  @objc static var keyboardFocusIndicatorColor: NSColor { @objc get }
+  // @objc static var keyboardFocusIndicatorColor: NSColor { @objc get }
 
   /**
     - Selector: knobColor
@@ -328,56 +328,56 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSScroller instead
   */
-  @objc @available(OSX 10.0, *) static var knobColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var knobColor: NSColor { @objc get }
 
   /**
     - Selector: labelColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var labelColor: NSColor { @objc get }
+  // @objc @available(OSX 10.10, *) static var labelColor: NSColor { @objc get }
 
   /**
     - Selector: lightGrayColor
   */
-  @objc static var lightGray: NSColor { @objc (lightGrayColor) get }
+  // @objc static var lightGray: NSColor { @objc (lightGrayColor) get }
 
   /**
     - Selector: linkColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var linkColor: NSColor { @objc get }
+  // @objc @available(OSX 10.10, *) static var linkColor: NSColor { @objc get }
 
   /**
     - Selector: magentaColor
   */
-  @objc static var magenta: NSColor { @objc (magentaColor) get }
+  // @objc static var magenta: NSColor { @objc (magentaColor) get }
 
   /**
     - Selector: orangeColor
   */
-  @objc static var orange: NSColor { @objc (orangeColor) get }
+  // @objc static var orange: NSColor { @objc (orangeColor) get }
 
   /**
     - Selector: placeholderTextColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var placeholderTextColor: NSColor { @objc get }
+  // @objc @available(OSX 10.10, *) static var placeholderTextColor: NSColor { @objc get }
 
   /**
     - Selector: purpleColor
   */
-  @objc static var purple: NSColor { @objc (purpleColor) get }
+  // @objc static var purple: NSColor { @objc (purpleColor) get }
 
   /**
     - Selector: quaternaryLabelColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var quaternaryLabelColor: NSColor { @objc get }
+  // @objc @available(OSX 10.10, *) static var quaternaryLabelColor: NSColor { @objc get }
 
   /**
     - Selector: redColor
   */
-  @objc static var red: NSColor { @objc (redColor) get }
+  // @objc static var red: NSColor { @objc (redColor) get }
 
   /**
     - Selector: scrollBarColor
@@ -385,19 +385,19 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSScroller instead
   */
-  @objc @available(OSX 10.0, *) static var scrollBarColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var scrollBarColor: NSColor { @objc get }
 
   /**
     - Selector: scrubberTexturedBackgroundColor
     - Introduced: 10.12.2
   */
-  @objc @available(OSX 10.12.2, *) static var scrubberTexturedBackground: NSColor { @objc (scrubberTexturedBackgroundColor) get }
+  // @objc @available(OSX 10.12.2, *) static var scrubberTexturedBackground: NSColor { @objc (scrubberTexturedBackgroundColor) get }
 
   /**
     - Selector: secondaryLabelColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var secondaryLabelColor: NSColor { @objc get }
+  // @objc @available(OSX 10.10, *) static var secondaryLabelColor: NSColor { @objc get }
 
   /**
     - Selector: secondarySelectedControlColor
@@ -405,23 +405,23 @@ import AppKit
     - Deprecated: 100000
     - Replacement: unemphasizedSelectedContentBackgroundColor
   */
-  @objc @available(OSX 10.1, *) static var secondarySelectedControlColor: NSColor { @objc get }
+  // @objc @available(OSX 10.1, *) static var secondarySelectedControlColor: NSColor { @objc get }
 
   /**
     - Selector: selectedContentBackgroundColor
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static var selectedContentBackgroundColor: NSColor { @objc get }
+  // @objc @available(OSX 10.14, *) static var selectedContentBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: selectedControlColor
   */
-  @objc static var selectedControlColor: NSColor { @objc get }
+  // @objc static var selectedControlColor: NSColor { @objc get }
 
   /**
     - Selector: selectedControlTextColor
   */
-  @objc static var selectedControlTextColor: NSColor { @objc get }
+  // @objc static var selectedControlTextColor: NSColor { @objc get }
 
   /**
     - Selector: selectedKnobColor
@@ -429,7 +429,7 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSScroller instead
   */
-  @objc @available(OSX 10.0, *) static var selectedKnobColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var selectedKnobColor: NSColor { @objc get }
 
   /**
     - Selector: selectedMenuItemColor
@@ -437,149 +437,149 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSVisualEffectMaterialSelection
   */
-  @objc @available(OSX 10.0, *) static var selectedMenuItemColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var selectedMenuItemColor: NSColor { @objc get }
 
   /**
     - Selector: selectedMenuItemTextColor
   */
-  @objc static var selectedMenuItemTextColor: NSColor { @objc get }
+  // @objc static var selectedMenuItemTextColor: NSColor { @objc get }
 
   /**
     - Selector: selectedTextBackgroundColor
   */
-  @objc static var selectedTextBackgroundColor: NSColor { @objc get }
+  // @objc static var selectedTextBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: selectedTextColor
   */
-  @objc static var selectedTextColor: NSColor { @objc get }
+  // @objc static var selectedTextColor: NSColor { @objc get }
 
   /**
     - Selector: separatorColor
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static var separatorColor: NSColor { @objc get }
+  // @objc @available(OSX 10.14, *) static var separatorColor: NSColor { @objc get }
 
   /**
     - Selector: shadowColor
   */
-  @objc static var shadowColor: NSColor { @objc get }
+  // @objc static var shadowColor: NSColor { @objc get }
 
   /**
     - Selector: systemBlueColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemBlue: NSColor { @objc (systemBlueColor) get }
+  // @objc @available(OSX 10.10, *) static var systemBlue: NSColor { @objc (systemBlueColor) get }
 
   /**
     - Selector: systemBrownColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemBrown: NSColor { @objc (systemBrownColor) get }
+  // @objc @available(OSX 10.10, *) static var systemBrown: NSColor { @objc (systemBrownColor) get }
 
   /**
     - Selector: systemGrayColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemGray: NSColor { @objc (systemGrayColor) get }
+  // @objc @available(OSX 10.10, *) static var systemGray: NSColor { @objc (systemGrayColor) get }
 
   /**
     - Selector: systemGreenColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemGreen: NSColor { @objc (systemGreenColor) get }
+  // @objc @available(OSX 10.10, *) static var systemGreen: NSColor { @objc (systemGreenColor) get }
 
   /**
     - Selector: systemIndigoColor
     - Introduced: 10.15
   */
-  @objc @available(OSX 10.15, *) static var systemIndigo: NSColor { @objc (systemIndigoColor) get }
+  // @objc @available(OSX 10.15, *) static var systemIndigo: NSColor { @objc (systemIndigoColor) get }
 
   /**
     - Selector: systemOrangeColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemOrange: NSColor { @objc (systemOrangeColor) get }
+  // @objc @available(OSX 10.10, *) static var systemOrange: NSColor { @objc (systemOrangeColor) get }
 
   /**
     - Selector: systemPinkColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemPink: NSColor { @objc (systemPinkColor) get }
+  // @objc @available(OSX 10.10, *) static var systemPink: NSColor { @objc (systemPinkColor) get }
 
   /**
     - Selector: systemPurpleColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemPurple: NSColor { @objc (systemPurpleColor) get }
+  // @objc @available(OSX 10.10, *) static var systemPurple: NSColor { @objc (systemPurpleColor) get }
 
   /**
     - Selector: systemRedColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemRed: NSColor { @objc (systemRedColor) get }
+  // @objc @available(OSX 10.10, *) static var systemRed: NSColor { @objc (systemRedColor) get }
 
   /**
     - Selector: systemTealColor
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static var systemTeal: NSColor { @objc (systemTealColor) get }
+  // @objc @available(OSX 10.12, *) static var systemTeal: NSColor { @objc (systemTealColor) get }
 
   /**
     - Selector: systemYellowColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var systemYellow: NSColor { @objc (systemYellowColor) get }
+  // @objc @available(OSX 10.10, *) static var systemYellow: NSColor { @objc (systemYellowColor) get }
 
   /**
     - Selector: tertiaryLabelColor
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) static var tertiaryLabelColor: NSColor { @objc get }
+  // @objc @available(OSX 10.10, *) static var tertiaryLabelColor: NSColor { @objc get }
 
   /**
     - Selector: textBackgroundColor
   */
-  @objc static var textBackgroundColor: NSColor { @objc get }
+  // @objc static var textBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: textColor
   */
-  @objc static var textColor: NSColor { @objc get }
+  // @objc static var textColor: NSColor { @objc get }
 
   /**
     - Selector: underPageBackgroundColor
     - Introduced: 10.8
   */
-  @objc @available(OSX 10.8, *) static var underPageBackgroundColor: NSColor { @objc get }
+  // @objc @available(OSX 10.8, *) static var underPageBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: unemphasizedSelectedContentBackgroundColor
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static var unemphasizedSelectedContentBackgroundColor: NSColor { @objc get }
+  // @objc @available(OSX 10.14, *) static var unemphasizedSelectedContentBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: unemphasizedSelectedTextBackgroundColor
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static var unemphasizedSelectedTextBackgroundColor: NSColor { @objc get }
+  // @objc @available(OSX 10.14, *) static var unemphasizedSelectedTextBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: unemphasizedSelectedTextColor
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static var unemphasizedSelectedTextColor: NSColor { @objc get }
+  // @objc @available(OSX 10.14, *) static var unemphasizedSelectedTextColor: NSColor { @objc get }
 
   /**
     - Selector: whiteColor
   */
-  @objc static var white: NSColor { @objc (whiteColor) get }
+  // @objc static var white: NSColor { @objc (whiteColor) get }
 
   /**
     - Selector: windowBackgroundColor
   */
-  @objc static var windowBackgroundColor: NSColor { @objc get }
+  // @objc static var windowBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: windowFrameColor
@@ -587,17 +587,17 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSVisualEffectMaterialTitlebar
   */
-  @objc @available(OSX 10.0, *) static var windowFrameColor: NSColor { @objc get }
+  // @objc @available(OSX 10.0, *) static var windowFrameColor: NSColor { @objc get }
 
   /**
     - Selector: windowFrameTextColor
   */
-  @objc static var windowFrameTextColor: NSColor { @objc get }
+  // @objc static var windowFrameTextColor: NSColor { @objc get }
 
   /**
     - Selector: yellowColor
   */
-  @objc static var yellow: NSColor { @objc (yellowColor) get }
+  // @objc static var yellow: NSColor { @objc (yellowColor) get }
 
   // Instance Methods
 
@@ -699,103 +699,103 @@ import AppKit
   /**
     - Selector: alphaComponent
   */
-  @objc var alphaComponent: CGFloat { @objc get }
+  // @objc var alphaComponent: CGFloat { @objc get }
 
   /**
     - Selector: blackComponent
   */
-  @objc var blackComponent: CGFloat { @objc get }
+  // @objc var blackComponent: CGFloat { @objc get }
 
   /**
     - Selector: blueComponent
   */
-  @objc var blueComponent: CGFloat { @objc get }
+  // @objc var blueComponent: CGFloat { @objc get }
 
   /**
     - Selector: brightnessComponent
   */
-  @objc var brightnessComponent: CGFloat { @objc get }
+  // @objc var brightnessComponent: CGFloat { @objc get }
 
   /**
     - Selector: catalogNameComponent
   */
-  @objc var catalogNameComponent: NSColorList.Name { @objc get }
+  // @objc var catalogNameComponent: NSColorList.Name { @objc get }
 
   /**
     - Selector: colorNameComponent
   */
-  @objc var colorNameComponent: NSColor.Name { @objc get }
+  // @objc var colorNameComponent: NSColor.Name { @objc get }
 
   /**
     - Selector: colorSpace
   */
-  @objc var colorSpace: NSColorSpace { @objc get }
+  // @objc var colorSpace: NSColorSpace { @objc get }
 
   /**
     - Selector: cyanComponent
   */
-  @objc var cyanComponent: CGFloat { @objc get }
+  // @objc var cyanComponent: CGFloat { @objc get }
 
   /**
     - Selector: greenComponent
   */
-  @objc var greenComponent: CGFloat { @objc get }
+  // @objc var greenComponent: CGFloat { @objc get }
 
   /**
     - Selector: hueComponent
   */
-  @objc var hueComponent: CGFloat { @objc get }
+  // @objc var hueComponent: CGFloat { @objc get }
 
   /**
     - Selector: localizedCatalogNameComponent
   */
-  @objc var localizedCatalogNameComponent: String { @objc get }
+  // @objc var localizedCatalogNameComponent: String { @objc get }
 
   /**
     - Selector: localizedColorNameComponent
   */
-  @objc var localizedColorNameComponent: String { @objc get }
+  // @objc var localizedColorNameComponent: String { @objc get }
 
   /**
     - Selector: magentaComponent
   */
-  @objc var magentaComponent: CGFloat { @objc get }
+  // @objc var magentaComponent: CGFloat { @objc get }
 
   /**
     - Selector: numberOfComponents
   */
-  @objc var numberOfComponents: Int { @objc get }
+  // @objc var numberOfComponents: Int { @objc get }
 
   /**
     - Selector: patternImage
   */
-  @objc var patternImage: NSImage { @objc get }
+  // @objc var patternImage: NSImage { @objc get }
 
   /**
     - Selector: redComponent
   */
-  @objc var redComponent: CGFloat { @objc get }
+  // @objc var redComponent: CGFloat { @objc get }
 
   /**
     - Selector: saturationComponent
   */
-  @objc var saturationComponent: CGFloat { @objc get }
+  // @objc var saturationComponent: CGFloat { @objc get }
 
   /**
     - Selector: type
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) var type: NSColor.ColorType { @objc get }
+  // @objc @available(OSX 10.13, *) var type: NSColor.ColorType { @objc get }
 
   /**
     - Selector: whiteComponent
   */
-  @objc var whiteComponent: CGFloat { @objc get }
+  // @objc var whiteComponent: CGFloat { @objc get }
 
   /**
     - Selector: yellowComponent
   */
-  @objc var yellowComponent: CGFloat { @objc get }
+  // @objc var yellowComponent: CGFloat { @objc get }
 }
 
 extension NSColor: NSColorExports {
@@ -832,7 +832,7 @@ extension NSColor: NSColorExports {
     - Selector: colorNamed:bundle:
     - Introduced: 10.13
   */
-  @objc public static func createWithColorNamedWithBundle(_ named: NSColor.Name, _ bundle: Bundle?) -> NSColor? {
+  @objc public static func createWithColorNamed_Bundle(_ named: NSColor.Name, _ bundle: Bundle?) -> NSColor? {
     return self.init(named: named, bundle: bundle)
   }
 
@@ -857,7 +857,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCalibratedHue:saturation:brightness:alpha:
   */
-  @objc public static func createWithCalibratedHueWithSaturationWithBrightnessWithAlpha(_ calibratedHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithCalibratedHue_Saturation_Brightness_Alpha(_ calibratedHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(calibratedHue: calibratedHue, saturation: saturation, brightness: brightness, alpha: alpha)
   }
 
@@ -865,7 +865,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCalibratedRed:green:blue:alpha:
   */
-  @objc public static func createWithCalibratedRedWithGreenWithBlueWithAlpha(_ calibratedRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithCalibratedRed_Green_Blue_Alpha(_ calibratedRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(calibratedRed: calibratedRed, green: green, blue: blue, alpha: alpha)
   }
 
@@ -873,7 +873,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCalibratedWhite:alpha:
   */
-  @objc public static func createWithCalibratedWhiteWithAlpha(_ calibratedWhite: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithCalibratedWhite_Alpha(_ calibratedWhite: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(calibratedWhite: calibratedWhite, alpha: alpha)
   }
 
@@ -881,7 +881,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithCatalogName:colorName:
   */
-  @objc public static func createWithCatalogNameWithColorName(_ catalogName: NSColorList.Name, _ colorName: NSColor.Name) -> NSColor? {
+  @objc public static func createWithCatalogName_ColorName(_ catalogName: NSColorList.Name, _ colorName: NSColor.Name) -> NSColor? {
     return self.init(catalogName: catalogName, colorName: colorName)
   }
 
@@ -889,7 +889,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithColorSpace:components:count:
   */
-  @objc public static func createWithColorSpaceWithComponentsWithCount(_ colorSpace: NSColorSpace, _ components: UnsafePointer<CGFloat>, _ count: Int) -> NSColor {
+  @objc public static func createWithColorSpace_Components_Count(_ colorSpace: NSColorSpace, _ components: UnsafePointer<CGFloat>, _ count: Int) -> NSColor {
     return self.init(colorSpace: colorSpace, components: components, count: count)
   }
 
@@ -898,7 +898,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithColorSpace:hue:saturation:brightness:alpha:
     - Introduced: 10.12
   */
-  @objc public static func createWithColorSpaceWithHueWithSaturationWithBrightnessWithAlpha(_ colorSpace: NSColorSpace, _ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithColorSpace_Hue_Saturation_Brightness_Alpha(_ colorSpace: NSColorSpace, _ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(colorSpace: colorSpace, hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
   }
 
@@ -906,7 +906,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithDeviceCyan:magenta:yellow:black:alpha:
   */
-  @objc public static func createWithDeviceCyanWithMagentaWithYellowWithBlackWithAlpha(_ deviceCyan: CGFloat, _ magenta: CGFloat, _ yellow: CGFloat, _ black: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDeviceCyan_Magenta_Yellow_Black_Alpha(_ deviceCyan: CGFloat, _ magenta: CGFloat, _ yellow: CGFloat, _ black: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(deviceCyan: deviceCyan, magenta: magenta, yellow: yellow, black: black, alpha: alpha)
   }
 
@@ -914,7 +914,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithDeviceHue:saturation:brightness:alpha:
   */
-  @objc public static func createWithDeviceHueWithSaturationWithBrightnessWithAlpha(_ deviceHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDeviceHue_Saturation_Brightness_Alpha(_ deviceHue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(deviceHue: deviceHue, saturation: saturation, brightness: brightness, alpha: alpha)
   }
 
@@ -922,7 +922,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithDeviceRed:green:blue:alpha:
   */
-  @objc public static func createWithDeviceRedWithGreenWithBlueWithAlpha(_ deviceRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDeviceRed_Green_Blue_Alpha(_ deviceRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(deviceRed: deviceRed, green: green, blue: blue, alpha: alpha)
   }
 
@@ -930,7 +930,7 @@ extension NSColor: NSColorExports {
   /**
     - Selector: colorWithDeviceWhite:alpha:
   */
-  @objc public static func createWithDeviceWhiteWithAlpha(_ deviceWhite: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDeviceWhite_Alpha(_ deviceWhite: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(deviceWhite: deviceWhite, alpha: alpha)
   }
 
@@ -939,7 +939,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithDisplayP3Red:green:blue:alpha:
     - Introduced: 10.12
   */
-  @objc public static func createWithDisplayP3RedWithGreenWithBlueWithAlpha(_ displayP3Red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithDisplayP3Red_Green_Blue_Alpha(_ displayP3Red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(displayP3Red: displayP3Red, green: green, blue: blue, alpha: alpha)
   }
 
@@ -948,7 +948,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithGenericGamma22White:alpha:
     - Introduced: 10.7
   */
-  @objc public static func createWithGenericGamma22WhiteWithAlpha(_ genericGamma22White: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithGenericGamma22White_Alpha(_ genericGamma22White: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(genericGamma22White: genericGamma22White, alpha: alpha)
   }
 
@@ -957,7 +957,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithHue:saturation:brightness:alpha:
     - Introduced: 10.9
   */
-  @objc public static func createWithHueWithSaturationWithBrightnessWithAlpha(_ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithHue_Saturation_Brightness_Alpha(_ hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
   }
 
@@ -966,10 +966,10 @@ extension NSColor: NSColorExports {
     - Selector: colorWithName:dynamicProvider:
     - Introduced: 10.15
   */
-  @objc public static func createWithNameWithDynamicProvider(_ name: NSColor.Name?, _ dynamicProvider: JSValue) -> NSColor {
+  @objc public static func createWithName_DynamicProvider(_ name: NSColor.Name?, _ dynamicProvider: JSValue) -> NSColor {
     return self.init(name: name, dynamicProvider: { p1 in
       let res = dynamicProvider.call(withArguments: [p1 as AnyObject])!
-      return res.toObjectOf(NSColor.self) as! NSColor 
+      return res.toObjectOf(NSColor.self) as! NSColor
     })
   }
 
@@ -986,7 +986,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithRed:green:blue:alpha:
     - Introduced: 10.9
   */
-  @objc public static func createWithRedWithGreenWithBlueWithAlpha(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithRed_Green_Blue_Alpha(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(red: red, green: green, blue: blue, alpha: alpha)
   }
 
@@ -995,7 +995,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithSRGBRed:green:blue:alpha:
     - Introduced: 10.7
   */
-  @objc public static func createWithSRGBRedWithGreenWithBlueWithAlpha(_ srgbRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithSRGBRed_Green_Blue_Alpha(_ srgbRed: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(srgbRed: srgbRed, green: green, blue: blue, alpha: alpha)
   }
 
@@ -1004,7 +1004,7 @@ extension NSColor: NSColorExports {
     - Selector: colorWithWhite:alpha:
     - Introduced: 10.9
   */
-  @objc public static func createWithWhiteWithAlpha(_ white: CGFloat, _ alpha: CGFloat) -> NSColor {
+  @objc public static func createWithWhite_Alpha(_ white: CGFloat, _ alpha: CGFloat) -> NSColor {
     return self.init(white: white, alpha: alpha)
   }
 

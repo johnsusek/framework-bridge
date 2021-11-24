@@ -25,7 +25,7 @@ import AppKit
   /**
     - Selector: imageRepWithData:
   */
-  @objc static func createWithImageRepWithData(_ data: Data) -> Self?
+  @objc static func createWithData(_ data: Data) -> Self?
 
   /**
     - Selector: imageRepsWithContentsOfFile:
@@ -70,7 +70,7 @@ extension NSPDFImageRep: NSPDFImageRepExports {
   /**
     - Selector: imageRepWithData:
   */
-  @objc public static func createWithImageRepWithData(_ data: Data) -> Self? {
+  @objc public static func createWithData(_ data: Data) -> Self? {
     return self.init(data: data)
   }
 

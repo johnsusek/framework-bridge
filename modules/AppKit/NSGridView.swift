@@ -27,7 +27,7 @@ import AppKit
   /**
     - Selector: gridViewWithNumberOfColumns:rows:
   */
-  @objc static func createWithNumberOfColumnsWithRows(_ numberOfColumns: Int, _ rows: Int) -> Self
+  @objc static func createWithNumberOfColumns_Rows(_ numberOfColumns: Int, _ rows: Int) -> Self
 
   /**
     - Selector: gridViewWithViews:
@@ -154,7 +154,7 @@ extension NSGridView: NSGridViewExports {
   /**
     - Selector: gridViewWithNumberOfColumns:rows:
   */
-  @objc public static func createWithNumberOfColumnsWithRows(_ numberOfColumns: Int, _ rows: Int) -> Self {
+  @objc public static func createWithNumberOfColumns_Rows(_ numberOfColumns: Int, _ rows: Int) -> Self {
     return self.init(numberOfColumns: numberOfColumns, rows: rows)
   }
 

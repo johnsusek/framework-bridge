@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: behaviorWithHandler:
   */
-// jsvalue   @objc static func createWithBehaviorWithHandler(_ handler: JSValue) -> NSSliderAccessoryBehavior
+// jsvalue   @objc static func createWithHandler(_ handler: JSValue) -> NSSliderAccessoryBehavior
 
   // Own Static Properties
 
@@ -53,7 +53,7 @@ extension NSSliderAccessoryBehavior: NSSliderAccessoryBehaviorExports {
   /**
     - Selector: behaviorWithHandler:
   */
-  @objc public static func createWithBehaviorWithHandler(_ handler: JSValue) -> NSSliderAccessoryBehavior {
+  @objc public static func createWithHandler(_ handler: JSValue) -> NSSliderAccessoryBehavior {
     return self.init(handler: { p1 in
       handler.call(withArguments: [p1 as AnyObject])
     })

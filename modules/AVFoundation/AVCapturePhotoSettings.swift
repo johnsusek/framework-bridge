@@ -21,12 +21,12 @@ import AVFoundation
   /**
     - Selector: photoSettingsFromPhotoSettings:
   */
-  @objc static func createWithPhotoSettingsFromPhotoSettings(_ from: AVCapturePhotoSettings) -> Self
+  @objc static func createWithFrom(_ from: AVCapturePhotoSettings) -> Self
 
   /**
     - Selector: photoSettingsWithFormat:
   */
-  @objc static func createWithPhotoSettingsWithFormat(_ format: [String: Any]?) -> Self
+  @objc static func createWithFormat(_ format: [String: Any]?) -> Self
 
   // Own Instance Properties
 
@@ -51,7 +51,7 @@ extension AVCapturePhotoSettings: AVCapturePhotoSettingsExports {
   /**
     - Selector: photoSettingsFromPhotoSettings:
   */
-  @objc public static func createWithPhotoSettingsFromPhotoSettings(_ from: AVCapturePhotoSettings) -> Self {
+  @objc public static func createWithFrom(_ from: AVCapturePhotoSettings) -> Self {
     return self.init(from: from)
   }
 
@@ -59,7 +59,7 @@ extension AVCapturePhotoSettings: AVCapturePhotoSettingsExports {
   /**
     - Selector: photoSettingsWithFormat:
   */
-  @objc public static func createWithPhotoSettingsWithFormat(_ format: [String: Any]?) -> Self {
+  @objc public static func createWithFormat(_ format: [String: Any]?) -> Self {
     return self.init(format: format)
   }
 

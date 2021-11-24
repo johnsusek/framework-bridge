@@ -27,7 +27,7 @@ import AppKit
     - Selector: sliderWithValue:minValue:maxValue:target:action:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithValueWithMinValueWithMaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self
+  @objc @available(OSX 10.12, *) static func createWithValue_MinValue_MaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self
 
   // Instance Methods
 
@@ -113,7 +113,7 @@ extension NSSlider: NSSliderExports {
     - Selector: sliderWithValue:minValue:maxValue:target:action:
     - Introduced: 10.12
   */
-  @objc public static func createWithValueWithMinValueWithMaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self {
+  @objc public static func createWithValue_MinValue_MaxValue(_ value: Double, _ minValue: Double, _ maxValue: Double) -> Self {
     return self.init(value: value, minValue: minValue, maxValue: maxValue, target: nil, action: nil)
   }
 

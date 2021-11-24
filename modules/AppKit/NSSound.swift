@@ -25,7 +25,7 @@ import AppKit
   /**
     - Selector: soundNamed:
   */
-  @objc static func createWithSoundNamed(_ named: NSSound.Name) -> NSSound?
+  @objc static func createWithNamed(_ named: NSSound.Name) -> NSSound?
 
   // Own Static Properties
 
@@ -120,7 +120,7 @@ extension NSSound: NSSoundExports {
   /**
     - Selector: soundNamed:
   */
-  @objc public static func createWithSoundNamed(_ named: NSSound.Name) -> NSSound? {
+  @objc public static func createWithNamed(_ named: NSSound.Name) -> NSSound? {
     return self.init(named: named)
   }
 

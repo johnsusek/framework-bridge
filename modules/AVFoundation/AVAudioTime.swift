@@ -31,22 +31,22 @@ import AVFoundation
   /**
     - Selector: timeWithAudioTimeStamp:sampleRate:
   */
-  @objc static func createWithTimeWithAudioTimeStampWithSampleRate(_ audioTimeStamp: UnsafePointer<AudioTimeStamp>, _ sampleRate: Double) -> Self
+  @objc static func createWithAudioTimeStamp_SampleRate(_ audioTimeStamp: UnsafePointer<AudioTimeStamp>, _ sampleRate: Double) -> Self
 
   /**
     - Selector: timeWithHostTime:
   */
-  @objc static func createWithTimeWithHostTime(_ hostTime: UInt64) -> Self
+  @objc static func createWithHostTime(_ hostTime: UInt64) -> Self
 
   /**
     - Selector: timeWithHostTime:sampleTime:atRate:
   */
-  @objc static func createWithTimeWithHostTimeWithSampleTimeWithAtRate(_ hostTime: UInt64, _ sampleTime: Int64, _ atRate: Double) -> Self
+  @objc static func createWithHostTime_SampleTime_AtRate(_ hostTime: UInt64, _ sampleTime: Int64, _ atRate: Double) -> Self
 
   /**
     - Selector: timeWithSampleTime:atRate:
   */
-  @objc static func createWithTimeWithSampleTimeWithAtRate(_ sampleTime: Int64, _ atRate: Double) -> Self
+  @objc static func createWithSampleTime_AtRate(_ sampleTime: Int64, _ atRate: Double) -> Self
 
   // Instance Methods
 
@@ -93,7 +93,7 @@ extension AVAudioTime: AVAudioTimeExports {
   /**
     - Selector: timeWithAudioTimeStamp:sampleRate:
   */
-  @objc public static func createWithTimeWithAudioTimeStampWithSampleRate(_ audioTimeStamp: UnsafePointer<AudioTimeStamp>, _ sampleRate: Double) -> Self {
+  @objc public static func createWithAudioTimeStamp_SampleRate(_ audioTimeStamp: UnsafePointer<AudioTimeStamp>, _ sampleRate: Double) -> Self {
     return self.init(audioTimeStamp: audioTimeStamp, sampleRate: sampleRate)
   }
 
@@ -101,7 +101,7 @@ extension AVAudioTime: AVAudioTimeExports {
   /**
     - Selector: timeWithHostTime:
   */
-  @objc public static func createWithTimeWithHostTime(_ hostTime: UInt64) -> Self {
+  @objc public static func createWithHostTime(_ hostTime: UInt64) -> Self {
     return self.init(hostTime: hostTime)
   }
 
@@ -109,7 +109,7 @@ extension AVAudioTime: AVAudioTimeExports {
   /**
     - Selector: timeWithHostTime:sampleTime:atRate:
   */
-  @objc public static func createWithTimeWithHostTimeWithSampleTimeWithAtRate(_ hostTime: UInt64, _ sampleTime: Int64, _ atRate: Double) -> Self {
+  @objc public static func createWithHostTime_SampleTime_AtRate(_ hostTime: UInt64, _ sampleTime: Int64, _ atRate: Double) -> Self {
     return self.init(hostTime: hostTime, sampleTime: sampleTime, atRate: atRate)
   }
 
@@ -117,7 +117,7 @@ extension AVAudioTime: AVAudioTimeExports {
   /**
     - Selector: timeWithSampleTime:atRate:
   */
-  @objc public static func createWithTimeWithSampleTimeWithAtRate(_ sampleTime: Int64, _ atRate: Double) -> Self {
+  @objc public static func createWithSampleTime_AtRate(_ sampleTime: Int64, _ atRate: Double) -> Self {
     return self.init(sampleTime: sampleTime, atRate: atRate)
   }
 

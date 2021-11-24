@@ -27,7 +27,7 @@ import AVFoundation
   /**
     - Selector: contentKeySessionWithKeySystem:storageDirectoryAtURL:
   */
-  @objc static func createWithKeySystemWithStorageDirectoryAtURL(_ keySystem: AVContentKeySystem, _ storageDirectoryAt: URL) -> Self
+  @objc static func createWithKeySystem_StorageDirectoryAt(_ keySystem: AVContentKeySystem, _ storageDirectoryAt: URL) -> Self
 
   /**
     - Selector: pendingExpiredSessionReportsWithAppIdentifier:storageDirectoryAtURL:
@@ -136,7 +136,7 @@ extension AVContentKeySession: AVContentKeySessionExports {
   /**
     - Selector: contentKeySessionWithKeySystem:storageDirectoryAtURL:
   */
-  @objc public static func createWithKeySystemWithStorageDirectoryAtURL(_ keySystem: AVContentKeySystem, _ storageDirectoryAt: URL) -> Self {
+  @objc public static func createWithKeySystem_StorageDirectoryAt(_ keySystem: AVContentKeySystem, _ storageDirectoryAt: URL) -> Self {
     return self.init(keySystem: keySystem, storageDirectoryAt: storageDirectoryAt)
   }
 

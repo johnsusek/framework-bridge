@@ -21,27 +21,17 @@ import AppKit
   /**
     - Selector: customGroupWithLayoutSize:itemProvider:
   */
-// jsvalue   @objc static func createWithCustomGroupWithLayoutSizeWithItemProvider(_ layoutSize: NSCollectionLayoutSize, _ itemProvider: JSValue) -> Self
+// jsvalue   @objc static func createWithLayoutSize_ItemProvider(_ layoutSize: NSCollectionLayoutSize, _ itemProvider: JSValue) -> Self
 
   /**
     - Selector: horizontalGroupWithLayoutSize:subitem:count:
   */
-  @objc static func createWithHorizontalGroupWithLayoutSizeWithSubitemWithCount(_ layoutSize: NSCollectionLayoutSize, _ subitem: NSCollectionLayoutItem, _ count: Int) -> Self
+  @objc static func createWithLayoutSize_Subitem_Count(_ layoutSize: NSCollectionLayoutSize, _ subitem: NSCollectionLayoutItem, _ count: Int) -> Self
 
   /**
     - Selector: horizontalGroupWithLayoutSize:subitems:
   */
-  @objc static func createWithHorizontalGroupWithLayoutSizeWithSubitems(_ layoutSize: NSCollectionLayoutSize, _ subitems: [NSCollectionLayoutItem]) -> Self
-
-  /**
-    - Selector: verticalGroupWithLayoutSize:subitem:count:
-  */
-  @objc static func createWithVerticalGroupWithLayoutSizeWithSubitemWithCount(_ layoutSize: NSCollectionLayoutSize, _ subitem: NSCollectionLayoutItem, _ count: Int) -> Self
-
-  /**
-    - Selector: verticalGroupWithLayoutSize:subitems:
-  */
-  @objc static func createWithVerticalGroupWithLayoutSizeWithSubitems(_ layoutSize: NSCollectionLayoutSize, _ subitems: [NSCollectionLayoutItem]) -> Self
+  @objc static func createWithLayoutSize_Subitems(_ layoutSize: NSCollectionLayoutSize, _ subitems: [NSCollectionLayoutItem]) -> Self
 
   // Instance Methods
 
@@ -73,7 +63,7 @@ extension NSCollectionLayoutGroup: NSCollectionLayoutGroupExports {
   /**
     - Selector: customGroupWithLayoutSize:itemProvider:
   */
-  @objc public static func createWithCustomGroupWithLayoutSizeWithItemProvider(_ layoutSize: NSCollectionLayoutSize, _ itemProvider: JSValue) -> Self {
+  @objc public static func createWithLayoutSize_ItemProvider(_ layoutSize: NSCollectionLayoutSize, _ itemProvider: JSValue) -> Self {
     return self.custom(layoutSize: layoutSize, itemProvider: { p1 in
       let res = itemProvider.call(withArguments: [p1 as AnyObject])!
       return res.toArray() as! [NSCollectionLayoutGroupCustomItem]
@@ -84,7 +74,7 @@ extension NSCollectionLayoutGroup: NSCollectionLayoutGroupExports {
   /**
     - Selector: horizontalGroupWithLayoutSize:subitem:count:
   */
-  @objc public static func createWithHorizontalGroupWithLayoutSizeWithSubitemWithCount(_ layoutSize: NSCollectionLayoutSize, _ subitem: NSCollectionLayoutItem, _ count: Int) -> Self {
+  @objc public static func createWithLayoutSize_Subitem_Count(_ layoutSize: NSCollectionLayoutSize, _ subitem: NSCollectionLayoutItem, _ count: Int) -> Self {
     return self.horizontal(layoutSize: layoutSize, subitem: subitem, count: count)
   }
 
@@ -92,24 +82,8 @@ extension NSCollectionLayoutGroup: NSCollectionLayoutGroupExports {
   /**
     - Selector: horizontalGroupWithLayoutSize:subitems:
   */
-  @objc public static func createWithHorizontalGroupWithLayoutSizeWithSubitems(_ layoutSize: NSCollectionLayoutSize, _ subitems: [NSCollectionLayoutItem]) -> Self {
+  @objc public static func createWithLayoutSize_Subitems(_ layoutSize: NSCollectionLayoutSize, _ subitems: [NSCollectionLayoutItem]) -> Self {
     return self.horizontal(layoutSize: layoutSize, subitems: subitems)
-  }
-
-
-  /**
-    - Selector: verticalGroupWithLayoutSize:subitem:count:
-  */
-  @objc public static func createWithVerticalGroupWithLayoutSizeWithSubitemWithCount(_ layoutSize: NSCollectionLayoutSize, _ subitem: NSCollectionLayoutItem, _ count: Int) -> Self {
-    return self.vertical(layoutSize: layoutSize, subitem: subitem, count: count)
-  }
-
-
-  /**
-    - Selector: verticalGroupWithLayoutSize:subitems:
-  */
-  @objc public static func createWithVerticalGroupWithLayoutSizeWithSubitems(_ layoutSize: NSCollectionLayoutSize, _ subitems: [NSCollectionLayoutItem]) -> Self {
-    return self.vertical(layoutSize: layoutSize, subitems: subitems)
   }
 
 }

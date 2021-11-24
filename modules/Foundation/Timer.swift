@@ -32,12 +32,12 @@ import Foundation
     - Selector: timerWithTimeInterval:repeats:block:
     - Introduced: 10.12
   */
-// jsvalue   @objc @available(OSX 10.12, *) static func createWithTimeIntervalWithRepeatsWithBlock(_ timeInterval: TimeInterval, _ repeats: Bool, _ block: JSValue) -> Timer
+// jsvalue   @objc @available(OSX 10.12, *) static func createWithTimeInterval_Repeats_Block(_ timeInterval: TimeInterval, _ repeats: Bool, _ block: JSValue) -> Timer
 
   /**
     - Selector: timerWithTimeInterval:target:selector:userInfo:repeats:
   */
-  @objc static func createWithTimeIntervalWithTargetWithSelectorWithUserInfoWithRepeats(_ timeInterval: TimeInterval, _ target: Any, _ selector: Selector, _ userInfo: Any?, _ repeats: Bool) -> Timer
+  @objc static func createWithTimeInterval_Target_Selector_UserInfo_Repeats(_ timeInterval: TimeInterval, _ target: Any, _ selector: Selector, _ userInfo: Any?, _ repeats: Bool) -> Timer
 
   // Instance Methods
 
@@ -86,7 +86,7 @@ extension Timer: TimerExports {
     - Selector: timerWithTimeInterval:repeats:block:
     - Introduced: 10.12
   */
-  @objc public static func createWithTimeIntervalWithRepeatsWithBlock(_ timeInterval: TimeInterval, _ repeats: Bool, _ block: JSValue) -> Timer {
+  @objc public static func createWithTimeInterval_Repeats_Block(_ timeInterval: TimeInterval, _ repeats: Bool, _ block: JSValue) -> Timer {
     return self.init(timeInterval: timeInterval, repeats: repeats, block: { p1 in
       block.call(withArguments: [p1 as AnyObject])
     })
@@ -96,7 +96,7 @@ extension Timer: TimerExports {
   /**
     - Selector: timerWithTimeInterval:target:selector:userInfo:repeats:
   */
-  @objc public static func createWithTimeIntervalWithTargetWithSelectorWithUserInfoWithRepeats(_ timeInterval: TimeInterval, _ target: Any, _ selector: Selector, _ userInfo: Any?, _ repeats: Bool) -> Timer {
+  @objc public static func createWithTimeInterval_Target_Selector_UserInfo_Repeats(_ timeInterval: TimeInterval, _ target: Any, _ selector: Selector, _ userInfo: Any?, _ repeats: Bool) -> Timer {
     return self.init(timeInterval: timeInterval, target: target, selector: selector, userInfo: userInfo, repeats: repeats)
   }
 

@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: spacingForLeading:top:trailing:bottom:
   */
-  @objc static func createWithSpacingForLeadingWithTopWithTrailingWithBottom(_ leading: NSCollectionLayoutSpacing?, _ top: NSCollectionLayoutSpacing?, _ trailing: NSCollectionLayoutSpacing?, _ bottom: NSCollectionLayoutSpacing?) -> Self
+  @objc static func createWithLeading_Top_Trailing_Bottom(_ leading: NSCollectionLayoutSpacing?, _ top: NSCollectionLayoutSpacing?, _ trailing: NSCollectionLayoutSpacing?, _ bottom: NSCollectionLayoutSpacing?) -> Self
 
   // Own Instance Properties
 
@@ -51,7 +51,7 @@ extension NSCollectionLayoutEdgeSpacing: NSCollectionLayoutEdgeSpacingExports {
   /**
     - Selector: spacingForLeading:top:trailing:bottom:
   */
-  @objc public static func createWithSpacingForLeadingWithTopWithTrailingWithBottom(_ leading: NSCollectionLayoutSpacing?, _ top: NSCollectionLayoutSpacing?, _ trailing: NSCollectionLayoutSpacing?, _ bottom: NSCollectionLayoutSpacing?) -> Self {
+  @objc public static func createWithLeading_Top_Trailing_Bottom(_ leading: NSCollectionLayoutSpacing?, _ top: NSCollectionLayoutSpacing?, _ trailing: NSCollectionLayoutSpacing?, _ bottom: NSCollectionLayoutSpacing?) -> Self {
     return self.init(leading: leading, top: top, trailing: trailing, bottom: bottom)
   }
 

@@ -20,7 +20,7 @@ import Foundation
   /**
     - Selector: decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:
   */
-  @objc static func createWithDecimalNumberHandlerWithRoundingModeWithScaleWithRaiseOnExactnessWithRaiseOnOverflowWithRaiseOnUnderflowWithRaiseOnDivideByZero(_ roundingMode: NSDecimalNumber.RoundingMode, _ scale: Int16, _ raiseOnExactness: Bool, _ raiseOnOverflow: Bool, _ raiseOnUnderflow: Bool, _ raiseOnDivideByZero: Bool) -> Self
+  @objc static func createWithRoundingMode_Scale_RaiseOnExactness_RaiseOnOverflow_RaiseOnUnderflow_RaiseOnDivideByZero(_ roundingMode: NSDecimalNumber.RoundingMode, _ scale: Int16, _ raiseOnExactness: Bool, _ raiseOnOverflow: Bool, _ raiseOnUnderflow: Bool, _ raiseOnDivideByZero: Bool) -> Self
 
   // Own Static Properties
 
@@ -35,7 +35,7 @@ extension NSDecimalNumberHandler: NSDecimalNumberHandlerExports {
   /**
     - Selector: decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:
   */
-  @objc public static func createWithDecimalNumberHandlerWithRoundingModeWithScaleWithRaiseOnExactnessWithRaiseOnOverflowWithRaiseOnUnderflowWithRaiseOnDivideByZero(_ roundingMode: NSDecimalNumber.RoundingMode, _ scale: Int16, _ raiseOnExactness: Bool, _ raiseOnOverflow: Bool, _ raiseOnUnderflow: Bool, _ raiseOnDivideByZero: Bool) -> Self {
+  @objc public static func createWithRoundingMode_Scale_RaiseOnExactness_RaiseOnOverflow_RaiseOnUnderflow_RaiseOnDivideByZero(_ roundingMode: NSDecimalNumber.RoundingMode, _ scale: Int16, _ raiseOnExactness: Bool, _ raiseOnOverflow: Bool, _ raiseOnUnderflow: Bool, _ raiseOnDivideByZero: Bool) -> Self {
     return self.init(roundingMode: roundingMode, scale: scale, raiseOnExactness: raiseOnExactness, raiseOnOverflow: raiseOnOverflow, raiseOnUnderflow: raiseOnUnderflow, raiseOnDivideByZero: raiseOnDivideByZero)
   }
 

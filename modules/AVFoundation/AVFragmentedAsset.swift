@@ -33,7 +33,7 @@ import AVFoundation
   /**
     - Selector: fragmentedAssetWithURL:options:
   */
-  @objc static func createWithFragmentedAssetWithURLWithOptions(_ url: URL, _ options: [String: Any]?) -> Self
+  @objc static func createWithFragmentedAsset_URL_Options(_ url: URL, _ options: [String: Any]?) -> Self
 
   /**
     - Selector: isPlayableExtendedMIMEType:
@@ -54,7 +54,7 @@ extension AVFragmentedAsset: AVFragmentedAssetExports {
   /**
     - Selector: fragmentedAssetWithURL:options:
   */
-  @objc public static func createWithFragmentedAssetWithURLWithOptions(_ url: URL, _ options: [String: Any]?) -> Self {
+  @objc public static func createWithFragmentedAsset_URL_Options(_ url: URL, _ options: [String: Any]?) -> Self {
     return self.init(url: url, options: options)
   }
 

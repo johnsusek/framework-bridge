@@ -38,7 +38,7 @@ import AVFoundation
     - Selector: exportSessionWithAsset:presetName:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func createWithExportSessionWithAssetWithPresetName(_ asset: AVAsset, _ presetName: String) -> Self?
+  @objc @available(OSX 10.7, *) static func createWithAsset_PresetName(_ asset: AVAsset, _ presetName: String) -> Self?
 
   // Instance Methods
 
@@ -197,7 +197,7 @@ extension AVAssetExportSession: AVAssetExportSessionExports {
     - Selector: exportSessionWithAsset:presetName:
     - Introduced: 10.7
   */
-  @objc public static func createWithExportSessionWithAssetWithPresetName(_ asset: AVAsset, _ presetName: String) -> Self? {
+  @objc public static func createWithAsset_PresetName(_ asset: AVAsset, _ presetName: String) -> Self? {
     return self.init(asset: asset, presetName: presetName)
   }
 

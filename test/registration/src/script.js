@@ -467,7 +467,6 @@ const classesToRegister = {
     "AVContentKeyResponse",
     "AVContentKeySession",
     "AVDateRangeMetadataGroup",
-    "AVFragmentedAsset",
     "AVFragmentedAssetTrack",
     "AVFragmentedMovieTrack",
     "AVFrameRateRange",

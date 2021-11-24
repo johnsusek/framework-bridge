@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: layoutAttributesForItemAtIndex:
   */
-  @objc static func createWithLayoutAttributesForItemAtIndex(_ forItemAt: Int) -> Self
+  @objc static func createWithForItemAt(_ forItemAt: Int) -> Self
 
   // Own Instance Properties
 
@@ -46,7 +46,7 @@ extension NSScrubberLayoutAttributes: NSScrubberLayoutAttributesExports {
   /**
     - Selector: layoutAttributesForItemAtIndex:
   */
-  @objc public static func createWithLayoutAttributesForItemAtIndex(_ forItemAt: Int) -> Self {
+  @objc public static func createWithForItemAt(_ forItemAt: Int) -> Self {
     return self.init(forItemAt: forItemAt)
   }
 

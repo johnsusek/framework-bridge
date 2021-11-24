@@ -27,13 +27,13 @@ import AppKit
     - Selector: labelWithAttributedString:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithLabelWithAttributedString(_ labelWithAttributedString: NSAttributedString) -> Self
+  @objc @available(OSX 10.12, *) static func createWithLabel_AttributedString(_ labelWithAttributedString: NSAttributedString) -> Self
 
   /**
     - Selector: labelWithString:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithLabelWithString(_ labelWithString: String) -> Self
+  @objc @available(OSX 10.12, *) static func createWithLabel_String(_ labelWithString: String) -> Self
 
   /**
     - Selector: textFieldWithString:
@@ -45,7 +45,7 @@ import AppKit
     - Selector: wrappingLabelWithString:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) static func createWithWrappingLabelWithString(_ wrappingLabelWithString: String) -> Self
+  @objc @available(OSX 10.12, *) static func createWithWrappingLabel_String(_ wrappingLabelWithString: String) -> Self
 
   // Instance Methods
 
@@ -185,7 +185,7 @@ extension NSTextField: NSTextFieldExports {
     - Selector: labelWithAttributedString:
     - Introduced: 10.12
   */
-  @objc public static func createWithLabelWithAttributedString(_ labelWithAttributedString: NSAttributedString) -> Self {
+  @objc public static func createWithLabel_AttributedString(_ labelWithAttributedString: NSAttributedString) -> Self {
     return self.init(labelWithAttributedString: labelWithAttributedString)
   }
 
@@ -194,7 +194,7 @@ extension NSTextField: NSTextFieldExports {
     - Selector: labelWithString:
     - Introduced: 10.12
   */
-  @objc public static func createWithLabelWithString(_ labelWithString: String) -> Self {
+  @objc public static func createWithLabel_String(_ labelWithString: String) -> Self {
     return self.init(labelWithString: labelWithString)
   }
 
@@ -212,7 +212,7 @@ extension NSTextField: NSTextFieldExports {
     - Selector: wrappingLabelWithString:
     - Introduced: 10.12
   */
-  @objc public static func createWithWrappingLabelWithString(_ wrappingLabelWithString: String) -> Self {
+  @objc public static func createWithWrappingLabel_String(_ wrappingLabelWithString: String) -> Self {
     return self.init(wrappingLabelWithString: wrappingLabelWithString)
   }
 

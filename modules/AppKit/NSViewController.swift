@@ -8,7 +8,7 @@ import CoreImage
 import CoreGraphics
 import AppKit
 
-// Interface 
+// Interface
 
   /**
     - Selector: NSViewController
@@ -181,6 +181,8 @@ import AppKit
     - Selector: nibName
   */
   @objc var nibName: NSNib.Name? { @objc get }
+
+  @objc var menu: NSMenu? { @objc get @objc (setMenu:) set }
 
   /**
     - Selector: parentViewController

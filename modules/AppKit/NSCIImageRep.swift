@@ -25,7 +25,7 @@ import AppKit
   /**
     - Selector: imageRepWithCIImage:
   */
-  @objc static func createWithImageRepWithCIImage(_ ciImage: CIImage) -> Self
+  @objc static func createWithCiImage(_ ciImage: CIImage) -> Self
 
   /**
     - Selector: imageRepsWithContentsOfFile:
@@ -55,7 +55,7 @@ extension NSCIImageRep: NSCIImageRepExports {
   /**
     - Selector: imageRepWithCIImage:
   */
-  @objc public static func createWithImageRepWithCIImage(_ ciImage: CIImage) -> Self {
+  @objc public static func createWithCiImage(_ ciImage: CIImage) -> Self {
     return self.init(ciImage: ciImage)
   }
 

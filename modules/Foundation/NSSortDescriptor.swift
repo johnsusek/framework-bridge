@@ -21,19 +21,19 @@ import Foundation
     - Selector: sortDescriptorWithKey:ascending:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) static func createWithKeyWithAscending(_ key: String?, _ ascending: Bool) -> Self
+  @objc @available(OSX 10.6, *) static func createWithKey_Ascending(_ key: String?, _ ascending: Bool) -> Self
 
   /**
     - Selector: sortDescriptorWithKey:ascending:comparator:
     - Introduced: 10.6
   */
-// jsvalue   @objc @available(OSX 10.6, *) static func createWithKeyWithAscendingWithComparator(_ key: String?, _ ascending: Bool, _ comparator: JSValue) -> Self
+// jsvalue   @objc @available(OSX 10.6, *) static func createWithKey_Ascending_Comparator(_ key: String?, _ ascending: Bool, _ comparator: JSValue) -> Self
 
   /**
     - Selector: sortDescriptorWithKey:ascending:selector:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) static func createWithKeyWithAscendingWithSelector(_ key: String?, _ ascending: Bool, _ selector: Selector?) -> Self
+  @objc @available(OSX 10.6, *) static func createWithKey_Ascending_Selector(_ key: String?, _ ascending: Bool, _ selector: Selector?) -> Self
 
   // Instance Methods
 
@@ -83,7 +83,7 @@ extension NSSortDescriptor: NSSortDescriptorExports {
     - Selector: sortDescriptorWithKey:ascending:
     - Introduced: 10.6
   */
-  @objc public static func createWithKeyWithAscending(_ key: String?, _ ascending: Bool) -> Self {
+  @objc public static func createWithKey_Ascending(_ key: String?, _ ascending: Bool) -> Self {
     return self.init(key: key, ascending: ascending)
   }
 
@@ -92,7 +92,7 @@ extension NSSortDescriptor: NSSortDescriptorExports {
     - Selector: sortDescriptorWithKey:ascending:comparator:
     - Introduced: 10.6
   */
-  @objc public static func createWithKeyWithAscendingWithComparator(_ key: String?, _ ascending: Bool, _ comparator: JSValue) -> Self {
+  @objc public static func createWithKey_Ascending_Comparator(_ key: String?, _ ascending: Bool, _ comparator: JSValue) -> Self {
     return self.init(key: key, ascending: ascending, comparator: { p1, p2 in
       let res = comparator.call(withArguments: [p1 as AnyObject, p2 as AnyObject])!
       return ComparisonResult.init(rawValue: Int(res.toInt32()))!
@@ -104,7 +104,7 @@ extension NSSortDescriptor: NSSortDescriptorExports {
     - Selector: sortDescriptorWithKey:ascending:selector:
     - Introduced: 10.6
   */
-  @objc public static func createWithKeyWithAscendingWithSelector(_ key: String?, _ ascending: Bool, _ selector: Selector?) -> Self {
+  @objc public static func createWithKey_Ascending_Selector(_ key: String?, _ ascending: Bool, _ selector: Selector?) -> Self {
     return self.init(key: key, ascending: ascending, selector: selector)
   }
 

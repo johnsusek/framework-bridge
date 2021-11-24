@@ -23,7 +23,7 @@ import Foundation
   /**
     - Selector: actionWithIdentifier:title:
   */
-  @objc static func createWithActionWithIdentifierWithTitle(_ identifier: String?, _ title: String?) -> Self
+  @objc static func createWithIdentifier_Title(_ identifier: String?, _ title: String?) -> Self
 
   // Own Instance Properties
 
@@ -43,7 +43,7 @@ extension NSUserNotificationAction: NSUserNotificationActionExports {
   /**
     - Selector: actionWithIdentifier:title:
   */
-  @objc public static func createWithActionWithIdentifierWithTitle(_ identifier: String?, _ title: String?) -> Self {
+  @objc public static func createWithIdentifier_Title(_ identifier: String?, _ title: String?) -> Self {
     return self.init(identifier: identifier, title: title)
   }
 

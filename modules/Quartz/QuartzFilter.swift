@@ -30,7 +30,7 @@ import Quartz
   /**
     - Selector: quartzFilterWithURL:
   */
-  @objc static func createWithURL(_ url: URL) -> QuartzFilter
+  @objc static func createWithUrl(_ url: URL) -> QuartzFilter
 
   // Instance Methods
 
@@ -81,7 +81,7 @@ extension QuartzFilter: QuartzFilterExports {
   /**
     - Selector: quartzFilterWithURL:
   */
-  @objc public static func createWithURL(_ url: URL) -> QuartzFilter {
+  @objc public static func createWithUrl(_ url: URL) -> QuartzFilter {
     return self.init(url: url)
   }
 

@@ -22,12 +22,12 @@ import AVFoundation
     - Selector: speechUtteranceWithAttributedString:
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) static func createWithSpeechUtteranceWithAttributedString(_ attributedString: NSAttributedString) -> Self
+  @objc @available(OSX 10.14, *) static func createWithAttributedString(_ attributedString: NSAttributedString) -> Self
 
   /**
     - Selector: speechUtteranceWithString:
   */
-  @objc static func createWithSpeechUtteranceWithString(_ string: String) -> Self
+  @objc static func createWithString(_ string: String) -> Self
 
   // Own Instance Properties
 
@@ -79,7 +79,7 @@ extension AVSpeechUtterance: AVSpeechUtteranceExports {
     - Selector: speechUtteranceWithAttributedString:
     - Introduced: 10.14
   */
-  @objc public static func createWithSpeechUtteranceWithAttributedString(_ attributedString: NSAttributedString) -> Self {
+  @objc public static func createWithAttributedString(_ attributedString: NSAttributedString) -> Self {
     return self.init(attributedString: attributedString)
   }
 
@@ -87,7 +87,7 @@ extension AVSpeechUtterance: AVSpeechUtteranceExports {
   /**
     - Selector: speechUtteranceWithString:
   */
-  @objc public static func createWithSpeechUtteranceWithString(_ string: String) -> Self {
+  @objc public static func createWithString(_ string: String) -> Self {
     return self.init(string: string)
   }
 

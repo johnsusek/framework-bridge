@@ -21,7 +21,7 @@ import AppKit
   /**
     - Selector: draggingImageComponentWithKey:
   */
-  @objc static func createWithDraggingImageComponentWithKey(_ key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent
+  @objc static func createWithKey(_ key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent
 
   // Own Instance Properties
 
@@ -46,7 +46,7 @@ extension NSDraggingImageComponent: NSDraggingImageComponentExports {
   /**
     - Selector: draggingImageComponentWithKey:
   */
-  @objc public static func createWithDraggingImageComponentWithKey(_ key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent {
+  @objc public static func createWithKey(_ key: NSDraggingItem.ImageComponentKey) -> NSDraggingImageComponent {
     return self.init(key: key)
   }
 

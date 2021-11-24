@@ -20,7 +20,7 @@ import AppKit
   /**
     - Selector: colorListNamed:
   */
-  @objc static func createWithColorListNamed(_ named: NSColorList.Name) -> NSColorList?
+  @objc static func createWithNamed(_ named: NSColorList.Name) -> NSColorList?
 
   // Own Static Properties
 
@@ -85,7 +85,7 @@ extension NSColorList: NSColorListExports {
   /**
     - Selector: colorListNamed:
   */
-  @objc public static func createWithColorListNamed(_ named: NSColorList.Name) -> NSColorList? {
+  @objc public static func createWithNamed(_ named: NSColorList.Name) -> NSColorList? {
     return self.init(named: named)
   }
 

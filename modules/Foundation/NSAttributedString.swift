@@ -22,7 +22,7 @@ import Foundation
     - Selector: attributedStringWithAttachment:
     - Introduced: 10.0
   */
-  @objc @available(OSX 10.0, *) static func createWithAttributedStringWithAttachment(_ attachment: NSTextAttachment) -> NSAttributedString
+  @objc @available(OSX 10.0, *) static func createWithAttachment(_ attachment: NSTextAttachment) -> NSAttributedString
 
   // Own Static Properties
 
@@ -234,7 +234,7 @@ extension NSAttributedString: NSAttributedStringExports {
     - Selector: attributedStringWithAttachment:
     - Introduced: 10.0
   */
-  @objc public static func createWithAttributedStringWithAttachment(_ attachment: NSTextAttachment) -> NSAttributedString {
+  @objc public static func createWithAttachment(_ attachment: NSTextAttachment) -> NSAttributedString {
     return self.init(attachment: attachment)
   }
 

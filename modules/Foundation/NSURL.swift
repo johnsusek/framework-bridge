@@ -20,13 +20,13 @@ import Foundation
   /**
     - Selector: URLFromPasteboard:
   */
-  @objc static func createWithURLFromPasteboard(_ from: NSPasteboard) -> NSURL?
+  @objc static func createWithFrom(_ from: NSPasteboard) -> NSURL?
 
   /**
     - Selector: URLWithDataRepresentation:relativeToURL:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) static func createWithDataRepresentationWithRelativeToURL(_ dataRepresentation: Data, _ relativeTo: URL?) -> NSURL
+  @objc @available(OSX 10.11, *) static func createWithDataRepresentation_RelativeTo(_ dataRepresentation: Data, _ relativeTo: URL?) -> NSURL
 
   /**
     - Selector: URLWithString:
@@ -36,7 +36,7 @@ import Foundation
   /**
     - Selector: URLWithString:relativeToURL:
   */
-  @objc static func createWithStringWithRelativeToURL(_ string: String, _ relativeTo: URL?) -> Self?
+  @objc static func createWithString_RelativeTo(_ string: String, _ relativeTo: URL?) -> Self?
 
   /**
     - Selector: absoluteURLWithDataRepresentation:relativeToURL:
@@ -378,7 +378,7 @@ extension NSURL: NSURLExports {
   /**
     - Selector: URLFromPasteboard:
   */
-  @objc public static func createWithURLFromPasteboard(_ from: NSPasteboard) -> NSURL? {
+  @objc public static func createWithFrom(_ from: NSPasteboard) -> NSURL? {
     return self.init(from: from)
   }
 
@@ -387,7 +387,7 @@ extension NSURL: NSURLExports {
     - Selector: URLWithDataRepresentation:relativeToURL:
     - Introduced: 10.11
   */
-  @objc public static func createWithDataRepresentationWithRelativeToURL(_ dataRepresentation: Data, _ relativeTo: URL?) -> NSURL {
+  @objc public static func createWithDataRepresentation_RelativeTo(_ dataRepresentation: Data, _ relativeTo: URL?) -> NSURL {
     return self.init(dataRepresentation: dataRepresentation, relativeTo: relativeTo)
   }
 
@@ -403,7 +403,7 @@ extension NSURL: NSURLExports {
   /**
     - Selector: URLWithString:relativeToURL:
   */
-  @objc public static func createWithStringWithRelativeToURL(_ string: String, _ relativeTo: URL?) -> Self? {
+  @objc public static func createWithString_RelativeTo(_ string: String, _ relativeTo: URL?) -> Self? {
     return self.init(string: string, relativeTo: relativeTo)
   }
 

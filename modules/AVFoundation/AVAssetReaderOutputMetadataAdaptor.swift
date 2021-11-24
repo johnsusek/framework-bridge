@@ -21,7 +21,7 @@ import AVFoundation
   /**
     - Selector: assetReaderOutputMetadataAdaptorWithAssetReaderTrackOutput:
   */
-  @objc static func createWithAssetReaderOutputMetadataAdaptorWithAssetReaderTrackOutput(_ assetReaderTrackOutput: AVAssetReaderTrackOutput) -> Self
+  @objc static func createWithAssetReaderTrackOutput(_ assetReaderTrackOutput: AVAssetReaderTrackOutput) -> Self
 
   // Instance Methods
 
@@ -43,7 +43,7 @@ extension AVAssetReaderOutputMetadataAdaptor: AVAssetReaderOutputMetadataAdaptor
   /**
     - Selector: assetReaderOutputMetadataAdaptorWithAssetReaderTrackOutput:
   */
-  @objc public static func createWithAssetReaderOutputMetadataAdaptorWithAssetReaderTrackOutput(_ assetReaderTrackOutput: AVAssetReaderTrackOutput) -> Self {
+  @objc public static func createWithAssetReaderTrackOutput(_ assetReaderTrackOutput: AVAssetReaderTrackOutput) -> Self {
     return self.init(assetReaderTrackOutput: assetReaderTrackOutput)
   }
 

@@ -21,7 +21,7 @@ import AVFoundation
   /**
     - Selector: videoCompositionLayerInstructionWithAssetTrack:
   */
-  @objc static func createWithVideoCompositionLayerInstructionWithAssetTrack(_ assetTrack: AVAssetTrack) -> Self
+  @objc static func createWithAssetTrack(_ assetTrack: AVAssetTrack) -> Self
 
   // Instance Methods
 
@@ -70,7 +70,7 @@ extension AVMutableVideoCompositionLayerInstruction: AVMutableVideoCompositionLa
   /**
     - Selector: videoCompositionLayerInstructionWithAssetTrack:
   */
-  @objc public static func createWithVideoCompositionLayerInstructionWithAssetTrack(_ assetTrack: AVAssetTrack) -> Self {
+  @objc public static func createWithAssetTrack(_ assetTrack: AVAssetTrack) -> Self {
     return self.init(assetTrack: assetTrack)
   }
 

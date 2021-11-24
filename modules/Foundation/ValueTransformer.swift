@@ -36,7 +36,7 @@ import Foundation
   /**
     - Selector: valueTransformerForName:
   */
-  @objc static func createWithValueTransformerForName(_ forName: NSValueTransformerName) -> ValueTransformer?
+  @objc static func createWithForName(_ forName: NSValueTransformerName) -> ValueTransformer?
 
   /**
     - Selector: valueTransformerNames
@@ -61,7 +61,7 @@ extension ValueTransformer: ValueTransformerExports {
   /**
     - Selector: valueTransformerForName:
   */
-  @objc public static func createWithValueTransformerForName(_ forName: NSValueTransformerName) -> ValueTransformer? {
+  @objc public static func createWithForName(_ forName: NSValueTransformerName) -> ValueTransformer? {
     return self.init(forName: forName)
   }
 

@@ -38,7 +38,7 @@ import AVFoundation
   /**
     - Selector: deviceWithUniqueID:
   */
-  @objc static func createWithDeviceWithUniqueID(_ uniqueID: String) -> AVCaptureDevice?
+  @objc static func createWithUniqueID(_ uniqueID: String) -> AVCaptureDevice?
 
   /**
     - Selector: requestAccessForMediaType:completionHandler:
@@ -315,7 +315,7 @@ extension AVCaptureDevice: AVCaptureDeviceExports {
   /**
     - Selector: deviceWithUniqueID:
   */
-  @objc public static func createWithDeviceWithUniqueID(_ uniqueID: String) -> AVCaptureDevice? {
+  @objc public static func createWithUniqueID(_ uniqueID: String) -> AVCaptureDevice? {
     return self.init(uniqueID: uniqueID)
   }
 

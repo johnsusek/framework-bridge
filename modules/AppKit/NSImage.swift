@@ -25,13 +25,13 @@ import AppKit
   /**
     - Selector: imageNamed:
   */
-  @objc static func createWithImageNamed(_ named: NSImage.Name) -> NSImage?
+  @objc static func createWithNamed(_ named: NSImage.Name) -> NSImage?
 
   /**
     - Selector: imageWithSize:flipped:drawingHandler:
     - Introduced: 10.8
   */
-// jsvalue   @objc @available(OSX 10.8, *) static func createWithSizeWithFlippedWithDrawingHandler(_ size: CGSize, _ flipped: Bool, _ drawingHandler: JSValue) -> Self
+// jsvalue   @objc @available(OSX 10.8, *) static func createWithSize_Flipped_DrawingHandler(_ size: CGSize, _ flipped: Bool, _ drawingHandler: JSValue) -> Self
 
   // Own Static Properties
 
@@ -256,7 +256,7 @@ extension NSImage: NSImageExports {
   /**
     - Selector: imageNamed:
   */
-  @objc public static func createWithImageNamed(_ named: NSImage.Name) -> NSImage? {
+  @objc public static func createWithNamed(_ named: NSImage.Name) -> NSImage? {
     return self.init(named: named)
   }
 
@@ -265,7 +265,7 @@ extension NSImage: NSImageExports {
     - Selector: imageWithSize:flipped:drawingHandler:
     - Introduced: 10.8
   */
-  @objc public static func createWithSizeWithFlippedWithDrawingHandler(_ size: CGSize, _ flipped: Bool, _ drawingHandler: JSValue) -> Self {
+  @objc public static func createWithSize_Flipped_DrawingHandler(_ size: CGSize, _ flipped: Bool, _ drawingHandler: JSValue) -> Self {
     return self.init(size: size, flipped: flipped, drawingHandler: { p1 in
       let res = drawingHandler.call(withArguments: [p1 as AnyObject])!
       return res.toBool()

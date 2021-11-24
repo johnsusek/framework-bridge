@@ -21,12 +21,12 @@ import Foundation
   /**
     - Selector: sessionWithConfiguration:
   */
-  @objc static func createWithSessionWithConfiguration(_ configuration: URLSessionConfiguration) -> URLSession
+  @objc static func createWithConfiguration(_ configuration: URLSessionConfiguration) -> URLSession
 
   /**
     - Selector: sessionWithConfiguration:delegate:delegateQueue:
   */
-  @objc static func createWithSessionWithConfigurationWithDelegateWithDelegateQueue(_ configuration: URLSessionConfiguration, _ delegate: URLSessionDelegate?, _ delegateQueue: OperationQueue?) -> URLSession
+  @objc static func createWithConfiguration_Delegate_DelegateQueue(_ configuration: URLSessionConfiguration, _ delegate: URLSessionDelegate?, _ delegateQueue: OperationQueue?) -> URLSession
 
   // Own Static Properties
 
@@ -186,7 +186,7 @@ extension URLSession: URLSessionExports {
   /**
     - Selector: sessionWithConfiguration:
   */
-  @objc public static func createWithSessionWithConfiguration(_ configuration: URLSessionConfiguration) -> URLSession {
+  @objc public static func createWithConfiguration(_ configuration: URLSessionConfiguration) -> URLSession {
     return self.init(configuration: configuration)
   }
 
@@ -194,7 +194,7 @@ extension URLSession: URLSessionExports {
   /**
     - Selector: sessionWithConfiguration:delegate:delegateQueue:
   */
-  @objc public static func createWithSessionWithConfigurationWithDelegateWithDelegateQueue(_ configuration: URLSessionConfiguration, _ delegate: URLSessionDelegate?, _ delegateQueue: OperationQueue?) -> URLSession {
+  @objc public static func createWithConfiguration_Delegate_DelegateQueue(_ configuration: URLSessionConfiguration, _ delegate: URLSessionDelegate?, _ delegateQueue: OperationQueue?) -> URLSession {
     return self.init(configuration: configuration, delegate: delegate, delegateQueue: delegateQueue)
   }
 

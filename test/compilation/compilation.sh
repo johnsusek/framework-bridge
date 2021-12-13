@@ -24,8 +24,9 @@ function run(framework, file, cb) {
   cmd.push(bridgeFiles);
   cmd.push(bridgeFiles2);
 
-  let protoFiles = path.join(sourcePath, 'AppKit/protocols/NSUserInterfaceItemIdentification.swift');
-  cmd.push(protoFiles);
+  cmd.push(path.join(sourcePath, 'AppKit/protocols/NSUserInterfaceItemIdentification.swift'));
+  // cmd.push(path.join(sourcePath, 'AppKit/protocols/NSBrowserDelegate.swift'));
+  cmd.push(path.join(sourcePath, 'ObjectiveC/protocols/NSObjectProtocol.swift'));
 
   let inh = [filePath];
 

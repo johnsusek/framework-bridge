@@ -13,8 +13,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let frameworkFile = "../../classesToRegister.json"
     let frameworkFileUrl = URL(fileURLWithPath: frameworkFile)
 
-    print(frameworkFileUrl)
-
     guard let frameworkData = try? Data(contentsOf: frameworkFileUrl) else {
       print("Could not load data at \(frameworkFile)")
       exit(1)
@@ -36,8 +34,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     context.setObject(DispatchQueue.self, forKeyedSubscript: "DispatchQueue" as (NSCopying & NSObjectProtocol)?)
-
-    let fileManager = FileManager.default
 
     guard let bundleUrl = Bundle.main.url(forResource: "script", withExtension: "js") else {
       print("Could not find script js")

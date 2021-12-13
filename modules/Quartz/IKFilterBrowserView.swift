@@ -33,7 +33,7 @@ import Quartz
   /**
     - Selector: setPreviewState:
   */
-  @objc func setPreviewState(_: Bool)
+  @objc func setPreviewState(_ p0: Bool)
 }
 
 extension IKFilterBrowserView: IKFilterBrowserViewExports {

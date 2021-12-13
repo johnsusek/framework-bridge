@@ -94,13 +94,13 @@ import Foundation
     - Deprecated: 100000
     - Replacement: getValue:size:
   */
-  @objc @available(OSX 10.0, *) func getValue(_: UnsafeMutableRawPointer)
+  // unavailableInSwift @objc @available(OSX 10.0, *) func getValue(_ p0: UnsafeMutableRawPointer)
 
   /**
     - Selector: getValue:size:
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) func getValue(_: UnsafeMutableRawPointer, size: Int)
+  @objc @available(OSX 10.13, *) func getValue(_ p0: UnsafeMutableRawPointer, size: Int)
 
   /**
     - Selector: isEqualToValue:

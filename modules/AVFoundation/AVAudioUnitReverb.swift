@@ -29,7 +29,7 @@ import AVFoundation
   /**
     - Selector: loadFactoryPreset:
   */
-  @objc func loadFactoryPreset(_: AVAudioUnitReverbPreset)
+  @objc func loadFactoryPreset(_ p0: AVAudioUnitReverbPreset)
 
   // Own Instance Properties
 

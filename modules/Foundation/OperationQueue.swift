@@ -38,24 +38,24 @@ import Foundation
     - Selector: addBarrierBlock:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func addBarrierBlock(_: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func addBarrierBlock(_ p0: JSValue)
 
   /**
     - Selector: addOperation:
   */
-  @objc func addOperation(_: Operation)
+  @objc func addOperation(_ p0: Operation)
 
   /**
     - Selector: addOperationWithBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func addOperation(_: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func addOperation(_ p0: JSValue)
 
   /**
     - Selector: addOperations:waitUntilFinished:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func addOperations(_: [Operation], waitUntilFinished: Bool)
+  @objc @available(OSX 10.6, *) func addOperations(_ p0: [Operation], waitUntilFinished: Bool)
 
   /**
     - Selector: cancelAllOperations

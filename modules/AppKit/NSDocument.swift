@@ -26,7 +26,7 @@ import AppKit
   /**
     - Selector: isNativeType:
   */
-  @objc static func isNativeType(_: String) -> Bool
+  @objc static func isNativeType(_ p0: String) -> Bool
 
   // Own Static Properties
 
@@ -75,7 +75,7 @@ import AppKit
   /**
     - Selector: addWindowController:
   */
-  @objc func addWindowController(_: NSWindowController)
+  @objc func addWindowController(_ p0: NSWindowController)
 
   /**
     - Selector: autosaveDocumentWithDelegate:didAutosaveSelector:contextInfo:
@@ -92,7 +92,7 @@ import AppKit
     - Selector: browseDocumentVersions:
     - Introduced: 10.8
   */
-  @objc (browseDocumentVersions:) @available(OSX 10.8, *) func browseVersions(_: Any?)
+  @objc (browseDocumentVersions:) @available(OSX 10.8, *) func browseVersions(_ p0: Any?)
 
   /**
     - Selector: canAsynchronouslyWriteToURL:ofType:forSaveOperation:
@@ -126,13 +126,13 @@ import AppKit
     - Selector: continueActivityUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func continueActivity(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func continueActivity(_ p0: JSValue)
 
   /**
     - Selector: continueAsynchronousWorkOnMainThreadUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func continueAsynchronousWorkOnMainThread(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func continueAsynchronousWorkOnMainThread(_ p0: JSValue)
 
   /**
     - Selector: dataOfType:error:
@@ -155,7 +155,7 @@ import AppKit
     - Selector: duplicateDocument:
     - Introduced: 10.7
   */
-  @objc (duplicateDocument:) @available(OSX 10.7, *) func duplicate(_: Any?)
+  @objc (duplicateDocument:) @available(OSX 10.7, *) func duplicate(_ p0: Any?)
 
   /**
     - Selector: duplicateDocumentWithDelegate:didDuplicateSelector:contextInfo:
@@ -194,17 +194,17 @@ import AppKit
   /**
     - Selector: handleCloseScriptCommand:
   */
-  @objc (handleCloseScriptCommand:) func handleClose(_: NSCloseCommand) -> Any?
+  @objc (handleCloseScriptCommand:) func handleClose(_ p0: NSCloseCommand) -> Any?
 
   /**
     - Selector: handlePrintScriptCommand:
   */
-  @objc (handlePrintScriptCommand:) func handlePrint(_: NSScriptCommand) -> Any?
+  @objc (handlePrintScriptCommand:) func handlePrint(_ p0: NSScriptCommand) -> Any?
 
   /**
     - Selector: handleSaveScriptCommand:
   */
-  @objc (handleSaveScriptCommand:) func handleSave(_: NSScriptCommand) -> Any?
+  @objc (handleSaveScriptCommand:) func handleSave(_ p0: NSScriptCommand) -> Any?
 
   /**
     - Selector: invalidateRestorableState
@@ -216,7 +216,7 @@ import AppKit
     - Selector: lockDocument:
     - Introduced: 10.8
   */
-  @objc (lockDocument:) @available(OSX 10.8, *) func lock(_: Any?)
+  @objc (lockDocument:) @available(OSX 10.8, *) func lock(_ p0: Any?)
 
   /**
     - Selector: lockDocumentWithCompletionHandler:
@@ -239,13 +239,13 @@ import AppKit
     - Selector: moveDocument:
     - Introduced: 10.8
   */
-  @objc (moveDocument:) @available(OSX 10.8, *) func move(_: Any?)
+  @objc (moveDocument:) @available(OSX 10.8, *) func move(_ p0: Any?)
 
   /**
     - Selector: moveDocumentToUbiquityContainer:
     - Introduced: 10.8
   */
-  @objc (moveDocumentToUbiquityContainer:) @available(OSX 10.8, *) func moveToUbiquityContainer(_: Any?)
+  @objc (moveDocumentToUbiquityContainer:) @available(OSX 10.8, *) func moveToUbiquityContainer(_ p0: Any?)
 
   /**
     - Selector: moveDocumentWithCompletionHandler:
@@ -269,44 +269,44 @@ import AppKit
     - Selector: performAsynchronousFileAccessUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func performAsynchronousFileAccess(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func performAsynchronousFileAccess(_ p0: JSValue)
 
   /**
     - Selector: performSynchronousFileAccessUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func performSynchronousFileAccess(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func performSynchronousFileAccess(_ p0: JSValue)
 
   /**
     - Selector: preparePageLayout:
   */
-  @objc (preparePageLayout:) func preparePageLayout(_: NSPageLayout) -> Bool
+  @objc (preparePageLayout:) func preparePageLayout(_ p0: NSPageLayout) -> Bool
 
   /**
     - Selector: prepareSavePanel:
   */
-  @objc (prepareSavePanel:) func prepareSavePanel(_: NSSavePanel) -> Bool
+  @objc (prepareSavePanel:) func prepareSavePanel(_ p0: NSSavePanel) -> Bool
 
   /**
     - Selector: prepareSharingServicePicker:
     - Introduced: 10.13
   */
-  @objc (prepareSharingServicePicker:) @available(OSX 10.13, *) func prepare(_: NSSharingServicePicker)
+  @objc (prepareSharingServicePicker:) @available(OSX 10.13, *) func prepare(_ p0: NSSharingServicePicker)
 
   /**
     - Selector: presentError:
   */
-  @objc func presentError(_: Error) -> Bool
+  @objc func presentError(_ p0: Error) -> Bool
 
   /**
     - Selector: presentError:modalForWindow:delegate:didPresentSelector:contextInfo:
   */
-  @objc (presentError:modalForWindow:delegate:didPresentSelector:contextInfo:) func presentError(_: Error, modalFor: NSWindow, delegate: Any?, didPresent: Selector?, contextInfo: UnsafeMutableRawPointer?)
+  @objc (presentError:modalForWindow:delegate:didPresentSelector:contextInfo:) func presentError(_ p0: Error, modalFor: NSWindow, delegate: Any?, didPresent: Selector?, contextInfo: UnsafeMutableRawPointer?)
 
   /**
     - Selector: printDocument:
   */
-  @objc (printDocument:) func printDocument(_: Any?)
+  @objc (printDocument:) func printDocument(_ p0: Any?)
 
   /**
     - Selector: printDocumentWithSettings:showPrintPanel:delegate:didPrintSelector:contextInfo:
@@ -336,13 +336,13 @@ import AppKit
   /**
     - Selector: removeWindowController:
   */
-  @objc func removeWindowController(_: NSWindowController)
+  @objc func removeWindowController(_ p0: NSWindowController)
 
   /**
     - Selector: renameDocument:
     - Introduced: 10.8
   */
-  @objc (renameDocument:) @available(OSX 10.8, *) func rename(_: Any?)
+  @objc (renameDocument:) @available(OSX 10.8, *) func rename(_ p0: Any?)
 
   /**
     - Selector: restoreDocumentWindowWithIdentifier:state:completionHandler:
@@ -359,7 +359,7 @@ import AppKit
   /**
     - Selector: revertDocumentToSaved:
   */
-  @objc (revertDocumentToSaved:) func revertToSaved(_: Any?)
+  @objc (revertDocumentToSaved:) func revertToSaved(_ p0: Any?)
 
   /**
     - Selector: revertToContentsOfURL:ofType:error:
@@ -374,7 +374,7 @@ import AppKit
   /**
     - Selector: runModalPrintOperation:delegate:didRunSelector:contextInfo:
   */
-  @objc (runModalPrintOperation:delegate:didRunSelector:contextInfo:) func runModalPrintOperation(_: NSPrintOperation, delegate: Any?, didRun: Selector?, contextInfo: UnsafeMutableRawPointer?)
+  @objc (runModalPrintOperation:delegate:didRunSelector:contextInfo:) func runModalPrintOperation(_ p0: NSPrintOperation, delegate: Any?, didRun: Selector?, contextInfo: UnsafeMutableRawPointer?)
 
   /**
     - Selector: runModalSavePanelForSaveOperation:delegate:didSaveSelector:contextInfo:
@@ -384,28 +384,28 @@ import AppKit
   /**
     - Selector: runPageLayout:
   */
-  @objc func runPageLayout(_: Any?)
+  @objc func runPageLayout(_ p0: Any?)
 
   /**
     - Selector: saveDocument:
   */
-  @objc (saveDocument:) func save(_: Any?)
+  @objc (saveDocument:) func save(_ p0: Any?)
 
   /**
     - Selector: saveDocumentAs:
   */
-  @objc (saveDocumentAs:) func saveAs(_: Any?)
+  @objc (saveDocumentAs:) func saveAs(_ p0: Any?)
 
   /**
     - Selector: saveDocumentTo:
   */
-  @objc (saveDocumentTo:) func saveTo(_: Any?)
+  @objc (saveDocumentTo:) func saveTo(_ p0: Any?)
 
   /**
     - Selector: saveDocumentToPDF:
     - Introduced: 10.9
   */
-  @objc (saveDocumentToPDF:) @available(OSX 10.9, *) func saveToPDF(_: Any?)
+  @objc (saveDocumentToPDF:) @available(OSX 10.9, *) func saveToPDF(_ p0: Any?)
 
   /**
     - Selector: saveDocumentWithDelegate:didSaveSelector:contextInfo:
@@ -432,7 +432,7 @@ import AppKit
   /**
     - Selector: setWindow:
   */
-  @objc func setWindow(_: NSWindow?)
+  @objc func setWindow(_ p0: NSWindow?)
 
   /**
     - Selector: shareDocumentWithSharingService:completionHandler:
@@ -443,12 +443,12 @@ import AppKit
   /**
     - Selector: shouldChangePrintInfo:
   */
-  @objc func shouldChangePrintInfo(_: NSPrintInfo) -> Bool
+  @objc func shouldChangePrintInfo(_ p0: NSPrintInfo) -> Bool
 
   /**
     - Selector: shouldCloseWindowController:delegate:shouldCloseSelector:contextInfo:
   */
-  @objc (shouldCloseWindowController:delegate:shouldCloseSelector:contextInfo:) func shouldCloseWindowController(_: NSWindowController, delegate: Any?, shouldClose: Selector?, contextInfo: UnsafeMutableRawPointer?)
+  @objc (shouldCloseWindowController:delegate:shouldCloseSelector:contextInfo:) func shouldCloseWindowController(_ p0: NSWindowController, delegate: Any?, shouldClose: Selector?, contextInfo: UnsafeMutableRawPointer?)
 
   /**
     - Selector: showWindows
@@ -471,7 +471,7 @@ import AppKit
     - Selector: unlockDocument:
     - Introduced: 10.8
   */
-  @objc (unlockDocument:) @available(OSX 10.8, *) func unlock(_: Any?)
+  @objc (unlockDocument:) @available(OSX 10.8, *) func unlock(_ p0: Any?)
 
   /**
     - Selector: unlockDocumentWithCompletionHandler:
@@ -488,7 +488,7 @@ import AppKit
   /**
     - Selector: updateChangeCount:
   */
-  @objc func updateChangeCount(_: NSDocument.ChangeType)
+  @objc func updateChangeCount(_ p0: NSDocument.ChangeType)
 
   /**
     - Selector: updateChangeCountWithToken:forSaveOperation:
@@ -500,28 +500,28 @@ import AppKit
     - Selector: updateUserActivityState:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) func updateUserActivityState(_: NSUserActivity)
+  @objc @available(OSX 10.10, *) func updateUserActivityState(_ p0: NSUserActivity)
 
   /**
     - Selector: willNotPresentError:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func willNotPresentError(_: Error)
+  @objc @available(OSX 10.7, *) func willNotPresentError(_ p0: Error)
 
   /**
     - Selector: willPresentError:
   */
-  @objc func willPresentError(_: Error) -> Error
+  @objc func willPresentError(_ p0: Error) -> Error
 
   /**
     - Selector: windowControllerDidLoadNib:
   */
-  @objc func windowControllerDidLoadNib(_: NSWindowController)
+  @objc func windowControllerDidLoadNib(_ p0: NSWindowController)
 
   /**
     - Selector: windowControllerWillLoadNib:
   */
-  @objc func windowControllerWillLoadNib(_: NSWindowController)
+  @objc func windowControllerWillLoadNib(_ p0: NSWindowController)
 
   /**
     - Selector: writableTypesForSaveOperation:

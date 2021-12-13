@@ -25,7 +25,7 @@ import Quartz
   /**
     - Selector: exportSlideshowItem:toApplication:
   */
-  @objc (exportSlideshowItem:toApplication:) static func exportItem(_: Any, toApplication: String)
+  @objc (exportSlideshowItem:toApplication:) static func exportItem(_ p0: Any, toApplication: String)
 
   /**
     - Selector: sharedSlideshow
@@ -57,7 +57,7 @@ import Quartz
   /**
     - Selector: stopSlideshow:
   */
-  @objc (stopSlideshow:) func stop(_: Any)
+  @objc (stopSlideshow:) func stop(_ p0: Any)
 
   // Own Instance Properties
 

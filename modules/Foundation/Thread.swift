@@ -20,13 +20,13 @@ import Foundation
   /**
     - Selector: detachNewThreadSelector:toTarget:withObject:
   */
-  @objc (detachNewThreadSelector:toTarget:withObject:) static func detachNewThreadSelector(_: Selector, toTarget: Any, with: Any?)
+  @objc (detachNewThreadSelector:toTarget:withObject:) static func detachNewThreadSelector(_ p0: Selector, toTarget: Any, with: Any?)
 
   /**
     - Selector: detachNewThreadWithBlock:
     - Introduced: 10.12
   */
-// jsvalue   @objc @available(OSX 10.12, *) static func detachNewThread(_: JSValue)
+// jsvalue   @objc @available(OSX 10.12, *) static func detachNewThread(_ p0: JSValue)
 
   /**
     - Selector: exit
@@ -41,7 +41,7 @@ import Foundation
   /**
     - Selector: setThreadPriority:
   */
-  @objc static func setThreadPriority(_: Double) -> Bool
+  @objc static func setThreadPriority(_ p0: Double) -> Bool
 
   /**
     - Selector: sleepForTimeInterval:

@@ -36,17 +36,17 @@ import AppKit
   /**
     - Selector: clipRect:
   */
-  @objc (clipRect:) static func clip(_: CGRect)
+  @objc (clipRect:) static func clip(_ p0: CGRect)
 
   /**
     - Selector: drawPackedGlyphs:atPoint:
   */
-  @objc (drawPackedGlyphs:atPoint:) static func drawPackedGlyphs(_: UnsafePointer<Int8>, at: CGPoint)
+  @objc (drawPackedGlyphs:atPoint:) static func drawPackedGlyphs(_ p0: UnsafePointer<Int8>, at: CGPoint)
 
   /**
     - Selector: fillRect:
   */
-  @objc (fillRect:) static func fill(_: CGRect)
+  @objc (fillRect:) static func fill(_ p0: CGRect)
 
   /**
     - Selector: strokeLineFromPoint:toPoint:
@@ -56,7 +56,7 @@ import AppKit
   /**
     - Selector: strokeRect:
   */
-  @objc (strokeRect:) static func stroke(_: CGRect)
+  @objc (strokeRect:) static func stroke(_ p0: CGRect)
 
   // Own Static Properties
 
@@ -100,7 +100,7 @@ import AppKit
   /**
     - Selector: appendBezierPath:
   */
-  @objc (appendBezierPath:) func append(_: NSBezierPath)
+  @objc (appendBezierPath:) func append(_ p0: NSBezierPath)
 
   /**
     - Selector: appendBezierPathWithArcFromPoint:toPoint:radius:
@@ -137,18 +137,18 @@ import AppKit
   /**
     - Selector: appendBezierPathWithPoints:count:
   */
-  @objc (appendBezierPathWithPoints:count:) func appendPoints(_: NSPointArray, count: Int)
+  @objc (appendBezierPathWithPoints:count:) func appendPoints(_ p0: NSPointArray, count: Int)
 
   /**
     - Selector: appendBezierPathWithRect:
   */
-  @objc (appendBezierPathWithRect:) func appendRect(_: CGRect)
+  @objc (appendBezierPathWithRect:) func appendRect(_ p0: CGRect)
 
   /**
     - Selector: appendBezierPathWithRoundedRect:xRadius:yRadius:
     - Introduced: 10.5
   */
-  @objc (appendBezierPathWithRoundedRect:xRadius:yRadius:) @available(OSX 10.5, *) func appendRoundedRect(_: CGRect, xRadius: CGFloat, yRadius: CGFloat)
+  @objc (appendBezierPathWithRoundedRect:xRadius:yRadius:) @available(OSX 10.5, *) func appendRoundedRect(_ p0: CGRect, xRadius: CGFloat, yRadius: CGFloat)
 
   /**
     - Selector: closePath
@@ -158,7 +158,7 @@ import AppKit
   /**
     - Selector: containsPoint:
   */
-  @objc (containsPoint:) func contains(_: CGPoint) -> Bool
+  @objc (containsPoint:) func contains(_ p0: CGPoint) -> Bool
 
   /**
     - Selector: curveToPoint:controlPoint1:controlPoint2:
@@ -183,7 +183,7 @@ import AppKit
   /**
     - Selector: getLineDash:count:phase:
   */
-  @objc func getLineDash(_: UnsafeMutablePointer<CGFloat>?, count: UnsafeMutablePointer<NSInteger>?, phase: UnsafeMutablePointer<CGFloat>?)
+  @objc func getLineDash(_ p0: UnsafeMutablePointer<CGFloat>?, count: UnsafeMutablePointer<NSInteger>?, phase: UnsafeMutablePointer<CGFloat>?)
 
   /**
     - Selector: lineToPoint:
@@ -218,7 +218,7 @@ import AppKit
   /**
     - Selector: setAssociatedPoints:atIndex:
   */
-  @objc (setAssociatedPoints:atIndex:) func setAssociatedPoints(_: NSPointArray?, at: Int)
+  @objc (setAssociatedPoints:atIndex:) func setAssociatedPoints(_ p0: NSPointArray?, at: Int)
 
   /**
     - Selector: setClip
@@ -228,7 +228,7 @@ import AppKit
   /**
     - Selector: setLineDash:count:phase:
   */
-  @objc func setLineDash(_: UnsafePointer<CGFloat>?, count: Int, phase: CGFloat)
+  @objc func setLineDash(_ p0: UnsafePointer<CGFloat>?, count: Int, phase: CGFloat)
 
   /**
     - Selector: stroke

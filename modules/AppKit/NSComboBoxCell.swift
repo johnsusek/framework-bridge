@@ -32,7 +32,7 @@ import AppKit
   /**
     - Selector: completedString:
   */
-  @objc func completedString(_: String) -> String?
+  @objc func completedString(_ p0: String) -> String?
 
   /**
     - Selector: deselectItemAtIndex:
@@ -82,12 +82,12 @@ import AppKit
   /**
     - Selector: scrollItemAtIndexToTop:
   */
-  @objc (scrollItemAtIndexToTop:) func scrollItemAtIndexToTop(_: Int)
+  @objc (scrollItemAtIndexToTop:) func scrollItemAtIndexToTop(_ p0: Int)
 
   /**
     - Selector: scrollItemAtIndexToVisible:
   */
-  @objc func scrollItemAtIndexToVisible(_: Int)
+  @objc func scrollItemAtIndexToVisible(_ p0: Int)
 
   /**
     - Selector: selectItemAtIndex:

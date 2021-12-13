@@ -23,27 +23,27 @@ import AVFoundation
   /**
     - Selector: addConnection:
   */
-  @objc (addConnection:) func addConnection(_: AVCaptureConnection)
+  @objc (addConnection:) func addConnection(_ p0: AVCaptureConnection)
 
   /**
     - Selector: addInput:
   */
-  @objc func addInput(_: AVCaptureInput)
+  @objc func addInput(_ p0: AVCaptureInput)
 
   /**
     - Selector: addInputWithNoConnections:
   */
-  @objc func addInputWithNoConnections(_: AVCaptureInput)
+  @objc func addInputWithNoConnections(_ p0: AVCaptureInput)
 
   /**
     - Selector: addOutput:
   */
-  @objc func addOutput(_: AVCaptureOutput)
+  @objc func addOutput(_ p0: AVCaptureOutput)
 
   /**
     - Selector: addOutputWithNoConnections:
   */
-  @objc func addOutputWithNoConnections(_: AVCaptureOutput)
+  @objc func addOutputWithNoConnections(_ p0: AVCaptureOutput)
 
   /**
     - Selector: beginConfiguration
@@ -53,22 +53,22 @@ import AVFoundation
   /**
     - Selector: canAddConnection:
   */
-  @objc (canAddConnection:) func canAddConnection(_: AVCaptureConnection) -> Bool
+  @objc (canAddConnection:) func canAddConnection(_ p0: AVCaptureConnection) -> Bool
 
   /**
     - Selector: canAddInput:
   */
-  @objc func canAddInput(_: AVCaptureInput) -> Bool
+  @objc func canAddInput(_ p0: AVCaptureInput) -> Bool
 
   /**
     - Selector: canAddOutput:
   */
-  @objc func canAddOutput(_: AVCaptureOutput) -> Bool
+  @objc func canAddOutput(_ p0: AVCaptureOutput) -> Bool
 
   /**
     - Selector: canSetSessionPreset:
   */
-  @objc func canSetSessionPreset(_: AVCaptureSession.Preset) -> Bool
+  @objc func canSetSessionPreset(_ p0: AVCaptureSession.Preset) -> Bool
 
   /**
     - Selector: commitConfiguration
@@ -78,17 +78,17 @@ import AVFoundation
   /**
     - Selector: removeConnection:
   */
-  @objc (removeConnection:) func removeConnection(_: AVCaptureConnection)
+  @objc (removeConnection:) func removeConnection(_ p0: AVCaptureConnection)
 
   /**
     - Selector: removeInput:
   */
-  @objc func removeInput(_: AVCaptureInput)
+  @objc func removeInput(_ p0: AVCaptureInput)
 
   /**
     - Selector: removeOutput:
   */
-  @objc func removeOutput(_: AVCaptureOutput)
+  @objc func removeOutput(_ p0: AVCaptureOutput)
 
   /**
     - Selector: startRunning

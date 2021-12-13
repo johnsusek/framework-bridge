@@ -20,19 +20,19 @@ import Foundation
   /**
     - Selector: notificationCenterForType:
   */
-  @objc (notificationCenterForType:) static func forType(_: DistributedNotificationCenter.CenterType) -> DistributedNotificationCenter
+  @objc (notificationCenterForType:) static func forType(_ p0: DistributedNotificationCenter.CenterType) -> DistributedNotificationCenter
 
   // Instance Methods
 
   /**
     - Selector: addObserver:selector:name:object:
   */
-  @objc func addObserver(_: Any, selector: Selector, name: NSNotification.Name?, object: String?)
+  @objc func addObserver(_ p0: Any, selector: Selector, name: NSNotification.Name?, object: String?)
 
   /**
     - Selector: addObserver:selector:name:object:suspensionBehavior:
   */
-  @objc func addObserver(_: Any, selector: Selector, name: NSNotification.Name?, object: String?, suspensionBehavior: DistributedNotificationCenter.SuspensionBehavior)
+  @objc func addObserver(_ p0: Any, selector: Selector, name: NSNotification.Name?, object: String?, suspensionBehavior: DistributedNotificationCenter.SuspensionBehavior)
 
   /**
     - Selector: postNotificationName:object:
@@ -47,17 +47,17 @@ import Foundation
   /**
     - Selector: postNotificationName:object:userInfo:deliverImmediately:
   */
-  @objc func postNotificationName(_: NSNotification.Name, object: String?, userInfo: [AnyHashable: Any]?, deliverImmediately: Bool)
+  @objc func postNotificationName(_ p0: NSNotification.Name, object: String?, userInfo: [AnyHashable: Any]?, deliverImmediately: Bool)
 
   /**
     - Selector: postNotificationName:object:userInfo:options:
   */
-  @objc func postNotificationName(_: NSNotification.Name, object: String?, userInfo: [AnyHashable: Any]?, options: DistributedNotificationCenter.Options)
+  @objc func postNotificationName(_ p0: NSNotification.Name, object: String?, userInfo: [AnyHashable: Any]?, options: DistributedNotificationCenter.Options)
 
   /**
     - Selector: removeObserver:name:object:
   */
-  @objc func removeObserver(_: Any, name: NSNotification.Name?, object: String?)
+  @objc func removeObserver(_ p0: Any, name: NSNotification.Name?, object: String?)
 
   // Own Instance Properties
 

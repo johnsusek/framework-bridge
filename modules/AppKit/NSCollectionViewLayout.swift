@@ -175,12 +175,12 @@ import AppKit
   /**
     - Selector: registerClass:forDecorationViewOfKind:
   */
-  @objc (registerClass:forDecorationViewOfKind:) func register(_: AnyClass?, forDecorationViewOfKind: NSCollectionView.DecorationElementKind)
+  @objc (registerClass:forDecorationViewOfKind:) func register(_ p0: AnyClass?, forDecorationViewOfKind: NSCollectionView.DecorationElementKind)
 
   /**
     - Selector: registerNib:forDecorationViewOfKind:
   */
-  @objc (registerNib:forDecorationViewOfKind:) func register(_: NSNib?, forDecorationViewOfKind: NSCollectionView.DecorationElementKind)
+  @objc (registerNib:forDecorationViewOfKind:) func register(_ p0: NSNib?, forDecorationViewOfKind: NSCollectionView.DecorationElementKind)
 
   /**
     - Selector: shouldInvalidateLayoutForBoundsChange:

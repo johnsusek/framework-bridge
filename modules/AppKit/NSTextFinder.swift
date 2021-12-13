@@ -38,12 +38,12 @@ import AppKit
   /**
     - Selector: performAction:
   */
-  @objc (performAction:) func performAction(_: NSTextFinder.Action)
+  @objc (performAction:) func performAction(_ p0: NSTextFinder.Action)
 
   /**
     - Selector: validateAction:
   */
-  @objc (validateAction:) func validateAction(_: NSTextFinder.Action) -> Bool
+  @objc (validateAction:) func validateAction(_ p0: NSTextFinder.Action) -> Bool
 
   // Own Instance Properties
 

@@ -28,7 +28,7 @@ import AppKit
   /**
     - Selector: performClose:
   */
-  @objc func performClose(_: Any?)
+  @objc func performClose(_ p0: Any?)
 
   /**
     - Selector: showRelativeToRect:ofView:preferredEdge:

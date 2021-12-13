@@ -26,7 +26,7 @@ import Foundation
   /**
     - Selector: setValueTransformer:forName:
   */
-  @objc static func setValueTransformer(_: ValueTransformer?, forName: NSValueTransformerName)
+  @objc static func setValueTransformer(_ p0: ValueTransformer?, forName: NSValueTransformerName)
 
   /**
     - Selector: transformedValueClass

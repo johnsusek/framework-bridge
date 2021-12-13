@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: setDelegate:queue:
   */
-  @objc func setDelegate(_: AVAssetResourceLoaderDelegate?, queue: DispatchQueue?)
+  @objc func setDelegate(_ p0: AVAssetResourceLoaderDelegate?, queue: DispatchQueue?)
 
   // Own Instance Properties
 

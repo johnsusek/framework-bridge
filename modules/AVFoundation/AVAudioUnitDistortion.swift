@@ -29,7 +29,7 @@ import AVFoundation
   /**
     - Selector: loadFactoryPreset:
   */
-  @objc func loadFactoryPreset(_: AVAudioUnitDistortionPreset)
+  @objc func loadFactoryPreset(_ p0: AVAudioUnitDistortionPreset)
 
   // Own Instance Properties
 

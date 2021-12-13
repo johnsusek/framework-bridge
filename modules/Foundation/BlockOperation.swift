@@ -28,7 +28,7 @@ import Foundation
   /**
     - Selector: addExecutionBlock:
   */
-  // jsvalue @objc func addExecutionBlock(_: JSValue)
+  // jsvalue @objc func addExecutionBlock(_ p0: JSValue)
 
   // Own Instance Properties
 

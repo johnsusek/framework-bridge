@@ -29,7 +29,7 @@ import Foundation
   /**
     - Selector: addObserver:selector:name:object:
   */
-  @objc func addObserver(_: Any, selector: Selector, name: NSNotification.Name?, object: Any?)
+  @objc func addObserver(_ p0: Any, selector: Selector, name: NSNotification.Name?, object: Any?)
 
   /**
     - Selector: addObserverForName:object:queue:usingBlock:
@@ -40,7 +40,7 @@ import Foundation
   /**
     - Selector: postNotification:
   */
-  @objc (postNotification:) func post(_: Notification)
+  @objc (postNotification:) func post(_ p0: Notification)
 
   /**
     - Selector: postNotificationName:object:
@@ -55,12 +55,12 @@ import Foundation
   /**
     - Selector: removeObserver:
   */
-  @objc func removeObserver(_: Any)
+  @objc func removeObserver(_ p0: Any)
 
   /**
     - Selector: removeObserver:name:object:
   */
-  @objc func removeObserver(_: Any, name: NSNotification.Name?, object: Any?)
+  @objc func removeObserver(_ p0: Any, name: NSNotification.Name?, object: Any?)
 }
 
 extension NotificationCenter: NotificationCenterExports {

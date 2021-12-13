@@ -23,7 +23,7 @@ import AppKit
   /**
     - Selector: dismissPopover:
   */
-  @objc func dismissPopover(_: Any?)
+  @objc func dismissPopover(_ p0: Any?)
 
   /**
     - Selector: makeStandardActivatePopoverGestureRecognizer
@@ -33,7 +33,7 @@ import AppKit
   /**
     - Selector: showPopover:
   */
-  @objc func showPopover(_: Any?)
+  @objc func showPopover(_ p0: Any?)
 
   // Own Instance Properties
 

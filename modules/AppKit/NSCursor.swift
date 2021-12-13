@@ -31,7 +31,7 @@ import AppKit
   /**
     - Selector: setHiddenUntilMouseMoves:
   */
-  @objc static func setHiddenUntilMouseMoves(_: Bool)
+  @objc static func setHiddenUntilMouseMoves(_ p0: Bool)
 
   /**
     - Selector: unhide

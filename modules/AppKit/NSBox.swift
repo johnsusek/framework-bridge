@@ -28,7 +28,7 @@ import AppKit
   /**
     - Selector: setFrameFromContentFrame:
   */
-  @objc func setFrameFromContentFrame(_: CGRect)
+  @objc func setFrameFromContentFrame(_ p0: CGRect)
 
   /**
     - Selector: sizeToFit

@@ -68,7 +68,7 @@ import AppKit
   /**
     - Selector: testPart:
   */
-  @objc func testPart(_: CGPoint) -> NSScroller.Part
+  @objc func testPart(_ p0: CGPoint) -> NSScroller.Part
 
   /**
     - Selector: trackKnob:

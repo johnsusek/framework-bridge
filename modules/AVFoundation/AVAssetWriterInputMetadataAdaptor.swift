@@ -28,7 +28,7 @@ import AVFoundation
   /**
     - Selector: appendTimedMetadataGroup:
   */
-  @objc (appendTimedMetadataGroup:) func append(_: AVTimedMetadataGroup) -> Bool
+  @objc (appendTimedMetadataGroup:) func append(_ p0: AVTimedMetadataGroup) -> Bool
 
   // Own Instance Properties
 

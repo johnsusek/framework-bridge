@@ -28,7 +28,7 @@ import AppKit
   /**
     - Selector: activate:
   */
-  @objc func activate(_: Bool)
+  @objc func activate(_ p0: Bool)
 
   /**
     - Selector: deactivate
@@ -43,7 +43,7 @@ import AppKit
   /**
     - Selector: takeColorFrom:
   */
-  @objc func takeColorFrom(_: Any?)
+  @objc func takeColorFrom(_ p0: Any?)
 
   // Own Instance Properties
 

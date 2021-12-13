@@ -20,7 +20,7 @@ import Foundation
   /**
     - Selector: setSharedScriptSuiteRegistry:
   */
-  @objc (setSharedScriptSuiteRegistry:) static func setShared(_: NSScriptSuiteRegistry)
+  @objc (setSharedScriptSuiteRegistry:) static func setShared(_ p0: NSScriptSuiteRegistry)
 
   /**
     - Selector: sharedScriptSuiteRegistry
@@ -32,7 +32,7 @@ import Foundation
   /**
     - Selector: aeteResource:
   */
-  @objc func aeteResource(_: String) -> Data?
+  @objc func aeteResource(_ p0: String) -> Data?
 
   /**
     - Selector: appleEventCodeForSuite:
@@ -77,12 +77,12 @@ import Foundation
   /**
     - Selector: registerClassDescription:
   */
-  @objc (registerClassDescription:) func register(_: NSScriptClassDescription)
+  @objc (registerClassDescription:) func register(_ p0: NSScriptClassDescription)
 
   /**
     - Selector: registerCommandDescription:
   */
-  @objc (registerCommandDescription:) func register(_: NSScriptCommandDescription)
+  @objc (registerCommandDescription:) func register(_ p0: NSScriptCommandDescription)
 
   /**
     - Selector: suiteForAppleEventCode:

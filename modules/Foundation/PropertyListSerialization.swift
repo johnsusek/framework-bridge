@@ -26,7 +26,7 @@ import Foundation
   /**
     - Selector: propertyList:isValidForFormat:
   */
-  @objc (propertyList:isValidForFormat:) static func propertyList(_: Any, isValidFor: PropertyListSerialization.PropertyListFormat) -> Bool
+  @objc (propertyList:isValidForFormat:) static func propertyList(_ p0: Any, isValidFor: PropertyListSerialization.PropertyListFormat) -> Bool
 
   /**
     - Selector: propertyListWithData:options:format:error:
@@ -44,7 +44,7 @@ import Foundation
     - Selector: writePropertyList:toStream:format:options:error:
     - Introduced: 10.6
   */
-  // throws - @objc (writePropertyList:toStream:format:options:error:) @available(OSX 10.6, *) static func writePropertyList(_: Any, _: OutputStream, _: PropertyListSerialization.PropertyListFormat, _: Int) -> Int
+  // throws - @objc (writePropertyList:toStream:format:options:error:) @available(OSX 10.6, *) static func writePropertyList(_ p0: Any, _ p1: OutputStream, _ p2: PropertyListSerialization.PropertyListFormat, _ p3: Int) -> Int
 }
 
 extension PropertyListSerialization: PropertyListSerializationExports {

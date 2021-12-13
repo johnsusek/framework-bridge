@@ -27,7 +27,7 @@ import Foundation
   /**
     - Selector: setInsertionClassDescription:
   */
-  @objc func setInsertionClassDescription(_: NSScriptClassDescription)
+  @objc func setInsertionClassDescription(_ p0: NSScriptClassDescription)
 
   // Own Instance Properties
 

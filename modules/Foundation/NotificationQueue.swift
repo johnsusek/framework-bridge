@@ -34,12 +34,12 @@ import Foundation
   /**
     - Selector: enqueueNotification:postingStyle:
   */
-  @objc (enqueueNotification:postingStyle:) func enqueue(_: Notification, postingStyle: NotificationQueue.PostingStyle)
+  @objc (enqueueNotification:postingStyle:) func enqueue(_ p0: Notification, postingStyle: NotificationQueue.PostingStyle)
 
   /**
     - Selector: enqueueNotification:postingStyle:coalesceMask:forModes:
   */
-  @objc (enqueueNotification:postingStyle:coalesceMask:forModes:) func enqueue(_: Notification, postingStyle: NotificationQueue.PostingStyle, coalesceMask: NotificationQueue.NotificationCoalescing, forModes: [RunLoop.Mode]?)
+  @objc (enqueueNotification:postingStyle:coalesceMask:forModes:) func enqueue(_ p0: Notification, postingStyle: NotificationQueue.PostingStyle, coalesceMask: NotificationQueue.NotificationCoalescing, forModes: [RunLoop.Mode]?)
 }
 
 extension NotificationQueue: NotificationQueueExports {

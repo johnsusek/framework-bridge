@@ -98,7 +98,7 @@ import AppKit
   /**
     - Selector: selectItem:
   */
-  @objc (selectItem:) func select(_: NSMenuItem?)
+  @objc (selectItem:) func select(_ p0: NSMenuItem?)
 
   /**
     - Selector: selectItemAtIndex:
@@ -118,7 +118,7 @@ import AppKit
   /**
     - Selector: setTitle:
   */
-  @objc func setTitle(_: String)
+  @objc func setTitle(_ p0: String)
 
   /**
     - Selector: synchronizeTitleAndSelectedItem

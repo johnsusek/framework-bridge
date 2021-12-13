@@ -34,7 +34,7 @@ import Foundation
     - Selector: enumerateResultsUsingBlock:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func enumerateResults(_: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func enumerateResults(_ p0: JSValue)
 
   /**
     - Selector: enumerateResultsWithOptions:usingBlock:

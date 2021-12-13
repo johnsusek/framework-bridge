@@ -27,12 +27,12 @@ import AppKit
   /**
     - Selector: drawImage:withFrame:inView:
   */
-  @objc (drawImage:withFrame:inView:) func drawImage(_: NSImage, withFrame: CGRect, in: NSView)
+  @objc (drawImage:withFrame:inView:) func drawImage(_ p0: NSImage, withFrame: CGRect, in: NSView)
 
   /**
     - Selector: drawTitle:withFrame:inView:
   */
-  @objc (drawTitle:withFrame:inView:) func drawTitle(_: NSAttributedString, withFrame: CGRect, in: NSView) -> CGRect
+  @objc (drawTitle:withFrame:inView:) func drawTitle(_ p0: NSAttributedString, withFrame: CGRect, in: NSView) -> CGRect
 
   /**
     - Selector: mouseEntered:
@@ -47,12 +47,12 @@ import AppKit
   /**
     - Selector: setButtonType:
   */
-  @objc func setButtonType(_: NSButton.ButtonType)
+  @objc func setButtonType(_ p0: NSButton.ButtonType)
 
   /**
     - Selector: setPeriodicDelay:interval:
   */
-  @objc func setPeriodicDelay(_: Float, interval: Float)
+  @objc func setPeriodicDelay(_ p0: Float, interval: Float)
 
   // Own Instance Properties
 

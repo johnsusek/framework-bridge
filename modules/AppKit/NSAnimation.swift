@@ -22,7 +22,7 @@ import AppKit
   /**
     - Selector: addProgressMark:
   */
-  @objc func addProgressMark(_: NSAnimation.Progress)
+  @objc func addProgressMark(_ p0: NSAnimation.Progress)
 
   /**
     - Selector: clearStartAnimation
@@ -37,7 +37,7 @@ import AppKit
   /**
     - Selector: removeProgressMark:
   */
-  @objc func removeProgressMark(_: NSAnimation.Progress)
+  @objc func removeProgressMark(_ p0: NSAnimation.Progress)
 
   /**
     - Selector: startAnimation

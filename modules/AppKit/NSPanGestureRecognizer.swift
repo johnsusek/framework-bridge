@@ -23,7 +23,7 @@ import AppKit
   /**
     - Selector: setTranslation:inView:
   */
-  @objc (setTranslation:inView:) func setTranslation(_: CGPoint, in: NSView?)
+  @objc (setTranslation:inView:) func setTranslation(_ p0: CGPoint, in: NSView?)
 
   /**
     - Selector: translationInView:

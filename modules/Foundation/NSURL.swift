@@ -103,19 +103,19 @@ import Foundation
     - Selector: URLByAppendingPathComponent:
     - Introduced: 10.6
   */
-  @objc (URLByAppendingPathComponent:) @available(OSX 10.6, *) func appendingPathComponent(_: String) -> URL?
+  @objc (URLByAppendingPathComponent:) @available(OSX 10.6, *) func appendingPathComponent(_ p0: String) -> URL?
 
   /**
     - Selector: URLByAppendingPathComponent:isDirectory:
     - Introduced: 10.7
   */
-  @objc (URLByAppendingPathComponent:isDirectory:) @available(OSX 10.7, *) func appendingPathComponent(_: String, isDirectory: Bool) -> URL?
+  @objc (URLByAppendingPathComponent:isDirectory:) @available(OSX 10.7, *) func appendingPathComponent(_ p0: String, isDirectory: Bool) -> URL?
 
   /**
     - Selector: URLByAppendingPathExtension:
     - Introduced: 10.6
   */
-  @objc (URLByAppendingPathExtension:) @available(OSX 10.6, *) func appendingPathExtension(_: String) -> URL?
+  @objc (URLByAppendingPathExtension:) @available(OSX 10.6, *) func appendingPathExtension(_ p0: String) -> URL?
 
   /**
     - Selector: bookmarkDataWithOptions:includingResourceValuesForKeys:relativeToURL:error:
@@ -145,7 +145,7 @@ import Foundation
     - Selector: getFileSystemRepresentation:maxLength:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) func getFileSystemRepresentation(_: UnsafeMutablePointer<Int8>, maxLength: Int) -> Bool
+  @objc @available(OSX 10.9, *) func getFileSystemRepresentation(_ p0: UnsafeMutablePointer<Int8>, maxLength: Int) -> Bool
 
   /**
     - Selector: getPromisedItemResourceValue:forKey:error:
@@ -205,7 +205,7 @@ import Foundation
     - Selector: setTemporaryResourceValue:forKey:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) func setTemporaryResourceValue(_: Any?, forKey: URLResourceKey)
+  @objc @available(OSX 10.9, *) func setTemporaryResourceValue(_ p0: Any?, forKey: URLResourceKey)
 
   /**
     - Selector: startAccessingSecurityScopedResource

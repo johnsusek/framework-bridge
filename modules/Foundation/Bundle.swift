@@ -99,7 +99,7 @@ import Foundation
     - Selector: URLForImageResource:
     - Introduced: 10.6
   */
-  @objc (URLForImageResource:) @available(OSX 10.6, *) func urlForImageResource(_: NSImage.Name) -> URL?
+  @objc (URLForImageResource:) @available(OSX 10.6, *) func urlForImageResource(_ p0: NSImage.Name) -> URL?
 
   /**
     - Selector: URLForResource:withExtension:
@@ -134,7 +134,7 @@ import Foundation
   /**
     - Selector: classNamed:
   */
-  @objc func classNamed(_: String) -> AnyClass?
+  @objc func classNamed(_ p0: String) -> AnyClass?
 
   /**
     - Selector: contextHelpForKey:
@@ -157,7 +157,7 @@ import Foundation
     - Selector: loadNibNamed:owner:topLevelObjects:
     - Introduced: 10.8
   */
-  @objc (loadNibNamed:owner:topLevelObjects:) @available(OSX 10.8, *) func loadNibNamed(_: NSNib.Name, owner: Any?, topLevelObjects: AutoreleasingUnsafeMutablePointer<NSArray?>?) -> Bool
+  @objc (loadNibNamed:owner:topLevelObjects:) @available(OSX 10.8, *) func loadNibNamed(_ p0: NSNib.Name, owner: Any?, topLevelObjects: AutoreleasingUnsafeMutablePointer<NSArray?>?) -> Bool
 
   /**
     - Selector: localizedStringForKey:value:table:
@@ -177,7 +177,7 @@ import Foundation
   /**
     - Selector: pathForImageResource:
   */
-  @objc (pathForImageResource:) func pathForImageResource(_: NSImage.Name) -> String?
+  @objc (pathForImageResource:) func pathForImageResource(_ p0: NSImage.Name) -> String?
 
   /**
     - Selector: pathForResource:ofType:

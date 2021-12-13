@@ -31,7 +31,7 @@ import AppKit
   /**
     - Selector: dragColor:withEvent:fromView:
   */
-  @objc (dragColor:withEvent:fromView:) static func dragColor(_: NSColor, with: NSEvent, from: NSView) -> Bool
+  @objc (dragColor:withEvent:fromView:) static func dragColor(_ p0: NSColor, with: NSEvent, from: NSView) -> Bool
 
   /**
     - Selector: frameRectForContentRect:styleMask:
@@ -51,17 +51,17 @@ import AppKit
   /**
     - Selector: setPickerMask:
   */
-  @objc static func setPickerMask(_: NSColorPanel.Options)
+  @objc static func setPickerMask(_ p0: NSColorPanel.Options)
 
   /**
     - Selector: setPickerMode:
   */
-  @objc static func setPickerMode(_: NSColorPanel.Mode)
+  @objc static func setPickerMode(_ p0: NSColorPanel.Mode)
 
   /**
     - Selector: standardWindowButton:forStyleMask:
   */
-  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_ p0: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
 
   /**
     - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
@@ -92,22 +92,22 @@ import AppKit
   /**
     - Selector: attachColorList:
   */
-  @objc (attachColorList:) func attachColorList(_: NSColorList)
+  @objc (attachColorList:) func attachColorList(_ p0: NSColorList)
 
   /**
     - Selector: detachColorList:
   */
-  @objc (detachColorList:) func detachColorList(_: NSColorList)
+  @objc (detachColorList:) func detachColorList(_ p0: NSColorList)
 
   /**
     - Selector: setAction:
   */
-  @objc func setAction(_: Selector?)
+  @objc func setAction(_ p0: Selector?)
 
   /**
     - Selector: setTarget:
   */
-  @objc func setTarget(_: Any?)
+  @objc func setTarget(_ p0: Any?)
 
   // Own Instance Properties
 

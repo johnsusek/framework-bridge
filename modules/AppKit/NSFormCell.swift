@@ -22,7 +22,7 @@ import AppKit
   /**
     - Selector: titleWidth:
   */
-  @objc func titleWidth(_: CGSize) -> CGFloat
+  @objc func titleWidth(_ p0: CGSize) -> CGFloat
 
   // Own Instance Properties
 

@@ -29,7 +29,7 @@ import Foundation
   /**
     - Selector: hasItemConformingToTypeIdentifier:
   */
-  @objc (hasItemConformingToTypeIdentifier:) func hasItemConformingToTypeIdentifier(_: String) -> Bool
+  @objc (hasItemConformingToTypeIdentifier:) func hasItemConformingToTypeIdentifier(_ p0: String) -> Bool
 
   /**
     - Selector: hasRepresentationConformingToTypeIdentifier:fileOptions:
@@ -76,7 +76,7 @@ import Foundation
     - Selector: registerCloudKitShare:container:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) func registerCloudKitShare(_: CKShare, container: CKContainer)
+  @objc @available(OSX 10.12, *) func registerCloudKitShare(_ p0: CKShare, container: CKContainer)
 
   /**
     - Selector: registerCloudKitShareWithPreparationHandler:
@@ -105,7 +105,7 @@ import Foundation
     - Selector: registerObject:visibility:
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) func registerObject(_: NSItemProviderWriting, visibility: NSItemProviderRepresentationVisibility)
+  @objc @available(OSX 10.13, *) func registerObject(_ p0: NSItemProviderWriting, visibility: NSItemProviderRepresentationVisibility)
 
   /**
     - Selector: registerObjectOfClass:visibility:loadHandler:

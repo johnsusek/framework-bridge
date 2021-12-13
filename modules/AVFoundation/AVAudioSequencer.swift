@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: beatsForHostTime:error:
   */
-  // throws - @objc (beatsForHostTime:error:) func beats(_: UInt64) -> AVMusicTimeStamp
+  // throws - @objc (beatsForHostTime:error:) func beats(_ p0: UInt64) -> AVMusicTimeStamp
 
   /**
     - Selector: beatsForSeconds:
@@ -33,12 +33,12 @@ import AVFoundation
   /**
     - Selector: dataWithSMPTEResolution:error:
   */
-  // throws - @objc (dataWithSMPTEResolution:error:) func data(_: Int) -> Data
+  // throws - @objc (dataWithSMPTEResolution:error:) func data(_ p0: Int) -> Data
 
   /**
     - Selector: hostTimeForBeats:error:
   */
-  // throws - @objc (hostTimeForBeats:error:) func hostTime(_: AVMusicTimeStamp) -> UInt64
+  // throws - @objc (hostTimeForBeats:error:) func hostTime(_ p0: AVMusicTimeStamp) -> UInt64
 
   /**
     - Selector: loadFromData:options:error:

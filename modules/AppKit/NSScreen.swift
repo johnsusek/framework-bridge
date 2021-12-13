@@ -46,25 +46,25 @@ import AppKit
     - Selector: backingAlignedRect:options:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func backingAlignedRect(_: CGRect, options: AlignmentOptions) -> CGRect
+  @objc @available(OSX 10.7, *) func backingAlignedRect(_ p0: CGRect, options: AlignmentOptions) -> CGRect
 
   /**
     - Selector: canRepresentDisplayGamut:
     - Introduced: 10.12
   */
-  @objc (canRepresentDisplayGamut:) @available(OSX 10.12, *) func canRepresent(_: NSDisplayGamut) -> Bool
+  @objc (canRepresentDisplayGamut:) @available(OSX 10.12, *) func canRepresent(_ p0: NSDisplayGamut) -> Bool
 
   /**
     - Selector: convertRectFromBacking:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func convertRectFromBacking(_: CGRect) -> CGRect
+  @objc @available(OSX 10.7, *) func convertRectFromBacking(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: convertRectToBacking:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func convertRectToBacking(_: CGRect) -> CGRect
+  @objc @available(OSX 10.7, *) func convertRectToBacking(_ p0: CGRect) -> CGRect
 
   // Own Instance Properties
 

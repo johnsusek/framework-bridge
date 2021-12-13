@@ -28,7 +28,7 @@ import AppKit
     - Selector: setDefaultPlaceholder:forMarker:onClass:withBinding:
     - Introduced: 10.15
   */
-  @objc (setDefaultPlaceholder:forMarker:onClass:withBinding:) @available(OSX 10.15, *) static func setDefaultPlaceholder(_: Any?, `for`: NSBindingSelectionMarker?, on: AnyClass, withBinding: NSBindingName)
+  @objc (setDefaultPlaceholder:forMarker:onClass:withBinding:) @available(OSX 10.15, *) static func setDefaultPlaceholder(_ p0: Any?, `for`: NSBindingSelectionMarker?, on: AnyClass, withBinding: NSBindingName)
 
   // Own Static Properties
 

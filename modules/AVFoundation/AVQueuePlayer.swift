@@ -33,12 +33,12 @@ import AVFoundation
   /**
     - Selector: canInsertItem:afterItem:
   */
-  @objc (canInsertItem:afterItem:) func canInsert(_: AVPlayerItem, after: AVPlayerItem?) -> Bool
+  @objc (canInsertItem:afterItem:) func canInsert(_ p0: AVPlayerItem, after: AVPlayerItem?) -> Bool
 
   /**
     - Selector: insertItem:afterItem:
   */
-  @objc (insertItem:afterItem:) func insert(_: AVPlayerItem, after: AVPlayerItem?)
+  @objc (insertItem:afterItem:) func insert(_ p0: AVPlayerItem, after: AVPlayerItem?)
 
   /**
     - Selector: items
@@ -53,7 +53,7 @@ import AVFoundation
   /**
     - Selector: removeItem:
   */
-  @objc (removeItem:) func remove(_: AVPlayerItem)
+  @objc (removeItem:) func remove(_ p0: AVPlayerItem)
 }
 
 extension AVQueuePlayer: AVQueuePlayerExports {

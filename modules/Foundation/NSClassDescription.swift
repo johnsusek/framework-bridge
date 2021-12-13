@@ -30,7 +30,7 @@ import Foundation
   /**
     - Selector: registerClassDescription:forClass:
   */
-  @objc (registerClassDescription:forClass:) static func register(_: NSClassDescription, `for`: AnyClass)
+  @objc (registerClassDescription:forClass:) static func register(_ p0: NSClassDescription, `for`: AnyClass)
 }
 
 extension NSClassDescription: NSClassDescriptionExports {

@@ -28,12 +28,12 @@ import AppKit
   /**
     - Selector: drawLabel:inRect:
   */
-  @objc (drawLabel:inRect:) func drawLabel(_: Bool, in: CGRect)
+  @objc (drawLabel:inRect:) func drawLabel(_ p0: Bool, in: CGRect)
 
   /**
     - Selector: sizeOfLabel:
   */
-  @objc (sizeOfLabel:) func sizeOfLabel(_: Bool) -> CGSize
+  @objc (sizeOfLabel:) func sizeOfLabel(_ p0: Bool) -> CGSize
 
   // Own Instance Properties
 

@@ -25,24 +25,24 @@ import AppKit
   /**
     - Selector: popUpContextMenu:withEvent:forView:
   */
-  @objc (popUpContextMenu:withEvent:forView:) static func popUpContextMenu(_: NSMenu, with: NSEvent, `for`: NSView)
+  @objc (popUpContextMenu:withEvent:forView:) static func popUpContextMenu(_ p0: NSMenu, with: NSEvent, `for`: NSView)
 
   /**
     - Selector: popUpContextMenu:withEvent:forView:withFont:
   */
-  @objc (popUpContextMenu:withEvent:forView:withFont:) static func popUpContextMenu(_: NSMenu, with: NSEvent, `for`: NSView, with: NSFont?)
+  @objc (popUpContextMenu:withEvent:forView:withFont:) static func popUpContextMenu(_ p0: NSMenu, with: NSEvent, `for`: NSView, with: NSFont?)
 
   /**
     - Selector: setMenuBarVisible:
   */
-  @objc static func setMenuBarVisible(_: Bool)
+  @objc static func setMenuBarVisible(_ p0: Bool)
 
   // Instance Methods
 
   /**
     - Selector: addItem:
   */
-  @objc (addItem:) func addItem(_: NSMenuItem)
+  @objc (addItem:) func addItem(_ p0: NSMenuItem)
 
   /**
     - Selector: addItemWithTitle:action:keyEquivalent:
@@ -94,7 +94,7 @@ import AppKit
   /**
     - Selector: insertItem:atIndex:
   */
-  @objc (insertItem:atIndex:) func insertItem(_: NSMenuItem, at: Int)
+  @objc (insertItem:atIndex:) func insertItem(_ p0: NSMenuItem, at: Int)
 
   /**
     - Selector: insertItemWithTitle:action:keyEquivalent:atIndex:
@@ -109,7 +109,7 @@ import AppKit
   /**
     - Selector: itemChanged:
   */
-  @objc func itemChanged(_: NSMenuItem)
+  @objc func itemChanged(_ p0: NSMenuItem)
 
   /**
     - Selector: itemWithTag:
@@ -146,7 +146,7 @@ import AppKit
   /**
     - Selector: removeItem:
   */
-  @objc (removeItem:) func removeItem(_: NSMenuItem)
+  @objc (removeItem:) func removeItem(_ p0: NSMenuItem)
 
   /**
     - Selector: removeItemAtIndex:
@@ -156,12 +156,12 @@ import AppKit
   /**
     - Selector: setSubmenu:forItem:
   */
-  @objc (setSubmenu:forItem:) func setSubmenu(_: NSMenu?, `for`: NSMenuItem)
+  @objc (setSubmenu:forItem:) func setSubmenu(_ p0: NSMenu?, `for`: NSMenuItem)
 
   /**
     - Selector: submenuAction:
   */
-  @objc func submenuAction(_: Any?)
+  @objc func submenuAction(_ p0: Any?)
 
   /**
     - Selector: update

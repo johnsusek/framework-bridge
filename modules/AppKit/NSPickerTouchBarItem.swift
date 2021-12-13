@@ -48,12 +48,12 @@ import AppKit
   /**
     - Selector: setImage:atIndex:
   */
-  @objc (setImage:atIndex:) func setImage(_: NSImage?, at: Int)
+  @objc (setImage:atIndex:) func setImage(_ p0: NSImage?, at: Int)
 
   /**
     - Selector: setLabel:atIndex:
   */
-  @objc (setLabel:atIndex:) func setLabel(_: String, at: Int)
+  @objc (setLabel:atIndex:) func setLabel(_ p0: String, at: Int)
 
   // Own Instance Properties
 

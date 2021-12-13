@@ -39,7 +39,7 @@ import AVFoundation
     - Selector: isPlayableExtendedMIMEType:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) static func isPlayableExtendedMIMEType(_: String) -> Bool
+  @objc @available(OSX 10.7, *) static func isPlayableExtendedMIMEType(_ p0: String) -> Bool
 
   // Instance Methods
 

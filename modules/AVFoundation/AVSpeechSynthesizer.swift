@@ -33,7 +33,7 @@ import AVFoundation
   /**
     - Selector: speakUtterance:
   */
-  @objc (speakUtterance:) func speak(_: AVSpeechUtterance)
+  @objc (speakUtterance:) func speak(_ p0: AVSpeechUtterance)
 
   /**
     - Selector: stopSpeakingAtBoundary:
@@ -44,7 +44,7 @@ import AVFoundation
     - Selector: writeUtterance:toBufferCallback:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func write(_: AVSpeechUtterance, toBufferCallback: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func write(_ p0: AVSpeechUtterance, toBufferCallback: JSValue)
 
   // Own Instance Properties
 

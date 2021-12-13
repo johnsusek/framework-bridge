@@ -33,7 +33,7 @@ import Foundation
   /**
     - Selector: openURL:completionHandler:
   */
-  // jsvalue @objc func open(_: URL, completionHandler: JSValue)
+  // jsvalue @objc func open(_ p0: URL, completionHandler: JSValue)
 
   // Own Instance Properties
 

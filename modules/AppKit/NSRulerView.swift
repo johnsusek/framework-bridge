@@ -33,7 +33,7 @@ import AppKit
   /**
     - Selector: addMarker:
   */
-  @objc func addMarker(_: NSRulerMarker)
+  @objc func addMarker(_ p0: NSRulerMarker)
 
   /**
     - Selector: drawHashMarksAndLabelsInRect:
@@ -58,12 +58,12 @@ import AppKit
   /**
     - Selector: removeMarker:
   */
-  @objc func removeMarker(_: NSRulerMarker)
+  @objc func removeMarker(_ p0: NSRulerMarker)
 
   /**
     - Selector: trackMarker:withMouseEvent:
   */
-  @objc func trackMarker(_: NSRulerMarker, withMouseEvent: NSEvent) -> Bool
+  @objc func trackMarker(_ p0: NSRulerMarker, withMouseEvent: NSEvent) -> Bool
 
   // Own Instance Properties
 

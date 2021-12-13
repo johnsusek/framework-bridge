@@ -29,32 +29,32 @@ import Quartz
   /**
     - Selector: deleteSelectedItems:
   */
-  @objc func deleteSelectedItems(_: Any)
+  @objc func deleteSelectedItems(_ p0: Any)
 
   /**
     - Selector: downloadAllItems:
   */
-  @objc func downloadAllItems(_: Any)
+  @objc func downloadAllItems(_ p0: Any)
 
   /**
     - Selector: downloadSelectedItems:
   */
-  @objc func downloadSelectedItems(_: Any)
+  @objc func downloadSelectedItems(_ p0: Any)
 
   /**
     - Selector: rotateLeft:
   */
-  @objc func rotateLeft(_: Any)
+  @objc func rotateLeft(_ p0: Any)
 
   /**
     - Selector: rotateRight:
   */
-  @objc func rotateRight(_: Any)
+  @objc func rotateRight(_ p0: Any)
 
   /**
     - Selector: selectIndexes:byExtendingSelection:
   */
-  @objc (selectIndexes:byExtendingSelection:) func select(_: IndexSet, byExtendingSelection: Bool)
+  @objc (selectIndexes:byExtendingSelection:) func select(_ p0: IndexSet, byExtendingSelection: Bool)
 
   /**
     - Selector: selectedIndexes

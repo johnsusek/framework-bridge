@@ -23,7 +23,7 @@ import AppKit
     - Selector: addAccessoryController:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func addAccessoryController(_: NSViewController)
+  @objc @available(OSX 10.5, *) func addAccessoryController(_ p0: NSViewController)
 
   /**
     - Selector: beginSheetWithPrintInfo:modalForWindow:delegate:didEndSelector:contextInfo:
@@ -34,7 +34,7 @@ import AppKit
     - Selector: removeAccessoryController:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func removeAccessoryController(_: NSViewController)
+  @objc @available(OSX 10.5, *) func removeAccessoryController(_ p0: NSViewController)
 
   /**
     - Selector: runModal

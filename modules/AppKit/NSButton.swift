@@ -58,17 +58,17 @@ import AppKit
   /**
     - Selector: getPeriodicDelay:interval:
   */
-  @objc func getPeriodicDelay(_: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>)
+  @objc func getPeriodicDelay(_ p0: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>)
 
   /**
     - Selector: highlight:
   */
-  @objc func highlight(_: Bool)
+  @objc func highlight(_ p0: Bool)
 
   /**
     - Selector: setButtonType:
   */
-  @objc func setButtonType(_: NSButton.ButtonType)
+  @objc func setButtonType(_ p0: NSButton.ButtonType)
 
   /**
     - Selector: setNextState
@@ -78,7 +78,7 @@ import AppKit
   /**
     - Selector: setPeriodicDelay:interval:
   */
-  @objc func setPeriodicDelay(_: Float, interval: Float)
+  @objc func setPeriodicDelay(_ p0: Float, interval: Float)
 
   // Own Instance Properties
 

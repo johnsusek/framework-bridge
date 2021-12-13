@@ -42,32 +42,32 @@ import AppKit
   /**
     - Selector: setBorderColor:
   */
-  @objc func setBorderColor(_: NSColor?)
+  @objc func setBorderColor(_ p0: NSColor?)
 
   /**
     - Selector: setBorderColor:forEdge:
   */
-  @objc (setBorderColor:forEdge:) func setBorderColor(_: NSColor?, `for`: NSRectEdge)
+  @objc (setBorderColor:forEdge:) func setBorderColor(_ p0: NSColor?, `for`: NSRectEdge)
 
   /**
     - Selector: setContentWidth:type:
   */
-  @objc func setContentWidth(_: CGFloat, type: NSTextBlock.ValueType)
+  @objc func setContentWidth(_ p0: CGFloat, type: NSTextBlock.ValueType)
 
   /**
     - Selector: setValue:type:forDimension:
   */
-  @objc (setValue:type:forDimension:) func setValue(_: CGFloat, type: NSTextBlock.ValueType, `for`: NSTextBlock.Dimension)
+  @objc (setValue:type:forDimension:) func setValue(_ p0: CGFloat, type: NSTextBlock.ValueType, `for`: NSTextBlock.Dimension)
 
   /**
     - Selector: setWidth:type:forLayer:
   */
-  @objc (setWidth:type:forLayer:) func setWidth(_: CGFloat, type: NSTextBlock.ValueType, `for`: NSTextBlock.Layer)
+  @objc (setWidth:type:forLayer:) func setWidth(_ p0: CGFloat, type: NSTextBlock.ValueType, `for`: NSTextBlock.Layer)
 
   /**
     - Selector: setWidth:type:forLayer:edge:
   */
-  @objc (setWidth:type:forLayer:edge:) func setWidth(_: CGFloat, type: NSTextBlock.ValueType, `for`: NSTextBlock.Layer, edge: NSRectEdge)
+  @objc (setWidth:type:forLayer:edge:) func setWidth(_ p0: CGFloat, type: NSTextBlock.ValueType, `for`: NSTextBlock.Layer, edge: NSRectEdge)
 
   /**
     - Selector: valueForDimension:

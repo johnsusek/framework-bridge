@@ -22,7 +22,7 @@ import AppKit
   /**
     - Selector: drawSegment:inFrame:withView:
   */
-  @objc (drawSegment:inFrame:withView:) func drawSegment(_: Int, inFrame: CGRect, with: NSView)
+  @objc (drawSegment:inFrame:withView:) func drawSegment(_ p0: Int, inFrame: CGRect, with: NSView)
 
   /**
     - Selector: imageForSegment:
@@ -79,48 +79,48 @@ import AppKit
   /**
     - Selector: setEnabled:forSegment:
   */
-  @objc func setEnabled(_: Bool, forSegment: Int)
+  @objc func setEnabled(_ p0: Bool, forSegment: Int)
 
   /**
     - Selector: setImage:forSegment:
   */
-  @objc func setImage(_: NSImage?, forSegment: Int)
+  @objc func setImage(_ p0: NSImage?, forSegment: Int)
 
   /**
     - Selector: setImageScaling:forSegment:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func setImageScaling(_: NSImageScaling, forSegment: Int)
+  @objc @available(OSX 10.5, *) func setImageScaling(_ p0: NSImageScaling, forSegment: Int)
 
   /**
     - Selector: setLabel:forSegment:
   */
-  @objc func setLabel(_: String, forSegment: Int)
+  @objc func setLabel(_ p0: String, forSegment: Int)
 
   /**
     - Selector: setMenu:forSegment:
   */
-  @objc func setMenu(_: NSMenu?, forSegment: Int)
+  @objc func setMenu(_ p0: NSMenu?, forSegment: Int)
 
   /**
     - Selector: setSelected:forSegment:
   */
-  @objc func setSelected(_: Bool, forSegment: Int)
+  @objc func setSelected(_ p0: Bool, forSegment: Int)
 
   /**
     - Selector: setTag:forSegment:
   */
-  @objc func setTag(_: Int, forSegment: Int)
+  @objc func setTag(_ p0: Int, forSegment: Int)
 
   /**
     - Selector: setToolTip:forSegment:
   */
-  @objc func setToolTip(_: String?, forSegment: Int)
+  @objc func setToolTip(_ p0: String?, forSegment: Int)
 
   /**
     - Selector: setWidth:forSegment:
   */
-  @objc func setWidth(_: CGFloat, forSegment: Int)
+  @objc func setWidth(_ p0: CGFloat, forSegment: Int)
 
   /**
     - Selector: tagForSegment:

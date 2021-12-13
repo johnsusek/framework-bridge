@@ -38,7 +38,7 @@ import Foundation
   /**
     - Selector: setDelegate:
   */
-  @objc func setDelegate(_: NSMachPortDelegate?)
+  @objc func setDelegate(_ p0: NSMachPortDelegate?)
 
   // Own Instance Properties
 

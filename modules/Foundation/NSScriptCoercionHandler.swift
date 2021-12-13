@@ -27,12 +27,12 @@ import Foundation
   /**
     - Selector: coerceValue:toClass:
   */
-  @objc (coerceValue:toClass:) func coerceValue(_: Any, to: AnyClass) -> Any?
+  @objc (coerceValue:toClass:) func coerceValue(_ p0: Any, to: AnyClass) -> Any?
 
   /**
     - Selector: registerCoercer:selector:toConvertFromClass:toClass:
   */
-  @objc (registerCoercer:selector:toConvertFromClass:toClass:) func registerCoercer(_: Any, selector: Selector, toConvertFrom: AnyClass, to: AnyClass)
+  @objc (registerCoercer:selector:toConvertFromClass:toClass:) func registerCoercer(_ p0: Any, selector: Selector, toConvertFrom: AnyClass, to: AnyClass)
 }
 
 extension NSScriptCoercionHandler: NSScriptCoercionHandlerExports {

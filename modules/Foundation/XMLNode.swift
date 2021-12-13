@@ -107,7 +107,7 @@ import Foundation
   /**
     - Selector: canonicalXMLStringPreservingComments:
   */
-  @objc func canonicalXMLStringPreservingComments(_: Bool) -> String
+  @objc func canonicalXMLStringPreservingComments(_ p0: Bool) -> String
 
   /**
     - Selector: childAtIndex:

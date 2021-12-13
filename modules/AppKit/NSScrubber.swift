@@ -49,17 +49,17 @@ import AppKit
   /**
     - Selector: performSequentialBatchUpdates:
   */
-  // jsvalue @objc func performSequentialBatchUpdates(_: JSValue)
+  // jsvalue @objc func performSequentialBatchUpdates(_ p0: JSValue)
 
   /**
     - Selector: registerClass:forItemIdentifier:
   */
-  @objc (registerClass:forItemIdentifier:) func register(_: AnyClass?, forItemIdentifier: NSUserInterfaceItemIdentifier)
+  @objc (registerClass:forItemIdentifier:) func register(_ p0: AnyClass?, forItemIdentifier: NSUserInterfaceItemIdentifier)
 
   /**
     - Selector: registerNib:forItemIdentifier:
   */
-  @objc (registerNib:forItemIdentifier:) func register(_: NSNib?, forItemIdentifier: NSUserInterfaceItemIdentifier)
+  @objc (registerNib:forItemIdentifier:) func register(_ p0: NSNib?, forItemIdentifier: NSUserInterfaceItemIdentifier)
 
   /**
     - Selector: reloadData

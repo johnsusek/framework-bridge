@@ -26,7 +26,7 @@ import AppKit
   /**
     - Selector: isNativeType:
   */
-  @objc static func isNativeType(_: String) -> Bool
+  @objc static func isNativeType(_ p0: String) -> Bool
 
   // Instance Methods
 

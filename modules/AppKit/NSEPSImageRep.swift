@@ -35,12 +35,12 @@ import AppKit
   /**
     - Selector: registerImageRepClass:
   */
-  @objc (registerImageRepClass:) static func registerClass(_: AnyClass)
+  @objc (registerImageRepClass:) static func registerClass(_ p0: AnyClass)
 
   /**
     - Selector: unregisterImageRepClass:
   */
-  @objc (unregisterImageRepClass:) static func unregisterClass(_: AnyClass)
+  @objc (unregisterImageRepClass:) static func unregisterClass(_ p0: AnyClass)
 
   // Own Instance Properties
 

@@ -48,7 +48,7 @@ import Foundation
   /**
     - Selector: writeData:timeout:completionHandler:
   */
-  // jsvalue @objc func write(_: Data, timeout: TimeInterval, completionHandler: JSValue)
+  // jsvalue @objc func write(_ p0: Data, timeout: TimeInterval, completionHandler: JSValue)
 }
 
 extension URLSessionStreamTask: URLSessionStreamTaskExports {

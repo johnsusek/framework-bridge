@@ -29,7 +29,7 @@ import AppKit
     - Selector: constrainBoundsRect:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) func constrainBoundsRect(_: CGRect) -> CGRect
+  @objc @available(OSX 10.9, *) func constrainBoundsRect(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: scrollToPoint:
@@ -39,12 +39,12 @@ import AppKit
   /**
     - Selector: viewBoundsChanged:
   */
-  @objc func viewBoundsChanged(_: Notification)
+  @objc func viewBoundsChanged(_ p0: Notification)
 
   /**
     - Selector: viewFrameChanged:
   */
-  @objc func viewFrameChanged(_: Notification)
+  @objc func viewFrameChanged(_ p0: Notification)
 
   // Own Instance Properties
 

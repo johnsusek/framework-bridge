@@ -39,12 +39,12 @@ import AppKit
   /**
     - Selector: findString:inBook:
   */
-  @objc (findString:inBook:) func find(_: String, inBook: NSHelpManager.BookName?)
+  @objc (findString:inBook:) func find(_ p0: String, inBook: NSHelpManager.BookName?)
 
   /**
     - Selector: openHelpAnchor:inBook:
   */
-  @objc func openHelpAnchor(_: NSHelpManager.AnchorName, inBook: NSHelpManager.BookName?)
+  @objc func openHelpAnchor(_ p0: NSHelpManager.AnchorName, inBook: NSHelpManager.BookName?)
 
   /**
     - Selector: registerBooksInBundle:
@@ -60,7 +60,7 @@ import AppKit
   /**
     - Selector: setContextHelp:forObject:
   */
-  @objc (setContextHelp:forObject:) func setContextHelp(_: NSAttributedString, `for`: Any)
+  @objc (setContextHelp:forObject:) func setContextHelp(_ p0: NSAttributedString, `for`: Any)
 
   /**
     - Selector: showContextHelpForObject:locationHint:

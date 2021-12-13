@@ -51,41 +51,41 @@ import Foundation
   /**
     - Selector: removeCredential:forProtectionSpace:
   */
-  @objc (removeCredential:forProtectionSpace:) func remove(_: URLCredential, `for`: URLProtectionSpace)
+  @objc (removeCredential:forProtectionSpace:) func remove(_ p0: URLCredential, `for`: URLProtectionSpace)
 
   /**
     - Selector: removeCredential:forProtectionSpace:options:
     - Introduced: 10.9
   */
-  @objc (removeCredential:forProtectionSpace:options:) @available(OSX 10.9, *) func remove(_: URLCredential, `for`: URLProtectionSpace, options: [String: Any]?)
+  @objc (removeCredential:forProtectionSpace:options:) @available(OSX 10.9, *) func remove(_ p0: URLCredential, `for`: URLProtectionSpace, options: [String: Any]?)
 
   /**
     - Selector: removeCredential:forProtectionSpace:options:task:
     - Introduced: 10.10
   */
-  @objc (removeCredential:forProtectionSpace:options:task:) @available(OSX 10.10, *) func remove(_: URLCredential, `for`: URLProtectionSpace, options: [String: Any]?, task: URLSessionTask)
+  @objc (removeCredential:forProtectionSpace:options:task:) @available(OSX 10.10, *) func remove(_ p0: URLCredential, `for`: URLProtectionSpace, options: [String: Any]?, task: URLSessionTask)
 
   /**
     - Selector: setCredential:forProtectionSpace:
   */
-  @objc (setCredential:forProtectionSpace:) func set(_: URLCredential, `for`: URLProtectionSpace)
+  @objc (setCredential:forProtectionSpace:) func set(_ p0: URLCredential, `for`: URLProtectionSpace)
 
   /**
     - Selector: setCredential:forProtectionSpace:task:
     - Introduced: 10.10
   */
-  @objc (setCredential:forProtectionSpace:task:) @available(OSX 10.10, *) func set(_: URLCredential, `for`: URLProtectionSpace, task: URLSessionTask)
+  @objc (setCredential:forProtectionSpace:task:) @available(OSX 10.10, *) func set(_ p0: URLCredential, `for`: URLProtectionSpace, task: URLSessionTask)
 
   /**
     - Selector: setDefaultCredential:forProtectionSpace:
   */
-  @objc (setDefaultCredential:forProtectionSpace:) func setDefaultCredential(_: URLCredential, `for`: URLProtectionSpace)
+  @objc (setDefaultCredential:forProtectionSpace:) func setDefaultCredential(_ p0: URLCredential, `for`: URLProtectionSpace)
 
   /**
     - Selector: setDefaultCredential:forProtectionSpace:task:
     - Introduced: 10.10
   */
-  @objc (setDefaultCredential:forProtectionSpace:task:) @available(OSX 10.10, *) func setDefaultCredential(_: URLCredential, `for`: URLProtectionSpace, task: URLSessionTask)
+  @objc (setDefaultCredential:forProtectionSpace:task:) @available(OSX 10.10, *) func setDefaultCredential(_ p0: URLCredential, `for`: URLProtectionSpace, task: URLSessionTask)
 
   // Own Instance Properties
 

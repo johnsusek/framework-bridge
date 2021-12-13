@@ -37,14 +37,14 @@ import AVFoundation
   /**
     - Selector: removePendingExpiredSessionReports:withAppIdentifier:storageDirectoryAtURL:
   */
-  @objc (removePendingExpiredSessionReports:withAppIdentifier:storageDirectoryAtURL:) static func removePendingExpiredSessionReports(_: [Data], withAppIdentifier: Data, storageDirectoryAt: URL)
+  @objc (removePendingExpiredSessionReports:withAppIdentifier:storageDirectoryAtURL:) static func removePendingExpiredSessionReports(_ p0: [Data], withAppIdentifier: Data, storageDirectoryAt: URL)
 
   // Instance Methods
 
   /**
     - Selector: addContentKeyRecipient:
   */
-  @objc func addContentKeyRecipient(_: AVContentKeyRecipient)
+  @objc func addContentKeyRecipient(_ p0: AVContentKeyRecipient)
 
   /**
     - Selector: expire
@@ -61,7 +61,7 @@ import AVFoundation
     - Selector: invalidatePersistableContentKey:options:completionHandler:
     - Introduced: 10.15
   */
-  // jsvalue @objc @available(OSX 10.15, *) func invalidatePersistableContentKey(_: Data, options: [AVContentKeySessionServerPlaybackContextOption: Any]?, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.15, *) func invalidatePersistableContentKey(_ p0: Data, options: [AVContentKeySessionServerPlaybackContextOption: Any]?, completionHandler: JSValue)
 
   /**
     - Selector: makeSecureTokenForExpirationDateOfPersistableContentKey:completionHandler:
@@ -77,7 +77,7 @@ import AVFoundation
   /**
     - Selector: removeContentKeyRecipient:
   */
-  @objc func removeContentKeyRecipient(_: AVContentKeyRecipient)
+  @objc func removeContentKeyRecipient(_ p0: AVContentKeyRecipient)
 
   /**
     - Selector: renewExpiringResponseDataForContentKeyRequest:
@@ -87,7 +87,7 @@ import AVFoundation
   /**
     - Selector: setDelegate:queue:
   */
-  @objc func setDelegate(_: AVContentKeySessionDelegate?, queue: DispatchQueue?)
+  @objc func setDelegate(_ p0: AVContentKeySessionDelegate?, queue: DispatchQueue?)
 
   // Own Instance Properties
 

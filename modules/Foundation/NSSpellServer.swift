@@ -27,7 +27,7 @@ import Foundation
   /**
     - Selector: registerLanguage:byVendor:
   */
-  @objc func registerLanguage(_: String?, byVendor: String?) -> Bool
+  @objc func registerLanguage(_ p0: String?, byVendor: String?) -> Bool
 
   /**
     - Selector: run

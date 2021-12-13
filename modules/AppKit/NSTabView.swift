@@ -28,12 +28,12 @@ import AppKit
   /**
     - Selector: addTabViewItem:
   */
-  @objc (addTabViewItem:) func addTabViewItem(_: NSTabViewItem)
+  @objc (addTabViewItem:) func addTabViewItem(_ p0: NSTabViewItem)
 
   /**
     - Selector: indexOfTabViewItem:
   */
-  @objc (indexOfTabViewItem:) func indexOfTabViewItem(_: NSTabViewItem) -> Int
+  @objc (indexOfTabViewItem:) func indexOfTabViewItem(_ p0: NSTabViewItem) -> Int
 
   /**
     - Selector: indexOfTabViewItemWithIdentifier:
@@ -43,37 +43,37 @@ import AppKit
   /**
     - Selector: insertTabViewItem:atIndex:
   */
-  @objc (insertTabViewItem:atIndex:) func insertTabViewItem(_: NSTabViewItem, at: Int)
+  @objc (insertTabViewItem:atIndex:) func insertTabViewItem(_ p0: NSTabViewItem, at: Int)
 
   /**
     - Selector: removeTabViewItem:
   */
-  @objc func removeTabViewItem(_: NSTabViewItem)
+  @objc func removeTabViewItem(_ p0: NSTabViewItem)
 
   /**
     - Selector: selectFirstTabViewItem:
   */
-  @objc func selectFirstTabViewItem(_: Any?)
+  @objc func selectFirstTabViewItem(_ p0: Any?)
 
   /**
     - Selector: selectLastTabViewItem:
   */
-  @objc func selectLastTabViewItem(_: Any?)
+  @objc func selectLastTabViewItem(_ p0: Any?)
 
   /**
     - Selector: selectNextTabViewItem:
   */
-  @objc func selectNextTabViewItem(_: Any?)
+  @objc func selectNextTabViewItem(_ p0: Any?)
 
   /**
     - Selector: selectPreviousTabViewItem:
   */
-  @objc func selectPreviousTabViewItem(_: Any?)
+  @objc func selectPreviousTabViewItem(_ p0: Any?)
 
   /**
     - Selector: selectTabViewItem:
   */
-  @objc func selectTabViewItem(_: NSTabViewItem?)
+  @objc func selectTabViewItem(_ p0: NSTabViewItem?)
 
   /**
     - Selector: selectTabViewItemAtIndex:
@@ -98,7 +98,7 @@ import AppKit
   /**
     - Selector: takeSelectedTabViewItemFromSender:
   */
-  @objc func takeSelectedTabViewItemFromSender(_: Any?)
+  @objc func takeSelectedTabViewItemFromSender(_ p0: Any?)
 
   // Own Instance Properties
 

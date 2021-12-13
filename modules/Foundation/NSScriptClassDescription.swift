@@ -25,7 +25,7 @@ import Foundation
   /**
     - Selector: registerClassDescription:forClass:
   */
-  @objc (registerClassDescription:forClass:) static func register(_: NSClassDescription, `for`: AnyClass)
+  @objc (registerClassDescription:forClass:) static func register(_ p0: NSClassDescription, `for`: AnyClass)
 
   // Instance Methods
 
@@ -37,7 +37,7 @@ import Foundation
   /**
     - Selector: classDescriptionForKey:
   */
-  @objc (classDescriptionForKey:) func forKey(_: String) -> NSScriptClassDescription?
+  @objc (classDescriptionForKey:) func forKey(_ p0: String) -> NSScriptClassDescription?
 
   /**
     - Selector: hasOrderedToManyRelationshipForKey:
@@ -76,7 +76,7 @@ import Foundation
   /**
     - Selector: matchesAppleEventCode:
   */
-  @objc func matchesAppleEventCode(_: FourCharCode) -> Bool
+  @objc func matchesAppleEventCode(_ p0: FourCharCode) -> Bool
 
   /**
     - Selector: selectorForCommand:
@@ -86,7 +86,7 @@ import Foundation
   /**
     - Selector: supportsCommand:
   */
-  @objc func supportsCommand(_: NSScriptCommandDescription) -> Bool
+  @objc func supportsCommand(_ p0: NSScriptCommandDescription) -> Bool
 
   /**
     - Selector: typeForKey:

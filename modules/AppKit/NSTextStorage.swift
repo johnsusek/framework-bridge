@@ -33,12 +33,12 @@ import AppKit
   /**
     - Selector: addLayoutManager:
   */
-  @objc func addLayoutManager(_: NSLayoutManager)
+  @objc func addLayoutManager(_ p0: NSLayoutManager)
 
   /**
     - Selector: edited:range:changeInLength:
   */
-  @objc func edited(_: NSTextStorageEditActions, range: NSRange, changeInLength: Int)
+  @objc func edited(_ p0: NSTextStorageEditActions, range: NSRange, changeInLength: Int)
 
   /**
     - Selector: ensureAttributesAreFixedInRange:
@@ -58,7 +58,7 @@ import AppKit
   /**
     - Selector: removeLayoutManager:
   */
-  @objc func removeLayoutManager(_: NSLayoutManager)
+  @objc func removeLayoutManager(_ p0: NSLayoutManager)
 
   // Own Instance Properties
 

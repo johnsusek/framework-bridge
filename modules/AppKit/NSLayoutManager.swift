@@ -36,17 +36,17 @@ import AppKit
     - Selector: addTemporaryAttribute:value:forCharacterRange:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func addTemporaryAttribute(_: NSAttributedString.Key, value: Any, forCharacterRange: NSRange)
+  @objc @available(OSX 10.5, *) func addTemporaryAttribute(_ p0: NSAttributedString.Key, value: Any, forCharacterRange: NSRange)
 
   /**
     - Selector: addTemporaryAttributes:forCharacterRange:
   */
-  @objc func addTemporaryAttributes(_: [NSAttributedString.Key: Any], forCharacterRange: NSRange)
+  @objc func addTemporaryAttributes(_ p0: [NSAttributedString.Key: Any], forCharacterRange: NSRange)
 
   /**
     - Selector: addTextContainer:
   */
-  @objc func addTextContainer(_: NSTextContainer)
+  @objc func addTextContainer(_ p0: NSTextContainer)
 
   /**
     - Selector: attachmentSizeForGlyphAtIndex:
@@ -164,7 +164,7 @@ import AppKit
     - Selector: fillBackgroundRectArray:count:forCharacterRange:color:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func fillBackgroundRectArray(_: UnsafePointer<NSRect>, count: Int, forCharacterRange: NSRange, color: NSColor)
+  @objc @available(OSX 10.6, *) func fillBackgroundRectArray(_ p0: UnsafePointer<NSRect>, count: Int, forCharacterRange: NSRange, color: NSColor)
 
   /**
     - Selector: firstUnlaidCharacterIndex
@@ -184,7 +184,7 @@ import AppKit
   /**
     - Selector: getFirstUnlaidCharacterIndex:glyphIndex:
   */
-  @objc func getFirstUnlaidCharacterIndex(_: UnsafeMutablePointer<Int>?, glyphIndex: UnsafeMutablePointer<Int>?)
+  @objc func getFirstUnlaidCharacterIndex(_ p0: UnsafeMutablePointer<Int>?, glyphIndex: UnsafeMutablePointer<Int>?)
 
   /**
     - Selector: getGlyphsInRange:glyphs:properties:characterIndexes:bidiLevels:
@@ -245,7 +245,7 @@ import AppKit
   /**
     - Selector: insertTextContainer:atIndex:
   */
-  @objc (insertTextContainer:atIndex:) func insertTextContainer(_: NSTextContainer, at: Int)
+  @objc (insertTextContainer:atIndex:) func insertTextContainer(_ p0: NSTextContainer, at: Int)
 
   /**
     - Selector: invalidateDisplayForCharacterRange:
@@ -272,7 +272,7 @@ import AppKit
     - Selector: isValidGlyphIndex:
     - Introduced: 10.0
   */
-  @objc @available(OSX 10.0, *) func isValidGlyphIndex(_: Int) -> Bool
+  @objc @available(OSX 10.0, *) func isValidGlyphIndex(_ p0: Int) -> Bool
 
   /**
     - Selector: layoutManagerOwnsFirstResponderInWindow:
@@ -351,7 +351,7 @@ import AppKit
   /**
     - Selector: removeTemporaryAttribute:forCharacterRange:
   */
-  @objc func removeTemporaryAttribute(_: NSAttributedString.Key, forCharacterRange: NSRange)
+  @objc func removeTemporaryAttribute(_ p0: NSAttributedString.Key, forCharacterRange: NSRange)
 
   /**
     - Selector: removeTextContainerAtIndex:
@@ -361,7 +361,7 @@ import AppKit
   /**
     - Selector: replaceTextStorage:
   */
-  @objc func replaceTextStorage(_: NSTextStorage)
+  @objc func replaceTextStorage(_ p0: NSTextStorage)
 
   /**
     - Selector: rulerAccessoryViewForTextView:paragraphStyle:ruler:enabled:
@@ -376,86 +376,86 @@ import AppKit
   /**
     - Selector: setAttachmentSize:forGlyphRange:
   */
-  @objc func setAttachmentSize(_: CGSize, forGlyphRange: NSRange)
+  @objc func setAttachmentSize(_ p0: CGSize, forGlyphRange: NSRange)
 
   /**
     - Selector: setBoundsRect:forTextBlock:glyphRange:
   */
-  @objc (setBoundsRect:forTextBlock:glyphRange:) func setBoundsRect(_: CGRect, `for`: NSTextBlock, glyphRange: NSRange)
+  @objc (setBoundsRect:forTextBlock:glyphRange:) func setBoundsRect(_ p0: CGRect, `for`: NSTextBlock, glyphRange: NSRange)
 
   /**
     - Selector: setDrawsOutsideLineFragment:forGlyphAtIndex:
   */
-  @objc (setDrawsOutsideLineFragment:forGlyphAtIndex:) func setDrawsOutsideLineFragment(_: Bool, forGlyphAt: Int)
+  @objc (setDrawsOutsideLineFragment:forGlyphAtIndex:) func setDrawsOutsideLineFragment(_ p0: Bool, forGlyphAt: Int)
 
   /**
     - Selector: setExtraLineFragmentRect:usedRect:textContainer:
   */
-  @objc func setExtraLineFragmentRect(_: CGRect, usedRect: CGRect, textContainer: NSTextContainer)
+  @objc func setExtraLineFragmentRect(_ p0: CGRect, usedRect: CGRect, textContainer: NSTextContainer)
 
   /**
     - Selector: setGlyphs:properties:characterIndexes:font:forGlyphRange:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func setGlyphs(_: UnsafePointer<CGGlyph>, properties: UnsafePointer<NSLayoutManager.GlyphProperty>, characterIndexes: UnsafePointer<Int>, font: NSFont, forGlyphRange: NSRange)
+  @objc @available(OSX 10.11, *) func setGlyphs(_ p0: UnsafePointer<CGGlyph>, properties: UnsafePointer<NSLayoutManager.GlyphProperty>, characterIndexes: UnsafePointer<Int>, font: NSFont, forGlyphRange: NSRange)
 
   /**
     - Selector: setLayoutRect:forTextBlock:glyphRange:
   */
-  @objc (setLayoutRect:forTextBlock:glyphRange:) func setLayoutRect(_: CGRect, `for`: NSTextBlock, glyphRange: NSRange)
+  @objc (setLayoutRect:forTextBlock:glyphRange:) func setLayoutRect(_ p0: CGRect, `for`: NSTextBlock, glyphRange: NSRange)
 
   /**
     - Selector: setLineFragmentRect:forGlyphRange:usedRect:
   */
-  @objc func setLineFragmentRect(_: CGRect, forGlyphRange: NSRange, usedRect: CGRect)
+  @objc func setLineFragmentRect(_ p0: CGRect, forGlyphRange: NSRange, usedRect: CGRect)
 
   /**
     - Selector: setLocation:forStartOfGlyphRange:
   */
-  @objc func setLocation(_: CGPoint, forStartOfGlyphRange: NSRange)
+  @objc func setLocation(_ p0: CGPoint, forStartOfGlyphRange: NSRange)
 
   /**
     - Selector: setNotShownAttribute:forGlyphAtIndex:
   */
-  @objc (setNotShownAttribute:forGlyphAtIndex:) func setNotShownAttribute(_: Bool, forGlyphAt: Int)
+  @objc (setNotShownAttribute:forGlyphAtIndex:) func setNotShownAttribute(_ p0: Bool, forGlyphAt: Int)
 
   /**
     - Selector: setTemporaryAttributes:forCharacterRange:
   */
-  @objc func setTemporaryAttributes(_: [NSAttributedString.Key: Any], forCharacterRange: NSRange)
+  @objc func setTemporaryAttributes(_ p0: [NSAttributedString.Key: Any], forCharacterRange: NSRange)
 
   /**
     - Selector: setTextContainer:forGlyphRange:
   */
-  @objc func setTextContainer(_: NSTextContainer, forGlyphRange: NSRange)
+  @objc func setTextContainer(_ p0: NSTextContainer, forGlyphRange: NSRange)
 
   /**
     - Selector: showAttachmentCell:inRect:characterIndex:
   */
-  @objc (showAttachmentCell:inRect:characterIndex:) func showAttachmentCell(_: NSCell, in: CGRect, characterIndex: Int)
+  @objc (showAttachmentCell:inRect:characterIndex:) func showAttachmentCell(_ p0: NSCell, in: CGRect, characterIndex: Int)
 
   /**
     - Selector: showCGGlyphs:positions:count:font:textMatrix:attributes:inContext:
     - Introduced: 10.15
   */
-  @objc (showCGGlyphs:positions:count:font:textMatrix:attributes:inContext:) @available(OSX 10.15, *) func showCGGlyphs(_: UnsafePointer<CGGlyph>, positions: UnsafePointer<CGPoint>, count: Int, font: NSFont, textMatrix: CGAffineTransform, attributes: [NSAttributedString.Key: Any], in: CGContext)
+  @objc (showCGGlyphs:positions:count:font:textMatrix:attributes:inContext:) @available(OSX 10.15, *) func showCGGlyphs(_ p0: UnsafePointer<CGGlyph>, positions: UnsafePointer<CGPoint>, count: Int, font: NSFont, textMatrix: CGAffineTransform, attributes: [NSAttributedString.Key: Any], in: CGContext)
 
   /**
     - Selector: strikethroughGlyphRange:strikethroughType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:
   */
-  @objc func strikethroughGlyphRange(_: NSRange, strikethroughType: NSUnderlineStyle, lineFragmentRect: CGRect, lineFragmentGlyphRange: NSRange, containerOrigin: CGPoint)
+  @objc func strikethroughGlyphRange(_ p0: NSRange, strikethroughType: NSUnderlineStyle, lineFragmentRect: CGRect, lineFragmentGlyphRange: NSRange, containerOrigin: CGPoint)
 
   /**
     - Selector: temporaryAttribute:atCharacterIndex:effectiveRange:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func temporaryAttribute(_: NSAttributedString.Key, atCharacterIndex: Int, effectiveRange: NSRangePointer?) -> Any?
+  @objc @available(OSX 10.5, *) func temporaryAttribute(_ p0: NSAttributedString.Key, atCharacterIndex: Int, effectiveRange: NSRangePointer?) -> Any?
 
   /**
     - Selector: temporaryAttribute:atCharacterIndex:longestEffectiveRange:inRange:
     - Introduced: 10.5
   */
-  @objc (temporaryAttribute:atCharacterIndex:longestEffectiveRange:inRange:) @available(OSX 10.5, *) func temporaryAttribute(_: NSAttributedString.Key, atCharacterIndex: Int, longestEffectiveRange: NSRangePointer?, in: NSRange) -> Any?
+  @objc (temporaryAttribute:atCharacterIndex:longestEffectiveRange:inRange:) @available(OSX 10.5, *) func temporaryAttribute(_ p0: NSAttributedString.Key, atCharacterIndex: Int, longestEffectiveRange: NSRangePointer?, in: NSRange) -> Any?
 
   /**
     - Selector: temporaryAttributesAtCharacterIndex:effectiveRange:
@@ -471,12 +471,12 @@ import AppKit
   /**
     - Selector: textContainerChangedGeometry:
   */
-  @objc func textContainerChangedGeometry(_: NSTextContainer)
+  @objc func textContainerChangedGeometry(_ p0: NSTextContainer)
 
   /**
     - Selector: textContainerChangedTextView:
   */
-  @objc func textContainerChangedTextView(_: NSTextContainer)
+  @objc func textContainerChangedTextView(_ p0: NSTextContainer)
 
   /**
     - Selector: textContainerForGlyphAtIndex:effectiveRange:
@@ -498,7 +498,7 @@ import AppKit
   /**
     - Selector: underlineGlyphRange:underlineType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:
   */
-  @objc func underlineGlyphRange(_: NSRange, underlineType: NSUnderlineStyle, lineFragmentRect: CGRect, lineFragmentGlyphRange: NSRange, containerOrigin: CGPoint)
+  @objc func underlineGlyphRange(_ p0: NSRange, underlineType: NSUnderlineStyle, lineFragmentRect: CGRect, lineFragmentGlyphRange: NSRange, containerOrigin: CGPoint)
 
   /**
     - Selector: usedRectForTextContainer:

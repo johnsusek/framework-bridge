@@ -42,12 +42,12 @@ import Quartz
   /**
     - Selector: importFilter:
   */
-  @objc func importFilter(_: [AnyHashable: Any]) -> QuartzFilter
+  @objc func importFilter(_ p0: [AnyHashable: Any]) -> QuartzFilter
 
   /**
     - Selector: selectFilter:
   */
-  @objc (selectFilter:) func select(_: QuartzFilter) -> Bool
+  @objc (selectFilter:) func select(_ p0: QuartzFilter) -> Bool
 
   /**
     - Selector: selectedFilter
@@ -57,7 +57,7 @@ import Quartz
   /**
     - Selector: setDelegate:
   */
-  @objc func setDelegate(_: Any)
+  @objc func setDelegate(_ p0: Any)
 }
 
 extension QuartzFilterManager: QuartzFilterManagerExports {

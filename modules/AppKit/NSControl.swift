@@ -45,12 +45,12 @@ import AppKit
   /**
     - Selector: drawCell:
   */
-  @objc func drawCell(_: NSCell)
+  @objc func drawCell(_ p0: NSCell)
 
   /**
     - Selector: drawCellInside:
   */
-  @objc (drawCellInside:) func drawCellInside(_: NSCell)
+  @objc (drawCellInside:) func drawCellInside(_ p0: NSCell)
 
   /**
     - Selector: drawWithExpansionFrame:inView:
@@ -68,7 +68,7 @@ import AppKit
     - Selector: endEditing:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) func endEditing(_: NSText)
+  @objc @available(OSX 10.10, *) func endEditing(_ p0: NSText)
 
   /**
     - Selector: expansionFrameWithFrame:
@@ -85,12 +85,12 @@ import AppKit
   /**
     - Selector: performClick:
   */
-  @objc func performClick(_: Any?)
+  @objc func performClick(_ p0: Any?)
 
   /**
     - Selector: selectCell:
   */
-  @objc func selectCell(_: NSCell)
+  @objc func selectCell(_ p0: NSCell)
 
   /**
     - Selector: selectWithFrame:editor:delegate:start:length:
@@ -111,7 +111,7 @@ import AppKit
   /**
     - Selector: sendAction:to:
   */
-  @objc func sendAction(_: Selector?, to: Any?) -> Bool
+  @objc func sendAction(_ p0: Selector?, to: Any?) -> Bool
 
   /**
     - Selector: sendActionOn:
@@ -122,7 +122,7 @@ import AppKit
     - Selector: sizeThatFits:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) func sizeThatFits(_: CGSize) -> CGSize
+  @objc @available(OSX 10.10, *) func sizeThatFits(_ p0: CGSize) -> CGSize
 
   /**
     - Selector: sizeToFit
@@ -132,43 +132,43 @@ import AppKit
   /**
     - Selector: takeDoubleValueFrom:
   */
-  @objc func takeDoubleValueFrom(_: Any?)
+  @objc func takeDoubleValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeFloatValueFrom:
   */
-  @objc func takeFloatValueFrom(_: Any?)
+  @objc func takeFloatValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeIntValueFrom:
   */
-  @objc func takeIntValueFrom(_: Any?)
+  @objc func takeIntValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeIntegerValueFrom:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func takeIntegerValueFrom(_: Any?)
+  @objc @available(OSX 10.5, *) func takeIntegerValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeObjectValueFrom:
   */
-  @objc func takeObjectValueFrom(_: Any?)
+  @objc func takeObjectValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeStringValueFrom:
   */
-  @objc func takeStringValueFrom(_: Any?)
+  @objc func takeStringValueFrom(_ p0: Any?)
 
   /**
     - Selector: updateCell:
   */
-  @objc func updateCell(_: NSCell)
+  @objc func updateCell(_ p0: NSCell)
 
   /**
     - Selector: updateCellInside:
   */
-  @objc (updateCellInside:) func updateCellInside(_: NSCell)
+  @objc (updateCellInside:) func updateCellInside(_ p0: NSCell)
 
   /**
     - Selector: validateEditing

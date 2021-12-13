@@ -45,7 +45,7 @@ import AppKit
   /**
     - Selector: handleAction:
   */
-  @objc func handleAction(_: NSSliderAccessory)
+  @objc func handleAction(_ p0: NSSliderAccessory)
 }
 
 extension NSSliderAccessoryBehavior: NSSliderAccessoryBehaviorExports {

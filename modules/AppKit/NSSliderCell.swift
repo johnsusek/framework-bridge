@@ -43,7 +43,7 @@ import AppKit
   /**
     - Selector: drawKnob:
   */
-  @objc func drawKnob(_: CGRect)
+  @objc func drawKnob(_ p0: CGRect)
 
   /**
     - Selector: drawTickMarks

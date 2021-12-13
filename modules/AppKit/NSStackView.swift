@@ -35,12 +35,12 @@ import AppKit
     - Selector: addArrangedSubview:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func addArrangedSubview(_: NSView)
+  @objc @available(OSX 10.11, *) func addArrangedSubview(_ p0: NSView)
 
   /**
     - Selector: addView:inGravity:
   */
-  @objc (addView:inGravity:) func addView(_: NSView, in: NSStackView.Gravity)
+  @objc (addView:inGravity:) func addView(_ p0: NSView, in: NSStackView.Gravity)
 
   /**
     - Selector: clippingResistancePriorityForOrientation:
@@ -61,48 +61,48 @@ import AppKit
     - Selector: insertArrangedSubview:atIndex:
     - Introduced: 10.11
   */
-  @objc (insertArrangedSubview:atIndex:) @available(OSX 10.11, *) func insertArrangedSubview(_: NSView, at: Int)
+  @objc (insertArrangedSubview:atIndex:) @available(OSX 10.11, *) func insertArrangedSubview(_ p0: NSView, at: Int)
 
   /**
     - Selector: insertView:atIndex:inGravity:
   */
-  @objc (insertView:atIndex:inGravity:) func insertView(_: NSView, at: Int, in: NSStackView.Gravity)
+  @objc (insertView:atIndex:inGravity:) func insertView(_ p0: NSView, at: Int, in: NSStackView.Gravity)
 
   /**
     - Selector: removeArrangedSubview:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func removeArrangedSubview(_: NSView)
+  @objc @available(OSX 10.11, *) func removeArrangedSubview(_ p0: NSView)
 
   /**
     - Selector: removeView:
   */
-  @objc func removeView(_: NSView)
+  @objc func removeView(_ p0: NSView)
 
   /**
     - Selector: setClippingResistancePriority:forOrientation:
   */
-  @objc (setClippingResistancePriority:forOrientation:) func setClippingResistancePriority(_: NSLayoutConstraint.Priority, `for`: NSLayoutConstraint.Orientation)
+  @objc (setClippingResistancePriority:forOrientation:) func setClippingResistancePriority(_ p0: NSLayoutConstraint.Priority, `for`: NSLayoutConstraint.Orientation)
 
   /**
     - Selector: setCustomSpacing:afterView:
   */
-  @objc (setCustomSpacing:afterView:) func setCustomSpacing(_: CGFloat, after: NSView)
+  @objc (setCustomSpacing:afterView:) func setCustomSpacing(_ p0: CGFloat, after: NSView)
 
   /**
     - Selector: setHuggingPriority:forOrientation:
   */
-  @objc (setHuggingPriority:forOrientation:) func setHuggingPriority(_: NSLayoutConstraint.Priority, `for`: NSLayoutConstraint.Orientation)
+  @objc (setHuggingPriority:forOrientation:) func setHuggingPriority(_ p0: NSLayoutConstraint.Priority, `for`: NSLayoutConstraint.Orientation)
 
   /**
     - Selector: setViews:inGravity:
   */
-  @objc (setViews:inGravity:) func setViews(_: [NSView], in: NSStackView.Gravity)
+  @objc (setViews:inGravity:) func setViews(_ p0: [NSView], in: NSStackView.Gravity)
 
   /**
     - Selector: setVisibilityPriority:forView:
   */
-  @objc (setVisibilityPriority:forView:) func setVisibilityPriority(_: NSStackView.VisibilityPriority, `for`: NSView)
+  @objc (setVisibilityPriority:forView:) func setVisibilityPriority(_ p0: NSStackView.VisibilityPriority, `for`: NSView)
 
   /**
     - Selector: viewsInGravity:

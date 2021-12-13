@@ -59,7 +59,7 @@ import AppKit
   /**
     - Selector: alignJustified:
   */
-  @objc func alignJustified(_: Any?)
+  @objc func alignJustified(_ p0: Any?)
 
   /**
     - Selector: breakUndoCoalescing
@@ -69,18 +69,18 @@ import AppKit
   /**
     - Selector: changeAttributes:
   */
-  @objc func changeAttributes(_: Any?)
+  @objc func changeAttributes(_ p0: Any?)
 
   /**
     - Selector: changeDocumentBackgroundColor:
   */
-  @objc func changeDocumentBackgroundColor(_: Any?)
+  @objc func changeDocumentBackgroundColor(_ p0: Any?)
 
   /**
     - Selector: changeLayoutOrientation:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func changeLayoutOrientation(_: Any?)
+  @objc @available(OSX 10.7, *) func changeLayoutOrientation(_ p0: Any?)
 
   /**
     - Selector: characterIndexForInsertionAtPoint:
@@ -92,7 +92,7 @@ import AppKit
     - Selector: checkTextInDocument:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func checkTextInDocument(_: Any?)
+  @objc @available(OSX 10.6, *) func checkTextInDocument(_ p0: Any?)
 
   /**
     - Selector: checkTextInRange:types:options:
@@ -104,7 +104,7 @@ import AppKit
     - Selector: checkTextInSelection:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func checkTextInSelection(_: Any?)
+  @objc @available(OSX 10.6, *) func checkTextInSelection(_ p0: Any?)
 
   /**
     - Selector: cleanUpAfterDragOperation
@@ -155,12 +155,12 @@ import AppKit
     - Selector: handleTextCheckingResults:forRange:types:options:orthography:wordCount:
     - Introduced: 10.6
   */
-  @objc (handleTextCheckingResults:forRange:types:options:orthography:wordCount:) @available(OSX 10.6, *) func handleTextCheckingResults(_: [NSTextCheckingResult], forRange: NSRange, types: UInt64, options: [NSSpellChecker.OptionKey: Any], orthography: NSOrthography, wordCount: Int)
+  @objc (handleTextCheckingResults:forRange:types:options:orthography:wordCount:) @available(OSX 10.6, *) func handleTextCheckingResults(_ p0: [NSTextCheckingResult], forRange: NSRange, types: UInt64, options: [NSSpellChecker.OptionKey: Any], orthography: NSOrthography, wordCount: Int)
 
   /**
     - Selector: insertCompletion:forPartialWordRange:movement:isFinal:
   */
-  @objc func insertCompletion(_: String, forPartialWordRange: NSRange, movement: Int, isFinal: Bool)
+  @objc func insertCompletion(_ p0: String, forPartialWordRange: NSRange, movement: Int, isFinal: Bool)
 
   /**
     - Selector: invalidateTextContainerOrigin
@@ -170,64 +170,64 @@ import AppKit
   /**
     - Selector: loosenKerning:
   */
-  @objc func loosenKerning(_: Any?)
+  @objc func loosenKerning(_ p0: Any?)
 
   /**
     - Selector: lowerBaseline:
   */
-  @objc func lowerBaseline(_: Any?)
+  @objc func lowerBaseline(_ p0: Any?)
 
   /**
     - Selector: orderFrontLinkPanel:
   */
-  @objc func orderFrontLinkPanel(_: Any?)
+  @objc func orderFrontLinkPanel(_ p0: Any?)
 
   /**
     - Selector: orderFrontListPanel:
   */
-  @objc func orderFrontListPanel(_: Any?)
+  @objc func orderFrontListPanel(_ p0: Any?)
 
   /**
     - Selector: orderFrontSharingServicePicker:
     - Introduced: 10.8
   */
-  @objc @available(OSX 10.8, *) func orderFrontSharingServicePicker(_: Any?)
+  @objc @available(OSX 10.8, *) func orderFrontSharingServicePicker(_ p0: Any?)
 
   /**
     - Selector: orderFrontSpacingPanel:
   */
-  @objc func orderFrontSpacingPanel(_: Any?)
+  @objc func orderFrontSpacingPanel(_ p0: Any?)
 
   /**
     - Selector: orderFrontSubstitutionsPanel:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func orderFrontSubstitutionsPanel(_: Any?)
+  @objc @available(OSX 10.6, *) func orderFrontSubstitutionsPanel(_ p0: Any?)
 
   /**
     - Selector: orderFrontTablePanel:
   */
-  @objc func orderFrontTablePanel(_: Any?)
+  @objc func orderFrontTablePanel(_ p0: Any?)
 
   /**
     - Selector: outline:
   */
-  @objc func outline(_: Any?)
+  @objc func outline(_ p0: Any?)
 
   /**
     - Selector: pasteAsPlainText:
   */
-  @objc func pasteAsPlainText(_: Any?)
+  @objc func pasteAsPlainText(_ p0: Any?)
 
   /**
     - Selector: pasteAsRichText:
   */
-  @objc func pasteAsRichText(_: Any?)
+  @objc func pasteAsRichText(_ p0: Any?)
 
   /**
     - Selector: performFindPanelAction:
   */
-  @objc func performFindPanelAction(_: Any?)
+  @objc func performFindPanelAction(_ p0: Any?)
 
   /**
     - Selector: performValidatedReplacementInRange:withAttributedString:
@@ -244,12 +244,12 @@ import AppKit
     - Selector: quickLookPreviewableItemsInRanges:
     - Introduced: 10.7
   */
-  // unavailableInSwift @objc @available(OSX 10.7, *) func quickLookPreviewableItemsInRanges(_: [NSValue]) -> [QLPreviewItem]
+  // unavailableInSwift @objc @available(OSX 10.7, *) func quickLookPreviewableItemsInRanges(_ p0: [NSValue]) -> [QLPreviewItem]
 
   /**
     - Selector: raiseBaseline:
   */
-  @objc func raiseBaseline(_: Any?)
+  @objc func raiseBaseline(_ p0: Any?)
 
   /**
     - Selector: readSelectionFromPasteboard:
@@ -264,7 +264,7 @@ import AppKit
   /**
     - Selector: replaceTextContainer:
   */
-  @objc func replaceTextContainer(_: NSTextContainer)
+  @objc func replaceTextContainer(_ p0: NSTextContainer)
 
   /**
     - Selector: selectionRangeForProposedRange:granularity:
@@ -274,44 +274,44 @@ import AppKit
   /**
     - Selector: setAlignment:range:
   */
-  @objc func setAlignment(_: NSTextAlignment, range: NSRange)
+  @objc func setAlignment(_ p0: NSTextAlignment, range: NSRange)
 
   /**
     - Selector: setBaseWritingDirection:range:
   */
-  @objc func setBaseWritingDirection(_: NSWritingDirection, range: NSRange)
+  @objc func setBaseWritingDirection(_ p0: NSWritingDirection, range: NSRange)
 
   /**
     - Selector: setConstrainedFrameSize:
   */
-  @objc func setConstrainedFrameSize(_: CGSize)
+  @objc func setConstrainedFrameSize(_ p0: CGSize)
 
   /**
     - Selector: setLayoutOrientation:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func setLayoutOrientation(_: NSLayoutManager.TextLayoutOrientation)
+  @objc @available(OSX 10.7, *) func setLayoutOrientation(_ p0: NSLayoutManager.TextLayoutOrientation)
 
   /**
     - Selector: setNeedsDisplayInRect:avoidAdditionalLayout:
   */
-  @objc (setNeedsDisplayInRect:avoidAdditionalLayout:) func setNeedsDisplay(_: CGRect, avoidAdditionalLayout: Bool)
+  @objc (setNeedsDisplayInRect:avoidAdditionalLayout:) func setNeedsDisplay(_ p0: CGRect, avoidAdditionalLayout: Bool)
 
   /**
     - Selector: setSelectedRange:
   */
-  @objc func setSelectedRange(_: NSRange)
+  @objc func setSelectedRange(_ p0: NSRange)
 
   /**
     - Selector: setSelectedRange:affinity:stillSelecting:
   */
-  @objc func setSelectedRange(_: NSRange, affinity: NSSelectionAffinity, stillSelecting: Bool)
+  @objc func setSelectedRange(_ p0: NSRange, affinity: NSSelectionAffinity, stillSelecting: Bool)
 
   /**
     - Selector: setSpellingState:range:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func setSpellingState(_: Int, range: NSRange)
+  @objc @available(OSX 10.5, *) func setSpellingState(_ p0: Int, range: NSRange)
 
   /**
     - Selector: shouldChangeTextInRange:replacementString:
@@ -352,91 +352,91 @@ import AppKit
   /**
     - Selector: startSpeaking:
   */
-  @objc func startSpeaking(_: Any?)
+  @objc func startSpeaking(_ p0: Any?)
 
   /**
     - Selector: stopSpeaking:
   */
-  @objc func stopSpeaking(_: Any?)
+  @objc func stopSpeaking(_ p0: Any?)
 
   /**
     - Selector: tightenKerning:
   */
-  @objc func tightenKerning(_: Any?)
+  @objc func tightenKerning(_ p0: Any?)
 
   /**
     - Selector: toggleAutomaticDashSubstitution:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func toggleAutomaticDashSubstitution(_: Any?)
+  @objc @available(OSX 10.6, *) func toggleAutomaticDashSubstitution(_ p0: Any?)
 
   /**
     - Selector: toggleAutomaticDataDetection:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func toggleAutomaticDataDetection(_: Any?)
+  @objc @available(OSX 10.6, *) func toggleAutomaticDataDetection(_ p0: Any?)
 
   /**
     - Selector: toggleAutomaticLinkDetection:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func toggleAutomaticLinkDetection(_: Any?)
+  @objc @available(OSX 10.5, *) func toggleAutomaticLinkDetection(_ p0: Any?)
 
   /**
     - Selector: toggleAutomaticQuoteSubstitution:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func toggleAutomaticQuoteSubstitution(_: Any?)
+  @objc @available(OSX 10.5, *) func toggleAutomaticQuoteSubstitution(_ p0: Any?)
 
   /**
     - Selector: toggleAutomaticSpellingCorrection:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func toggleAutomaticSpellingCorrection(_: Any?)
+  @objc @available(OSX 10.6, *) func toggleAutomaticSpellingCorrection(_ p0: Any?)
 
   /**
     - Selector: toggleAutomaticTextCompletion:
     - Introduced: 10.12.2
   */
-  @objc @available(OSX 10.12.2, *) func toggleAutomaticTextCompletion(_: Any?)
+  @objc @available(OSX 10.12.2, *) func toggleAutomaticTextCompletion(_ p0: Any?)
 
   /**
     - Selector: toggleAutomaticTextReplacement:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func toggleAutomaticTextReplacement(_: Any?)
+  @objc @available(OSX 10.6, *) func toggleAutomaticTextReplacement(_ p0: Any?)
 
   /**
     - Selector: toggleContinuousSpellChecking:
   */
-  @objc func toggleContinuousSpellChecking(_: Any?)
+  @objc func toggleContinuousSpellChecking(_ p0: Any?)
 
   /**
     - Selector: toggleGrammarChecking:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func toggleGrammarChecking(_: Any?)
+  @objc @available(OSX 10.5, *) func toggleGrammarChecking(_ p0: Any?)
 
   /**
     - Selector: toggleQuickLookPreviewPanel:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func toggleQuickLookPreviewPanel(_: Any?)
+  @objc @available(OSX 10.7, *) func toggleQuickLookPreviewPanel(_ p0: Any?)
 
   /**
     - Selector: toggleSmartInsertDelete:
   */
-  @objc func toggleSmartInsertDelete(_: Any?)
+  @objc func toggleSmartInsertDelete(_ p0: Any?)
 
   /**
     - Selector: turnOffKerning:
   */
-  @objc func turnOffKerning(_: Any?)
+  @objc func turnOffKerning(_ p0: Any?)
 
   /**
     - Selector: turnOffLigatures:
   */
-  @objc func turnOffLigatures(_: Any?)
+  @objc func turnOffLigatures(_ p0: Any?)
 
   /**
     - Selector: updateCandidates
@@ -457,7 +457,7 @@ import AppKit
   /**
     - Selector: updateInsertionPointStateAndRestartTimer:
   */
-  @objc func updateInsertionPointStateAndRestartTimer(_: Bool)
+  @objc func updateInsertionPointStateAndRestartTimer(_ p0: Bool)
 
   /**
     - Selector: updateQuickLookPreviewPanel
@@ -485,17 +485,17 @@ import AppKit
   /**
     - Selector: useAllLigatures:
   */
-  @objc func useAllLigatures(_: Any?)
+  @objc func useAllLigatures(_ p0: Any?)
 
   /**
     - Selector: useStandardKerning:
   */
-  @objc func useStandardKerning(_: Any?)
+  @objc func useStandardKerning(_ p0: Any?)
 
   /**
     - Selector: useStandardLigatures:
   */
-  @objc func useStandardLigatures(_: Any?)
+  @objc func useStandardLigatures(_ p0: Any?)
 
   /**
     - Selector: writeSelectionToPasteboard:type:

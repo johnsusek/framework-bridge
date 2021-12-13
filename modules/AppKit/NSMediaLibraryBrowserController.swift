@@ -30,7 +30,7 @@ import AppKit
   /**
     - Selector: togglePanel:
   */
-  @objc func togglePanel(_: Any?)
+  @objc func togglePanel(_ p0: Any?)
 
   // Own Instance Properties
 

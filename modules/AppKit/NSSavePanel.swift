@@ -46,7 +46,7 @@ import AppKit
   /**
     - Selector: standardWindowButton:forStyleMask:
   */
-  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_ p0: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
 
   /**
     - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
@@ -77,12 +77,12 @@ import AppKit
   /**
     - Selector: cancel:
   */
-  @objc func cancel(_: Any?)
+  @objc func cancel(_ p0: Any?)
 
   /**
     - Selector: ok:
   */
-  @objc func ok(_: Any?)
+  @objc func ok(_ p0: Any?)
 
   /**
     - Selector: runModal

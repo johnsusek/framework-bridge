@@ -35,7 +35,7 @@ import AppKit
   /**
     - Selector: getTIFFCompressionTypes:count:
   */
-  @objc static func getTIFFCompressionTypes(_: UnsafeMutablePointer<UnsafePointer<NSBitmapImageRep.TIFFCompression>?>, count: UnsafeMutablePointer<NSInteger>)
+  @objc static func getTIFFCompressionTypes(_ p0: UnsafeMutablePointer<UnsafePointer<NSBitmapImageRep.TIFFCompression>?>, count: UnsafeMutablePointer<NSInteger>)
 
   /**
     - Selector: imageRepWithData:
@@ -60,7 +60,7 @@ import AppKit
   /**
     - Selector: registerImageRepClass:
   */
-  @objc (registerImageRepClass:) static func registerClass(_: AnyClass)
+  @objc (registerImageRepClass:) static func registerClass(_ p0: AnyClass)
 
   /**
     - Selector: representationOfImageRepsInArray:usingType:properties:
@@ -70,7 +70,7 @@ import AppKit
   /**
     - Selector: unregisterImageRepClass:
   */
-  @objc (unregisterImageRepClass:) static func unregisterClass(_: AnyClass)
+  @objc (unregisterImageRepClass:) static func unregisterClass(_ p0: AnyClass)
 
   // Instance Methods
 
@@ -109,17 +109,17 @@ import AppKit
   /**
     - Selector: getBitmapDataPlanes:
   */
-  @objc func getBitmapDataPlanes(_: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>?>)
+  @objc func getBitmapDataPlanes(_ p0: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>?>)
 
   /**
     - Selector: getCompression:factor:
   */
-  @objc func getCompression(_: UnsafeMutablePointer<NSBitmapImageRep.TIFFCompression>?, factor: UnsafeMutablePointer<Float>?)
+  @objc func getCompression(_ p0: UnsafeMutablePointer<NSBitmapImageRep.TIFFCompression>?, factor: UnsafeMutablePointer<Float>?)
 
   /**
     - Selector: getPixel:atX:y:
   */
-  @objc func getPixel(_: UnsafeMutablePointer<Int>, atX: Int, y: Int)
+  @objc func getPixel(_ p0: UnsafeMutablePointer<Int>, atX: Int, y: Int)
 
   /**
     - Selector: incrementalLoadFromData:complete:
@@ -134,22 +134,22 @@ import AppKit
   /**
     - Selector: setColor:atX:y:
   */
-  @objc func setColor(_: NSColor, atX: Int, y: Int)
+  @objc func setColor(_ p0: NSColor, atX: Int, y: Int)
 
   /**
     - Selector: setCompression:factor:
   */
-  @objc func setCompression(_: NSBitmapImageRep.TIFFCompression, factor: Float)
+  @objc func setCompression(_ p0: NSBitmapImageRep.TIFFCompression, factor: Float)
 
   /**
     - Selector: setPixel:atX:y:
   */
-  @objc func setPixel(_: UnsafeMutablePointer<Int>, atX: Int, y: Int)
+  @objc func setPixel(_ p0: UnsafeMutablePointer<Int>, atX: Int, y: Int)
 
   /**
     - Selector: setProperty:withValue:
   */
-  @objc func setProperty(_: NSBitmapImageRep.PropertyKey, withValue: Any?)
+  @objc func setProperty(_ p0: NSBitmapImageRep.PropertyKey, withValue: Any?)
 
   /**
     - Selector: valueForProperty:

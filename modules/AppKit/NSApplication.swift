@@ -20,7 +20,7 @@ import AppKit
   /**
     - Selector: detachDrawingThread:toTarget:withObject:
   */
-  @objc (detachDrawingThread:toTarget:withObject:) static func detachDrawingThread(_: Selector, toTarget: Any, with: Any?)
+  @objc (detachDrawingThread:toTarget:withObject:) static func detachDrawingThread(_ p0: Selector, toTarget: Any, with: Any?)
 
   // Own Static Properties
 
@@ -39,7 +39,7 @@ import AppKit
   /**
     - Selector: activateContextHelpMode:
   */
-  @objc func activateContextHelpMode(_: Any?)
+  @objc func activateContextHelpMode(_ p0: Any?)
 
   /**
     - Selector: activateIgnoringOtherApps:
@@ -55,12 +55,12 @@ import AppKit
   /**
     - Selector: addWindowsItem:title:filename:
   */
-  @objc func addWindowsItem(_: NSWindow, title: String, filename: Bool)
+  @objc func addWindowsItem(_ p0: NSWindow, title: String, filename: Bool)
 
   /**
     - Selector: arrangeInFront:
   */
-  @objc func arrangeInFront(_: Any?)
+  @objc func arrangeInFront(_ p0: Any?)
 
   /**
     - Selector: beginModalSessionForWindow:
@@ -70,12 +70,12 @@ import AppKit
   /**
     - Selector: cancelUserAttentionRequest:
   */
-  @objc func cancelUserAttentionRequest(_: Int)
+  @objc func cancelUserAttentionRequest(_ p0: Int)
 
   /**
     - Selector: changeWindowsItem:title:filename:
   */
-  @objc func changeWindowsItem(_: NSWindow, title: String, filename: Bool)
+  @objc func changeWindowsItem(_ p0: NSWindow, title: String, filename: Bool)
 
   /**
     - Selector: completeStateRestoration
@@ -108,7 +108,7 @@ import AppKit
   /**
     - Selector: endModalSession:
   */
-  @objc (endModalSession:) func endModalSession(_: NSApplication.ModalSession)
+  @objc (endModalSession:) func endModalSession(_ p0: NSApplication.ModalSession)
 
   /**
     - Selector: enumerateWindowsWithOptions:usingBlock:
@@ -130,17 +130,17 @@ import AppKit
   /**
     - Selector: hide:
   */
-  @objc func hide(_: Any?)
+  @objc func hide(_ p0: Any?)
 
   /**
     - Selector: hideOtherApplications:
   */
-  @objc func hideOtherApplications(_: Any?)
+  @objc func hideOtherApplications(_ p0: Any?)
 
   /**
     - Selector: miniaturizeAll:
   */
-  @objc func miniaturizeAll(_: Any?)
+  @objc func miniaturizeAll(_ p0: Any?)
 
   /**
     - Selector: nextEventMatchingMask:untilDate:inMode:dequeue:
@@ -150,17 +150,17 @@ import AppKit
   /**
     - Selector: orderFrontCharacterPalette:
   */
-  @objc func orderFrontCharacterPalette(_: Any?)
+  @objc func orderFrontCharacterPalette(_ p0: Any?)
 
   /**
     - Selector: orderFrontColorPanel:
   */
-  @objc func orderFrontColorPanel(_: Any?)
+  @objc func orderFrontColorPanel(_ p0: Any?)
 
   /**
     - Selector: orderFrontStandardAboutPanel:
   */
-  @objc func orderFrontStandardAboutPanel(_: Any?)
+  @objc func orderFrontStandardAboutPanel(_ p0: Any?)
 
   /**
     - Selector: orderFrontStandardAboutPanelWithOptions:
@@ -170,7 +170,7 @@ import AppKit
   /**
     - Selector: postEvent:atStart:
   */
-  @objc (postEvent:atStart:) func postEvent(_: NSEvent, atStart: Bool)
+  @objc (postEvent:atStart:) func postEvent(_ p0: NSEvent, atStart: Bool)
 
   /**
     - Selector: preventWindowOrdering
@@ -192,18 +192,18 @@ import AppKit
   /**
     - Selector: registerServicesMenuSendTypes:returnTypes:
   */
-  @objc func registerServicesMenuSendTypes(_: [NSPasteboard.PasteboardType], returnTypes: [NSPasteboard.PasteboardType])
+  @objc func registerServicesMenuSendTypes(_ p0: [NSPasteboard.PasteboardType], returnTypes: [NSPasteboard.PasteboardType])
 
   /**
     - Selector: registerUserInterfaceItemSearchHandler:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func registerUserInterfaceItemSearchHandler(_: NSUserInterfaceItemSearching)
+  @objc @available(OSX 10.6, *) func registerUserInterfaceItemSearchHandler(_ p0: NSUserInterfaceItemSearching)
 
   /**
     - Selector: removeWindowsItem:
   */
-  @objc func removeWindowsItem(_: NSWindow)
+  @objc func removeWindowsItem(_ p0: NSWindow)
 
   /**
     - Selector: replyToApplicationShouldTerminate:
@@ -218,12 +218,12 @@ import AppKit
   /**
     - Selector: reportException:
   */
-  @objc (reportException:) func reportException(_: NSException)
+  @objc (reportException:) func reportException(_ p0: NSException)
 
   /**
     - Selector: requestUserAttention:
   */
-  @objc func requestUserAttention(_: NSApplication.RequestUserAttentionType) -> Int
+  @objc func requestUserAttention(_ p0: NSApplication.RequestUserAttentionType) -> Int
 
   /**
     - Selector: restoreWindowWithIdentifier:state:completionHandler:
@@ -244,49 +244,49 @@ import AppKit
   /**
     - Selector: runModalSession:
   */
-  @objc (runModalSession:) func runModalSession(_: NSApplication.ModalSession) -> NSApplication.ModalResponse
+  @objc (runModalSession:) func runModalSession(_ p0: NSApplication.ModalSession) -> NSApplication.ModalResponse
 
   /**
     - Selector: runPageLayout:
   */
-  @objc func runPageLayout(_: Any?)
+  @objc func runPageLayout(_ p0: Any?)
 
   /**
     - Selector: searchString:inUserInterfaceItemString:searchRange:foundRange:
     - Introduced: 10.6
   */
-  @objc (searchString:inUserInterfaceItemString:searchRange:foundRange:) @available(OSX 10.6, *) func searchString(_: String, inUserInterfaceItemString: String, range: NSRange, found: UnsafeMutablePointer<NSRange>?) -> Bool
+  @objc (searchString:inUserInterfaceItemString:searchRange:foundRange:) @available(OSX 10.6, *) func searchString(_ p0: String, inUserInterfaceItemString: String, range: NSRange, found: UnsafeMutablePointer<NSRange>?) -> Bool
 
   /**
     - Selector: sendAction:to:from:
   */
-  @objc func sendAction(_: Selector, to: Any?, from: Any?) -> Bool
+  @objc func sendAction(_ p0: Selector, to: Any?, from: Any?) -> Bool
 
   /**
     - Selector: sendEvent:
   */
-  @objc (sendEvent:) func sendEvent(_: NSEvent)
+  @objc (sendEvent:) func sendEvent(_ p0: NSEvent)
 
   /**
     - Selector: setActivationPolicy:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func setActivationPolicy(_: NSApplication.ActivationPolicy) -> Bool
+  @objc @available(OSX 10.6, *) func setActivationPolicy(_ p0: NSApplication.ActivationPolicy) -> Bool
 
   /**
     - Selector: setWindowsNeedUpdate:
   */
-  @objc func setWindowsNeedUpdate(_: Bool)
+  @objc func setWindowsNeedUpdate(_ p0: Bool)
 
   /**
     - Selector: showHelp:
   */
-  @objc func showHelp(_: Any?)
+  @objc func showHelp(_ p0: Any?)
 
   /**
     - Selector: stop:
   */
-  @objc func stop(_: Any?)
+  @objc func stop(_ p0: Any?)
 
   /**
     - Selector: stopModal
@@ -311,23 +311,23 @@ import AppKit
   /**
     - Selector: terminate:
   */
-  @objc func terminate(_: Any?)
+  @objc func terminate(_ p0: Any?)
 
   /**
     - Selector: toggleTouchBarCustomizationPalette:
     - Introduced: 10.12.2
   */
-  @objc @available(OSX 10.12.2, *) func toggleTouchBarCustomizationPalette(_: Any?)
+  @objc @available(OSX 10.12.2, *) func toggleTouchBarCustomizationPalette(_ p0: Any?)
 
   /**
     - Selector: unhide:
   */
-  @objc func unhide(_: Any?)
+  @objc func unhide(_ p0: Any?)
 
   /**
     - Selector: unhideAllApplications:
   */
-  @objc func unhideAllApplications(_: Any?)
+  @objc func unhideAllApplications(_ p0: Any?)
 
   /**
     - Selector: unhideWithoutActivation
@@ -344,7 +344,7 @@ import AppKit
     - Selector: unregisterUserInterfaceItemSearchHandler:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func unregisterUserInterfaceItemSearchHandler(_: NSUserInterfaceItemSearching)
+  @objc @available(OSX 10.6, *) func unregisterUserInterfaceItemSearchHandler(_ p0: NSUserInterfaceItemSearching)
 
   /**
     - Selector: updateWindows
@@ -354,7 +354,7 @@ import AppKit
   /**
     - Selector: updateWindowsItem:
   */
-  @objc func updateWindowsItem(_: NSWindow)
+  @objc func updateWindowsItem(_ p0: NSWindow)
 
   /**
     - Selector: windowWithWindowNumber:

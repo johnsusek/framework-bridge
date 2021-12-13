@@ -23,7 +23,7 @@ import Foundation
   /**
     - Selector: addFileWrapper:
   */
-  @objc func addFileWrapper(_: FileWrapper) -> String
+  @objc func addFileWrapper(_ p0: FileWrapper) -> String
 
   /**
     - Selector: addRegularFileWithContents:preferredFilename:
@@ -33,7 +33,7 @@ import Foundation
   /**
     - Selector: keyForFileWrapper:
   */
-  @objc (keyForFileWrapper:) func keyForChildFileWrapper(_: FileWrapper) -> String?
+  @objc (keyForFileWrapper:) func keyForChildFileWrapper(_ p0: FileWrapper) -> String?
 
   /**
     - Selector: matchesContentsOfURL:
@@ -50,7 +50,7 @@ import Foundation
   /**
     - Selector: removeFileWrapper:
   */
-  @objc func removeFileWrapper(_: FileWrapper)
+  @objc func removeFileWrapper(_ p0: FileWrapper)
 
   /**
     - Selector: writeToURL:options:originalContentsURL:error:

@@ -34,13 +34,13 @@ import AppKit
   /**
     - Selector: addDocument:
   */
-  @objc func addDocument(_: NSDocument)
+  @objc func addDocument(_ p0: NSDocument)
 
   /**
     - Selector: beginOpenPanel:forTypes:completionHandler:
     - Introduced: 10.8
   */
-  // jsvalue @objc @available(OSX 10.8, *) func beginOpenPanel(_: NSOpenPanel, forTypes: [String]?, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.8, *) func beginOpenPanel(_ p0: NSOpenPanel, forTypes: [String]?, completionHandler: JSValue)
 
   /**
     - Selector: beginOpenPanelWithCompletionHandler:
@@ -51,7 +51,7 @@ import AppKit
   /**
     - Selector: clearRecentDocuments:
   */
-  @objc func clearRecentDocuments(_: Any?)
+  @objc func clearRecentDocuments(_ p0: Any?)
 
   /**
     - Selector: closeAllDocumentsWithDelegate:didCloseAllSelector:contextInfo:
@@ -102,22 +102,22 @@ import AppKit
   /**
     - Selector: newDocument:
   */
-  @objc func newDocument(_: Any?)
+  @objc func newDocument(_ p0: Any?)
 
   /**
     - Selector: noteNewRecentDocument:
   */
-  @objc func noteNewRecentDocument(_: NSDocument)
+  @objc func noteNewRecentDocument(_ p0: NSDocument)
 
   /**
     - Selector: noteNewRecentDocumentURL:
   */
-  @objc func noteNewRecentDocumentURL(_: URL)
+  @objc func noteNewRecentDocumentURL(_ p0: URL)
 
   /**
     - Selector: openDocument:
   */
-  @objc func openDocument(_: Any?)
+  @objc func openDocument(_ p0: Any?)
 
   /**
     - Selector: openDocumentWithContentsOfURL:display:completionHandler:
@@ -133,17 +133,17 @@ import AppKit
   /**
     - Selector: presentError:
   */
-  @objc func presentError(_: Error) -> Bool
+  @objc func presentError(_ p0: Error) -> Bool
 
   /**
     - Selector: presentError:modalForWindow:delegate:didPresentSelector:contextInfo:
   */
-  @objc (presentError:modalForWindow:delegate:didPresentSelector:contextInfo:) func presentError(_: Error, modalFor: NSWindow, delegate: Any?, didPresent: Selector?, contextInfo: UnsafeMutableRawPointer?)
+  @objc (presentError:modalForWindow:delegate:didPresentSelector:contextInfo:) func presentError(_ p0: Error, modalFor: NSWindow, delegate: Any?, didPresent: Selector?, contextInfo: UnsafeMutableRawPointer?)
 
   /**
     - Selector: removeDocument:
   */
-  @objc func removeDocument(_: NSDocument)
+  @objc func removeDocument(_ p0: NSDocument)
 
   /**
     - Selector: reopenDocumentForURL:withContentsOfURL:display:completionHandler:
@@ -159,12 +159,12 @@ import AppKit
   /**
     - Selector: runModalOpenPanel:forTypes:
   */
-  @objc func runModalOpenPanel(_: NSOpenPanel, forTypes: [String]?) -> Int
+  @objc func runModalOpenPanel(_ p0: NSOpenPanel, forTypes: [String]?) -> Int
 
   /**
     - Selector: saveAllDocuments:
   */
-  @objc func saveAllDocuments(_: Any?)
+  @objc func saveAllDocuments(_ p0: Any?)
 
   /**
     - Selector: standardShareMenuItem
@@ -180,7 +180,7 @@ import AppKit
   /**
     - Selector: willPresentError:
   */
-  @objc func willPresentError(_: Error) -> Error
+  @objc func willPresentError(_ p0: Error) -> Error
 
   // Own Instance Properties
 

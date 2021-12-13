@@ -23,7 +23,7 @@ import AppKit
   /**
     - Selector: noteSelectedAlternativeString:
   */
-  @objc func noteSelectedAlternativeString(_: String)
+  @objc func noteSelectedAlternativeString(_ p0: String)
 
   // Own Instance Properties
 

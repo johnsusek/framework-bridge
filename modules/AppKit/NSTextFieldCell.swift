@@ -23,7 +23,7 @@ import AppKit
     - Selector: setWantsNotificationForMarkedText:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func setWantsNotificationForMarkedText(_: Bool)
+  @objc @available(OSX 10.5, *) func setWantsNotificationForMarkedText(_ p0: Bool)
 
   // Own Instance Properties
 

@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: setDelegate:queue:
   */
-  @objc func setDelegate(_: AVPlayerItemMetadataCollectorPushDelegate?, queue: DispatchQueue?)
+  @objc func setDelegate(_ p0: AVPlayerItemMetadataCollectorPushDelegate?, queue: DispatchQueue?)
 
   // Own Instance Properties
 

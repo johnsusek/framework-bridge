@@ -28,7 +28,7 @@ import AppKit
   /**
     - Selector: canPreventGestureRecognizer:
   */
-  @objc (canPreventGestureRecognizer:) func canPrevent(_: NSGestureRecognizer) -> Bool
+  @objc (canPreventGestureRecognizer:) func canPrevent(_ p0: NSGestureRecognizer) -> Bool
 
   /**
     - Selector: flagsChanged:

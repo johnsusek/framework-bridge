@@ -28,7 +28,7 @@ import AppKit
   /**
     - Selector: addRow:
   */
-  @objc func addRow(_: Any?)
+  @objc func addRow(_ p0: Any?)
 
   /**
     - Selector: criteriaForRow:
@@ -88,12 +88,12 @@ import AppKit
   /**
     - Selector: selectRowIndexes:byExtendingSelection:
   */
-  @objc func selectRowIndexes(_: IndexSet, byExtendingSelection: Bool)
+  @objc func selectRowIndexes(_ p0: IndexSet, byExtendingSelection: Bool)
 
   /**
     - Selector: setCriteria:andDisplayValues:forRowAtIndex:
   */
-  @objc (setCriteria:andDisplayValues:forRowAtIndex:) func setCriteria(_: [Any], andDisplayValues: [Any], forRowAt: Int)
+  @objc (setCriteria:andDisplayValues:forRowAtIndex:) func setCriteria(_ p0: [Any], andDisplayValues: [Any], forRowAt: Int)
 
   /**
     - Selector: subrowIndexesForRow:

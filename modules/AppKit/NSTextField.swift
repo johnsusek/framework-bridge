@@ -52,32 +52,32 @@ import AppKit
   /**
     - Selector: selectText:
   */
-  @objc func selectText(_: Any?)
+  @objc func selectText(_ p0: Any?)
 
   /**
     - Selector: textDidBeginEditing:
   */
-  @objc func textDidBeginEditing(_: Notification)
+  @objc func textDidBeginEditing(_ p0: Notification)
 
   /**
     - Selector: textDidChange:
   */
-  @objc func textDidChange(_: Notification)
+  @objc func textDidChange(_ p0: Notification)
 
   /**
     - Selector: textDidEndEditing:
   */
-  @objc func textDidEndEditing(_: Notification)
+  @objc func textDidEndEditing(_ p0: Notification)
 
   /**
     - Selector: textShouldBeginEditing:
   */
-  @objc func textShouldBeginEditing(_: NSText) -> Bool
+  @objc func textShouldBeginEditing(_ p0: NSText) -> Bool
 
   /**
     - Selector: textShouldEndEditing:
   */
-  @objc func textShouldEndEditing(_: NSText) -> Bool
+  @objc func textShouldEndEditing(_ p0: NSText) -> Bool
 
   // Own Instance Properties
 

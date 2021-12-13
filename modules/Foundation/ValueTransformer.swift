@@ -26,7 +26,7 @@ import Foundation
   /**
     - Selector: setValueTransformer:forName:
   */
-  @objc static func setValueTransformer(_: ValueTransformer?, forName: NSValueTransformerName)
+  @objc static func setValueTransformer(_ p0: ValueTransformer?, forName: NSValueTransformerName)
 
   /**
     - Selector: transformedValueClass
@@ -48,12 +48,12 @@ import Foundation
   /**
     - Selector: reverseTransformedValue:
   */
-  @objc func reverseTransformedValue(_: Any?) -> Any?
+  @objc func reverseTransformedValue(_ p0: Any?) -> Any?
 
   /**
     - Selector: transformedValue:
   */
-  @objc func transformedValue(_: Any?) -> Any?
+  @objc func transformedValue(_ p0: Any?) -> Any?
 }
 
 extension ValueTransformer: ValueTransformerExports {

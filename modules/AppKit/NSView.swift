@@ -57,71 +57,71 @@ import AppKit
     - Selector: addConstraint:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func addConstraint(_: NSLayoutConstraint)
+  @objc @available(OSX 10.7, *) func addConstraint(_ p0: NSLayoutConstraint)
 
   /**
     - Selector: addConstraints:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func addConstraints(_: [NSLayoutConstraint])
+  @objc @available(OSX 10.7, *) func addConstraints(_ p0: [NSLayoutConstraint])
 
   /**
     - Selector: addCursorRect:cursor:
   */
-  @objc func addCursorRect(_: CGRect, cursor: NSCursor)
+  @objc func addCursorRect(_ p0: CGRect, cursor: NSCursor)
 
   /**
     - Selector: addGestureRecognizer:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) func addGestureRecognizer(_: NSGestureRecognizer)
+  @objc @available(OSX 10.10, *) func addGestureRecognizer(_ p0: NSGestureRecognizer)
 
   /**
     - Selector: addLayoutGuide:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func addLayoutGuide(_: NSLayoutGuide)
+  @objc @available(OSX 10.11, *) func addLayoutGuide(_ p0: NSLayoutGuide)
 
   /**
     - Selector: addSubview:
   */
-  @objc func addSubview(_: NSView)
+  @objc func addSubview(_ p0: NSView)
 
   /**
     - Selector: addSubview:positioned:relativeTo:
   */
-  @objc func addSubview(_: NSView, positioned: NSWindow.OrderingMode, relativeTo: NSView?)
+  @objc func addSubview(_ p0: NSView, positioned: NSWindow.OrderingMode, relativeTo: NSView?)
 
   /**
     - Selector: addToolTipRect:owner:userData:
   */
-  @objc (addToolTipRect:owner:userData:) func addToolTip(_: CGRect, owner: Any, userData: UnsafeMutableRawPointer?) -> NSView.ToolTipTag
+  @objc (addToolTipRect:owner:userData:) func addToolTip(_ p0: CGRect, owner: Any, userData: UnsafeMutableRawPointer?) -> NSView.ToolTipTag
 
   /**
     - Selector: addTrackingArea:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func addTrackingArea(_: NSTrackingArea)
+  @objc @available(OSX 10.5, *) func addTrackingArea(_ p0: NSTrackingArea)
 
   /**
     - Selector: addTrackingRect:owner:userData:assumeInside:
   */
-  @objc func addTrackingRect(_: CGRect, owner: Any, userData: UnsafeMutableRawPointer?, assumeInside: Bool) -> NSView.TrackingRectTag
+  @objc func addTrackingRect(_ p0: CGRect, owner: Any, userData: UnsafeMutableRawPointer?, assumeInside: Bool) -> NSView.TrackingRectTag
 
   /**
     - Selector: adjustPageHeightNew:top:bottom:limit:
   */
-  @objc func adjustPageHeightNew(_: UnsafeMutablePointer<CGFloat>, top: CGFloat, bottom: CGFloat, limit: CGFloat)
+  @objc func adjustPageHeightNew(_ p0: UnsafeMutablePointer<CGFloat>, top: CGFloat, bottom: CGFloat, limit: CGFloat)
 
   /**
     - Selector: adjustPageWidthNew:left:right:limit:
   */
-  @objc func adjustPageWidthNew(_: UnsafeMutablePointer<CGFloat>, left: CGFloat, right: CGFloat, limit: CGFloat)
+  @objc func adjustPageWidthNew(_ p0: UnsafeMutablePointer<CGFloat>, left: CGFloat, right: CGFloat, limit: CGFloat)
 
   /**
     - Selector: adjustScroll:
   */
-  @objc func adjustScroll(_: CGRect) -> CGRect
+  @objc func adjustScroll(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: alignmentRectForFrame:
@@ -143,7 +143,7 @@ import AppKit
     - Selector: backingAlignedRect:options:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func backingAlignedRect(_: CGRect, options: AlignmentOptions) -> CGRect
+  @objc @available(OSX 10.7, *) func backingAlignedRect(_ p0: CGRect, options: AlignmentOptions) -> CGRect
 
   /**
     - Selector: beginDocument
@@ -174,7 +174,7 @@ import AppKit
   /**
     - Selector: centerScanRect:
   */
-  @objc func centerScanRect(_: CGRect) -> CGRect
+  @objc func centerScanRect(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: constraintsAffectingLayoutForOrientation:
@@ -197,104 +197,104 @@ import AppKit
   /**
     - Selector: convertPoint:fromView:
   */
-  @objc (convertPoint:fromView:) func convert(_: CGPoint, from: NSView?) -> CGPoint
+  @objc (convertPoint:fromView:) func convert(_ p0: CGPoint, from: NSView?) -> CGPoint
 
   /**
     - Selector: convertPoint:toView:
   */
-  @objc (convertPoint:toView:) func convert(_: CGPoint, to: NSView?) -> CGPoint
+  @objc (convertPoint:toView:) func convert(_ p0: CGPoint, to: NSView?) -> CGPoint
 
   /**
     - Selector: convertPointFromBacking:
     - Introduced: 10.7
   */
-  @objc (convertPointFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_: CGPoint) -> CGPoint
+  @objc (convertPointFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_ p0: CGPoint) -> CGPoint
 
   /**
     - Selector: convertPointFromLayer:
     - Introduced: 10.7
   */
-  @objc (convertPointFromLayer:) @available(OSX 10.7, *) func convertFromLayer(_: CGPoint) -> CGPoint
+  @objc (convertPointFromLayer:) @available(OSX 10.7, *) func convertFromLayer(_ p0: CGPoint) -> CGPoint
 
   /**
     - Selector: convertPointToBacking:
     - Introduced: 10.7
   */
-  @objc (convertPointToBacking:) @available(OSX 10.7, *) func convertToBacking(_: CGPoint) -> CGPoint
+  @objc (convertPointToBacking:) @available(OSX 10.7, *) func convertToBacking(_ p0: CGPoint) -> CGPoint
 
   /**
     - Selector: convertPointToLayer:
     - Introduced: 10.7
   */
-  @objc (convertPointToLayer:) @available(OSX 10.7, *) func convertToLayer(_: CGPoint) -> CGPoint
+  @objc (convertPointToLayer:) @available(OSX 10.7, *) func convertToLayer(_ p0: CGPoint) -> CGPoint
 
   /**
     - Selector: convertRect:fromView:
   */
-  @objc (convertRect:fromView:) func convert(_: CGRect, from: NSView?) -> CGRect
+  @objc (convertRect:fromView:) func convert(_ p0: CGRect, from: NSView?) -> CGRect
 
   /**
     - Selector: convertRect:toView:
   */
-  @objc (convertRect:toView:) func convert(_: CGRect, to: NSView?) -> CGRect
+  @objc (convertRect:toView:) func convert(_ p0: CGRect, to: NSView?) -> CGRect
 
   /**
     - Selector: convertRectFromBacking:
     - Introduced: 10.7
   */
-  @objc (convertRectFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_: CGRect) -> CGRect
+  @objc (convertRectFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: convertRectFromLayer:
     - Introduced: 10.7
   */
-  @objc (convertRectFromLayer:) @available(OSX 10.7, *) func convertFromLayer(_: CGRect) -> CGRect
+  @objc (convertRectFromLayer:) @available(OSX 10.7, *) func convertFromLayer(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: convertRectToBacking:
     - Introduced: 10.7
   */
-  @objc (convertRectToBacking:) @available(OSX 10.7, *) func convertToBacking(_: CGRect) -> CGRect
+  @objc (convertRectToBacking:) @available(OSX 10.7, *) func convertToBacking(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: convertRectToLayer:
     - Introduced: 10.7
   */
-  @objc (convertRectToLayer:) @available(OSX 10.7, *) func convertToLayer(_: CGRect) -> CGRect
+  @objc (convertRectToLayer:) @available(OSX 10.7, *) func convertToLayer(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: convertSize:fromView:
   */
-  @objc (convertSize:fromView:) func convert(_: CGSize, from: NSView?) -> CGSize
+  @objc (convertSize:fromView:) func convert(_ p0: CGSize, from: NSView?) -> CGSize
 
   /**
     - Selector: convertSize:toView:
   */
-  @objc (convertSize:toView:) func convert(_: CGSize, to: NSView?) -> CGSize
+  @objc (convertSize:toView:) func convert(_ p0: CGSize, to: NSView?) -> CGSize
 
   /**
     - Selector: convertSizeFromBacking:
     - Introduced: 10.7
   */
-  @objc (convertSizeFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_: CGSize) -> CGSize
+  @objc (convertSizeFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_ p0: CGSize) -> CGSize
 
   /**
     - Selector: convertSizeFromLayer:
     - Introduced: 10.7
   */
-  @objc (convertSizeFromLayer:) @available(OSX 10.7, *) func convertFromLayer(_: CGSize) -> CGSize
+  @objc (convertSizeFromLayer:) @available(OSX 10.7, *) func convertFromLayer(_ p0: CGSize) -> CGSize
 
   /**
     - Selector: convertSizeToBacking:
     - Introduced: 10.7
   */
-  @objc (convertSizeToBacking:) @available(OSX 10.7, *) func convertToBacking(_: CGSize) -> CGSize
+  @objc (convertSizeToBacking:) @available(OSX 10.7, *) func convertToBacking(_ p0: CGSize) -> CGSize
 
   /**
     - Selector: convertSizeToLayer:
     - Introduced: 10.7
   */
-  @objc (convertSizeToLayer:) @available(OSX 10.7, *) func convertToLayer(_: CGSize) -> CGSize
+  @objc (convertSizeToLayer:) @available(OSX 10.7, *) func convertToLayer(_ p0: CGSize) -> CGSize
 
   /**
     - Selector: dataWithEPSInsideRect:
@@ -309,13 +309,13 @@ import AppKit
   /**
     - Selector: didAddSubview:
   */
-  @objc func didAddSubview(_: NSView)
+  @objc func didAddSubview(_ p0: NSView)
 
   /**
     - Selector: didCloseMenu:withEvent:
     - Introduced: 10.11
   */
-  @objc (didCloseMenu:withEvent:) @available(OSX 10.11, *) func didCloseMenu(_: NSMenu, with: NSEvent?)
+  @objc (didCloseMenu:withEvent:) @available(OSX 10.11, *) func didCloseMenu(_ p0: NSMenu, with: NSEvent?)
 
   /**
     - Selector: discardCursorRects
@@ -340,27 +340,27 @@ import AppKit
   /**
     - Selector: displayIfNeededInRect:
   */
-  @objc (displayIfNeededInRect:) func displayIfNeeded(_: CGRect)
+  @objc (displayIfNeededInRect:) func displayIfNeeded(_ p0: CGRect)
 
   /**
     - Selector: displayIfNeededInRectIgnoringOpacity:
   */
-  @objc (displayIfNeededInRectIgnoringOpacity:) func displayIfNeededIgnoringOpacity(_: CGRect)
+  @objc (displayIfNeededInRectIgnoringOpacity:) func displayIfNeededIgnoringOpacity(_ p0: CGRect)
 
   /**
     - Selector: displayRect:
   */
-  @objc (displayRect:) func display(_: CGRect)
+  @objc (displayRect:) func display(_ p0: CGRect)
 
   /**
     - Selector: displayRectIgnoringOpacity:
   */
-  @objc (displayRectIgnoringOpacity:) func displayIgnoringOpacity(_: CGRect)
+  @objc (displayRectIgnoringOpacity:) func displayIgnoringOpacity(_ p0: CGRect)
 
   /**
     - Selector: displayRectIgnoringOpacity:inContext:
   */
-  @objc (displayRectIgnoringOpacity:inContext:) func displayIgnoringOpacity(_: CGRect, in: NSGraphicsContext)
+  @objc (displayRectIgnoringOpacity:inContext:) func displayIgnoringOpacity(_ p0: CGRect, in: NSGraphicsContext)
 
   /**
     - Selector: drawFocusRingMask
@@ -376,7 +376,7 @@ import AppKit
   /**
     - Selector: drawRect:
   */
-  @objc (drawRect:) func draw(_: CGRect)
+  @objc (drawRect:) func draw(_ p0: CGRect)
 
   /**
     - Selector: endDocument
@@ -392,7 +392,7 @@ import AppKit
     - Selector: enterFullScreenMode:withOptions:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func enterFullScreenMode(_: NSScreen, withOptions: [NSView.FullScreenModeOptionKey: Any]?) -> Bool
+  @objc @available(OSX 10.5, *) func enterFullScreenMode(_ p0: NSScreen, withOptions: [NSView.FullScreenModeOptionKey: Any]?) -> Bool
 
   /**
     - Selector: exerciseAmbiguityInLayout
@@ -415,17 +415,17 @@ import AppKit
   /**
     - Selector: getRectsBeingDrawn:count:
   */
-  @objc func getRectsBeingDrawn(_: UnsafeMutablePointer<UnsafePointer<NSRect>?>?, count: UnsafeMutablePointer<NSInteger>?)
+  @objc func getRectsBeingDrawn(_ p0: UnsafeMutablePointer<UnsafePointer<NSRect>?>?, count: UnsafeMutablePointer<NSInteger>?)
 
   /**
     - Selector: getRectsExposedDuringLiveResize:count:
   */
-  @objc func getRectsExposedDuringLiveResize(_: UnsafeMutablePointer<CGRect>, count: UnsafeMutablePointer<NSInteger>)
+  @objc func getRectsExposedDuringLiveResize(_ p0: UnsafeMutablePointer<CGRect>, count: UnsafeMutablePointer<NSInteger>)
 
   /**
     - Selector: hitTest:
   */
-  @objc func hitTest(_: CGPoint) -> NSView?
+  @objc func hitTest(_ p0: CGPoint) -> NSView?
 
   /**
     - Selector: invalidateIntrinsicContentSize
@@ -441,7 +441,7 @@ import AppKit
   /**
     - Selector: knowsPageRange:
   */
-  @objc func knowsPageRange(_: NSRangePointer) -> Bool
+  @objc func knowsPageRange(_ p0: NSRangePointer) -> Bool
 
   /**
     - Selector: layout
@@ -458,7 +458,7 @@ import AppKit
   /**
     - Selector: locationOfPrintRect:
   */
-  @objc (locationOfPrintRect:) func locationOfPrintRect(_: CGRect) -> CGPoint
+  @objc (locationOfPrintRect:) func locationOfPrintRect(_ p0: CGRect) -> CGPoint
 
   /**
     - Selector: makeBackingLayer
@@ -474,12 +474,12 @@ import AppKit
   /**
     - Selector: mouse:inRect:
   */
-  @objc (mouse:inRect:) func isMousePoint(_: CGPoint, in: CGRect) -> Bool
+  @objc (mouse:inRect:) func isMousePoint(_ p0: CGPoint, in: CGRect) -> Bool
 
   /**
     - Selector: needsToDrawRect:
   */
-  @objc (needsToDrawRect:) func needsToDraw(_: CGRect) -> Bool
+  @objc (needsToDrawRect:) func needsToDraw(_ p0: CGRect) -> Bool
 
   /**
     - Selector: noteFocusRingMaskChanged
@@ -502,12 +502,12 @@ import AppKit
   /**
     - Selector: print:
   */
-  @objc (print:) func printView(_: Any?)
+  @objc (print:) func printView(_ p0: Any?)
 
   /**
     - Selector: rectForPage:
   */
-  @objc (rectForPage:) func rectForPage(_: Int) -> CGRect
+  @objc (rectForPage:) func rectForPage(_ p0: Int) -> CGRect
 
   /**
     - Selector: rectForSmartMagnificationAtPoint:inRect:
@@ -518,12 +518,12 @@ import AppKit
   /**
     - Selector: reflectScrolledClipView:
   */
-  @objc func reflectScrolledClipView(_: NSClipView)
+  @objc func reflectScrolledClipView(_ p0: NSClipView)
 
   /**
     - Selector: registerForDraggedTypes:
   */
-  @objc (registerForDraggedTypes:) func registerForDraggedTypes(_: [NSPasteboard.PasteboardType])
+  @objc (registerForDraggedTypes:) func registerForDraggedTypes(_ p0: [NSPasteboard.PasteboardType])
 
   /**
     - Selector: removeAllToolTips
@@ -534,18 +534,18 @@ import AppKit
     - Selector: removeConstraint:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func removeConstraint(_: NSLayoutConstraint)
+  @objc @available(OSX 10.7, *) func removeConstraint(_ p0: NSLayoutConstraint)
 
   /**
     - Selector: removeConstraints:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func removeConstraints(_: [NSLayoutConstraint])
+  @objc @available(OSX 10.7, *) func removeConstraints(_ p0: [NSLayoutConstraint])
 
   /**
     - Selector: removeCursorRect:cursor:
   */
-  @objc func removeCursorRect(_: CGRect, cursor: NSCursor)
+  @objc func removeCursorRect(_ p0: CGRect, cursor: NSCursor)
 
   /**
     - Selector: removeFromSuperview
@@ -561,34 +561,34 @@ import AppKit
     - Selector: removeGestureRecognizer:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) func removeGestureRecognizer(_: NSGestureRecognizer)
+  @objc @available(OSX 10.10, *) func removeGestureRecognizer(_ p0: NSGestureRecognizer)
 
   /**
     - Selector: removeLayoutGuide:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func removeLayoutGuide(_: NSLayoutGuide)
+  @objc @available(OSX 10.11, *) func removeLayoutGuide(_ p0: NSLayoutGuide)
 
   /**
     - Selector: removeToolTip:
   */
-  @objc func removeToolTip(_: NSView.ToolTipTag)
+  @objc func removeToolTip(_ p0: NSView.ToolTipTag)
 
   /**
     - Selector: removeTrackingArea:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func removeTrackingArea(_: NSTrackingArea)
+  @objc @available(OSX 10.5, *) func removeTrackingArea(_ p0: NSTrackingArea)
 
   /**
     - Selector: removeTrackingRect:
   */
-  @objc func removeTrackingRect(_: NSView.TrackingRectTag)
+  @objc func removeTrackingRect(_ p0: NSView.TrackingRectTag)
 
   /**
     - Selector: replaceSubview:with:
   */
-  @objc func replaceSubview(_: NSView, with: NSView)
+  @objc func replaceSubview(_ p0: NSView, with: NSView)
 
   /**
     - Selector: resetCursorRects
@@ -613,64 +613,64 @@ import AppKit
   /**
     - Selector: rulerView:didAddMarker:
   */
-  @objc (rulerView:didAddMarker:) func rulerView(_: NSRulerView, didAdd: NSRulerMarker)
+  @objc (rulerView:didAddMarker:) func rulerView(_ p0: NSRulerView, didAdd: NSRulerMarker)
 
   /**
     - Selector: rulerView:didMoveMarker:
   */
-  @objc (rulerView:didMoveMarker:) func rulerView(_: NSRulerView, didMove: NSRulerMarker)
+  @objc (rulerView:didMoveMarker:) func rulerView(_ p0: NSRulerView, didMove: NSRulerMarker)
 
   /**
     - Selector: rulerView:didRemoveMarker:
   */
-  @objc (rulerView:didRemoveMarker:) func rulerView(_: NSRulerView, didRemove: NSRulerMarker)
+  @objc (rulerView:didRemoveMarker:) func rulerView(_ p0: NSRulerView, didRemove: NSRulerMarker)
 
   /**
     - Selector: rulerView:handleMouseDown:
   */
-  @objc (rulerView:handleMouseDown:) func rulerView(_: NSRulerView, handleMouseDownWith: NSEvent)
+  @objc (rulerView:handleMouseDown:) func rulerView(_ p0: NSRulerView, handleMouseDownWith: NSEvent)
 
   /**
     - Selector: rulerView:locationForPoint:
     - Introduced: 10.7
   */
-  @objc (rulerView:locationForPoint:) @available(OSX 10.7, *) func rulerView(_: NSRulerView, locationFor: CGPoint) -> CGFloat
+  @objc (rulerView:locationForPoint:) @available(OSX 10.7, *) func rulerView(_ p0: NSRulerView, locationFor: CGPoint) -> CGFloat
 
   /**
     - Selector: rulerView:pointForLocation:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func rulerView(_: NSRulerView, pointForLocation: CGFloat) -> CGPoint
+  @objc @available(OSX 10.7, *) func rulerView(_ p0: NSRulerView, pointForLocation: CGFloat) -> CGPoint
 
   /**
     - Selector: rulerView:shouldAddMarker:
   */
-  @objc (rulerView:shouldAddMarker:) func rulerView(_: NSRulerView, shouldAdd: NSRulerMarker) -> Bool
+  @objc (rulerView:shouldAddMarker:) func rulerView(_ p0: NSRulerView, shouldAdd: NSRulerMarker) -> Bool
 
   /**
     - Selector: rulerView:shouldMoveMarker:
   */
-  @objc (rulerView:shouldMoveMarker:) func rulerView(_: NSRulerView, shouldMove: NSRulerMarker) -> Bool
+  @objc (rulerView:shouldMoveMarker:) func rulerView(_ p0: NSRulerView, shouldMove: NSRulerMarker) -> Bool
 
   /**
     - Selector: rulerView:shouldRemoveMarker:
   */
-  @objc (rulerView:shouldRemoveMarker:) func rulerView(_: NSRulerView, shouldRemove: NSRulerMarker) -> Bool
+  @objc (rulerView:shouldRemoveMarker:) func rulerView(_ p0: NSRulerView, shouldRemove: NSRulerMarker) -> Bool
 
   /**
     - Selector: rulerView:willAddMarker:atLocation:
   */
-  @objc (rulerView:willAddMarker:atLocation:) func rulerView(_: NSRulerView, willAdd: NSRulerMarker, atLocation: CGFloat) -> CGFloat
+  @objc (rulerView:willAddMarker:atLocation:) func rulerView(_ p0: NSRulerView, willAdd: NSRulerMarker, atLocation: CGFloat) -> CGFloat
 
   /**
     - Selector: rulerView:willMoveMarker:toLocation:
   */
-  @objc (rulerView:willMoveMarker:toLocation:) func rulerView(_: NSRulerView, willMove: NSRulerMarker, toLocation: CGFloat) -> CGFloat
+  @objc (rulerView:willMoveMarker:toLocation:) func rulerView(_ p0: NSRulerView, willMove: NSRulerMarker, toLocation: CGFloat) -> CGFloat
 
   /**
     - Selector: rulerView:willSetClientView:
   */
-  @objc func rulerView(_: NSRulerView, willSetClientView: NSView)
+  @objc func rulerView(_ p0: NSRulerView, willSetClientView: NSView)
 
   /**
     - Selector: scaleUnitSquareToSize:
@@ -680,54 +680,54 @@ import AppKit
   /**
     - Selector: scrollClipView:toPoint:
   */
-  @objc (scrollClipView:toPoint:) func scroll(_: NSClipView, to: CGPoint)
+  @objc (scrollClipView:toPoint:) func scroll(_ p0: NSClipView, to: CGPoint)
 
   /**
     - Selector: scrollPoint:
   */
-  @objc (scrollPoint:) func scroll(_: CGPoint)
+  @objc (scrollPoint:) func scroll(_ p0: CGPoint)
 
   /**
     - Selector: scrollRectToVisible:
   */
-  @objc (scrollRectToVisible:) func scrollToVisible(_: CGRect) -> Bool
+  @objc (scrollRectToVisible:) func scrollToVisible(_ p0: CGRect) -> Bool
 
   /**
     - Selector: setBoundsOrigin:
   */
-  @objc func setBoundsOrigin(_: CGPoint)
+  @objc func setBoundsOrigin(_ p0: CGPoint)
 
   /**
     - Selector: setBoundsSize:
   */
-  @objc func setBoundsSize(_: CGSize)
+  @objc func setBoundsSize(_ p0: CGSize)
 
   /**
     - Selector: setContentCompressionResistancePriority:forOrientation:
     - Introduced: 10.7
   */
-  @objc (setContentCompressionResistancePriority:forOrientation:) @available(OSX 10.7, *) func setContentCompressionResistancePriority(_: NSLayoutConstraint.Priority, `for`: NSLayoutConstraint.Orientation)
+  @objc (setContentCompressionResistancePriority:forOrientation:) @available(OSX 10.7, *) func setContentCompressionResistancePriority(_ p0: NSLayoutConstraint.Priority, `for`: NSLayoutConstraint.Orientation)
 
   /**
     - Selector: setContentHuggingPriority:forOrientation:
     - Introduced: 10.7
   */
-  @objc (setContentHuggingPriority:forOrientation:) @available(OSX 10.7, *) func setContentHuggingPriority(_: NSLayoutConstraint.Priority, `for`: NSLayoutConstraint.Orientation)
+  @objc (setContentHuggingPriority:forOrientation:) @available(OSX 10.7, *) func setContentHuggingPriority(_ p0: NSLayoutConstraint.Priority, `for`: NSLayoutConstraint.Orientation)
 
   /**
     - Selector: setFrameOrigin:
   */
-  @objc func setFrameOrigin(_: CGPoint)
+  @objc func setFrameOrigin(_ p0: CGPoint)
 
   /**
     - Selector: setFrameSize:
   */
-  @objc func setFrameSize(_: CGSize)
+  @objc func setFrameSize(_ p0: CGSize)
 
   /**
     - Selector: setKeyboardFocusRingNeedsDisplayInRect:
   */
-  @objc (setKeyboardFocusRingNeedsDisplayInRect:) func setKeyboardFocusRingNeedsDisplay(_: CGRect)
+  @objc (setKeyboardFocusRingNeedsDisplayInRect:) func setKeyboardFocusRingNeedsDisplay(_ p0: CGRect)
 
   /**
     - Selector: shouldDelayWindowOrderingForEvent:
@@ -749,7 +749,7 @@ import AppKit
   /**
     - Selector: sortSubviewsUsingFunction:context:
   */
-  // jsvalue @objc (sortSubviewsUsingFunction:context:) func sortSubviews(_: JSValue, context: UnsafeMutableRawPointer?)
+  // jsvalue @objc (sortSubviewsUsingFunction:context:) func sortSubviews(_ p0: JSValue, context: UnsafeMutableRawPointer?)
 
   /**
     - Selector: translateOriginToPoint:
@@ -854,18 +854,18 @@ import AppKit
   /**
     - Selector: viewWithTag:
   */
-  @objc (viewWithTag:) func viewWithTag(_: Int) -> NSView?
+  @objc (viewWithTag:) func viewWithTag(_ p0: Int) -> NSView?
 
   /**
     - Selector: willOpenMenu:withEvent:
     - Introduced: 10.11
   */
-  @objc (willOpenMenu:withEvent:) @available(OSX 10.11, *) func willOpenMenu(_: NSMenu, with: NSEvent)
+  @objc (willOpenMenu:withEvent:) @available(OSX 10.11, *) func willOpenMenu(_ p0: NSMenu, with: NSEvent)
 
   /**
     - Selector: willRemoveSubview:
   */
-  @objc func willRemoveSubview(_: NSView)
+  @objc func willRemoveSubview(_ p0: NSView)
 
   /**
     - Selector: writeEPSInsideRect:toPasteboard:

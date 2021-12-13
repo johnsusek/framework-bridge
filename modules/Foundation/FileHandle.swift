@@ -63,7 +63,7 @@ import Foundation
     - Deprecated: 100000
     - Replacement: closeAndReturnError:
   */
-  @objc @available(OSX 10.0, *) func closeFile()
+  // unavailableInSwift @objc @available(OSX 10.0, *) func closeFile()
 
   /**
     - Selector: getOffset:error:
@@ -85,7 +85,7 @@ import Foundation
     - Deprecated: 100000
     - Replacement: readDataToEndOfFileAndReturnError:
   */
-  @objc @available(OSX 10.0, *) func readDataToEndOfFile() -> Data
+  // unavailableInSwift @objc @available(OSX 10.0, *) func readDataToEndOfFile() -> Data
 
   /**
     - Selector: readDataToEndOfFileAndReturnError:
@@ -125,7 +125,7 @@ import Foundation
     - Deprecated: 100000
     - Replacement: seekToEndReturningOffset:error:
   */
-  @objc @available(OSX 10.0, *) func seekToEndOfFile() -> UInt64
+  // unavailableInSwift @objc @available(OSX 10.0, *) func seekToEndOfFile() -> UInt64
 
   /**
     - Selector: seekToEndReturningOffset:error:
@@ -159,7 +159,7 @@ import Foundation
     - Deprecated: 100000
     - Replacement: synchronizeAndReturnError:
   */
-  @objc @available(OSX 10.0, *) func synchronizeFile()
+  // unavailableInSwift @objc @available(OSX 10.0, *) func synchronizeFile()
 
   /**
     - Selector: truncateAtOffset:error:
@@ -191,7 +191,7 @@ import Foundation
     - Deprecated: 100000
     - Replacement: writeData:error:
   */
-  @objc (writeData:) @available(OSX 10.0, *) func write(_: Data)
+  @objc (writeData:) @available(OSX 10.0, *) func write(_ p0: Data)
 
   /**
     - Selector: writeData:error:

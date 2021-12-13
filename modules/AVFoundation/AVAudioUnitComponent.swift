@@ -24,7 +24,7 @@ import AVFoundation
     - Selector: supportsNumberInputChannels:outputChannels:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) func supportsNumberInputChannels(_: Int, outputChannels: Int) -> Bool
+  @objc @available(OSX 10.10, *) func supportsNumberInputChannels(_ p0: Int, outputChannels: Int) -> Bool
 
   // Own Instance Properties
 

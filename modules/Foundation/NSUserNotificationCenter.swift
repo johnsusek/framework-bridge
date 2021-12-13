@@ -32,7 +32,7 @@ import Foundation
   /**
     - Selector: deliverNotification:
   */
-  @objc (deliverNotification:) func deliver(_: NSUserNotification)
+  @objc (deliverNotification:) func deliver(_ p0: NSUserNotification)
 
   /**
     - Selector: removeAllDeliveredNotifications
@@ -42,17 +42,17 @@ import Foundation
   /**
     - Selector: removeDeliveredNotification:
   */
-  @objc func removeDeliveredNotification(_: NSUserNotification)
+  @objc func removeDeliveredNotification(_ p0: NSUserNotification)
 
   /**
     - Selector: removeScheduledNotification:
   */
-  @objc func removeScheduledNotification(_: NSUserNotification)
+  @objc func removeScheduledNotification(_ p0: NSUserNotification)
 
   /**
     - Selector: scheduleNotification:
   */
-  @objc func scheduleNotification(_: NSUserNotification)
+  @objc func scheduleNotification(_ p0: NSUserNotification)
 
   // Own Instance Properties
 

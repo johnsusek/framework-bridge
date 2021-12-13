@@ -43,7 +43,7 @@ import AppKit
   /**
     - Selector: setPredicate:
   */
-  @objc func setPredicate(_: NSPredicate)
+  @objc func setPredicate(_ p0: NSPredicate)
 
   // Own Instance Properties
 

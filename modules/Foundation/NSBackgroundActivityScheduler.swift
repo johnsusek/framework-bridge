@@ -28,7 +28,7 @@ import Foundation
   /**
     - Selector: scheduleWithBlock:
   */
-  // jsvalue @objc func schedule(_: JSValue)
+  // jsvalue @objc func schedule(_ p0: JSValue)
 
   // Own Instance Properties
 

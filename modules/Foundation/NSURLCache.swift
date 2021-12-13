@@ -63,12 +63,12 @@ import Foundation
     - Selector: storeCachedResponse:forDataTask:
     - Introduced: 10.10
   */
-  @objc (storeCachedResponse:forDataTask:) @available(OSX 10.10, *) func storeCachedResponse(_: CachedURLResponse, `for`: URLSessionDataTask)
+  @objc (storeCachedResponse:forDataTask:) @available(OSX 10.10, *) func storeCachedResponse(_ p0: CachedURLResponse, `for`: URLSessionDataTask)
 
   /**
     - Selector: storeCachedResponse:forRequest:
   */
-  @objc (storeCachedResponse:forRequest:) func storeCachedResponse(_: CachedURLResponse, `for`: URLRequest)
+  @objc (storeCachedResponse:forRequest:) func storeCachedResponse(_ p0: CachedURLResponse, `for`: URLRequest)
 
   // Own Instance Properties
 

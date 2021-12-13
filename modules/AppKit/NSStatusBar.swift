@@ -29,7 +29,7 @@ import AppKit
   /**
     - Selector: removeStatusItem:
   */
-  @objc (removeStatusItem:) func removeStatusItem(_: NSStatusItem)
+  @objc (removeStatusItem:) func removeStatusItem(_ p0: NSStatusItem)
 
   /**
     - Selector: statusItemWithLength:

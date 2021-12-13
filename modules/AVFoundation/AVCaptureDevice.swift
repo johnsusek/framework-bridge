@@ -28,7 +28,7 @@ import AVFoundation
     - Selector: defaultDeviceWithDeviceType:mediaType:position:
     - Introduced: 10.15
   */
-  @objc (defaultDeviceWithDeviceType:mediaType:position:) @available(OSX 10.15, *) static func `default`(_: AVCaptureDevice.DeviceType, `for`: AVMediaType?, position: AVCaptureDevice.Position) -> AVCaptureDevice?
+  @objc (defaultDeviceWithDeviceType:mediaType:position:) @available(OSX 10.15, *) static func `default`(_ p0: AVCaptureDevice.DeviceType, `for`: AVMediaType?, position: AVCaptureDevice.Position) -> AVCaptureDevice?
 
   /**
     - Selector: defaultDeviceWithMediaType:
@@ -51,32 +51,32 @@ import AVFoundation
   /**
     - Selector: hasMediaType:
   */
-  @objc func hasMediaType(_: AVMediaType) -> Bool
+  @objc func hasMediaType(_ p0: AVMediaType) -> Bool
 
   /**
     - Selector: isExposureModeSupported:
   */
-  @objc func isExposureModeSupported(_: AVCaptureDevice.ExposureMode) -> Bool
+  @objc func isExposureModeSupported(_ p0: AVCaptureDevice.ExposureMode) -> Bool
 
   /**
     - Selector: isFlashModeSupported:
   */
-  @objc func isFlashModeSupported(_: AVCaptureDevice.FlashMode) -> Bool
+  @objc func isFlashModeSupported(_ p0: AVCaptureDevice.FlashMode) -> Bool
 
   /**
     - Selector: isFocusModeSupported:
   */
-  @objc func isFocusModeSupported(_: AVCaptureDevice.FocusMode) -> Bool
+  @objc func isFocusModeSupported(_ p0: AVCaptureDevice.FocusMode) -> Bool
 
   /**
     - Selector: isTorchModeSupported:
   */
-  @objc func isTorchModeSupported(_: AVCaptureDevice.TorchMode) -> Bool
+  @objc func isTorchModeSupported(_ p0: AVCaptureDevice.TorchMode) -> Bool
 
   /**
     - Selector: isWhiteBalanceModeSupported:
   */
-  @objc func isWhiteBalanceModeSupported(_: AVCaptureDevice.WhiteBalanceMode) -> Bool
+  @objc func isWhiteBalanceModeSupported(_ p0: AVCaptureDevice.WhiteBalanceMode) -> Bool
 
   /**
     - Selector: lockForConfiguration:
@@ -92,12 +92,12 @@ import AVFoundation
   /**
     - Selector: setTransportControlsPlaybackMode:speed:
   */
-  @objc func setTransportControlsPlaybackMode(_: AVCaptureDevice.TransportControlsPlaybackMode, speed: AVCaptureDevice.TransportControlsSpeed)
+  @objc func setTransportControlsPlaybackMode(_ p0: AVCaptureDevice.TransportControlsPlaybackMode, speed: AVCaptureDevice.TransportControlsSpeed)
 
   /**
     - Selector: supportsAVCaptureSessionPreset:
   */
-  @objc (supportsAVCaptureSessionPreset:) func supportsSessionPreset(_: AVCaptureSession.Preset) -> Bool
+  @objc (supportsAVCaptureSessionPreset:) func supportsSessionPreset(_ p0: AVCaptureSession.Preset) -> Bool
 
   /**
     - Selector: unlockForConfiguration

@@ -83,12 +83,12 @@ import AppKit
   /**
     - Selector: scrollItemAtIndexToTop:
   */
-  @objc (scrollItemAtIndexToTop:) func scrollItemAtIndexToTop(_: Int)
+  @objc (scrollItemAtIndexToTop:) func scrollItemAtIndexToTop(_ p0: Int)
 
   /**
     - Selector: scrollItemAtIndexToVisible:
   */
-  @objc func scrollItemAtIndexToVisible(_: Int)
+  @objc func scrollItemAtIndexToVisible(_ p0: Int)
 
   /**
     - Selector: selectItemAtIndex:

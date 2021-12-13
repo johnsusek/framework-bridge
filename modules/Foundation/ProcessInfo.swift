@@ -36,7 +36,7 @@ import Foundation
     - Selector: disableAutomaticTermination:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func disableAutomaticTermination(_: String)
+  @objc @available(OSX 10.7, *) func disableAutomaticTermination(_ p0: String)
 
   /**
     - Selector: disableSuddenTermination
@@ -48,7 +48,7 @@ import Foundation
     - Selector: enableAutomaticTermination:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func enableAutomaticTermination(_: String)
+  @objc @available(OSX 10.7, *) func enableAutomaticTermination(_ p0: String)
 
   /**
     - Selector: enableSuddenTermination
@@ -60,13 +60,13 @@ import Foundation
     - Selector: endActivity:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) func endActivity(_: NSObjectProtocol)
+  @objc @available(OSX 10.9, *) func endActivity(_ p0: NSObjectProtocol)
 
   /**
     - Selector: isOperatingSystemAtLeastVersion:
     - Introduced: 10.10
   */
-  @objc (isOperatingSystemAtLeastVersion:) @available(OSX 10.10, *) func isOperatingSystemAtLeast(_: OperatingSystemVersion) -> Bool
+  @objc (isOperatingSystemAtLeastVersion:) @available(OSX 10.10, *) func isOperatingSystemAtLeast(_ p0: OperatingSystemVersion) -> Bool
 
   /**
     - Selector: performActivityWithOptions:reason:usingBlock:

@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: selectMediaOption:inMediaSelectionGroup:
   */
-  @objc (selectMediaOption:inMediaSelectionGroup:) func select(_: AVMediaSelectionOption?, in: AVMediaSelectionGroup)
+  @objc (selectMediaOption:inMediaSelectionGroup:) func select(_ p0: AVMediaSelectionOption?, in: AVMediaSelectionGroup)
 }
 
 extension AVMutableMediaSelection: AVMutableMediaSelectionExports {

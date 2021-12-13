@@ -48,7 +48,7 @@ import AppKit
     - Selector: addFloatingSubview:forAxis:
     - Introduced: 10.9
   */
-  @objc (addFloatingSubview:forAxis:) @available(OSX 10.9, *) func addFloatingSubview(_: NSView, `for`: NSEvent.GestureAxis)
+  @objc (addFloatingSubview:forAxis:) @available(OSX 10.9, *) func addFloatingSubview(_ p0: NSView, `for`: NSEvent.GestureAxis)
 
   /**
     - Selector: flashScrollers

@@ -24,7 +24,7 @@ import AVFoundation
     - Selector: setManualRenderingInputPCMFormat:inputBlock:
     - Introduced: 10.13
   */
-  // jsvalue @objc @available(OSX 10.13, *) func setManualRenderingInputPCMFormat(_: AVAudioFormat, inputBlock: JSValue) -> Bool
+  // jsvalue @objc @available(OSX 10.13, *) func setManualRenderingInputPCMFormat(_ p0: AVAudioFormat, inputBlock: JSValue) -> Bool
 
   // Own Instance Properties
 

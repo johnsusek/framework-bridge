@@ -29,7 +29,7 @@ import AppKit
   /**
     - Selector: applyLayoutAttributes:
   */
-  @objc (applyLayoutAttributes:) func apply(_: NSScrubberLayoutAttributes)
+  @objc (applyLayoutAttributes:) func apply(_ p0: NSScrubberLayoutAttributes)
 
   // Own Instance Properties
 

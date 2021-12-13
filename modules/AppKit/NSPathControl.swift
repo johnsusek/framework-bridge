@@ -29,7 +29,7 @@ import AppKit
   /**
     - Selector: setDraggingSourceOperationMask:forLocal:
   */
-  @objc func setDraggingSourceOperationMask(_: NSDragOperation, forLocal: Bool)
+  @objc func setDraggingSourceOperationMask(_ p0: NSDragOperation, forLocal: Bool)
 
   // Own Instance Properties
 

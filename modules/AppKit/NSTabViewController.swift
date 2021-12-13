@@ -23,17 +23,17 @@ import AppKit
   /**
     - Selector: addTabViewItem:
   */
-  @objc func addTabViewItem(_: NSTabViewItem)
+  @objc func addTabViewItem(_ p0: NSTabViewItem)
 
   /**
     - Selector: insertTabViewItem:atIndex:
   */
-  @objc (insertTabViewItem:atIndex:) func insertTabViewItem(_: NSTabViewItem, at: Int)
+  @objc (insertTabViewItem:atIndex:) func insertTabViewItem(_ p0: NSTabViewItem, at: Int)
 
   /**
     - Selector: removeTabViewItem:
   */
-  @objc func removeTabViewItem(_: NSTabViewItem)
+  @objc func removeTabViewItem(_ p0: NSTabViewItem)
 
   /**
     - Selector: tabViewItemForViewController:

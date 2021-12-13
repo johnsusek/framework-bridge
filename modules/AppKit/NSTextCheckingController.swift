@@ -23,17 +23,17 @@ import AppKit
   /**
     - Selector: changeSpelling:
   */
-  @objc func changeSpelling(_: Any?)
+  @objc func changeSpelling(_ p0: Any?)
 
   /**
     - Selector: checkSpelling:
   */
-  @objc func checkSpelling(_: Any?)
+  @objc func checkSpelling(_ p0: Any?)
 
   /**
     - Selector: checkTextInDocument:
   */
-  @objc func checkTextInDocument(_: Any?)
+  @objc func checkTextInDocument(_ p0: Any?)
 
   /**
     - Selector: checkTextInRange:types:options:
@@ -43,7 +43,7 @@ import AppKit
   /**
     - Selector: checkTextInSelection:
   */
-  @objc func checkTextInSelection(_: Any?)
+  @objc func checkTextInSelection(_ p0: Any?)
 
   /**
     - Selector: considerTextCheckingForRange:
@@ -63,7 +63,7 @@ import AppKit
   /**
     - Selector: ignoreSpelling:
   */
-  @objc func ignoreSpelling(_: Any?)
+  @objc func ignoreSpelling(_ p0: Any?)
 
   /**
     - Selector: insertedTextInRange:
@@ -83,12 +83,12 @@ import AppKit
   /**
     - Selector: orderFrontSubstitutionsPanel:
   */
-  @objc func orderFrontSubstitutionsPanel(_: Any?)
+  @objc func orderFrontSubstitutionsPanel(_ p0: Any?)
 
   /**
     - Selector: showGuessPanel:
   */
-  @objc func showGuessPanel(_: Any?)
+  @objc func showGuessPanel(_ p0: Any?)
 
   /**
     - Selector: updateCandidates

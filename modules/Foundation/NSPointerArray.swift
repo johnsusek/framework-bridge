@@ -45,7 +45,7 @@ import Foundation
   /**
     - Selector: addPointer:
   */
-  @objc func addPointer(_: UnsafeMutableRawPointer?)
+  @objc func addPointer(_ p0: UnsafeMutableRawPointer?)
 
   /**
     - Selector: compact
@@ -55,7 +55,7 @@ import Foundation
   /**
     - Selector: insertPointer:atIndex:
   */
-  @objc (insertPointer:atIndex:) func insertPointer(_: UnsafeMutableRawPointer?, at: Int)
+  @objc (insertPointer:atIndex:) func insertPointer(_ p0: UnsafeMutableRawPointer?, at: Int)
 
   /**
     - Selector: pointerAtIndex:

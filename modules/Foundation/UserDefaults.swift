@@ -130,43 +130,43 @@ import Foundation
   /**
     - Selector: setBool:forKey:
   */
-  @objc (setBool:forKey:) func set(_: Bool, forKey: String)
+  @objc (setBool:forKey:) func set(_ p0: Bool, forKey: String)
 
   /**
     - Selector: setDouble:forKey:
   */
-  @objc (setDouble:forKey:) func set(_: Double, forKey: String)
+  @objc (setDouble:forKey:) func set(_ p0: Double, forKey: String)
 
   /**
     - Selector: setFloat:forKey:
   */
-  @objc (setFloat:forKey:) func set(_: Float, forKey: String)
+  @objc (setFloat:forKey:) func set(_ p0: Float, forKey: String)
 
   /**
     - Selector: setInteger:forKey:
   */
-  @objc (setInteger:forKey:) func set(_: Int, forKey: String)
+  @objc (setInteger:forKey:) func set(_ p0: Int, forKey: String)
 
   /**
     - Selector: setObject:forKey:
   */
-  @objc (setObject:forKey:) func set(_: Any?, forKey: String)
+  @objc (setObject:forKey:) func set(_ p0: Any?, forKey: String)
 
   /**
     - Selector: setPersistentDomain:forName:
   */
-  @objc func setPersistentDomain(_: [String: Any], forName: String)
+  @objc func setPersistentDomain(_ p0: [String: Any], forName: String)
 
   /**
     - Selector: setURL:forKey:
     - Introduced: 10.6
   */
-  @objc (setURL:forKey:) @available(OSX 10.6, *) func set(_: URL?, forKey: String)
+  @objc (setURL:forKey:) @available(OSX 10.6, *) func set(_ p0: URL?, forKey: String)
 
   /**
     - Selector: setVolatileDomain:forName:
   */
-  @objc func setVolatileDomain(_: [String: Any], forName: String)
+  @objc func setVolatileDomain(_ p0: [String: Any], forName: String)
 
   /**
     - Selector: stringArrayForKey:

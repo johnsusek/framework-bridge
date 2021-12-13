@@ -36,12 +36,12 @@ import Foundation
   /**
     - Selector: isValidJSONObject:
   */
-  @objc static func isValidJSONObject(_: Any) -> Bool
+  @objc static func isValidJSONObject(_ p0: Any) -> Bool
 
   /**
     - Selector: writeJSONObject:toStream:options:error:
   */
-  // throws - @objc (writeJSONObject:toStream:options:error:) static func writeJSONObject(_: Any, _: OutputStream, _: JSONSerialization.WritingOptions) -> Int
+  // throws - @objc (writeJSONObject:toStream:options:error:) static func writeJSONObject(_ p0: Any, _ p1: OutputStream, _ p2: JSONSerialization.WritingOptions) -> Int
 }
 
 extension JSONSerialization: JSONSerializationExports {

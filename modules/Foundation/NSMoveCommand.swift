@@ -27,7 +27,7 @@ import Foundation
   /**
     - Selector: setReceiversSpecifier:
   */
-  @objc func setReceiversSpecifier(_: NSScriptObjectSpecifier?)
+  @objc func setReceiversSpecifier(_ p0: NSScriptObjectSpecifier?)
 
   // Own Instance Properties
 

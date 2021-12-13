@@ -90,7 +90,7 @@ import AVFoundation
   /**
     - Selector: removeTimeObserver:
   */
-  @objc func removeTimeObserver(_: Any)
+  @objc func removeTimeObserver(_ p0: Any)
 
   /**
     - Selector: replaceCurrentItemWithPlayerItem:
@@ -134,7 +134,7 @@ import AVFoundation
     - Selector: setMediaSelectionCriteria:forMediaCharacteristic:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) func setMediaSelectionCriteria(_: AVPlayerMediaSelectionCriteria?, forMediaCharacteristic: AVMediaCharacteristic)
+  @objc @available(OSX 10.9, *) func setMediaSelectionCriteria(_ p0: AVPlayerMediaSelectionCriteria?, forMediaCharacteristic: AVMediaCharacteristic)
 
   // Own Instance Properties
 

@@ -29,7 +29,7 @@ import AVFoundation
     - Selector: setCropRectangle:atTime:
     - Introduced: 10.9
   */
-  @objc (setCropRectangle:atTime:) @available(OSX 10.9, *) func setCropRectangle(_: CGRect, at: CMTime)
+  @objc (setCropRectangle:atTime:) @available(OSX 10.9, *) func setCropRectangle(_ p0: CGRect, at: CMTime)
 
   /**
     - Selector: setCropRectangleRampFromStartCropRectangle:toEndCropRectangle:timeRange:
@@ -40,7 +40,7 @@ import AVFoundation
   /**
     - Selector: setOpacity:atTime:
   */
-  @objc (setOpacity:atTime:) func setOpacity(_: Float, at: CMTime)
+  @objc (setOpacity:atTime:) func setOpacity(_ p0: Float, at: CMTime)
 
   /**
     - Selector: setOpacityRampFromStartOpacity:toEndOpacity:timeRange:
@@ -50,7 +50,7 @@ import AVFoundation
   /**
     - Selector: setTransform:atTime:
   */
-  @objc (setTransform:atTime:) func setTransform(_: CGAffineTransform, at: CMTime)
+  @objc (setTransform:atTime:) func setTransform(_ p0: CGAffineTransform, at: CMTime)
 
   /**
     - Selector: setTransformRampFromStartTransform:toEndTransform:timeRange:

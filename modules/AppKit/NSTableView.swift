@@ -28,7 +28,7 @@ import AppKit
   /**
     - Selector: addTableColumn:
   */
-  @objc func addTableColumn(_: NSTableColumn)
+  @objc func addTableColumn(_ p0: NSTableColumn)
 
   /**
     - Selector: beginUpdates
@@ -66,29 +66,29 @@ import AppKit
   /**
     - Selector: deselectAll:
   */
-  @objc func deselectAll(_: Any?)
+  @objc func deselectAll(_ p0: Any?)
 
   /**
     - Selector: deselectColumn:
   */
-  @objc func deselectColumn(_: Int)
+  @objc func deselectColumn(_ p0: Int)
 
   /**
     - Selector: deselectRow:
   */
-  @objc func deselectRow(_: Int)
+  @objc func deselectRow(_ p0: Int)
 
   /**
     - Selector: didAddRowView:forRow:
     - Introduced: 10.7
   */
-  @objc (didAddRowView:forRow:) @available(OSX 10.7, *) func didAdd(_: NSTableRowView, forRow: Int)
+  @objc (didAddRowView:forRow:) @available(OSX 10.7, *) func didAdd(_ p0: NSTableRowView, forRow: Int)
 
   /**
     - Selector: didRemoveRowView:forRow:
     - Introduced: 10.7
   */
-  @objc (didRemoveRowView:forRow:) @available(OSX 10.7, *) func didRemove(_: NSTableRowView, forRow: Int)
+  @objc (didRemoveRowView:forRow:) @available(OSX 10.7, *) func didRemove(_ p0: NSTableRowView, forRow: Int)
 
   /**
     - Selector: dragImageForRowsWithIndexes:tableColumns:event:offset:
@@ -108,12 +108,12 @@ import AppKit
   /**
     - Selector: drawRow:clipRect:
   */
-  @objc func drawRow(_: Int, clipRect: CGRect)
+  @objc func drawRow(_ p0: Int, clipRect: CGRect)
 
   /**
     - Selector: editColumn:row:withEvent:select:
   */
-  @objc (editColumn:row:withEvent:select:) func editColumn(_: Int, row: Int, with: NSEvent?, select: Bool)
+  @objc (editColumn:row:withEvent:select:) func editColumn(_ p0: Int, row: Int, with: NSEvent?, select: Bool)
 
   /**
     - Selector: endUpdates
@@ -125,7 +125,7 @@ import AppKit
     - Selector: enumerateAvailableRowViewsUsingBlock:
     - Introduced: 10.7
   */
-  // jsvalue @objc @available(OSX 10.7, *) func enumerateAvailableRowViews(_: JSValue)
+  // jsvalue @objc @available(OSX 10.7, *) func enumerateAvailableRowViews(_ p0: JSValue)
 
   /**
     - Selector: frameOfCellAtColumn:row:
@@ -157,12 +157,12 @@ import AppKit
   /**
     - Selector: isColumnSelected:
   */
-  @objc func isColumnSelected(_: Int) -> Bool
+  @objc func isColumnSelected(_ p0: Int) -> Bool
 
   /**
     - Selector: isRowSelected:
   */
-  @objc func isRowSelected(_: Int) -> Bool
+  @objc func isRowSelected(_ p0: Int) -> Bool
 
   /**
     - Selector: makeViewWithIdentifier:owner:
@@ -173,7 +173,7 @@ import AppKit
   /**
     - Selector: moveColumn:toColumn:
   */
-  @objc func moveColumn(_: Int, toColumn: Int)
+  @objc func moveColumn(_ p0: Int, toColumn: Int)
 
   /**
     - Selector: moveRowAtIndex:toIndex:
@@ -205,7 +205,7 @@ import AppKit
     - Selector: registerNib:forIdentifier:
     - Introduced: 10.8
   */
-  @objc (registerNib:forIdentifier:) @available(OSX 10.8, *) func register(_: NSNib?, forIdentifier: NSUserInterfaceItemIdentifier)
+  @objc (registerNib:forIdentifier:) @available(OSX 10.8, *) func register(_ p0: NSNib?, forIdentifier: NSUserInterfaceItemIdentifier)
 
   /**
     - Selector: reloadData
@@ -227,7 +227,7 @@ import AppKit
   /**
     - Selector: removeTableColumn:
   */
-  @objc func removeTableColumn(_: NSTableColumn)
+  @objc func removeTableColumn(_ p0: NSTableColumn)
 
   /**
     - Selector: rowAtPoint:
@@ -254,37 +254,37 @@ import AppKit
   /**
     - Selector: scrollColumnToVisible:
   */
-  @objc func scrollColumnToVisible(_: Int)
+  @objc func scrollColumnToVisible(_ p0: Int)
 
   /**
     - Selector: scrollRowToVisible:
   */
-  @objc func scrollRowToVisible(_: Int)
+  @objc func scrollRowToVisible(_ p0: Int)
 
   /**
     - Selector: selectColumnIndexes:byExtendingSelection:
   */
-  @objc func selectColumnIndexes(_: IndexSet, byExtendingSelection: Bool)
+  @objc func selectColumnIndexes(_ p0: IndexSet, byExtendingSelection: Bool)
 
   /**
     - Selector: selectRowIndexes:byExtendingSelection:
   */
-  @objc func selectRowIndexes(_: IndexSet, byExtendingSelection: Bool)
+  @objc func selectRowIndexes(_ p0: IndexSet, byExtendingSelection: Bool)
 
   /**
     - Selector: setDraggingSourceOperationMask:forLocal:
   */
-  @objc func setDraggingSourceOperationMask(_: NSDragOperation, forLocal: Bool)
+  @objc func setDraggingSourceOperationMask(_ p0: NSDragOperation, forLocal: Bool)
 
   /**
     - Selector: setDropRow:dropOperation:
   */
-  @objc func setDropRow(_: Int, dropOperation: NSTableView.DropOperation)
+  @objc func setDropRow(_ p0: Int, dropOperation: NSTableView.DropOperation)
 
   /**
     - Selector: setIndicatorImage:inTableColumn:
   */
-  @objc (setIndicatorImage:inTableColumn:) func setIndicatorImage(_: NSImage?, in: NSTableColumn)
+  @objc (setIndicatorImage:inTableColumn:) func setIndicatorImage(_ p0: NSImage?, in: NSTableColumn)
 
   /**
     - Selector: sizeLastColumnToFit

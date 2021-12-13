@@ -29,19 +29,19 @@ import AppKit
     - Selector: addTabStop:
     - Introduced: 10.0
   */
-  @objc @available(OSX 10.0, *) func addTabStop(_: NSTextTab)
+  @objc @available(OSX 10.0, *) func addTabStop(_ p0: NSTextTab)
 
   /**
     - Selector: removeTabStop:
     - Introduced: 10.0
   */
-  @objc @available(OSX 10.0, *) func removeTabStop(_: NSTextTab)
+  @objc @available(OSX 10.0, *) func removeTabStop(_ p0: NSTextTab)
 
   /**
     - Selector: setParagraphStyle:
     - Introduced: 10.0
   */
-  @objc @available(OSX 10.0, *) func setParagraphStyle(_: NSParagraphStyle)
+  @objc @available(OSX 10.0, *) func setParagraphStyle(_ p0: NSParagraphStyle)
 
   // Own Instance Properties
 

@@ -22,17 +22,17 @@ import Foundation
   /**
     - Selector: compileAndReturnError:
   */
-  @objc func compileAndReturnError(_: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Bool
+  @objc func compileAndReturnError(_ p0: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> Bool
 
   /**
     - Selector: executeAndReturnError:
   */
-  @objc func executeAndReturnError(_: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> NSAppleEventDescriptor
+  @objc func executeAndReturnError(_ p0: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> NSAppleEventDescriptor
 
   /**
     - Selector: executeAppleEvent:error:
   */
-  @objc func executeAppleEvent(_: NSAppleEventDescriptor, error: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> NSAppleEventDescriptor
+  @objc func executeAppleEvent(_ p0: NSAppleEventDescriptor, error: AutoreleasingUnsafeMutablePointer<NSDictionary?>?) -> NSAppleEventDescriptor
 
   // Own Instance Properties
 

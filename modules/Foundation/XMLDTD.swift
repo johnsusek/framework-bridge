@@ -82,7 +82,7 @@ import Foundation
   /**
     - Selector: addChild:
   */
-  @objc func addChild(_: XMLNode)
+  @objc func addChild(_ p0: XMLNode)
 
   /**
     - Selector: attributeDeclarationForName:elementName:
@@ -102,12 +102,12 @@ import Foundation
   /**
     - Selector: insertChild:atIndex:
   */
-  @objc (insertChild:atIndex:) func insertChild(_: XMLNode, at: Int)
+  @objc (insertChild:atIndex:) func insertChild(_ p0: XMLNode, at: Int)
 
   /**
     - Selector: insertChildren:atIndex:
   */
-  @objc (insertChildren:atIndex:) func insertChildren(_: [XMLNode], at: Int)
+  @objc (insertChildren:atIndex:) func insertChildren(_ p0: [XMLNode], at: Int)
 
   /**
     - Selector: notationDeclarationForName:
@@ -127,7 +127,7 @@ import Foundation
   /**
     - Selector: setChildren:
   */
-  @objc func setChildren(_: [XMLNode]?)
+  @objc func setChildren(_ p0: [XMLNode]?)
 
   // Own Instance Properties
 

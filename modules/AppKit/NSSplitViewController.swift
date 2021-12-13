@@ -23,17 +23,17 @@ import AppKit
   /**
     - Selector: addSplitViewItem:
   */
-  @objc func addSplitViewItem(_: NSSplitViewItem)
+  @objc func addSplitViewItem(_ p0: NSSplitViewItem)
 
   /**
     - Selector: insertSplitViewItem:atIndex:
   */
-  @objc (insertSplitViewItem:atIndex:) func insertSplitViewItem(_: NSSplitViewItem, at: Int)
+  @objc (insertSplitViewItem:atIndex:) func insertSplitViewItem(_ p0: NSSplitViewItem, at: Int)
 
   /**
     - Selector: removeSplitViewItem:
   */
-  @objc func removeSplitViewItem(_: NSSplitViewItem)
+  @objc func removeSplitViewItem(_ p0: NSSplitViewItem)
 
   /**
     - Selector: splitViewItemForViewController:
@@ -44,7 +44,7 @@ import AppKit
     - Selector: toggleSidebar:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func toggleSidebar(_: Any?)
+  @objc @available(OSX 10.11, *) func toggleSidebar(_ p0: Any?)
 
   // Own Instance Properties
 

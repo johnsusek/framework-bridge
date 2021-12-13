@@ -58,12 +58,12 @@ import Foundation
   /**
     - Selector: attribute:atIndex:effectiveRange:
   */
-  @objc (attribute:atIndex:effectiveRange:) func attribute(_: NSAttributedString.Key, at: Int, effectiveRange: NSRangePointer?) -> Any?
+  @objc (attribute:atIndex:effectiveRange:) func attribute(_ p0: NSAttributedString.Key, at: Int, effectiveRange: NSRangePointer?) -> Any?
 
   /**
     - Selector: attribute:atIndex:longestEffectiveRange:inRange:
   */
-  @objc (attribute:atIndex:longestEffectiveRange:inRange:) func attribute(_: NSAttributedString.Key, at: Int, longestEffectiveRange: NSRangePointer?, in: NSRange) -> Any?
+  @objc (attribute:atIndex:longestEffectiveRange:inRange:) func attribute(_ p0: NSAttributedString.Key, at: Int, longestEffectiveRange: NSRangePointer?, in: NSRange) -> Any?
 
   /**
     - Selector: attributedSubstringFromRange:
@@ -140,7 +140,7 @@ import Foundation
     - Selector: enumerateAttribute:inRange:options:usingBlock:
     - Introduced: 10.6
   */
-  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttribute(_: NSAttributedString.Key, in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
+  // jsvalue @objc @available(OSX 10.6, *) func enumerateAttribute(_ p0: NSAttributedString.Key, in: NSRange, options: NSAttributedString.EnumerationOptions, using: JSValue)
 
   /**
     - Selector: enumerateAttributesInRange:options:usingBlock:

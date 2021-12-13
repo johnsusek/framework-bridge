@@ -67,12 +67,12 @@ import AppKit
   /**
     - Selector: doClick:
   */
-  @objc func doClick(_: Any?)
+  @objc func doClick(_ p0: Any?)
 
   /**
     - Selector: doDoubleClick:
   */
-  @objc func doDoubleClick(_: Any?)
+  @objc func doDoubleClick(_ p0: Any?)
 
   /**
     - Selector: draggingImageForRowsWithIndexes:inColumn:withEvent:offset:
@@ -111,7 +111,7 @@ import AppKit
     - Selector: getRow:column:forPoint:
     - Introduced: 10.6
   */
-  @objc (getRow:column:forPoint:) @available(OSX 10.6, *) func getRow(_: UnsafeMutablePointer<NSInteger>?, column: UnsafeMutablePointer<NSInteger>?, `for`: CGPoint) -> Bool
+  @objc (getRow:column:forPoint:) @available(OSX 10.6, *) func getRow(_ p0: UnsafeMutablePointer<NSInteger>?, column: UnsafeMutablePointer<NSInteger>?, `for`: CGPoint) -> Bool
 
   /**
     - Selector: indexPathForColumn:
@@ -123,7 +123,7 @@ import AppKit
     - Selector: isLeafItem:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func isLeafItem(_: Any?) -> Bool
+  @objc @available(OSX 10.6, *) func isLeafItem(_ p0: Any?) -> Bool
 
   /**
     - Selector: itemAtIndexPath:
@@ -151,7 +151,7 @@ import AppKit
     - Selector: noteHeightOfRowsWithIndexesChanged:inColumn:
     - Introduced: 10.6
   */
-  @objc (noteHeightOfRowsWithIndexesChanged:inColumn:) @available(OSX 10.6, *) func noteHeightOfRowsWithIndexesChanged(_: IndexSet, inColumn: Int)
+  @objc (noteHeightOfRowsWithIndexesChanged:inColumn:) @available(OSX 10.6, *) func noteHeightOfRowsWithIndexesChanged(_ p0: IndexSet, inColumn: Int)
 
   /**
     - Selector: parentForItemsInColumn:
@@ -172,7 +172,7 @@ import AppKit
   /**
     - Selector: reloadColumn:
   */
-  @objc func reloadColumn(_: Int)
+  @objc func reloadColumn(_ p0: Int)
 
   /**
     - Selector: reloadDataForRowIndexes:inColumn:
@@ -183,7 +183,7 @@ import AppKit
   /**
     - Selector: scrollColumnToVisible:
   */
-  @objc func scrollColumnToVisible(_: Int)
+  @objc func scrollColumnToVisible(_ p0: Int)
 
   /**
     - Selector: scrollColumnsLeftBy:
@@ -199,18 +199,18 @@ import AppKit
     - Selector: scrollRowToVisible:inColumn:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func scrollRowToVisible(_: Int, inColumn: Int)
+  @objc @available(OSX 10.6, *) func scrollRowToVisible(_ p0: Int, inColumn: Int)
 
   /**
     - Selector: selectRow:inColumn:
   */
-  @objc func selectRow(_: Int, inColumn: Int)
+  @objc func selectRow(_ p0: Int, inColumn: Int)
 
   /**
     - Selector: selectRowIndexes:inColumn:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func selectRowIndexes(_: IndexSet, inColumn: Int)
+  @objc @available(OSX 10.5, *) func selectRowIndexes(_ p0: IndexSet, inColumn: Int)
 
   /**
     - Selector: selectedCellInColumn:
@@ -236,34 +236,34 @@ import AppKit
   /**
     - Selector: setCellClass:
   */
-  @objc func setCellClass(_: AnyClass)
+  @objc func setCellClass(_ p0: AnyClass)
 
   /**
     - Selector: setDefaultColumnWidth:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func setDefaultColumnWidth(_: CGFloat)
+  @objc @available(OSX 10.6, *) func setDefaultColumnWidth(_ p0: CGFloat)
 
   /**
     - Selector: setDraggingSourceOperationMask:forLocal:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func setDraggingSourceOperationMask(_: NSDragOperation, forLocal: Bool)
+  @objc @available(OSX 10.5, *) func setDraggingSourceOperationMask(_ p0: NSDragOperation, forLocal: Bool)
 
   /**
     - Selector: setPath:
   */
-  @objc func setPath(_: String) -> Bool
+  @objc func setPath(_ p0: String) -> Bool
 
   /**
     - Selector: setTitle:ofColumn:
   */
-  @objc func setTitle(_: String, ofColumn: Int)
+  @objc func setTitle(_ p0: String, ofColumn: Int)
 
   /**
     - Selector: setWidth:ofColumn:
   */
-  @objc func setWidth(_: CGFloat, ofColumn: Int)
+  @objc func setWidth(_ p0: CGFloat, ofColumn: Int)
 
   /**
     - Selector: tile

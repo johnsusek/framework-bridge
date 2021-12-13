@@ -28,7 +28,7 @@ import AVFoundation
   /**
     - Selector: setOutputSettings:forConnection:
   */
-  @objc (setOutputSettings:forConnection:) func setOutputSettings(_: [String: Any]?, `for`: AVCaptureConnection)
+  @objc (setOutputSettings:forConnection:) func setOutputSettings(_ p0: [String: Any]?, `for`: AVCaptureConnection)
 
   // Own Instance Properties
 

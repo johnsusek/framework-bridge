@@ -21,12 +21,12 @@ import Foundation
   /**
     - Selector: addFilePresenter:
   */
-  @objc static func addFilePresenter(_: NSFilePresenter)
+  @objc static func addFilePresenter(_ p0: NSFilePresenter)
 
   /**
     - Selector: removeFilePresenter:
   */
-  @objc static func removeFilePresenter(_: NSFilePresenter)
+  @objc static func removeFilePresenter(_ p0: NSFilePresenter)
 
   // Own Static Properties
 

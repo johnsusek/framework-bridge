@@ -78,42 +78,42 @@ import AppKit
   /**
     - Selector: getNumberOfRows:columns:
   */
-  @objc func getNumberOfRows(_: UnsafeMutablePointer<NSInteger>?, columns: UnsafeMutablePointer<NSInteger>?)
+  @objc func getNumberOfRows(_ p0: UnsafeMutablePointer<NSInteger>?, columns: UnsafeMutablePointer<NSInteger>?)
 
   /**
     - Selector: getRow:column:forPoint:
   */
-  @objc (getRow:column:forPoint:) func getRow(_: UnsafeMutablePointer<NSInteger>, column: UnsafeMutablePointer<NSInteger>, `for`: CGPoint) -> Bool
+  @objc (getRow:column:forPoint:) func getRow(_ p0: UnsafeMutablePointer<NSInteger>, column: UnsafeMutablePointer<NSInteger>, `for`: CGPoint) -> Bool
 
   /**
     - Selector: getRow:column:ofCell:
   */
-  @objc (getRow:column:ofCell:) func getRow(_: UnsafeMutablePointer<NSInteger>, column: UnsafeMutablePointer<NSInteger>, of: NSCell) -> Bool
+  @objc (getRow:column:ofCell:) func getRow(_ p0: UnsafeMutablePointer<NSInteger>, column: UnsafeMutablePointer<NSInteger>, of: NSCell) -> Bool
 
   /**
     - Selector: highlightCell:atRow:column:
   */
-  @objc func highlightCell(_: Bool, atRow: Int, column: Int)
+  @objc func highlightCell(_ p0: Bool, atRow: Int, column: Int)
 
   /**
     - Selector: insertColumn:
   */
-  @objc func insertColumn(_: Int)
+  @objc func insertColumn(_ p0: Int)
 
   /**
     - Selector: insertColumn:withCells:
   */
-  @objc (insertColumn:withCells:) func insertColumn(_: Int, with: [NSCell]?)
+  @objc (insertColumn:withCells:) func insertColumn(_ p0: Int, with: [NSCell]?)
 
   /**
     - Selector: insertRow:
   */
-  @objc func insertRow(_: Int)
+  @objc func insertRow(_ p0: Int)
 
   /**
     - Selector: insertRow:withCells:
   */
-  @objc (insertRow:withCells:) func insertRow(_: Int, with: [NSCell]?)
+  @objc (insertRow:withCells:) func insertRow(_ p0: Int, with: [NSCell]?)
 
   /**
     - Selector: makeCellAtRow:column:
@@ -123,22 +123,22 @@ import AppKit
   /**
     - Selector: putCell:atRow:column:
   */
-  @objc func putCell(_: NSCell, atRow: Int, column: Int)
+  @objc func putCell(_ p0: NSCell, atRow: Int, column: Int)
 
   /**
     - Selector: removeColumn:
   */
-  @objc func removeColumn(_: Int)
+  @objc func removeColumn(_ p0: Int)
 
   /**
     - Selector: removeRow:
   */
-  @objc func removeRow(_: Int)
+  @objc func removeRow(_ p0: Int)
 
   /**
     - Selector: renewRows:columns:
   */
-  @objc func renewRows(_: Int, columns: Int)
+  @objc func renewRows(_ p0: Int, columns: Int)
 
   /**
     - Selector: scrollCellToVisibleAtRow:column:
@@ -158,7 +158,7 @@ import AppKit
   /**
     - Selector: selectText:
   */
-  @objc func selectText(_: Any?)
+  @objc func selectText(_ p0: Any?)
 
   /**
     - Selector: selectTextAtRow:column:
@@ -173,7 +173,7 @@ import AppKit
   /**
     - Selector: sendAction:to:forAllCells:
   */
-  @objc func sendAction(_: Selector, to: Any, forAllCells: Bool)
+  @objc func sendAction(_ p0: Selector, to: Any, forAllCells: Bool)
 
   /**
     - Selector: sendDoubleAction
@@ -183,27 +183,27 @@ import AppKit
   /**
     - Selector: setScrollable:
   */
-  @objc func setScrollable(_: Bool)
+  @objc func setScrollable(_ p0: Bool)
 
   /**
     - Selector: setSelectionFrom:to:anchor:highlight:
   */
-  @objc func setSelectionFrom(_: Int, to: Int, anchor: Int, highlight: Bool)
+  @objc func setSelectionFrom(_ p0: Int, to: Int, anchor: Int, highlight: Bool)
 
   /**
     - Selector: setState:atRow:column:
   */
-  @objc func setState(_: Int, atRow: Int, column: Int)
+  @objc func setState(_ p0: Int, atRow: Int, column: Int)
 
   /**
     - Selector: setToolTip:forCell:
   */
-  @objc (setToolTip:forCell:) func setToolTip(_: String?, `for`: NSCell)
+  @objc (setToolTip:forCell:) func setToolTip(_ p0: String?, `for`: NSCell)
 
   /**
     - Selector: setValidateSize:
   */
-  @objc func setValidateSize(_: Bool)
+  @objc func setValidateSize(_ p0: Bool)
 
   /**
     - Selector: sizeToCells
@@ -223,27 +223,27 @@ import AppKit
   /**
     - Selector: textDidBeginEditing:
   */
-  @objc func textDidBeginEditing(_: Notification)
+  @objc func textDidBeginEditing(_ p0: Notification)
 
   /**
     - Selector: textDidChange:
   */
-  @objc func textDidChange(_: Notification)
+  @objc func textDidChange(_ p0: Notification)
 
   /**
     - Selector: textDidEndEditing:
   */
-  @objc func textDidEndEditing(_: Notification)
+  @objc func textDidEndEditing(_ p0: Notification)
 
   /**
     - Selector: textShouldBeginEditing:
   */
-  @objc func textShouldBeginEditing(_: NSText) -> Bool
+  @objc func textShouldBeginEditing(_ p0: NSText) -> Bool
 
   /**
     - Selector: textShouldEndEditing:
   */
-  @objc func textShouldEndEditing(_: NSText) -> Bool
+  @objc func textShouldEndEditing(_ p0: NSText) -> Bool
 
   /**
     - Selector: toolTipForCell:

@@ -23,7 +23,7 @@ import AppKit
   /**
     - Selector: updateValue:forAnimatedKey:
   */
-  @objc func updateValue(_: CGFloat, forAnimatedKey: NSCollectionViewTransitionLayout.AnimatedKey)
+  @objc func updateValue(_ p0: CGFloat, forAnimatedKey: NSCollectionViewTransitionLayout.AnimatedKey)
 
   /**
     - Selector: valueForAnimatedKey:

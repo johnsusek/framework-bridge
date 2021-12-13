@@ -23,7 +23,7 @@ import AVFoundation
   /**
     - Selector: play:
   */
-  // jsvalue @objc func play(_: JSValue?)
+  // jsvalue @objc func play(_ p0: JSValue?)
 
   /**
     - Selector: prepareToPlay

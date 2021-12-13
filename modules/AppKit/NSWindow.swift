@@ -40,7 +40,7 @@ import AppKit
   /**
     - Selector: standardWindowButton:forStyleMask:
   */
-  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_ p0: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
 
   /**
     - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
@@ -84,19 +84,19 @@ import AppKit
   /**
     - Selector: addChildWindow:ordered:
   */
-  @objc func addChildWindow(_: NSWindow, ordered: NSWindow.OrderingMode)
+  @objc func addChildWindow(_ p0: NSWindow, ordered: NSWindow.OrderingMode)
 
   /**
     - Selector: addTabbedWindow:ordered:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) func addTabbedWindow(_: NSWindow, ordered: NSWindow.OrderingMode)
+  @objc @available(OSX 10.12, *) func addTabbedWindow(_ p0: NSWindow, ordered: NSWindow.OrderingMode)
 
   /**
     - Selector: addTitlebarAccessoryViewController:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) func addTitlebarAccessoryViewController(_: NSTitlebarAccessoryViewController)
+  @objc @available(OSX 10.10, *) func addTitlebarAccessoryViewController(_ p0: NSTitlebarAccessoryViewController)
 
   /**
     - Selector: anchorAttributeForOrientation:
@@ -106,7 +106,7 @@ import AppKit
   /**
     - Selector: animationResizeTime:
   */
-  @objc func animationResizeTime(_: CGRect) -> TimeInterval
+  @objc func animationResizeTime(_ p0: CGRect) -> TimeInterval
 
   /**
     - Selector: autorecalculatesContentBorderThicknessForEdge:
@@ -118,7 +118,7 @@ import AppKit
     - Selector: backingAlignedRect:options:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func backingAlignedRect(_: CGRect, options: AlignmentOptions) -> CGRect
+  @objc @available(OSX 10.7, *) func backingAlignedRect(_ p0: CGRect, options: AlignmentOptions) -> CGRect
 
   /**
     - Selector: becomeKeyWindow
@@ -134,19 +134,19 @@ import AppKit
     - Selector: beginCriticalSheet:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func beginCriticalSheet(_: NSWindow, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginCriticalSheet(_ p0: NSWindow, completionHandler: JSValue)
 
   /**
     - Selector: beginSheet:completionHandler:
     - Introduced: 10.9
   */
-  // jsvalue @objc @available(OSX 10.9, *) func beginSheet(_: NSWindow, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.9, *) func beginSheet(_ p0: NSWindow, completionHandler: JSValue)
 
   /**
     - Selector: canRepresentDisplayGamut:
     - Introduced: 10.12
   */
-  @objc (canRepresentDisplayGamut:) @available(OSX 10.12, *) func canRepresent(_: NSDisplayGamut) -> Bool
+  @objc (canRepresentDisplayGamut:) @available(OSX 10.12, *) func canRepresent(_ p0: NSDisplayGamut) -> Bool
 
   /**
     - Selector: cascadeTopLeftFromPoint:
@@ -166,7 +166,7 @@ import AppKit
   /**
     - Selector: constrainFrameRect:toScreen:
   */
-  @objc (constrainFrameRect:toScreen:) func constrainFrameRect(_: CGRect, to: NSScreen?) -> CGRect
+  @objc (constrainFrameRect:toScreen:) func constrainFrameRect(_ p0: CGRect, to: NSScreen?) -> CGRect
 
   /**
     - Selector: contentBorderThicknessForEdge:
@@ -183,7 +183,7 @@ import AppKit
     - Selector: convertPointFromBacking:
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) func convertPointFromBacking(_: CGPoint) -> CGPoint
+  @objc @available(OSX 10.14, *) func convertPointFromBacking(_ p0: CGPoint) -> CGPoint
 
   /**
     - Selector: convertPointFromScreen:
@@ -195,7 +195,7 @@ import AppKit
     - Selector: convertPointToBacking:
     - Introduced: 10.14
   */
-  @objc @available(OSX 10.14, *) func convertPointToBacking(_: CGPoint) -> CGPoint
+  @objc @available(OSX 10.14, *) func convertPointToBacking(_ p0: CGPoint) -> CGPoint
 
   /**
     - Selector: convertPointToScreen:
@@ -207,25 +207,25 @@ import AppKit
     - Selector: convertRectFromBacking:
     - Introduced: 10.7
   */
-  @objc (convertRectFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_: CGRect) -> CGRect
+  @objc (convertRectFromBacking:) @available(OSX 10.7, *) func convertFromBacking(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: convertRectFromScreen:
     - Introduced: 10.7
   */
-  @objc (convertRectFromScreen:) @available(OSX 10.7, *) func convertFromScreen(_: CGRect) -> CGRect
+  @objc (convertRectFromScreen:) @available(OSX 10.7, *) func convertFromScreen(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: convertRectToBacking:
     - Introduced: 10.7
   */
-  @objc (convertRectToBacking:) @available(OSX 10.7, *) func convertToBacking(_: CGRect) -> CGRect
+  @objc (convertRectToBacking:) @available(OSX 10.7, *) func convertToBacking(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: convertRectToScreen:
     - Introduced: 10.7
   */
-  @objc (convertRectToScreen:) @available(OSX 10.7, *) func convertToScreen(_: CGRect) -> CGRect
+  @objc (convertRectToScreen:) @available(OSX 10.7, *) func convertToScreen(_ p0: CGRect) -> CGRect
 
   /**
     - Selector: dataWithEPSInsideRect:
@@ -240,7 +240,7 @@ import AppKit
   /**
     - Selector: deminiaturize:
   */
-  @objc func deminiaturize(_: Any?)
+  @objc func deminiaturize(_ p0: Any?)
 
   /**
     - Selector: disableCursorRects
@@ -285,7 +285,7 @@ import AppKit
   /**
     - Selector: dragImage:at:offset:event:pasteboard:source:slideBack:
   */
-  @objc (dragImage:at:offset:event:pasteboard:source:slideBack:) func drag(_: NSImage, at: CGPoint, offset: CGSize, event: NSEvent, pasteboard: NSPasteboard, source: Any, slideBack: Bool)
+  @objc (dragImage:at:offset:event:pasteboard:source:slideBack:) func drag(_ p0: NSImage, at: CGPoint, offset: CGSize, event: NSEvent, pasteboard: NSPasteboard, source: Any, slideBack: Bool)
 
   /**
     - Selector: enableCursorRects
@@ -311,18 +311,18 @@ import AppKit
     - Selector: endSheet:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) func endSheet(_: NSWindow)
+  @objc @available(OSX 10.9, *) func endSheet(_ p0: NSWindow)
 
   /**
     - Selector: endSheet:returnCode:
     - Introduced: 10.9
   */
-  @objc @available(OSX 10.9, *) func endSheet(_: NSWindow, returnCode: NSApplication.ModalResponse)
+  @objc @available(OSX 10.9, *) func endSheet(_ p0: NSWindow, returnCode: NSApplication.ModalResponse)
 
   /**
     - Selector: fieldEditor:forObject:
   */
-  @objc (fieldEditor:forObject:) func fieldEditor(_: Bool, `for`: Any?) -> NSText?
+  @objc (fieldEditor:forObject:) func fieldEditor(_ p0: Bool, `for`: Any?) -> NSText?
 
   /**
     - Selector: frameRectForContentRect:
@@ -332,17 +332,17 @@ import AppKit
   /**
     - Selector: handleCloseScriptCommand:
   */
-  @objc (handleCloseScriptCommand:) func handleClose(_: NSCloseCommand) -> Any?
+  @objc (handleCloseScriptCommand:) func handleClose(_ p0: NSCloseCommand) -> Any?
 
   /**
     - Selector: handlePrintScriptCommand:
   */
-  @objc (handlePrintScriptCommand:) func handlePrint(_: NSScriptCommand) -> Any?
+  @objc (handlePrintScriptCommand:) func handlePrint(_ p0: NSScriptCommand) -> Any?
 
   /**
     - Selector: handleSaveScriptCommand:
   */
-  @objc (handleSaveScriptCommand:) func handleSave(_: NSScriptCommand) -> Any?
+  @objc (handleSaveScriptCommand:) func handleSave(_ p0: NSScriptCommand) -> Any?
 
   /**
     - Selector: initWithContentRect:styleMask:backing:defer:
@@ -363,7 +363,7 @@ import AppKit
     - Selector: insertTitlebarAccessoryViewController:atIndex:
     - Introduced: 10.10
   */
-  @objc (insertTitlebarAccessoryViewController:atIndex:) @available(OSX 10.10, *) func insertTitlebarAccessoryViewController(_: NSTitlebarAccessoryViewController, at: Int)
+  @objc (insertTitlebarAccessoryViewController:atIndex:) @available(OSX 10.10, *) func insertTitlebarAccessoryViewController(_ p0: NSTitlebarAccessoryViewController, at: Int)
 
   /**
     - Selector: invalidateCursorRectsForView:
@@ -384,12 +384,12 @@ import AppKit
   /**
     - Selector: makeFirstResponder:
   */
-  @objc func makeFirstResponder(_: NSResponder?) -> Bool
+  @objc func makeFirstResponder(_ p0: NSResponder?) -> Bool
 
   /**
     - Selector: makeKeyAndOrderFront:
   */
-  @objc func makeKeyAndOrderFront(_: Any?)
+  @objc func makeKeyAndOrderFront(_ p0: Any?)
 
   /**
     - Selector: makeKeyWindow
@@ -405,18 +405,18 @@ import AppKit
     - Selector: mergeAllWindows:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) func mergeAllWindows(_: Any?)
+  @objc @available(OSX 10.12, *) func mergeAllWindows(_ p0: Any?)
 
   /**
     - Selector: miniaturize:
   */
-  @objc func miniaturize(_: Any?)
+  @objc func miniaturize(_ p0: Any?)
 
   /**
     - Selector: moveTabToNewWindow:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) func moveTabToNewWindow(_: Any?)
+  @objc @available(OSX 10.12, *) func moveTabToNewWindow(_ p0: Any?)
 
   /**
     - Selector: nextEventMatchingMask:
@@ -431,12 +431,12 @@ import AppKit
   /**
     - Selector: orderBack:
   */
-  @objc func orderBack(_: Any?)
+  @objc func orderBack(_ p0: Any?)
 
   /**
     - Selector: orderFront:
   */
-  @objc func orderFront(_: Any?)
+  @objc func orderFront(_ p0: Any?)
 
   /**
     - Selector: orderFrontRegardless
@@ -446,22 +446,22 @@ import AppKit
   /**
     - Selector: orderOut:
   */
-  @objc func orderOut(_: Any?)
+  @objc func orderOut(_ p0: Any?)
 
   /**
     - Selector: orderWindow:relativeTo:
   */
-  @objc (orderWindow:relativeTo:) func order(_: NSWindow.OrderingMode, relativeTo: Int)
+  @objc (orderWindow:relativeTo:) func order(_ p0: NSWindow.OrderingMode, relativeTo: Int)
 
   /**
     - Selector: performClose:
   */
-  @objc func performClose(_: Any?)
+  @objc func performClose(_ p0: Any?)
 
   /**
     - Selector: performMiniaturize:
   */
-  @objc func performMiniaturize(_: Any?)
+  @objc func performMiniaturize(_ p0: Any?)
 
   /**
     - Selector: performWindowDragWithEvent:
@@ -472,17 +472,17 @@ import AppKit
   /**
     - Selector: performZoom:
   */
-  @objc func performZoom(_: Any?)
+  @objc func performZoom(_ p0: Any?)
 
   /**
     - Selector: postEvent:atStart:
   */
-  @objc (postEvent:atStart:) func postEvent(_: NSEvent, atStart: Bool)
+  @objc (postEvent:atStart:) func postEvent(_ p0: NSEvent, atStart: Bool)
 
   /**
     - Selector: print:
   */
-  @objc (print:) func printWindow(_: Any?)
+  @objc (print:) func printWindow(_ p0: Any?)
 
   /**
     - Selector: recalculateKeyViewLoop
@@ -492,12 +492,12 @@ import AppKit
   /**
     - Selector: registerForDraggedTypes:
   */
-  @objc (registerForDraggedTypes:) func registerForDraggedTypes(_: [NSPasteboard.PasteboardType])
+  @objc (registerForDraggedTypes:) func registerForDraggedTypes(_ p0: [NSPasteboard.PasteboardType])
 
   /**
     - Selector: removeChildWindow:
   */
-  @objc func removeChildWindow(_: NSWindow)
+  @objc func removeChildWindow(_ p0: NSWindow)
 
   /**
     - Selector: removeTitlebarAccessoryViewControllerAtIndex:
@@ -523,7 +523,7 @@ import AppKit
   /**
     - Selector: runToolbarCustomizationPalette:
   */
-  @objc func runToolbarCustomizationPalette(_: Any?)
+  @objc func runToolbarCustomizationPalette(_ p0: Any?)
 
   /**
     - Selector: saveFrameUsingName:
@@ -543,71 +543,71 @@ import AppKit
   /**
     - Selector: selectNextKeyView:
   */
-  @objc func selectNextKeyView(_: Any?)
+  @objc func selectNextKeyView(_ p0: Any?)
 
   /**
     - Selector: selectNextTab:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) func selectNextTab(_: Any?)
+  @objc @available(OSX 10.12, *) func selectNextTab(_ p0: Any?)
 
   /**
     - Selector: selectPreviousKeyView:
   */
-  @objc func selectPreviousKeyView(_: Any?)
+  @objc func selectPreviousKeyView(_ p0: Any?)
 
   /**
     - Selector: selectPreviousTab:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) func selectPreviousTab(_: Any?)
+  @objc @available(OSX 10.12, *) func selectPreviousTab(_ p0: Any?)
 
   /**
     - Selector: sendEvent:
   */
-  @objc (sendEvent:) func sendEvent(_: NSEvent)
+  @objc (sendEvent:) func sendEvent(_ p0: NSEvent)
 
   /**
     - Selector: setAnchorAttribute:forOrientation:
   */
-  @objc (setAnchorAttribute:forOrientation:) func setAnchorAttribute(_: NSLayoutConstraint.Attribute, `for`: NSLayoutConstraint.Orientation)
+  @objc (setAnchorAttribute:forOrientation:) func setAnchorAttribute(_ p0: NSLayoutConstraint.Attribute, `for`: NSLayoutConstraint.Orientation)
 
   /**
     - Selector: setAutorecalculatesContentBorderThickness:forEdge:
     - Introduced: 10.5
   */
-  @objc (setAutorecalculatesContentBorderThickness:forEdge:) @available(OSX 10.5, *) func setAutorecalculatesContentBorderThickness(_: Bool, `for`: NSRectEdge)
+  @objc (setAutorecalculatesContentBorderThickness:forEdge:) @available(OSX 10.5, *) func setAutorecalculatesContentBorderThickness(_ p0: Bool, `for`: NSRectEdge)
 
   /**
     - Selector: setContentBorderThickness:forEdge:
     - Introduced: 10.5
   */
-  @objc (setContentBorderThickness:forEdge:) @available(OSX 10.5, *) func setContentBorderThickness(_: CGFloat, `for`: NSRectEdge)
+  @objc (setContentBorderThickness:forEdge:) @available(OSX 10.5, *) func setContentBorderThickness(_ p0: CGFloat, `for`: NSRectEdge)
 
   /**
     - Selector: setContentSize:
   */
-  @objc func setContentSize(_: CGSize)
+  @objc func setContentSize(_ p0: CGSize)
 
   /**
     - Selector: setDynamicDepthLimit:
   */
-  @objc func setDynamicDepthLimit(_: Bool)
+  @objc func setDynamicDepthLimit(_ p0: Bool)
 
   /**
     - Selector: setFrame:display:
   */
-  @objc func setFrame(_: CGRect, display: Bool)
+  @objc func setFrame(_ p0: CGRect, display: Bool)
 
   /**
     - Selector: setFrame:display:animate:
   */
-  @objc func setFrame(_: CGRect, display: Bool, animate: Bool)
+  @objc func setFrame(_ p0: CGRect, display: Bool, animate: Bool)
 
   /**
     - Selector: setFrameAutosaveName:
   */
-  @objc func setFrameAutosaveName(_: NSWindow.FrameAutosaveName) -> Bool
+  @objc func setFrameAutosaveName(_ p0: NSWindow.FrameAutosaveName) -> Bool
 
   /**
     - Selector: setFrameFromString:
@@ -617,70 +617,70 @@ import AppKit
   /**
     - Selector: setFrameOrigin:
   */
-  @objc func setFrameOrigin(_: CGPoint)
+  @objc func setFrameOrigin(_ p0: CGPoint)
 
   /**
     - Selector: setFrameTopLeftPoint:
   */
-  @objc func setFrameTopLeftPoint(_: CGPoint)
+  @objc func setFrameTopLeftPoint(_ p0: CGPoint)
 
   /**
     - Selector: setFrameUsingName:
   */
-  @objc func setFrameUsingName(_: NSWindow.FrameAutosaveName) -> Bool
+  @objc func setFrameUsingName(_ p0: NSWindow.FrameAutosaveName) -> Bool
 
   /**
     - Selector: setFrameUsingName:force:
   */
-  @objc func setFrameUsingName(_: NSWindow.FrameAutosaveName, force: Bool) -> Bool
+  @objc func setFrameUsingName(_ p0: NSWindow.FrameAutosaveName, force: Bool) -> Bool
 
   /**
     - Selector: setIsMiniaturized:
   */
-  @objc func setIsMiniaturized(_: Bool)
+  @objc func setIsMiniaturized(_ p0: Bool)
 
   /**
     - Selector: setIsVisible:
   */
-  @objc func setIsVisible(_: Bool)
+  @objc func setIsVisible(_ p0: Bool)
 
   /**
     - Selector: setIsZoomed:
   */
-  @objc func setIsZoomed(_: Bool)
+  @objc func setIsZoomed(_ p0: Bool)
 
   /**
     - Selector: setTitleWithRepresentedFilename:
   */
-  @objc func setTitleWithRepresentedFilename(_: String)
+  @objc func setTitleWithRepresentedFilename(_ p0: String)
 
   /**
     - Selector: standardWindowButton:
   */
-  @objc func standardWindowButton(_: NSWindow.ButtonType) -> NSButton?
+  @objc func standardWindowButton(_ p0: NSWindow.ButtonType) -> NSButton?
 
   /**
     - Selector: toggleFullScreen:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func toggleFullScreen(_: Any?)
+  @objc @available(OSX 10.7, *) func toggleFullScreen(_ p0: Any?)
 
   /**
     - Selector: toggleTabBar:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) func toggleTabBar(_: Any?)
+  @objc @available(OSX 10.12, *) func toggleTabBar(_ p0: Any?)
 
   /**
     - Selector: toggleTabOverview:
     - Introduced: 10.13
   */
-  @objc @available(OSX 10.13, *) func toggleTabOverview(_: Any?)
+  @objc @available(OSX 10.13, *) func toggleTabOverview(_ p0: Any?)
 
   /**
     - Selector: toggleToolbarShown:
   */
-  @objc func toggleToolbarShown(_: Any?)
+  @objc func toggleToolbarShown(_ p0: Any?)
 
   /**
     - Selector: trackEventsMatchingMask:timeout:mode:handler:
@@ -708,12 +708,12 @@ import AppKit
     - Selector: visualizeConstraints:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func visualizeConstraints(_: [NSLayoutConstraint]?)
+  @objc @available(OSX 10.7, *) func visualizeConstraints(_ p0: [NSLayoutConstraint]?)
 
   /**
     - Selector: zoom:
   */
-  @objc func zoom(_: Any?)
+  @objc func zoom(_ p0: Any?)
 
   // Protocol Inherited Instance Properties
 

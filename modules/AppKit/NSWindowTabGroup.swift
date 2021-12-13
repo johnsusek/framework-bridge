@@ -23,17 +23,17 @@ import AppKit
   /**
     - Selector: addWindow:
   */
-  @objc func addWindow(_: NSWindow)
+  @objc func addWindow(_ p0: NSWindow)
 
   /**
     - Selector: insertWindow:atIndex:
   */
-  @objc (insertWindow:atIndex:) func insertWindow(_: NSWindow, at: Int)
+  @objc (insertWindow:atIndex:) func insertWindow(_ p0: NSWindow, at: Int)
 
   /**
     - Selector: removeWindow:
   */
-  @objc func removeWindow(_: NSWindow)
+  @objc func removeWindow(_ p0: NSWindow)
 
   // Own Instance Properties
 

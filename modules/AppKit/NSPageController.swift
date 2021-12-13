@@ -28,12 +28,12 @@ import AppKit
   /**
     - Selector: navigateBack:
   */
-  @objc func navigateBack(_: Any?)
+  @objc func navigateBack(_ p0: Any?)
 
   /**
     - Selector: navigateForward:
   */
-  @objc func navigateForward(_: Any?)
+  @objc func navigateForward(_ p0: Any?)
 
   /**
     - Selector: navigateForwardToObject:
@@ -43,7 +43,7 @@ import AppKit
   /**
     - Selector: takeSelectedIndexFrom:
   */
-  @objc func takeSelectedIndexFrom(_: Any?)
+  @objc func takeSelectedIndexFrom(_ p0: Any?)
 
   // Own Instance Properties
 

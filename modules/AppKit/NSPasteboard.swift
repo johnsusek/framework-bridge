@@ -59,7 +59,7 @@ import AppKit
   /**
     - Selector: addTypes:owner:
   */
-  @objc func addTypes(_: [NSPasteboard.PasteboardType], owner: Any?) -> Int
+  @objc func addTypes(_ p0: [NSPasteboard.PasteboardType], owner: Any?) -> Int
 
   /**
     - Selector: availableTypeFromArray:
@@ -92,7 +92,7 @@ import AppKit
   /**
     - Selector: declareTypes:owner:
   */
-  @objc func declareTypes(_: [NSPasteboard.PasteboardType], owner: Any?) -> Int
+  @objc func declareTypes(_ p0: [NSPasteboard.PasteboardType], owner: Any?) -> Int
 
   /**
     - Selector: indexOfPasteboardItem:
@@ -114,7 +114,7 @@ import AppKit
   /**
     - Selector: readFileContentsType:toFile:
   */
-  @objc func readFileContentsType(_: NSPasteboard.PasteboardType?, toFile: String) -> String?
+  @objc func readFileContentsType(_ p0: NSPasteboard.PasteboardType?, toFile: String) -> String?
 
   /**
     - Selector: readFileWrapper
@@ -135,17 +135,17 @@ import AppKit
   /**
     - Selector: setData:forType:
   */
-  @objc func setData(_: Data?, forType: NSPasteboard.PasteboardType) -> Bool
+  @objc func setData(_ p0: Data?, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
     - Selector: setPropertyList:forType:
   */
-  @objc func setPropertyList(_: Any, forType: NSPasteboard.PasteboardType) -> Bool
+  @objc func setPropertyList(_ p0: Any, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
     - Selector: setString:forType:
   */
-  @objc func setString(_: String, forType: NSPasteboard.PasteboardType) -> Bool
+  @objc func setString(_ p0: String, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
     - Selector: stringForType:
@@ -155,18 +155,18 @@ import AppKit
   /**
     - Selector: writeFileContents:
   */
-  @objc func writeFileContents(_: String) -> Bool
+  @objc func writeFileContents(_ p0: String) -> Bool
 
   /**
     - Selector: writeFileWrapper:
   */
-  @objc (writeFileWrapper:) func write(_: FileWrapper) -> Bool
+  @objc (writeFileWrapper:) func write(_ p0: FileWrapper) -> Bool
 
   /**
     - Selector: writeObjects:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func writeObjects(_: [NSPasteboardWriting]) -> Bool
+  @objc @available(OSX 10.6, *) func writeObjects(_ p0: [NSPasteboardWriting]) -> Bool
 
   // Own Instance Properties
 

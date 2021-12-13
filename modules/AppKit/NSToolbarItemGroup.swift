@@ -42,7 +42,7 @@ import AppKit
     - Selector: setSelected:atIndex:
     - Introduced: 10.15
   */
-  @objc (setSelected:atIndex:) @available(OSX 10.15, *) func setSelected(_: Bool, at: Int)
+  @objc (setSelected:atIndex:) @available(OSX 10.15, *) func setSelected(_ p0: Bool, at: Int)
 
   // Own Instance Properties
 

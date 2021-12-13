@@ -36,12 +36,12 @@ import AppKit
     - Selector: deleteSections:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func deleteSections(_: IndexSet)
+  @objc @available(OSX 10.11, *) func deleteSections(_ p0: IndexSet)
 
   /**
     - Selector: deselectAll:
   */
-  @objc func deselectAll(_: Any?)
+  @objc func deselectAll(_ p0: Any?)
 
   /**
     - Selector: deselectItemsAtIndexPaths:
@@ -107,7 +107,7 @@ import AppKit
     - Selector: insertSections:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func insertSections(_: IndexSet)
+  @objc @available(OSX 10.11, *) func insertSections(_ p0: IndexSet)
 
   /**
     - Selector: itemAtIndex:
@@ -155,7 +155,7 @@ import AppKit
     - Selector: moveSection:toSection:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func moveSection(_: Int, toSection: Int)
+  @objc @available(OSX 10.11, *) func moveSection(_ p0: Int, toSection: Int)
 
   /**
     - Selector: numberOfItemsInSection:
@@ -167,31 +167,19 @@ import AppKit
     - Selector: performBatchUpdates:completionHandler:
     - Introduced: 10.11
   */
-  // jsvalue @objc @available(OSX 10.11, *) func performBatchUpdates(_: JSValue, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.11, *) func performBatchUpdates(_ p0: JSValue, completionHandler: JSValue)
 
   /**
     - Selector: registerClass:forItemWithIdentifier:
     - Introduced: 10.11
   */
-  @objc (registerClass:forItemWithIdentifier:) @available(OSX 10.11, *) func register(_: AnyClass?, forItemWithIdentifier: NSUserInterfaceItemIdentifier)
+  @objc (registerClass:forItemWithIdentifier:) @available(OSX 10.11, *) func register(_ p0: AnyClass?, forItemWithIdentifier: NSUserInterfaceItemIdentifier)
 
   /**
     - Selector: registerClass:forSupplementaryViewOfKind:withIdentifier:
     - Introduced: 10.11
   */
-  @objc (registerClass:forSupplementaryViewOfKind:withIdentifier:) @available(OSX 10.11, *) func register(_: AnyClass?, forSupplementaryViewOfKind: NSCollectionView.SupplementaryElementKind, withIdentifier: NSUserInterfaceItemIdentifier)
-
-  /**
-    - Selector: registerNib:forItemWithIdentifier:
-    - Introduced: 10.11
-  */
-  @objc (registerNib:forItemWithIdentifier:) @available(OSX 10.11, *) func register(_: NSNib?, forItemWithIdentifier: NSUserInterfaceItemIdentifier)
-
-  /**
-    - Selector: registerNib:forSupplementaryViewOfKind:withIdentifier:
-    - Introduced: 10.11
-  */
-  @objc (registerNib:forSupplementaryViewOfKind:withIdentifier:) @available(OSX 10.11, *) func register(_: NSNib?, forSupplementaryViewOfKind: NSCollectionView.SupplementaryElementKind, withIdentifier: NSUserInterfaceItemIdentifier)
+  @objc (registerClass:forSupplementaryViewOfKind:withIdentifier:) @available(OSX 10.11, *) func register(_ p0: AnyClass?, forSupplementaryViewOfKind: NSCollectionView.SupplementaryElementKind, withIdentifier: NSUserInterfaceItemIdentifier)
 
   /**
     - Selector: reloadData
@@ -209,7 +197,7 @@ import AppKit
     - Selector: reloadSections:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func reloadSections(_: IndexSet)
+  @objc @available(OSX 10.11, *) func reloadSections(_ p0: IndexSet)
 
   /**
     - Selector: scrollToItemsAtIndexPaths:scrollPosition:
@@ -227,7 +215,7 @@ import AppKit
     - Selector: setDraggingSourceOperationMask:forLocal:
     - Introduced: 10.6
   */
-  @objc @available(OSX 10.6, *) func setDraggingSourceOperationMask(_: NSDragOperation, forLocal: Bool)
+  @objc @available(OSX 10.6, *) func setDraggingSourceOperationMask(_ p0: NSDragOperation, forLocal: Bool)
 
   /**
     - Selector: supplementaryViewForElementKind:atIndexPath:
@@ -239,7 +227,7 @@ import AppKit
     - Selector: toggleSectionCollapse:
     - Introduced: 10.12
   */
-  @objc @available(OSX 10.12, *) func toggleSectionCollapse(_: Any)
+  @objc @available(OSX 10.12, *) func toggleSectionCollapse(_ p0: Any)
 
   /**
     - Selector: visibleItems

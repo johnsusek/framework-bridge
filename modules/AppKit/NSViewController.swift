@@ -8,7 +8,7 @@ import CoreImage
 import CoreGraphics
 import AppKit
 
-// Interface
+// Interface 
 
   /**
     - Selector: NSViewController
@@ -24,25 +24,25 @@ import AppKit
     - Selector: addChildViewController:
     - Introduced: 10.10
   */
-  @objc (addChildViewController:) @available(OSX 10.10, *) func addChild(_: NSViewController)
+  @objc (addChildViewController:) @available(OSX 10.10, *) func addChild(_ p0: NSViewController)
 
   /**
     - Selector: dismissController:
     - Introduced: 10.10
   */
-  @objc (dismissController:) @available(OSX 10.10, *) func dismiss(_: Any?)
+  @objc (dismissController:) @available(OSX 10.10, *) func dismiss(_ p0: Any?)
 
   /**
     - Selector: dismissViewController:
     - Introduced: 10.10
   */
-  @objc (dismissViewController:) @available(OSX 10.10, *) func dismiss(_: NSViewController)
+  @objc (dismissViewController:) @available(OSX 10.10, *) func dismiss(_ p0: NSViewController)
 
   /**
     - Selector: insertChildViewController:atIndex:
     - Introduced: 10.10
   */
-  @objc (insertChildViewController:atIndex:) @available(OSX 10.10, *) func insertChild(_: NSViewController, at: Int)
+  @objc (insertChildViewController:atIndex:) @available(OSX 10.10, *) func insertChild(_ p0: NSViewController, at: Int)
 
   /**
     - Selector: loadView
@@ -59,25 +59,25 @@ import AppKit
     - Selector: presentViewController:animator:
     - Introduced: 10.10
   */
-  @objc (presentViewController:animator:) @available(OSX 10.10, *) func present(_: NSViewController, animator: NSViewControllerPresentationAnimator)
+  @objc (presentViewController:animator:) @available(OSX 10.10, *) func present(_ p0: NSViewController, animator: NSViewControllerPresentationAnimator)
 
   /**
     - Selector: presentViewController:asPopoverRelativeToRect:ofView:preferredEdge:behavior:
     - Introduced: 10.10
   */
-  @objc (presentViewController:asPopoverRelativeToRect:ofView:preferredEdge:behavior:) @available(OSX 10.10, *) func present(_: NSViewController, asPopoverRelativeTo: CGRect, of: NSView, preferredEdge: NSRectEdge, behavior: NSPopover.Behavior)
+  @objc (presentViewController:asPopoverRelativeToRect:ofView:preferredEdge:behavior:) @available(OSX 10.10, *) func present(_ p0: NSViewController, asPopoverRelativeTo: CGRect, of: NSView, preferredEdge: NSRectEdge, behavior: NSPopover.Behavior)
 
   /**
     - Selector: presentViewControllerAsModalWindow:
     - Introduced: 10.10
   */
-  @objc (presentViewControllerAsModalWindow:) @available(OSX 10.10, *) func presentAsModalWindow(_: NSViewController)
+  @objc (presentViewControllerAsModalWindow:) @available(OSX 10.10, *) func presentAsModalWindow(_ p0: NSViewController)
 
   /**
     - Selector: presentViewControllerAsSheet:
     - Introduced: 10.10
   */
-  @objc (presentViewControllerAsSheet:) @available(OSX 10.10, *) func presentAsSheet(_: NSViewController)
+  @objc (presentViewControllerAsSheet:) @available(OSX 10.10, *) func presentAsSheet(_ p0: NSViewController)
 
   /**
     - Selector: removeChildViewControllerAtIndex:
@@ -181,8 +181,6 @@ import AppKit
     - Selector: nibName
   */
   @objc var nibName: NSNib.Name? { @objc get }
-
-  @objc var menu: NSMenu? { @objc get @objc (setMenu:) set }
 
   /**
     - Selector: parentViewController

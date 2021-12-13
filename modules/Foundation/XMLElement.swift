@@ -77,17 +77,17 @@ import Foundation
   /**
     - Selector: addAttribute:
   */
-  @objc func addAttribute(_: XMLNode)
+  @objc func addAttribute(_ p0: XMLNode)
 
   /**
     - Selector: addChild:
   */
-  @objc func addChild(_: XMLNode)
+  @objc func addChild(_ p0: XMLNode)
 
   /**
     - Selector: addNamespace:
   */
-  @objc func addNamespace(_: XMLNode)
+  @objc func addNamespace(_ p0: XMLNode)
 
   /**
     - Selector: attributeForLocalName:URI:
@@ -112,12 +112,12 @@ import Foundation
   /**
     - Selector: insertChild:atIndex:
   */
-  @objc (insertChild:atIndex:) func insertChild(_: XMLNode, at: Int)
+  @objc (insertChild:atIndex:) func insertChild(_ p0: XMLNode, at: Int)
 
   /**
     - Selector: insertChildren:atIndex:
   */
-  @objc (insertChildren:atIndex:) func insertChildren(_: [XMLNode], at: Int)
+  @objc (insertChildren:atIndex:) func insertChildren(_ p0: [XMLNode], at: Int)
 
   /**
     - Selector: namespaceForPrefix:
@@ -127,7 +127,7 @@ import Foundation
   /**
     - Selector: normalizeAdjacentTextNodesPreservingCDATA:
   */
-  @objc func normalizeAdjacentTextNodesPreservingCDATA(_: Bool)
+  @objc func normalizeAdjacentTextNodesPreservingCDATA(_ p0: Bool)
 
   /**
     - Selector: removeAttributeForName:
@@ -165,17 +165,17 @@ import Foundation
     - Deprecated: 100000
     - Replacement: setAttributesWithDictionary:
   */
-  @objc (setAttributesAsDictionary:) @available(OSX 10.0, *) func setAttributesAs(_: [AnyHashable: Any])
+  @objc (setAttributesAsDictionary:) @available(OSX 10.0, *) func setAttributesAs(_ p0: [AnyHashable: Any])
 
   /**
     - Selector: setAttributesWithDictionary:
   */
-  @objc (setAttributesWithDictionary:) func setAttributesWith(_: [String: String])
+  @objc (setAttributesWithDictionary:) func setAttributesWith(_ p0: [String: String])
 
   /**
     - Selector: setChildren:
   */
-  @objc func setChildren(_: [XMLNode]?)
+  @objc func setChildren(_ p0: [XMLNode]?)
 
   // Own Instance Properties
 

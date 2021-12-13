@@ -29,7 +29,7 @@ import AppKit
     - Selector: addArrangedSubview:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func addArrangedSubview(_: NSView)
+  @objc @available(OSX 10.11, *) func addArrangedSubview(_ p0: NSView)
 
   /**
     - Selector: adjustSubviews
@@ -51,12 +51,12 @@ import AppKit
     - Selector: insertArrangedSubview:atIndex:
     - Introduced: 10.11
   */
-  @objc (insertArrangedSubview:atIndex:) @available(OSX 10.11, *) func insertArrangedSubview(_: NSView, at: Int)
+  @objc (insertArrangedSubview:atIndex:) @available(OSX 10.11, *) func insertArrangedSubview(_ p0: NSView, at: Int)
 
   /**
     - Selector: isSubviewCollapsed:
   */
-  @objc func isSubviewCollapsed(_: NSView) -> Bool
+  @objc func isSubviewCollapsed(_ p0: NSView) -> Bool
 
   /**
     - Selector: maxPossiblePositionOfDividerAtIndex:
@@ -74,19 +74,19 @@ import AppKit
     - Selector: removeArrangedSubview:
     - Introduced: 10.11
   */
-  @objc @available(OSX 10.11, *) func removeArrangedSubview(_: NSView)
+  @objc @available(OSX 10.11, *) func removeArrangedSubview(_ p0: NSView)
 
   /**
     - Selector: setHoldingPriority:forSubviewAtIndex:
     - Introduced: 10.8
   */
-  @objc (setHoldingPriority:forSubviewAtIndex:) @available(OSX 10.8, *) func setHoldingPriority(_: NSLayoutConstraint.Priority, forSubviewAt: Int)
+  @objc (setHoldingPriority:forSubviewAtIndex:) @available(OSX 10.8, *) func setHoldingPriority(_ p0: NSLayoutConstraint.Priority, forSubviewAt: Int)
 
   /**
     - Selector: setPosition:ofDividerAtIndex:
     - Introduced: 10.5
   */
-  @objc (setPosition:ofDividerAtIndex:) @available(OSX 10.5, *) func setPosition(_: CGFloat, ofDividerAt: Int)
+  @objc (setPosition:ofDividerAtIndex:) @available(OSX 10.5, *) func setPosition(_ p0: CGFloat, ofDividerAt: Int)
 
   // Own Instance Properties
 

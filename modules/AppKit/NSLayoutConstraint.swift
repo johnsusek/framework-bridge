@@ -22,7 +22,7 @@ import AppKit
     - Selector: activateConstraints:
     - Introduced: 10.10
   */
-  @objc (activateConstraints:) @available(OSX 10.10, *) static func activate(_: [NSLayoutConstraint])
+  @objc (activateConstraints:) @available(OSX 10.10, *) static func activate(_ p0: [NSLayoutConstraint])
 
   /**
     - Selector: constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:
@@ -40,7 +40,7 @@ import AppKit
     - Selector: deactivateConstraints:
     - Introduced: 10.10
   */
-  @objc (deactivateConstraints:) @available(OSX 10.10, *) static func deactivate(_: [NSLayoutConstraint])
+  @objc (deactivateConstraints:) @available(OSX 10.10, *) static func deactivate(_ p0: [NSLayoutConstraint])
 
   // Own Instance Properties
 

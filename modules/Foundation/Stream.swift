@@ -59,7 +59,7 @@ import Foundation
   /**
     - Selector: setProperty:forKey:
   */
-  @objc func setProperty(_: Any?, forKey: Stream.PropertyKey) -> Bool
+  @objc func setProperty(_ p0: Any?, forKey: Stream.PropertyKey) -> Bool
 
   // Own Instance Properties
 

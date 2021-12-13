@@ -29,7 +29,7 @@ import AVFoundation
   /**
     - Selector: setSampleBufferDelegate:queue:
   */
-  @objc func setSampleBufferDelegate(_: AVCaptureAudioDataOutputSampleBufferDelegate?, queue: DispatchQueue?)
+  @objc func setSampleBufferDelegate(_ p0: AVCaptureAudioDataOutputSampleBufferDelegate?, queue: DispatchQueue?)
 
   // Own Instance Properties
 

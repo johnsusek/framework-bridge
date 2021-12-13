@@ -45,7 +45,7 @@ import AppKit
     - Selector: addSpeechDictionary:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func addSpeechDictionary(_: [NSSpeechSynthesizer.DictionaryKey: Any])
+  @objc @available(OSX 10.5, *) func addSpeechDictionary(_ p0: [NSSpeechSynthesizer.DictionaryKey: Any])
 
   /**
     - Selector: continueSpeaking
@@ -80,17 +80,17 @@ import AppKit
   /**
     - Selector: setVoice:
   */
-  @objc func setVoice(_: NSSpeechSynthesizer.VoiceName?) -> Bool
+  @objc func setVoice(_ p0: NSSpeechSynthesizer.VoiceName?) -> Bool
 
   /**
     - Selector: startSpeakingString:
   */
-  @objc (startSpeakingString:) func startSpeaking(_: String) -> Bool
+  @objc (startSpeakingString:) func startSpeaking(_ p0: String) -> Bool
 
   /**
     - Selector: startSpeakingString:toURL:
   */
-  @objc (startSpeakingString:toURL:) func startSpeaking(_: String, to: URL) -> Bool
+  @objc (startSpeakingString:toURL:) func startSpeaking(_ p0: String, to: URL) -> Bool
 
   /**
     - Selector: stopSpeaking

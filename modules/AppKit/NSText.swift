@@ -38,57 +38,57 @@ import AppKit
   /**
     - Selector: alignCenter:
   */
-  @objc func alignCenter(_: Any?)
+  @objc func alignCenter(_ p0: Any?)
 
   /**
     - Selector: alignLeft:
   */
-  @objc func alignLeft(_: Any?)
+  @objc func alignLeft(_ p0: Any?)
 
   /**
     - Selector: alignRight:
   */
-  @objc func alignRight(_: Any?)
+  @objc func alignRight(_ p0: Any?)
 
   /**
     - Selector: checkSpelling:
   */
-  @objc func checkSpelling(_: Any?)
+  @objc func checkSpelling(_ p0: Any?)
 
   /**
     - Selector: copyFont:
   */
-  @objc func copyFont(_: Any?)
+  @objc func copyFont(_ p0: Any?)
 
   /**
     - Selector: copyRuler:
   */
-  @objc func copyRuler(_: Any?)
+  @objc func copyRuler(_ p0: Any?)
 
   /**
     - Selector: cut:
   */
-  @objc func cut(_: Any?)
+  @objc func cut(_ p0: Any?)
 
   /**
     - Selector: delete:
   */
-  @objc func delete(_: Any?)
+  @objc func delete(_ p0: Any?)
 
   /**
     - Selector: paste:
   */
-  @objc func paste(_: Any?)
+  @objc func paste(_ p0: Any?)
 
   /**
     - Selector: pasteFont:
   */
-  @objc func pasteFont(_: Any?)
+  @objc func pasteFont(_ p0: Any?)
 
   /**
     - Selector: pasteRuler:
   */
-  @objc func pasteRuler(_: Any?)
+  @objc func pasteRuler(_ p0: Any?)
 
   /**
     - Selector: readRTFDFromFile:
@@ -113,12 +113,12 @@ import AppKit
   /**
     - Selector: scrollRangeToVisible:
   */
-  @objc func scrollRangeToVisible(_: NSRange)
+  @objc func scrollRangeToVisible(_ p0: NSRange)
 
   /**
     - Selector: showGuessPanel:
   */
-  @objc func showGuessPanel(_: Any?)
+  @objc func showGuessPanel(_ p0: Any?)
 
   /**
     - Selector: sizeToFit
@@ -128,22 +128,22 @@ import AppKit
   /**
     - Selector: superscript:
   */
-  @objc func superscript(_: Any?)
+  @objc func superscript(_ p0: Any?)
 
   /**
     - Selector: toggleRuler:
   */
-  @objc func toggleRuler(_: Any?)
+  @objc func toggleRuler(_ p0: Any?)
 
   /**
     - Selector: underline:
   */
-  @objc func underline(_: Any?)
+  @objc func underline(_ p0: Any?)
 
   /**
     - Selector: unscript:
   */
-  @objc func unscript(_: Any?)
+  @objc func unscript(_ p0: Any?)
 
   /**
     - Selector: writeRTFDToFile:atomically:

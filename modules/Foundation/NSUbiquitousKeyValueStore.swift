@@ -70,42 +70,42 @@ import Foundation
   /**
     - Selector: setArray:forKey:
   */
-  @objc (setArray:forKey:) func set(_: [Any]?, forKey: String)
+  @objc (setArray:forKey:) func set(_ p0: [Any]?, forKey: String)
 
   /**
     - Selector: setBool:forKey:
   */
-  @objc (setBool:forKey:) func set(_: Bool, forKey: String)
+  @objc (setBool:forKey:) func set(_ p0: Bool, forKey: String)
 
   /**
     - Selector: setData:forKey:
   */
-  @objc (setData:forKey:) func set(_: Data?, forKey: String)
+  @objc (setData:forKey:) func set(_ p0: Data?, forKey: String)
 
   /**
     - Selector: setDictionary:forKey:
   */
-  @objc (setDictionary:forKey:) func set(_: [String: Any]?, forKey: String)
+  @objc (setDictionary:forKey:) func set(_ p0: [String: Any]?, forKey: String)
 
   /**
     - Selector: setDouble:forKey:
   */
-  @objc (setDouble:forKey:) func set(_: Double, forKey: String)
+  @objc (setDouble:forKey:) func set(_ p0: Double, forKey: String)
 
   /**
     - Selector: setLongLong:forKey:
   */
-  @objc (setLongLong:forKey:) func set(_: Int64, forKey: String)
+  @objc (setLongLong:forKey:) func set(_ p0: Int64, forKey: String)
 
   /**
     - Selector: setObject:forKey:
   */
-  @objc (setObject:forKey:) func set(_: Any?, forKey: String)
+  @objc (setObject:forKey:) func set(_ p0: Any?, forKey: String)
 
   /**
     - Selector: setString:forKey:
   */
-  @objc (setString:forKey:) func set(_: String?, forKey: String)
+  @objc (setString:forKey:) func set(_ p0: String?, forKey: String)
 
   /**
     - Selector: stringForKey:

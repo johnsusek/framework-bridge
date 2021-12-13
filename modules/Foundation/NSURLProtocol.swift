@@ -41,7 +41,7 @@ import Foundation
   /**
     - Selector: registerClass:
   */
-  @objc static func registerClass(_: AnyClass) -> Bool
+  @objc static func registerClass(_ p0: AnyClass) -> Bool
 
   /**
     - Selector: removePropertyForKey:inRequest:
@@ -51,17 +51,17 @@ import Foundation
   /**
     - Selector: requestIsCacheEquivalent:toRequest:
   */
-  @objc (requestIsCacheEquivalent:toRequest:) static func requestIsCacheEquivalent(_: URLRequest, to: URLRequest) -> Bool
+  @objc (requestIsCacheEquivalent:toRequest:) static func requestIsCacheEquivalent(_ p0: URLRequest, to: URLRequest) -> Bool
 
   /**
     - Selector: setProperty:forKey:inRequest:
   */
-  @objc (setProperty:forKey:inRequest:) static func setProperty(_: Any, forKey: String, in: NSMutableURLRequest)
+  @objc (setProperty:forKey:inRequest:) static func setProperty(_ p0: Any, forKey: String, in: NSMutableURLRequest)
 
   /**
     - Selector: unregisterClass:
   */
-  @objc static func unregisterClass(_: AnyClass)
+  @objc static func unregisterClass(_ p0: AnyClass)
 
   // Instance Methods
 

@@ -29,17 +29,17 @@ import AppKit
   /**
     - Selector: revert:
   */
-  @objc func revert(_: Any?)
+  @objc func revert(_ p0: Any?)
 
   /**
     - Selector: revertToInitialValues:
   */
-  @objc func revertToInitialValues(_: Any?)
+  @objc func revertToInitialValues(_ p0: Any?)
 
   /**
     - Selector: save:
   */
-  @objc func save(_: Any?)
+  @objc func save(_ p0: Any?)
 
   // Own Instance Properties
 

@@ -23,7 +23,7 @@ import Foundation
   /**
     - Selector: addDependency:
   */
-  @objc func addDependency(_: Operation)
+  @objc func addDependency(_ p0: Operation)
 
   /**
     - Selector: cancel
@@ -38,7 +38,7 @@ import Foundation
   /**
     - Selector: removeDependency:
   */
-  @objc func removeDependency(_: Operation)
+  @objc func removeDependency(_ p0: Operation)
 
   /**
     - Selector: start

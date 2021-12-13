@@ -129,17 +129,17 @@ import Foundation
   /**
     - Selector: descriptorAtIndex:
   */
-  @objc (descriptorAtIndex:) func atIndex(_: Int) -> NSAppleEventDescriptor?
+  @objc (descriptorAtIndex:) func atIndex(_ p0: Int) -> NSAppleEventDescriptor?
 
   /**
     - Selector: descriptorForKeyword:
   */
-  @objc (descriptorForKeyword:) func forKeyword(_: AEKeyword) -> NSAppleEventDescriptor?
+  @objc (descriptorForKeyword:) func forKeyword(_ p0: AEKeyword) -> NSAppleEventDescriptor?
 
   /**
     - Selector: insertDescriptor:atIndex:
   */
-  @objc (insertDescriptor:atIndex:) func insert(_: NSAppleEventDescriptor, at: Int)
+  @objc (insertDescriptor:atIndex:) func insert(_ p0: NSAppleEventDescriptor, at: Int)
 
   /**
     - Selector: keywordForDescriptorAtIndex:
@@ -175,17 +175,17 @@ import Foundation
   /**
     - Selector: setAttributeDescriptor:forKeyword:
   */
-  @objc (setAttributeDescriptor:forKeyword:) func setAttribute(_: NSAppleEventDescriptor, forKeyword: AEKeyword)
+  @objc (setAttributeDescriptor:forKeyword:) func setAttribute(_ p0: NSAppleEventDescriptor, forKeyword: AEKeyword)
 
   /**
     - Selector: setDescriptor:forKeyword:
   */
-  @objc func setDescriptor(_: NSAppleEventDescriptor, forKeyword: AEKeyword)
+  @objc func setDescriptor(_ p0: NSAppleEventDescriptor, forKeyword: AEKeyword)
 
   /**
     - Selector: setParamDescriptor:forKeyword:
   */
-  @objc (setParamDescriptor:forKeyword:) func setParam(_: NSAppleEventDescriptor, forKeyword: AEKeyword)
+  @objc (setParamDescriptor:forKeyword:) func setParam(_ p0: NSAppleEventDescriptor, forKeyword: AEKeyword)
 
   // Own Instance Properties
 

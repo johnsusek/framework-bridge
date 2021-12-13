@@ -28,12 +28,12 @@ import AVFoundation
   /**
     - Selector: processContentKeyResponse:
   */
-  @objc func processContentKeyResponse(_: AVContentKeyResponse)
+  @objc func processContentKeyResponse(_ p0: AVContentKeyResponse)
 
   /**
     - Selector: processContentKeyResponseError:
   */
-  @objc func processContentKeyResponseError(_: Error)
+  @objc func processContentKeyResponseError(_ p0: Error)
 
   /**
     - Selector: respondByRequestingPersistableContentKeyRequestAndReturnError:

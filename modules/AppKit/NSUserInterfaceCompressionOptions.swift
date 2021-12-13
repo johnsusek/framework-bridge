@@ -50,22 +50,22 @@ import AppKit
   /**
     - Selector: containsOptions:
   */
-  @objc (containsOptions:) func contains(_: NSUserInterfaceCompressionOptions) -> Bool
+  @objc (containsOptions:) func contains(_ p0: NSUserInterfaceCompressionOptions) -> Bool
 
   /**
     - Selector: intersectsOptions:
   */
-  @objc (intersectsOptions:) func intersects(_: NSUserInterfaceCompressionOptions) -> Bool
+  @objc (intersectsOptions:) func intersects(_ p0: NSUserInterfaceCompressionOptions) -> Bool
 
   /**
     - Selector: optionsByAddingOptions:
   */
-  @objc (optionsByAddingOptions:) func union(_: NSUserInterfaceCompressionOptions) -> NSUserInterfaceCompressionOptions
+  @objc (optionsByAddingOptions:) func union(_ p0: NSUserInterfaceCompressionOptions) -> NSUserInterfaceCompressionOptions
 
   /**
     - Selector: optionsByRemovingOptions:
   */
-  @objc (optionsByRemovingOptions:) func subtracting(_: NSUserInterfaceCompressionOptions) -> NSUserInterfaceCompressionOptions
+  @objc (optionsByRemovingOptions:) func subtracting(_ p0: NSUserInterfaceCompressionOptions) -> NSUserInterfaceCompressionOptions
 
   // Own Instance Properties
 

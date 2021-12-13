@@ -34,7 +34,7 @@ import AVFoundation
   /**
     - Selector: hasMediaCharacteristic:
   */
-  @objc func hasMediaCharacteristic(_: AVMediaCharacteristic) -> Bool
+  @objc func hasMediaCharacteristic(_ p0: AVMediaCharacteristic) -> Bool
 
   /**
     - Selector: metadataForFormat:

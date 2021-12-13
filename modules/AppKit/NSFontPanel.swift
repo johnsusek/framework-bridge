@@ -46,7 +46,7 @@ import AppKit
   /**
     - Selector: standardWindowButton:forStyleMask:
   */
-  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_ p0: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
 
   /**
     - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
@@ -77,7 +77,7 @@ import AppKit
   /**
     - Selector: panelConvertFont:
   */
-  @objc (panelConvertFont:) func convert(_: NSFont) -> NSFont
+  @objc (panelConvertFont:) func convert(_ p0: NSFont) -> NSFont
 
   /**
     - Selector: reloadDefaultFontFamilies
@@ -87,7 +87,7 @@ import AppKit
   /**
     - Selector: setPanelFont:isMultiple:
   */
-  @objc func setPanelFont(_: NSFont, isMultiple: Bool)
+  @objc func setPanelFont(_ p0: NSFont, isMultiple: Bool)
 
   // Own Instance Properties
 

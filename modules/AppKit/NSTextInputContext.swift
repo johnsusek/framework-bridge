@@ -50,7 +50,7 @@ import AppKit
   /**
     - Selector: handleEvent:
   */
-  @objc (handleEvent:) func handleEvent(_: NSEvent) -> Bool
+  @objc (handleEvent:) func handleEvent(_ p0: NSEvent) -> Bool
 
   /**
     - Selector: invalidateCharacterCoordinates

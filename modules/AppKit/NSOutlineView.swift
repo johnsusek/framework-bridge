@@ -29,7 +29,7 @@ import AppKit
     - Selector: child:ofItem:
     - Introduced: 10.10
   */
-  @objc @available(OSX 10.10, *) func child(_: Int, ofItem: Any?) -> Any?
+  @objc @available(OSX 10.10, *) func child(_ p0: Int, ofItem: Any?) -> Any?
 
   /**
     - Selector: childIndexForItem:
@@ -40,22 +40,22 @@ import AppKit
   /**
     - Selector: collapseItem:
   */
-  @objc func collapseItem(_: Any?)
+  @objc func collapseItem(_ p0: Any?)
 
   /**
     - Selector: collapseItem:collapseChildren:
   */
-  @objc func collapseItem(_: Any?, collapseChildren: Bool)
+  @objc func collapseItem(_ p0: Any?, collapseChildren: Bool)
 
   /**
     - Selector: expandItem:
   */
-  @objc func expandItem(_: Any?)
+  @objc func expandItem(_ p0: Any?)
 
   /**
     - Selector: expandItem:expandChildren:
   */
-  @objc func expandItem(_: Any?, expandChildren: Bool)
+  @objc func expandItem(_ p0: Any?, expandChildren: Bool)
 
   /**
     - Selector: frameOfOutlineCellAtRow:
@@ -72,12 +72,12 @@ import AppKit
   /**
     - Selector: isExpandable:
   */
-  @objc func isExpandable(_: Any?) -> Bool
+  @objc func isExpandable(_ p0: Any?) -> Bool
 
   /**
     - Selector: isItemExpanded:
   */
-  @objc func isItemExpanded(_: Any?) -> Bool
+  @objc func isItemExpanded(_ p0: Any?) -> Bool
 
   /**
     - Selector: itemAtRow:
@@ -114,12 +114,12 @@ import AppKit
   /**
     - Selector: reloadItem:
   */
-  @objc func reloadItem(_: Any?)
+  @objc func reloadItem(_ p0: Any?)
 
   /**
     - Selector: reloadItem:reloadChildren:
   */
-  @objc func reloadItem(_: Any?, reloadChildren: Bool)
+  @objc func reloadItem(_ p0: Any?, reloadChildren: Bool)
 
   /**
     - Selector: removeItemsAtIndexes:inParent:withAnimation:
@@ -135,7 +135,7 @@ import AppKit
   /**
     - Selector: setDropItem:dropChildIndex:
   */
-  @objc func setDropItem(_: Any?, dropChildIndex: Int)
+  @objc func setDropItem(_ p0: Any?, dropChildIndex: Int)
 
   /**
     - Selector: shouldCollapseAutoExpandedItemsForDeposited:

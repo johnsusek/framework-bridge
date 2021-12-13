@@ -34,12 +34,12 @@ import AVFoundation
   /**
     - Selector: insertEmptyTimeRange:
   */
-  @objc (insertEmptyTimeRange:) func insertEmptyTimeRange(_: CMTimeRange)
+  @objc (insertEmptyTimeRange:) func insertEmptyTimeRange(_ p0: CMTimeRange)
 
   /**
     - Selector: insertTimeRange:ofAsset:atTime:error:
   */
-  // throws - @objc (insertTimeRange:ofAsset:atTime:error:) func insertTimeRange(timeRange: CMTimeRange, _: AVAsset, of: CMTime) -> Bool
+  // throws - @objc (insertTimeRange:ofAsset:atTime:error:) func insertTimeRange(timeRange: CMTimeRange, _ p1: AVAsset, of: CMTime) -> Bool
 
   /**
     - Selector: mutableTrackCompatibleWithTrack:
@@ -49,17 +49,17 @@ import AVFoundation
   /**
     - Selector: removeTimeRange:
   */
-  @objc (removeTimeRange:) func removeTimeRange(_: CMTimeRange)
+  @objc (removeTimeRange:) func removeTimeRange(_ p0: CMTimeRange)
 
   /**
     - Selector: removeTrack:
   */
-  @objc func removeTrack(_: AVCompositionTrack)
+  @objc func removeTrack(_ p0: AVCompositionTrack)
 
   /**
     - Selector: scaleTimeRange:toDuration:
   */
-  @objc (scaleTimeRange:toDuration:) func scaleTimeRange(_: CMTimeRange, toDuration: CMTime)
+  @objc (scaleTimeRange:toDuration:) func scaleTimeRange(_ p0: CMTimeRange, toDuration: CMTime)
 
   /**
     - Selector: trackWithTrackID:

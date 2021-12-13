@@ -38,12 +38,12 @@ import AppKit
   /**
     - Selector: startAnimation:
   */
-  @objc func startAnimation(_: Any?)
+  @objc func startAnimation(_ p0: Any?)
 
   /**
     - Selector: stopAnimation:
   */
-  @objc func stopAnimation(_: Any?)
+  @objc func stopAnimation(_ p0: Any?)
 
   // Own Instance Properties
 

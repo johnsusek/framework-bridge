@@ -38,22 +38,22 @@ import AppKit
   /**
     - Selector: setData:forType:
   */
-  @objc func setData(_: Data, forType: NSPasteboard.PasteboardType) -> Bool
+  @objc func setData(_ p0: Data, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
     - Selector: setDataProvider:forTypes:
   */
-  @objc func setDataProvider(_: NSPasteboardItemDataProvider, forTypes: [NSPasteboard.PasteboardType]) -> Bool
+  @objc func setDataProvider(_ p0: NSPasteboardItemDataProvider, forTypes: [NSPasteboard.PasteboardType]) -> Bool
 
   /**
     - Selector: setPropertyList:forType:
   */
-  @objc func setPropertyList(_: Any, forType: NSPasteboard.PasteboardType) -> Bool
+  @objc func setPropertyList(_ p0: Any, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
     - Selector: setString:forType:
   */
-  @objc func setString(_: String, forType: NSPasteboard.PasteboardType) -> Bool
+  @objc func setString(_ p0: String, forType: NSPasteboard.PasteboardType) -> Bool
 
   /**
     - Selector: stringForType:

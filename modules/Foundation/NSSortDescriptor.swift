@@ -46,7 +46,7 @@ import Foundation
   /**
     - Selector: compareObject:toObject:
   */
-  @objc (compareObject:toObject:) func compare(_: Any, to: Any) -> ComparisonResult
+  @objc (compareObject:toObject:) func compare(_ p0: Any, to: Any) -> ComparisonResult
 
   // Own Instance Properties
 

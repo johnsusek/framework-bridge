@@ -40,13 +40,13 @@ import Foundation
   /**
     - Selector: deleteCookie:
   */
-  @objc func deleteCookie(_: HTTPCookie)
+  @objc func deleteCookie(_ p0: HTTPCookie)
 
   /**
     - Selector: getCookiesForTask:completionHandler:
     - Introduced: 10.10
   */
-  // jsvalue @objc @available(OSX 10.10, *) func getCookiesFor(_: URLSessionTask, completionHandler: JSValue)
+  // jsvalue @objc @available(OSX 10.10, *) func getCookiesFor(_ p0: URLSessionTask, completionHandler: JSValue)
 
   /**
     - Selector: removeCookiesSinceDate:
@@ -57,12 +57,12 @@ import Foundation
   /**
     - Selector: setCookie:
   */
-  @objc func setCookie(_: HTTPCookie)
+  @objc func setCookie(_ p0: HTTPCookie)
 
   /**
     - Selector: setCookies:forURL:mainDocumentURL:
   */
-  @objc (setCookies:forURL:mainDocumentURL:) func setCookies(_: [HTTPCookie], `for`: URL?, mainDocumentURL: URL?)
+  @objc (setCookies:forURL:mainDocumentURL:) func setCookies(_ p0: [HTTPCookie], `for`: URL?, mainDocumentURL: URL?)
 
   /**
     - Selector: sortedCookiesUsingDescriptors:
@@ -74,7 +74,7 @@ import Foundation
     - Selector: storeCookies:forTask:
     - Introduced: 10.10
   */
-  @objc (storeCookies:forTask:) @available(OSX 10.10, *) func storeCookies(_: [HTTPCookie], `for`: URLSessionTask)
+  @objc (storeCookies:forTask:) @available(OSX 10.10, *) func storeCookies(_ p0: [HTTPCookie], `for`: URLSessionTask)
 
   // Own Instance Properties
 

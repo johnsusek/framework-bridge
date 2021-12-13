@@ -39,7 +39,7 @@ import AppKit
   /**
     - Selector: insertColor:key:atIndex:
   */
-  @objc (insertColor:key:atIndex:) func insertColor(_: NSColor, key: NSColor.Name, at: Int)
+  @objc (insertColor:key:atIndex:) func insertColor(_ p0: NSColor, key: NSColor.Name, at: Int)
 
   /**
     - Selector: removeColorWithKey:
@@ -54,7 +54,7 @@ import AppKit
   /**
     - Selector: setColor:forKey:
   */
-  @objc func setColor(_: NSColor, forKey: NSColor.Name)
+  @objc func setColor(_ p0: NSColor, forKey: NSColor.Name)
 
   /**
     - Selector: writeToURL:error:

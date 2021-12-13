@@ -32,7 +32,7 @@ import Foundation
   /**
     - Selector: setDestination:allowOverwrite:
   */
-  @objc func setDestination(_: String, allowOverwrite: Bool)
+  @objc func setDestination(_ p0: String, allowOverwrite: Bool)
 
   // Own Instance Properties
 

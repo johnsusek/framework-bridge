@@ -55,7 +55,7 @@ import AppKit
   /**
     - Selector: setName:
   */
-  @objc func setName(_: NSSound.Name?) -> Bool
+  @objc func setName(_ p0: NSSound.Name?) -> Bool
 
   /**
     - Selector: stop

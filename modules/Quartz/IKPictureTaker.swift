@@ -51,7 +51,7 @@ import Quartz
   /**
     - Selector: standardWindowButton:forStyleMask:
   */
-  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
+  @objc (standardWindowButton:forStyleMask:) static func standardWindowButton(_ p0: NSWindow.ButtonType, `for`: NSWindow.StyleMask) -> NSButton?
 
   /**
     - Selector: windowNumberAtPoint:belowWindowWithWindowNumber:
@@ -105,12 +105,12 @@ import Quartz
   /**
     - Selector: setInputImage:
   */
-  @objc func setInputImage(_: NSImage)
+  @objc func setInputImage(_ p0: NSImage)
 
   /**
     - Selector: setMirroring:
   */
-  @objc func setMirroring(_: Bool)
+  @objc func setMirroring(_ p0: Bool)
 }
 
 extension IKPictureTaker: IKPictureTakerExports {

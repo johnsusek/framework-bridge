@@ -52,7 +52,7 @@ import Foundation
   /**
     - Selector: setDelegate:
   */
-  @objc func setDelegate(_: PortDelegate?)
+  @objc func setDelegate(_ p0: PortDelegate?)
 
   // Own Instance Properties
 

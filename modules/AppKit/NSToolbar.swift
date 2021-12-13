@@ -32,12 +32,12 @@ import AppKit
   /**
     - Selector: runCustomizationPalette:
   */
-  @objc func runCustomizationPalette(_: Any?)
+  @objc func runCustomizationPalette(_ p0: Any?)
 
   /**
     - Selector: setConfigurationFromDictionary:
   */
-  @objc (setConfigurationFromDictionary:) func setConfiguration(_: [String: Any])
+  @objc (setConfigurationFromDictionary:) func setConfiguration(_ p0: [String: Any])
 
   /**
     - Selector: validateVisibleItems

@@ -45,7 +45,7 @@ import AppKit
   /**
     - Selector: performFeedback:performanceTime:
   */
-  @objc func performFeedback(_: [NSAlignmentFeedbackToken], performanceTime: NSHapticFeedbackManager.PerformanceTime)
+  @objc func performFeedback(_ p0: [NSAlignmentFeedbackToken], performanceTime: NSHapticFeedbackManager.PerformanceTime)
 
   /**
     - Selector: updateWithEvent:

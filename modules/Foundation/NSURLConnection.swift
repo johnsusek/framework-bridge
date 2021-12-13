@@ -20,7 +20,7 @@ import Foundation
   /**
     - Selector: canHandleRequest:
   */
-  @objc (canHandleRequest:) static func canHandle(_: URLRequest) -> Bool
+  @objc (canHandleRequest:) static func canHandle(_ p0: URLRequest) -> Bool
 
   // Instance Methods
 
@@ -39,7 +39,7 @@ import Foundation
     - Selector: setDelegateQueue:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func setDelegateQueue(_: OperationQueue?)
+  @objc @available(OSX 10.7, *) func setDelegateQueue(_ p0: OperationQueue?)
 
   /**
     - Selector: start

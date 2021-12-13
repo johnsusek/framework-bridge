@@ -80,12 +80,12 @@ import Foundation
     - Selector: setActionIsDiscardable:
     - Introduced: 10.7
   */
-  @objc @available(OSX 10.7, *) func setActionIsDiscardable(_: Bool)
+  @objc @available(OSX 10.7, *) func setActionIsDiscardable(_ p0: Bool)
 
   /**
     - Selector: setActionName:
   */
-  @objc func setActionName(_: String)
+  @objc func setActionName(_ p0: String)
 
   /**
     - Selector: undo

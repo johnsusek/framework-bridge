@@ -39,12 +39,12 @@ import AppKit
   /**
     - Selector: calcDrawInfo:
   */
-  @objc func calcDrawInfo(_: CGRect)
+  @objc func calcDrawInfo(_ p0: CGRect)
 
   /**
     - Selector: cellAttribute:
   */
-  @objc func cellAttribute(_: NSCell.Attribute) -> Int
+  @objc func cellAttribute(_ p0: NSCell.Attribute) -> Int
 
   /**
     - Selector: cellSizeForBounds:
@@ -54,7 +54,7 @@ import AppKit
   /**
     - Selector: compare:
   */
-  @objc func compare(_: Any) -> ComparisonResult
+  @objc func compare(_ p0: Any) -> ComparisonResult
 
   /**
     - Selector: continueTracking:at:inView:
@@ -102,7 +102,7 @@ import AppKit
   /**
     - Selector: endEditing:
   */
-  @objc func endEditing(_: NSText)
+  @objc func endEditing(_ p0: NSText)
 
   /**
     - Selector: expansionFrameWithFrame:inView:
@@ -125,12 +125,12 @@ import AppKit
   /**
     - Selector: getPeriodicDelay:interval:
   */
-  @objc func getPeriodicDelay(_: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>)
+  @objc func getPeriodicDelay(_ p0: UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>)
 
   /**
     - Selector: highlight:withFrame:inView:
   */
-  @objc (highlight:withFrame:inView:) func highlight(_: Bool, withFrame: CGRect, in: NSView)
+  @objc (highlight:withFrame:inView:) func highlight(_ p0: Bool, withFrame: CGRect, in: NSView)
 
   /**
     - Selector: highlightColorWithFrame:inView:
@@ -156,12 +156,12 @@ import AppKit
   /**
     - Selector: performClick:
   */
-  @objc func performClick(_: Any?)
+  @objc func performClick(_ p0: Any?)
 
   /**
     - Selector: resetCursorRect:inView:
   */
-  @objc (resetCursorRect:inView:) func resetCursorRect(_: CGRect, in: NSView)
+  @objc (resetCursorRect:inView:) func resetCursorRect(_ p0: CGRect, in: NSView)
 
   /**
     - Selector: selectWithFrame:inView:editor:delegate:start:length:
@@ -176,7 +176,7 @@ import AppKit
   /**
     - Selector: setCellAttribute:to:
   */
-  @objc func setCellAttribute(_: NSCell.Attribute, to: Int)
+  @objc func setCellAttribute(_ p0: NSCell.Attribute, to: Int)
 
   /**
     - Selector: setNextState
@@ -186,7 +186,7 @@ import AppKit
   /**
     - Selector: setUpFieldEditorAttributes:
   */
-  @objc func setUpFieldEditorAttributes(_: NSText) -> NSText
+  @objc func setUpFieldEditorAttributes(_ p0: NSText) -> NSText
 
   /**
     - Selector: startTrackingAt:inView:
@@ -201,33 +201,33 @@ import AppKit
   /**
     - Selector: takeDoubleValueFrom:
   */
-  @objc func takeDoubleValueFrom(_: Any?)
+  @objc func takeDoubleValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeFloatValueFrom:
   */
-  @objc func takeFloatValueFrom(_: Any?)
+  @objc func takeFloatValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeIntValueFrom:
   */
-  @objc func takeIntValueFrom(_: Any?)
+  @objc func takeIntValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeIntegerValueFrom:
     - Introduced: 10.5
   */
-  @objc @available(OSX 10.5, *) func takeIntegerValueFrom(_: Any?)
+  @objc @available(OSX 10.5, *) func takeIntegerValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeObjectValueFrom:
   */
-  @objc func takeObjectValueFrom(_: Any?)
+  @objc func takeObjectValueFrom(_ p0: Any?)
 
   /**
     - Selector: takeStringValueFrom:
   */
-  @objc func takeStringValueFrom(_: Any?)
+  @objc func takeStringValueFrom(_ p0: Any?)
 
   /**
     - Selector: titleRectForBounds:

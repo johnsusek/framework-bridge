@@ -37,32 +37,32 @@ import AppKit
   /**
     - Selector: fontDescriptorByAddingAttributes:
   */
-  @objc (fontDescriptorByAddingAttributes:) func addingAttributes(_: [NSFontDescriptor.AttributeName: Any]) -> NSFontDescriptor
+  @objc (fontDescriptorByAddingAttributes:) func addingAttributes(_ p0: [NSFontDescriptor.AttributeName: Any]) -> NSFontDescriptor
 
   /**
     - Selector: fontDescriptorWithFace:
   */
-  @objc (fontDescriptorWithFace:) func withFace(_: String) -> NSFontDescriptor
+  @objc (fontDescriptorWithFace:) func withFace(_ p0: String) -> NSFontDescriptor
 
   /**
     - Selector: fontDescriptorWithFamily:
   */
-  @objc (fontDescriptorWithFamily:) func withFamily(_: String) -> NSFontDescriptor
+  @objc (fontDescriptorWithFamily:) func withFamily(_ p0: String) -> NSFontDescriptor
 
   /**
     - Selector: fontDescriptorWithMatrix:
   */
-  @objc (fontDescriptorWithMatrix:) func withMatrix(_: AffineTransform) -> NSFontDescriptor
+  @objc (fontDescriptorWithMatrix:) func withMatrix(_ p0: AffineTransform) -> NSFontDescriptor
 
   /**
     - Selector: fontDescriptorWithSize:
   */
-  @objc (fontDescriptorWithSize:) func withSize(_: CGFloat) -> NSFontDescriptor
+  @objc (fontDescriptorWithSize:) func withSize(_ p0: CGFloat) -> NSFontDescriptor
 
   /**
     - Selector: fontDescriptorWithSymbolicTraits:
   */
-  @objc (fontDescriptorWithSymbolicTraits:) func withSymbolicTraits(_: NSFontDescriptor.SymbolicTraits) -> NSFontDescriptor
+  @objc (fontDescriptorWithSymbolicTraits:) func withSymbolicTraits(_ p0: NSFontDescriptor.SymbolicTraits) -> NSFontDescriptor
 
   /**
     - Selector: matchingFontDescriptorWithMandatoryKeys:

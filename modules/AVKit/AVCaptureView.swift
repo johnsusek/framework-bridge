@@ -29,7 +29,7 @@ import AVKit
   /**
     - Selector: setSession:showVideoPreview:showAudioPreview:
   */
-  @objc func setSession(_: AVCaptureSession?, showVideoPreview: Bool, showAudioPreview: Bool)
+  @objc func setSession(_ p0: AVCaptureSession?, showVideoPreview: Bool, showAudioPreview: Bool)
 
   // Own Instance Properties
 

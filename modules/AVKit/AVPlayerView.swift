@@ -34,7 +34,7 @@ import AVKit
   /**
     - Selector: flashChapterNumber:chapterTitle:
   */
-  @objc func flashChapterNumber(_: Int, chapterTitle: String?)
+  @objc func flashChapterNumber(_ p0: Int, chapterTitle: String?)
 
   // Own Instance Properties
 

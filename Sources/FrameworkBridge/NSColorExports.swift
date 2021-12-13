@@ -159,44 +159,44 @@ import AppKit
     - Deprecated: 100000
     - Replacement: selectedContentBackgroundColor
   */
-  // @objc @available(OSX 10.2, *) static var alternateSelectedControlColor: NSColor { @objc get }
+  @objc @available(OSX 10.2, *) static var alternateSelectedControlColor: NSColor { @objc get }
 
   /**
     - Selector: alternateSelectedControlTextColor
   */
-  // @objc static var alternateSelectedControlTextColor: NSColor { @objc get }
+  @objc static var alternateSelectedControlTextColor: NSColor { @objc get }
 
   /**
     - Selector: alternatingContentBackgroundColors
     - Introduced: 10.14
   */
-  // @objc @available(OSX 10.14, *) static var alternatingContentBackgroundColors: [NSColor] { @objc get }
+  @objc @available(OSX 10.14, *) static var alternatingContentBackgroundColors: [NSColor] { @objc get }
 
   /**
     - Selector: blackColor
   */
-  // @objc static var black: NSColor { @objc (blackColor) get }
+  @objc static var black: NSColor { @objc (blackColor) get }
 
   /**
     - Selector: blueColor
   */
-  // @objc static var blue: NSColor { @objc (blueColor) get }
+  @objc static var blue: NSColor { @objc (blueColor) get }
 
   /**
     - Selector: brownColor
   */
-  // @objc static var brown: NSColor { @objc (brownColor) get }
+  @objc static var brown: NSColor { @objc (brownColor) get }
 
   /**
     - Selector: clearColor
   */
-  // @objc static var clear: NSColor { @objc (clearColor) get }
+  @objc static var clear: NSColor { @objc (clearColor) get }
 
   /**
     - Selector: controlAccentColor
     - Introduced: 10.14
   */
-  // @objc @available(OSX 10.14, *) static var controlAccentColor: NSColor { @objc get }
+  @objc @available(OSX 10.14, *) static var controlAccentColor: NSColor { @objc get }
 
   /**
     - Selector: controlAlternatingRowBackgroundColors
@@ -204,17 +204,17 @@ import AppKit
     - Deprecated: 100000
     - Replacement: alternatingContentBackgroundColors
   */
-  // @objc @available(OSX 10.3, *) static var controlAlternatingRowBackgroundColors: [NSColor] { @objc get }
+  @objc @available(OSX 10.3, *) static var controlAlternatingRowBackgroundColors: [NSColor] { @objc get }
 
   /**
     - Selector: controlBackgroundColor
   */
-  // @objc static var controlBackgroundColor: NSColor { @objc get }
+  @objc static var controlBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: controlColor
   */
-  // @objc static var controlColor: NSColor { @objc get }
+  @objc static var controlColor: NSColor { @objc get }
 
   /**
     - Selector: controlDarkShadowColor
@@ -222,7 +222,7 @@ import AppKit
     - Deprecated: 100000
     - Message: Use a color that matches the semantics being used, such as `separatorColor`
   */
-  // @objc @available(OSX 10.0, *) static var controlDarkShadowColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var controlDarkShadowColor: NSColor { @objc get }
 
   /**
     - Selector: controlHighlightColor
@@ -230,7 +230,7 @@ import AppKit
     - Deprecated: 100000
     - Message: Use a color that matches the semantics being used, such as `separatorColor`
   */
-  // @objc @available(OSX 10.0, *) static var controlHighlightColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var controlHighlightColor: NSColor { @objc get }
 
   /**
     - Selector: controlLightHighlightColor
@@ -238,7 +238,7 @@ import AppKit
     - Deprecated: 100000
     - Message: Use a color that matches the semantics being used, such as `separatorColor`
   */
-  // @objc @available(OSX 10.0, *) static var controlLightHighlightColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var controlLightHighlightColor: NSColor { @objc get }
 
   /**
     - Selector: controlShadowColor
@@ -246,12 +246,12 @@ import AppKit
     - Deprecated: 100000
     - Message: Use a color that matches the semantics being used, such as `separatorColor`
   */
-  // @objc @available(OSX 10.0, *) static var controlShadowColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var controlShadowColor: NSColor { @objc get }
 
   /**
     - Selector: controlTextColor
   */
-  // @objc static var controlTextColor: NSColor { @objc get }
+  @objc static var controlTextColor: NSColor { @objc get }
 
   /**
     - Selector: currentControlTint
@@ -261,38 +261,38 @@ import AppKit
   /**
     - Selector: cyanColor
   */
-  // @objc static var cyan: NSColor { @objc (cyanColor) get }
+  @objc static var cyan: NSColor { @objc (cyanColor) get }
 
   /**
     - Selector: darkGrayColor
   */
-  // @objc static var darkGray: NSColor { @objc (darkGrayColor) get }
+  @objc static var darkGray: NSColor { @objc (darkGrayColor) get }
 
   /**
     - Selector: disabledControlTextColor
   */
-  // @objc static var disabledControlTextColor: NSColor { @objc get }
+  @objc static var disabledControlTextColor: NSColor { @objc get }
 
   /**
     - Selector: findHighlightColor
     - Introduced: 10.13
   */
-  // @objc @available(OSX 10.13, *) static var findHighlightColor: NSColor { @objc get }
+  @objc @available(OSX 10.13, *) static var findHighlightColor: NSColor { @objc get }
 
   /**
     - Selector: grayColor
   */
-  // @objc static var gray: NSColor { @objc (grayColor) get }
+  @objc static var gray: NSColor { @objc (grayColor) get }
 
   /**
     - Selector: greenColor
   */
-  // @objc static var green: NSColor { @objc (greenColor) get }
+  @objc static var green: NSColor { @objc (greenColor) get }
 
   /**
     - Selector: gridColor
   */
-  // @objc static var gridColor: NSColor { @objc get }
+  @objc static var gridColor: NSColor { @objc get }
 
   /**
     - Selector: headerColor
@@ -300,17 +300,17 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSVisualEffectMaterialHeaderView
   */
-  // @objc @available(OSX 10.0, *) static var headerColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var headerColor: NSColor { @objc get }
 
   /**
     - Selector: headerTextColor
   */
-  // @objc static var headerTextColor: NSColor { @objc get }
+  @objc static var headerTextColor: NSColor { @objc get }
 
   /**
     - Selector: highlightColor
   */
-  // @objc static var highlightColor: NSColor { @objc get }
+  @objc static var highlightColor: NSColor { @objc get }
 
   /**
     - Selector: ignoresAlpha
@@ -320,7 +320,7 @@ import AppKit
   /**
     - Selector: keyboardFocusIndicatorColor
   */
-  // @objc static var keyboardFocusIndicatorColor: NSColor { @objc get }
+  @objc static var keyboardFocusIndicatorColor: NSColor { @objc get }
 
   /**
     - Selector: knobColor
@@ -328,56 +328,56 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSScroller instead
   */
-  // @objc @available(OSX 10.0, *) static var knobColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var knobColor: NSColor { @objc get }
 
   /**
     - Selector: labelColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var labelColor: NSColor { @objc get }
+  @objc @available(OSX 10.10, *) static var labelColor: NSColor { @objc get }
 
   /**
     - Selector: lightGrayColor
   */
-  // @objc static var lightGray: NSColor { @objc (lightGrayColor) get }
+  @objc static var lightGray: NSColor { @objc (lightGrayColor) get }
 
   /**
     - Selector: linkColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var linkColor: NSColor { @objc get }
+  @objc @available(OSX 10.10, *) static var linkColor: NSColor { @objc get }
 
   /**
     - Selector: magentaColor
   */
-  // @objc static var magenta: NSColor { @objc (magentaColor) get }
+  @objc static var magenta: NSColor { @objc (magentaColor) get }
 
   /**
     - Selector: orangeColor
   */
-  // @objc static var orange: NSColor { @objc (orangeColor) get }
+  @objc static var orange: NSColor { @objc (orangeColor) get }
 
   /**
     - Selector: placeholderTextColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var placeholderTextColor: NSColor { @objc get }
+  @objc @available(OSX 10.10, *) static var placeholderTextColor: NSColor { @objc get }
 
   /**
     - Selector: purpleColor
   */
-  // @objc static var purple: NSColor { @objc (purpleColor) get }
+  @objc static var purple: NSColor { @objc (purpleColor) get }
 
   /**
     - Selector: quaternaryLabelColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var quaternaryLabelColor: NSColor { @objc get }
+  @objc @available(OSX 10.10, *) static var quaternaryLabelColor: NSColor { @objc get }
 
   /**
     - Selector: redColor
   */
-  // @objc static var red: NSColor { @objc (redColor) get }
+  @objc static var red: NSColor { @objc (redColor) get }
 
   /**
     - Selector: scrollBarColor
@@ -385,19 +385,19 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSScroller instead
   */
-  // @objc @available(OSX 10.0, *) static var scrollBarColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var scrollBarColor: NSColor { @objc get }
 
   /**
     - Selector: scrubberTexturedBackgroundColor
     - Introduced: 10.12.2
   */
-  // @objc @available(OSX 10.12.2, *) static var scrubberTexturedBackground: NSColor { @objc (scrubberTexturedBackgroundColor) get }
+  @objc @available(OSX 10.12.2, *) static var scrubberTexturedBackground: NSColor { @objc (scrubberTexturedBackgroundColor) get }
 
   /**
     - Selector: secondaryLabelColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var secondaryLabelColor: NSColor { @objc get }
+  @objc @available(OSX 10.10, *) static var secondaryLabelColor: NSColor { @objc get }
 
   /**
     - Selector: secondarySelectedControlColor
@@ -405,23 +405,23 @@ import AppKit
     - Deprecated: 100000
     - Replacement: unemphasizedSelectedContentBackgroundColor
   */
-  // @objc @available(OSX 10.1, *) static var secondarySelectedControlColor: NSColor { @objc get }
+  @objc @available(OSX 10.1, *) static var secondarySelectedControlColor: NSColor { @objc get }
 
   /**
     - Selector: selectedContentBackgroundColor
     - Introduced: 10.14
   */
-  // @objc @available(OSX 10.14, *) static var selectedContentBackgroundColor: NSColor { @objc get }
+  @objc @available(OSX 10.14, *) static var selectedContentBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: selectedControlColor
   */
-  // @objc static var selectedControlColor: NSColor { @objc get }
+  @objc static var selectedControlColor: NSColor { @objc get }
 
   /**
     - Selector: selectedControlTextColor
   */
-  // @objc static var selectedControlTextColor: NSColor { @objc get }
+  @objc static var selectedControlTextColor: NSColor { @objc get }
 
   /**
     - Selector: selectedKnobColor
@@ -429,7 +429,7 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSScroller instead
   */
-  // @objc @available(OSX 10.0, *) static var selectedKnobColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var selectedKnobColor: NSColor { @objc get }
 
   /**
     - Selector: selectedMenuItemColor
@@ -437,149 +437,149 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSVisualEffectMaterialSelection
   */
-  // @objc @available(OSX 10.0, *) static var selectedMenuItemColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var selectedMenuItemColor: NSColor { @objc get }
 
   /**
     - Selector: selectedMenuItemTextColor
   */
-  // @objc static var selectedMenuItemTextColor: NSColor { @objc get }
+  @objc static var selectedMenuItemTextColor: NSColor { @objc get }
 
   /**
     - Selector: selectedTextBackgroundColor
   */
-  // @objc static var selectedTextBackgroundColor: NSColor { @objc get }
+  @objc static var selectedTextBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: selectedTextColor
   */
-  // @objc static var selectedTextColor: NSColor { @objc get }
+  @objc static var selectedTextColor: NSColor { @objc get }
 
   /**
     - Selector: separatorColor
     - Introduced: 10.14
   */
-  // @objc @available(OSX 10.14, *) static var separatorColor: NSColor { @objc get }
+  @objc @available(OSX 10.14, *) static var separatorColor: NSColor { @objc get }
 
   /**
     - Selector: shadowColor
   */
-  // @objc static var shadowColor: NSColor { @objc get }
+  @objc static var shadowColor: NSColor { @objc get }
 
   /**
     - Selector: systemBlueColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemBlue: NSColor { @objc (systemBlueColor) get }
+  @objc @available(OSX 10.10, *) static var systemBlue: NSColor { @objc (systemBlueColor) get }
 
   /**
     - Selector: systemBrownColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemBrown: NSColor { @objc (systemBrownColor) get }
+  @objc @available(OSX 10.10, *) static var systemBrown: NSColor { @objc (systemBrownColor) get }
 
   /**
     - Selector: systemGrayColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemGray: NSColor { @objc (systemGrayColor) get }
+  @objc @available(OSX 10.10, *) static var systemGray: NSColor { @objc (systemGrayColor) get }
 
   /**
     - Selector: systemGreenColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemGreen: NSColor { @objc (systemGreenColor) get }
+  @objc @available(OSX 10.10, *) static var systemGreen: NSColor { @objc (systemGreenColor) get }
 
   /**
     - Selector: systemIndigoColor
     - Introduced: 10.15
   */
-  // @objc @available(OSX 10.15, *) static var systemIndigo: NSColor { @objc (systemIndigoColor) get }
+  @objc @available(OSX 10.15, *) static var systemIndigo: NSColor { @objc (systemIndigoColor) get }
 
   /**
     - Selector: systemOrangeColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemOrange: NSColor { @objc (systemOrangeColor) get }
+  @objc @available(OSX 10.10, *) static var systemOrange: NSColor { @objc (systemOrangeColor) get }
 
   /**
     - Selector: systemPinkColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemPink: NSColor { @objc (systemPinkColor) get }
+  @objc @available(OSX 10.10, *) static var systemPink: NSColor { @objc (systemPinkColor) get }
 
   /**
     - Selector: systemPurpleColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemPurple: NSColor { @objc (systemPurpleColor) get }
+  @objc @available(OSX 10.10, *) static var systemPurple: NSColor { @objc (systemPurpleColor) get }
 
   /**
     - Selector: systemRedColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemRed: NSColor { @objc (systemRedColor) get }
+  @objc @available(OSX 10.10, *) static var systemRed: NSColor { @objc (systemRedColor) get }
 
   /**
     - Selector: systemTealColor
     - Introduced: 10.12
   */
-  // @objc @available(OSX 10.12, *) static var systemTeal: NSColor { @objc (systemTealColor) get }
+  @objc @available(OSX 10.12, *) static var systemTeal: NSColor { @objc (systemTealColor) get }
 
   /**
     - Selector: systemYellowColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var systemYellow: NSColor { @objc (systemYellowColor) get }
+  @objc @available(OSX 10.10, *) static var systemYellow: NSColor { @objc (systemYellowColor) get }
 
   /**
     - Selector: tertiaryLabelColor
     - Introduced: 10.10
   */
-  // @objc @available(OSX 10.10, *) static var tertiaryLabelColor: NSColor { @objc get }
+  @objc @available(OSX 10.10, *) static var tertiaryLabelColor: NSColor { @objc get }
 
   /**
     - Selector: textBackgroundColor
   */
-  // @objc static var textBackgroundColor: NSColor { @objc get }
+  @objc static var textBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: textColor
   */
-  // @objc static var textColor: NSColor { @objc get }
+  @objc static var textColor: NSColor { @objc get }
 
   /**
     - Selector: underPageBackgroundColor
     - Introduced: 10.8
   */
-  // @objc @available(OSX 10.8, *) static var underPageBackgroundColor: NSColor { @objc get }
+  @objc @available(OSX 10.8, *) static var underPageBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: unemphasizedSelectedContentBackgroundColor
     - Introduced: 10.14
   */
-  // @objc @available(OSX 10.14, *) static var unemphasizedSelectedContentBackgroundColor: NSColor { @objc get }
+  @objc @available(OSX 10.14, *) static var unemphasizedSelectedContentBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: unemphasizedSelectedTextBackgroundColor
     - Introduced: 10.14
   */
-  // @objc @available(OSX 10.14, *) static var unemphasizedSelectedTextBackgroundColor: NSColor { @objc get }
+  @objc @available(OSX 10.14, *) static var unemphasizedSelectedTextBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: unemphasizedSelectedTextColor
     - Introduced: 10.14
   */
-  // @objc @available(OSX 10.14, *) static var unemphasizedSelectedTextColor: NSColor { @objc get }
+  @objc @available(OSX 10.14, *) static var unemphasizedSelectedTextColor: NSColor { @objc get }
 
   /**
     - Selector: whiteColor
   */
-  // @objc static var white: NSColor { @objc (whiteColor) get }
+  @objc static var white: NSColor { @objc (whiteColor) get }
 
   /**
     - Selector: windowBackgroundColor
   */
-  // @objc static var windowBackgroundColor: NSColor { @objc get }
+  @objc static var windowBackgroundColor: NSColor { @objc get }
 
   /**
     - Selector: windowFrameColor
@@ -587,17 +587,17 @@ import AppKit
     - Deprecated: 100000
     - Message: Use NSVisualEffectMaterialTitlebar
   */
-  // @objc @available(OSX 10.0, *) static var windowFrameColor: NSColor { @objc get }
+  @objc @available(OSX 10.0, *) static var windowFrameColor: NSColor { @objc get }
 
   /**
     - Selector: windowFrameTextColor
   */
-  // @objc static var windowFrameTextColor: NSColor { @objc get }
+  @objc static var windowFrameTextColor: NSColor { @objc get }
 
   /**
     - Selector: yellowColor
   */
-  // @objc static var yellow: NSColor { @objc (yellowColor) get }
+  @objc static var yellow: NSColor { @objc (yellowColor) get }
 
   // Instance Methods
 
@@ -785,7 +785,7 @@ import AppKit
     - Selector: type
     - Introduced: 10.13
   */
-  // @objc @available(OSX 10.13, *) var type: NSColor.ColorType { @objc get }
+  @objc @available(OSX 10.13, *) var type: NSColor.ColorType { @objc get }
 
   /**
     - Selector: whiteComponent
